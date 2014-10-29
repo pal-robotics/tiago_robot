@@ -20,16 +20,24 @@
                iyy="0.15113888533" iyz="-0.00744737659"
                izz="0.04165307088" />
     </inertial>
-    <collision>
-      <origin rpy="0 0 0" xyz="0.13 0.45 0" />
+
+    <visual>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0" />
       <geometry>
-        <box size="0.20 0.40 0.32"/>
+        <box size="0.10 0.22 0.4"/>
+      </geometry>
+    </visual>
+
+    <collision>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0" />
+      <geometry>
+        <box size="0.10 0.22 0.4"/>
       </geometry>
     </collision>
   </link>
   
   <joint name="${name}_fixed_joint" type="fixed">
-    <origin rpy="0 0 0" xyz="-0.053 0 0" />
+    <origin rpy="0 0 0" xyz="0 0 0.3" />
     <parent link="${parent}_link" />
     <child link="${name}_fixed_link" />
     <axis xyz="0 0 0" />
@@ -43,10 +51,18 @@
                iyy="0.061658561971383" iyz="-3.14401755382909E-05"
                izz="0.0376084656328484" />
     </inertial>
-    <collision>
-      <origin rpy="0 0 0" xyz="0 -.02 0" />
+
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 -0.35" />
        <geometry>
-        <box size="0.20 0.40 0.32"/>
+        <box size="0.10 0.22 0.7"/>
+      </geometry>
+    </visual>
+
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+       <geometry>
+        <box size="0.10 0.22 0.7"/>
       </geometry>
     </collision>
   </link>
