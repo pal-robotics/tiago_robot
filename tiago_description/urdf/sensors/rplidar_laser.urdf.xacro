@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!--
+
+  Copyright (c) 2011, PAL Robotics, S.L.
+  All rights reserved.
+
+  This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
+  To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to
+  Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+-->
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find ant_description)/urdf/sensors/rplidar_laser.gazebo.xacro" />
+
+  <xacro:macro name="rplidar_laser" params="name parent *origin ros_topic update_rate min_angle max_angle">
+
+     <link name="${name}_link" type="laser">
+      <inertial>
+        <origin xyz="0 0 -0.04225" rpy="0 0 0" />
+        <mass value="0.160" />
+        <inertia ixx="0.00008631543" ixy="-0.00000088815" ixz="-0.00000094079"
+                 iyy="0.00008461544" iyz="0.00000139389"
+                 izz="0.00005947238" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://ant_description/meshes/sensors/rplidar.stl"/>
+        </geometry>
+        <material name="DarkGrey" />
+      </visual>
+    </link>
+
+    <joint name="${name}_joint" type="fixed">
+      <axis xyz="0 1 0" />
+      <insert_block name="origin" />
+      <parent link="${parent}_link"/>
+      <child  link="${name}_link"/>
+      <dynamics friction="1.0" damping="1"/>
+      <limit lower="0" upper="0" effort="60" velocity="20" />
+    </joint>
+
+    <!-- gazebo extensions -->
+    <xacro:rplidar_laser_gazebo name="${name}" ros_topic="${ros_topic}" update_rate="${update_rate}" min_angle="${min_angle}" max_angle="${max_angle}" />
+
+  </xacro:macro>
+
+</robot>

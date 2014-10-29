@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+
+  <name>tiago_description</name>
+  <version>0.9.0</version>
+  <description>This package contains the description (mechanical, kinematic, visual,
+      etc.) of the TIAGO robot.  The files in this package are parsed and used by
+      a variety of other components.  Most users will not interact directly
+      with this package.</description>
+  <maintainer email="enrique.fernandez@pal-robotics.com">Enrique Fernandez</maintainer>
+  <license>Creative Commons BY-NC-ND 3.0</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <run_depend>xacro</run_depend>
+  <run_depend>pal_gazebo_plugins</run_depend>
+
+</package>

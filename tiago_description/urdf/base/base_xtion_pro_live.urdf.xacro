@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<!--
+
+  Copyright (c) 2011-2014, PAL Robotics, S.L.
+  All rights reserved.
+
+  This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
+  To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to
+  Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+-->
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find ant_description)/urdf/deg_to_rad.xacro"/>
+
+  <xacro:include filename="$(find ant_description)/urdf/wheels/wheel.urdf.xacro"/>
+  <xacro:include filename="$(find ant_description)/urdf/wheels/caster.urdf.xacro"/>
+
+  <xacro:include filename="$(find ant_description)/urdf/sensors/range.urdf.xacro"/>
+  <xacro:include filename="$(find ant_description)/urdf/sensors/hokuyo_urg_04lx_ug01_laser.urdf.xacro"/>
+  <xacro:include filename="$(find ant_description)/urdf/sensors/xtion_pro_live.urdf.xacro"/>
+  <xacro:include filename="$(find ant_description)/urdf/sensors/imu.urdf.xacro"/>
+  <xacro:include filename="$(find ant_description)/urdf/sensors/bumper.urdf.xacro"/>
+  <xacro:include filename="$(find ant_description)/urdf/sensors/ir_receiver.urdf.xacro"/>
+
+  <!-- Wheel characteristics -->
+  <property name="wheel_radius"     value="0.100"/>
+  <property name="wheel_width"      value="0.044"/>
+  <property name="wheel_separation" value="0.43408"/>
+  <property name="wheel_torque"     value="6.0"/>
+  <property name="wheel_velocity"   value="1.0"/>
+
+  <!-- Caster wheel characteristics -->
+  <property name="caster_radius"       value="0.025"/>
+  <property name="caster_width"        value="0.020"/>
+  <property name="caster_separation_x" value="0.36734"/>
+  <property name="caster_separation_y" value="0.20362"/>
+  <property name="caster_offset_z"     value="-0.04252"/>
+
+  <!-- Base characteristics -->
+  <property name="base_radius" value="${(wheel_separation - wheel_width)/2 - 0.01}"/>
+  <property name="base_length" value="0.04"/>
+
+  <!-- Laser characteristics -->
+  <property name="base_laser_x" value="0.185"/>
+  <property name="base_laser_y" value="0.0"/>
+  <property name="base_laser_z" value="0.05275"/>
+
+  <!-- RGBD characteristics -->
+  <property name="base_rgbd_x" value="0.185"/>
+  <property name="base_rgbd_y" value="0.0"/>
+  <property name="base_rgbd_z" value="0.23"/>
+
+  <xacro:macro name="base" params="name">
+
+    <!-- Base -->
+    <link name="${name}_link">
+      <inertial>
+        <origin xyz="0.0123 0.0071 0.064" rpy="0 0 0" />
+        <mass value="7.95534" />
+        <inertia ixx="0.19540233297" ixy="-0.00188862789" ixz="-0.00370655921"
+                 iyy="0.23325457568" iyz="0.00387528692"
+                 izz="0.3312456162" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <!--cylinder radius="${base_radius}" length="${base_length}"/-->
+          <mesh filename="package://ant_description/meshes/base/base.stl" />
+          <!--mesh filename="package://ant_description/meshes/base/base.dae" /-->
+        </geometry>
+        <material name="DarkGrey" />
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <cylinder radius="${base_radius}" length="${base_length}"/>
+          <!-- @todo base_collision.stl still the same as base.stl -->
+          <!--mesh filename="package://ant_description/meshes/base/base_collision.stl" /-->
+        </geometry>
+        <material name="DarkGrey" />
+      </collision>
+    </link>
+
+    <!-- Base footprint -->
+    <link name="${name}_footprint"/>
+
+    <joint name="${name}_footprint_joint" type="fixed">
+      <origin xyz="0 0 ${wheel_radius}" rpy="0 0 0" />
+      <child link="${name}_link" />
+      <parent link="${name}_footprint"/>
+    </joint>
+
+    <!-- Laser -->
+    <xacro:hokuyo_urg_04lx_ug01_laser name="${name}_laser" parent="${name}" ros_topic="scan" update_rate="10" min_angle="${-90 * deg_to_rad}" max_angle="${90 * deg_to_rad}" >
+      <origin xyz="${base_laser_x} ${base_laser_y} ${base_laser_z}" rpy="0 0 0" />
+    </xacro:hokuyo_urg_04lx_ug01_laser>
+
+    <!-- RGBD -->
+    <xacro:xtion_pro_live name="${name}_xtion" parent="${name}">
+      <!-- Pose of sensor frame wrt to base -->
+      <origin xyz="${base_rgbd_x} ${base_rgbd_y} ${base_rgbd_z}" rpy="0 0 0"/>
+      <!-- Pose of optical frame wrt to sensor -->
+      <origin xyz="0 0 0" rpy="${-90 * deg_to_rad} 0 ${-90 * deg_to_rad}"/>
+    </xacro:xtion_pro_live>
+
+    <!-- Sonar -->
+    <!--xacro:range_sensor name="${name}_sonar_02" parent="${name}" ros_topic="sonar_base" update_rate="10" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
+      <origin xyz="0.18 0.0 0.04" rpy="0.0 ${-10.0 * deg_to_rad} 0.0" />
+    </xacro:range_sensor-->
+
+    <!-- Sonar -->
+    <!--xacro:range_sensor name="${name}_sonar_03" parent="${name}" ros_topic="sonar_base" update_rate="10" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
+      <origin xyz="0.15 0.1 0.04" rpy="0.0 ${-10.0 * deg_to_rad} ${40.0 * deg_to_rad}" />
+    </xacro:range_sensor-->
+
+    <!-- Sonar -->
+    <!--xacro:range_sensor name="${name}_sonar_01" parent="${name}" ros_topic="sonar_base" update_rate="10" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
+      <origin xyz="0.15 -0.1 0.04" rpy="0.0 ${-10.0 * deg_to_rad} ${-40.0 * deg_to_rad}" />
+    </xacro:range_sensor-->
+
+    <!-- Bumper right -->
+    <!--xacro:bumper name="${name}_bumper_01" parent="${name}" ros_topic="bumper_base" update_rate="25" >
+      <origin xyz="0.16 -0.12 0.00" rpy="0 0 ${-20.0 * deg_to_rad}" />
+    </xacro:bumper-->
+
+    <!-- Bumper left -->
+    <!--xacro:bumper name="${name}_bumper_02" parent="${name}" ros_topic="bumper_base" update_rate="25" >
+      <origin xyz="0.16 0.12 0.00" rpy="0 0 ${20.0 * deg_to_rad}" />
+    </xacro:bumper-->
+
+    <!-- IMU -->
+    <!-- @todo ant_hardware_gazebo needs an IMU!  -->
+    <xacro:imu_sensor name="base_inclinometer" parent="${name}_link" update_rate="100.0">
+      <origin xyz="0 0 ${base_length / 2}" rpy="0 0 0"/>
+    </xacro:imu_sensor>
+
+    <!-- IR receiver -->
+    <!--xacro:ir_receiver name="${name}_ir_receiver_01" parent="${name}" ros_topic="ir_receiver_base" update_rate="10" range_min="0.0" range_max="0.75" fov="0.5">
+      <origin xyz="0.17131 0.0 0.180" rpy="0.0 0.0 0.0" />
+    </xacro:ir_receiver-->
+
+    <!-- IR receiver -->
+    <!--xacro:ir_receiver name="${name}_ir_receiver_02" parent="${name}" ros_topic="ir_receiver_base" update_rate="10" range_min="0.0" range_max="0.75" fov="0.5">
+      <origin xyz="0.16919 0.14919 0.180" rpy="0.0 0.0 0.349" />
+    </xacro:ir_receiver-->
+
+    <!-- IR receiver -->
+    <!--xacro:ir_receiver name="${name}_ir_receiver_03" parent="${name}" ros_topic="ir_receiver_base" update_rate="10" range_min="0.0" range_max="0.75" fov="0.5">
+      <origin xyz="0.16919 -0.14919 0.180" rpy="0.0 0.0 -0.349" />
+    </xacro:ir_receiver-->
+
+    <!-- Wheels -->
+    <xacro:wheel side="right" reflect=" 1.0" radius="${wheel_radius}" width="${wheel_width}" torque="${wheel_torque}" velocity="${wheel_velocity}" separation="${wheel_separation}" parent="${name}"/>
+    <xacro:wheel side="left"  reflect="-1.0" radius="${wheel_radius}" width="${wheel_width}" torque="${wheel_torque}" velocity="${wheel_velocity}" separation="${wheel_separation}" parent="${name}"/>
+
+    <!-- Casters wheels -->
+    <xacro:caster side="front_right" radius="${caster_radius}" width="${caster_width}" separation_x="${ caster_separation_x}" separation_y="${ caster_separation_y}" offset_z="${caster_offset_z}" parent="${name}"/>
+    <xacro:caster side="front_left"  radius="${caster_radius}" width="${caster_width}" separation_x="${ caster_separation_x}" separation_y="${-caster_separation_y}" offset_z="${caster_offset_z}" parent="${name}"/>
+
+    <xacro:caster side="back_right"  radius="${caster_radius}" width="${caster_width}" separation_x="${-caster_separation_x}" separation_y="${ caster_separation_y}" offset_z="${caster_offset_z}" parent="${name}"/>
+    <xacro:caster side="back_left"   radius="${caster_radius}" width="${caster_width}" separation_x="${-caster_separation_x}" separation_y="${-caster_separation_y}" offset_z="${caster_offset_z}" parent="${name}"/>
+
+  </xacro:macro>
+
+</robot>

@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!--
+
+  Copyright (c) 2011, PAL Robotics, S.L.
+  All rights reserved.
+
+  This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
+  To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to
+  Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+-->
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find ant_description)/urdf/sensors/bumper.gazebo.xacro" />
+
+  <xacro:macro name="bumper" params="name parent ros_topic update_rate *origin">
+     <joint name="${name}_joint" type="fixed">
+        <axis xyz="0 1 0" />
+        <insert_block name="origin" />
+        <parent link="base_link"/>
+        <child link="${name}_link"/>
+      </joint>
+      <link name="${name}_link">
+         <inertial>
+           <mass value="1.0" />
+           <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.01" />
+         </inertial>
+         <!--visual>
+           <origin xyz="0 0 0" rpy="0 0 0" />
+           <geometry>
+              <box size="0.01 0.25 0.04"/>
+           </geometry>
+           <material name="DarkGrey"/>
+         </visual-->
+         <collision>
+           <origin xyz="0 0 0" rpy="0 0 0" />
+           <geometry>
+              <box size="0.01 0.25 0.04"/>
+           </geometry>
+           <material name="DarkGrey" />
+         </collision>
+       </link>
+
+    <!-- gazebo extensions -->
+    <xacro:bumper_gazebo name="${name}" ros_topic="${ros_topic}" update_rate="${update_rate}" />
+
+  </xacro:macro>
+
+</robot>
