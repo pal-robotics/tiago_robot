@@ -10,14 +10,16 @@
 -->
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:macro name="reem_arm_simple_transmission" params="name side number reduction" >
-    <transmission name="${name}_${side}_${number}_trans">
+  <xacro:macro name="arm_simple_transmission" params="name number reduction" >
+    <transmission name="${name}_${number}_trans">
       <type>transmission_interface/SimpleTransmission</type>
-      <actuator name="${name}_${side}_${number}_motor" >
+      <actuator name="${name}_${number}_motor" >
         <mechanicalReduction>${reduction}</mechanicalReduction>
       </actuator>
-      <joint name="${name}_${side}_${number}_joint">
+      <joint name="${name}_${number}_joint">
         <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/JointModeInterface</hardwareInterface>
       </joint>
     </transmission>
   </xacro:macro>

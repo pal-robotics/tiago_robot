@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!--
 
-  Copyright (c) 2011-2012, PAL Robotics, S.L.
+  Copyright (c) 2014, PAL Robotics, S.L.
   All rights reserved.
 
   This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
@@ -11,9 +11,9 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
   <!--File includes-->
-  <xacro:include filename="$(find reemc_description)/urdf/deg_to_rad.xacro" />
-  <xacro:include filename="$(find reemc_description)/urdf/arm/wrist.urdf.xacro" />
-  <xacro:include filename="$(find reemc_description)/urdf/arm/arm.transmission.xacro" />
+  <xacro:include filename="$(find tiago_description)/urdf/deg_to_rad.xacro" />
+  <xacro:include filename="$(find tiago_description)/urdf/arm/wrist.urdf.xacro" />
+  <xacro:include filename="$(find tiago_description)/urdf/arm/arm.transmission.xacro" />
 
   <!--Constant parameters-->
   <xacro:property name="arm_friction"       value="1.0" />
@@ -31,40 +31,37 @@
 
   <!-- TODO: Update dynamic models -->
 
-  <xacro:macro name="reem_arm" params="name parent side reflect">
+  <xacro:macro name="tiago_arm" params="name parent">
 
     <!--************************-->
     <!--        SHOULDER        -->
     <!--************************-->
-    <link name="${name}_${side}_1_link">
+    <link name="${name}_1_link">
       <inertial>
-        <origin xyz="0.00701 -0.00011 ${reflect*0.18627}" rpy="0 0 0"/>
+        <origin xyz="0.00 -0.00011 0.18627" rpy="0 0 0"/>
         <mass value="1.53614" />
-<!--        <inertia ixx="0"  ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" /> -->
-<!--         NOTE: Assuming cylinder centered at CoM with r=0.05, h=0.05 with axis parallel to x coordinate -->
-<!--        <inertia ixx="0.0026850"  ixy="0"  ixz="0" iyy="0.0017900" iyz="0" izz="0.0017900" /> -->
         <inertia ixx="0.00327313329"  ixy="-0.00000460054"  ixz="-0.00025121368" iyy="0.00316047802" iyz="0.00000313158" izz="0.00157642528" />
 
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://reemc_description/meshes/arm/arm_1.dae" scale="1 1 ${-1*reflect}"/>
+          <mesh filename="package://tiago_description/meshes/arm/arm_1.dae" scale="1 1 -1"/>
         </geometry>
         <material name="DarkGrey" />
       </visual>
       <collision>
        <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://reemc_description/meshes/arm/arm_1_collision.stl" scale="1 1 ${-1*reflect}"/>
+          <mesh filename="package://tiago_description/meshes/arm/arm_1_collision.stl" scale="1 1 -1"/>
         </geometry>
       </collision>
     </link>
 
-    <joint name="${name}_${side}_1_joint" type="revolute">
+    <joint name="${name}_1_joint" type="revolute">
       <parent link="${parent}" />
-      <child link="${name}_${side}_1_link" />
-      <origin xyz="0 -0.31827 0" rpy="${(-165.0*reflect) * deg_to_rad} 0 0" />
+      <child link="${name}_1_link" />
+      <origin xyz="0.1 0.07 0" rpy="${0 * deg_to_rad} ${0 * deg_to_rad} ${-90 * deg_to_rad}" />
       <axis xyz="0 0 1" />
       <limit lower="${-45.0 * deg_to_rad}" upper="${180.0 * deg_to_rad}" effort="${arm_1_max_effort}" velocity="${arm_1_max_vel}" />
       <dynamics friction="${arm_friction}" damping="${arm_damping}"/>
@@ -75,34 +72,31 @@
                          soft_upper_limit="${ 180.0 * deg_to_rad - arm_eps}" />
     </joint>
 
-   <link name="${name}_${side}_2_link">
+   <link name="${name}_2_link">
       <inertial>
-        <origin xyz="0.01435 -0.06294 ${reflect*0.01039}" rpy="0 0 0"/>
+        <origin xyz="0.01435 -0.06294 ${0.01039}" rpy="0 0 0"/>
         <mass value="1.60393" />
-        <!--<inertia ixx="0"  ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" />-->
-        <!-- NOTE: Assuming cylinder centered at CoM with r=0.05, h=0.05 with axis parallel to y coordinate -->
-        <!-- <inertia ixx="0.0013417"  ixy="0"  ixz="0" iyy="0.0020125" iyz="0" izz="0.0013417" /> -->
         <inertia ixx="0.0046195621"  ixy="-0.00056769245"  ixz="0.00018376961" iyy="0.00185384237" iyz="-0.00078286958" izz="0.0049356022" />
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://reemc_description/meshes/arm/arm_2.dae" scale="1 1 ${-1*reflect}"/>
+          <mesh filename="package://tiago_description/meshes/arm/arm_2.dae" scale="1 1 -1"/>
         </geometry>
         <material name="DarkGrey" />
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://reemc_description/meshes/arm/arm_2_collision.stl" scale="1 1 ${-1*reflect}"/>
+          <mesh filename="package://tiago_description/meshes/arm/arm_2_collision.stl" scale="1 1 -1"/>
         </geometry>
       </collision>
     </link>
 
-    <joint name="${name}_${side}_2_joint" type="revolute">
-      <parent link="${name}_${side}_1_link" />
-      <child link="${name}_${side}_2_link" />
-      <origin xyz="0 0 ${0.21749 * reflect}" rpy="${-90.0 * reflect * deg_to_rad} ${-75.0 * reflect * deg_to_rad} ${90.0 * deg_to_rad}" />
+    <joint name="${name}_2_joint" type="revolute">
+      <parent link="${name}_1_link" />
+      <child link="${name}_2_link" />
+      <origin xyz="0.11 0 -0.08" rpy="${90.0 * deg_to_rad} ${0 * deg_to_rad} ${0 * deg_to_rad}" />
       <axis xyz="0 0 1" />
       <limit lower="${-15.0 * deg_to_rad}" upper="${120.0 * deg_to_rad}" effort="${arm_2_max_effort}" velocity="${arm_2_max_vel}" />
       <dynamics friction="${arm_friction}" damping="${arm_damping}"/>
@@ -113,33 +107,31 @@
                          soft_upper_limit="${ 120.0 * deg_to_rad - arm_eps}" />
     </joint>
 
-    <link name="${name}_${side}_3_link">
+    <link name="${name}_3_link">
       <inertial>
-        <origin xyz="0.00606 -0.0113 ${reflect * 0.05748}" rpy="0 0 0"/>
+        <origin xyz="0.00606 -0.0113 0.05748" rpy="0 0 0"/>
         <mass value="1.64293" />
-        <!--<inertia ixx="0"  ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" />-->
-        <!-- NOTE: Assuming cylinder centered at CoM with r=0.05, h=0.05 with axis parallel to x coordinate -->
          <inertia ixx="0.00372686652"  ixy="-0.00008722874"  ixz="-0.00028800176" iyy="0.00344463026" iyz="0.00042776588" izz="0.00192229026" />
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://reemc_description/meshes/arm/arm_3.dae" scale="1 1 ${-1*reflect}"/>
+          <mesh filename="package://tiago_description/meshes/arm/arm_3.dae" scale="1 1 -1"/>
         </geometry>
         <material name="DarkGrey" />
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://reemc_description/meshes/arm/arm_3_collision.stl" scale="1 1 ${-1*reflect}"/>
+          <mesh filename="package://tiago_description/meshes/arm/arm_3_collision.stl" scale="1 1 -1"/>
         </geometry>
       </collision>
     </link>
 
-    <joint name="${name}_${side}_3_joint" type="revolute">
-      <parent link="${name}_${side}_2_link" />
-      <child link="${name}_${side}_3_link" />
-      <origin xyz="0.02 -0.142 0" rpy="${90.0 * reflect * deg_to_rad} 0 0" />
+    <joint name="${name}_3_joint" type="revolute">
+      <parent link="${name}_2_link" />
+      <child link="${name}_3_link" />
+      <origin xyz="0.142 -0.02 0" rpy="${0.0 * deg_to_rad} ${-90.0 * deg_to_rad} 0" />
       <axis xyz="0 0 1" />
       <limit lower="${-135.0 * deg_to_rad}" upper="${157.5 * deg_to_rad}" effort="${arm_3_max_effort}" velocity="${arm_3_max_vel}" />
       <dynamics friction="${arm_friction}" damping="${arm_damping}"/>
@@ -153,34 +145,31 @@
     <!--************************-->
     <!--        ELBOW           -->
     <!--************************-->
-    <link name="${name}_${side}_4_link">
+    <link name="${name}_4_link">
       <inertial>
-        <origin xyz="-0.04129 0.0118 ${reflect * -0.01387}" rpy="0 0 0"/>
+        <origin xyz="-0.04129 0.0118 -0.01387" rpy="0 0 0"/>
         <mass value="1.20222" />
-        <!--<inertia ixx="0"  ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" />-->
-        <!-- NOTE: Assuming cylinder centered at CoM with r=0.05, h=0.05 with axis parallel to x coordinate -->
-        <!-- <inertia ixx="0.0012663"  ixy="0"  ixz="0" iyy="0.00084417" iyz="0" izz="0.00084417" /> -->
         <inertia ixx="0.00156355749"  ixy="-0.000353141"  ixz="0.00053402452" iyy="0.00277186194" iyz="-0.00015541973" izz="0.00307369106" />
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://reemc_description/meshes/arm/arm_4.dae" scale="1 1 ${-1*reflect}"/>
+          <mesh filename="package://tiago_description/meshes/arm/arm_4.dae" scale="1 1 -1"/>
         </geometry>
         <material name="DarkGrey" />
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://reemc_description/meshes/arm/arm_4_collision.stl" scale="1 1 ${-1*reflect}"/>
+          <mesh filename="package://tiago_description/meshes/arm/arm_4_collision.stl" scale="1 1 -1"/>
         </geometry>
       </collision>
     </link>
 
-    <joint name="${name}_${side}_4_joint" type="revolute">
-      <parent link="${name}_${side}_3_link" />
-      <child link="${name}_${side}_4_link" />
-      <origin xyz="0 -0.02 ${0.088 * reflect}" rpy="0 ${90.0 * reflect * deg_to_rad} 0" />
+    <joint name="${name}_4_joint" type="revolute">
+      <parent link="${name}_3_link" />
+      <child link="${name}_4_link" />
+      <origin xyz="0 -0.02 -0.183" rpy="0 ${-90.0 * deg_to_rad} 0" />
       <axis xyz="0 0 1" />
       <limit lower="0" upper="${130.0 * deg_to_rad}" effort="${arm_4_max_effort}" velocity="${arm_4_max_vel}" />
       <dynamics friction="${arm_friction}" damping="${arm_damping}"/>
@@ -191,33 +180,33 @@
                          soft_upper_limit="${ 130.0 * deg_to_rad - arm_eps}" />
     </joint>
 
-   <gazebo reference="${name}_${side}_1_link">
+   <gazebo reference="${name}_1_link">
      <mu1>0.9</mu1>
      <mu2>0.9</mu2>
    </gazebo>
-   <gazebo reference="${name}_${side}_2_link">
+   <gazebo reference="${name}_2_link">
      <mu1>0.9</mu1>
      <mu2>0.9</mu2>
    </gazebo>
-   <gazebo reference="${name}_${side}_3_link">
+   <gazebo reference="${name}_3_link">
      <mu1>0.9</mu1>
      <mu2>0.9</mu2>
    </gazebo>
-   <gazebo reference="${name}_${side}_4_link">
+   <gazebo reference="${name}_4_link">
      <mu1>0.9</mu1>
      <mu2>0.9</mu2>
    </gazebo>
 
-   <gazebo reference="${name}_${side}_1_joint">
+   <gazebo reference="${name}_1_joint">
       <implicitSpringDamper>1</implicitSpringDamper>
    </gazebo>
-   <gazebo reference="${name}_${side}_2_joint">
+   <gazebo reference="${name}_2_joint">
       <implicitSpringDamper>1</implicitSpringDamper>
    </gazebo>
-   <gazebo reference="${name}_${side}_3_joint">
+   <gazebo reference="${name}_3_joint">
       <implicitSpringDamper>1</implicitSpringDamper>
    </gazebo>
-   <gazebo reference="${name}_${side}_4_joint">
+   <gazebo reference="${name}_4_joint">
       <implicitSpringDamper>1</implicitSpringDamper>
    </gazebo>
 
@@ -225,12 +214,12 @@
     <!--************************-->
     <!--        WRIST           -->
     <!--************************-->
-    <xacro:reem_wrist name="arm" parent="${name}_${side}_4_link" side="${side}" reflect="${reflect}"  />
+    <xacro:wrist name="arm" parent="${name}_4_link" reflect="1"/>
 
     <!--***********************-->
     <!--        TOOL           -->
     <!--***********************-->
-    <link name="${name}_${side}_tool_link">
+    <link name="${name}_tool_link">
       <inertial>
         <mass value="0.1" />
         <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0" />
@@ -250,19 +239,18 @@
       </collision>
     </link>
 
-    <joint name="${name}_${side}_tool_joint" type="fixed">
-      <parent link="${name}_${side}_7_link" />
-      <child link="${name}_${side}_tool_link" />
-      <origin xyz="0 0 ${reflect * 0.046}" rpy="${90.0 * deg_to_rad} ${-90.0 * reflect * deg_to_rad} 0" />
+    <joint name="${name}_tool_joint" type="fixed">
+      <parent link="${name}_7_link" />
+      <child link="${name}_tool_link" />
+      <origin xyz="0 0 0.046" rpy="${90.0 * deg_to_rad} ${-90.0 * deg_to_rad} 0" />
     </joint>
 
 
     <!-- extensions -->
-    <xacro:reem_arm_simple_transmission name="${name}" side="${side}" number="1" reduction="1.0" />
-    <xacro:reem_arm_simple_transmission name="${name}" side="${side}" number="2" reduction="1.0" />
-    <xacro:reem_arm_simple_transmission name="${name}" side="${side}" number="3" reduction="1.0" />
-    <xacro:reem_arm_simple_transmission name="${name}" side="${side}" number="4" reduction="1.0" />
-
+    <xacro:arm_simple_transmission name="${name}" number="1" reduction="1.0" />
+    <xacro:arm_simple_transmission name="${name}" number="2" reduction="1.0" />
+    <xacro:arm_simple_transmission name="${name}" number="3" reduction="1.0" />
+    <xacro:arm_simple_transmission name="${name}" number="4" reduction="1.0" />
   </xacro:macro>
 
 </robot>

@@ -11,8 +11,8 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
   <!--File includes-->
-  <xacro:include filename="$(find reemc_description)/urdf/deg_to_rad.xacro" />
-  <xacro:include filename="$(find reemc_description)/urdf/arm/wrist.transmission.xacro" />
+  <xacro:include filename="$(find tiago_description)/urdf/deg_to_rad.xacro" />
+  <xacro:include filename="$(find tiago_description)/urdf/arm/wrist.transmission.xacro" />
 
   <!--Constant parameters-->
   <xacro:property name="wrist_friction"       value="1.0" />
@@ -27,12 +27,12 @@
 
   <!-- TODO: Update dynamic models -->
 
-  <xacro:macro name="reem_wrist" params="name parent side reflect">
+  <xacro:macro name="wrist" params="name parent reflect">
 
     <!--************************-->
     <!--        WRIST           -->
     <!--************************-->
-    <link name="${name}_${side}_5_link">
+    <link name="${name}_5_link">
       <inertial>
         <origin xyz="-0.00044 0.00012 ${reflect * 0.07445}" rpy="0 0 0"/>
         <mass value="1.21524" />
@@ -45,22 +45,22 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://reemc_description/meshes/arm/arm_5.dae" scale="1 1 ${-1*reflect}"/>
+          <mesh filename="package://tiago_description/meshes/arm/arm_5.dae" scale="1 1 ${-1*reflect}"/>
         </geometry>
         <material name="LightGrey" />
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://reemc_description/meshes/arm/arm_5_collision.stl" scale="1 1 ${-1*reflect}"/>
+          <mesh filename="package://tiago_description/meshes/arm/arm_5_collision.stl" scale="1 1 ${-1*reflect}"/>
         </geometry>
       </collision>
     </link>
 
-    <joint name="${name}_${side}_5_joint" type="revolute">
+    <joint name="${name}_5_joint" type="revolute">
       <parent link="${parent}" />
-      <child link="${name}_${side}_5_link" />
-      <origin xyz="-0.088 0.02 0" rpy="0 ${-90.0 * reflect * deg_to_rad} 0" />
+      <child link="${name}_5_link" />
+      <origin xyz="-0.1245 0.02 0" rpy="0 ${-90.0 * deg_to_rad} 0" />
       <axis xyz="0 0 1" />
       <limit lower="${-120.0 * deg_to_rad}" upper="${120.0 * deg_to_rad}" effort="${wrist_1_max_effort}" velocity="${wrist_1_max_vel}" /> <!--TODO: Check effort value!-->
       <dynamics friction="${wrist_friction}" damping="${wrist_damping}"/>
@@ -71,7 +71,7 @@
                          soft_upper_limit="${ 120.0 * deg_to_rad - wrist_eps}" />
     </joint>
 
-    <link name="${name}_${side}_6_link">
+    <link name="${name}_6_link">
       <inertial>
         <origin xyz="-0.00005 -0.00252 ${reflect * 0.00007}" rpy="0 0 0"/>
         <mass value="0.41597" />
@@ -83,7 +83,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://reemc_description/meshes/arm/arm_6.dae" scale="1 1 ${-1*reflect}"/>
+          <mesh filename="package://tiago_description/meshes/arm/arm_6.dae" scale="1 1 ${-1*reflect}"/>
         </geometry>
         <material name="LightGrey" />
       </visual>
@@ -95,10 +95,10 @@
       </collision>
     </link>
 
-    <joint name="${name}_${side}_6_joint" type="revolute">
-      <parent link="${name}_${side}_5_link" />
-      <child link="${name}_${side}_6_link" />
-      <origin xyz="0 0 ${0.15 * reflect}" rpy="${-90.0 * reflect * deg_to_rad} 0 0" />
+    <joint name="${name}_6_joint" type="revolute">
+      <parent link="${name}_5_link" />
+      <child link="${name}_6_link" />
+      <origin xyz="0 0 0.15" rpy="${-90.0 * reflect * deg_to_rad} 0 0" />
       <axis xyz="0 0 1" />
       <limit lower="${-90.0 * deg_to_rad}" upper="${90.0 * deg_to_rad}" effort="${wrist_2_max_effort}" velocity="${wrist_2_max_vel}" />
       <dynamics friction="${wrist_friction}" damping="${wrist_damping}"/>
@@ -109,7 +109,7 @@
                          soft_upper_limit="${ 90.0 * deg_to_rad - wrist_eps}" />
     </joint>
 
-    <link name="${name}_${side}_7_link">
+    <link name="${name}_7_link">
       <inertial>
         <!--TODO: Verify these inertial parameters-->
         <origin xyz="-0.00004 0 ${reflect * -0.02887}" rpy="0 0 0"/>
@@ -134,9 +134,9 @@
       </collision>
     </link>
 
-    <joint name="${name}_${side}_7_joint" type="revolute">
-      <parent link="${name}_${side}_6_link" />
-      <child link="${name}_${side}_7_link" />
+    <joint name="${name}_7_joint" type="revolute">
+      <parent link="${name}_6_link" />
+      <child link="${name}_7_link" />
       <origin xyz="0 0 0" rpy="${90.0 * reflect * deg_to_rad} 0 0" />
       <axis xyz="0 0 1" />
       <limit lower="${-120.0 * deg_to_rad}" upper="${120.0 * deg_to_rad}" effort="${wrist_3_max_effort}" velocity="${wrist_3_max_vel}" />
@@ -148,32 +148,32 @@
                          soft_upper_limit="${ 120.0 * deg_to_rad - wrist_eps}" />
     </joint>
 
-    <gazebo reference="${name}_${side}_5_link">
+    <gazebo reference="${name}_5_link">
       <mu1>0.9</mu1>
       <mu2>0.9</mu2>
     </gazebo>
-    <gazebo reference="${name}_${side}_6_link">
+    <gazebo reference="${name}_6_link">
       <mu1>0.9</mu1>
       <mu2>0.9</mu2>
     </gazebo>
-    <gazebo reference="${name}_${side}_7_link">
+    <gazebo reference="${name}_7_link">
       <mu1>0.9</mu1>
       <mu2>0.9</mu2>
     </gazebo>
 
-    <gazebo reference="${name}_${side}_5_joint">
+    <gazebo reference="${name}_5_joint">
         <implicitSpringDamper>1</implicitSpringDamper>
     </gazebo>
-    <gazebo reference="${name}_${side}_6_joint">
+    <gazebo reference="${name}_6_joint">
         <implicitSpringDamper>1</implicitSpringDamper>
     </gazebo>
-    <gazebo reference="${name}_${side}_7_joint">
+    <gazebo reference="${name}_7_joint">
         <implicitSpringDamper>1</implicitSpringDamper>
     </gazebo>
 
     <!-- extensions -->
-    <xacro:reem_wrist_simple_transmission name="${name}" side="${side}" number="5" reduction="1.0" />
-    <xacro:reem_wrist_differential_transmission name="${name}" side="${side}" number_1="6" number_2="7"
+    <xacro:wrist_simple_transmission name="${name}" number="5" reduction="1.0" />
+    <xacro:wrist_differential_transmission name="${name}" number_1="6" number_2="7"
                                                 act_reduction_1="-1.0" act_reduction_2="1.0"
                                                 jnt_reduction_1="-1.0" jnt_reduction_2="${-reflect}" />
 

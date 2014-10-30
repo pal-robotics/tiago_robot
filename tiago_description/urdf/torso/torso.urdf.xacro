@@ -37,7 +37,7 @@
   </link>
   
   <joint name="${name}_fixed_joint" type="fixed">
-    <origin rpy="0 0 0" xyz="0 0 0.3" />
+    <origin rpy="0 0 0" xyz="-0.053 0 0.3" />
     <parent link="${parent}_link" />
     <child link="${name}_fixed_link" />
     <axis xyz="0 0 0" />

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>ak</author>
+      <authoring_tool>OpenCOLLADA for 3ds Max;  Version: 1.3.1;  Revision: 847M;  Platform: x64;  Configuration: Release_Max2012_static</authoring_tool>
+      <source_data>file:///D:/work_odesk/p18_robotic/3d/final2/hand_finger3.max</source_data>
+    </contributor>
+    <created>2012-08-01T12:24:28</created>
+    <modified>2012-08-01T12:24:28</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="hand_finger3">
+      <profile_COMMON>
+        <newparam sid="hand_finger3_color_png-surface">
+          <surface type="2D">
+            <init_from>hand_finger3_color_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="hand_finger3_color_png-sampler">
+          <sampler2D>
+            <source>hand_finger3_color_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <newparam sid="hand_finger3_specular_png-surface">
+          <surface type="2D">
+            <init_from>hand_finger3_specular_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="hand_finger3_specular_png-sampler">
+          <sampler2D>
+            <source>hand_finger3_specular_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <newparam sid="hand_finger3_normals_png-surface">
+          <surface type="2D">
+            <init_from>hand_finger3_normals_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="hand_finger3_normals_png-sampler">
+          <sampler2D>
+            <source>hand_finger3_normals_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>1 1 1 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="hand_finger3_color_png-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <texture texture="hand_finger3_specular_png-sampler" texcoord="CHANNEL1"/>
+            </specular>
+            <shininess>
+              <float>37</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+          <extra>
+            <technique profile="OpenCOLLADA3dsMax">
+              <bump bumptype="HEIGHTFIELD">
+                <texture texture="hand_finger3_normals_png-sampler" texcoord="CHANNEL1"/>
+              </bump>
+            </technique>
+          </extra>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="hand_finger3-material" name="hand_finger3">
+      <instance_effect url="#hand_finger3"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="geom-default" name="default">
+      <mesh>
+        <source id="geom-default-positions">
+          <float_array id="geom-default-positions-array" count="123">-41.6142 -142.6638 -182.4018 44.4597 155.8836 -34.5803 6.7115 171.6702 -6.3736 -11.7736 -149.9756 -174.6196 -93.2108 -145.2026 -4.7121 63.7154 -127.4871 -50.7086 41.4232 -143.4826 -32.1413 10.6067 -150.0442 -7.0813 70.0148 131.0784 -58.7483 77.0059 -107.5383 -72.5037 77.8449 102.7267 -72.3642 76.5817 90.0025 -164.1257 76.5845 -102.0258 -172.9156 51.1792 85.8017 -197.2221 50.9447 -93.1177 -214.6345 14.9208 87.1452 -212.9568 14.9983 -91.6389 -232.3113 -21.2021 88.9311 -208.4364 -26.2388 -90.21 -230.9096 -46.9269 84.0349 -177.605 -60.2476 -95.1946 -196.8576 -55.6849 -118.573 -194.9597 -21.5681 -128.5107 -213.6994 8.9399 -129.8788 -213.9199 41.9713 -125.1247 -203.5744 -126.1865 -99.83189 -4.2389 -116.18 -126.3021 -3.5881 10.2101 -149.6361 -174.2259 36.5033 -147.3925 -165.8753 59.8974 -127.5041 -166.5053 -59.2625 168.4476 -4.4096 -85.4522 151.689 -4.3483 -100.7028 111.361 -5.9385 -12.4959 123.9637 -192.5571 -36.1763 123.2613 -170.6539 16.6889 123.0181 -195.8244 47.5887 115.9365 -184.2997 65.7793 116.6962 -155.7063 43.7263 137.8994 -152.3779 12.9179 145.5779 -159.562 -13.9953 142.694 -162.1548</float_array>
+          <technique_common>
+            <accessor source="#geom-default-positions-array" count="41" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-default-normals">
+          <float_array id="geom-default-normals-array" count="123">0.9204758 0.2122535 -0.3281352 0.9214705 -0.2719237 -0.2773981 0.6433629 -0.1621746 -0.7481869 0.9745467 0.1121314 0.1941272 0.951414 -0.2405029 0.1922749 0.8027522 -0.4356397 0.407194 -0.3223567 -0.7434347 0.5859957 -0.4453975 -0.824024 -0.3501509 -0.0676601 -0.9703523 -0.2320315 0.8663765 0.4016292 0.2967923 0.6701739 0.6265857 0.3978156 0.6062015 -0.6435463 0.4672984 0.2774251 -0.6585592 0.6995249 0.5962251 0.22017 -0.7720368 0.1967554 -0.164993 -0.9664702 0.1453149 0.2639526 -0.9535264 -0.390766 -0.1332128 -0.9107998 -0.8576945 0.1990953 -0.4740476 -0.4583085 0.2752115 -0.8451107 -0.261008 -0.6306426 -0.7308657 -0.8288034 -0.07238732 -0.5548378 -0.6816574 -0.4520694 0.5753056 -0.8360632 -0.09229083 0.5408149 -0.7260484 -0.3830032 -0.5711062 0.500455 -0.6252358 -0.5988531 0.1290172 -0.6927699 -0.709524 0.7259104 -0.6617332 -0.1875188 0.1031985 -0.9628561 -0.2495162 0.375632 -0.9081998 -0.1845912 -0.7072724 0.5465328 -0.4484059 -0.2955386 0.644478 -0.7051985 0.1699837 0.650888 -0.7398989 0.5392169 0.5720245 -0.6180882 0.7845652 0.5601548 -0.2658648 0.4678646 0.834846 -0.2900601 0.1203132 0.9301212 -0.3469859 -0.8221536 0.1883413 0.5372068 -0.2822519 0.8862459 -0.3672903 -0.6679895 0.5287936 0.5236098 -0.2718917 0.7795108 0.5643029 0.2810888 0.7257905 0.6278672</float_array>
+          <technique_common>
+            <accessor source="#geom-default-normals-array" count="41" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-default-map1">
+          <float_array id="geom-default-map1-array" count="177">0.787191 0.821508 0 0.711742 0.837393 0 0.683181 0.579959 0 0.750216 0.581906 0 0.592263 0.873571 0 0.548375 0.593674 0 0.510262 0.57239 0 0.577215 0.914568 0 0.158321 0.080704 0 0.292954 0.375255 0 0.26361 0.401295 0 0.535526 0.954883 0 0.468317 0.557116 0 0.476062 0.985671 0 0.414075 0.556609 0 0.663323 0.44455 0 0.695046 0.510078 0 0.331019 0.543475 0 0.35369 0.478077 0 0.650033 0.390775 0 0.363413 0.42351 0 0.641834 0.332273 0 0.351716 0.363853 0 0.315958 0.415823 0 0.32746 0.370901 0 0.228353 0.041595 0 0.301424 0.020673 0 0.303892 0.449505 0 0.282808 0.49127 0 0.210682 0.564629 0 0.211349 0.50128 0 0.251189 0.426566 0 0.024488 0.2232 0 0.023136 0.448934 0 0.013444 0.378705 0 0.225316 0.45294 0 0.018711 0.306906 0 0.698629 0.018624 0 0.701613 0.38004 0 0.699437 0.335987 0 0.717416 0.417174 0 0.745817 0.458417 0 0.799659 0.53521 0 0.809093 0.470535 0 0.982551 0.361036 0 0.983759 0.43395 0 0.798775 0.415771 0 0.765984 0.378266 0 0.73957 0.349336 0 0.800492 0.035255 0 0.981897 0.26746 0 0.969205 0.164096 0 0.875837 0.070443 0 0.38753 0.995167 0 0.320239 0.986591 0 0.272885 0.9402 0 0.24241 0.651981 0 0.250178 0.614641 0 0.276843 0.584679 0</float_array>
+          <technique_common>
+            <accessor source="#geom-default-map1-array" count="59" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-default-vertices">
+          <input semantic="POSITION" source="#geom-default-positions"/>
+        </vertices>
+        <triangles material="hand_finger3" count="78">
+          <input semantic="VERTEX" source="#geom-default-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-default-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-default-map1" offset="2" set="0"/>
+          <p>11 0 1 12 1 2 14 2 3 11 0 1 10 3 4 9 4 5 5 5 6 9 4 5 10 3 4 4 6 8 0 7 9 3 8 10 8 9 7 1 10 11 6 11 12 7 12 14 6 11 12 1 10 11 13 13 16 14 2 17 16 14 18 15 15 15 16 14 18 18 16 20 19 17 21 17 18 19 18 16 20 0 7 9 22 19 23 3 8 10 20 20 22 18 16 20 22 19 23 0 7 9 4 6 8 26 21 25 25 22 26 20 20 22 21 23 24 16 14 18 14 2 17 24 24 28 16 14 18 23 25 27 22 19 23 12 1 29 29 26 30 24 24 28 3 8 10 27 27 31 7 12 32 23 25 27 27 27 31 3 8 10 29 26 30 12 1 29 9 4 33 28 28 35 29 26 30 5 5 34 24 24 28 28 28 35 27 27 31 28 28 35 24 24 28 29 26 30 22 19 23 0 7 9 21 23 24 19 17 21 20 20 22 25 22 26 17 18 19 19 17 21 34 29 39 15 15 15 17 18 19 33 30 38 13 13 16 15 15 15 35 31 40 11 0 42 13 13 16 36 32 41 10 3 45 11 0 42 37 33 43 38 34 46 37 33 43 36 32 41 39 35 47 38 34 46 36 32 41 39 35 47 35 31 40 33 30 38 34 29 39 19 17 21 32 36 37 38 34 46 1 10 50 8 9 44 1 10 50 38 34 46 39 35 47 33 30 38 34 29 39 40 37 48 34 29 39 31 38 49 30 39 52 40 37 48 30 39 52 2 40 51 7 12 14 2 40 13 30 39 53 7 12 14 30 39 53 31 38 54 7 12 14 31 38 54 32 36 55 7 12 14 32 36 55 25 22 56 7 12 14 25 22 56 26 21 57 7 12 14 26 21 57 4 6 58 7 12 32 4 6 8 3 8 10 27 27 31 28 28 35 6 11 36 14 2 3 13 13 0 11 0 1 9 4 5 12 1 2 11 0 1 10 3 4 8 9 7 5 5 6 6 11 12 5 5 6 8 9 7 1 10 11 2 40 13 7 12 14 16 14 18 15 15 15 13 13 16 18 16 20 17 18 19 15 15 15 18 16 20 20 20 22 19 17 21 22 19 23 21 23 24 20 20 22 26 21 25 21 23 24 0 7 9 21 23 24 26 21 25 25 22 26 24 24 28 23 25 27 16 14 18 22 19 23 18 16 20 16 14 18 24 24 28 14 2 17 12 1 29 3 8 10 22 19 23 23 25 27 9 4 33 5 5 34 29 26 30 5 5 34 6 11 36 28 28 35 27 27 31 23 25 27 24 24 28 25 22 26 32 36 37 19 17 21 34 29 39 33 30 38 17 18 19 33 30 38 35 31 40 15 15 15 35 31 40 36 32 41 13 13 16 36 32 41 37 33 43 11 0 42 37 33 43 8 9 44 10 3 45 36 32 41 35 31 40 39 35 47 33 30 38 40 37 48 39 35 47 32 36 37 31 38 49 34 29 39 8 9 44 37 33 43 38 34 46 39 35 47 2 40 51 1 10 50 30 39 52 40 37 48 34 29 39 2 40 51 39 35 47 40 37 48 6 11 36 7 12 32 27 27 31</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_images>
+    <image id="hand_finger3_color_png">
+      <init_from>./hand_finger_3_color.png</init_from>
+    </image>
+    <image id="hand_finger3_normals_png">
+      <init_from>./hand_finger_3_normals.png</init_from>
+    </image>
+    <image id="hand_finger3_specular_png">
+      <init_from>./hand_finger_3_specular.png</init_from>
+    </image>
+  </library_images>
+  <library_visual_scenes>
+    <visual_scene id="MaxScene">
+      <node id="node-default" name="default">
+        <rotate>1 0 0 -90</rotate>
+        <scale>0.0001 0.0001 0.0001</scale>
+        <instance_geometry url="#geom-default">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="hand_finger3" target="#hand_finger3-material">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#MaxScene"/>
+  </scene>
+</COLLADA>
