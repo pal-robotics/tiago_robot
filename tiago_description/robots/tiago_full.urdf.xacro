@@ -15,7 +15,7 @@
 
   <!-- The following included files set up definitions of parts of the robot body -->
   <!-- Base -->
-  <xacro:include filename="$(find tiago_description)/urdf/base/base.urdf.xacro" />
+  <xacro:include filename="$(find ant_description)/urdf/base/base_v2.urdf.xacro" />
   <!-- Torso -->
   <xacro:include filename="$(find tiago_description)/urdf/torso/torso.urdf.xacro" />
   <!-- Arm -->
