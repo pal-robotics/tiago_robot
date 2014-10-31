@@ -242,7 +242,7 @@
     <joint name="${name}_tool_joint" type="fixed">
       <parent link="${name}_7_link" />
       <child link="${name}_tool_link" />
-      <origin xyz="0 0 0.046" rpy="${90.0 * deg_to_rad} ${-90.0 * deg_to_rad} 0" />
+      <origin xyz="0 0 0.046" rpy="${90.0 * deg_to_rad} ${-90.0 * deg_to_rad} ${180 * deg_to_rad}" />
     </joint>
 
 

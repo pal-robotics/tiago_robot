@@ -20,6 +20,8 @@
   <xacro:include filename="$(find tiago_description)/urdf/torso/torso.urdf.xacro" />
   <!-- Arm -->
   <xacro:include filename="$(find tiago_description)/urdf/arm/arm.urdf.xacro" />
+  <!-- Hand -->
+  <xacro:include filename="$(find hey5_description)/urdf/hey5_hand.urdf.xacro" />
 
   <!-- Generic simulator_gazebo plugins -->
   <xacro:include filename="$(find tiago_description)/gazebo/gazebo.urdf.xacro" />
@@ -31,6 +33,8 @@
   <xacro:tiago_torso name="torso" parent="base"/>
   <xacro:tiago_arm name="arm" parent="torso_lift_link"/>
   <!-- <xacro:tiago_head  name="head"  parent="torso_lift_link"/> -->
-  <!-- <xacro:reem_hand  name="hand"  parent="arm_tool_link"/> -->
+  <xacro:hey5_hand parent="arm_tool_link" name="hand" reflect="1">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </xacro:hey5_hand>
 </robot>
 
