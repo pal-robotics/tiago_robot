@@ -51,7 +51,7 @@
         <material name="DarkGrey" />
       </visual>
       <collision>
-       <origin xyz="0.11 0 0.13" rpy="0 0 0" />
+       <origin xyz="0.11 0 0.13" rpy="0 0 ${90 * deg_to_rad}" />
         <geometry>
           <mesh filename="package://tiago_description/meshes/arm/arm_1_collision.stl" scale="1 1 1"/>
         </geometry>
@@ -121,17 +121,24 @@
         <material name="DarkGrey" />
       </visual>
       <visual>
-        <origin xyz="0 0 0" rpy="0 0 0" />
+        <origin xyz="0 0 -0.025" rpy="0 0 0" />
         <geometry>
-          <cylinder length="0.12" radius="0.06" />
+          <cylinder length="0.11" radius="0.05" />
         </geometry>
         <material name="DarkGrey" />
       </visual>
       <collision>
-        <origin xyz="0 0 0" rpy="0 0 0" />
+        <origin xyz="0 0 -0.1" rpy="0 0 0" />
         <geometry>
           <mesh filename="package://tiago_description/meshes/arm/arm_3_collision.stl" scale="1 1 1"/>
         </geometry>
+      </collision>
+      <collision>
+        <origin xyz="0 0 -0.025" rpy="0 0 0" />
+        <geometry>
+          <cylinder length="0.11" radius="0.05" />
+        </geometry>
+        <material name="DarkGrey" />
       </collision>
     </link>
 
@@ -165,11 +172,25 @@
         </geometry>
         <material name="DarkGrey" />
       </visual>
+      <visual>
+        <origin xyz="-0.13 0.02 0" rpy="0 ${90 * deg_to_rad} 0" />
+        <geometry>
+          <cylinder length="0.05" radius="0.05" />
+        </geometry>
+        <material name="DarkGrey" />
+      </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
           <mesh filename="package://tiago_description/meshes/arm/arm_4_collision.stl" scale="1 1 1"/>
         </geometry>
+      </collision>
+      <collision>
+        <origin xyz="-0.13 0.02 0" rpy="0 ${90 * deg_to_rad} 0" />
+        <geometry>
+          <cylinder length="0.05" radius="0.05" />
+        </geometry>
+        <material name="DarkGrey" />
       </collision>
     </link>
 
