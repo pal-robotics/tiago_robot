@@ -11,7 +11,7 @@
   <xacro:property name="torso_eps"      value="0.02" />
 
   <xacro:macro name="tiago_torso" params="name parent">
-  
+
   <link name="${name}_fixed_link">
     <inertial>
       <origin rpy="0 0 0" xyz="0.053 0.55187 -0.00188" />
@@ -21,28 +21,29 @@
                izz="0.04165307088" />
     </inertial>
 
-    <visual>
-      <origin rpy="0 0 0" xyz="0.0 0.0 0" />
+  <visual>
+      <origin rpy="0 0 0" xyz="0 0 0.2315" />
       <geometry>
-        <box size="0.10 0.22 0.4"/>
+        <box size="0.1 0.14 0.463"/>
       </geometry>
+      <material name="LightGrey"/>
     </visual>
-
     <collision>
-      <origin rpy="0 0 0" xyz="0.0 0.0 0" />
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.2315" />
       <geometry>
-        <box size="0.10 0.22 0.4"/>
+        <box size="0.1 0.14 0.463"/>
       </geometry>
+      <material name="LightGrey"/>
     </collision>
   </link>
-  
+
   <joint name="${name}_fixed_joint" type="fixed">
-    <origin rpy="0 0 0" xyz="-0.053 0 0.3" />
+    <origin rpy="0 0 0" xyz="-0.053 0 0.2015" />
     <parent link="${parent}_link" />
     <child link="${name}_fixed_link" />
     <axis xyz="0 0 0" />
   </joint>
-  
+
   <link name="${name}_lift_link">
     <inertial>
       <origin rpy="0 0 0" xyz="-0.060142360276412 0.00304133533168627 0.343272867034157" />
@@ -53,22 +54,24 @@
     </inertial>
 
     <visual>
-      <origin rpy="0 0 0" xyz="0 0 -0.35" />
+      <origin rpy="0 0 0" xyz="0 0 -0.2315" />
        <geometry>
-        <box size="0.10 0.22 0.7"/>
+        <box size="0.106 0.15 0.463"/>
       </geometry>
+      <material name="White"/>
     </visual>
 
     <collision>
-      <origin rpy="0 0 0" xyz="0 0 0" />
+      <origin rpy="0 0 0" xyz="0 0 -0.2315" />
        <geometry>
-        <box size="0.10 0.22 0.7"/>
+        <box size="0.106 0.15 0.463"/>
       </geometry>
+      <material name="White"/>
     </collision>
   </link>
-  
+
   <joint name="${name}_lift_joint" type="prismatic">
-    <origin rpy="0 0 0" xyz="0.0 0 0.26428" />
+    <origin rpy="0 0 0" xyz="0.0 0 0.463" />
     <parent link="${name}_fixed_link" />
     <child link="${name}_lift_link" />
     <axis xyz="0 0 1" />
@@ -76,7 +79,7 @@
     <calibration rising="0.0" />
     <dynamics damping="1000" />
   </joint>
-  
+
  </xacro:macro>
 
 </robot>
