@@ -22,6 +22,8 @@
   <xacro:include filename="$(find tiago_description)/urdf/arm/arm.urdf.xacro" />
   <!-- Hand -->
   <xacro:include filename="$(find hey5_description)/urdf/hey5_hand.urdf.xacro" />
+  <!-- Head -->
+  <xacro:include filename="$(find tiago_description)/urdf/head/head.urdf.xacro" />
 
   <!-- Generic simulator_gazebo plugins -->
   <xacro:include filename="$(find tiago_description)/gazebo/gazebo.urdf.xacro" />
@@ -31,6 +33,7 @@
   <!-- Now we can start using the macros included above to define the actual robot -->
   <xacro:base name="base"/>
   <xacro:tiago_torso name="torso" parent="base"/>
+  <xacro:head name="head" parent="torso_lift_link"/>
   <xacro:tiago_arm name="arm" parent="torso_lift_link"/>
   <!-- <xacro:tiago_head  name="head"  parent="torso_lift_link"/> -->
   <xacro:hey5_hand parent="arm_tool_link" name="hand" reflect="1">
