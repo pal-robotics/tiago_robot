@@ -22,8 +22,8 @@
   <xacro:property name="arm_2_max_vel"      value="3.66" />
   <xacro:property name="arm_3_max_vel"      value="4.58" />
   <xacro:property name="arm_4_max_vel"      value="4.58" />
-  <xacro:property name="arm_1_max_effort"   value="44.64" />
-  <xacro:property name="arm_2_max_effort"   value="22.32" />
+  <xacro:property name="arm_1_max_effort"   value="39.0" />
+  <xacro:property name="arm_2_max_effort"   value="39.0" />
   <xacro:property name="arm_3_max_effort"   value="17.86" />
   <xacro:property name="arm_4_max_effort"   value="17.86" />
   <xacro:property name="arm_eps"            value="0.02" />
@@ -43,17 +43,48 @@
         <inertia ixx="0.00327313329"  ixy="-0.00000460054"  ixz="-0.00025121368" iyy="0.00316047802" iyz="0.00000313158" izz="0.00157642528" />
 
       </inertial>
+      <!-- M90 module -->
       <visual>
-        <origin xyz="0.11 0 0.13" rpy="0 0 ${90 * deg_to_rad}" />
+        <origin xyz="0 0 -0.0425" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/arm/arm_1.dae" scale="1 1 1"/>
+          <cylinder length="0.085" radius="0.045" />
         </geometry>
         <material name="DarkGrey" />
       </visual>
       <collision>
-       <origin xyz="0.11 0 0.13" rpy="0 0 ${90 * deg_to_rad}" />
+        <origin xyz="0 0 -0.0425" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/arm/arm_1_collision.stl" scale="1 1 1"/>
+          <cylinder length="0.085" radius="0.045" />
+        </geometry>
+        <material name="DarkGrey" />
+      </collision>
+      <!-- Connecting plate -->
+      <visual>
+        <origin xyz="0.05 0 0.01" rpy="0 0 0" />
+        <geometry>
+          <box size="0.2 0.09 0.02" />
+        </geometry>
+        <material name="Blue" />
+      </visual>
+      <collision>
+        <origin xyz="0 0 -0.0425" rpy="0 0 0" />
+        <geometry>
+          <cylinder length="0.02" radius="0.045" />
+        </geometry>
+        <material name="Blue" />
+      </collision>
+      <!-- Root of arm -->
+      <visual>
+        <origin xyz="0.12 0 -0.107" rpy="${-90 * deg_to_rad} 0 ${180 * deg_to_rad}" />
+        <geometry>
+          <mesh filename="package://tiago_description/meshes/arm/arm_2.dae" scale="1 1 1"/>
+        </geometry>
+        <material name="DarkGrey" />
+      </visual>
+      <collision>
+       <origin xyz="0.12 0 -0.107" rpy="${-90 * deg_to_rad} 0 ${180 * deg_to_rad}" />
+        <geometry>
+          <mesh filename="package://tiago_description/meshes/arm/arm_2_collision.stl" scale="1 1 1"/>
         </geometry>
       </collision>
     </link>
@@ -61,7 +92,7 @@
     <joint name="${name}_1_joint" type="revolute">
       <parent link="${parent}" />
       <child link="${name}_1_link" />
-      <origin xyz="0.1 0.07 0" rpy="${0 * deg_to_rad} ${0 * deg_to_rad} ${-90 * deg_to_rad}" />
+      <origin xyz="0.157 0.064625 0" rpy="${0 * deg_to_rad} ${0 * deg_to_rad} ${-90 * deg_to_rad}" />
       <axis xyz="0 0 1" />
       <limit lower="${0.0 * deg_to_rad}" upper="${180.0 * deg_to_rad}" effort="${arm_1_max_effort}" velocity="${arm_1_max_vel}" />
       <dynamics friction="${arm_friction}" damping="${arm_damping}"/>
@@ -96,7 +127,7 @@
     <joint name="${name}_2_joint" type="revolute">
       <parent link="${name}_1_link" />
       <child link="${name}_2_link" />
-      <origin xyz="0.11 0 -0.08" rpy="${90.0 * deg_to_rad} ${0 * deg_to_rad} ${0 * deg_to_rad}" />
+      <origin xyz="0.12 0.006 -0.107" rpy="${90.0 * deg_to_rad} ${0 * deg_to_rad} ${0 * deg_to_rad}" />
       <axis xyz="0 0 1" />
       <limit lower="${-120.0 * deg_to_rad}" upper="${60.0 * deg_to_rad}" effort="${arm_2_max_effort}" velocity="${arm_2_max_vel}" />
       <dynamics friction="${arm_friction}" damping="${arm_damping}"/>
@@ -173,9 +204,9 @@
         <material name="DarkGrey" />
       </visual>
       <visual>
-        <origin xyz="-0.13 0.02 0" rpy="0 ${90 * deg_to_rad} 0" />
+        <origin xyz="-0.15 0.02 0" rpy="0 ${90 * deg_to_rad} 0" />
         <geometry>
-          <cylinder length="0.05" radius="0.05" />
+          <cylinder length="0.07" radius="0.05" />
         </geometry>
         <material name="DarkGrey" />
       </visual>
@@ -186,9 +217,9 @@
         </geometry>
       </collision>
       <collision>
-        <origin xyz="-0.13 0.02 0" rpy="0 ${90 * deg_to_rad} 0" />
+        <origin xyz="-0.15 0.02 0" rpy="0 ${90 * deg_to_rad} 0" />
         <geometry>
-          <cylinder length="0.05" radius="0.05" />
+          <cylinder length="0.07" radius="0.05" />
         </geometry>
         <material name="DarkGrey" />
       </collision>
@@ -197,7 +228,7 @@
     <joint name="${name}_4_joint" type="revolute">
       <parent link="${name}_3_link" />
       <child link="${name}_4_link" />
-      <origin xyz="0 -0.02 -0.183" rpy="0 ${-90.0 * deg_to_rad} 0" />
+      <origin xyz="0 -0.02 -0.153" rpy="0 ${-90.0 * deg_to_rad} 0" />
       <axis xyz="0 0 1" />
       <limit lower="${-110 * deg_to_rad}" upper="${130.0 * deg_to_rad}" effort="${arm_4_max_effort}" velocity="${arm_4_max_vel}" />
       <dynamics friction="${arm_friction}" damping="${arm_damping}"/>
