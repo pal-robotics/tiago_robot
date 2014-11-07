@@ -92,7 +92,7 @@
     <joint name="${name}_1_joint" type="revolute">
       <parent link="${parent}" />
       <child link="${name}_1_link" />
-      <origin xyz="0.157 0.064625 0" rpy="${0 * deg_to_rad} ${0 * deg_to_rad} ${-90 * deg_to_rad}" />
+      <origin xyz="0.157 0.064625 -0.045" rpy="${0 * deg_to_rad} ${0 * deg_to_rad} ${-90 * deg_to_rad}" />
       <axis xyz="0 0 1" />
       <limit lower="${0.0 * deg_to_rad}" upper="${180.0 * deg_to_rad}" effort="${arm_1_max_effort}" velocity="${arm_1_max_vel}" />
       <dynamics friction="${arm_friction}" damping="${arm_damping}"/>
