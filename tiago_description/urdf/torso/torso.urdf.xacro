@@ -22,23 +22,23 @@
     </inertial>
 
   <visual>
-      <origin rpy="0 0 0" xyz="0 0 0.2315" />
+      <origin rpy="0 0 0" xyz="0 0 0.2235" />
       <geometry>
-        <box size="0.1 0.14 0.463"/>
+        <box size="0.14 0.1 0.463"/>
       </geometry>
       <material name="LightGrey"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0.0 0.0 0.2315" />
       <geometry>
-        <box size="0.1 0.14 0.463"/>
+        <box size="0.14 0.1 0.463"/>
       </geometry>
       <material name="LightGrey"/>
     </collision>
   </link>
 
   <joint name="${name}_fixed_joint" type="fixed">
-    <origin rpy="0 0 0" xyz="-0.053 0 0.2015" />
+    <origin rpy="0 0 0" xyz="-0.068 0 0.2235" />
     <parent link="${parent}_link" />
     <child link="${name}_fixed_link" />
     <axis xyz="0 0 0" />
@@ -52,30 +52,45 @@
                iyy="0.061658561971383" iyz="-3.14401755382909E-05"
                izz="0.0376084656328484" />
     </inertial>
-
+    <!-- Lifting body -->
     <visual>
-      <origin rpy="0 0 0" xyz="0 0 -0.2315" />
+      <origin rpy="0 0 0" xyz="0 0 -0.25125" />
        <geometry>
-        <box size="0.106 0.15 0.463"/>
+        <box size="0.16 0.106 0.5025"/>
       </geometry>
       <material name="White"/>
     </visual>
-
     <collision>
-      <origin rpy="0 0 0" xyz="0 0 -0.2315" />
+      <origin rpy="0 0 0" xyz="0 0 -0.25125" />
        <geometry>
-        <box size="0.106 0.15 0.463"/>
+        <box size="0.16 0.106 0.5025"/>
       </geometry>
       <material name="White"/>
     </collision>
+    <!-- Head pan motor -->
+    <visual>
+      <origin xyz="0.187 0 0.02" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.06 0.04 0.04"/>
+      </geometry>
+      <material name="Grey" />
+    </visual>
+    <collision>
+      <origin xyz="0.187 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.04 0.04"/>
+      </geometry>
+      <material name="Grey" />
+    </collision>
+
   </link>
 
   <joint name="${name}_lift_joint" type="prismatic">
-    <origin rpy="0 0 0" xyz="0.0 0 0.463" />
+    <origin rpy="0 0 0" xyz="0.0 0 0.5025" />
     <parent link="${name}_fixed_link" />
     <child link="${name}_lift_link" />
     <axis xyz="0 0 1" />
-    <limit effort="450" lower="0.0" upper="0.3556" velocity="0.1" />
+    <limit effort="450" lower="0.0" upper="0.35" velocity="0.1" />
     <calibration rising="0.0" />
     <dynamics damping="1000" />
   </joint>
