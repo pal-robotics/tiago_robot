@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <!-- Diff drive controller parameters -->
+  <rosparam command="load" file="$(find tiago_controller_configuration)/config/mobile_base_controller.yaml"/>
+
+  <!-- Joint trajectory controllers parameters -->
+  <rosparam command="load" file="$(find tiago_controller_configuration)/config/joint_trajectory_controllers.yaml" />
+
+
+  <!-- Current limit controller -->
+  <!--
+  <rosparam command="load" file="$(find tiago_controller_configuration)/config/current_limit_controller.yaml"/>
+  -->
+
+  <!-- Robot model -->
+  <include file="$(find tiago_description)/robots/upload_tiago.launch"/>
+
+  <!-- Bring up robot -->
+  <include file="$(find tiago_bringup)/launch/tiago_bringup.launch"/>
+</launch>
