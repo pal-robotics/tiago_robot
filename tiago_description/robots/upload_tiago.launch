@@ -1,6 +1,7 @@
 <launch>
+  <arg name="robot" default="full"/>
 
   <!-- Robot description -->
-  <param name="robot_description" command="$(find xacro)/xacro.py '$(find tiago_description)/robots/tiago_full.urdf.xacro'" />
+  <param name="robot_description" command="$(find xacro)/xacro.py '$(find tiago_description)/robots/tiago_$(arg robot).urdf.xacro'" />
 
 </launch>
