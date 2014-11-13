@@ -34,13 +34,9 @@
     <!--************************-->
     <link name="${name}_5_link">
       <inertial>
-        <origin xyz="-0.00044 0.00012 ${reflect * 0.07445}" rpy="0 0 0"/>
-        <mass value="1.21524" />
-        <!-- <inertia ixx="0"  ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" /> -->
-        <!-- NOTE: Assuming cylinder centered at CoM with r=0.05, h=0.1 with axis parallel to z coordinate -->
-<!--         <inertia ixx="0.0027096"  ixy="0"  ixz="0" iyy="0.0027096" iyz="0" izz="0.0023225" /> -->
-
-      <inertia ixx="0.00193499547"  ixy="-0.00000027528"  ixz="-0.00001268153" iyy="0.00177767506" iyz="-0.00000466638" izz="0.00057101196" />
+        <origin xyz="-0.00084 0.00001 ${reflect * 0.07797}" rpy="0 0 0"/>
+        <mass value="1.32698" />
+        <inertia ixx="0.01049566566"  ixy="-0.00000316264"  ixz="-0.00012548144" iyy="0.01028836655" iyz="0.0000027891" izz="0.00094419873" />
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
@@ -73,12 +69,9 @@
 
     <link name="${name}_6_link">
       <inertial>
-        <origin xyz="-0.00005 -0.00252 ${reflect * 0.00007}" rpy="0 0 0"/>
-        <mass value="0.41597" />
-        <!-- <inertia ixx="0"  ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" /> -->
-        <!-- NOTE: Assuming cylinder centered at CoM with r=0.02, h=0.08 with axis parallel to z coordinate -->
-<!--         <inertia ixx="0.0001615"  ixy="0"  ixz="0" iyy="0.0001615" iyz="0" izz="0.000051" /> -->
-         <inertia ixx="0.00020339659"  ixy="-0.00000071703"  ixz="-0.00000006654" iyy="0.00015240261" iyz="0.00000014315" izz="0.0001671881" />
+        <origin xyz="-0.000014 -0.00368 ${reflect * 0.00001}" rpy="0 0 0"/>
+        <mass value="0.35781" />
+         <inertia ixx="0.00016489507"  ixy="0.0000002779"  ixz="0.00000009308" iyy="0.00013154987" iyz="0.00000007106" izz="0.00011998795" />
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
@@ -111,13 +104,9 @@
 
     <link name="${name}_7_link">
       <inertial>
-        <!--TODO: Verify these inertial parameters-->
-        <origin xyz="-0.00004 0 ${reflect * -0.02887}" rpy="0 0 0"/>
-        <mass value="0.06697" />
-       <!-- <inertia ixx="0"  ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" /> -->
-        <!-- NOTE: Assuming point mass -->
-<!--         <inertia ixx="0"  ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" /> -->
-         <inertia ixx="0.0000123718"  ixy="0.00000000002"  ixz="0.00000002403" iyy="0.00001242132" iyz="0.00000000001" izz="0.0000059514" />
+        <origin xyz="0 -0.00005 ${reflect * -0.01573}" rpy="0 0 0"/>
+        <mass value="0.10721" />
+         <inertia ixx="0.00008977003"  ixy="-0.00000000001"  ixz="0.0" iyy="0.00008968773" iyz="-0.00000021816" izz="0.00000951878" />
       </inertial>
       <visual>
         <origin xyz="0 0 ${0.046 * reflect}" rpy="0 0 0" />

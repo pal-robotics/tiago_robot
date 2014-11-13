@@ -14,11 +14,11 @@
 
   <link name="${name}_fixed_link">
     <inertial>
-      <origin rpy="0 0 0" xyz="0.053 0.55187 -0.00188" />
-      <mass value="7.19400" />
-      <inertia ixx="0.16941095831" ixy="-0.00114443001"   ixz="0.00090167218"
-               iyy="0.15113888533" iyz="-0.00744737659"
-               izz="0.04165307088" />
+      <origin rpy="0 0 0" xyz="0.00635 -0.01673 0.10662" />
+      <mass value="14.52876" />
+      <inertia ixx="0.17621875653" ixy="-0.00154333947"   ixz="0.00980172504"
+               iyy="0.18995293862" iyz="-0.0259201152"
+               izz="0.03571737542" />
     </inertial>
 
   <visual>
@@ -46,11 +46,11 @@
 
   <link name="${name}_lift_link">
     <inertial>
-      <origin rpy="0 0 0" xyz="-0.060142360276412 0.00304133533168627 0.343272867034157" />
-      <mass value="10.81628746254819" />
-      <inertia ixx="0.0641960264706125" ixy="0.001128617953499" ixz="0.00203364821006436"
-               iyy="0.061658561971383" iyz="-3.14401755382909E-05"
-               izz="0.0376084656328484" />
+      <origin rpy="0 0 0" xyz="0.02909 0.01068 -0.14826" />
+      <mass value="8.62177" />
+      <inertia ixx="0.19639986797" ixy="0.00528625771" ixz="-0.04018414421"
+               iyy="0.212736527" iyz="-0.01564349386"
+               izz="0.02479371908" />
     </inertial>
     <!-- Lifting body -->
     <visual>
@@ -90,7 +90,7 @@
     <parent link="${name}_fixed_link" />
     <child link="${name}_lift_link" />
     <axis xyz="0 0 1" />
-    <limit effort="450" lower="0.0" upper="0.35" velocity="0.1" />
+    <limit effort="2000" lower="0.0" upper="0.35" velocity="0.01" />
     <calibration rising="0.0" />
     <dynamics damping="1000" />
   </joint>
