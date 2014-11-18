@@ -1,5 +1,5 @@
+disable_motion_planning: true
 approach_planner:
-  disable_motion_planning: true
 
   planning_groups: # Sorted by order of preference
     - arm
