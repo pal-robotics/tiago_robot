@@ -32,7 +32,7 @@
 
   <!-- Now we can start using the macros included above to define the actual robot -->
   <xacro:base name="base"/>
-  <xacro:tiago_torso name="torso" parent="base"/>
+  <xacro:tiago_torso name="torso" parent="base_link"/>
   <xacro:head name="head" parent="torso_lift_link"/>
   <xacro:tiago_arm name="arm" parent="torso_lift_link"/>
   <!--
