@@ -1,0 +1,12 @@
+play_motion:
+  controllers: [arm_controller, head_controller, torso_controller]
+  motions:
+    test_motion:
+      joints: [torso_lift_joint, head_1_joint, head_2_joint, arm_1_joint,
+      arm_2_joint, arm_3_joint, arm_4_joint, arm_5_joint,
+      arm_6_joint, arm_7_joint]
+      points:
+      - positions: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+        time_from_start: 0.0
+      - positions: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+        time_from_start: 2.0

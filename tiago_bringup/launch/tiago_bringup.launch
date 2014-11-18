@@ -34,7 +34,5 @@
   -->
 
   <!-- Pre-recorded motions executor -->
-  <!--
   <include file="$(find tiago_bringup)/launch/play_motion.launch"/>
-  -->
 </launch>
