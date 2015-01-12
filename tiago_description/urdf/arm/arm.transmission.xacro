@@ -18,8 +18,10 @@
       </actuator>
       <joint name="${name}_${number}_joint">
         <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+<!--
         <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
         <hardwareInterface>hardware_interface/JointModeInterface</hardwareInterface>
+-->
       </joint>
     </transmission>
   </xacro:macro>
