@@ -4,6 +4,7 @@
 
   <!--File includes-->
   <xacro:include filename="$(find tiago_description)/urdf/deg_to_rad.xacro" />
+  <xacro:include filename="$(find tiago_description)/urdf/torso/torso.transmission.xacro" />
 
  <!--Constant parameters-->
   <xacro:property name="torso_max_vel"  value="5.4" />
@@ -94,6 +95,8 @@
     <calibration rising="0.0" />
     <dynamics damping="1000" />
   </joint>
+
+  <xacro:torso_simple_transmission name="torso_lift" reduction="1.0"/>
 
  </xacro:macro>
 
