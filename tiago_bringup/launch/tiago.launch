@@ -15,6 +15,9 @@
   <!-- Robot model -->
   <include file="$(find tiago_description)/robots/upload_tiago.launch"/>
 
+  <!-- tiago_hardware parameters -->
+  <rosparam command="load" file="$(find tiago_bringup)/config/tiago_hardware.yaml"/>
+
   <!-- Bring up robot -->
   <include file="$(find tiago_bringup)/launch/tiago_bringup.launch"/>
 </launch>

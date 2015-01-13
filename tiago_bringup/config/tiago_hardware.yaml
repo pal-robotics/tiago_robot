@@ -1,0 +1,8 @@
+tiago_hardware:
+  special_joints:
+    - name: 'head_1_joint'
+      type: 'dynamixel'
+      id: 1
+    - name: 'head_2_joint'
+      type: 'dynamixel'
+      id: 3
