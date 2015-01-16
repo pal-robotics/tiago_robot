@@ -1,6 +1,6 @@
 <launch>
-  <!-- Joint state controller -->
   <rosparam command="load" file="$(find joint_state_controller)/joint_state_controller.yaml" />
+  <rosparam command="load" file="$(find tiago_controller_configuration)/config/joint_trajectory_controllers.yaml" />
 
   <!-- Controllers that come up started -->
   <node name="default_controllers_spawner"
