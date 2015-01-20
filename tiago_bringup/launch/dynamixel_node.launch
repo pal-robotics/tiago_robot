@@ -1,0 +1,8 @@
+<launch>
+
+  <node name="dynamixel_node" type="dynamixel_node" pkg="dynamixel_cpp" output="screen">
+    <remap from="dynamixel_act" to="/tiago_hardware/dynamixel_act"/>
+    <remap from="dynamixel_ref" to="/tiago_hardware/dynamixel_ref"/>
+  </node>
+
+</launch>

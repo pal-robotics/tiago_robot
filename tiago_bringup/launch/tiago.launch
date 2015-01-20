@@ -6,17 +6,14 @@
   <!-- Joint trajectory controllers parameters -->
   <rosparam command="load" file="$(find tiago_controller_configuration)/config/joint_trajectory_controllers.yaml" />
 
-
-  <!-- Current limit controller -->
-  <!--
-  <rosparam command="load" file="$(find tiago_controller_configuration)/config/current_limit_controller.yaml"/>
-  -->
-
   <!-- Robot model -->
   <include file="$(find tiago_description)/robots/upload_tiago.launch"/>
 
   <!-- tiago_hardware parameters -->
   <rosparam command="load" file="$(find tiago_bringup)/config/tiago_hardware.yaml"/>
+
+  <!-- Node that forwards commands and feedback of dynamixel motors -->
+  <include file="$(find tiago_bringup)/launch/dynamixel_node.launch"/>
 
   <!-- Bring up robot -->
   <include file="$(find tiago_bringup)/launch/tiago_bringup.launch"/>
