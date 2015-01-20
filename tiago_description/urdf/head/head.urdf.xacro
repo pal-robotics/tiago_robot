@@ -91,15 +91,15 @@
     <joint name="${name}_joint" type="revolute">
       <parent link="${parent}"/>
         <child link="${name}_link"/>
-      <origin xyz="0.0355 0 0.023" rpy="${-90.0 * deg_to_rad} 0 0" />
+      <origin xyz="0.0355 0 0.023" rpy="${90.0 * deg_to_rad} 0 0" />
       <axis xyz="0 0 1" />
-      <limit lower="${-45 * deg_to_rad}" upper="${90.0 * deg_to_rad}" effort="2.77" velocity="${head_max_vel}" />
+      <limit lower="${-90 * deg_to_rad}" upper="${45.0 * deg_to_rad}" effort="2.77" velocity="${head_max_vel}" />
       <dynamics damping="${head_damping}" friction="${head_friction}"/>
 
       <safety_controller k_position="20"
                          k_velocity="20"
-                         soft_lower_limit="${-45.0 * deg_to_rad + head_eps}"
-                         soft_upper_limit="${ 90.0 * deg_to_rad}" />
+                         soft_lower_limit="${-90.0 * deg_to_rad + head_eps}"
+                         soft_upper_limit="${ 45.0 * deg_to_rad}" />
     </joint>
   </xacro:macro>
 
@@ -107,7 +107,7 @@
     <xacro:head_1 name="${name}_1" parent="${parent}" />
     <xacro:head_2 name="${name}_2" parent="${name}_1_link"/>
     <xacro:xtion_pro_live name="xtion" parent="${name}_2_link">
-      <origin xyz="0.064192 -0.017614 0" rpy="${90 * deg_to_rad} 0 0" />
+      <origin xyz="0.064192 0.017614 0" rpy="${-90 * deg_to_rad} 0 0" />
       <origin xyz="0 0 0" rpy="${-90 * deg_to_rad} ${0 * deg_to_rad} ${-90 * deg_to_rad}" />
     </xacro:xtion_pro_live>
   </xacro:macro>
