@@ -1,0 +1,16 @@
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Changelog for package tiago_bringup
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Forthcoming
+-----------
+* Add launch and dependency for dynamixel_node
+* Add tiago_hardware.yaml file, upload in bringup and install rules for it
+* Added launching of moveit on bringup
+* Home motion = tucked
+* Fix namespace
+* Add play_motion and related config files
+* Add dependencies
+* Add deps to stuff used in launch files
+* Add tiago_bringup and tiago_controller_configuration
+* Contributors: Bence Magyar, Sammy Pfeiffer
