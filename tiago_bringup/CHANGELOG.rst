@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.1 (2015-01-20)
+------------------
 * Add launch and dependency for dynamixel_node
 * Add tiago_hardware.yaml file, upload in bringup and install rules for it
 * Added launching of moveit on bringup

@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.1 (2015-01-20)
+------------------
 * Fix orientation of head joint
 * Comment actuator specification in transmission so that pal_ros_control won't take control of them.
 * Comment joint mode related parts
