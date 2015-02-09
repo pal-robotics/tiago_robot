@@ -113,7 +113,7 @@
   <xacro:macro name="head" params="name parent">
     <xacro:head_1 name="${name}_1" parent="${parent}" />
     <xacro:head_2 name="${name}_2" parent="${name}_1_link"/>
-    <xacro:xtion_pro_live name="xtion" parent="${name}_2_link">
+    <xacro:xtion_pro_live name="xtion" parent="${name}_2">
       <origin xyz="0.064192 0.017614 0" rpy="${-90 * deg_to_rad} 0 0" />
       <origin xyz="0 0 0" rpy="${-90 * deg_to_rad} ${0 * deg_to_rad} ${-90 * deg_to_rad}" />
     </xacro:xtion_pro_live>

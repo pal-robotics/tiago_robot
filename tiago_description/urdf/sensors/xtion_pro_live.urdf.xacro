@@ -27,21 +27,22 @@
   <xacro:include filename="$(find tiago_description)/urdf/sensors/openni.gazebo.xacro" />
 
   <!-- Macro -->
-  <xacro:macro name="xtion_pro_live" params="name parent *origin *calibration_origin">
+  <xacro:macro name="xtion_pro_live" params="name parent *origin *optical_origin">
 
-    <!-- BEGIN frames in the center of the camera -->    
-    <joint name="${name}_frame_joint" type="fixed">
-      <insert_block name="origin" />
-      <parent link="${parent}"/>
+    <!-- frames in the center of the camera -->
+    <joint name="${name}_joint" type="fixed">
+      <insert_block name="origin"/>
+      <parent link="${parent}_link"/>
       <child link="${name}_link"/>
     </joint>
+
     <link name="${name}_link">
       <inertial>
-        <mass value="0.01" />
-        <origin xyz="0 0 0" rpy="0 0 0"/>
-        <inertia ixx="0.0"  ixy="0.0"  ixz="0.0"
-                 iyy="0.0"  iyz="0.0"
-                 izz="0.0" />
+        <origin xyz="-0.00936000000 -0.00003000000 -0.00273000000" rpy="0 0 0"/>
+        <mass value="0.21970000000"/>
+        <inertia ixx="0.00000429247" ixy="0.00000000000" ixz="0.00000002565"
+                 iyy="0.00000008027" iyz="0.00000000000"
+                 izz="0.00000427339"/>
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -61,23 +62,14 @@
     </link>
 
     <joint name="${name}_optical_joint" type="fixed">
-      <insert_block name="calibration_origin" />
+      <insert_block name="optical_origin" />
       <parent link="${name}_link"/>
       <child link="${name}_optical_frame"/>
     </joint>
 
-    <link name="${name}_optical_frame">
-      <inertial>
-        <mass value="0.01" />
-        <origin xyz="0 0 0" rpy="0 0 0"/>
-        <inertia ixx="0.0"  ixy="0.0"  ixz="0.0"
-                 iyy="0.0"  iyz="0.0"
-                 izz="0.0" />
-      </inertial>
-    </link>
-    <!-- END frames in the center of the camera -->
+    <link name="${name}_optical_frame"/>
 
-    <!-- BEGIN frames of the depth sensor -->
+    <!-- frames of the depth sensor -->
     <joint name="${name}_depth_joint" type="fixed">
       <origin xyz="0.0 0.049 0.0" rpy="0 0 0" />
       <parent link="${name}_link" />
@@ -85,16 +77,16 @@
     </joint>
 
     <link name="${name}_depth_frame"/>
-      <joint name="${name}_depth_optical_joint" type="fixed">
-        <origin xyz="0 0 0" rpy="${-M_PI/2} 0.0 ${-M_PI/2}" />
-        <parent link="${name}_depth_frame" />
-        <child link="${name}_depth_optical_frame"/>
-      </joint>
+
+    <joint name="${name}_depth_optical_joint" type="fixed">
+      <origin xyz="0 0 0" rpy="${-90.0 * deg_to_rad} 0.0 ${-90.0 * deg_to_rad}" />
+      <parent link="${name}_depth_frame" />
+      <child link="${name}_depth_optical_frame"/>
+    </joint>
 
     <link name="${name}_depth_optical_frame"/>
-    <!-- END frames of the depth sensor -->
 
-    <!-- BEGIN frames of the rgb sensor -->
+    <!-- frames of the rgb sensor -->
     <joint name="${name}_rgb_joint" type="fixed">
       <origin xyz="0.0 0.022 0.0" rpy="0 0 0" />
       <parent link="${name}_link" />
@@ -104,13 +96,12 @@
     <link name="${name}_rgb_frame"/>
 
     <joint name="${name}_rgb_optical_joint" type="fixed">
-      <origin xyz="0 0 0" rpy="${-M_PI/2} 0.0 ${-M_PI/2}" />
+      <origin xyz="0 0 0" rpy="${-90.0 * deg_to_rad} 0.0 ${-90.0 * deg_to_rad}" />
       <parent link="${name}_rgb_frame" />
       <child link="${name}_rgb_optical_frame"/>
     </joint>
 
     <link name="${name}_rgb_optical_frame"/>
-    <!-- END frames of the rgb sensor -->
 
     <!-- extensions -->
     <xacro:openni_camera_gazebo_v0 name="${name}" />
