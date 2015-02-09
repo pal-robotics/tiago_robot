@@ -1,5 +1,5 @@
 <launch>
-  <rosparam command="load" ns="dynamic_footprint_publisher" file="$(find ant_description)/urdf/base/footprint.yaml" />
+  <rosparam command="load" ns="dynamic_footprint_publisher" file="$(find pmb2_description)/urdf/base/footprint.yaml" />
 
   <node name="dynamic_footprint_publisher" pkg="dynamic_footprint" type="dynamic_footprint_publisher.py">
     <rosparam command="load" file="$(find tiago_bringup)/config/dynamic_footprint.yaml"/>

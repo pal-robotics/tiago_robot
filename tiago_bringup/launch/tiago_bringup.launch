@@ -20,8 +20,8 @@
 
   <!-- Speed limit -->
   <include file="$(find speed_limit)/launch/speed_limit.launch">
-    <arg name="config"    value="$(find ant_bringup)/config/speed_limit.yaml"/>
-    <arg name="footprint" value="$(find ant_description)/urdf/base/footprint.yaml"/>
+    <arg name="config"    value="$(find pmb2_bringup)/config/speed_limit.yaml"/>
+    <arg name="footprint" value="$(find pmb2_description)/urdf/base/footprint.yaml"/>
   </include>
 
 
