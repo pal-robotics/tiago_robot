@@ -1,0 +1,118 @@
+<?xml version="1.0" ?>
+
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <!--File includes-->
+  <xacro:include filename="$(find tiago_description)/urdf/deg_to_rad.xacro" />
+  <xacro:include filename="$(find tiago_description)/urdf/gripper/gripper.transmission.xacro" />
+
+ <!--Constant parameters-->
+  <xacro:property name="torso_max_vel"  value="5.4" />
+  <xacro:property name="torso_max_effort"  value="78.0" />
+  <xacro:property name="torso_eps"      value="0.02" />
+
+  <xacro:macro name="tiago_gripper" params="name parent *origin">
+
+  <link name="gripper_link">
+    <inertial>
+      <inertia ixx="0.00039" ixy="0.0" ixz="0.0" iyy="0.00039" iyz="-1e-05" izz="0.00066" />
+      <mass value="0.4218" />
+      <origin rpy="0.0 0.0 0.0" xyz="0.04724 0.00159 0.00064" />
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="package://tiago_description/meshes/gripper/gripper_link.stl"/>
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="package://tiago_description/meshes/gripper/gripper_link.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="gripper_joint" type="fixed">
+    <insert_block name="origin"/>
+    <parent link="${parent}" />
+    <child link="gripper_link" />
+    <axis xyz="0 0 0" />
+  </joint>
+
+  <link name="right_gripper_finger_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.0018 -0.00508 0" />
+      <mass value="0.008" />
+      <inertia ixx="5.11E-03" ixy="3.30E-09" ixz="-1.24E-12"
+               iyy="2.94E-03" iyz="7.57E-12"
+               izz="2.63E-03" />
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="package://tiago_description/meshes/gripper/gripper_finger_link.stl" scale="1 -1 1"/>
+      </geometry>
+      <material name="">
+        <color rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 -0.005 0" />
+      <geometry>
+        <box size="0.06 0.01 0.022" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_gripper_joint" type="prismatic">
+    <origin rpy="0 0 0" xyz="0.111 0 0" />
+    <parent link="gripper_link" />
+    <child link="right_gripper_finger_link" />
+    <axis xyz="0 -1 0" />
+    <limit effort="28.0" lower="0.0" upper="0.045" velocity="0.1" />
+    <calibration rising="0.0" />
+    <dynamics damping="2500" />
+  </joint>
+
+  <link name="left_gripper_finger_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.0018 0.00508 0" />
+      <mass value="0.008" />
+      <inertia ixx="5.11E-03" ixy="-3.30E-09" ixz="1.24E-12"
+               iyy="2.94E-03" iyz="7.57E-12"
+               izz="2.63E-03" />
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="package://tiago_description/meshes/gripper/gripper_finger_link.stl"/>
+      </geometry>
+      <material name="">
+        <color rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0.005 0" />
+      <geometry>
+        <box size="0.06 0.01 0.022" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_gripper_joint" type="prismatic">
+    <origin rpy="0 0 0" xyz="0.111 0 0" />
+    <parent link="gripper_link" />
+    <child link="left_gripper_finger_link" />
+    <axis xyz="0 1 0" />
+    <limit effort="28.0" lower="0.0" upper="0.045" velocity="0.1" />
+    <calibration rising="0.0" />
+    <dynamics damping="2500" />
+  </joint>
+
+  <xacro:gripper_simple_transmission name="right_gripper" reduction="1.0"/>
+  <xacro:gripper_simple_transmission name="left_gripper" reduction="1.0"/>
+
+ </xacro:macro>
+
+</robot>
