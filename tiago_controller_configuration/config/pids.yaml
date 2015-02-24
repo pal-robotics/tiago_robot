@@ -54,3 +54,6 @@ gains:
   hand_thumb_joint: *finger_gains
   hand_mrl_joint: *finger_gains
 
+  gripper_left_joint: &gripper_finger_gains {p: 100,  d: 0,  i: 10}
+  gripper_right_joint: *gripper_finger_gains
+
