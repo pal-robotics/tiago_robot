@@ -66,7 +66,7 @@
       </geometry>
     </collision>
   </link>
-  <joint name="gripper_right_joint" type="prismatic">
+  <joint name="gripper_right_finger_joint" type="prismatic">
     <origin rpy="0 0 0" xyz="0.111 0 0" />
     <parent link="gripper_link" />
     <child link="gripper_right_finger_link" />
@@ -100,7 +100,7 @@
       </geometry>
     </collision>
   </link>
-  <joint name="gripper_left_joint" type="prismatic">
+  <joint name="gripper_left_finger_joint" type="prismatic">
     <origin rpy="0 0 0" xyz="0.111 0 0" />
     <parent link="gripper_link" />
     <child link="gripper_left_finger_link" />
@@ -110,8 +110,8 @@
     <dynamics damping="2500" />
   </joint>
 
-  <xacro:gripper_simple_transmission name="gripper_left" reduction="1.0"/>
-  <xacro:gripper_simple_transmission name="gripper_right" reduction="1.0"/>
+  <xacro:gripper_simple_transmission name="gripper_left_finger" reduction="1.0"/>
+  <xacro:gripper_simple_transmission name="gripper_right_finger" reduction="1.0"/>
 
  </xacro:macro>
 
