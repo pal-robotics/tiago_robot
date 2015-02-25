@@ -1,0 +1,6 @@
+<launch>
+  <node name="gripper_controllers_spawner"
+        pkg="controller_manager" type="spawner" output="screen"
+        args="--timeout 120
+              gripper_controller" />
+</launch>

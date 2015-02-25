@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <include file="$(find tiago_controller_configuration)/launch/default_controllers.launch"/>
+<!--  <include file="$(find tiago_controller_configuration)/launch/hey5_controller.launch"/> -->
+</launch>
