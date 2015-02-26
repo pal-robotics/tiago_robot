@@ -15,7 +15,7 @@
 
   <link name="gripper_link">
     <inertial>
-      <inertia ixx="0.00039" ixy="0.0" ixz="0.0" iyy="0.00039" iyz="-1e-05" izz="0.00066" />
+      <inertia ixx="0.00039" ixy="1E-07" ixz="1E-07" iyy="0.00039" iyz="-1e-05" izz="0.00066" />
       <mass value="0.4218" />
       <origin rpy="0.0 0.0 0.0" xyz="0.04724 0.00159 0.00064" />
     </inertial>
@@ -42,13 +42,13 @@
     <axis xyz="0 0 0" />
   </joint>
 
-  <link name="right_gripper_finger_link">
+  <link name="gripper_right_finger_link">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0018 -0.00508 0" />
-      <mass value="0.008" />
-      <inertia ixx="5.11E-03" ixy="3.30E-09" ixz="-1.24E-12"
-               iyy="2.94E-03" iyz="7.57E-12"
-               izz="2.63E-03" />
+      <mass value="0.1" />
+      <inertia ixx="5.11E-01" ixy="3.30E-09" ixz="-1.24E-12"
+               iyy="2.94E-01" iyz="7.57E-12"
+               izz="2.63E-01" />
     </inertial>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0" />
@@ -66,23 +66,23 @@
       </geometry>
     </collision>
   </link>
-  <joint name="right_gripper_joint" type="prismatic">
+  <joint name="gripper_right_finger_joint" type="prismatic">
     <origin rpy="0 0 0" xyz="0.111 0 0" />
     <parent link="gripper_link" />
-    <child link="right_gripper_finger_link" />
+    <child link="gripper_right_finger_link" />
     <axis xyz="0 -1 0" />
     <limit effort="28.0" lower="0.0" upper="0.045" velocity="0.1" />
     <calibration rising="0.0" />
     <dynamics damping="2500" />
   </joint>
 
-  <link name="left_gripper_finger_link">
+  <link name="gripper_left_finger_link">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0018 0.00508 0" />
-      <mass value="0.008" />
-      <inertia ixx="5.11E-03" ixy="-3.30E-09" ixz="1.24E-12"
-               iyy="2.94E-03" iyz="7.57E-12"
-               izz="2.63E-03" />
+      <mass value="0.1" />
+      <inertia ixx="5.11E-01" ixy="-3.30E-09" ixz="1.24E-12"
+               iyy="2.94E-01" iyz="7.57E-12"
+               izz="2.63E-01" />
     </inertial>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0" />
@@ -100,18 +100,18 @@
       </geometry>
     </collision>
   </link>
-  <joint name="left_gripper_joint" type="prismatic">
+  <joint name="gripper_left_finger_joint" type="prismatic">
     <origin rpy="0 0 0" xyz="0.111 0 0" />
     <parent link="gripper_link" />
-    <child link="left_gripper_finger_link" />
+    <child link="gripper_left_finger_link" />
     <axis xyz="0 1 0" />
     <limit effort="28.0" lower="0.0" upper="0.045" velocity="0.1" />
     <calibration rising="0.0" />
     <dynamics damping="2500" />
   </joint>
 
-  <xacro:gripper_simple_transmission name="right_gripper" reduction="1.0"/>
-  <xacro:gripper_simple_transmission name="left_gripper" reduction="1.0"/>
+  <xacro:gripper_simple_transmission name="gripper_left_finger" reduction="1.0"/>
+  <xacro:gripper_simple_transmission name="gripper_right_finger" reduction="1.0"/>
 
  </xacro:macro>
 
