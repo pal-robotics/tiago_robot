@@ -7,4 +7,9 @@
   <author email="bence.magyar@pal-robotics.com">Bence Magyar</author>
   <license>BSD</license>
   <buildtool_depend>catkin</buildtool_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>control_msgs</run_depend>
+  <run_depend>trajectory_msgs</run_depend>
+  <run_depend>sensor_msgs</run_depend>
+  <run_depend>actionlib</run_depend>
 </package>
