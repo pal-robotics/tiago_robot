@@ -11,7 +11,7 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
   <xacro:macro name="chessboard_gazebo" params="name texture">
-    <gazebo reference="chessboard_${name}_link">
+    <gazebo reference="${name}_link">
       <material>${texture}</material>
     </gazebo>
   </xacro:macro>

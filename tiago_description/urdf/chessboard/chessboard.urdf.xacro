@@ -13,7 +13,7 @@
 
   <xacro:macro name="chessboard" params="name parent origin rpy">
 
-    <link name="chessboard_${name}_link">
+    <link name="${name}_link">
       <inertial>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <mass value="0.01" />
@@ -33,9 +33,9 @@
       </collision> 
     </link>
 
-    <joint name="chessboard_${name}_joint" type="fixed">
+    <joint name="${name}_joint" type="fixed">
       <parent link="${parent}" />
-      <child link="chessboard_${name}_link" />
+      <child link="${name}_link" />
       <origin xyz="${origin}" rpy="${rpy}" />
     </joint>
 
