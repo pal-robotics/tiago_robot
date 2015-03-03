@@ -1,10 +1,11 @@
-<?xml version="1.0" ?>
+<?xml version="1.0"?>
 
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
   <!--File includes-->
   <xacro:include filename="$(find tiago_description)/urdf/deg_to_rad.xacro" />
   <xacro:include filename="$(find tiago_description)/urdf/gripper/gripper.transmission.xacro" />
+  <xacro:include filename="$(find tiago_description)/urdf/gripper/gripper.gazebo.xacro" />
 
  <!--Constant parameters-->
   <xacro:property name="torso_max_vel"  value="5.4" />
@@ -114,6 +115,10 @@
 
   <xacro:gripper_simple_transmission name="gripper_left_finger" reduction="1.0"/>
   <xacro:gripper_simple_transmission name="gripper_right_finger" reduction="1.0"/>
+
+  <xacro:finger_gazebo name="gripper_left_finger"/>
+  <xacro:finger_gazebo name="gripper_right_finger"/>
+  <xacro:gripper_grasping_hack name="gripper"/>
 
  </xacro:macro>
 
