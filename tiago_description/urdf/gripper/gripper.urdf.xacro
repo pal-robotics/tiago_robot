@@ -113,6 +113,22 @@
     <dynamics damping="2500" />
   </joint>
 
+  <!-- Grasping frame -->
+  <joint name="gripper_grasping_frame_joint" type="fixed">
+    <parent link="gripper_link" />
+    <child link="gripper_grasping_frame" />
+    <origin xyz="0.12 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="gripper_grasping_frame">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.0001" />
+      <inertia ixx="0.00001" ixy="0.0" ixz="0.0"
+               iyy="0.00001" iyz="0.0"
+               izz="0.00001" />
+    </inertial>
+  </link>
+
   <xacro:gripper_simple_transmission name="gripper_left_finger" reduction="1.0"/>
   <xacro:gripper_simple_transmission name="gripper_right_finger" reduction="1.0"/>
 
