@@ -14,7 +14,7 @@
 
   <xacro:macro name="tiago_gripper" params="name parent *origin">
 
-  <link name="gripper_link">
+  <link name="${name}_link">
     <inertial>
       <inertia ixx="0.00039" ixy="0" ixz="0"
                iyy="0.00039" iyz="0"
@@ -38,14 +38,14 @@
       </geometry>
     </collision>
   </link>
-  <joint name="gripper_joint" type="fixed">
+  <joint name="${name}_joint" type="fixed">
     <insert_block name="origin"/>
     <parent link="${parent}" />
-    <child link="gripper_link" />
+    <child link="${name}_link" />
     <axis xyz="0 0 0" />
   </joint>
 
-  <link name="gripper_right_finger_link">
+  <link name="${name}_right_finger_link">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0018 -0.00508 0" />
       <mass value="0.1" />
@@ -69,17 +69,17 @@
       </geometry>
     </collision>
   </link>
-  <joint name="gripper_right_finger_joint" type="prismatic">
+  <joint name="${name}_right_finger_joint" type="prismatic">
     <origin rpy="0 0 0" xyz="0.111 0 0" />
-    <parent link="gripper_link" />
-    <child link="gripper_right_finger_link" />
+    <parent link="${name}_link" />
+    <child link="${name}_right_finger_link" />
     <axis xyz="0 -1 0" />
     <limit effort="28.0" lower="0.0" upper="0.045" velocity="0.1" />
     <calibration rising="0.0" />
     <dynamics damping="2500" />
   </joint>
 
-  <link name="gripper_left_finger_link">
+  <link name="${name}_left_finger_link">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0018 0.00508 0" />
       <mass value="0.1" />
@@ -103,10 +103,10 @@
       </geometry>
     </collision>
   </link>
-  <joint name="gripper_left_finger_joint" type="prismatic">
+  <joint name="${name}_left_finger_joint" type="prismatic">
     <origin rpy="0 0 0" xyz="0.111 0 0" />
-    <parent link="gripper_link" />
-    <child link="gripper_left_finger_link" />
+    <parent link="${name}_link" />
+    <child link="${name}_left_finger_link" />
     <axis xyz="0 1 0" />
     <limit effort="28.0" lower="0" upper="0.045" velocity="0.1" />
     <calibration rising="0.0" />
@@ -114,12 +114,12 @@
   </joint>
 
   <!-- Grasping frame -->
-  <joint name="gripper_grasping_frame_joint" type="fixed">
-    <parent link="gripper_link" />
-    <child link="gripper_grasping_frame" />
+  <joint name="${name}_grasping_frame_joint" type="fixed">
+    <parent link="${name}_link" />
+    <child link="${name}_grasping_frame" />
     <origin xyz="0.12 0 0" rpy="0 0 0" />
   </joint>
-  <link name="gripper_grasping_frame">
+  <link name="${name}_grasping_frame">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <mass value="0.0001" />
@@ -129,12 +129,12 @@
     </inertial>
   </link>
 
-  <xacro:gripper_simple_transmission name="gripper_left_finger" reduction="1.0"/>
-  <xacro:gripper_simple_transmission name="gripper_right_finger" reduction="1.0"/>
+  <xacro:gripper_simple_transmission name="${name}_left_finger" reduction="1.0"/>
+  <xacro:gripper_simple_transmission name="${name}_right_finger" reduction="1.0"/>
 
-  <xacro:finger_gazebo name="gripper_left_finger"/>
-  <xacro:finger_gazebo name="gripper_right_finger"/>
-  <xacro:gripper_grasping_hack name="gripper"/>
+  <xacro:finger_gazebo name="${name}_left_finger"/>
+  <xacro:finger_gazebo name="${name}_right_finger"/>
+  <xacro:gripper_grasping_hack name="${name}"/>
 
  </xacro:macro>
 
