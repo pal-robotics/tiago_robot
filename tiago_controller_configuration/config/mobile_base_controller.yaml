@@ -20,10 +20,10 @@ mobile_base_controller:
       max_velocity           :  1.0 # m/s
       min_velocity           : -0.2 # m/s
       has_acceleration_limits: true
-      max_acceleration       :  5.0 # m/s^2
+      max_acceleration       :  1.0 # m/s^2
   angular:
     z:
       has_velocity_limits    : true
       max_velocity           : !degrees 120.0
       has_acceleration_limits: true
-      max_acceleration       : !degrees 300.0
+      max_acceleration       : !degrees 120.0
