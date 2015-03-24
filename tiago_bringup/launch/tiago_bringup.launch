@@ -18,7 +18,9 @@
   <include file="$(find tiago_bringup)/launch/twist_mux.launch"/>
 
   <!-- Dynamic footprint -->
-  <include file="$(find tiago_bringup)/launch/dynamic_footprint.launch"/>
+  <include file="$(find tiago_bringup)/launch/dynamic_footprint.launch">
+    <arg name="robot" value="$(arg robot)"/>
+  </include>
 
   <!-- Speed limit -->
   <include file="$(find speed_limit)/launch/speed_limit.launch">
