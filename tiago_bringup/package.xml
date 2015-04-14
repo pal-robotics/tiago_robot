@@ -13,7 +13,6 @@
   <run_depend>tiago_controller_configuration</run_depend>
   <run_depend>joy</run_depend>
   <run_depend>joy_teleop</run_depend>
-  <run_depend>play_motion</run_depend>
   <run_depend>dynamic_footprint</run_depend>
   <run_depend>head_action</run_depend>
   <run_depend>tiago_moveit_config</run_depend>

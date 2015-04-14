@@ -12,4 +12,5 @@
   <run_depend>trajectory_msgs</run_depend>
   <run_depend>sensor_msgs</run_depend>
   <run_depend>actionlib</run_depend>
+  <run_depend>play_motion</run_depend>
 </package>
