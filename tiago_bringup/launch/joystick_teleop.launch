@@ -12,4 +12,12 @@
     <param name="autorepeat_rate" value="10" />
   </node>
 
+  <group ns="torso_controller">
+    <node pkg="joy_teleop" type="incrementer_server.py" name="incrementer"/>
+  </group> 
+
+  <group ns="head_controller">
+    <node pkg="joy_teleop" type="incrementer_server.py" name="incrementer"/>
+  </group> 
+
 </launch>
