@@ -2,6 +2,35 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Remove gazebo dependency
+* Increase speed of torso joint
+* Add tiago iron urdf
+* Refactor gripper to ${name}
+* Added grasping frame
+* rotate chessboard and use degrees in its RPY
+* Stop fingers shaking and add grasping hack
+* add missing components for titanium+chessboard
+* rename frame
+* Tweak inertial params
+* better placement of chessboard
+* Add URDF with chessboard attached to hand
+  For eye-hand calibration in simulation
+* Changes to fix finger shaking. Much better than before.
+* Use steel and titanium tiago, launch files parametrized
+* Change gripper joint names and add pids
+* Change finger names and add controller + first gains
+* Add tiago_steel and tiago_gripper sketch
+* Parametrize on robot type (tiago_X)
+* Activate hand
+* Make DarkGrey darker
+* Change occureces of ant_ to pmb2_
+* Update xtion with inertias and adding _link to parent inside
+* Add nice visual to head2
+* Update torso with reviewed inertial params
+* Contributors: Bence Magyar, Jordi Pages
+
 0.0.1 (2015-01-20)
 ------------------
 * Fix orientation of head joint

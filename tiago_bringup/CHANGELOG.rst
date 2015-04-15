@@ -2,6 +2,23 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add incrementers for joy_teleop
+* Move play_motion to controller launch files, update dependencies accordingly
+* Add iron to startup
+* Propagate robot argument to move_group
+* moved to tiago_calibration package
+* add step in pregrasp motion
+* add motions for eye-hand calibration
+* Add gripper open/close to motions
+* Use steel and titanium tiago, launch files parametrized
+* add tabletop pre-grasping pose
+  add motion from extended arm on the side to raised pregrasping pose
+* Add launch file for head xtion
+* Change occureces of ant_ to pmb2_
+* Contributors: Bence Magyar, Jordi Pages
+
 0.0.1 (2015-01-20)
 ------------------
 * Add launch and dependency for dynamixel_node
