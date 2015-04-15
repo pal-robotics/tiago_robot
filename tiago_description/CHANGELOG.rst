@@ -25,7 +25,7 @@ Forthcoming
 * Parametrize on robot type (tiago_X)
 * Activate hand
 * Make DarkGrey darker
-* Change occureces of ant_ to pmb2_
+* Change occureces of ant to pmb2
 * Update xtion with inertias and adding _link to parent inside
 * Add nice visual to head2
 * Update torso with reviewed inertial params

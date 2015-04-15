@@ -16,7 +16,7 @@ Forthcoming
 * add tabletop pre-grasping pose
   add motion from extended arm on the side to raised pregrasping pose
 * Add launch file for head xtion
-* Change occureces of ant_ to pmb2_
+* Change occureces of ant to pmb2
 * Contributors: Bence Magyar, Jordi Pages
 
 0.0.1 (2015-01-20)
