@@ -2,6 +2,11 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* add robot argument
+* Contributors: Bence Magyar
+
 0.0.2 (2015-04-15)
 ------------------
 * Add incrementers for joy_teleop

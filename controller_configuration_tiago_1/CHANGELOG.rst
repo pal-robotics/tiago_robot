@@ -2,6 +2,9 @@
 Changelog for package controller_configuration_tiago_1
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 0.0.2 (2015-04-15)
 ------------------
 * Add odometry calibration parameters for TIAGo-1wq
