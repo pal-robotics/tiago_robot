@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.2 (2015-04-15)
+------------------
 * Add incrementers for joy_teleop
 * Move play_motion to controller launch files, update dependencies accordingly
 * Add iron to startup

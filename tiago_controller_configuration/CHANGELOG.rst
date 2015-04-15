@@ -2,8 +2,8 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.2 (2015-04-15)
+------------------
 * Move play_motion to controller launch files, update dependencies accordingly
 * Add iron to startup
 * Reduce acceleration limits
