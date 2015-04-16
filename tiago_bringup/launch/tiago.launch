@@ -16,6 +16,9 @@
   <!-- Node that forwards commands and feedback of dynamixel motors -->
   <include file="$(find tiago_bringup)/launch/dynamixel_node.launch"/>
 
+  <!-- Head sensor -->
+  <include file="$(find tiago_bringup)/launch/head_xtion.launch"/>
+
   <!-- Bring up robot -->
   <include file="$(find tiago_bringup)/launch/tiago_bringup.launch">
     <arg name="robot" value="$(arg robot)"/>
