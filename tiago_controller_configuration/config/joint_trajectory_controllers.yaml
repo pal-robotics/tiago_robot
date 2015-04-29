@@ -67,3 +67,57 @@ gripper_controller:
     torso_2_joint:
       goal: *goal_pos_constraint
 
+shadow_hand_controller:
+  type: "position_controllers/JointTrajectoryController"
+  joints:
+    - FFJ1
+    - FFJ2
+    - FFJ3
+    - FFJ4
+    - MFJ1
+    - MFJ2
+    - MFJ3
+    - MFJ4
+    - RFJ1
+    - RFJ2
+    - RFJ3
+    - RFJ4
+    - THJ1
+    - THJ2
+    - THJ4
+    - THJ5
+  constraints:
+    goal_time: *goal_time_constraint
+    stopped_velocity_tolerance: *stopped_velocity_constraint
+    FFJ1:
+      goal: *goal_pos_constraint
+    FFJ2:
+      goal: *goal_pos_constraint
+    FFJ3:
+      goal: *goal_pos_constraint
+    FFJ4:
+      goal: *goal_pos_constraint
+    MFJ1:
+      goal: *goal_pos_constraint
+    MFJ2:
+      goal: *goal_pos_constraint
+    MFJ3:
+      goal: *goal_pos_constraint
+    MFJ4:
+      goal: *goal_pos_constraint
+    RFJ1:
+      goal: *goal_pos_constraint
+    RFJ2:
+      goal: *goal_pos_constraint
+    RFJ3:
+      goal: *goal_pos_constraint
+    RFJ4:
+      goal: *goal_pos_constraint
+    THJ1:
+      goal: *goal_pos_constraint
+    THJ2:
+      goal: *goal_pos_constraint
+    THJ4:
+      goal: *goal_pos_constraint
+    THJ5:
+      goal: *goal_pos_constraint
