@@ -229,13 +229,13 @@
       <child link="${name}_4_link" />
       <origin xyz="0 -0.02 -0.142" rpy="0 ${-90.0 * deg_to_rad} 0" />
       <axis xyz="0 0 1" />
-      <limit lower="${0 * deg_to_rad}" upper="${130 * deg_to_rad}" effort="${arm_4_max_effort}" velocity="${arm_4_max_vel}" />
+      <limit lower="${-90 * deg_to_rad}" upper="${135 * deg_to_rad}" effort="${arm_4_max_effort}" velocity="${arm_4_max_vel}" />
       <dynamics friction="${arm_friction}" damping="${arm_damping}"/>
 
       <safety_controller k_position="20"
                          k_velocity="20"
-                         soft_lower_limit="${ 0 * deg_to_rad - arm_eps}"
-                         soft_upper_limit="${ 130 * deg_to_rad - arm_eps}" />
+                         soft_lower_limit="${ -90 * deg_to_rad - arm_eps}"
+                         soft_upper_limit="${ 135 * deg_to_rad - arm_eps}" />
     </joint>
 
    <gazebo reference="${name}_1_link">
