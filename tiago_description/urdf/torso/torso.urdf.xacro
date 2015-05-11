@@ -22,7 +22,7 @@
                izz="0.04165307088" />
     </inertial>
 
-  <visual>
+    <visual>
       <origin rpy="0 0 0" xyz="0 0 0.2235" />
       <geometry>
         <box size="0.14 0.1 0.463"/>
@@ -36,6 +36,55 @@
       </geometry>
       <material name="LightGrey"/>
     </collision>
+
+    <!-- TODO: REMOVE -->
+    <!-- Preseries tiago boxes on the outside, these should go away in series version -->
+    <!-- column motor -->
+    <visual>
+      <origin rpy="${90*deg_to_rad} 0 0" xyz="-0.02 -0.09 0.035" />
+      <geometry>
+        <cylinder radius="0.035" length="0.09"/>
+      </geometry>
+      <material name="Yellow"/>
+    </visual>
+    <collision>
+      <origin rpy="${90*deg_to_rad} 0 0" xyz="-0.02 -0.09 0.035" />
+      <geometry>
+        <cylinder radius="0.035" length="0.09"/>
+      </geometry>
+      <material name="Yellow"/>
+    </collision>
+    <!-- column electronics box -->
+    <visual>
+      <origin rpy="0 0 0" xyz="0.04 -0.175 0.03" />
+      <geometry>
+        <box size="0.13 0.13 0.06"/>
+      </geometry>
+      <material name="Yellow"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0.04 -0.175 0.03" />
+      <geometry>
+        <box size="0.13 0.13 0.06"/>
+      </geometry>
+      <material name="Yellow"/>
+    </collision>
+    <!-- cable carrier -->
+    <visual>
+      <origin rpy="0 0 0" xyz="0.045 -0.1 0.2" />
+      <geometry>
+        <box size="0.04 0.10 0.4"/>
+      </geometry>
+      <material name="Yellow"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0.045 -0.1 0.2" />
+      <geometry>
+        <box size="0.04 0.10 0.4"/>
+      </geometry>
+      <material name="Yellow"/>
+    </collision>
+
   </link>
 
   <joint name="${name}_fixed_joint" type="fixed">
@@ -87,6 +136,24 @@
         <box size="0.06 0.04 0.04"/>
       </geometry>
       <material name="Grey" />
+    </collision>
+    
+    <!-- TODO: REMOVE -->
+    <!-- Preseries tiago boxes on the outside, these should go away in series version -->
+    <!-- cable carrier -->
+    <visual>
+      <origin rpy="0 0 0" xyz="0.045 -0.1 -0.4" />
+      <geometry>
+        <box size="0.04 0.10 0.4"/>
+      </geometry>
+      <material name="Yellow"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0.045 -0.1 -0.4" />
+      <geometry>
+        <box size="0.04 0.10 0.4"/>
+      </geometry>
+      <material name="Yellow"/>
     </collision>
 
   </link>
