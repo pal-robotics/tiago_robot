@@ -37,4 +37,8 @@
   <material name="White">
     <color rgba="1.0 1.0 1.0 1.0"/>
   </material>
+
+  <material name="Yellow">
+    <color rgba="0.96 0.88 0.14 1.0"/>
+  </material>
 </robot>
