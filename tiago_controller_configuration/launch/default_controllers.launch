@@ -11,7 +11,6 @@
               head_controller
               arm_controller
               mobile_base_controller" />
-              <!-- hand_controller -->
 
   <!-- Point head action -->
   <group ns="head_controller">
