@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.4 (2015-05-20)
+------------------
 * add motion to test the head
 * Adding tiago_shadow, tiago with shadow lite hand (! no dependency on shadow packages on purpose!)
 * Add head_xtion.launch to tiago.launch
