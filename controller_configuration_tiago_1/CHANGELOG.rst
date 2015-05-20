@@ -2,6 +2,9 @@
 Changelog for package controller_configuration_tiago_1
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 0.0.3 (2015-04-15)
 ------------------
 
