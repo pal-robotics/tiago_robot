@@ -5,6 +5,7 @@
   <node name="hand_controller_spawner"
         pkg="controller_manager" type="spawner" output="screen"
         args="--timeout 120
+              hand_current_limit_controller
               hand_controller" />
 
   <!-- Simple grasping action -->
