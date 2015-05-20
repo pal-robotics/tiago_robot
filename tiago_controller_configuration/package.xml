@@ -13,4 +13,5 @@
   <run_depend>sensor_msgs</run_depend>
   <run_depend>actionlib</run_depend>
   <run_depend>play_motion</run_depend>
+  <run_depend>current_limit_controller</run_depend>
 </package>
