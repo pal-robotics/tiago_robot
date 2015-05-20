@@ -2,7 +2,7 @@
   <rosparam command="load" file="$(find tiago_controller_configuration)/config/joint_trajectory_controllers.yaml" />
 
   <!-- Controllers that come up started -->
-  <node name="default_controllers_spawner"
+  <node name="hand_controller_spawner"
         pkg="controller_manager" type="spawner" output="screen"
         args="--timeout 120
               hand_controller" />
