@@ -4,5 +4,7 @@
   <node name="grav_compensation_controller_spawner"
         pkg="controller_manager" type="spawner" output="screen"
         args="--timeout 120
-              gravity_compensation" />
+              gravity_compensation
+              wrist_controller
+              wrist_current_limit_controller" />
 </launch>

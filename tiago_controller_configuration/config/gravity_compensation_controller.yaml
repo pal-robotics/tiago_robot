@@ -59,4 +59,65 @@ gravity_compensation:
    caster_front_left_2_joint: *default_friction
    wheel_left_joint: *default_friction
    wheel_right_joint: *default_friction
+   hand_index_abd_joint: *default_friction
+   hand_index_virtual_1_joint: *default_friction
+   hand_index_flex_1_joint: *default_friction
+   hand_index_virtual_2_joint: *default_friction
+   hand_index_flex_2_joint: *default_friction
+   hand_index_virtual_3_joint: *default_friction
+   hand_index_flex_3_joint: *default_friction
+   hand_index_joint: *default_friction
+   hand_little_abd_joint: *default_friction
+   hand_little_virtual_1_joint: *default_friction
+   hand_little_flex_1_joint: *default_friction
+   hand_little_virtual_2_joint: *default_friction
+   hand_little_flex_2_joint: *default_friction
+   hand_little_virtual_3_joint: *default_friction
+   hand_little_flex_3_joint: *default_friction
+   hand_middle_abd_joint: *default_friction
+   hand_middle_virtual_1_joint: *default_friction
+   hand_middle_flex_1_joint: *default_friction
+   hand_middle_virtual_2_joint: *default_friction
+   hand_middle_flex_2_joint: *default_friction
+   hand_middle_virtual_3_joint: *default_friction
+   hand_middle_flex_3_joint: *default_friction
+   hand_mrl_joint: *default_friction
+   hand_ring_abd_joint: *default_friction
+   hand_ring_virtual_1_joint: *default_friction
+   hand_ring_flex_1_joint: *default_friction
+   hand_ring_virtual_2_joint: *default_friction
+   hand_ring_flex_2_joint: *default_friction
+   hand_ring_virtual_3_joint: *default_friction
+   hand_ring_flex_3_joint: *default_friction
+   hand_thumb_abd_joint: *default_friction
+   hand_thumb_virtual_1_joint: *default_friction
+   hand_thumb_flex_1_joint: *default_friction
+   hand_thumb_virtual_2_joint: *default_friction
+   hand_thumb_flex_2_joint: *default_friction
+   hand_thumb_joint: *default_friction
+
+
+
+wrist_controller:
+  type: "position_controllers/JointTrajectoryController"
+  joints:
+    - arm_5_joint
+    - arm_6_joint
+    - arm_7_joint
+  constraints:
+    goal_time:  0.6
+    stopped_velocity_tolerance: 0.05
+    arm_left_5_joint:
+      goal: &goal_pos_constraint 0.02
+    arm_left_6_joint:
+      goal: *goal_pos_constraint
+    arm_left_7_joint:
+      goal: *goal_pos_constraint
+
+wrist_current_limit_controller:
+  type: "pal_ros_controllers/CurrentLimitController"
+  actuators:
+    - arm_5_motor
+    - arm_6_motor
+    - arm_7_motor
 
