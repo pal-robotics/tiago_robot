@@ -155,6 +155,13 @@
       </geometry>
       <material name="Yellow"/>
     </collision>
+    <visual>
+      <origin rpy="0 0 0" xyz="0.085 -0.025 -0.25" />
+      <geometry>
+        <box size="0.025 0.05 0.5"/>
+      </geometry>
+      <material name="Yellow"/>
+    </visual>
 
   </link>
 
