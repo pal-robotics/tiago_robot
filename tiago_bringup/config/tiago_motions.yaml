@@ -34,17 +34,21 @@ play_motion:
       - positions: [0.34, 0.21, -0.2, -2.2, 1.15, -1.57, 0.2, 0.0]
         time_from_start: 12.0
 
-    open_gripper:
-      joints: [gripper_left_finger_joint, gripper_right_finger_joint]
+    open_hand:
+      joints: [hand_thumb_joint, hand_index_joint, hand_mrl_joint]
       points:
-      - positions: [0.045, 0.045]
+      - positions: [-1.0, -1.0, -1.0]
         time_from_start: 0.0
+      - positions: [0.0, 0.0, 0.0]
+        time_from_start: 2.5
 
-    close_gripper:
-      joints: [gripper_left_finger_joint, gripper_right_finger_joint]
+    close_hand:
+      joints: [hand_thumb_joint, hand_index_joint, hand_mrl_joint]
       points:
-      - positions: [0, 0]
+      - positions: [6.2, 0.0, 0.0]
         time_from_start: 0.0
+      - positions: [6.2, 6.8, 9.2]
+        time_from_start: 2.5
 
     head_tour:
       joints: [head_1_joint, head_2_joint]
