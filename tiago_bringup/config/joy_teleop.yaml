@@ -85,6 +85,22 @@ teleop:
       increment_by: [0, -0.1]
     buttons: [1] # right pad, right button
 
+  close_hand:
+    type: action
+    action_name: /play_motion
+    action_goal:
+      motion_name: 'close_hand'
+      skip_planning: True
+    buttons: [7]
+
+  open_hand:
+    type: action
+    action_name: /play_motion
+    action_goal:
+      motion_name: 'open_hand'
+      skip_planning: True
+    buttons: [5]
+
   # Disable speed_limit example
   # @todo duration param is not taken
   #speed_limit_disable:
