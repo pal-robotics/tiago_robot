@@ -2,19 +2,19 @@ play_motion:
   controllers: [arm_controller, head_controller, torso_controller, hand_controller]
   motions:
     home:
-      joints: [torso_lift_joint, head_1_joint, head_2_joint, arm_1_joint,
+      joints: [torso_lift_joint, arm_1_joint,
       arm_2_joint, arm_3_joint, arm_4_joint, arm_5_joint,
       arm_6_joint, arm_7_joint]
       points:
-      - positions: [0.15, 0.0, 0.0, 0.21, 0.35, 0.0, 0.0, -1.57, 0.0, 0.0]
+      - positions: [0.15, 0.21, 0.35, 0.0, 0.0, -1.57, 0.0, 0.0]
         time_from_start: 0.0
-      - positions: [0.15, 0.0, 0.0, 0.21, 0.35, -0.2, 0.0, -1.57, 1.52, 0.0]
+      - positions: [0.15, 0.21, 0.35, -0.2, 0.0, -1.57, 1.52, 0.0]
         time_from_start: 1.5
-      - positions: [0.15, 0.0, 0.0, 0.21, 0.35, -0.2, 2.12, -1.57, 1.52, 0.0]
+      - positions: [0.15, 0.21, 0.35, -0.2, 2.12, -1.57, 1.52, 0.0]
         time_from_start: 3.5
-      - positions: [0.15, 0.0, 0.0, 0.21, -1.02, -0.2, 2.12, -1.57, 1.52, 0.0]
+      - positions: [0.15, 0.21, -1.02, -0.2, 2.12, -1.57, 1.52, 0.0]
         time_from_start: 6.0
-      - positions: [0.0, 0.0, 0.0, 0.21, -1.02, -0.2, 2.12, -1.57, 1.52, 0.0]
+      - positions: [0.0, 0.21, -1.02, -0.2, 2.12, -1.57, 1.52, 0.0]
         time_from_start: 9.0
     pregrasp:
       joints: [torso_lift_joint, arm_1_joint,
@@ -45,7 +45,7 @@ play_motion:
     close_hand:
       joints: [hand_thumb_joint, hand_index_joint, hand_mrl_joint]
       points:
-      - positions: [6.2, 0.0, 0.0]
+      - positions: [2.37, 0.0, 0.0]
         time_from_start: 0.0
       - positions: [6.2, 6.8, 9.2]
         time_from_start: 2.5
@@ -88,3 +88,17 @@ play_motion:
         time_from_start: 3.0
 #      - positions: [0.060705487122060475, -0.9502980564205616, -3.108655831505315, 1.865150965465667, -1.1201720265161892, -0.031013166785368584, -2.074430687192973, 0.0, 0.0, 0.0]
 #        time_from_start: 5.0
+    pick_from_floor:
+      joints: [torso_lift_joint, arm_1_joint,
+      arm_2_joint, arm_3_joint, arm_4_joint,
+      arm_5_joint, arm_6_joint, arm_7_joint,
+      hand_thumb_joint, hand_mrl_joint, hand_index_joint]
+      points:
+      - positions: [0.0, 1.3398169936645752, -1.0865020172114928, 0.14015915261777295, -0.554948419882215, -1.4599426578279369, -0.713353056118629, 0.04145437279716574, 0.0, 0.0, 0.0]
+        time_from_start: 0.0
+      - positions: [0.0, 1.3398476736872784, -1.2950801515593122, 0.139530212152357, -0.5549675949699406, -1.4599426578279369, -0.7133758834164247, 0.041449807337606615, 2.7, 0.0, 0.0]
+        time_from_start: 2.0
+      - positions: [0.0, 1.3398476736872784, -1.2950801515593122, 0.139530212152357, -0.5549675949699406, -1.4599426578279369, -0.7133758834164247, 0.041449807337606615, 6.2, 6.8, 9.2]
+        time_from_start: 4.0
+      - positions: [0.0, 1.3400317538234978, -0.3915074629155225, 0.13968361226587306, -1.5707678672561871, -1.4599426578279369, -0.7133895797951022, 0.0414635037162841, 6.2, 6.8, 9.2]
+        time_from_start: 6.0
