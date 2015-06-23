@@ -1,8 +1,14 @@
-tiago_hardware:
-  special_joints:
-    - name: 'head_1_joint'
-      type: 'dynamixel'
-      id: 1
-    - name: 'head_2_joint'
-      type: 'dynamixel'
-      id: 3
+actuators:
+  raw_data:
+    position_port: act_position
+    effort_port: act_current
+    position_cmd_port: ref_position
+    velocity_cmd_port: ref_velocity
+    effort_cmd_port: ref_current
+    current_limit_cmd_port: ref_limit_current
+
+extra_joints: ['head_1_joint', 'head_2_joint']
+
+e_stop:
+  raw_data:
+    e_stop_port: emergency_stop_state
