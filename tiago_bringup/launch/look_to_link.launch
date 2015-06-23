@@ -6,7 +6,7 @@
     <arg name="send_goals_to_head_action" default="false"           />
     <arg name="pointing_frame"            default="head_2_link"     />
     <arg name="publish_only_when_moving"  default="true"            />
-    <arg name="min_distance_moved"        default="0.01"            />
+    <arg name="min_distance_moved"        default="0.005"            />
     <arg name="check_rate"                default="10"              />
 
     <group ns="$(arg ns)">
