@@ -1,4 +1,5 @@
 <launch>
+  <rosparam command="load" file="$(find tiago_bringup)/config/dynamixel_head.yaml"/>
 
   <node name="dynamixel_node" type="dynamixel_node" pkg="dynamixel_cpp" output="screen">
     <remap from="dynamixel_act" to="extra_joints/state"/>
