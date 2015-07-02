@@ -2,6 +2,11 @@
 <launch>
   <arg name="robot" default="titanium"/>
 
+  <!-- Add casters as joint_state_controller extra joints -->
+  <rosparam command="load"
+            ns="joint_state_controller"
+            file="$(find tiago_controller_configuration)/config/joint_state_controller_extra_joints.yaml"/>
+
   <!-- Diff drive controller parameters -->
   <rosparam command="load" file="$(find tiago_controller_configuration)/config/mobile_base_controller.yaml"/>
 
