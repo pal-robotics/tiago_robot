@@ -241,18 +241,22 @@
    <gazebo reference="${name}_1_link">
      <mu1>0.9</mu1>
      <mu2>0.9</mu2>
+     <material>Gazebo/DarkGrey</material>
    </gazebo>
    <gazebo reference="${name}_2_link">
      <mu1>0.9</mu1>
      <mu2>0.9</mu2>
+     <material>Gazebo/DarkGrey</material>
    </gazebo>
    <gazebo reference="${name}_3_link">
      <mu1>0.9</mu1>
      <mu2>0.9</mu2>
+     <material>Gazebo/DarkGrey</material>
    </gazebo>
    <gazebo reference="${name}_4_link">
      <mu1>0.9</mu1>
      <mu2>0.9</mu2>
+     <material>Gazebo/DarkGrey</material>
    </gazebo>
 
    <gazebo reference="${name}_1_joint">
