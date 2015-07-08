@@ -84,6 +84,21 @@
       </geometry>
       <material name="Yellow"/>
     </collision>
+    <!-- mobile base top cover -->
+    <visual>
+      <origin rpy="0 0 0" xyz="0.068 0 0.01" />
+      <geometry>
+        <cylinder radius="0.25" length="0.05"/>
+      </geometry>
+      <material name="Yellow"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0.068 0 0.01" />
+      <geometry>
+        <cylinder radius="0.25" length="0.05"/>
+      </geometry>
+      <material name="Yellow"/>
+    </collision>
 
   </link>
 
