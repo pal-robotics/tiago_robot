@@ -170,7 +170,7 @@
     <parent link="${name}_fixed_link" />
     <child link="${name}_lift_link" />
     <axis xyz="0 0 1" />
-    <limit effort="2000" lower="0.0" upper="0.35" velocity="0.05" />
+    <limit effort="2000" lower="0.05" upper="0.35" velocity="0.05" />
     <calibration rising="0.0" />
     <dynamics damping="1000" />
   </joint>
