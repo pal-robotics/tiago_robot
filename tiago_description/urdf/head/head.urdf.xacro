@@ -23,7 +23,7 @@
   <xacro:property name="head_1_lower_limit" value="-75"/>
   <xacro:property name="head_1_upper_limit" value="75"/>
   <xacro:property name="head_2_lower_limit" value="-60"/>
-  <xacro:property name="head_2_upper_limit" value="36.25"/>
+  <xacro:property name="head_2_upper_limit" value="50"/>
 
   <!--************************-->
   <!--     HEAD_1 (PAN)       -->
@@ -31,32 +31,32 @@
   <xacro:macro name="head_1" params="name parent">
     <link name="${name}_link">
       <inertial>
-        <origin xyz="0.0208 -0.00025 0.0215" rpy="0 0 0" />
-        <mass value="0.09793" />
-        <inertia ixx="0.00005844626"  ixy="-0.00000051494"  ixz="0.00004662971"
-                 iyy="0.00001161435" iyz="0.000000001"
-                 izz="0.00005236593" />
+        <origin xyz="-0.016151 -0.000132 0.041903" rpy="0 0 0"/>
+        <mass value="0.406285"/>
+        <inertia ixx="0.000506" ixy="-0.000001" ixz="-0.000061"
+                 iyy="0.000552" iyz="0.000002"
+                 izz="0.000381"/>
       </inertial>
       <visual>
-        <origin xyz="0.0305 0 0.0175" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <box size="0.05 0.035 0.035"/>
+          <mesh filename="package://tiago_description/meshes/head_1.stl" scale="1 1 1"/>
         </geometry>
-        <material name="DarkGrey" />
+        <material name="White" />
       </visual>
       <collision>
         <origin xyz="0.0305 0 0.0175" rpy="0 0 0" />
         <geometry>
           <box size="0.05 0.035 0.035"/>
         </geometry>
-        <material name="DarkGrey" />
+        <material name="White" />
       </collision>
     </link>
 
     <joint name="${name}_joint" type="revolute">
       <parent link="${parent}"/>
       <child link="${name}_link"/>
-      <origin xyz="0.193 0 0.04" rpy="${0.0 * deg_to_rad} 0 0" />
+      <origin xyz="0.122 0 0.0425" rpy="0 0 0" />
       <axis xyz="0 0 1" />
       <limit lower="${head_1_lower_limit * deg_to_rad}" upper="${head_1_upper_limit * deg_to_rad}" effort="5.197" velocity="${head_max_vel}" />
       <dynamics damping="${head_damping}" friction="${head_friction}"/>
@@ -88,16 +88,16 @@
   <xacro:macro name="head_2" params="name parent">
     <link name="${name}_link">
       <inertial>
-        <origin xyz="0.04149 -0.01221 0.001" rpy="0 0 0" />
-        <mass value="0.24875" />
-        <inertia ixx="0.0000498057" ixy="0" ixz="0"
-                 iyy="0.0004492213" iyz="0"
-                 izz="0.00048113173" />
+        <origin xyz="0.013345 0.03824 0.000058" rpy="0 0 0"/>
+        <mass value="0.852579"/>
+        <inertia ixx="0.003677" ixy="-0.000003" ixz="0.000001"
+                 iyy="0.003853" iyz="0"
+                 izz="0.002551"/>
       </inertial>
       <visual>
-        <origin xyz="0.070192 0.017614 0" rpy="0 ${90 * deg_to_rad} 0" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/head.dae" scale="1 1 1"/>
+          <mesh filename="package://tiago_description/meshes/head_2.stl" scale="1 1 1"/>
         </geometry>
         <material name="LightGrey"/>
       </visual>
@@ -105,8 +105,8 @@
 
     <joint name="${name}_joint" type="revolute">
       <parent link="${parent}"/>
-        <child link="${name}_link"/>
-      <origin xyz="0.0355 0 0.023" rpy="${90.0 * deg_to_rad} 0 0" />
+      <child link="${name}_link"/>
+      <origin xyz="0.0038 0 0.0596" rpy="${90.0 * deg_to_rad} 0 0" />
       <axis xyz="0 0 1" />
       <limit lower="${head_2_lower_limit * deg_to_rad}" upper="${head_2_upper_limit * deg_to_rad}" effort="2.77" velocity="${head_max_vel}" />
       <dynamics damping="${head_damping}" friction="${head_friction}"/>
@@ -122,7 +122,7 @@
     <xacro:head_1 name="${name}_1" parent="${parent}" />
     <xacro:head_2 name="${name}_2" parent="${name}_1_link"/>
     <xacro:xtion_pro_live name="xtion" parent="${name}_2">
-      <origin xyz="0.064192 0.017614 0" rpy="${-90 * deg_to_rad} 0 0" />
+      <origin xyz="0.07 0.0633 0" rpy="${-90 * deg_to_rad} 0 0" />
       <origin xyz="0 0 0" rpy="${-90 * deg_to_rad} ${0 * deg_to_rad} ${-90 * deg_to_rad}" />
     </xacro:xtion_pro_live>
   </xacro:macro>
