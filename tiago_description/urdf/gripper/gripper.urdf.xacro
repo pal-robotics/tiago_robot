@@ -54,7 +54,7 @@
                izz="0.00001" />
     </inertial>
     <visual>
-      <origin rpy="0 0 0" xyz="0 0 0" />
+      <origin rpy="0 0 0" xyz="0.03 0 0" />
       <geometry>
         <mesh filename="package://tiago_description/meshes/gripper/gripper_finger_link.stl" scale="1 -1 1"/>
       </geometry>
@@ -88,7 +88,7 @@
                izz="0.0001" />
     </inertial>
     <visual>
-      <origin rpy="0 0 0" xyz="0 0 0" />
+      <origin rpy="0 0 0" xyz="0.03 0 0" />
       <geometry>
         <mesh filename="package://tiago_description/meshes/gripper/gripper_finger_link.stl"/>
       </geometry>
