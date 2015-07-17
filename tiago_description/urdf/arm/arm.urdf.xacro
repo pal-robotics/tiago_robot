@@ -57,22 +57,8 @@
         </geometry>
         <material name="DarkGrey" />
       </collision>
-      <!-- Connecting plate -->
-      <visual>
-        <origin xyz="0.05 0 0.01" rpy="0 0 0" />
-        <geometry>
-          <box size="0.2 0.09 0.02" />
-        </geometry>
-        <material name="Blue" />
-      </visual>
-      <collision>
-        <origin xyz="0 0 -0.0425" rpy="0 0 0" />
-        <geometry>
-          <cylinder length="0.02" radius="0.045" />
-        </geometry>
-        <material name="Blue" />
-      </collision>
       <!-- Root of arm -->
+      <!--
       <visual>
         <origin xyz="0.12 0 -0.107" rpy="${-90 * deg_to_rad} 0 ${180 * deg_to_rad}" />
         <geometry>
@@ -86,12 +72,13 @@
           <mesh filename="package://tiago_description/meshes/arm/arm_2_collision.stl" scale="1 1 1"/>
         </geometry>
       </collision>
+      -->
     </link>
 
     <joint name="${name}_1_joint" type="revolute">
       <parent link="${parent}" />
       <child link="${name}_1_link" />
-      <origin xyz="0.157 0.064625 -0.045" rpy="${0 * deg_to_rad} ${0 * deg_to_rad} ${-90 * deg_to_rad}" />
+      <origin xyz="0.155 0.011 -0.152" rpy="${0 * deg_to_rad} ${0 * deg_to_rad} ${-90 * deg_to_rad}" />
       <axis xyz="0 0 1" />
       <limit lower="${0.0 * deg_to_rad}" upper="${180.0 * deg_to_rad}" effort="${arm_1_max_effort}" velocity="${arm_1_max_vel}" />
       <dynamics friction="${arm_friction}" damping="${arm_damping}"/>
@@ -126,7 +113,7 @@
     <joint name="${name}_2_joint" type="revolute">
       <parent link="${name}_1_link" />
       <child link="${name}_2_link" />
-      <origin xyz="0.12 0.006 -0.107" rpy="${90.0 * deg_to_rad} ${0 * deg_to_rad} ${0 * deg_to_rad}" />
+      <origin xyz="0.125 0.009 -0.032" rpy="${90.0 * deg_to_rad} ${0 * deg_to_rad} ${0 * deg_to_rad}" />
       <axis xyz="0 0 1" />
       <limit lower="${-112.5 * deg_to_rad}" upper="${22.5 * deg_to_rad}" effort="${arm_2_max_effort}" velocity="${arm_2_max_vel}" />
       <dynamics friction="${arm_friction}" damping="${arm_damping}"/>
@@ -227,7 +214,7 @@
     <joint name="${name}_4_joint" type="revolute">
       <parent link="${name}_3_link" />
       <child link="${name}_4_link" />
-      <origin xyz="0 -0.02 -0.142" rpy="0 ${-90.0 * deg_to_rad} 0" />
+      <origin xyz="0 -0.02 -0.168" rpy="0 ${-90.0 * deg_to_rad} 0" />
       <axis xyz="0 0 1" />
       <limit lower="${-90 * deg_to_rad}" upper="${135 * deg_to_rad}" effort="${arm_4_max_effort}" velocity="${arm_4_max_vel}" />
       <dynamics friction="${arm_friction}" damping="${arm_damping}"/>
