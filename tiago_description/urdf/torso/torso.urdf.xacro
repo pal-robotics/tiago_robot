@@ -6,13 +6,13 @@
   <xacro:include filename="$(find tiago_description)/urdf/deg_to_rad.xacro" />
   <xacro:include filename="$(find tiago_description)/urdf/torso/torso.transmission.xacro" />
 
- <!--Constant parameters-->
-  <xacro:property name="torso_max_vel"  value="5.4" />
-  <xacro:property name="torso_max_effort"  value="78.0" />
+  <!--Constant parameters-->
+  <xacro:property name="torso_max_vel"  value="0.1" />
   <xacro:property name="torso_eps"      value="0.02" />
 
   <xacro:macro name="tiago_torso" params="name parent">
 
+  <!-- Bottom fixed part of column -->
   <link name="${name}_fixed_link">
     <inertial>
       <origin rpy="0 0 0" xyz="0.01929 -0.01317 0.0798" />
@@ -21,11 +21,10 @@
                iyy="0.15113888533" iyz="-0.00744737659"
                izz="0.04165307088" />
     </inertial>
-    <!-- Bottom fixed part of column -->
     <visual>
-      <origin rpy="0 0 0" xyz="0 0 0.2235" />
+      <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
-        <box size="0.14 0.1 0.463"/>
+        <mesh filename="package://tiago_description/meshes/torso/torso_fix.stl" scale="1 1 1"/>
       </geometry>
       <material name="LightGrey"/>
     </visual>
@@ -39,9 +38,43 @@
   </link>
 
   <joint name="${name}_fixed_joint" type="fixed">
-    <origin rpy="0 0 0" xyz="-0.068 0 0.2235" />
+    <origin rpy="0 0 0" xyz="-0.062 0 0.195" />
     <parent link="${parent}" />
     <child link="${name}_fixed_link" />
+    <axis xyz="0 0 0" />
+  </joint>
+
+  <link name="${name}_fixed_column_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="0.01" />
+      <inertia ixx="0.000001" ixy="0" ixz="0"
+               iyy="0.000001" iyz="0"
+               izz="0.000001" />
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0.275" />
+      <geometry>
+        <box size="0.18 0.2 0.55"/>
+      </geometry>
+      <material name="DarkGrey"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0.275" />
+      <geometry>
+        <box size="0.23 0.23 0.55"/>
+      </geometry>
+      <material name="DarkGrey"/>
+    </collision>
+  </link>
+  <gazebo reference="${name}_fixed_column_link">
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+
+  <joint name="${name}_fixed_column_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="-0.062 0 0.195" />
+    <parent link="${parent}" />
+    <child link="${name}_fixed_column_link" />
     <axis xyz="0 0 0" />
   </joint>
 
@@ -55,9 +88,9 @@
     </inertial>
     <!-- Lifting body -->
     <visual>
-      <origin rpy="0 0 0" xyz="0 0 -0.25125" />
+      <origin rpy="0 0 0" xyz="0 0 0" />
        <geometry>
-        <box size="0.16 0.106 0.5025"/>
+        <mesh filename="package://tiago_description/meshes/torso/torso_lift.stl" scale="1 1 1"/>
       </geometry>
       <material name="White"/>
     </visual>
@@ -71,11 +104,11 @@
   </link>
 
   <joint name="${name}_lift_joint" type="prismatic">
-    <origin rpy="0 0 0" xyz="0.0 0 0.5025" />
+    <origin rpy="0 0 0" xyz="0.0 0 0.589" />
     <parent link="${name}_fixed_link" />
     <child link="${name}_lift_link" />
     <axis xyz="0 0 1" />
-    <limit effort="2000" lower="0.06" upper="0.35" velocity="0.05" />
+    <limit effort="2000" lower="0" upper="0.35" velocity="${torso_max_vel}" />
     <calibration rising="0.0" />
     <dynamics damping="1000" />
   </joint>
