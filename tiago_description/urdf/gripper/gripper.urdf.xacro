@@ -74,7 +74,7 @@
     <parent link="${name}_link" />
     <child link="${name}_right_finger_link" />
     <axis xyz="0 -1 0" />
-    <limit effort="28.0" lower="0.0" upper="0.045" velocity="0.1" />
+    <limit effort="28.0" lower="0.0" upper="0.05" velocity="0.1" />
     <calibration rising="0.0" />
     <dynamics damping="2500" />
   </joint>
@@ -108,7 +108,7 @@
     <parent link="${name}_link" />
     <child link="${name}_left_finger_link" />
     <axis xyz="0 1 0" />
-    <limit effort="28.0" lower="0" upper="0.045" velocity="0.1" />
+    <limit effort="28.0" lower="0" upper="0.05" velocity="0.1" />
     <calibration rising="0.0" />
     <dynamics damping="2500" />
   </joint>
