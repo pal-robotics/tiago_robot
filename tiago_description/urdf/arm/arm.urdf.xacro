@@ -44,49 +44,37 @@
       </inertial>
       <!-- M90 module -->
       <visual>
-        <origin xyz="0 0 -0.0425" rpy="0 0 0" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <cylinder length="0.085" radius="0.045" />
+          <mesh filename="package://tiago_description/meshes/arm/arm_1.stl" scale="1 1 1"/>
         </geometry>
-        <material name="DarkGrey" />
+        <material name="Orange" />
       </visual>
       <collision>
         <origin xyz="0 0 -0.0425" rpy="0 0 0" />
         <geometry>
           <cylinder length="0.085" radius="0.045" />
         </geometry>
-        <material name="DarkGrey" />
+        <material name="Orange" />
       </collision>
-      <!-- Root of arm -->
-      <!--
-      <visual>
-        <origin xyz="0.12 0 -0.107" rpy="${-90 * deg_to_rad} 0 ${180 * deg_to_rad}" />
-        <geometry>
-          <mesh filename="package://tiago_description/meshes/arm/arm_2.dae" scale="1 1 1"/>
-        </geometry>
-        <material name="DarkGrey" />
-      </visual>
-      <collision>
-       <origin xyz="0.12 0 -0.107" rpy="${-90 * deg_to_rad} 0 ${180 * deg_to_rad}" />
-        <geometry>
-          <mesh filename="package://tiago_description/meshes/arm/arm_2_collision.stl" scale="1 1 1"/>
-        </geometry>
-      </collision>
-      -->
     </link>
+    <gazebo reference="${name}_1_link">
+      <material>Gazebo/Orange</material>
+    </gazebo>
+
 
     <joint name="${name}_1_joint" type="revolute">
       <parent link="${parent}" />
       <child link="${name}_1_link" />
-      <origin xyz="0.155 0.011 -0.152" rpy="${0 * deg_to_rad} ${0 * deg_to_rad} ${-90 * deg_to_rad}" />
+      <origin xyz="0.155 0.011 -0.152" rpy="${0 * deg_to_rad} ${0 * deg_to_rad} ${0 * deg_to_rad}" />
       <axis xyz="0 0 1" />
-      <limit lower="${0.0 * deg_to_rad}" upper="${180.0 * deg_to_rad}" effort="${arm_1_max_effort}" velocity="${arm_1_max_vel}" />
+      <limit lower="${0.0 * deg_to_rad}" upper="${165.0 * deg_to_rad}" effort="${arm_1_max_effort}" velocity="${arm_1_max_vel}" />
       <dynamics friction="${arm_friction}" damping="${arm_damping}"/>
 
       <safety_controller k_position="20"
                          k_velocity="20"
                          soft_lower_limit="${0 * deg_to_rad}"
-                         soft_upper_limit="${180.0 * deg_to_rad - arm_eps}" />
+                         soft_upper_limit="${165.0 * deg_to_rad - arm_eps}" />
     </joint>
 
    <link name="${name}_2_link">
@@ -113,15 +101,15 @@
     <joint name="${name}_2_joint" type="revolute">
       <parent link="${name}_1_link" />
       <child link="${name}_2_link" />
-      <origin xyz="0.125 0.009 -0.032" rpy="${90.0 * deg_to_rad} ${0 * deg_to_rad} ${0 * deg_to_rad}" />
+      <origin xyz="0.009 -0.125 -0.032" rpy="${90.0 * deg_to_rad} ${0 * deg_to_rad} ${-90 * deg_to_rad}" />
       <axis xyz="0 0 1" />
-      <limit lower="${-112.5 * deg_to_rad}" upper="${22.5 * deg_to_rad}" effort="${arm_2_max_effort}" velocity="${arm_2_max_vel}" />
+      <limit lower="${-93 * deg_to_rad}" upper="${86 * deg_to_rad}" effort="${arm_2_max_effort}" velocity="${arm_2_max_vel}" />
       <dynamics friction="${arm_friction}" damping="${arm_damping}"/>
 
       <safety_controller k_position="20"
                          k_velocity="20"
-                         soft_lower_limit="${-112.5 * deg_to_rad  + arm_eps}"
-                         soft_upper_limit="${ 22.5 * deg_to_rad - arm_eps}" />
+                         soft_lower_limit="${-93 * deg_to_rad  + arm_eps}"
+                         soft_upper_limit="${ 86 * deg_to_rad - arm_eps}" />
     </joint>
 
     <link name="${name}_3_link">
