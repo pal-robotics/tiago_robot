@@ -29,11 +29,16 @@
       <material name="LightGrey"/>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="0.0 0.0 0.2315" />
+      <origin rpy="0 0 0" xyz="0.085 0.0 0.02" />
       <geometry>
-        <box size="0.14 0.1 0.463"/>
+        <box size="0.4 0.25 0.04"/>
       </geometry>
-      <material name="LightGrey"/>
+    </collision>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0.05" />
+      <geometry>
+        <box size="0.25 0.25 0.1"/>
+      </geometry>
     </collision>
   </link>
 
@@ -95,9 +100,9 @@
       <material name="White"/>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="0 0 -0.25125" />
+      <origin rpy="0 0 0" xyz="0 0 0" />
        <geometry>
-        <box size="0.16 0.106 0.5025"/>
+        <mesh filename="package://tiago_description/meshes/torso/torso_lift_collision.stl" scale="1 1 1"/>
       </geometry>
       <material name="White"/>
     </collision>
