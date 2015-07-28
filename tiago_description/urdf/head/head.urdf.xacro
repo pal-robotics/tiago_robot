@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!--
 
-  Copyright (c) 2011-2012, PAL Robotics, S.L.
+  Copyright (c) 2015, PAL Robotics, S.L.
   All rights reserved.
 
   This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
@@ -23,7 +23,7 @@
   <xacro:property name="head_1_lower_limit" value="-75"/>
   <xacro:property name="head_1_upper_limit" value="75"/>
   <xacro:property name="head_2_lower_limit" value="-60"/>
-  <xacro:property name="head_2_upper_limit" value="50"/>
+  <xacro:property name="head_2_upper_limit" value="45"/>
 
   <!--************************-->
   <!--     HEAD_1 (PAN)       -->
