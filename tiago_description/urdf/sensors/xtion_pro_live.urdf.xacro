@@ -44,6 +44,7 @@
                  iyy="0.00000008027" iyz="0.00000000000"
                  izz="0.00000427339"/>
       </inertial>
+      <!--
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
@@ -59,6 +60,7 @@
           <box size="0.04 0.185 0.03"/>
         </geometry>
       </collision>
+      -->
     </link>
 
     <joint name="${name}_optical_joint" type="fixed">

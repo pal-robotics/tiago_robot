@@ -56,7 +56,7 @@
     <joint name="${name}_joint" type="revolute">
       <parent link="${parent}"/>
       <child link="${name}_link"/>
-      <origin xyz="0.189 0 0.0425" rpy="0 0 0" />
+      <origin xyz="0.18735 0 0.0325" rpy="0 0 0" />
       <axis xyz="0 0 1" />
       <limit lower="${head_1_lower_limit * deg_to_rad}" upper="${head_1_upper_limit * deg_to_rad}" effort="5.197" velocity="${head_max_vel}" />
       <dynamics damping="${head_damping}" friction="${head_friction}"/>
@@ -97,16 +97,14 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/head_2.stl" scale="1 1 1"/>
+          <mesh filename="package://tiago_description/meshes/head_2.dae" scale="1 1 1"/>
         </geometry>
-        <material name="LightGrey"/>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
           <mesh filename="package://tiago_description/meshes/head_2.stl" scale="1 1 1"/>
         </geometry>
-        <material name="LightGrey"/>
       </collision>
     </link>
 
