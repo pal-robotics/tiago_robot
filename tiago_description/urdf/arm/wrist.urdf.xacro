@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!--
 
-  Copyright (c) 2011-2012, PAL Robotics, S.L.
+  Copyright (c) 2015, PAL Robotics, S.L.
   All rights reserved.
 
   This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
@@ -24,8 +24,6 @@
   <xacro:property name="wrist_2_max_effort"   value="6.6" />
   <xacro:property name="wrist_3_max_effort"   value="6.6" />
   <xacro:property name="wrist_eps"          value="0.02" />
-
-  <!-- TODO: Update dynamic models -->
 
   <xacro:macro name="wrist" params="name parent reflect">
 
@@ -58,7 +56,7 @@
       <child link="${name}_5_link" />
       <origin xyz="-0.168 0.02 0" rpy="${0 * deg_to_rad} ${-90 * deg_to_rad} ${0 * deg_to_rad}" />
       <axis xyz="0 0 1" />
-      <limit lower="${-120.0 * deg_to_rad}" upper="${120.0 * deg_to_rad}" effort="${wrist_1_max_effort}" velocity="${wrist_1_max_vel}" /> <!--TODO: Check effort value!-->
+      <limit lower="${-120.0 * deg_to_rad}" upper="${120.0 * deg_to_rad}" effort="${wrist_1_max_effort}" velocity="${wrist_1_max_vel}" />
       <dynamics friction="${wrist_friction}" damping="${wrist_damping}"/>
 
       <safety_controller k_position="20"
