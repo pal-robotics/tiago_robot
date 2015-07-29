@@ -15,7 +15,7 @@
   <xacro:include filename="$(find tiago_description)/urdf/torso/torso.transmission.xacro" />
 
   <!--Constant parameters-->
-  <xacro:property name="torso_max_vel"  value="0.1" />
+  <xacro:property name="torso_max_vel"  value="0.07" />
   <xacro:property name="torso_eps"      value="0.02" />
 
   <xacro:macro name="tiago_torso" params="name parent">
