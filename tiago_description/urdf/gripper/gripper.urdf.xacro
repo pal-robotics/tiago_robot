@@ -27,9 +27,7 @@
       <geometry>
         <mesh filename="package://tiago_description/meshes/gripper/gripper_link.stl"/>
       </geometry>
-      <material name="">
-        <color rgba="1 1 1 1" />
-      </material>
+      <material name="White"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0" />
@@ -38,6 +36,10 @@
       </geometry>
     </collision>
   </link>
+  <gazebo reference="${name}_link">
+    <material>Gazebo/White</material>
+  </gazebo>
+
   <joint name="${name}_joint" type="fixed">
     <insert_block name="origin"/>
     <parent link="${parent}" />
@@ -58,9 +60,7 @@
       <geometry>
         <mesh filename="package://tiago_description/meshes/gripper/gripper_finger_link.stl" scale="1 -1 1"/>
       </geometry>
-      <material name="">
-        <color rgba="0 0 0 1" />
-      </material>
+      <material name="Black"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0.0725 0 0" />
@@ -69,6 +69,7 @@
       </geometry>
     </collision>
   </link>
+
   <joint name="${name}_right_finger_joint" type="prismatic">
     <origin rpy="0 0 0" xyz="0.07 0 0" />
     <parent link="${name}_link" />
@@ -92,9 +93,7 @@
       <geometry>
         <mesh filename="package://tiago_description/meshes/gripper/gripper_finger_link.stl"/>
       </geometry>
-      <material name="">
-        <color rgba="0 0 0 1" />
-      </material>
+      <material name="Black"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0.0725 -0 0" />
@@ -103,6 +102,7 @@
       </geometry>
     </collision>
   </link>
+
   <joint name="${name}_left_finger_joint" type="prismatic">
     <origin rpy="0 0 0" xyz="0.07 0 0" />
     <parent link="${name}_link" />

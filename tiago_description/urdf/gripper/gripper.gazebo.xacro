@@ -40,6 +40,7 @@
       <fdir1>0 0 1</fdir1>
       <maxVel>1.0</maxVel>
       <minDepth>0.00</minDepth>
+      <material>Gazebo/Black</material>
     </gazebo>
     <gazebo reference="${name}_joint">
       <implicitSpringDamper>1</implicitSpringDamper>
