@@ -29,8 +29,6 @@
   <xacro:property name="arm_eps"            value="0.02" />
 
 
-  <!-- TODO: Update dynamic models -->
-
   <xacro:macro name="tiago_arm" params="name parent">
 
     <!--************************-->
@@ -38,9 +36,11 @@
     <!--************************-->
     <link name="${name}_1_link">
       <inertial>
-        <origin xyz="0.08375 0.00308 -0.04965" rpy="0 0 0"/>
-        <mass value="2.64731" />
-        <inertia ixx="0.01488823102"  ixy="0.00097928027"  ixz="-0.014599404" iyy="0.03785812845" iyz="-0.0008663619" izz="0.0261720489" />
+        <origin xyz="0.019568 -0.052265 0.008219" rpy="0 0 0"/>
+        <mass value="2.108556" />
+        <inertia ixx="0.005489" ixy="-0.001537" ixz="-0.000404" 
+                 iyy="0.002232" iyz="0.000996" 
+                 izz="0.006068" />
       </inertial>
       <!-- M90 module -->
       <visual>
@@ -65,7 +65,7 @@
     <joint name="${name}_1_joint" type="revolute">
       <parent link="${parent}" />
       <child link="${name}_1_link" />
-      <origin xyz="0.155 0.011 -0.152" rpy="${0 * deg_to_rad} ${0 * deg_to_rad} ${0 * deg_to_rad}" />
+      <origin xyz="0.155 0.011 -0.152" rpy="0 0 0" />
       <axis xyz="0 0 1" />
       <limit lower="${0.0 * deg_to_rad}" upper="${165.0 * deg_to_rad}" effort="${arm_1_max_effort}" velocity="${arm_1_max_vel}" />
       <dynamics friction="${arm_friction}" damping="${arm_damping}"/>
