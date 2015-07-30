@@ -1,0 +1,68 @@
+material aruco-582_8cm
+{
+  technique
+  {
+    pass
+    {
+      //depth_write alpha_rejection
+      //scene_blend alpha_blend
+
+      texture_unit
+      {
+	texture aruco-582_8cm.png
+      }
+    }
+  }
+}
+
+material aruco-26_8cm
+{
+  technique
+  {
+    pass
+    {
+      //depth_write alpha_rejection
+      //scene_blend alpha_blend
+
+      texture_unit
+      {
+	texture aruco-26_8cm.png
+      }
+    }
+  }
+}
+
+material pal_logo_1_7cm
+{
+  technique
+  {
+    pass
+    {
+      //depth_write alpha_rejection
+      //scene_blend alpha_blend
+
+      texture_unit
+      {
+        texture pal_logo_1_7cm.jpg
+      }
+    }
+  }
+}
+
+material pal_logo_2_7cm
+{
+  technique
+  {
+    pass
+    {
+      //depth_write alpha_rejection
+      //scene_blend alpha_blend
+
+      texture_unit
+      {
+        texture pal_logo_2_7cm.jpg
+      }
+    }
+  }
+}
+

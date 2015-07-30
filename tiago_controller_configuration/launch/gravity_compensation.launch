@@ -1,0 +1,10 @@
+<launch>
+  <rosparam command="load" file="$(find tiago_controller_configuration)/config/gravity_compensation_controller.yaml" />
+
+  <node name="grav_compensation_controller_spawner"
+        pkg="controller_manager" type="spawner" output="screen"
+        args="--timeout 120
+              gravity_compensation
+              wrist_controller
+              wrist_current_limit_controller" />
+</launch>

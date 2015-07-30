@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!--
+
+  Copyright (c) 2011, PAL Robotics, S.L.
+  All rights reserved.
+
+  This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
+  To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to
+  Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+-->
+
+<robot name="tiago">
+
+  <gazebo>
+    <plugin filename="libgazebo_ros_control.so" name="gazebo_ros_control">
+      <ns></ns>
+      <robotSimType>tiago_hardware_gazebo/TiagoHardwareGazebo</robotSimType>
+      <robotNamespace></robotNamespace>
+      <controlPeriod>0.001</controlPeriod>
+    </plugin>
+
+    <plugin filename="libgazebo_ros_p3d.so" name="gazebo_ros_p3d">
+      <bodyName>base_link</bodyName>
+      <topicName>ground_truth_odom</topicName>
+      <alwaysOn>true</alwaysOn>
+      <updateRate>100.0</updateRate>
+    </plugin>
+  </gazebo>
+
+  <!-- define global properties -->
+  <property name="M_PI" value="3.1415926535897931" />
+
+</robot>

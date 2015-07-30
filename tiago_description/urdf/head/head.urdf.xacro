@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<!--
+
+  Copyright (c) 2015, PAL Robotics, S.L.
+  All rights reserved.
+
+  This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
+  To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to
+  Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+-->
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <!--File includes-->
+  <xacro:include filename="$(find tiago_description)/urdf/deg_to_rad.xacro" />
+  <xacro:include filename="$(find tiago_description)/urdf/head/head.transmission.xacro" />
+  <xacro:include filename="$(find tiago_description)/urdf/sensors/xtion_pro_live.urdf.xacro" />
+
+  <!--Constant parameters-->
+  <xacro:property name="head_friction" value="1.0" />
+  <xacro:property name="head_damping"  value="0.5" />
+  <xacro:property name="head_max_vel"  value="3.0" />
+  <xacro:property name="head_eps"      value="0.02" />
+  <xacro:property name="head_1_lower_limit" value="-75"/>
+  <xacro:property name="head_1_upper_limit" value="75"/>
+  <xacro:property name="head_2_lower_limit" value="-60"/>
+  <xacro:property name="head_2_upper_limit" value="45"/>
+
+  <!--************************-->
+  <!--     HEAD_1 (PAN)       -->
+  <!--************************-->
+  <xacro:macro name="head_1" params="name parent">
+    <link name="${name}_link">
+      <inertial>
+        <origin xyz="-0.016151 -0.000132 0.041903" rpy="0 0 0"/>
+        <mass value="0.406285"/>
+        <inertia ixx="0.000506" ixy="-0.000001" ixz="-0.000061"
+                 iyy="0.000552" iyz="0.000002"
+                 izz="0.000381"/>
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://tiago_description/meshes/head_1.stl" scale="1 1 1"/>
+        </geometry>
+        <material name="White" />
+      </visual>
+      <collision>
+        <origin xyz="-0.025 0 0" rpy="0 0 0.07" />
+        <geometry>
+          <box size="0.11 0.1 0.14"/>
+        </geometry>
+        <material name="White" />
+      </collision>
+    </link>
+
+    <joint name="${name}_joint" type="revolute">
+      <parent link="${parent}"/>
+      <child link="${name}_link"/>
+      <origin xyz="0.18735 0 0.0325" rpy="0 0 0" />
+      <axis xyz="0 0 1" />
+      <limit lower="${head_1_lower_limit * deg_to_rad}" upper="${head_1_upper_limit * deg_to_rad}" effort="5.197" velocity="${head_max_vel}" />
+      <dynamics damping="${head_damping}" friction="${head_friction}"/>
+
+      <safety_controller k_position="20"
+                         k_velocity="20"
+                         soft_lower_limit="${head_1_lower_limit * deg_to_rad + head_eps}"
+                         soft_upper_limit="${head_1_upper_limit * deg_to_rad - head_eps}" />
+    </joint>
+
+    <gazebo reference="${name}_link">
+      <mu1>0.9</mu1>
+      <mu2>0.9</mu2>
+    </gazebo>
+
+    <gazebo reference="${name}_joint">
+       <implicitSpringDamper>1</implicitSpringDamper>
+    </gazebo>
+
+
+    <!-- extensions -->
+    <xacro:head_transmission name="${name}" reduction="1" />
+
+  </xacro:macro>
+
+  <!--************************-->
+  <!--      HEAD_2 (TILT)     -->
+  <!--************************-->
+  <xacro:macro name="head_2" params="name parent">
+    <link name="${name}_link">
+      <inertial>
+        <origin xyz="0.013345 0.03824 0.000058" rpy="0 0 0"/>
+        <mass value="0.852579"/>
+        <inertia ixx="0.003677" ixy="-0.000003" ixz="0.000001"
+                 iyy="0.003853" iyz="0"
+                 izz="0.002551"/>
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://tiago_description/meshes/head_2.dae" scale="1 1 1"/>
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://tiago_description/meshes/head_2.stl" scale="1 1 1"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <joint name="${name}_joint" type="revolute">
+      <parent link="${parent}"/>
+      <child link="${name}_link"/>
+      <origin xyz="0.0038 0 0.0596" rpy="${90.0 * deg_to_rad} 0 0" />
+      <axis xyz="0 0 1" />
+      <limit lower="${head_2_lower_limit * deg_to_rad}" upper="${head_2_upper_limit * deg_to_rad}" effort="2.77" velocity="${head_max_vel}" />
+      <dynamics damping="${head_damping}" friction="${head_friction}"/>
+
+      <safety_controller k_position="20"
+                         k_velocity="20"
+                         soft_lower_limit="${head_2_lower_limit * deg_to_rad + head_eps}"
+                         soft_upper_limit="${head_2_upper_limit * deg_to_rad}" />
+    </joint>
+  </xacro:macro>
+
+  <xacro:macro name="head" params="name parent">
+    <xacro:head_1 name="${name}_1" parent="${parent}" />
+    <xacro:head_2 name="${name}_2" parent="${name}_1_link"/>
+    <xacro:xtion_pro_live name="xtion" parent="${name}_2">
+      <origin xyz="0.07 0.0633 0" rpy="${-90 * deg_to_rad} 0 0" />
+      <origin xyz="0 0 0" rpy="${-90 * deg_to_rad} ${0 * deg_to_rad} ${-90 * deg_to_rad}" />
+    </xacro:xtion_pro_live>
+  </xacro:macro>
+
+</robot>

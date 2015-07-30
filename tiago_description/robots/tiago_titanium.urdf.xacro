@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<!--
+  Copyright (c) 2011, PAL Robotics, S.L.
+  All rights reserved.
+
+  This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
+  To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to
+  Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+-->
+<robot  xmlns:xacro="http://www.ros.org/wiki/xacro"
+        name="tiago" >
+
+  <!-- The following included files set up definitions of parts of the robot body -->
+  <!-- Base -->
+  <xacro:include filename="$(find pmb2_description)/urdf/base/base.urdf.xacro" />
+  <!-- Torso -->
+  <xacro:include filename="$(find tiago_description)/urdf/torso/torso.urdf.xacro" />
+  <!-- Arm -->
+  <xacro:include filename="$(find tiago_description)/urdf/arm/arm.urdf.xacro" />
+  <!-- Hand -->
+  <xacro:include filename="$(find hey5_description)/urdf/hey5_hand.urdf.xacro" />
+  <!-- Head -->
+  <xacro:include filename="$(find tiago_description)/urdf/head/head.urdf.xacro" />
+
+  <!-- Generic simulator_gazebo plugins -->
+  <xacro:include filename="$(find tiago_description)/gazebo/gazebo.urdf.xacro" />
+  <!-- Materials for visualization -->
+  <xacro:include filename="$(find tiago_description)/urdf/materials.urdf.xacro" />
+
+  <!-- Now we can start using the macros included above to define the actual robot -->
+  <xacro:base name="base"/>
+  <xacro:tiago_torso name="torso" parent="base_link"/>
+  <xacro:head name="head" parent="torso_lift_link"/>
+  <xacro:tiago_arm name="arm" parent="torso_lift_link"/>
+  <xacro:hey5_hand parent="arm_tool_link" name="hand" reflect="1">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </xacro:hey5_hand>
+
+  <joint name="hand_safety_box_joint" type="fixed">
+    <parent link="arm_tool_link"/>
+    <child link="hand_safety_box"/>
+    <origin xyz="0.1 0.02 0.02" rpy="0 0 0"/>
+  </joint>
+
+  <link name="hand_safety_box">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.0001" />
+      <inertia ixx="0.0001"  ixy="0"  ixz="0" iyy="0.0001" iyz="0" izz="0.0001" />
+    </inertial>
+    <!--
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2 0.115 0.18" />
+      </geometry>
+    </visual>
+    -->
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2 0.115 0.18" />
+      </geometry>
+    </collision>
+  </link>
+
+</robot>
+

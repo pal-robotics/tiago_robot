@@ -1,0 +1,11 @@
+<launch>
+  <arg name="robot" default="steel" />
+  <include file="$(find tiago_description)/robots/upload_tiago.launch">
+    <arg name="robot" value="$(arg robot)"/>
+  </include>
+
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" args="_use_gui:=True" />
+
+  <node name="rviz" pkg="rviz" type="rviz"/>
+</launch>

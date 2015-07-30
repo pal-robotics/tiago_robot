@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!--
+
+  Copyright (c) 2015, PAL Robotics, S.L.
+  All rights reserved.
+
+  This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
+  To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to
+  Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+-->
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+    <xacro:macro name="gripper_grasping_hack" params="name">
+      <gazebo>
+        <gripper name="${name}_grasp_hack">
+          <grasp_check>
+            <attach_steps>1</attach_steps>
+            <detach_steps>2</detach_steps>
+            <min_contact_count>2</min_contact_count>
+          </grasp_check>
+          <gripper_link>${name}_left_finger_link</gripper_link>
+          <gripper_link>${name}_right_finger_link</gripper_link>
+          <palm_link>${name}_link</palm_link>
+        </gripper>
+      </gazebo>
+    </xacro:macro>
+
+    <xacro:macro name="finger_gazebo" params="name">
+<!--
+    <gazebo reference="${finger_name}_link">
+      <mu1>0.9</mu1>
+      <mu2>0.9</mu2>
+    </gazebo>
+-->
+    <gazebo reference="${name}_link">
+      <kp>1000000.0</kp>
+      <kd>100.0</kd>
+      <mu1>1.0</mu1>
+      <mu2>1.0</mu2>
+      <fdir1>0 0 1</fdir1>
+      <maxVel>1.0</maxVel>
+      <minDepth>0.00</minDepth>
+      <material>Gazebo/Black</material>
+    </gazebo>
+    <gazebo reference="${name}_joint">
+      <implicitSpringDamper>1</implicitSpringDamper>
+      <provideFeedback>1</provideFeedback>
+    </gazebo>
+  </xacro:macro>
+
+</robot>

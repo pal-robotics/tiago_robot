@@ -1,0 +1,86 @@
+play_motion:
+  controllers: [arm_controller, head_controller, torso_controller, hand_controller]
+  motions:
+    home:
+      joints: [torso_lift_joint, arm_1_joint,
+      arm_2_joint, arm_3_joint, arm_4_joint, arm_5_joint,
+      arm_6_joint, arm_7_joint]
+      points:
+      - positions: [0.15, 0.21, 0.35, 0.0, 0.0, -1.57, 0.0, 0.0]
+        time_from_start: 0.0
+      - positions: [0.15, 0.21, 0.35, -0.1, 0.0, -1.57, 1.52, 0.0]
+        time_from_start: 1.5
+      - positions: [0.15, 0.21, 0.35, -0.1, 1.9, -1.57, 1.52, 0.0]
+        time_from_start: 3.5
+      - positions: [0.15, 0.21, -1.34, -0.1, 1.9, -1.57, 1.52, 0.0]
+        time_from_start: 6.0
+      - positions: [0.06, 0.05, -1.34, -0.1, 1.9, -1.57, 1.52, 0.0]
+        time_from_start: 9.0
+
+    pregrasp:
+      joints: [torso_lift_joint, arm_1_joint,
+      arm_2_joint, arm_3_joint, arm_4_joint, arm_5_joint,
+      arm_6_joint, arm_7_joint]
+      points:
+      - positions: [0.06, 0.05, -1.34, -0.1, 1.9, -1.57, 1.52, 0.0]
+        time_from_start: 0.0
+      - positions: [0.34, 0.21, -1.02, -0.2, 2.12, -1.57, 1.52, 0.0]
+        time_from_start: 1.5
+      - positions: [0.34, 0.21, 0.35, -0.2, 2.12, -1.57, 1.52, 0.0]
+        time_from_start: 4.5
+      - positions: [0.34, 0.21, 0.35, -0.2, 0.0, -1.57, 1.52, 0.0]
+        time_from_start: 8.0
+      - positions: [0.34, 0.21, 0.35, -3.0, 0.0, -1.57, 1.52, 0.0]
+        time_from_start: 10.0
+      - positions: [0.34, 0.21, -0.2, -2.2, 1.15, -1.57, 0.2, 0.0]
+        time_from_start: 12.0
+
+    open_hand:
+      joints: [hand_thumb_joint, hand_index_joint, hand_mrl_joint]
+      points:
+      - positions: [-1.0, -1.0, -1.0]
+        time_from_start: 0.0
+      - positions: [0.0, 0.0, 0.0]
+        time_from_start: 2.5
+
+    close_hand:
+      joints: [hand_thumb_joint, hand_index_joint, hand_mrl_joint]
+      points:
+      - positions: [2.37, 0.0, 0.0]
+        time_from_start: 0.0
+      - positions: [6.2, 6.8, 9.2]
+        time_from_start: 2.5
+
+    head_tour:
+      joints: [head_1_joint, head_2_joint]
+      points:
+      - positions: [0, 0]
+        time_from_start: 0.1
+      - positions: [0.7, 0]
+        time_from_start: 3.0
+      - positions: [0.7, 0.3]
+        time_from_start: 6.0
+      - positions: [0.7, -0.3]
+        time_from_start: 9.0
+      - positions: [0.7, 0.3]
+        time_from_start: 12.0
+      - positions: [-0.7, 0.3]
+        time_from_start: 15.0
+      - positions: [-0.7, -0.3]
+        time_from_start: 18.0
+      - positions: [0, 0]
+        time_from_start: 21.0
+
+    wave:
+      joints: [arm_1_joint,
+      arm_2_joint, arm_3_joint, arm_4_joint,
+      arm_5_joint, arm_6_joint, arm_7_joint]
+      points:
+      - positions: [0.06337464909724033, -0.679638896132783, -3.1087325315620733, 2.0882339360702575, -1.1201172410014792, -0.031008601325809293, -2.0744261217334135]
+        time_from_start: 0.0
+      - positions: [0.06335930908588873, -0.7354151774072313, -2.939624246421942, 1.8341256735249563, -1.1201355028397157, -0.031008601325809293, -2.0744261217334135]
+        time_from_start: 1.0
+      - positions: [0.06335930908588873, -0.7231278283145929, -2.9385504456273295, 2.2121050027803877, -1.1201355028397157, -0.031008601325809293, -2.0744261217334135]
+        time_from_start: 2.0
+      - positions: [0.06335930908588873, -0.7354151774072313, -2.939624246421942, 1.8341256735249563, -1.1201355028397157, -0.031008601325809293, -2.0744261217334135]
+        time_from_start: 3.0

@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+<!--
+
+  Copyright (c) 2015, PAL Robotics, S.L.
+  All rights reserved.
+
+  This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
+  To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to
+  Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+-->
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <!--File includes-->
+  <xacro:include filename="$(find tiago_description)/urdf/deg_to_rad.xacro" />
+  <xacro:include filename="$(find tiago_description)/urdf/arm/wrist.transmission.xacro" />
+
+  <!--Constant parameters-->
+  <xacro:property name="wrist_friction"       value="1.0" />
+  <xacro:property name="wrist_damping"        value="1.0" />
+  <xacro:property name="wrist_1_max_vel"      value="1.95" />
+  <xacro:property name="wrist_2_max_vel"      value="1.76" />
+  <xacro:property name="wrist_3_max_vel"      value="1.76" />
+  <xacro:property name="wrist_1_max_effort"   value="3" />
+  <xacro:property name="wrist_2_max_effort"   value="6.6" />
+  <xacro:property name="wrist_3_max_effort"   value="6.6" />
+  <xacro:property name="wrist_eps"          value="0.02" />
+
+  <xacro:macro name="wrist" params="name parent reflect">
+
+    <!--************************-->
+    <!--        WRIST           -->
+    <!--************************-->
+    <link name="${name}_5_link">
+      <inertial>
+        <origin xyz="-0.00084 0.00001 ${reflect * 0.07797}" rpy="0 0 0"/>
+        <mass value="1.32698" />
+        <inertia ixx="0.01049566566"  ixy="-0.00000316264"  ixz="-0.00012548144" iyy="0.01028836655" iyz="0.0000027891" izz="0.00094419873" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://tiago_description/meshes/arm/arm_5.dae" scale="1 1 ${-1*reflect}"/>
+        </geometry>
+        <material name="LightGrey" />
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://tiago_description/meshes/arm/arm_5_collision.stl" scale="1 1 ${-1*reflect}"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <joint name="${name}_5_joint" type="revolute">
+      <parent link="${parent}" />
+      <child link="${name}_5_link" />
+      <origin xyz="-0.168 0.02 0" rpy="${0 * deg_to_rad} ${-90 * deg_to_rad} ${0 * deg_to_rad}" />
+      <axis xyz="0 0 1" />
+      <limit lower="${-120.0 * deg_to_rad}" upper="${120.0 * deg_to_rad}" effort="${wrist_1_max_effort}" velocity="${wrist_1_max_vel}" />
+      <dynamics friction="${wrist_friction}" damping="${wrist_damping}"/>
+
+      <safety_controller k_position="20"
+                         k_velocity="20"
+                         soft_lower_limit="${-120.0 * deg_to_rad + wrist_eps}"
+                         soft_upper_limit="${ 120.0 * deg_to_rad - wrist_eps}" />
+    </joint>
+
+    <link name="${name}_6_link">
+      <inertial>
+        <origin xyz="-0.000014 -0.00368 ${reflect * 0.00001}" rpy="0 0 0"/>
+        <mass value="0.35781" />
+         <inertia ixx="0.00016489507"  ixy="0.0000002779"  ixz="0.00000009308" iyy="0.00013154987" iyz="0.00000007106" izz="0.00011998795" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://tiago_description/meshes/arm/arm_6.dae" scale="1 1 ${-1*reflect}"/>
+        </geometry>
+        <material name="LightGrey" />
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <cylinder radius="0.04" length="0.0385"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <joint name="${name}_6_joint" type="revolute">
+      <parent link="${name}_5_link" />
+      <child link="${name}_6_link" />
+      <origin xyz="0 0 0.15" rpy="${-90.0 * reflect * deg_to_rad} 0 0" />
+      <axis xyz="0 0 1" />
+      <limit lower="${-90.0 * deg_to_rad}" upper="${90.0 * deg_to_rad}" effort="${wrist_2_max_effort}" velocity="${wrist_2_max_vel}" />
+      <dynamics friction="${wrist_friction}" damping="${wrist_damping}"/>
+
+      <safety_controller k_position="20"
+                         k_velocity="20"
+                         soft_lower_limit="${-90.0 * deg_to_rad + wrist_eps}"
+                         soft_upper_limit="${ 90.0 * deg_to_rad - wrist_eps}" />
+    </joint>
+
+    <link name="${name}_7_link">
+      <inertial>
+        <origin xyz="0 -0.00005 ${reflect * -0.01573}" rpy="0 0 0"/>
+        <mass value="0.10721" />
+         <inertia ixx="0.00008977003"  ixy="-0.00000000001"  ixz="0.0" iyy="0.00008968773" iyz="-0.00000021816" izz="0.00000951878" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 ${0.046 * reflect}" rpy="0 0 0" />
+        <geometry>
+          <cylinder radius="0.02" length="0.005"/>
+        </geometry>
+        <material name="DarkGrey" />
+      </visual>
+      <collision>
+        <origin xyz="0 0 ${0.046 * 0.75 * reflect}" rpy="0 0 0" />
+        <geometry>
+          <cylinder radius="0.02" length="0.023"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <joint name="${name}_7_joint" type="revolute">
+      <parent link="${name}_6_link" />
+      <child link="${name}_7_link" />
+      <origin xyz="0 0 0" rpy="${90.0 * reflect * deg_to_rad} 0 0" />
+      <axis xyz="0 0 1" />
+      <limit lower="${-120.0 * deg_to_rad}" upper="${120.0 * deg_to_rad}" effort="${wrist_3_max_effort}" velocity="${wrist_3_max_vel}" />
+      <dynamics friction="${wrist_friction}" damping="${wrist_damping}"/>
+
+      <safety_controller k_position="20"
+                         k_velocity="20"
+                         soft_lower_limit="${-120.0 * deg_to_rad + wrist_eps}"
+                         soft_upper_limit="${ 120.0 * deg_to_rad - wrist_eps}" />
+    </joint>
+
+    <gazebo reference="${name}_5_link">
+      <mu1>0.9</mu1>
+      <mu2>0.9</mu2>
+    </gazebo>
+    <gazebo reference="${name}_6_link">
+      <mu1>0.9</mu1>
+      <mu2>0.9</mu2>
+    </gazebo>
+    <gazebo reference="${name}_7_link">
+      <mu1>0.9</mu1>
+      <mu2>0.9</mu2>
+    </gazebo>
+
+    <gazebo reference="${name}_5_joint">
+        <implicitSpringDamper>1</implicitSpringDamper>
+    </gazebo>
+    <gazebo reference="${name}_6_joint">
+        <implicitSpringDamper>1</implicitSpringDamper>
+    </gazebo>
+    <gazebo reference="${name}_7_joint">
+        <implicitSpringDamper>1</implicitSpringDamper>
+    </gazebo>
+
+    <!-- extensions -->
+    <xacro:wrist_simple_transmission name="${name}" number="5" reduction="1.0" />
+    <xacro:wrist_differential_transmission name="${name}" number_1="6" number_2="7"
+                                                act_reduction_1="-1.0" act_reduction_2="1.0"
+                                                jnt_reduction_1="1.0" jnt_reduction_2="${-reflect}" />
+
+  </xacro:macro>
+
+</robot>

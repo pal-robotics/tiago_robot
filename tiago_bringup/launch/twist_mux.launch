@@ -1,0 +1,11 @@
+<launch>
+
+  <include file="$(find twist_mux)/launch/twist_mux.launch">
+    <arg name="config_locks"  value="$(find tiago_bringup)/config/twist_mux/twist_mux_locks.yaml"/>
+    <arg name="config_topics" value="$(find tiago_bringup)/config/twist_mux/twist_mux_topics.yaml"/>
+
+    <arg name="config_joy" value="$(find tiago_bringup)/config/twist_mux/joystick.yaml"/>
+    <arg name="cmd_vel_out" value="/mobile_base_controller/cmd_vel"/>
+  </include>
+
+</launch>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <arg name="robot" default="steel"/>
+
+  <!-- Load default controllers -->
+  <include file="$(find tiago_controller_configuration)/launch/$(arg robot)_controllers.launch"/>
+
+  <!-- Robot state publisher -->
+  <node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher">
+    <param name="publish_frequency" type="double" value="50.0"/>
+    <param name="tf_prefix" type="string" value=""/>
+  </node>
+
+  <!-- Twist mux -->
+  <include file="$(find tiago_bringup)/launch/twist_mux.launch"/>
+
+  <!-- Joystick controller -->
+  <include file="$(find tiago_bringup)/launch/joystick_teleop.launch"/>
+
+  <!-- Pre-recorded motions executor -->
+  <include file="$(find tiago_bringup)/launch/play_motion.launch"/>
+</launch>

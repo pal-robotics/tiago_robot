@@ -1,0 +1,110 @@
+teleop:
+  move:
+    type: topic
+    message_type: geometry_msgs/Twist
+    topic_name: cmd_vel
+    axis_mappings:
+      -
+        axis: 1
+        target: linear.x
+        scale: 1.0
+      -
+        axis: 2
+        target: angular.z
+        scale: 1.0
+
+  joy_priority:
+    type: action
+    action_name: joy_priority_action
+    buttons: [9]
+
+  joy_turbo_decrease:
+    type: action
+    action_name: joy_turbo_decrease
+    buttons: [1, 4, 5]
+
+  joy_turbo_increase:
+    type: action
+    action_name: joy_turbo_increase
+    buttons: [3, 4, 5]
+
+  joy_turbo_angular_decrease:
+    type: action
+    action_name: joy_turbo_angular_decrease
+    buttons: [0, 4, 5]
+
+  joy_turbo_angular_increase:
+    type: action
+    action_name: joy_turbo_angular_increase
+    buttons: [2, 4, 5]
+
+  joy_turbo_reset:
+    type: action
+    action_name: joy_turbo_reset
+    buttons: [4, 5, 7]
+
+  torso_up:
+    type: action
+    action_name: /torso_controller/increment
+    action_goal:
+      increment_by: [0.05]
+    buttons: [4] # right pad, top button
+
+  torso_down:
+    type: action
+    action_name: /torso_controller/increment
+    action_goal:
+      increment_by: [-0.05]
+    buttons: [6] # right pad, bottom button
+
+  head_down:
+    type: action
+    action_name: /head_controller/increment
+    action_goal:
+      increment_by: [-0.1, 0]
+    buttons: [2] # right pad, bottom button
+
+  head_up:
+    type: action
+    action_name: /head_controller/increment
+    action_goal:
+      increment_by: [0.1, 0]
+    buttons: [0] # right pad, top button
+
+  head_left:
+    type: action
+    action_name: /head_controller/increment
+    action_goal:
+      increment_by: [0, 0.1]
+    buttons: [3] # right pad, left button
+
+  head_right:
+    type: action
+    action_name: /head_controller/increment
+    action_goal:
+      increment_by: [0, -0.1]
+    buttons: [1] # right pad, right button
+
+  close_hand:
+    type: action
+    action_name: /play_motion
+    action_goal:
+      motion_name: 'close_hand'
+      skip_planning: True
+    buttons: [7]
+
+  open_hand:
+    type: action
+    action_name: /play_motion
+    action_goal:
+      motion_name: 'open_hand'
+      skip_planning: True
+    buttons: [5]
+
+  # Disable speed_limit example
+  # @todo duration param is not taken
+  #speed_limit_disable:
+  #  type: action
+  #  action_name: speed_limit/disable
+  #  duration: 10.0
+  #  buttons: [4, 5, 6, 7]
