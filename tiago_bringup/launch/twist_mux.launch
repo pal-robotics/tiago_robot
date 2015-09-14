@@ -5,7 +5,7 @@
     <arg name="config_topics" value="$(find tiago_bringup)/config/twist_mux/twist_mux_topics.yaml"/>
 
     <arg name="config_joy" value="$(find tiago_bringup)/config/twist_mux/joystick.yaml"/>
-    <arg name="cmd_vel_out" value="/mobile_base_controller/cmd_vel"/>
+    <arg name="cmd_vel_out" value="/twist_mux/cmd_vel"/>
   </include>
 
 </launch>
