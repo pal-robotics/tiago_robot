@@ -7,7 +7,7 @@
       etc.) of the TIAGO robot.  The files in this package are parsed and used by
       a variety of other components.  Most users will not interact directly
       with this package.</description>
-  <maintainer email="maintainer@pal-robotics.com">PAL Robotics</maintainer>
+  <maintainer email="tiago-support@pal-robotics.com">PAL Robotics</maintainer>
   <author email="bence.magyar@pal-robotics.com">Bence Magyar</author>
   <license>Creative Commons BY-NC-ND 3.0</license>
 
