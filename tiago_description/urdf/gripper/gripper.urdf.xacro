@@ -16,9 +16,12 @@
 
   <link name="${name}_link">
     <inertial>
-      <inertia ixx="0.00039" ixy="0" ixz="0"
-               iyy="0.00039" iyz="0"
-               izz="0.00066" />
+<!--      <inertia ixx="0.291026" ixy="0.003769" ixz="0.000179"
+               iyy="0.126426" iyz="0.0"
+               izz="0.374198" /> -->
+      <inertia ixx="0.001920326" ixy="0.00002487" ixz="0.000001181"
+               iyy="0.000834218" iyz="0.0"
+               izz="0.002469134" />
       <mass value="0.4218" />
       <origin rpy="0.0 0.0 0.0" xyz="0.04724 0.00159 0.00064" />
     </inertial>
@@ -51,9 +54,9 @@
     <inertial>
       <origin rpy="0 0 0" xyz="0.0018 -0.00508 0" />
       <mass value="0.1" />
-      <inertia ixx="0.00001" ixy="0" ixz="0"
-               iyy="0.00001" iyz="0"
-               izz="0.00001" />
+      <inertia ixx="0.000165887" ixy="0.000009593" ixz="0.000008307"
+               iyy="0.001979493" iyz="-0.000000187"
+               izz="0.001819711" />
     </inertial>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0" />
@@ -75,7 +78,7 @@
     <parent link="${name}_link" />
     <child link="${name}_right_finger_link" />
     <axis xyz="0 -1 0" />
-    <limit effort="28.0" lower="0.0" upper="0.05" velocity="0.1" />
+    <limit effort="25" lower="0.0" upper="0.05" velocity="0.1" />
     <calibration rising="0.0" />
     <dynamics damping="2500" />
   </joint>
@@ -84,9 +87,9 @@
     <inertial>
       <origin rpy="0 0 0" xyz="0.0018 0.00508 0" />
       <mass value="0.1" />
-      <inertia ixx="0.0001" ixy="0" ixz="0"
-               iyy="0.0001" iyz="0"
-               izz="0.0001" />
+      <inertia ixx="0.000165887" ixy="0.000009593" ixz="0.000008307"
+               iyy="0.001979493" iyz="-0.000000187"
+               izz="0.001819711" />
     </inertial>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0" />
@@ -108,7 +111,7 @@
     <parent link="${name}_link" />
     <child link="${name}_left_finger_link" />
     <axis xyz="0 1 0" />
-    <limit effort="28.0" lower="0" upper="0.05" velocity="0.1" />
+    <limit effort="25" lower="0" upper="0.05" velocity="0.1" />
     <calibration rising="0.0" />
     <dynamics damping="2500" />
   </joint>
@@ -134,7 +137,7 @@
 
   <xacro:finger_gazebo name="${name}_left_finger"/>
   <xacro:finger_gazebo name="${name}_right_finger"/>
-  <xacro:gripper_grasping_hack name="${name}"/>
+  <!-- <xacro:gripper_grasping_hack name="${name}"/> -->
 
  </xacro:macro>
 
