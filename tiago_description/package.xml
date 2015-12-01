@@ -2,13 +2,14 @@
 <package>
 
   <name>tiago_description</name>
-  <version>0.0.1</version>
+  <version>0.1.0</version>
   <description>This package contains the description (mechanical, kinematic, visual,
       etc.) of the TIAGO robot.  The files in this package are parsed and used by
       a variety of other components.  Most users will not interact directly
       with this package.</description>
   <maintainer email="tiago-support@pal-robotics.com">PAL Robotics</maintainer>
   <author email="bence.magyar@pal-robotics.com">Bence Magyar</author>
+  <author email="jordi.pages@pal-robotics.com">Jordi Pages</author>
   <license>Creative Commons BY-NC-ND 3.0</license>
 
   <buildtool_depend>catkin</buildtool_depend>
