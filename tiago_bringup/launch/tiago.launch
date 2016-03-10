@@ -21,9 +21,6 @@
   <!-- Node that forwards commands and feedback of dynamixel motors -->
   <include file="$(find tiago_bringup)/launch/dynamixel_node.launch"/>
 
-  <!-- Head sensor -->
-  <include file="$(find tiago_bringup)/launch/head_xtion.launch"/>
-
   <!-- Battery reporter from M90 -->
   <node name="battery_reporter" type="voltage_from_m90.py" pkg="battery_reporter"/>
 
