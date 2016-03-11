@@ -31,6 +31,4 @@
   <!-- Joystick controller -->
   <include file="$(find tiago_bringup)/launch/joystick_teleop.launch"/>
 
-  <!-- Pre-recorded motions executor -->
-  <include file="$(find tiago_bringup)/launch/play_motion.launch"/>
 </launch>
