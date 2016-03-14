@@ -21,9 +21,6 @@
   <!-- Node that forwards commands and feedback of dynamixel motors -->
   <include file="$(find tiago_bringup)/launch/dynamixel_node.launch"/>
 
-  <!-- Battery reporter from M90 -->
-  <node name="battery_reporter" type="voltage_from_m90.py" pkg="battery_reporter"/>
-
   <!-- Bring up robot -->
   <include file="$(find tiago_bringup)/launch/tiago_bringup.launch">
     <arg name="robot" value="$(arg robot)"/>
