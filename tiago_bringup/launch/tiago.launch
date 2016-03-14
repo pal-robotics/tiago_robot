@@ -7,6 +7,9 @@
             ns="joint_state_controller"
             file="$(find tiago_controller_configuration)/config/joint_state_controller_extra_joints.yaml"/>
 
+  <!-- Diff drive controller multipliers -->
+  <rosparam command="load" file="$(find tiago_controller_configuration)/config/mobile_base_controller_multipliers.yaml"/>
+
   <!-- Diff drive controller parameters -->
   <rosparam command="load" file="$(find tiago_controller_configuration)/config/mobile_base_controller.yaml"/>
 
