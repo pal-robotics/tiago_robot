@@ -27,7 +27,7 @@ controller_params:
    torque_scaling_0: 1.0
    viscous_friction_0: 2.1
    static_friction_0: 0.5
-   torque_scaling_1: 1.0
+   torque_scaling_1: 1.5
    viscous_friction_1: 1.7
    static_friction_1: 0.6 
    torque_scaling_2: 1.0
