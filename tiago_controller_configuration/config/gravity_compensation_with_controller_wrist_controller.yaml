@@ -2,7 +2,7 @@ torque_constant:
    arm_1_joint: 0.0735
    arm_2_joint: 0.0735
    arm_3_joint: -0.1149
-   arm_4_joint: 0.1436
+   arm_4_joint: -0.1436
    arm_5_joint: 0.0 # 0.0487
    arm_6_joint: 0.0 # 0.0487
    arm_7_joint: 0.0 # 0.0487
