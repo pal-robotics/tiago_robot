@@ -14,5 +14,5 @@ dynamixel_parameters:
     id: 1
     compliance_slope: 50
   head_2_joint:
-    id: 3
+    id: 2
     compliance_slope: 50
