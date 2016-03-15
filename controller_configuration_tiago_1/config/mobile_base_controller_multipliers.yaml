@@ -1,5 +1,0 @@
-mobile_base_controller:
-  # Wheel separation and radius multipliers for TIAGo-4
-  wheel_separation_multiplier  : 1.0
-  left_wheel_radius_multiplier : 1.0
-  right_wheel_radius_multiplier: 1.0
