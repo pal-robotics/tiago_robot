@@ -41,7 +41,7 @@ teleop:
   joy_turbo_reset:
     type: action
     action_name: joy_turbo_reset
-    buttons: [4, 5, 7]
+    buttons: [10, 11]
 
   torso_up:
     type: action
