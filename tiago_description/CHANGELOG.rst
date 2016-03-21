@@ -2,6 +2,47 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add effort transmision
+* using base_sensors instead of base
+* remove hey5 hand from URDF
+* Added safety controller to torso lift joint
+* Update inertial params
+* 7 cm / sec torso speed
+* Gripper parts color
+* Updated gripper base mesh
+* Update head, todo: dae coloring for the head_2
+* Update license
+* Update joint limit
+* Remove module-only arm
+* Arm 1 collision added
+* Update collision & meshes
+* Remove old head mesh
+* Update torso meshes &  collision
+* Update limits
+* Add cover for module hole
+* Review of joint limits
+* Update arm
+* Update torso
+* Update gripper finger
+* No need for have_base_rgdb anymore
+* New arm distances, more to come
+* Update head distance from torso_lift_link
+* Remove temporary cabling boxes
+* change torso limits and update motions
+* Update gripper length to approx real one
+* Update head
+* add cover on top of mobile base
+  Define collision and visual elements needed for the motion planning of TIAGo proof-of-concept
+* restrict lifter joint to go lower than 5 cm
+  Take into account new mobile base covers that are 5 cm high
+* DarkGrey for all arm parts in gazebo
+* Updated limits
+* Add cable channel to the front of the column
+* Increase speed of torso
+* Contributors: Bence Magyar, Hilario Tome, Jordi Pages, Sam Pfeiffer, jordi.pages@pal-robotics.com
+
 0.0.4 (2015-05-20)
 ------------------
 * Add safety box around the hand
