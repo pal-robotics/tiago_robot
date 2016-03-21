@@ -2,8 +2,8 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.5 (2016-03-21)
+------------------
 * Adding new defaults for TIAGo
   Current limit controller for the wheels.
   Soften on effort values config for a specific robot.

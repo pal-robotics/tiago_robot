@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.5 (2016-03-21)
+------------------
 * Add effort transmision
 * using base_sensors instead of base
 * remove hey5 hand from URDF
