@@ -15,3 +15,9 @@ hand_current_limit_controller:
     - hand_thumb_motor
     - hand_index_motor
     - hand_mrl_motor
+
+wheels_current_limit_controller:
+  type: "pal_ros_controllers/CurrentLimitController"
+  actuators:
+    - wheel_left_motor
+    - wheel_right_motor

@@ -6,5 +6,6 @@
   <node name="current_limit_controllers_spawner"
         pkg="controller_manager" type="spawner" output="screen"
         args="arm_current_limit_controller
-              hand_current_limit_controller" />
+              hand_current_limit_controller
+              wheels_current_limit_controller" />
 </launch>

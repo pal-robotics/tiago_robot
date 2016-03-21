@@ -12,7 +12,8 @@
               head_controller
               arm_controller
               arm_current_limit_controller
-              mobile_base_controller" />
+              mobile_base_controller
+              wheels_current_limit_controller" />
 
   <!-- Point head action -->
   <group ns="head_controller">

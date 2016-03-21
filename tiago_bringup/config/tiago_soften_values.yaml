@@ -1,0 +1,19 @@
+# Descriptions from SoftenOnEffort.cfg
+# Variance of the first 4 joints to pop up change to gravity
+total_variance_to_change_mode: 0.023
+# Variance weight of the arm joint in case it presents a non-natural effort variance
+variance_weight_arm1: 0.3
+variance_weight_arm2: 0.3
+variance_weight_arm3: 1.0
+variance_weight_arm4: 1.2
+# How big the time window for looking at effort variance is (the longer, the later it will respond to disturbances, and bigger they must be)
+time_window: 0.75
+# When in gravity mode because of a disturbance, how many degrees is the maximum of movement in total of the joints we admit to call it arm stopped (in 0.1s)
+max_degrees_movement_to_consider_stopped: 7.5
+# How much time to wait that arm is stopped to go back to position mode
+time_to_wait_stopped: 3.0
+# Maximum theoric acceleration to normalize acceleration values
+max_theoric_acceleration: 5.0
+# Maximum max_effort_value to normalize effort values
+max_effort_value: 5.0
+
