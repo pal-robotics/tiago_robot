@@ -121,6 +121,9 @@
                          soft_lower_limit="${head_2_lower_limit * deg_to_rad + head_eps}"
                          soft_upper_limit="${head_2_upper_limit * deg_to_rad}" />
     </joint>
+
+    <xacro:head_transmission name="${name}" reduction="1" />
+
   </xacro:macro>
 
   <xacro:macro name="head" params="name parent">
