@@ -12,7 +12,15 @@
 dynamixel_parameters:
   head_1_joint:
     id: 1
+    # Compliance slope is related to the torque when we are very close to a goal
     compliance_slope: 50
+    invert_commands: false
+    # value in between 0.0 and 1.0 to limit the torque of the motor representing
+    # % of max torque
+    torque_limit: 0.5
   head_2_joint:
     id: 2
     compliance_slope: 50
+    # The motor is mounted inverted
+    invert_commands: true
+    torque_limit: 0.5
