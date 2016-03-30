@@ -11,6 +11,8 @@ actuators:
 
 extra_joints: ['head_1_joint', 'head_2_joint']
 
+transmission_blacklist: ['head_1_trans', 'head_2_trans']
+
 e_stop:
   raw_data:
     e_stop_port: emergency_stop_state
