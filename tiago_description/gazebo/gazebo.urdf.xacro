@@ -14,7 +14,7 @@
   <gazebo>
     <plugin filename="libgazebo_ros_control.so" name="gazebo_ros_control">
       <ns></ns>
-      <robotSimType>tiago_hardware_gazebo/TiagoHardwareGazebo</robotSimType>
+      <robotSimType>pal_hardware_gazebo/PalHardwareGazebo</robotSimType>
       <robotNamespace></robotNamespace>
       <controlPeriod>0.001</controlPeriod>
     </plugin>

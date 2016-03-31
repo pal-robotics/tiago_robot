@@ -74,3 +74,8 @@ gains:
   THJ2: *shadow_gains
   THJ1: *shadow_gains
 
+velocity:
+  gains:
+     wheel_right_joint: {p: 30,  d: 0, i: 0, i_clamp: 1.}
+     wheel_left_joint: {p: 30,  d: 0, i: 0, i_clamp: 1.0}
+
