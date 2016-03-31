@@ -2,6 +2,14 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Adding a stronger torque value
+* Added blacklist parameter to tiago hardware
+* Default dynamixel head for tiago 0, added as default because contains
+  new dynamixel head necessary parameters
+* Contributors: Hilario Tome, Sam Pfeiffer
+
 0.0.5 (2016-03-21)
 ------------------
 * Adding new defaults for TIAGo
