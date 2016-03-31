@@ -23,4 +23,4 @@ dynamixel_parameters:
     compliance_slope: 50
     # The motor is mounted inverted
     invert_commands: true
-    torque_limit: 0.5
+    torque_limit: 0.8
