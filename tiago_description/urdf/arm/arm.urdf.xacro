@@ -36,11 +36,11 @@
     <!--************************-->
     <link name="${name}_1_link">
       <inertial>
-        <origin xyz="0.019568 -0.052265 0.008219" rpy="0 0 0"/>
-        <mass value="2.108556" />
-        <inertia ixx="0.005489" ixy="-0.001537" ixz="-0.000404" 
-                 iyy="0.002232" iyz="0.000996" 
-                 izz="0.006068" />
+        <origin xyz="0.08169 0.01822 -0.01884" rpy="0.00000 0.00000 0.00000"/>
+        <mass value="2.31325"/>
+        <inertia ixx="0.00269400000" ixy="0.00115700000" ixz="-0.00142300000"
+                 iyy="0.00704100000" iyz="-0.00031200000"
+                 izz="0.00731200000"/>
       </inertial>
       <!-- M90 module -->
       <visual>
@@ -48,12 +48,12 @@
         <geometry>
           <mesh filename="package://tiago_description/meshes/arm/arm_1.stl" scale="1 1 1"/>
         </geometry>
-        <material name="Orange" />
+        <material name="White"/>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/arm/arm_1.stl" scale="1 1 1"/>
+          <mesh filename="package://tiago_description/meshes/arm/arm_1_collision.dae" scale="1 1 1"/>
         </geometry>
       </collision>
     </link>
@@ -65,34 +65,38 @@
     <joint name="${name}_1_joint" type="revolute">
       <parent link="${parent}" />
       <child link="${name}_1_link" />
-      <origin xyz="0.155 0.011 -0.152" rpy="0 0 0" />
+      <origin xyz="0.15505 0.014 -0.151" rpy="0 0 ${-90 * deg_to_rad}" />
       <axis xyz="0 0 1" />
-      <limit lower="${0.0 * deg_to_rad}" upper="${165.0 * deg_to_rad}" effort="${arm_1_max_effort}" velocity="${arm_1_max_vel}" />
+      <limit lower="${0.0 * deg_to_rad}" upper="${157.5 * deg_to_rad}" effort="${arm_1_max_effort}" velocity="${arm_1_max_vel}" />
       <dynamics friction="${arm_friction}" damping="${arm_damping}"/>
 
       <safety_controller k_position="20"
                          k_velocity="20"
-                         soft_lower_limit="${0 * deg_to_rad}"
-                         soft_upper_limit="${165.0 * deg_to_rad - arm_eps}" />
+                         soft_lower_limit="${0.0 * deg_to_rad + arm_eps}"
+                         soft_upper_limit="${157.5 * deg_to_rad - arm_eps}" />
     </joint>
 
    <link name="${name}_2_link">
       <inertial>
-        <origin xyz="0.01435 -0.06294 ${0.01039}" rpy="0 0 0"/>
-        <mass value="1.58751" />
-        <inertia ixx="0.002253374"  ixy="-0.00185617271"  ixz="0.00023094382" iyy="0.01079198201" iyz="-0.00004741252" izz="0.0112248261" />
+        <origin xyz="-0.03609 -0.00006 0.01649" rpy="0.00000 0.00000 0.00000"/>
+        <mass value="1.10224"/>
+        <inertia ixx="0.00114600000" ixy="0.00000100000" ixz="0.00043500000"
+                 iyy="0.00218200000" iyz="-0.00000100000"
+                 izz="0.00237300000"/>
       </inertial>
       <visual>
-        <origin xyz="0 0 0" rpy="${180 * deg_to_rad} ${0 * deg_to_rad} ${-90 * deg_to_rad}" />
+        <!-- <origin xyz="0 0 0" rpy="${180 * deg_to_rad} ${0 * deg_to_rad} ${-90 * deg_to_rad}" /> -->
+        <origin xyz="0 0 0" rpy="${0 * deg_to_rad} ${0 * deg_to_rad} ${0 * deg_to_rad}" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/arm/arm_2.dae" scale="1 1 1"/>
+          <mesh filename="package://tiago_description/meshes/arm/arm_2.stl" scale="1 1 1"/>
         </geometry>
         <material name="DarkGrey" />
       </visual>
       <collision>
-        <origin xyz="0 0 0" rpy="${180 * deg_to_rad} ${0 * deg_to_rad} ${-90 * deg_to_rad}" />
+        <!-- <origin xyz="0 0 0" rpy="${180 * deg_to_rad} ${0 * deg_to_rad} ${-90 * deg_to_rad}" /> -->
+        <origin xyz="0 0 0" rpy="${0 * deg_to_rad} ${0 * deg_to_rad} ${0 * deg_to_rad}" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/arm/arm_2_collision.stl" scale="1 1 1"/>
+          <mesh filename="package://tiago_description/meshes/arm/arm_2_collision.dae" scale="1 1 1"/>
         </geometry>
       </collision>
     </link>
@@ -100,64 +104,54 @@
     <joint name="${name}_2_joint" type="revolute">
       <parent link="${name}_1_link" />
       <child link="${name}_2_link" />
-      <origin xyz="0.009 -0.125 -0.032" rpy="${90.0 * deg_to_rad} ${0 * deg_to_rad} ${-90 * deg_to_rad}" />
+      <origin xyz="0.125 0.0165 -0.031"
+              rpy="${90.0 * deg_to_rad} 0.0 0.0"/>
       <axis xyz="0 0 1" />
-      <limit lower="${-93 * deg_to_rad}" upper="${75 * deg_to_rad}" effort="${arm_2_max_effort}" velocity="${arm_2_max_vel}" />
+      <limit lower="${-87.5 * deg_to_rad}" upper="${65.0 * deg_to_rad}" effort="${arm_2_max_effort}" velocity="${arm_2_max_vel}" />
       <dynamics friction="${arm_friction}" damping="${arm_damping}"/>
 
       <safety_controller k_position="20"
                          k_velocity="20"
-                         soft_lower_limit="${-93 * deg_to_rad  + arm_eps}"
-                         soft_upper_limit="${ 75 * deg_to_rad - arm_eps}" />
+                         soft_lower_limit="${-87.5 * deg_to_rad  + arm_eps}"
+                         soft_upper_limit="${ 65.0 * deg_to_rad - arm_eps}" />
     </joint>
 
     <link name="${name}_3_link">
       <inertial>
-        <origin xyz="0.00557 -0.01042 -0.10388" rpy="0 0 0"/>
-        <mass value="1.79881" />
-         <inertia ixx="0.02682610467"  ixy="-0.00019692212"  ixz="-0.0015045329" iyy="0.02638053578" iyz="0.00263989274" izz="0.002385016" />
+        <origin xyz="0.00752 0.00244 0.12957" rpy="0.00000 0.00000 0.00000"/>
+        <mass value="2.42460"/>
+        <inertia ixx="0.01441800000" ixy="0.00008400000" ixz="0.00114300000"
+                 iyy="0.01478800000" iyz="0.00064200000"
+                 izz="0.00256000000"/>
       </inertial>
       <visual>
-        <origin xyz="0 0 -0.055" rpy="0 0 0" />
-        <geometry>
-          <mesh filename="package://tiago_description/meshes/arm/arm_3.dae" scale="1 1 1"/>
-        </geometry>
-        <material name="DarkGrey" />
-      </visual>
-      <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <cylinder length="0.07" radius="0.05" />
+          <mesh filename="package://tiago_description/meshes/arm/arm_3.stl" scale="1 1 1"/>
         </geometry>
         <material name="DarkGrey" />
       </visual>
       <collision>
-        <origin xyz="0 0 -0.055" rpy="0 0 0" />
-        <geometry>
-          <mesh filename="package://tiago_description/meshes/arm/arm_3_collision.stl" scale="1 1 1"/>
-        </geometry>
-      </collision>
-      <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <cylinder length="0.07" radius="0.05" />
+          <mesh filename="package://tiago_description/meshes/arm/arm_3_collision.dae" scale="1 1 1"/>
         </geometry>
-        <material name="DarkGrey" />
       </collision>
     </link>
 
     <joint name="${name}_3_joint" type="revolute">
       <parent link="${name}_2_link" />
       <child link="${name}_3_link" />
-      <origin xyz="0.142 -0.02 0" rpy="${0.0 * deg_to_rad} ${-90.0 * deg_to_rad} 0" />
+      <origin xyz="0.0895 0.0 0.0015" 
+              rpy="${-90.0 * deg_to_rad} ${0.0 * deg_to_rad} ${90.0 * deg_to_rad}"/>
       <axis xyz="0 0 1" />
-      <limit lower="${-200.0 * deg_to_rad}" upper="${90 * deg_to_rad}" effort="${arm_3_max_effort}" velocity="${arm_3_max_vel}" />
+      <limit lower="${-202.5 * deg_to_rad}" upper="${90.0 * deg_to_rad}" effort="${arm_3_max_effort}" velocity="${arm_3_max_vel}" />
       <dynamics friction="${arm_friction}" damping="${arm_damping}"/>
 
       <safety_controller k_position="20"
                          k_velocity="20"
-                         soft_lower_limit="${-200.0 * deg_to_rad + arm_eps}"
-                         soft_upper_limit="${ 90 * deg_to_rad - arm_eps}" />
+                         soft_lower_limit="${-202.5 * deg_to_rad + arm_eps}"
+                         soft_upper_limit="${ 90.0 * deg_to_rad - arm_eps}" />
     </joint>
 
     <!--************************-->
@@ -165,50 +159,39 @@
     <!--************************-->
     <link name="${name}_4_link">
       <inertial>
-        <origin xyz="-0.06578 0.0126 0.01194" rpy="0 0 0"/>
-        <mass value="1.35076" />
-        <inertia ixx="0.00220509703"  ixy="-0.00165490069" ixz="-0.0002277335" iyy="0.01177626386" iyz="0.00003472435" izz="0.0120918757" />
+        <origin xyz="0.07426 -0.01306 0.01549" rpy="0.00000 0.00000 0.00000"/>
+        <mass value="1.45429"/>
+        <inertia ixx="0.00195300000" ixy="-0.00059600000" ixz="0.00088000000"
+                 iyy="0.00709700000" iyz="-0.00017100000"
+                 izz="0.00740500000"/>
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/arm/arm_4.dae" scale="1 1 1"/>
-        </geometry>
-        <material name="DarkGrey" />
-      </visual>
-      <visual>
-        <origin xyz="-0.15 0.02 0" rpy="0 ${90 * deg_to_rad} 0" />
-        <geometry>
-          <cylinder length="0.07" radius="0.05" />
+          <mesh filename="package://tiago_description/meshes/arm/arm_4.stl" scale="1 1 1"/>
         </geometry>
         <material name="DarkGrey" />
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/arm/arm_4_collision.stl" scale="1 1 1"/>
+          <mesh filename="package://tiago_description/meshes/arm/arm_4_collision.dae" scale="1 1 1"/>
         </geometry>
-      </collision>
-      <collision>
-        <origin xyz="-0.15 0.02 0" rpy="0 ${90 * deg_to_rad} 0" />
-        <geometry>
-          <cylinder length="0.07" radius="0.05" />
-        </geometry>
-        <material name="DarkGrey" />
       </collision>
     </link>
 
     <joint name="${name}_4_joint" type="revolute">
       <parent link="${name}_3_link" />
       <child link="${name}_4_link" />
-      <origin xyz="0 -0.02 -0.168" rpy="0 ${-90.0 * deg_to_rad} 0" />
+      <origin xyz="-0.02 -0.027 -0.222" 
+              rpy="${-90.0 * deg_to_rad} ${-90.0 * deg_to_rad} ${0.0 * deg_to_rad}"/>
       <axis xyz="0 0 1" />
-      <limit lower="${-90 * deg_to_rad}" upper="${135 * deg_to_rad}" effort="${arm_4_max_effort}" velocity="${arm_4_max_vel}" />
+      <limit lower="${-35 * deg_to_rad}" upper="${135 * deg_to_rad}" effort="${arm_4_max_effort}" velocity="${arm_4_max_vel}" />
       <dynamics friction="${arm_friction}" damping="${arm_damping}"/>
 
       <safety_controller k_position="20"
                          k_velocity="20"
-                         soft_lower_limit="${ -90 * deg_to_rad - arm_eps}"
+                         soft_lower_limit="${ -35 * deg_to_rad + arm_eps}"
                          soft_upper_limit="${ 135 * deg_to_rad - arm_eps}" />
     </joint>
 

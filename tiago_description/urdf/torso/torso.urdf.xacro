@@ -23,11 +23,11 @@
   <!-- Bottom fixed part of column -->
   <link name="${name}_fixed_link">
     <inertial>
-      <origin rpy="0 0 0" xyz="0.012654 -0.003497 0.257258" />
-      <mass value="21.34739" />
-      <inertia ixx="0.587525" ixy="0.00091" ixz="-0.02817"
-               iyy="0.591558" iyz="0.002331"
-               izz="0.214263" />
+      <origin xyz="0.02435 -0.00464 0.15900" rpy="0.00000 0.00000 0.00000"/>
+      <mass value="14.01360"/>
+      <inertia ixx="0.38341100000" ixy="0.00036400000" ixz="-0.02438900000"
+               iyy="0.40577300000" iyz="-0.00078200000"
+               izz="0.07699800000"/>
     </inertial>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0" />
@@ -51,7 +51,7 @@
   </link>
 
   <joint name="${name}_fixed_joint" type="fixed">
-    <origin rpy="0 0 0" xyz="-0.062 0 0.195" />
+    <origin rpy="0 0 0" xyz="-0.062 0.0 0.193" />
     <parent link="${parent}" />
     <child link="${name}_fixed_link" />
     <axis xyz="0 0 0" />
@@ -94,31 +94,31 @@
 
   <link name="${name}_lift_link">
     <inertial>
-      <origin rpy="0 0 0" xyz="-0.044629 -0.000126 -0.16836" />
-      <mass value="6.713942" />
-      <inertia ixx="0.220103" ixy="-0.000808" ixz="-0.015835"
-               iyy="0.223461" iyz="0.008905"
-               izz="0.083575" />
+      <origin xyz="0.04361 -0.00116 -0.17334" rpy="0.00000 0.00000 0.00000"/>
+      <mass value="6.93198"/>
+      <inertia ixx="0.24487000000" ixy="-0.00145600000" ixz="-0.00974200000"
+               iyy="0.24926900000" iyz="0.00828100000"
+               izz="0.09039500000"/>
     </inertial>
     <!-- Lifting body -->
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0" />
        <geometry>
-        <mesh filename="package://tiago_description/meshes/torso/torso_lift.stl" scale="1 1 1"/>
+        <mesh filename="package://tiago_description/meshes/torso/torso_lift_with_arm.stl" scale="1 1 1"/>
       </geometry>
       <material name="White"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0" />
        <geometry>
-        <mesh filename="package://tiago_description/meshes/torso/torso_lift_collision.stl" scale="1 1 1"/>
+        <mesh filename="package://tiago_description/meshes/torso/torso_lift_collision.dae" scale="1 1 1"/>
       </geometry>
-      <material name="White"/>
+      <material name="LightGrey"/>
     </collision>
   </link>
 
   <joint name="${name}_lift_joint" type="prismatic">
-    <origin rpy="0 0 0" xyz="0.0 0 0.589" />
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.587" />
     <parent link="${name}_fixed_link" />
     <child link="${name}_lift_link" />
     <axis xyz="0 0 1" />
