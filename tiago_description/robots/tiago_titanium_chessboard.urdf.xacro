@@ -38,7 +38,7 @@
 
   <!-- Chessboard for eye-hand calibration -->
   <xacro:include filename="$(find tiago_description)/urdf/chessboard/chessboard.urdf.xacro" />
-  <xacro:chessboard name="arm_chessboard" parent="arm_7_link" origin="0.12 0.06 0.15" rpy="${180.0*deg_to_rad} 0 ${180.0*deg_to_rad}"/>
+  <xacro:chessboard name="arm_chessboard" parent="arm_7_link" origin="0 -0.10 0.19" rpy="1.5708  -0   1.5708"/>
 
 </robot>
 
