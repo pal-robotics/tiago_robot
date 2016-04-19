@@ -14,33 +14,26 @@ play_motion:
         time_from_start: 3.5
       - positions: [0.18, 0.20, -1.34, -0.20, 1.94, -1.57, 1.52, 0.0]
         time_from_start: 6.0
-      - positions: [0.12, 0.20, -1.34, -0.20, 1.94, -1.57, 1.52, 0.0]
+      - positions: [0.15, 0.20, -1.34, -0.20, 1.94, -1.57, 1.52, 0.0]
         time_from_start: 9.0
       meta:
         name: Home
         usage: demo
         description: 'Go home'
-    pregrasp:
+
+    unfold_arm:
       joints: [torso_lift_joint, arm_1_joint,
       arm_2_joint, arm_3_joint, arm_4_joint, arm_5_joint,
       arm_6_joint, arm_7_joint]
       points:
-      - positions: [0.12, 0.20, -1.34, -0.20, 1.94, -1.57, 1.52, 0.0]
-        time_from_start: 0.0
-      - positions: [0.34, 0.21, -1.02, -0.2, 2.12, -1.57, 1.52, 0.0]
-        time_from_start: 1.5
-      - positions: [0.34, 0.21, 0.35, -0.2, 2.12, -1.57, 1.52, 0.0]
-        time_from_start: 4.5
-      - positions: [0.34, 0.21, 0.35, -0.2, 0.0, -1.57, 1.52, 0.0]
-        time_from_start: 8.0
-      - positions: [0.34, 0.21, 0.35, -3.0, 0.0, -1.57, 1.52, 0.0]
-        time_from_start: 10.0
-      - positions: [0.34, 0.21, -0.2, -2.2, 1.15, -1.57, 0.2, 0.0]
-        time_from_start: 12.0
+      - positions: [0.30, 0.21, 0.35, -0.2, 0.8, -1.57, 1.52, 0.0]
+        time_from_start: 4.0
+      - positions: [0.30, 0.21, -0.2, -2.2, 1.15, -1.57, 0.2, 0.0]
+        time_from_start: 6.0
       meta:
-        name: pregrasp
+        name: unfold_arm
         usage: demo
-        description: 'pregrasp'
+        description: 'unfold_arm'
 
     reach_floor:
       joints: [torso_lift_joint, arm_1_joint,
@@ -134,18 +127,6 @@ play_motion:
         usage: demo
         description: 'thumb_up_hand'
 
-    # pregrasp_thumb_hand:
-    #   joints: [hand_thumb_joint, hand_index_joint, hand_mrl_joint]
-    #   points:
-    #   - positions: [0.0, -1.0, -1.0]
-    #     time_from_start: 0.1
-    #   - positions: [3.37, 0.0, 0.0]
-    #     time_from_start: 1.5
-    #   meta:
-    #     name: pregrasp_thumb_hand
-    #     usage: demo
-    #     description: 'pregrasp_thumb_hand'
-
     pinch_hand:
       joints: [hand_thumb_joint, hand_index_joint, hand_mrl_joint]
       points:
@@ -181,6 +162,7 @@ play_motion:
         name: head_tour
         usage: demo
         description: 'head_tour'
+
     wave:
       joints: [arm_1_joint,
       arm_2_joint, arm_3_joint, arm_4_joint,
@@ -234,27 +216,51 @@ play_motion:
         name: do_weights
         usage: demo
         description: 'Do weights'
-    pick_from_floor:
-      joints: [torso_lift_joint, arm_1_joint,
-      arm_2_joint, arm_3_joint, arm_4_joint,
-      arm_5_joint, arm_6_joint, arm_7_joint,
-      hand_thumb_joint, hand_mrl_joint, hand_index_joint]
-      points:
-      - positions: [0.06, 1.3398169936645752, -1.0865020172114928, 0.14015915261777295, -0.554948419882215, -1.4599426578279369, -0.713353056118629, 0.04145437279716574, 0.0, 0.0, 0.0]
-        time_from_start: 0.0
-      - positions: [0.06, 1.3398476736872784, -1.2950801515593122, 0.139530212152357, -0.5549675949699406, -1.4599426578279369, -0.7133758834164247, 0.041449807337606615, 2.7, 0.0, 0.0]
-        time_from_start: 2.0
-      - positions: [0.06, 1.3398476736872784, -1.2950801515593122, 0.139530212152357, -0.5549675949699406, -1.4599426578279369, -0.7133758834164247, 0.041449807337606615, 6.2, 6.8, 9.2]
-        time_from_start: 4.0
-      - positions: [0.06, 1.3400317538234978, -0.3915074629155225, 0.13968361226587306, -1.5707678672561871, -1.4599426578279369, -0.7133895797951022, 0.0414635037162841, 6.2, 6.8, 9.2]
-        time_from_start: 6.0
 
-    follow_by_arm_initial_pose:
+    offer_hand:
       joints: ['torso_lift_joint', 'arm_1_joint', 'arm_2_joint', 'arm_3_joint', 'arm_4_joint', 'arm_5_joint', 'arm_6_joint', 'arm_7_joint', 'hand_thumb_joint', 'hand_index_joint', 'hand_mrl_joint']
       points:
       - positions: [0.296, 1.61, -0.93, -3.14, 1.83, -1.577, -0.62, -1.577, -0.001, -0.0, -0.001]
         time_from_start: 0.0
       meta:
-        name: follow_by_arm_initial_pose
+        name: offer_hand
         usage: demo
-        description: 'follow_by_arm_initial_pose'
+        description: 'offer_hand'
+
+    shake_hands:
+      joints: ['hand_thumb_joint','hand_index_joint','hand_mrl_joint','torso_lift_joint', 'arm_1_joint', 'arm_2_joint', 'arm_3_joint', 'arm_4_joint', 'arm_5_joint', 'arm_6_joint', 'arm_7_joint']
+      points:
+      - positions: [0.0, 0.0, 0.0, 0.296, 1.61, -0.93, -3.14, 1.83, -1.577, -0.53, -1.577]
+        time_from_start: 0.0
+      - positions: [6.2, 6.8, 9.2, 0.296, 1.61, -0.93, -3.14, 1.83, -1.577, -0.53, -1.577]
+        time_from_start: 5.0
+      - positions: [6.2, 6.8, 9.2, 0.296, 1.61, -0.93, -3.14, 1.40, -1.577, -0.2, -1.577]
+        time_from_start: 6.0
+      - positions: [6.2, 6.8, 9.2, 0.296, 1.61, -0.93, -3.14, 1.83, -1.577, -0.53, -1.577]
+        time_from_start: 7.0
+      - positions: [6.2, 6.8, 9.2, 0.296, 1.61, -0.93, -3.14, 1.40, -1.577, -0.2, -1.577]
+        time_from_start: 8.0
+      - positions: [6.2, 6.8, 9.2, 0.296, 1.61, -0.93, -3.14, 1.83, -1.577, -0.53, -1.577]
+        time_from_start: 9.0
+      - positions: [0.0, 0.0, 0.0, 0.296, 1.61, -0.93, -3.14, 1.83, -1.577, -0.53, -1.577]
+        time_from_start: 11.0
+      meta:
+        name: shake_hands
+        usage: demo
+        description: 'shake_hands'
+
+    pick_from_floor:
+      joints: ['torso_lift_joint', 'arm_1_joint', 'arm_2_joint', 'arm_3_joint', 'arm_4_joint', 'arm_5_joint', 'arm_6_joint', 'arm_7_joint', 'hand_thumb_joint', 'hand_index_joint', 'hand_mrl_joint']
+      points:
+      - positions: [0.226, 0.308, -0.695, -0.968, 1.582,  1.965, 0.273, -1.101, 0.0, -0.001, -0.0]
+        time_from_start: 0.0
+      - positions: [0.0, 0.809, -1.197, -1.119, 0.322, 1.96, -0.849, 0.041, 0.0, -0.001, -0.0]
+        time_from_start: 4.0
+      - positions: [0.0, 0.809, -1.197, -1.119, 0.345, 1.96, -0.849, 0.041, 6.2, 6.77, 8.8]
+        time_from_start: 6.0
+      - positions: [0.158, 0.21, -1.153, -1.538, 2.306, 1.965, 0.394, -0.082, 6.2, 6.77, 8.8]
+        time_from_start: 9.0
+      meta:
+        name: pick_from_floor
+        usage: demo
+        description: 'Pick a shirt-like object from floor in front of the robot'
