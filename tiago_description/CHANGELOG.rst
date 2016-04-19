@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.8 (2016-04-19)
+------------------
 * fixed rgb_optical_frame name affecting simulation
 * fix chessboard pose
 * remove collision in calibration chessboard
