@@ -2,6 +2,11 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Updated joint limits as per errors found by Louis
+* Contributors: Sam Pfeiffer
+
 0.0.8 (2016-04-19)
 ------------------
 * fixed rgb_optical_frame name affecting simulation

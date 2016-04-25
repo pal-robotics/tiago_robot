@@ -2,6 +2,13 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Making the incrementer server use the safe command topic
+* Increase increments on head movements
+* add new motions and modify existing ones
+* Contributors: Sam Pfeiffer, jordi.pages@pal-robotics.com
+
 0.0.8 (2016-04-19)
 ------------------
 
