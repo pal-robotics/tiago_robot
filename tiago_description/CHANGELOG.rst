@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.9 (2016-04-25)
+------------------
 * Updated joint limits as per errors found by Louis
 * Contributors: Sam Pfeiffer
 
