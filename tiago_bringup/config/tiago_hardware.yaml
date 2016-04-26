@@ -11,6 +11,8 @@ actuators:
 
 extra_joints: ['head_1_joint', 'head_2_joint']
 
+joint_mode_black_list: ['head_controller', 'whole_body_kinematic_controler', 'torso_controller']
+
 transmission_blacklist: ['head_1_trans', 'head_2_trans']
 
 e_stop:
