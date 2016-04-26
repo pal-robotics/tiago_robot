@@ -2,6 +2,11 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Added joint mode blacklist to tiago hardware config
+* Contributors: Hilario Tome
+
 0.0.9 (2016-04-25)
 ------------------
 * Making the incrementer server use the safe command topic
