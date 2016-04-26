@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.10 (2016-04-26)
+-------------------
 * Added joint mode blacklist to tiago hardware config
 * Contributors: Hilario Tome
 
