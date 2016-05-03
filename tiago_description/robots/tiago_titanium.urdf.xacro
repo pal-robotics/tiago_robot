@@ -38,7 +38,7 @@
   <xacro:hey5_hand parent="wrist_ft_tool_link" name="hand" reflect="1">
     <origin xyz="0 0 0" rpy="0 0 0"/>
   </xacro:hey5_hand>
-
+  
   <joint name="hand_safety_box_joint" type="fixed">
     <parent link="wrist_ft_tool_link"/>
     <child link="hand_safety_box"/>

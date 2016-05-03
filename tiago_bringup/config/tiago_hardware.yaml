@@ -15,6 +15,13 @@ joint_mode_black_list: ['head_controller', 'whole_body_kinematic_controler', 'to
 
 transmission_blacklist: ['head_1_trans', 'head_2_trans']
 
+force_torque:
+  wrist_ft:
+    frame: wrist_ft_link
+    raw_data:
+      force_port: force_wrist
+      torque_port: torque_wrist
+
 e_stop:
   raw_data:
     e_stop_port: emergency_stop_state
