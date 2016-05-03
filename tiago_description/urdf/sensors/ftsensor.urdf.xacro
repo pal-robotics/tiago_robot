@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!--
+
+  Copyright (c) 2011-2012, PAL Robotics, S.L.
+  All rights reserved.
+
+  This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
+  To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to
+  Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+-->
+
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:macro name="ft_sensor" params="name parent">
+    <!--************************-->
+    <!--        ft sensor       -->
+    <!--************************-->
+    <link name="${name}_ft_link">
+      <inertial>
+        <mass value="0.1" />
+        <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <cylinder radius="${0.045*0.5}" length="0.0157"/>
+        </geometry>
+        <material name="LightGrey" />
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <cylinder radius="${0.045*0.5}" length="0.0157"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <joint name="${name}_ft_joint" type="fixed">
+      <parent link="${parent}" />
+      <child link="${name}_ft_link" />
+      <origin xyz="${0.0157*0.5} 0 0" rpy="${90.0 * deg_to_rad} 0 ${90.0 * deg_to_rad}" />
+    </joint>
+
+    <!--***********************-->
+    <!--       FT TOOL         -->
+    <!--***********************-->
+    <link name="${name}_ft_tool_link">
+      <inertial>
+        <mass value="0.1" />
+        <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0" />
+      </inertial>
+      <visual>
+        <origin xyz="0.0 0 0" rpy="0 ${90.0 * deg_to_rad} 0" />
+        <geometry>
+          <cylinder radius="${0.05*0.5}" length="0.00975"/>
+        </geometry>
+        <material name="FlatBlack" />
+      </visual>
+      <collision>
+        <origin xyz="0.0 0 0" rpy="0 ${90.0 * deg_to_rad} 0" />
+        <geometry>
+          <cylinder radius="${0.05*0.5}" length="0.00975"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <joint name="${name}_tool_joint" type="fixed">
+      <parent link="${name}_ft_link" />
+      <child link="${name}_ft_tool_link" />
+      <origin xyz="0 0 ${0.0157*0.5 + 0.00975*0.5}" rpy="${-90.0 * deg_to_rad} ${-90.0 * deg_to_rad} 0" />
+    </joint>
+
+</xacro:macro>
+
+</robot>
