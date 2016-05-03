@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch>
+  <include file="$(find tiago_controller_configuration)/launch/joint_state_controller.launch"/>
   <include file="$(find tiago_controller_configuration)/launch/default_controllers.launch"/>
   <include file="$(find tiago_controller_configuration)/launch/gripper_controller.launch"/>
   <!-- load gravity compensation controller with controllable wrist -->

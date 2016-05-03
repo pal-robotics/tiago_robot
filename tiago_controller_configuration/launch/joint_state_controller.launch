@@ -1,0 +1,9 @@
+<launch>
+  <!-- Joint state controller -->
+  <rosparam command="load" file="$(find joint_state_controller)/joint_state_controller.yaml" />
+
+  <!-- Controllers that come up started -->
+  <node name="bringup_controllers_spawner_js"
+        pkg="controller_manager" type="spawner" output="screen"
+        args="joint_state_controller" />
+</launch>
