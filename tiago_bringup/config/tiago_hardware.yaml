@@ -18,6 +18,9 @@ transmission_blacklist: ['head_1_trans', 'head_2_trans']
 force_torque:
   wrist_ft:
     frame: wrist_ft_link
+    transformation:
+      force: [-y,x,z]
+      torque: [-y,x,z]
     raw_data:
       force_port: force_wrist
       torque_port: torque_wrist
