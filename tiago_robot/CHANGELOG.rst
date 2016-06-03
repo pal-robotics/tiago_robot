@@ -20,6 +20,22 @@ Changelog for package tiago_robot
 0.0.5 (2016-03-21)
 ------------------
 
+Forthcoming
+-----------
+* 0.0.10
+* Updated changelog
+* 0.0.9
+* Update changelog
+* 0.0.8
+* Update changelog
+* 0.0.7
+* Update changelog
+* 0.0.6
+* Update changelogs
+* 0.0.5
+* Update changelog
+* Contributors: Hilario Tome, Sam Pfeiffer, Victor Lopez
+
 0.0.4 (2015-05-20)
 ------------------
 

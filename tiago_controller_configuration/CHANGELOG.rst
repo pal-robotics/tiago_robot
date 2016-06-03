@@ -41,6 +41,42 @@ Changelog for package tiago_controller_configuration
   Add wrist controller
 * Contributors: Adolfo Rodriguez Tsouroukdissian, Bence Magyar, Jeremie Deray, Sam Pfeiffer, jordi.pages@pal-robotics.com
 
+Forthcoming
+-----------
+* Remove extra joints as the casters are not published anymore
+* 0.0.10
+* Updated changelog
+* 0.0.9
+* Update changelog
+* 0.0.8
+* Update changelog
+* Add missing wbc dependencies to tiago_controller_configuration
+  refs #13364
+* 0.0.7
+* Update changelog
+* 0.0.6
+* Update changelogs
+* Fixed wheel sleeping in gazebo, and added head transmission (This can break the real robot if a blacklist is not implemented in pal_ros_control
+* 0.0.5
+* Update changelog
+* Adding new defaults for TIAGo
+  Current limit controller for the wheels.
+  Soften on effort values config for a specific robot.
+* launch Diff drive controller multipliers
+* Removing specific current controller for wrist as the full arm one works already
+* Compensate low force of joint 2
+* tune parameters
+* fix sign of arm 4
+* Add gravity and wbc controllers load on boot
+* remove hey5 hand from URDF
+* Add extra_joints spec for joint state controller
+  Only in hardware deployments: Load set of extra joints to be published as
+  dummies by the joint_state_controller.
+* Update finger pids so the hand works with PAL Hand plugin in gazebo
+* Update with all joints until the grav compensation is fixed
+  Add wrist controller
+* Contributors: Adolfo Rodriguez Tsouroukdissian, Bence Magyar, Hilario Tome, Jeremie Deray, Sam Pfeiffer, Victor Lopez, jordi.pages@pal-robotics.com
+
 0.0.4 (2015-05-20)
 ------------------
 * Add current limit controller
