@@ -16,5 +16,6 @@
   <run_depend>xacro</run_depend>
   <run_depend>pmb2_description</run_depend>
   <run_depend>hey5_description</run_depend>
+  <run_depend>pal_gripper_description</run_depend>
 
 </package>
