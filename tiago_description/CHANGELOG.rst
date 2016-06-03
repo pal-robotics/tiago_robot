@@ -70,8 +70,8 @@ Changelog for package tiago_description
 * Increase speed of torso
 * Contributors: Bence Magyar, Hilario Tome, Jordi Pages, Sam Pfeiffer, jordi.pages@pal-robotics.com
 
-Forthcoming
------------
+0.0.11 (2016-06-03)
+-------------------
 * missing deps pal_gripper
 * tiago has sonars
 * Remove old gripper references
