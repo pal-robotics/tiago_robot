@@ -89,6 +89,13 @@ Changelog for package tiago_bringup
 * Enable motion planning and exclude hand joints from planning
 * Contributors: Adolfo Rodriguez, Adolfo Rodriguez Tsouroukdissian, Bence Magyar, Jeremie Deray, Jordi Pages, Sam Pfeiffer, Sammy Pfeiffer
 
+Forthcoming
+-----------
+* Working head configuration for TIAGo
+* Add transformation to correct FT readings
+* Add hardware port of force torque
+* Contributors: Jordan Palacios, Sam Pfeiffer
+
 0.0.11 (2016-06-03)
 -------------------
 * Remove extra joints as the casters are not published anymore

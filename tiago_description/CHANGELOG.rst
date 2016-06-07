@@ -70,6 +70,13 @@ Changelog for package tiago_description
 * Increase speed of torso
 * Contributors: Bence Magyar, Hilario Tome, Jordi Pages, Sam Pfeiffer, jordi.pages@pal-robotics.com
 
+Forthcoming
+-----------
+* Merged changes of wrist range + ft sensor
+* Add hardware port of force torque
+* Add force torque sensor
+* Contributors: Sam Pfeiffer
+
 0.0.11 (2016-06-03)
 -------------------
 * missing deps pal_gripper

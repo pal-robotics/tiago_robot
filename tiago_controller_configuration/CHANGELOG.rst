@@ -41,6 +41,11 @@ Changelog for package tiago_controller_configuration
   Add wrist controller
 * Contributors: Adolfo Rodriguez Tsouroukdissian, Bence Magyar, Jeremie Deray, Sam Pfeiffer, jordi.pages@pal-robotics.com
 
+Forthcoming
+-----------
+* Separating launch of joint_state_controller and force_torque_controller
+* Contributors: Sam Pfeiffer
+
 0.0.11 (2016-06-03)
 -------------------
 * Remove extra joints as the casters are not published anymore
