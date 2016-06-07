@@ -26,18 +26,22 @@
   <xacro:include filename="$(find tiago_description)/gazebo/gazebo.urdf.xacro" />
   <!-- Materials for visualization -->
   <xacro:include filename="$(find tiago_description)/urdf/materials.urdf.xacro" />
+  <!-- Force Torque sensor -->
+  <xacro:include filename="$(find tiago_description)/urdf/sensors/ftsensor.urdf.xacro" />
 
   <!-- Now we can start using the macros included above to define the actual robot -->
   <xacro:base_sensors name="base" hokuyo="false" sick551="false" sick561="true" sick571="false" sonars="true" microphone="false"/>
   <xacro:tiago_torso name="torso" parent="base_link"/>
   <xacro:head name="head" parent="torso_lift_link"/>
   <xacro:tiago_arm name="arm" parent="torso_lift_link" wrist_6_range="81"/>
-  <xacro:hey5_hand parent="arm_tool_link" name="hand" reflect="1">
+  <xacro:ft_sensor name="wrist" parent="arm_tool_link" />
+  <xacro:hey5_hand parent="wrist_ft_tool_link" name="hand" reflect="1">
+
     <origin xyz="0 0 0" rpy="0 0 0"/>
   </xacro:hey5_hand>
-
+  
   <joint name="hand_safety_box_joint" type="fixed">
-    <parent link="arm_tool_link"/>
+    <parent link="wrist_ft_tool_link"/>
     <child link="hand_safety_box"/>
     <origin xyz="0.1 0.02 0.02" rpy="0 0 0"/>
   </joint>

@@ -1,12 +1,11 @@
 <launch>
-  <rosparam command="load" file="$(find joint_state_controller)/joint_state_controller.yaml" />
+  <include file="$(find tiago_controller_configuration)/launch/joint_state_controller.launch"/>
   <rosparam command="load" file="$(find tiago_controller_configuration)/config/joint_trajectory_controllers.yaml" />
 
   <!-- Controllers that come up started -->
   <node name="default_controllers_spawner"
         pkg="controller_manager" type="spawner" output="screen"
         args="--timeout 120
-              joint_state_controller
               torso_controller
               head_controller
               mobile_base_controller" />
