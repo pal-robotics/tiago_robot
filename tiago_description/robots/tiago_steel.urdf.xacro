@@ -20,7 +20,7 @@
   <!-- Head -->
   <xacro:include filename="$(find tiago_description)/urdf/head/head.urdf.xacro" />
   <!-- Gripper -->
-  <xacro:include filename="$(find tiago_description)/urdf/gripper/gripper.urdf.xacro" />
+  <xacro:include filename="$(find pal_gripper_description)/urdf/gripper.urdf.xacro" />
 
   <!-- Generic simulator_gazebo plugins -->
   <xacro:include filename="$(find tiago_description)/gazebo/gazebo.urdf.xacro" />
@@ -28,12 +28,12 @@
   <xacro:include filename="$(find tiago_description)/urdf/materials.urdf.xacro" />
 
   <!-- Now we can start using the macros included above to define the actual robot -->
-  <xacro:base_sensors name="base" hokuyo="false" sick551="false" sick561="true" sick571="false" sonars="false" microphone="false"/>
+  <xacro:base_sensors name="base" hokuyo="false" sick551="false" sick561="true" sick571="false" sonars="true" microphone="false"/>
   <xacro:tiago_torso name="torso" parent="base_link"/>
   <xacro:head name="head" parent="torso_lift_link"/>
-  <xacro:tiago_arm name="arm" parent="torso_lift_link"/>
-  <xacro:tiago_gripper parent="arm_tool_link" name="gripper">
-    <origin xyz="0 0 0" rpy="${90*deg_to_rad} 0 0"/>
-  </xacro:tiago_gripper>
+  <xacro:tiago_arm name="arm" parent="torso_lift_link" wrist_6_range="90.0"/>
+  <xacro:pal_gripper parent="arm_tool_link" name="gripper">
+    <origin xyz="0.01 0 0" rpy="${90*deg_to_rad} 0 ${-90*deg_to_rad}"/>
+  </xacro:pal_gripper>
 </robot>
 

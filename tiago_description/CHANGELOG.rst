@@ -70,6 +70,72 @@ Changelog for package tiago_description
 * Increase speed of torso
 * Contributors: Bence Magyar, Hilario Tome, Jordi Pages, Sam Pfeiffer, jordi.pages@pal-robotics.com
 
+0.0.11 (2016-06-03)
+-------------------
+* missing deps pal_gripper
+* tiago has sonars
+* Remove old gripper references
+* Changed previous gripper to newer one
+* fixes #13516
+* 0.0.10
+* Updated changelog
+* 0.0.9
+* Update changelog
+* Updated joint limits as per errors found by Louis
+* 0.0.8
+* Update changelog
+* fixed rgb_optical_frame name affecting simulation
+* fix chessboard pose
+* remove collision in calibration chessboard
+* 0.0.7
+* Update changelog
+* Update urdf
+* Add new meshes
+* Delete old meshes
+* 0.0.6
+* Update changelogs
+* Fixed wheel sleeping in gazebo, and added head transmission (This can break the real robot if a blacklist is not implemented in pal_ros_control
+* 0.0.5
+* Update changelog
+* Add effort transmision
+* using base_sensors instead of base
+* remove hey5 hand from URDF
+* Added safety controller to torso lift joint
+* Update inertial params
+* 7 cm / sec torso speed
+* Gripper parts color
+* Updated gripper base mesh
+* Update head, todo: dae coloring for the head_2
+* Update license
+* Update joint limit
+* Remove module-only arm
+* Arm 1 collision added
+* Update collision & meshes
+* Remove old head mesh
+* Update torso meshes &  collision
+* Update limits
+* Add cover for module hole
+* Review of joint limits
+* Update arm
+* Update torso
+* Update gripper finger
+* No need for have_base_rgdb anymore
+* New arm distances, more to come
+* Update head distance from torso_lift_link
+* Remove temporary cabling boxes
+* change torso limits and update motions
+* Update gripper length to approx real one
+* Update head
+* add cover on top of mobile base
+  Define collision and visual elements needed for the motion planning of TIAGo proof-of-concept
+* restrict lifter joint to go lower than 5 cm
+  Take into account new mobile base covers that are 5 cm high
+* DarkGrey for all arm parts in gazebo
+* Updated limits
+* Add cable channel to the front of the column
+* Increase speed of torso
+* Contributors: Bence Magyar, Hilario Tome, Jeremie Deray, Jordi Pages, Sam Pfeiffer, Victor Lopez, jordi.pages@pal-robotics.com
+
 0.0.4 (2015-05-20)
 ------------------
 * Add safety box around the hand

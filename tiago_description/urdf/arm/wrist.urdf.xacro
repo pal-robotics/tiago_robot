@@ -25,7 +25,7 @@
   <xacro:property name="wrist_3_max_effort"   value="6.6" />
   <xacro:property name="wrist_eps"          value="0.02" />
 
-  <xacro:macro name="wrist" params="name parent reflect">
+  <xacro:macro name="wrist" params="name parent reflect wrist_6_range">
 
     <!--************************-->
     <!--        WRIST           -->
@@ -95,13 +95,13 @@
       <child link="${name}_6_link" />
       <origin xyz="0 0 0.15" rpy="${0.0 * deg_to_rad} ${-90.0 * deg_to_rad} ${-90.0 * deg_to_rad}" />
       <axis xyz="0 0 1" />
-      <limit lower="${-90.0 * deg_to_rad}" upper="${90.0 * deg_to_rad}" effort="${wrist_2_max_effort}" velocity="${wrist_2_max_vel}" />
+      <limit lower="${-wrist_6_range * deg_to_rad}" upper="${wrist_6_range * deg_to_rad}" effort="${wrist_2_max_effort}" velocity="${wrist_2_max_vel}" />
       <dynamics friction="${wrist_friction}" damping="${wrist_damping}"/>
 
       <safety_controller k_position="20"
                          k_velocity="20"
-                         soft_lower_limit="${-90.0 * deg_to_rad + wrist_eps}"
-                         soft_upper_limit="${ 90.0 * deg_to_rad - wrist_eps}" />
+                         soft_lower_limit="${-wrist_6_range * deg_to_rad + wrist_eps}"
+                         soft_upper_limit="${ wrist_6_range * deg_to_rad - wrist_eps}" />
     </joint>
 
     <link name="${name}_7_link">

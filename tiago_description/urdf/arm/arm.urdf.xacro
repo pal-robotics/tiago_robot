@@ -29,7 +29,7 @@
   <xacro:property name="arm_eps"            value="0.02" />
 
 
-  <xacro:macro name="tiago_arm" params="name parent">
+  <xacro:macro name="tiago_arm" params="name parent wrist_6_range">
 
     <!--************************-->
     <!--        SHOULDER        -->
@@ -233,7 +233,7 @@
     <!--************************-->
     <!--        WRIST           -->
     <!--************************-->
-    <xacro:wrist name="arm" parent="${name}_4_link" reflect="1"/>
+    <xacro:wrist name="arm" parent="${name}_4_link" reflect="1" wrist_6_range="${wrist_6_range}"/>
 
     <!--***********************-->
     <!--        TOOL           -->
