@@ -9,11 +9,17 @@ actuators:
     mode_cmd_port: ref_control_mode
     current_limit_cmd_port: ref_limit_current
 
-extra_joints: ['head_1_joint', 'head_2_joint']
-
 joint_mode_black_list: ['head_controller', 'whole_body_kinematic_controler', 'torso_controller']
 
-transmission_blacklist: ['head_1_trans', 'head_2_trans']
+force_torque:
+  wrist_ft:
+    frame: wrist_ft_link
+    transformation:
+      force: [-y,x,z]
+      torque: [-y,x,z]
+    raw_data:
+      force_port: force_wrist
+      torque_port: torque_wrist
 
 e_stop:
   raw_data:

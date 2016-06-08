@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!--
+  Copyright (c) 2011, PAL Robotics, S.L.
+  All rights reserved.
+
+  This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
+  To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to
+  Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+-->
+
+<robot name="reemc" xmlns:xacro="http://ros.org/wiki/xacro">
+
+<xacro:macro name="reemc_force_torque_sensor" params="name update_rate">
+  <gazebo reference="${name}">
+    <sensor name="${name}_contact_sensor" type="contact">
+      <pose>0.105 0.071 0 0 0 0</pose>
+      <always_on>1</always_on>
+      <update_rate>${update_rate}</update_rate>
+      <contact>
+        <collision>${name}_collision</collision>
+      </contact>
+    </sensor>
+  </gazebo>
+  <gazebo reference="${name}">
+    <provideFeedback>1</provideFeedback>
+  </gazebo>
+
+</xacro:macro>
+</robot>

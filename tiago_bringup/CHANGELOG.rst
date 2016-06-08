@@ -89,6 +89,97 @@ Changelog for package tiago_bringup
 * Enable motion planning and exclude hand joints from planning
 * Contributors: Adolfo Rodriguez, Adolfo Rodriguez Tsouroukdissian, Bence Magyar, Jeremie Deray, Jordi Pages, Sam Pfeiffer, Sammy Pfeiffer
 
+0.0.12 (2016-06-07)
+-------------------
+* Working head configuration for TIAGo
+* Add transformation to correct FT readings
+* Add hardware port of force torque
+* Contributors: Jordan Palacios, Sam Pfeiffer
+
+0.0.11 (2016-06-03)
+-------------------
+* Remove extra joints as the casters are not published anymore
+* modify arm_6_joint position in home and unfold_arm
+* add depth image visualizer
+* 0.0.10
+* Updated changelog
+* Added joint mode blacklist to tiago hardware config
+* 0.0.9
+* Update changelog
+* Making the incrementer server use the safe command topic
+* Increase increments on head movements
+* add new motions and modify existing ones
+* 0.0.8
+* Update changelog
+* 0.0.7
+* Update changelog
+* 0.0.6
+* Update changelogs
+* Adding a stronger torque value
+* Added blacklist parameter to tiago hardware
+* Default dynamixel head for tiago 0, added as default because contains
+  new dynamixel head necessary parameters
+* 0.0.5
+* Update changelog
+* Adding new defaults for TIAGo
+  Current limit controller for the wheels.
+  Soften on effort values config for a specific robot.
+* remap turbo reset
+* tune joy min/max speed to reduce slipping
+* remap joy speed in/decrease as they conflict with tiago torso
+* spawn tiago speed_limit conf
+* pmb2 twist_mux conf
+* Re-Add marker detector launcher
+* Add missing ports
+* Add needed parameters from the base
+* Fix ID of motor for tilt
+* Remove battery monitor as its spamming and
+  soon we'll have a real node giving battery information.
+  Also the screen of the robot shows battery level
+* Remove play_motion from launch to be started by pal_startup
+* Add metadata of motions to make them show on webcommander
+* Remove xtion from bringup launch, startup will take care of it
+* Recovered fast hand motions
+* updated poses for tiago0
+* Add meta and motions that were deleted
+* changed twist_mux out cmd topic
+* Cleanup & add arm plannign group to play_motion
+* Nicer home position
+* Fix remapping to controller
+* change torso limits and update motions
+* add chessboard to dynamic foot print
+* restrict lifter joint to go lower than 5 cm
+  Take into account new mobile base covers that are 5 cm high
+* Merge branch 'extra-joints' into 'cobalt-devel'
+  Use generic pal_ros_control components
+  Depends on:
+  * [pal_ros_control/#5](https://gitlab/control/pal_ros_control/merge_requests/5) for handling dynamixels out-of-band of the actuators manager.
+  * [ros_controllers/#15](https://gitlab/control/ros_controllers/merge_requests/15) for publishing dummy state for the caster joints on hardware deployments.
+* Add configuration for dynamixel node
+* add navigation displays
+* add rviz configuration file
+* Add extra_joints spec for joint state controller
+  Only in hardware deployments: Load set of extra joints to be published as
+  dummies by the joint_state_controller.
+* Add battery_reporter to bringup
+* Refs #11195. Add launch file for look_to_link
+* Compatibility with pal_ros_control 0.4.3
+  Update bringup configuration so TIAGo can use the generic ros_control component
+  that is aware of extra joints not managed by ActuatorsManager (Dynamixel head
+  joints).
+* add launch file for lookToLink node
+* Remove head from motion
+* Take out planning group for arm
+* Add open-close hand
+* Remove head from motion description
+* Corrected open and close motions (altho they are very slow)
+* add line
+* refs #11033. Define movement to unfold arm
+* Add hand controller and wave motion
+* Update home motion
+* Enable motion planning and exclude hand joints from planning
+* Contributors: Adolfo Rodriguez, Adolfo Rodriguez Tsouroukdissian, Bence Magyar, Hilario Tome, Jeremie Deray, Jordi Pages, Sam Pfeiffer, Sammy Pfeiffer, Victor Lopez, jordi.pages@pal-robotics.com
+
 0.0.4 (2015-05-20)
 ------------------
 * add motion to test the head
