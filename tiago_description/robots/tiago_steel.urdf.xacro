@@ -33,7 +33,7 @@
   <xacro:head name="head" parent="torso_lift_link"/>
   <xacro:tiago_arm name="arm" parent="torso_lift_link" wrist_6_range="90.0"/>
   <xacro:pal_gripper parent="arm_tool_link" name="gripper">
-    <origin xyz="0.01 0 0" rpy="${90*deg_to_rad} 0 ${-90*deg_to_rad}"/>
+    <origin xyz="0.01 0 0" rpy="${90*deg_to_rad} ${90*deg_to_rad} ${-90*deg_to_rad}"/>
   </xacro:pal_gripper>
 </robot>
 
