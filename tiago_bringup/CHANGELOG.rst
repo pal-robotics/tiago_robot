@@ -89,8 +89,8 @@ Changelog for package tiago_bringup
 * Enable motion planning and exclude hand joints from planning
 * Contributors: Adolfo Rodriguez, Adolfo Rodriguez Tsouroukdissian, Bence Magyar, Jeremie Deray, Jordi Pages, Sam Pfeiffer, Sammy Pfeiffer
 
-Forthcoming
------------
+0.0.13 (2016-06-10)
+-------------------
 
 0.0.12 (2016-06-07)
 -------------------

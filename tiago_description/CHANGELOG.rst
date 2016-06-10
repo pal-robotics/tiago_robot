@@ -3,8 +3,8 @@ Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
-Forthcoming
------------
+0.0.13 (2016-06-10)
+-------------------
 * Merge branch 'dubnium-devel' of gitlab:robots/tiago_robot into dubnium-devel
 * Corrected the pose of the gripper
 * Contributors: Sam Pfeiffer
