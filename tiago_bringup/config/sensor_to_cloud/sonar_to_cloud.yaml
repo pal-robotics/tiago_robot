@@ -1,0 +1,5 @@
+sonar_base_topic: sonar_base
+
+infinity_dist : 4.0
+aperture_angle: 0.18
+arc_resolution: 0.10
