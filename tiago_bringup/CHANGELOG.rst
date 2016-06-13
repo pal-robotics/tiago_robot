@@ -89,6 +89,11 @@ Changelog for package tiago_bringup
 * Enable motion planning and exclude hand joints from planning
 * Contributors: Adolfo Rodriguez, Adolfo Rodriguez Tsouroukdissian, Bence Magyar, Jeremie Deray, Jordi Pages, Sam Pfeiffer, Sammy Pfeiffer
 
+Forthcoming
+-----------
+* set param ignore_read_errors true in ns ros_control_component
+* Contributors: Jeremie Deray
+
 0.0.14 (2016-06-10)
 -------------------
 * Add openni2_launch dependency
