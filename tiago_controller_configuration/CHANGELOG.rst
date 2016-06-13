@@ -41,6 +41,9 @@ Changelog for package tiago_controller_configuration
   Add wrist controller
 * Contributors: Adolfo Rodriguez Tsouroukdissian, Bence Magyar, Jeremie Deray, Sam Pfeiffer, jordi.pages@pal-robotics.com
 
+Forthcoming
+-----------
+
 0.0.16 (2016-06-13)
 -------------------
 * Fix typo/copypaste on adding torso1 joint and 2 joint instead of gripper jointS

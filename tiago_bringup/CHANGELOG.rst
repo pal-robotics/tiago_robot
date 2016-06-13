@@ -89,6 +89,11 @@ Changelog for package tiago_bringup
 * Enable motion planning and exclude hand joints from planning
 * Contributors: Adolfo Rodriguez, Adolfo Rodriguez Tsouroukdissian, Bence Magyar, Jeremie Deray, Jordi Pages, Sam Pfeiffer, Sammy Pfeiffer
 
+Forthcoming
+-----------
+* add missing launch sonar_to_cloud
+* Contributors: Jeremie Deray
+
 0.0.16 (2016-06-13)
 -------------------
 
