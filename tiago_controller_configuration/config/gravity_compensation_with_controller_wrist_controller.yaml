@@ -18,24 +18,24 @@ torque_control:
 
   base_link_name: "base_link"
   reference_signal: "circle"
-  tip_link_name: "arm_7_link"
+  tip_link_name: "arm_tool_link"
   hardware: True
   dt: 0.005
 
 
 controller_params:
-   torque_scaling_0: 1.0
-   viscous_friction_0: 2.1
-   static_friction_0: 0.5
-   torque_scaling_1: 1.5
-   viscous_friction_1: 1.7
-   static_friction_1: 0.6 
-   torque_scaling_2: 1.0
-   viscous_friction_2: 2.3
-   static_friction_2: 0.8
-   torque_scaling_3: 1.0
-   viscous_friction_3: 2.0
-   static_friction_3: 0.5
+   torque_scaling_arm_1_joint: 1.0
+   viscous_friction_arm_1_joint: 2.1
+   static_friction_arm_1_joint: 0.5
+   torque_scaling_arm_2_joint: 1.0
+   viscous_friction_arm_2_joint: 1.7
+   static_friction_arm_2_joint: 0.6 
+   torque_scaling_arm_3_joint: 1.0
+   viscous_friction_arm_3_joint: 2.3
+   static_friction_arm_3_joint: 0.8
+   torque_scaling_arm_4_joint: 1.0
+   viscous_friction_arm_4_joint: 2.0
+   static_friction_arm_4_joint: 0.5
 
 gravity_compensation:
   type: "walking_force_control/GravityCompensation"
@@ -49,7 +49,7 @@ gravity_compensation:
 #    - arm_left_7_joint
   reference_signal: "circle"
   base_link_name: "base_link"
-  tip_link_name: "arm_7_link"
+  tip_link_name: "arm_tool_link"
   hardware: True
 
   friction:
@@ -109,6 +109,8 @@ gravity_compensation:
    hand_thumb_virtual_2_joint: *default_friction
    hand_thumb_flex_2_joint: *default_friction
    hand_thumb_joint: *default_friction
+   gripper_left_finger_joint: *default_friction
+   gripper_right_finger_joint: *default_friction
 
 
 
