@@ -12,6 +12,9 @@ mobile_base_controller:
   # Base frame_id
   base_frame_id: base_footprint
 
+  # Publish wheel data
+  publish_wheel_data: true
+
   # Velocity and acceleration limits
   # Whenever a min_* is unspecified, default to -max_*
   linear:
