@@ -2,6 +2,12 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Final values after testing in real robot
+* Update gravity compensation parameters to new format
+* Contributors: Sam Pfeiffer
+
 0.0.18 (2016-06-14)
 -------------------
 * enable preserve_turning_radius
