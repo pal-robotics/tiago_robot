@@ -2,8 +2,8 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.18 (2016-06-14)
+-------------------
 * enable preserve_turning_radius
 * enable wheel_data pub in mobile_base_controller
 * Contributors: Jeremie Deray
