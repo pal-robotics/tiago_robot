@@ -18,7 +18,7 @@ torque_control:
 
   base_link_name: "base_link"
   reference_signal: "circle"
-  tip_link_name: "arm_7_link"
+  tip_link_name: "arm_tool_link"
   hardware: True
   dt: 0.005
 
@@ -49,7 +49,7 @@ gravity_compensation:
 #    - arm_left_7_joint
   reference_signal: "circle"
   base_link_name: "base_link"
-  tip_link_name: "arm_7_link"
+  tip_link_name: "arm_tool_link"
   hardware: True
 
   friction:
