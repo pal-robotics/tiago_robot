@@ -2,6 +2,11 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Remove wbc dependencies
+* Contributors: Victor Lopez
+
 0.0.19 (2016-06-14)
 -------------------
 * Final values after testing in real robot
