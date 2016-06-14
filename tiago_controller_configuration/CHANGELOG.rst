@@ -2,8 +2,8 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.19 (2016-06-14)
+-------------------
 * Final values after testing in real robot
 * Update gravity compensation parameters to new format
 * Contributors: Sam Pfeiffer
