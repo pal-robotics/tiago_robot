@@ -2,6 +2,12 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Revert "set param ignore_read_errors true in ns ros_control_component"
+  This reverts commit 244a8b98d6faeca71650903da68a0ab374f7c6cf.
+* Contributors: Jeremie Deray
+
 0.0.23 (2016-06-15)
 -------------------
 

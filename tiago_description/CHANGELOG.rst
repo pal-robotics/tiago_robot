@@ -3,6 +3,9 @@ Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
+Forthcoming
+-----------
+
 0.0.23 (2016-06-15)
 -------------------
 * Add imu to gazebo simulation
