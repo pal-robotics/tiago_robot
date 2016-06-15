@@ -2,6 +2,11 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add imu_controller.launch
+* Contributors: Victor Lopez
+
 0.0.20 (2016-06-14)
 -------------------
 * Remove wbc dependencies
