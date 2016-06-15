@@ -3,8 +3,8 @@ Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
-Forthcoming
------------
+0.0.22 (2016-06-15)
+-------------------
 * Add provideFeedback to tiago wrist
 * Contributors: Victor Lopez
 
