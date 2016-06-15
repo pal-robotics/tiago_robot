@@ -24,7 +24,3 @@ force_torque:
 e_stop:
   raw_data:
     e_stop_port: emergency_stop_state
-
-ros_control_component:
-  ignore_read_errors: true
-  
