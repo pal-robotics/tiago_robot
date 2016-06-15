@@ -3,6 +3,11 @@ Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
+Forthcoming
+-----------
+* Add imu to gazebo simulation
+* Contributors: Sam Pfeiffer
+
 0.0.22 (2016-06-15)
 -------------------
 * Add provideFeedback to tiago wrist
