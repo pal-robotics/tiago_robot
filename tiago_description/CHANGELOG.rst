@@ -3,6 +3,11 @@ Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
+Forthcoming
+-----------
+* Making the simulation be more close to the real robot xtion
+* Contributors: Sam Pfeiffer
+
 0.0.24 (2016-06-15)
 -------------------
 

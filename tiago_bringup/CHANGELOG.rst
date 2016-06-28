@@ -2,6 +2,11 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add depth_registration to the sensor
+* Contributors: Sam Pfeiffer
+
 0.0.24 (2016-06-15)
 -------------------
 * Revert "set param ignore_read_errors true in ns ros_control_component"
