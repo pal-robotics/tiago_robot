@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.25 (2016-06-28)
+-------------------
 * Add depth_registration to the sensor
 * Contributors: Sam Pfeiffer
 
