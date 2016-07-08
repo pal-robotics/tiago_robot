@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.26 (2016-07-08)
+-------------------
 * put motions for titanium and steel separately
 * Contributors: Jordi Pages
 
