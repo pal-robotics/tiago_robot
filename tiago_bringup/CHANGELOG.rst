@@ -2,6 +2,11 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* put motions for titanium and steel separately
+* Contributors: Jordi Pages
+
 0.0.25 (2016-06-28)
 -------------------
 * Add depth_registration to the sensor
