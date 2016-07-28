@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.29 (2016-07-28)
+-------------------
 * Add the option of controlling tiago from the rviz joystick
 * Contributors: Victor Lopez
 
