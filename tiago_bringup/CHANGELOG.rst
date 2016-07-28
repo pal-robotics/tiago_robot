@@ -2,6 +2,11 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add gripper joints to exclude from planning
+* Contributors: Victor Lopez
+
 0.0.27 (2016-07-19)
 -------------------
 
