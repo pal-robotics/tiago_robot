@@ -36,3 +36,8 @@ topics:
   topic   : phone_vel
   timeout : 0.5
   priority: 98
+-
+  name    : rviz_joy
+  topic   : rviz_joy_vel
+  timeout : 0.5
+  priority: 95
