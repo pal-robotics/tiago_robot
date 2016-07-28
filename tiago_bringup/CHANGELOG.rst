@@ -2,6 +2,11 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add the option of controlling tiago from the rviz joystick
+* Contributors: Victor Lopez
+
 0.0.28 (2016-07-28)
 -------------------
 * Add gripper joints to exclude from planning
