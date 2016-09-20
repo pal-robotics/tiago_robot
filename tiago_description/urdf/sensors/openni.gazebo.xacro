@@ -18,7 +18,7 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
   <xacro:macro name="openni_camera_gazebo_v0" params="name">
-    <gazebo reference="${name}_link">
+    <gazebo reference="${name}_rgb_frame">
       <sensor type="depth" name="${name}_frame_sensor">
         <always_on>true</always_on>
         <update_rate>30.0</update_rate>
@@ -30,7 +30,7 @@
             <height>480</height>
           </image>
           <clip>
-            <near>0.5</near>
+            <near>0.3</near>
             <far>8.0</far>
           </clip>
         </camera>
