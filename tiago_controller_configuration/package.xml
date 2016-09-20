@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+  <name>tiago_controller_configuration</name>
+  <version>0.0.29</version>
+  <description>The tiago_controller_configuration package</description>
+  <maintainer email="sam.pfeiffer@pal-robotics.com">Sam Pfeiffer</maintainer>
+  <author email="bence.magyar@pal-robotics.com">Bence Magyar</author>
+  <license>BSD</license>
+  <buildtool_depend>catkin</buildtool_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>control_msgs</run_depend>
+  <run_depend>trajectory_msgs</run_depend>
+  <run_depend>sensor_msgs</run_depend>
+  <run_depend>actionlib</run_depend>
+  <run_depend>play_motion</run_depend>
+  <run_depend>current_limit_controller</run_depend>
+  <run_depend>pal_parallel_gripper_wrapper</run_depend>
+</package>

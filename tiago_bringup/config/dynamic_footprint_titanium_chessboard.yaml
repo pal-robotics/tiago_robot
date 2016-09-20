@@ -1,0 +1,11 @@
+link_list: ['arm_1_link',
+            'arm_2_link',
+            'arm_3_link',
+            'arm_4_link',
+            'arm_5_link',
+            'arm_6_link',
+            'arm_7_link',
+            'base_link',
+            'torso_lift_link',
+            'arm_chessboard_link']
+padding: 0.05

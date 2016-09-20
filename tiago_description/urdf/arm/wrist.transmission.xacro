@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!--
+
+  Copyright (c) 2015, PAL Robotics, S.L.
+  All rights reserved.
+
+  This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
+  To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to
+  Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+-->
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:macro name="wrist_simple_transmission" params="name number reduction" >
+    <transmission name="${name}_${number}_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <actuator name="${name}_${number}_motor" >
+        <mechanicalReduction>${reduction}</mechanicalReduction>
+      </actuator>
+      <joint name="${name}_${number}_joint">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      </joint>
+    </transmission>
+  </xacro:macro>
+
+  <xacro:macro name="wrist_differential_transmission"
+               params="name number_1 number_2 act_reduction_1 act_reduction_2 jnt_reduction_1 jnt_reduction_2" >
+    <transmission name="wrist_trans">
+      <type>transmission_interface/DifferentialTransmission</type>
+      <actuator name="${name}_${number_1}_motor">
+        <role>actuator1</role>
+        <mechanicalReduction>${act_reduction_1}</mechanicalReduction>
+      </actuator>
+      <actuator name="${name}_${number_2}_motor">
+        <role>actuator2</role>
+        <mechanicalReduction>${act_reduction_2}</mechanicalReduction>
+      </actuator>
+      <joint name="${name}_${number_1}_joint">
+        <role>joint1</role>
+        <offset>0.0</offset>
+        <mechanicalReduction>${jnt_reduction_1}</mechanicalReduction>
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      </joint>
+      <joint name="${name}_${number_2}_joint">
+        <role>joint2</role>
+        <offset>0.0</offset>
+        <mechanicalReduction>${jnt_reduction_2}</mechanicalReduction>
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      </joint>
+    </transmission>
+  </xacro:macro>
+
+</robot>

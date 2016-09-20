@@ -1,0 +1,140 @@
+<?xml version="1.0" ?>
+<!--
+
+  Copyright (c) 2015, PAL Robotics, S.L.
+  All rights reserved.
+
+  This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
+  To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to
+  Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+-->
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <!--File includes-->
+  <xacro:include filename="$(find tiago_description)/urdf/deg_to_rad.xacro" />
+  <xacro:include filename="$(find tiago_description)/urdf/torso/torso.transmission.xacro" />
+
+  <!--Constant parameters-->
+  <xacro:property name="torso_max_vel"  value="0.07" />
+  <xacro:property name="torso_eps"      value="0.02" />
+
+  <xacro:macro name="tiago_torso" params="name parent">
+
+  <!-- Bottom fixed part of column -->
+  <link name="${name}_fixed_link">
+    <inertial>
+      <origin xyz="0.02435 -0.00464 0.15900" rpy="0.00000 0.00000 0.00000"/>
+      <mass value="14.01360"/>
+      <inertia ixx="0.38341100000" ixy="0.00036400000" ixz="-0.02438900000"
+               iyy="0.40577300000" iyz="-0.00078200000"
+               izz="0.07699800000"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="package://tiago_description/meshes/torso/torso_fix.stl" scale="1 1 1"/>
+      </geometry>
+      <material name="LightGrey"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0.085 0.0 0.02" />
+      <geometry>
+        <box size="0.4 0.25 0.04"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0.05" />
+      <geometry>
+        <box size="0.25 0.25 0.1"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="${name}_fixed_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="-0.062 0.0 0.193" />
+    <parent link="${parent}" />
+    <child link="${name}_fixed_link" />
+    <axis xyz="0 0 0" />
+  </joint>
+
+  <!-- Middle extending  -->
+  <link name="${name}_fixed_column_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="0.01" />
+      <inertia ixx="0.000001" ixy="0" ixz="0"
+               iyy="0.000001" iyz="0"
+               izz="0.000001" />
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0.275" />
+      <geometry>
+        <box size="0.18 0.2 0.55"/>
+      </geometry>
+      <material name="DarkGrey"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0.275" />
+      <geometry>
+        <box size="0.23 0.23 0.55"/>
+      </geometry>
+      <material name="DarkGrey"/>
+    </collision>
+  </link>
+  <gazebo reference="${name}_fixed_column_link">
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+
+  <joint name="${name}_fixed_column_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="-0.062 0 0.195" />
+    <parent link="${parent}" />
+    <child link="${name}_fixed_column_link" />
+    <axis xyz="0 0 0" />
+  </joint>
+
+  <link name="${name}_lift_link">
+    <inertial>
+      <origin xyz="0.04361 -0.00116 -0.17334" rpy="0.00000 0.00000 0.00000"/>
+      <mass value="6.93198"/>
+      <inertia ixx="0.24487000000" ixy="-0.00145600000" ixz="-0.00974200000"
+               iyy="0.24926900000" iyz="0.00828100000"
+               izz="0.09039500000"/>
+    </inertial>
+    <!-- Lifting body -->
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+       <geometry>
+        <mesh filename="package://tiago_description/meshes/torso/torso_lift_with_arm.stl" scale="1 1 1"/>
+      </geometry>
+      <material name="White"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+       <geometry>
+        <mesh filename="package://tiago_description/meshes/torso/torso_lift_collision.dae" scale="1 1 1"/>
+      </geometry>
+      <material name="LightGrey"/>
+    </collision>
+  </link>
+
+  <joint name="${name}_lift_joint" type="prismatic">
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.587" />
+    <parent link="${name}_fixed_link" />
+    <child link="${name}_lift_link" />
+    <axis xyz="0 0 1" />
+    <limit effort="2000" lower="0" upper="0.35" velocity="${torso_max_vel}" />
+    <calibration rising="0.0" />
+    <dynamics damping="1000" />
+
+    <safety_controller k_position="20"
+                         k_velocity="20"
+                         soft_lower_limit="0.0"
+                         soft_upper_limit="0.35" />
+
+  </joint>
+
+  <xacro:torso_simple_transmission name="torso_lift" reduction="1.0"/>
+
+ </xacro:macro>
+
+</robot>

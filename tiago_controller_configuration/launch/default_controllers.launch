@@ -1,0 +1,26 @@
+<launch>
+  <rosparam command="load" file="$(find tiago_controller_configuration)/config/joint_trajectory_controllers.yaml" />
+  <rosparam command="load" file="$(find tiago_controller_configuration)/config/current_limit_controllers.yaml"/>
+
+  <!-- Controllers that come up started -->
+  <node name="default_controllers_spawner"
+        pkg="controller_manager" type="spawner" output="screen"
+        args="--timeout 120
+              torso_controller
+              head_controller
+              arm_controller
+              arm_current_limit_controller
+              mobile_base_controller
+              wheels_current_limit_controller" />
+
+  <!-- Point head action -->
+  <group ns="head_controller">
+    <node name="point_head_action" pkg="head_action" type="head_action" output="screen">
+      <rosparam>
+        pan_link:  head_1_link
+        tilt_link: head_2_link
+        success_angle_threshold: 0.01
+      </rosparam>
+    </node>
+  </group>
+</launch>
