@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <arg name="robot" default="titanium"/>
+
+  <!-- Diff drive controller multipliers -->
+  <rosparam command="load" file="$(find tiago_controller_configuration)/config/mobile_base_controller_multipliers.yaml"/>
+
+  <!-- Diff drive controller parameters -->
+  <rosparam command="load" file="$(find tiago_controller_configuration)/config/mobile_base_controller.yaml"/>
+
+  <!-- Robot model -->
+  <include file="$(find tiago_description)/robots/upload_tiago.launch">
+    <arg name="robot" value="$(arg robot)"/>
+  </include>
+
+  <!-- tiago_hardware parameters -->
+  <rosparam command="load" file="$(find tiago_bringup)/config/tiago_hardware.yaml"/>
+
+  <!-- Node that forwards commands and feedback of dynamixel motors -->
+  <include file="$(find tiago_bringup)/launch/dynamixel_node.launch"/>
+
+  <!-- Bring up robot -->
+  <include file="$(find tiago_bringup)/launch/tiago_bringup.launch">
+    <arg name="robot" value="$(arg robot)"/>
+  </include>
+</launch>

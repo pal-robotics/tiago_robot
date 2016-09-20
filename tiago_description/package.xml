@@ -2,19 +2,20 @@
 <package>
 
   <name>tiago_description</name>
-  <version>0.1.0</version>
+  <version>0.0.29</version>
   <description>This package contains the description (mechanical, kinematic, visual,
       etc.) of the TIAGO robot.  The files in this package are parsed and used by
       a variety of other components.  Most users will not interact directly
       with this package.</description>
-  <maintainer email="tiago-support@pal-robotics.com">PAL Robotics</maintainer>
-  <author email="bence.magyar@pal-robotics.com">Bence Magyar</author>
-  <author email="jordi.pages@pal-robotics.com">Jordi Pages</author>
+  <maintainer email="bence.magyar@pal-robotics.com">Bence Magyar</maintainer>
+  <maintainer email="hilario.tome@pal-robotics.com">Hilario Tome</maintainer>
   <license>Creative Commons BY-NC-ND 3.0</license>
 
   <buildtool_depend>catkin</buildtool_depend>
 
   <run_depend>xacro</run_depend>
   <run_depend>pmb2_description</run_depend>
+  <run_depend>hey5_description</run_depend>
+  <run_depend>pal_gripper_description</run_depend>
 
 </package>

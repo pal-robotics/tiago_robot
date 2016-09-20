@@ -1,0 +1,11 @@
+<launch>
+  <!-- Current limit controllers -->
+  <rosparam command="load" file="$(find tiago_controller_configuration)/config/current_limit_controllers.yaml" />
+
+  <!-- Controllers that come up started -->
+  <node name="current_limit_controllers_spawner"
+        pkg="controller_manager" type="spawner" output="screen"
+        args="arm_current_limit_controller
+              hand_current_limit_controller
+              wheels_current_limit_controller" />
+</launch>

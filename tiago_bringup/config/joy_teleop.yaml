@@ -21,27 +21,27 @@ teleop:
   joy_turbo_decrease:
     type: action
     action_name: joy_turbo_decrease
-    buttons: [1, 4, 5]
+    buttons: [8, 1]
 
   joy_turbo_increase:
     type: action
     action_name: joy_turbo_increase
-    buttons: [3, 4, 5]
+    buttons: [8, 3]
 
   joy_turbo_angular_decrease:
     type: action
     action_name: joy_turbo_angular_decrease
-    buttons: [0, 4, 5]
+    buttons: [8, 2]
 
   joy_turbo_angular_increase:
     type: action
     action_name: joy_turbo_angular_increase
-    buttons: [2, 4, 5]
+    buttons: [8, 0]
 
   joy_turbo_reset:
     type: action
     action_name: joy_turbo_reset
-    buttons: [4, 5, 7]
+    buttons: [10, 11]
 
   torso_up:
     type: action
@@ -61,28 +61,28 @@ teleop:
     type: action
     action_name: /head_controller/increment
     action_goal:
-      increment_by: [-0.1, 0]
+      increment_by: [-0.2, 0]
     buttons: [2] # right pad, bottom button
 
   head_up:
     type: action
     action_name: /head_controller/increment
     action_goal:
-      increment_by: [0.1, 0]
+      increment_by: [0.2, 0]
     buttons: [0] # right pad, top button
 
   head_left:
     type: action
     action_name: /head_controller/increment
     action_goal:
-      increment_by: [0, 0.1]
+      increment_by: [0, 0.2]
     buttons: [3] # right pad, left button
 
   head_right:
     type: action
     action_name: /head_controller/increment
     action_goal:
-      increment_by: [0, -0.1]
+      increment_by: [0, -0.2]
     buttons: [1] # right pad, right button
 
   close_hand:

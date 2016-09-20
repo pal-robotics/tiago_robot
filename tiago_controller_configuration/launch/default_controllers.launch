@@ -1,16 +1,17 @@
 <launch>
-  <rosparam command="load" file="$(find joint_state_controller)/joint_state_controller.yaml" />
   <rosparam command="load" file="$(find tiago_controller_configuration)/config/joint_trajectory_controllers.yaml" />
+  <rosparam command="load" file="$(find tiago_controller_configuration)/config/current_limit_controllers.yaml"/>
 
   <!-- Controllers that come up started -->
   <node name="default_controllers_spawner"
         pkg="controller_manager" type="spawner" output="screen"
         args="--timeout 120
-              joint_state_controller
               torso_controller
               head_controller
               arm_controller
-              mobile_base_controller" />
+              arm_current_limit_controller
+              mobile_base_controller
+              wheels_current_limit_controller" />
 
   <!-- Point head action -->
   <group ns="head_controller">

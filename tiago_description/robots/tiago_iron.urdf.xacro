@@ -12,7 +12,7 @@
 
   <!-- The following included files set up definitions of parts of the robot body -->
   <!-- Base -->
-  <xacro:include filename="$(find pmb2_description)/urdf/base/base.urdf.xacro" />
+  <xacro:include filename="$(find pmb2_description)/urdf/base/base_sensors.urdf.xacro" />
   <!-- Torso -->
   <xacro:include filename="$(find tiago_description)/urdf/torso/torso.urdf.xacro" />
   <!-- Head -->
@@ -24,7 +24,7 @@
   <xacro:include filename="$(find tiago_description)/urdf/materials.urdf.xacro" />
 
   <!-- Now we can start using the macros included above to define the actual robot -->
-  <xacro:base name="base"/>
+  <xacro:base_sensors name="base" hokuyo="false" sick551="false" sick561="true" sick571="false" sonars="true" microphone="false"/>
   <xacro:tiago_torso name="torso" parent="base_link"/>
   <xacro:head name="head" parent="torso_lift_link"/>
 </robot>
