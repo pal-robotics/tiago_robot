@@ -15,4 +15,10 @@
   <run_depend>play_motion</run_depend>
   <run_depend>current_limit_controller</run_depend>
   <run_depend>pal_parallel_gripper_wrapper</run_depend>
+  <run_depend>joint_state_controller</run_depend>
+  <run_depend>imu_sensor_controller</run_depend>
+  <run_depend>joint_trajectory_controller</run_depend>
+  <run_depend>force_torque_sensor_controller</run_depend>
+  <run_depend>diff_drive_controller</run_depend>
+
 </package>
