@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.30 (2016-10-13)
+-------------------
 * add myself as maintainer
 * add myself as maintainer
 * add arg to specifiy cmd_vel_out topic

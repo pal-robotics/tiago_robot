@@ -1,8 +1,8 @@
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Changelog for package tiago_robot
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Forthcoming
------------
+0.0.30 (2016-10-13)
+-------------------
 * fix licences and maintainers
 * add myself as maintainer
 * add myself as maintainer

@@ -3,8 +3,8 @@ Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
-Forthcoming
------------
+0.0.30 (2016-10-13)
+-------------------
 * fixes #14569: proper RGB point clouds
 * add myself as maintainer
 * add myself as maintainer
