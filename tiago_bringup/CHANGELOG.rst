@@ -2,6 +2,15 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* add myself as maintainer
+* add myself as maintainer
+* add arg to specifiy cmd_vel_out topic
+* add missing run dependencies
+* include the correct motions for steel version
+* Contributors: Jordi Pages
+
 0.0.29 (2016-07-28)
 -------------------
 * Add the option of controlling tiago from the rviz joystick

@@ -2,6 +2,14 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add missing dependencies
+* modify package description
+* add myself as maintainer
+* add myself as maintainer
+* Contributors: Jordi Pages, Victor Lopez
+
 0.0.29 (2016-07-28)
 -------------------
 

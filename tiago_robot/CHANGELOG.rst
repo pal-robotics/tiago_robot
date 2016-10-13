@@ -1,6 +1,13 @@
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Changelog for package tiago_robot
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Forthcoming
+-----------
+* fix licences and maintainers
+* add myself as maintainer
+* add myself as maintainer
+* Contributors: Jordi Pages
+
 0.0.29 (2016-07-28)
 -------------------
 

@@ -3,6 +3,14 @@ Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
+Forthcoming
+-----------
+* fixes #14569: proper RGB point clouds
+* add myself as maintainer
+* add myself as maintainer
+* refs #13892: fix reference frame
+* Contributors: Jordi Pages
+
 0.0.29 (2016-07-28)
 -------------------
 
