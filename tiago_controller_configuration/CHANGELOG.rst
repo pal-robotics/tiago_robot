@@ -77,8 +77,8 @@ Changelog for package tiago_controller_configuration
 0.0.13 (2016-06-10)
 -------------------
 
-Forthcoming
------------
+0.0.31 (2016-10-14)
+-------------------
 * 0.0.30
 * Update changelog
 * Add missing dependencies

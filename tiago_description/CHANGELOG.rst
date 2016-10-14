@@ -71,8 +71,8 @@ Changelog for package tiago_description
 * Corrected the pose of the gripper
 * Contributors: Sam Pfeiffer
 
-Forthcoming
------------
+0.0.31 (2016-10-14)
+-------------------
 * Added gazebo plugin to simulate the world frame in gazebo
 * 0.0.30
 * Update changelog
