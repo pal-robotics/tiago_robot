@@ -27,6 +27,14 @@
     </plugin>
   </gazebo>
 
+  <gazebo>
+    <plugin filename="libgazebo_world_odometry.so" name="gazebo_ros_odometry">
+    <frameName>base_footprint</frameName>
+    <topicName>floating_base_pose_simulated</topicName>
+    </plugin>
+  </gazebo>
+
+
   <gazebo reference="base_imu_link">
     <!-- this is expected to be reparented to pelvis with appropriate offset
          when imu_link is reduced by fixed joint reduction -->
