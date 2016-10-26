@@ -1,6 +1,53 @@
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Changelog for package tiago_robot
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Forthcoming
+-----------
+
+0.0.31 (2016-10-14)
+-------------------
+* 0.0.30
+* Update changelog
+* fix licences and maintainers
+* add myself as maintainer
+* add myself as maintainer
+* 0.0.29
+* Update changelog
+* 0.0.28
+* Update changelog
+* 0.0.27
+* Update changelog
+* 0.0.26
+* Update changelog
+* 0.0.25
+* Update changelog
+* 0.0.24
+* changelog
+* 0.0.23
+* Update changelog
+* 0.0.22
+* Update changelog
+* 0.0.21
+* Update changelog
+* 0.0.20
+* Update changelog
+* 0.0.19
+* Update changelog
+* 0.0.18
+* changelog
+* 0.0.17
+* changelog
+* 0.0.16
+* Update changelog
+* 0.0.15
+* Update changelog
+* 0.0.14
+* Update changelog
+* 0.0.13
+* Update changelog
+* Contributors: Jeremie Deray, Jordi Pages, Sam Pfeiffer, Victor Lopez
+
 0.0.30 (2016-10-13)
 -------------------
 * fix licences and maintainers
@@ -58,49 +105,6 @@ Changelog for package tiago_robot
 
 0.0.13 (2016-06-10)
 -------------------
-
-0.0.31 (2016-10-14)
--------------------
-* 0.0.30
-* Update changelog
-* fix licences and maintainers
-* add myself as maintainer
-* add myself as maintainer
-* 0.0.29
-* Update changelog
-* 0.0.28
-* Update changelog
-* 0.0.27
-* Update changelog
-* 0.0.26
-* Update changelog
-* 0.0.25
-* Update changelog
-* 0.0.24
-* changelog
-* 0.0.23
-* Update changelog
-* 0.0.22
-* Update changelog
-* 0.0.21
-* Update changelog
-* 0.0.20
-* Update changelog
-* 0.0.19
-* Update changelog
-* 0.0.18
-* changelog
-* 0.0.17
-* changelog
-* 0.0.16
-* Update changelog
-* 0.0.15
-* Update changelog
-* 0.0.14
-* Update changelog
-* 0.0.13
-* Update changelog
-* Contributors: Jeremie Deray, Jordi Pages, Sam Pfeiffer, Victor Lopez
 
 0.0.12 (2016-06-07)
 -------------------

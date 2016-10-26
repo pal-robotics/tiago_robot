@@ -2,6 +2,63 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
+0.0.31 (2016-10-14)
+-------------------
+* 0.0.30
+* Update changelog
+* Add missing dependencies
+* modify package description
+* add myself as maintainer
+* add myself as maintainer
+* 0.0.29
+* Update changelog
+* 0.0.28
+* Update changelog
+* 0.0.27
+* Update changelog
+* Removing shadow hand controllers
+* 0.0.26
+* Update changelog
+* 0.0.25
+* Update changelog
+* 0.0.24
+* changelog
+* 0.0.23
+* Update changelog
+* 0.0.22
+* Update changelog
+* 0.0.21
+* Update changelog
+* Add imu_controller.launch
+* 0.0.20
+* Update changelog
+* Remove wbc dependencies
+* 0.0.19
+* Update changelog
+* Final values after testing in real robot
+* Update gravity compensation parameters to new format
+* 0.0.18
+* changelog
+* enable preserve_turning_radius
+* enable wheel_data pub in mobile_base_controller
+* 0.0.17
+* changelog
+* 0.0.16
+* Update changelog
+* Fix typo/copypaste on adding torso1 joint and 2 joint instead of gripper jointS
+* 0.0.15
+* Update changelog
+* Add fake parallel gripper controller launch with only one joint
+* 0.0.14
+* Update changelog
+* 0.0.13
+* Update changelog
+* Contributors: Jeremie Deray, Jordi Pages, Sam Pfeiffer, Victor Lopez
+
+
 0.0.30 (2016-10-13)
 -------------------
 * Add missing dependencies
@@ -76,59 +133,6 @@ Changelog for package tiago_controller_configuration
 
 0.0.13 (2016-06-10)
 -------------------
-
-0.0.31 (2016-10-14)
--------------------
-* 0.0.30
-* Update changelog
-* Add missing dependencies
-* modify package description
-* add myself as maintainer
-* add myself as maintainer
-* 0.0.29
-* Update changelog
-* 0.0.28
-* Update changelog
-* 0.0.27
-* Update changelog
-* Removing shadow hand controllers
-* 0.0.26
-* Update changelog
-* 0.0.25
-* Update changelog
-* 0.0.24
-* changelog
-* 0.0.23
-* Update changelog
-* 0.0.22
-* Update changelog
-* 0.0.21
-* Update changelog
-* Add imu_controller.launch
-* 0.0.20
-* Update changelog
-* Remove wbc dependencies
-* 0.0.19
-* Update changelog
-* Final values after testing in real robot
-* Update gravity compensation parameters to new format
-* 0.0.18
-* changelog
-* enable preserve_turning_radius
-* enable wheel_data pub in mobile_base_controller
-* 0.0.17
-* changelog
-* 0.0.16
-* Update changelog
-* Fix typo/copypaste on adding torso1 joint and 2 joint instead of gripper jointS
-* 0.0.15
-* Update changelog
-* Add fake parallel gripper controller launch with only one joint
-* 0.0.14
-* Update changelog
-* 0.0.13
-* Update changelog
-* Contributors: Jeremie Deray, Jordi Pages, Sam Pfeiffer, Victor Lopez
 
 0.0.12 (2016-06-07)
 -------------------
