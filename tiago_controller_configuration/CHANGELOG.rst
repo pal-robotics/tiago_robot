@@ -2,6 +2,11 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* launch current_limit_controller of the gripper
+* Contributors: Jordi Pages
+
 0.0.32 (2016-10-26)
 -------------------
 
