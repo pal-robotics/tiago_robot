@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.34 (2016-11-06)
+-------------------
 * move torso 0 position 1 cm upwards
 * Contributors: Jordi Pages
 
