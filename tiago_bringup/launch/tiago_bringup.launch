@@ -9,6 +9,7 @@
   <node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher">
     <param name="publish_frequency" type="double" value="50.0"/>
     <param name="tf_prefix" type="string" value=""/>
+    <param name="use_tf_static" type="bool" value="true"/>
   </node>
 
   <!-- TF lookup -->
