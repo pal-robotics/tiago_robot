@@ -2,6 +2,11 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* enable static tf
+* Contributors: Jordi Pages
+
 0.0.34 (2016-11-06)
 -------------------
 
