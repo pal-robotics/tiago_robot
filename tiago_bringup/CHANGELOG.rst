@@ -2,6 +2,86 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.0.35 (2016-12-21)
+-------------------
+* enable static tf
+* Contributors: Jordi Pages
+
+0.0.34 (2016-11-06)
+-------------------
+
+0.0.33 (2016-11-04)
+-------------------
+
+0.0.32 (2016-10-26)
+-------------------
+* add sonars visualizer
+* Contributors: Jordi Pages
+
+0.0.31 (2016-10-14)
+-------------------
+* 0.0.30
+* Update changelog
+* add myself as maintainer
+* add myself as maintainer
+* add arg to specifiy cmd_vel_out topic
+* add missing run dependencies
+* include the correct motions for steel version
+* 0.0.29
+* Update changelog
+* Add the option of controlling tiago from the rviz joystick
+* 0.0.28
+* Update changelog
+* Add gripper joints to exclude from planning
+* 0.0.27
+* Update changelog
+* 0.0.26
+* Update changelog
+* put motions for titanium and steel separately
+* 0.0.25
+* Update changelog
+* Add depth_registration to the sensor
+* 0.0.24
+* changelog
+* Revert "set param ignore_read_errors true in ns ros_control_component"
+  This reverts commit 244a8b98d6faeca71650903da68a0ab374f7c6cf.
+* 0.0.23
+* Update changelog
+* 0.0.22
+* Update changelog
+* 0.0.21
+* Update changelog
+* 0.0.20
+* Update changelog
+* 0.0.19
+* Update changelog
+* 0.0.18
+* changelog
+* 0.0.17
+* changelog
+* add missing launch sonar_to_cloud
+* 0.0.16
+* Update changelog
+* 0.0.15
+* Update changelog
+* set param ignore_read_errors true in ns ros_control_component
+* 0.0.14
+* Update changelog
+* Add openni2_launch dependency
+* 0.0.13
+* Update changelog
+* Contributors: Jeremie Deray, Jordi Pages, Sam Pfeiffer, Victor Lopez
+
+
+0.0.30 (2016-10-13)
+-------------------
+* add myself as maintainer
+* add myself as maintainer
+* add arg to specifiy cmd_vel_out topic
+* add missing run dependencies
+* include the correct motions for steel version
+* Contributors: Jordi Pages
+
 0.0.29 (2016-07-28)
 -------------------
 * Add the option of controlling tiago from the rviz joystick

@@ -9,6 +9,10 @@
 -->
 <robot  xmlns:xacro="http://www.ros.org/wiki/xacro"
         name="tiago" >
+  <xacro:arg name="multiple" default="false"/>
+  <xacro:arg name="namespace" default=""/>
+  <xacro:property name="is_multiple" value="$(arg multiple)" />
+  <xacro:property name="nsp" value="$(arg namespace)" />
 
   <!-- The following included files set up definitions of parts of the robot body -->
   <!-- Base -->

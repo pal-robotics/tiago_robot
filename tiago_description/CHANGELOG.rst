@@ -2,6 +2,77 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.0.35 (2016-12-21)
+-------------------
+
+0.0.34 (2016-11-06)
+-------------------
+* move torso 0 position 1 cm upwards
+* Contributors: Jordi Pages
+
+0.0.33 (2016-11-04)
+-------------------
+
+0.0.32 (2016-10-26)
+-------------------
+
+0.0.31 (2016-10-14)
+-------------------
+* Added gazebo plugin to simulate the world frame in gazebo
+* 0.0.30
+* Update changelog
+* fixes #14569: proper RGB point clouds
+* add myself as maintainer
+* add myself as maintainer
+* refs #13892: fix reference frame
+* 0.0.29
+* Update changelog
+* 0.0.28
+* Update changelog
+* 0.0.27
+* Update changelog
+* 0.0.26
+* Update changelog
+* 0.0.25
+* Update changelog
+* Making the simulation be more close to the real robot xtion
+* 0.0.24
+* changelog
+* 0.0.23
+* Update changelog
+* Add imu to gazebo simulation
+* 0.0.22
+* Update changelog
+* Add provideFeedback to tiago wrist
+* 0.0.21
+* Update changelog
+* 0.0.20
+* Update changelog
+* 0.0.19
+* Update changelog
+* 0.0.18
+* changelog
+* 0.0.17
+* changelog
+* 0.0.16
+* Update changelog
+* 0.0.15
+* Update changelog
+* 0.0.14
+* Update changelog
+* 0.0.13
+* Update changelog
+* Merge branch 'dubnium-devel' of gitlab:robots/tiago_robot into dubnium-devel
+* Corrected the pose of the gripper
+* Contributors: Adria Roig, Jeremie Deray, Jordi Pages, Sam Pfeiffer, Victor Lopez
+
+0.0.30 (2016-10-13)
+-------------------
+* fixes #14569: proper RGB point clouds
+* add myself as maintainer
+* add myself as maintainer
+* refs #13892: fix reference frame
+* Contributors: Jordi Pages
 
 0.0.29 (2016-07-28)
 -------------------
@@ -62,6 +133,7 @@ Changelog for package tiago_description
 * Merge branch 'dubnium-devel' of gitlab:robots/tiago_robot into dubnium-devel
 * Corrected the pose of the gripper
 * Contributors: Sam Pfeiffer
+
 
 0.0.12 (2016-06-07)
 -------------------

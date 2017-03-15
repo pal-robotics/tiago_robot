@@ -26,6 +26,15 @@
         </geometry>
         <material name="DarkGrey" />
       </visual>
+      
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://tiago_description/meshes/chessboard/chessboard.dae"/>
+        </geometry>
+        <material name="DarkGrey" />
+      </collision>
+      
     </link>
 
     <joint name="${name}_joint" type="fixed">

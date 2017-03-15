@@ -9,6 +9,10 @@
 -->
 <robot  xmlns:xacro="http://www.ros.org/wiki/xacro"
         name="tiago" >
+  <xacro:arg name="multiple" default="false"/>
+  <xacro:arg name="namespace" default=""/>
+  <xacro:property name="is_multiple" value="$(arg multiple)" />
+  <xacro:property name="nsp" value="$(arg namespace)" />
 
   <!-- The following included files set up definitions of parts of the robot body -->
   <!-- Base -->
@@ -39,7 +43,7 @@
 
     <origin xyz="0 0 0" rpy="0 0 0"/>
   </xacro:hey5_hand>
-  
+
   <joint name="hand_safety_box_joint" type="fixed">
     <parent link="wrist_ft_tool_link"/>
     <child link="hand_safety_box"/>

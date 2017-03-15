@@ -118,7 +118,7 @@
   </link>
 
   <joint name="${name}_lift_joint" type="prismatic">
-    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.587" />
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.597" />
     <parent link="${name}_fixed_link" />
     <child link="${name}_lift_link" />
     <axis xyz="0 0 1" />

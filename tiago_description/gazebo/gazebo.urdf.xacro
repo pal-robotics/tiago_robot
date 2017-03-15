@@ -9,13 +9,17 @@
   Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
 -->
 
-<robot name="tiago">
-
+<robot name="tiago" xmlns:xacro="http://www.ros.org/wiki/xacro">
   <gazebo>
     <plugin filename="libgazebo_ros_control.so" name="gazebo_ros_control">
       <ns></ns>
       <robotSimType>pal_hardware_gazebo/PalHardwareGazebo</robotSimType>
-      <robotNamespace></robotNamespace>
+      <xacro:if value="${is_multiple}">
+          <robotNamespace>/${nsp}</robotNamespace>
+      </xacro:if>
+      <xacro:unless value="${is_multiple}">
+          <robotNamespace></robotNamespace>
+      </xacro:unless>
       <controlPeriod>0.001</controlPeriod>
     </plugin>
 
@@ -24,8 +28,22 @@
       <topicName>ground_truth_odom</topicName>
       <alwaysOn>true</alwaysOn>
       <updateRate>100.0</updateRate>
+      <xacro:if value="${is_multiple}">
+          <robotNamespace>/${nsp}</robotNamespace>
+      </xacro:if>
     </plugin>
   </gazebo>
+
+  <gazebo>
+    <plugin filename="libgazebo_world_odometry.so" name="gazebo_ros_odometry">
+      <frameName>base_footprint</frameName>
+      <topicName>floating_base_pose_simulated</topicName>
+      <xacro:if value="${is_multiple}">
+          <robotNamespace>/${nsp}</robotNamespace>
+      </xacro:if>
+    </plugin>
+  </gazebo>
+
 
   <gazebo reference="base_imu_link">
     <!-- this is expected to be reparented to pelvis with appropriate offset
