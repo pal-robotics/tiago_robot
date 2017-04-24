@@ -41,3 +41,8 @@ topics:
   topic   : rviz_joy_vel
   timeout : 0.5
   priority: 95
+-
+  name    : servoing_cmd_vel
+  topic   : servoing_cmd_vel
+  timeout : 0.5
+  priority: 20
