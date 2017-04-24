@@ -2,8 +2,8 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.36 (2017-04-24)
+-------------------
 * Allow multiple Tiago to use the navigation stack
 * Contributors: davidfernandez
 

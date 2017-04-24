@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.36 (2017-04-24)
+-------------------
 * added servoing_cmd_vel in twist_mux_topics
 * Allow multiple Tiago to use the navigation stack
 * Contributors: Procópio Stein, davidfernandez
