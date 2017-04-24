@@ -2,6 +2,12 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Allow multiple Tiagos on Gazebo
+  Refs #15402
+* Contributors: David Fernandez
+
 0.0.35 (2016-12-21)
 -------------------
 
