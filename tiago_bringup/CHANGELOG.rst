@@ -2,6 +2,11 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* disabled use_device_time from rgbd camera, to avoid tf errors
+* Contributors: Procópio Stein
+
 0.0.36 (2017-04-24)
 -------------------
 * added servoing_cmd_vel in twist_mux_topics
