@@ -4,7 +4,7 @@
   <!-- execute pre-recorded motions -->
   <rosparam file="$(find tiago_bringup)/config/tiago_motions$(arg robot_sufix).yaml" command="load" />
   <node pkg="play_motion" type="play_motion" name="play_motion">
-    <rosparam file="$(find tiago_bringup)/config/approach_planner.yaml" command="load" />
+    <rosparam file="$(find tiago_bringup)/config/approach_planner$(arg robot_sufix).yaml" command="load" />
   </node>
   <node pkg="play_motion" type="is_already_there.py" name="is_already_there" />
 </launch>
