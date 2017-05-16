@@ -2,6 +2,11 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add configurations for Tiago Iron
+* Contributors: davidfernandez
+
 0.0.37 (2017-05-05)
 -------------------
 * disabled use_device_time from rgbd camera, to avoid tf errors

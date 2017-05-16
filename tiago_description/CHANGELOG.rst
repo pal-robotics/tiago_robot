@@ -2,6 +2,11 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add configurations for Tiago Iron
+* Contributors: davidfernandez
+
 0.0.37 (2017-05-05)
 -------------------
 
