@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.39 (2017-07-12)
+-------------------
 * show throttled and downsampled point cloud
   And add buffer for sonars display
 * Contributors: Jordi Pages
