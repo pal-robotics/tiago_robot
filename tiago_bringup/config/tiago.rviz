@@ -215,7 +215,7 @@ Visualization Manager:
           Size (Pixels): 3
           Size (m): 0.01
           Style: Flat Squares
-          Topic: /xtion/depth_registered/points
+          Topic: /throttle_filtering_points/filtered_points
           Unreliable: false
           Use Fixed Frame: true
           Use rainbow: true
@@ -233,7 +233,7 @@ Visualization Manager:
           Unreliable: false
           Value: true
         - Alpha: 0.5
-          Buffer Length: 1
+          Buffer Length: 3
           Class: rviz/Range
           Color: 255; 255; 255
           Enabled: true
