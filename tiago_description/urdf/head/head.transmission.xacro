@@ -10,7 +10,7 @@
 -->
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:macro name="head_transmission" params="name reduction">
+  <xacro:macro name="head_transmission" params="name reduction offset_value">
     <transmission name="${name}_trans">
       <type>transmission_interface/SimpleTransmission</type>
       
@@ -19,6 +19,7 @@
       </actuator>
       
       <joint name="${name}_joint" >
+        <offset>${offset_value}</offset>
         <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
       </joint>
     </transmission>

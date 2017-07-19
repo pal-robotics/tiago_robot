@@ -14,6 +14,7 @@
   <xacro:include filename="$(find tiago_description)/urdf/deg_to_rad.xacro" />
   <xacro:include filename="$(find tiago_description)/urdf/head/head.transmission.xacro" />
   <xacro:include filename="$(find tiago_description)/urdf/sensors/xtion_pro_live.urdf.xacro" />
+  <xacro:include filename="$(find tiago_description)/urdf/calibration/calibration_constants.urdf.xacro" />
 
   <!--Constant parameters-->
   <xacro:property name="head_friction" value="1.0" />
@@ -78,7 +79,7 @@
 
 
     <!-- extensions -->
-    <xacro:head_transmission name="${name}" reduction="1" />
+    <xacro:head_transmission name="${name}" reduction="1" offset_value="${head_1_joint_offset}"/>
 
   </xacro:macro>
 
@@ -123,7 +124,7 @@
                          soft_upper_limit="${head_2_upper_limit * deg_to_rad}" />
     </joint>
 
-    <xacro:head_transmission name="${name}" reduction="1" />
+    <xacro:head_transmission name="${name}" reduction="1" offset_value="${head_2_joint_offset}"/>
 
   </xacro:macro>
 
@@ -131,7 +132,7 @@
     <xacro:head_1 name="${name}_1" parent="${parent}" />
     <xacro:head_2 name="${name}_2" parent="${name}_1_link"/>
     <xacro:xtion_pro_live name="xtion" parent="${name}_2">
-      <origin xyz="0.0908 0.08 0" rpy="${-90 * deg_to_rad} 0 0" />
+      <origin xyz="${camera_position_x} ${camera_position_y} ${camera_position_z}" rpy="${camera_orientation_r} ${camera_orientation_p} ${camera_orientation_y}" />
       <!-- optical origin -->
       <origin xyz="0 0 0" rpy="${-90 * deg_to_rad} ${0 * deg_to_rad} ${-90 * deg_to_rad}" />
     </xacro:xtion_pro_live>

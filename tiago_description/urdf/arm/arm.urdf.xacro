@@ -14,6 +14,7 @@
   <xacro:include filename="$(find tiago_description)/urdf/deg_to_rad.xacro" />
   <xacro:include filename="$(find tiago_description)/urdf/arm/wrist.urdf.xacro" />
   <xacro:include filename="$(find tiago_description)/urdf/arm/arm.transmission.xacro" />
+  <xacro:include filename="$(find tiago_description)/urdf/calibration/calibration_constants.urdf.xacro" />
 
   <!--Constant parameters-->
   <xacro:property name="arm_friction"       value="1.0" />
@@ -266,10 +267,10 @@
 
 
     <!-- extensions -->
-    <xacro:arm_simple_transmission name="${name}" number="1" reduction="1.0" />
-    <xacro:arm_simple_transmission name="${name}" number="2" reduction="1.0" />
-    <xacro:arm_simple_transmission name="${name}" number="3" reduction="1.0" />
-    <xacro:arm_simple_transmission name="${name}" number="4" reduction="1.0" />
+    <xacro:arm_simple_transmission name="${name}" number="1" reduction="1.0" offset_value="${arm_1_joint_offset}"/>
+    <xacro:arm_simple_transmission name="${name}" number="2" reduction="1.0" offset_value="${arm_2_joint_offset}"/>
+    <xacro:arm_simple_transmission name="${name}" number="3" reduction="1.0" offset_value="${arm_3_joint_offset}"/>
+    <xacro:arm_simple_transmission name="${name}" number="4" reduction="1.0" offset_value="${arm_4_joint_offset}"/>
   </xacro:macro>
 
 </robot>

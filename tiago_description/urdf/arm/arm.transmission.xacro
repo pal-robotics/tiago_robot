@@ -10,13 +10,14 @@
 -->
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:macro name="arm_simple_transmission" params="name number reduction" >
+  <xacro:macro name="arm_simple_transmission" params="name number reduction offset_value" >
     <transmission name="${name}_${number}_trans">
       <type>transmission_interface/SimpleTransmission</type>
       <actuator name="${name}_${number}_motor" >
         <mechanicalReduction>${reduction}</mechanicalReduction>
       </actuator>
       <joint name="${name}_${number}_joint">
+        <offset>${offset_value}</offset>
         <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
         <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
 <!--
