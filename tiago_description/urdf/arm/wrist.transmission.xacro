@@ -11,7 +11,7 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
   <!--File includes-->
-  <xacro:include filename="$(find tiago_description)/urdf/calibration/calibration_constants.urdf.xacro" />
+  <xacro:include filename="$(find tiago_description_calibration)/urdf/calibration/calibration_constants.urdf.xacro" />
 
   <xacro:macro name="wrist_simple_transmission" params="name number reduction" >
     <transmission name="${name}_${number}_trans">

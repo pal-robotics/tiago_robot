@@ -14,7 +14,7 @@
   <xacro:include filename="$(find tiago_description)/urdf/deg_to_rad.xacro" />
   <xacro:include filename="$(find tiago_description)/urdf/arm/wrist.urdf.xacro" />
   <xacro:include filename="$(find tiago_description)/urdf/arm/arm.transmission.xacro" />
-  <xacro:include filename="$(find tiago_description)/urdf/calibration/calibration_constants.urdf.xacro" />
+  <xacro:include filename="$(find tiago_description_calibration)/urdf/calibration/calibration_constants.urdf.xacro" />
 
   <!--Constant parameters-->
   <xacro:property name="arm_friction"       value="1.0" />
