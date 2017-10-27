@@ -2,6 +2,11 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* added support for absolute encoders
+* Contributors: Hilario Tomé
+
 0.0.39 (2017-07-12)
 -------------------
 * show throttled and downsampled point cloud
