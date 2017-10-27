@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.40 (2017-10-27)
+-------------------
 * added support for absolute encoders
 * Contributors: Hilario Tomé
 

@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.40 (2017-10-27)
+-------------------
 * added support for absolute encoders
 * update urdf arm model for CoM position fix
 * Add simple tests for URDF files
