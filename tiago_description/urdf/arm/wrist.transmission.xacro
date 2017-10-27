@@ -39,12 +39,14 @@
         <offset>0.0</offset>
         <mechanicalReduction>${jnt_reduction_1}</mechanicalReduction>
         <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <ignoreTransmissionAbsoluteEncoder>1</ignoreTransmissionAbsoluteEncoder>       
       </joint>
       <joint name="${name}_${number_2}_joint">
         <role>joint2</role>
         <offset>0.0</offset>
         <mechanicalReduction>${jnt_reduction_2}</mechanicalReduction>
         <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <ignoreTransmissionAbsoluteEncoder>1</ignoreTransmissionAbsoluteEncoder>       
       </joint>
     </transmission>
   </xacro:macro>
