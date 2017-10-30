@@ -10,6 +10,9 @@
 -->
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
+  <!--File includes-->
+  <xacro:include filename="$(find tiago_description_calibration)/urdf/calibration/calibration_constants.urdf.xacro" />
+
   <xacro:macro name="wrist_simple_transmission" params="name number reduction" >
     <transmission name="${name}_${number}_trans">
       <type>transmission_interface/SimpleTransmission</type>
@@ -17,6 +20,7 @@
         <mechanicalReduction>${reduction}</mechanicalReduction>
       </actuator>
       <joint name="${name}_${number}_joint">
+        <offset>${arm_5_joint_offset}</offset>
         <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
       </joint>
     </transmission>
@@ -36,14 +40,14 @@
       </actuator>
       <joint name="${name}_${number_1}_joint">
         <role>joint1</role>
-        <offset>0.0</offset>
+        <offset>${arm_6_joint_offset}</offset>
         <mechanicalReduction>${jnt_reduction_1}</mechanicalReduction>
         <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
         <ignoreTransmissionAbsoluteEncoder>1</ignoreTransmissionAbsoluteEncoder>       
       </joint>
       <joint name="${name}_${number_2}_joint">
         <role>joint2</role>
-        <offset>0.0</offset>
+        <offset>${arm_7_joint_offset}</offset>
         <mechanicalReduction>${jnt_reduction_2}</mechanicalReduction>
         <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
         <ignoreTransmissionAbsoluteEncoder>1</ignoreTransmissionAbsoluteEncoder>       

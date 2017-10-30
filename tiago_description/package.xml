@@ -17,6 +17,7 @@
   <run_depend>pmb2_description</run_depend>
   <run_depend>hey5_description</run_depend>
   <run_depend>pal_gripper_description</run_depend>
+  <run_depend>tiago_description_calibration</run_depend>
 
   <test_depend>rostest</test_depend>
   <test_depend>urdf_test</test_depend>
