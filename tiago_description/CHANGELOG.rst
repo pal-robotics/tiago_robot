@@ -2,6 +2,13 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge remote-tracking branch 'origin/automatic_calibration' into dubnium-devel
+* deleted the calibration.urdf.xacro from this package and moved to another external package accessible from the customer
+* Modify the offset to allow the automatic calibration
+* Contributors: AleDF, Hilario Tomé
+
 0.0.40 (2017-10-27)
 -------------------
 * added support for absolute encoders
