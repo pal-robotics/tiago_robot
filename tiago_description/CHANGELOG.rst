@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.41 (2017-10-31)
+-------------------
 * Merge remote-tracking branch 'origin/automatic_calibration' into dubnium-devel
 * deleted the calibration.urdf.xacro from this package and moved to another external package accessible from the customer
 * Modify the offset to allow the automatic calibration
