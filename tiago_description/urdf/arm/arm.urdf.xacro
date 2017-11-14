@@ -27,7 +27,7 @@
   <xacro:property name="arm_2_max_effort"   value="39.0" />
   <xacro:property name="arm_3_max_effort"   value="17.86" />
   <xacro:property name="arm_4_max_effort"   value="17.86" />
-  <xacro:property name="arm_eps"            value="0.02" />
+  <xacro:property name="arm_eps"            value="0.07" />
 
 
   <xacro:macro name="tiago_arm" params="name parent wrist_6_range">
