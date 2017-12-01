@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.42 (2017-12-01)
+-------------------
 * increase eps in arm and head joints' ranges
   To prevent reaching mechanical limits after eye-hand calibration, which changes the offsets of these joints
 * Contributors: Jordi Pages
