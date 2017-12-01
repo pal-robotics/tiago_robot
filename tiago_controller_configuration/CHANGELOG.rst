@@ -2,6 +2,11 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* added publish odom option in controller yaml
+* Contributors: Procópio Stein
+
 0.0.41 (2017-10-31)
 -------------------
 

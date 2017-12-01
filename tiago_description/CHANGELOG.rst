@@ -2,6 +2,12 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* increase eps in arm and head joints' ranges
+  To prevent reaching mechanical limits after eye-hand calibration, which changes the offsets of these joints
+* Contributors: Jordi Pages
+
 0.0.41 (2017-10-31)
 -------------------
 * Merge remote-tracking branch 'origin/automatic_calibration' into dubnium-devel

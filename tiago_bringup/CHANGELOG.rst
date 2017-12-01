@@ -2,6 +2,12 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Forward correct calibration files to openni2
+* Add Copying of calibration files when launching xtion
+* Contributors: Victor Lopez
+
 0.0.41 (2017-10-31)
 -------------------
 
