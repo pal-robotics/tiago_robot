@@ -20,13 +20,13 @@
   <xacro:property name="arm_friction"       value="1.0" />
   <xacro:property name="arm_damping"        value="1.0" />
   <xacro:property name="arm_1_max_vel"      value="2.7" />
-  <xacro:property name="arm_2_max_vel"      value="3.66" />
-  <xacro:property name="arm_3_max_vel"      value="4.58" />
-  <xacro:property name="arm_4_max_vel"      value="4.58" />
+  <xacro:property name="arm_2_max_vel"      value="2.7" />
+  <xacro:property name="arm_3_max_vel"      value="3.14" />
+  <xacro:property name="arm_4_max_vel"      value="3.14" />
   <xacro:property name="arm_1_max_effort"   value="39.0" />
   <xacro:property name="arm_2_max_effort"   value="39.0" />
-  <xacro:property name="arm_3_max_effort"   value="17.86" />
-  <xacro:property name="arm_4_max_effort"   value="17.86" />
+  <xacro:property name="arm_3_max_effort"   value="22" />
+  <xacro:property name="arm_4_max_effort"   value="22" />
   <xacro:property name="arm_eps"            value="0.07" />
 
 
