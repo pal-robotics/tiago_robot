@@ -2,7 +2,7 @@
 <launch>
   <include file="$(find tiago_controller_configuration)/launch/joint_state_controller.launch"/>
   <include file="$(find tiago_controller_configuration)/launch/default_controllers.launch"/>
-  <include file="$(find tiago_controller_configuration)/launch/gripper_controller.launch"/>
+  <include file="$(find pal_gripper_controller_configuration)/launch/gripper_controller.launch"/>
   <!-- load gravity compensation controller with controllable wrist -->
   <include file="$(find tiago_controller_configuration)/launch/gravity_compensation_with_controller_wrist.launch"/>
   <!-- load wbc controller -->
