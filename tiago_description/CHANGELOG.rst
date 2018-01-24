@@ -2,6 +2,12 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* add files for schunk-gripper based TIAGo
+* remove unused files
+* Contributors: Jordi Pages
+
 0.0.42 (2017-12-01)
 -------------------
 * increase eps in arm and head joints' ranges

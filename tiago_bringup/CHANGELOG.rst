@@ -2,6 +2,13 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* add files for schunk-gripper based TIAGo
+* update home and unfold_arm motions
+* remove unused files
+* Contributors: Jordi Pages
+
 0.0.42 (2017-12-01)
 -------------------
 * Forward correct calibration files to openni2

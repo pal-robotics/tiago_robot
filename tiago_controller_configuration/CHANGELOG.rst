@@ -2,6 +2,13 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* include launch file now in pal_gripper package
+* remove no longer needed installation rule
+* remove unused files
+* Contributors: Jordi Pages
+
 0.0.42 (2017-12-01)
 -------------------
 * added publish odom option in controller yaml
