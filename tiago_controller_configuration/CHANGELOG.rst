@@ -2,8 +2,8 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.43 (2018-01-24)
+-------------------
 * include launch file now in pal_gripper package
 * remove no longer needed installation rule
 * remove unused files

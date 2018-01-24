@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.43 (2018-01-24)
+-------------------
 * add files for schunk-gripper based TIAGo
 * update home and unfold_arm motions
 * remove unused files
