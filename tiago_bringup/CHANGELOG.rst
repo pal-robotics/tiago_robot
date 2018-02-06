@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.44 (2018-02-06)
+-------------------
 * fix force sensors axis
 * Contributors: Jordi Pages
 

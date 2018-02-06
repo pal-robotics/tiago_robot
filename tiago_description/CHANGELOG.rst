@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.44 (2018-02-06)
+-------------------
 * add fingertip force sensors
 * remove blank line
 * Contributors: Jordi Pages
