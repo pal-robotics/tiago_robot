@@ -2,6 +2,11 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* fix force sensors axis
+* Contributors: Jordi Pages
+
 0.0.43 (2018-01-24)
 -------------------
 * add files for schunk-gripper based TIAGo
