@@ -40,7 +40,6 @@
   <xacro:tiago_arm name="arm" parent="torso_lift_link" wrist_6_range="81"/>
   <xacro:ft_sensor name="wrist" parent="arm_tool_link" />
   <xacro:hey5_hand parent="wrist_ft_tool_link" name="hand" reflect="1">
-
     <origin xyz="0 0 0" rpy="0 0 0"/>
   </xacro:hey5_hand>
 
