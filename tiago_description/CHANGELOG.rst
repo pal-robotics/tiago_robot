@@ -2,6 +2,11 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* add pal_wsg_gripper_description dependency
+* Contributors: Jordi Pages
+
 0.0.44 (2018-02-06)
 -------------------
 * add fingertip force sensors
