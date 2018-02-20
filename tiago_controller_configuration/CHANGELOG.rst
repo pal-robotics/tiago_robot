@@ -2,6 +2,12 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* added extra wbc controller to mode blacklist and started to add local joint control configuration files
+* removed wbc loading from titanium and steel controller launch files
+* Contributors: Hilario Tome
+
 0.0.45 (2018-02-08)
 -------------------
 

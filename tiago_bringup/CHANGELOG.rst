@@ -2,6 +2,11 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* added extra wbc controller to mode blacklist and started to add local joint control configuration files
+* Contributors: Hilario Tome
+
 0.0.45 (2018-02-08)
 -------------------
 
