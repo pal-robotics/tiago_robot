@@ -10,7 +10,7 @@ actuators:
     current_limit_cmd_port: ref_limit_current
     absolute_encoder_position_port: act_abs_position
 
-joint_mode_black_list: ['head_controller', 'whole_body_kinematic_controler', 'torso_controller']
+joint_mode_black_list: ['head_controller', 'whole_body_kinematic_controler', 'whole_body_kinematic_controller', 'torso_controller']
 
 force_torque:
   wrist_ft:
