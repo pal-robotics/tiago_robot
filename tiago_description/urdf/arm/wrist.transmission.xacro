@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!--
-
+i
   Copyright (c) 2015, PAL Robotics, S.L.
   All rights reserved.
 
@@ -21,6 +21,7 @@
       </actuator>
       <joint name="${name}_${number}_joint">
         <offset>${arm_5_joint_offset}</offset>
+        <hardwareInterface>hardware_interface/JointStateInterface</hardwareInterface>
         <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
       </joint>
     </transmission>
@@ -42,6 +43,7 @@
         <role>joint1</role>
         <offset>${arm_6_joint_offset}</offset>
         <mechanicalReduction>${jnt_reduction_1}</mechanicalReduction>
+        <hardwareInterface>hardware_interface/JointStateInterface</hardwareInterface>
         <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
         <ignoreTransmissionAbsoluteEncoder>1</ignoreTransmissionAbsoluteEncoder>       
       </joint>
@@ -49,6 +51,7 @@
         <role>joint2</role>
         <offset>${arm_7_joint_offset}</offset>
         <mechanicalReduction>${jnt_reduction_2}</mechanicalReduction>
+        <hardwareInterface>hardware_interface/JointStateInterface</hardwareInterface>
         <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
         <ignoreTransmissionAbsoluteEncoder>1</ignoreTransmissionAbsoluteEncoder>       
       </joint>

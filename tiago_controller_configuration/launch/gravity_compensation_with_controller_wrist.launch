@@ -1,5 +1,40 @@
 <launch>
+
+  <arg name="local_joint_control_type" default="direct_torque_control"/>
+  <arg name="ns" default="gravity_compensation"/>
   <rosparam command="load" file="$(find tiago_controller_configuration)/config/gravity_compensation_with_controller_wrist_controller.yaml" />
+
+  <rosparam command="load"
+    ns="$(arg ns)/joints"
+    file="$(find tiago_controller_configuration)/config/local_joint_control/$(arg local_joint_control_type)/$(arg local_joint_control_type)_arm_1_joint.yaml" />
+
+  <rosparam command="load"
+    ns="$(arg ns)/joints"
+    file="$(find tiago_controller_configuration)/config/local_joint_control/$(arg local_joint_control_type)/$(arg local_joint_control_type)_arm_2_joint.yaml" />
+
+  <rosparam command="load"
+    ns="$(arg ns)/joints"
+    file="$(find tiago_controller_configuration)/config/local_joint_control/$(arg local_joint_control_type)/$(arg local_joint_control_type)_arm_3_joint.yaml" />
+
+  <rosparam command="load"
+    ns="$(arg ns)/joints"
+    file="$(find tiago_controller_configuration)/config/local_joint_control/$(arg local_joint_control_type)/$(arg local_joint_control_type)_arm_4_joint.yaml" />
+
+  <rosparam command="load"
+    ns="$(arg ns)/joints"
+    file="$(find tiago_controller_configuration)/config/local_joint_control/no_control/no_control_arm_5_joint.yaml" />
+
+  <rosparam command="load"
+    ns="$(arg ns)/joints"
+    file="$(find tiago_controller_configuration)/config/local_joint_control/no_control/no_control_arm_6_joint.yaml" />
+  
+  <rosparam command="load"
+    ns="$(arg ns)/joints"
+    file="$(find tiago_controller_configuration)/config/local_joint_control/no_control/no_control_arm_7_joint.yaml" />
+
+  <rosparam command="load"
+    ns="$(arg ns)/joints"
+    file="$(find tiago_controller_configuration)/config/local_joint_control/no_control/no_control_torso_lift_joint.yaml" />
 
   <node name="grav_compensation_controller_loader"
         pkg="controller_manager" type="controller_manager" output="screen"
