@@ -1,6 +1,6 @@
 <launch>
 
-  <arg name="local_joint_control_type" default="direct_torque_control"/>
+  <arg name="local_joint_control_type" default="direct_effort_control"/>
   <arg name="ns" default="gravity_compensation"/>
   <rosparam command="load" file="$(find tiago_controller_configuration)/config/gravity_compensation_with_controller_wrist_controller.yaml" />
 

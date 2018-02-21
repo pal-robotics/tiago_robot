@@ -1,7 +1,5 @@
-arm_1_joint:
+arm_6_joint:
   type: pal_local_joint_control::DirectEffortControl
   motor_torque_constant: 0.0487
   # Due to wrist current control it disabled
-  torque_scaling_arm_4_joint: 0.0
-  torque_scaling_arm_4_joint: 0.0
-  torque_scaling_arm_4_joint: 0.0
+  torque_scaling: 0.0
