@@ -20,6 +20,7 @@
       
       <joint name="${name}_joint" >
         <offset>${offset_value}</offset>
+        <hardwareInterface>hardware_interface/JointStateInterface</hardwareInterface>
         <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
       </joint>
     </transmission>

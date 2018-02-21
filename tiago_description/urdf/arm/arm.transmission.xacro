@@ -20,9 +20,7 @@
         <offset>${offset_value}</offset>
         <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
         <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-<!--
-        <hardwareInterface>hardware_interface/JointModeInterface</hardwareInterface>
--->
+        <hardwareInterface>hardware_interface/JointStateInterface</hardwareInterface>
       </joint>
     </transmission>
   </xacro:macro>
