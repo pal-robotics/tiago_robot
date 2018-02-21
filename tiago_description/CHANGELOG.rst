@@ -2,6 +2,13 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* added joint state interface transmission
+* Fix gravity compensation issues
+* added more configuration files for local joint control
+* Contributors: Adria Roig, Hilario Tome
+
 0.0.46 (2018-02-20)
 -------------------
 
