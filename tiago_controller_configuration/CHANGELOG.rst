@@ -2,6 +2,11 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add gravity_compensation_controller as run depend
+* Contributors: Adria Roig
+
 1.0.0 (2018-02-21)
 ------------------
 * changed scaling gains to one for direct effort control
