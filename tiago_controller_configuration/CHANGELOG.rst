@@ -2,6 +2,11 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Publish_cmd to true, and deprecate publish_wheel_data
+* Contributors: Victor Lopez
+
 1.0.1 (2018-02-22)
 ------------------
 * Add gravity_compensation_controller as run depend
