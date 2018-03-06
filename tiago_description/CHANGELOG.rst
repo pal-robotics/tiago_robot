@@ -2,6 +2,11 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* add launch for kinematic testing
+* Contributors: Jordi Pages
+
 0.0.46 (2018-02-20)
 -------------------
 
