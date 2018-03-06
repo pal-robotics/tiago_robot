@@ -2,8 +2,8 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.2 (2018-03-06)
+------------------
 * Publish_cmd to true, and deprecate publish_wheel_data
 * Contributors: Victor Lopez
 

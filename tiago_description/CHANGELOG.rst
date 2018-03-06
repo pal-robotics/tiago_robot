@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.2 (2018-03-06)
+------------------
 * Merge branch 'add-kinematic-launch' into 'dubnium-devel'
   add launch for kinematic testing
   See merge request robots/tiago_robot!35
