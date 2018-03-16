@@ -2,6 +2,9 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 1.0.2 (2018-03-06)
 ------------------
 * Merge branch 'add-kinematic-launch' into 'dubnium-devel'
