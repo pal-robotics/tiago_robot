@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.4 (2018-03-26)
+------------------
 * Merge branch 'recover-chessboard-tiago' into 'erbium-devel'
   Recover chessboard tiago
   See merge request robots/tiago_robot!38
