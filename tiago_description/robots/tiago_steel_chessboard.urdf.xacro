@@ -42,6 +42,6 @@
 
   <!-- Chessboard for eye-hand calibration -->
   <xacro:include filename="$(find tiago_description)/urdf/chessboard/chessboard.urdf.xacro" />
-  <xacro:chessboard name="arm_chessboard" parent="arm_7_link" origin="-0.1 0.0 0.19" rpy="1.5708  -0   0"/>
+  <xacro:chessboard name="arm_chessboard" parent="arm_7_link" origin="-0.1 0.0 0.272" rpy="1.5708  -0   0"/>
 </robot>
 
