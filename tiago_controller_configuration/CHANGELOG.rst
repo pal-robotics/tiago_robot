@@ -2,6 +2,19 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'recover-chessboard-tiago' into 'erbium-devel'
+  Recover chessboard tiago
+  See merge request robots/tiago_robot!38
+* Revert "remove unused files"
+  This reverts commit e50aca81d55736b99e108bb90d681862be39c028.
+* Merge branch 'wbc-erbium' into 'erbium-devel'
+  WBC erbium
+  See merge request robots/tiago_robot!37
+* Remove unnecessary launch file
+* Contributors: Adria Roig, Jordi Pages, Victor Lopez
+
 1.0.3 (2018-03-16)
 ------------------
 * fixed typo in local joint control, commented out rpc

@@ -2,6 +2,18 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'recover-chessboard-tiago' into 'erbium-devel'
+  Recover chessboard tiago
+  See merge request robots/tiago_robot!38
+* Increase camera FoV, more similar to real robot
+* Improve chessboard position wrt real robot
+* Add missing tiago_steel_chessboard files
+* Revert "remove unused files"
+  This reverts commit e50aca81d55736b99e108bb90d681862be39c028.
+* Contributors: Jordi Pages, Victor Lopez
+
 1.0.3 (2018-03-16)
 ------------------
 
