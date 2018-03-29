@@ -2,6 +2,11 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add new extra joints
+* Contributors: Jordan Palacios
+
 1.0.4 (2018-03-26)
 ------------------
 * Merge branch 'recover-chessboard-tiago' into 'erbium-devel'
