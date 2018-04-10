@@ -2,8 +2,8 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.6 (2018-04-10)
+------------------
 * Merge branch 'extra-joints-torque-state-controller' into 'erbium-devel'
   Use extra joints on torque_state_controller
   See merge request robots/tiago_robot!41
