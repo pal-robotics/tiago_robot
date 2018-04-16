@@ -7,7 +7,7 @@
   To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to
   Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
 -->
-<robot  xmlns:xacro="http://www.ros.org/wiki/xacro"
+<robot  xmlns:xacro="http://ros.org/wiki/xacroo"
         name="tiago" >
   <xacro:arg name="multiple" default="false"/>
   <xacro:arg name="namespace" default=""/>
