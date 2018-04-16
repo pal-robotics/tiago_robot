@@ -8,7 +8,7 @@
 
   <!-- Robot description -->
   <param name="robot_description"
-    command="$(find xacro)/xacro --inorder
+    command="rosrun xacro xacro --inorder
     '$(find tiago_description)/robots/tiago.urdf.xacro'
     arm:=$(arg arm)
     end_effector:=$(arg end_effector)
