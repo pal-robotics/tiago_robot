@@ -1,8 +1,10 @@
-<launch>
+<launch deprecated="Please use 'upload.lauch' instead.">
   <arg name="robot" default="titanium"/>
   <arg name="multi" default=""/>
 
-  <!-- Robot description -->
-  <param name="robot_description" command="$(find xacro)/xacro.py '$(find tiago_description)/robots/tiago_$(arg robot).urdf.xacro' $(arg multi)" />
+  <include file="$(find tiago_description)/robots/upload.launch">
+    <arg name="robot" value="$(arg robot)"/>
+    <arg name="multi" value="$(arg multi)"/>
+  </include>
 
 </launch>
