@@ -90,6 +90,6 @@
   </gazebo>
 
   <!-- define global properties -->
-  <property name="M_PI" value="3.1415926535897931" />
+  <xacro:property name="M_PI" value="3.1415926535897931" />
 
 </robot>
