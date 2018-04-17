@@ -63,36 +63,66 @@ play_motion:
         usage: demo
         description: 'Reach max'
 
-
+    #deprecated use close
     close_gripper:
       joints: [gripper_left_finger_joint, gripper_right_finger_joint]
       points:
       - positions: [0.0, 0.0]
         time_from_start: 0.5
-      meta:
-        name: close_gripper
-        usage: demo
-        description: 'close_gripper'
 
+    close:
+      joints: [gripper_left_finger_joint, gripper_right_finger_joint]
+      points:
+      - positions: [0.0, 0.0]
+        time_from_start: 0.5
+      meta:
+        name: Close Gripper
+        usage: demo
+        description: 'Close Gripper'
+
+    #deprecated use close_half
     close_gripper_half:
       joints: [gripper_left_finger_joint, gripper_right_finger_joint]
       points:
       - positions: [0.024, 0.024]
         time_from_start: 0.5
-      meta:
-        name: close_gripper_half
-        usage: demo
-        description: 'close_gripper_half'
 
+    close_half:
+      joints: [gripper_left_finger_joint, gripper_right_finger_joint]
+      points:
+      - positions: [0.024, 0.024]
+        time_from_start: 0.5
+      meta:
+        name: Close Gripper Half
+        usage: demo
+        description: 'Close Gripper Halfway'
+
+    #deprecated use open
     open_gripper:
       joints: [gripper_left_finger_joint, gripper_right_finger_joint]
       points:
       - positions: [0.044, 0.044]
         time_from_start: 0.5
+
+    open:
+      joints: [gripper_left_finger_joint, gripper_right_finger_joint]
+      points:
+      - positions: [0.044, 0.044]
+        time_from_start: 0.5
       meta:
-        name: open_gripper
+        name: Open Gripper
         usage: demo
-        description: 'open_gripper'
+        description: 'Open Gripper'
+
+    point:
+      joints: [gripper_left_finger_joint, gripper_right_finger_joint]
+      points:
+      - positions: [0.0, 0.0]
+        time_from_start: 0.5
+      meta:
+        name: Point Gripper Pose
+        usage: demo
+        description: 'Close Gripper to point to something'
 
     head_tour:
       joints: [head_1_joint, head_2_joint]
