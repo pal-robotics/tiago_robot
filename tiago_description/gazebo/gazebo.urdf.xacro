@@ -9,7 +9,7 @@
   Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
 -->
 
-<robot name="tiago" xmlns:xacro="http://www.ros.org/wiki/xacro">
+<robot name="tiago" xmlns:xacro="http://ros.org/wiki/xacro">
   <gazebo>
     <plugin filename="libgazebo_ros_control.so" name="gazebo_ros_control">
       <ns></ns>
