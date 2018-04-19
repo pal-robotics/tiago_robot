@@ -67,6 +67,7 @@ play_motion:
         usage: demo
         description: 'Reach max'
 
+    #deprecated a use open
     open_hand:
       joints: [hand_thumb_joint, hand_index_joint, hand_mrl_joint]
       points:
@@ -74,11 +75,21 @@ play_motion:
         time_from_start: 0.1
       - positions: [0.0, 0.0, 0.0]
         time_from_start: 2.5
-      meta:
-        name: open_hand
-        usage: demo
-        description: 'open_hand'
 
+    open:
+      joints: [hand_thumb_joint, hand_index_joint, hand_mrl_joint]
+      points:
+      - positions: [-1.0, -1.0, -1.0]
+        time_from_start: 0.1
+      - positions: [0.0, 0.0, 0.0]
+        time_from_start: 2.5
+      meta:
+        name: Open Hand
+        usage: demo
+        description: 'Opens hand'
+
+
+    #deprecated a use close
     close_hand:
       joints: [hand_thumb_joint, hand_index_joint, hand_mrl_joint]
       points:
@@ -86,11 +97,30 @@ play_motion:
         time_from_start: 0.1
       - positions: [6.2, 6.8, 9.2]
         time_from_start: 2.5
-      meta:
-        name: close_hand
-        usage: demo
-        description: 'close_hand'
 
+    close:
+      joints: [hand_thumb_joint, hand_index_joint, hand_mrl_joint]
+      points:
+      - positions: [2.37, 0.0, 0.0]
+        time_from_start: 0.1
+      - positions: [6.2, 6.8, 9.2]
+        time_from_start: 2.5
+      meta:
+        name: Close Hand
+        usage: demo
+        description: 'Closes hand'
+
+    close_half:
+      joints: [hand_thumb_joint, hand_index_joint, hand_mrl_joint]
+      points:
+      - positions: [3.2, 3.8, 4.6]
+        time_from_start: 2.5
+      meta:
+        name: Close Hand Half
+        usage: demo
+        description: 'Closes hand halfway'
+
+    #deprecated a use point
     pointing_hand:
       joints: [hand_thumb_joint, hand_index_joint, hand_mrl_joint]
       points:
@@ -98,10 +128,18 @@ play_motion:
         time_from_start: 0.1
       - positions: [6.2, 0.0, 9.2]
         time_from_start: 1.5
+
+    point:
+      joints: [hand_thumb_joint, hand_index_joint, hand_mrl_joint]
+      points:
+      - positions: [2.37, -1.0, 0.0]
+        time_from_start: 0.1
+      - positions: [6.2, 0.0, 9.2]
+        time_from_start: 1.5
       meta:
-        name: pointing_hand
+        name: Pointing Hand
         usage: demo
-        description: 'pointing_hand'
+        description: 'Pointing Hand'
 
     gun_hand:
       joints: [hand_thumb_joint, hand_index_joint, hand_mrl_joint]
@@ -217,15 +255,22 @@ play_motion:
         usage: demo
         description: 'Do weights'
 
+    #deprecated, use offer
     offer_hand:
       joints: ['torso_lift_joint', 'arm_1_joint', 'arm_2_joint', 'arm_3_joint', 'arm_4_joint', 'arm_5_joint', 'arm_6_joint', 'arm_7_joint', 'hand_thumb_joint', 'hand_index_joint', 'hand_mrl_joint']
       points:
       - positions: [0.296, 1.61, -0.93, -3.14, 1.83, -1.577, -0.62, -1.577, -0.001, -0.0, -0.001]
         time_from_start: 0.0
+
+    offer:
+      joints: ['torso_lift_joint', 'arm_1_joint', 'arm_2_joint', 'arm_3_joint', 'arm_4_joint', 'arm_5_joint', 'arm_6_joint', 'arm_7_joint', 'hand_thumb_joint', 'hand_index_joint', 'hand_mrl_joint']
+      points:
+      - positions: [0.296, 1.61, -0.93, -3.14, 1.83, -1.577, -0.62, -1.577, -0.001, -0.0, -0.001]
+        time_from_start: 0.0
       meta:
-        name: offer_hand
+        name: Offer Hand
         usage: demo
-        description: 'offer_hand'
+        description: 'Offer hand'
 
     shake_hands:
       joints: ['hand_thumb_joint','hand_index_joint','hand_mrl_joint','torso_lift_joint', 'arm_1_joint', 'arm_2_joint', 'arm_3_joint', 'arm_4_joint', 'arm_5_joint', 'arm_6_joint', 'arm_7_joint']
