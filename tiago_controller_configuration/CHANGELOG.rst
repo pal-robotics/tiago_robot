@@ -2,6 +2,18 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'iron-config' into 'erbium-devel'
+  Remove arm controllers for Tiago Iron
+  See merge request robots/tiago_robot!49
+* Remove arm controllers for Tiago Iron
+* Merge branch 'remove-chessboard' into 'erbium-devel'
+  Remove chessboard, it's a separate entity now
+  See merge request robots/tiago_robot!47
+* Remove chessboard, it's a separate entity now
+* Contributors: Hilario Tome, Victor Lopez, davidfernandez
+
 1.0.6 (2018-04-10)
 ------------------
 * Merge branch 'extra-joints-torque-state-controller' into 'erbium-devel'

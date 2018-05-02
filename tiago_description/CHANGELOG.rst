@@ -2,6 +2,25 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'mr-origin-43' into 'erbium-devel'
+  normalize xmlns across xacro files
+  See merge request robots/tiago_robot!48
+* normalize xmlns across xacro files
+* Merge branch 'remove-chessboard' into 'erbium-devel'
+  Remove chessboard, it's a separate entity now
+  See merge request robots/tiago_robot!47
+* Remove chessboard, it's a separate entity now
+* Merge branch 'fix_xacro_warning' into 'erbium-devel'
+  fix xacro warning
+  See merge request robots/tiago_robot!44
+* fix xacro warning
+  deprecated: xacro tags should be prepended with 'xacro' xml namespace.
+  Use the following script to fix incorrect usage:
+  find . -iname "*.xacro" | xargs sed -i 's#<\([/]\?\)\(if\|unless\|include\|arg\|property\|macro\|insert_block\)#<\1xacro:\2#g'
+* Contributors: Hilario Tome, Jeremie Deray, Victor Lopez
+
 1.0.6 (2018-04-10)
 ------------------
 

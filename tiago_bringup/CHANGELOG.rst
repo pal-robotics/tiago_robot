@@ -2,6 +2,19 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'motion-rename' into 'erbium-devel'
+  Rename some end effector poses to generic names
+  See merge request robots/tiago_robot!46
+* Merge branch 'remove-chessboard' into 'erbium-devel'
+  Remove chessboard, it's a separate entity now
+  See merge request robots/tiago_robot!47
+* Remove chessboard, it's a separate entity now
+* Migrate offer as well
+* Rename some end effector poses to generic names
+* Contributors: Hilario Tome, Victor Lopez
+
 1.0.6 (2018-04-10)
 ------------------
 
