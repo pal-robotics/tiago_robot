@@ -9,7 +9,7 @@
   <rosparam command="load" file="$(find tiago_controller_configuration)/config/mobile_base_controller.yaml"/>
 
   <!-- Robot model -->
-  <include file="$(find tiago_description)/robots/upload_tiago.launch">
+  <include file="$(find tiago_description)/robots/upload.launch">
     <arg name="robot" value="$(arg robot)"/>
   </include>
 

@@ -1,6 +1,6 @@
 <launch>
   <arg name="robot" default="titanium" />
-  <include file="$(find tiago_description)/robots/upload_tiago.launch">
+  <include file="$(find tiago_description)/robots/upload.launch">
     <arg name="robot" value="$(arg robot)"/>
   </include>
 
