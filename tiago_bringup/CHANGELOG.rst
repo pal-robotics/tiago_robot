@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.8 (2018-05-02)
+------------------
 * Merge branch 'deprecate_upload_tiago' into 'erbium-devel'
   deprecate upload_tiago & fix xacro warning --inorder
   See merge request robots/tiago_robot!42
