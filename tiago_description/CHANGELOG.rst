@@ -2,6 +2,14 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'deprecate_upload_tiago' into 'erbium-devel'
+  deprecate upload_tiago & fix xacro warning --inorder
+  See merge request robots/tiago_robot!42
+* deprecate upload_tiago & fix xacro warning --inorder
+* Contributors: Hilario Tome, Jeremie Deray
+
 1.0.7 (2018-05-02)
 ------------------
 * Merge branch 'mr-origin-43' into 'erbium-devel'
