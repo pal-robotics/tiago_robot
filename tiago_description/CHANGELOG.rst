@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.7 (2018-05-02)
+------------------
 * Merge branch 'mr-origin-43' into 'erbium-devel'
   normalize xmlns across xacro files
   See merge request robots/tiago_robot!48

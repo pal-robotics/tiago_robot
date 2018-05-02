@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.7 (2018-05-02)
+------------------
 * Merge branch 'motion-rename' into 'erbium-devel'
   Rename some end effector poses to generic names
   See merge request robots/tiago_robot!46
