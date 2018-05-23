@@ -3,49 +3,68 @@
 
   <arg name="local_joint_control_type" default=""/>
   <arg name="ns" default=""/>
+  <arg name="local_joint_control" default="direct_position_control"/>
+  <arg name="controller_pkg_name" default="tiago_controller_configuration"/>
 
-  <!-- Configure local joint control -->
-  
-  <!-- Left leg -->
-  <rosparam command="load"
-    ns="$(arg ns)/joints"
-    file="$(find tiago_controller_configuration)/config/local_joint_control/$(arg local_joint_control_type)/$(arg local_joint_control_type)_arm_1_joint.yaml" />
+  <!-- Load controlled joint list configuration-->
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+    <arg name="ns" value="$(arg ns)"/>
+    <arg name="joint_name" value="arm_1_joint"/>
+  </include> 
 
-  <rosparam command="load"
-    ns="$(arg ns)/joints"
-    file="$(find tiago_controller_configuration)/config/local_joint_control/$(arg local_joint_control_type)/$(arg local_joint_control_type)_arm_2_joint.yaml" />
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+    <arg name="ns" value="$(arg ns)"/>
+    <arg name="joint_name" value="arm_2_joint"/>
+  </include> 
 
-  <rosparam command="load"
-    ns="$(arg ns)/joints"
-    file="$(find tiago_controller_configuration)/config/local_joint_control/$(arg local_joint_control_type)/$(arg local_joint_control_type)_arm_3_joint.yaml" />
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+    <arg name="ns" value="$(arg ns)"/>
+    <arg name="joint_name" value="arm_3_joint"/>
+  </include> 
 
-  <rosparam command="load"
-    ns="$(arg ns)/joints"
-    file="$(find tiago_controller_configuration)/config/local_joint_control/$(arg local_joint_control_type)/$(arg local_joint_control_type)_arm_4_joint.yaml" />
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+    <arg name="ns" value="$(arg ns)"/>
+    <arg name="joint_name" value="arm_4_joint"/>
+  </include> 
 
-  <rosparam command="load"
-    ns="$(arg ns)/joints"
-    file="$(find tiago_controller_configuration)/config/local_joint_control/$(arg local_joint_control_type)/$(arg local_joint_control_type)_arm_5_joint.yaml" />
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+    <arg name="ns" value="$(arg ns)"/>
+    <arg name="joint_name" value="arm_5_joint"/>
+  </include> 
 
-  <rosparam command="load"
-    ns="$(arg ns)/joints"
-    file="$(find tiago_controller_configuration)/config/local_joint_control/$(arg local_joint_control_type)/$(arg local_joint_control_type)_arm_6_joint.yaml" />
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+    <arg name="ns" value="$(arg ns)"/>
+    <arg name="joint_name" value="arm_6_joint"/>
+  </include> 
 
-  <rosparam command="load"
-    ns="$(arg ns)/joints"
-    file="$(find tiago_controller_configuration)/config/local_joint_control/$(arg local_joint_control_type)/$(arg local_joint_control_type)_arm_7_joint.yaml" />
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+    <arg name="ns" value="$(arg ns)"/>
+    <arg name="joint_name" value="arm_7_joint"/>
+  </include> 
 
-  <rosparam command="load"
-    ns="$(arg ns)/joints"
-    file="$(find tiago_controller_configuration)/config/local_joint_control/$(arg local_joint_control_type)/$(arg local_joint_control_type)_head_1_joint.yaml" />
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+    <arg name="ns" value="$(arg ns)"/>
+    <arg name="joint_name" value="head_1_joint"/>
+  </include> 
 
-  <rosparam command="load"
-    ns="$(arg ns)/joints"
-    file="$(find tiago_controller_configuration)/config/local_joint_control/$(arg local_joint_control_type)/$(arg local_joint_control_type)_head_2_joint.yaml" />
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+    <arg name="ns" value="$(arg ns)"/>
+    <arg name="joint_name" value="head_2_joint"/>
+  </include> 
 
-  <rosparam command="load"
-    ns="$(arg ns)/joints"
-    file="$(find tiago_controller_configuration)/config/local_joint_control/$(arg local_joint_control_type)/$(arg local_joint_control_type)_torso_lift_joint.yaml" />
-
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+    <arg name="ns" value="$(arg ns)"/>
+    <arg name="joint_name" value="torso_lift_joint"/>
+  </include> 
 
 </launch>

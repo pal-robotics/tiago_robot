@@ -1,0 +1,7 @@
+motor_torque_constant: 0.0
+torque_sensor_offset: 0.0
+reduction_ratio: 0.0
+actuator_names:
+  - torso_lift_motor
+check_mode: false
+dt: 0.01
