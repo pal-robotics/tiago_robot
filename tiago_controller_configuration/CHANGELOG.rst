@@ -2,8 +2,8 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.9 (2018-05-24)
+------------------
 * Merge branch 'model_utils' into 'erbium-devel'
   refactoring local joint control
   See merge request robots/tiago_robot!51
