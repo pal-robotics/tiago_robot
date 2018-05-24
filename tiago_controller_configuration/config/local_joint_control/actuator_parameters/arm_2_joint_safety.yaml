@@ -1,0 +1,5 @@
+max_position: 0.0
+min_position: 0.0
+max_velocity: 0.0
+max_torque: 0.0
+enable_safety: false
