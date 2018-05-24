@@ -1,2 +1,0 @@
-arm_5_joint:
-  type: pal_local_joint_control::NoControl

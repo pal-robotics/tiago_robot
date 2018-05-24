@@ -1,6 +1,0 @@
-arm_3_joint:
-  type: pal_local_joint_control::DirectEffortControl
-  motor_torque_constant: -0.1149
-  torque_scaling: 1.0
-  viscous_friction: 0.0
-  static_friction: 0.0

@@ -1,0 +1,8 @@
+motor_torque_constant: 0.136
+torque_sensor_offset: 0.0
+reduction_ratio: 100.0
+actuator_names:
+  - arm_2_motor
+check_mode: false
+dt: 0.01
+
