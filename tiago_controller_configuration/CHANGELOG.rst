@@ -2,6 +2,15 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'model_utils' into 'erbium-devel'
+  refactoring local joint control
+  See merge request robots/tiago_robot!51
+* working gravity compensation on robot after pal_local_joint control refactor
+* refactoring local joint control
+* Contributors: Hilario Tome
+
 1.0.8 (2018-05-02)
 ------------------
 
