@@ -2,6 +2,15 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'no_control' into 'erbium-devel'
+  No control
+  See merge request robots/tiago_robot!52
+* Add no control local params for torso
+* Add no control local config files
+* Contributors: Adrià Roig, Hilario Tome
+
 1.0.9 (2018-05-24)
 ------------------
 * Merge branch 'model_utils' into 'erbium-devel'
