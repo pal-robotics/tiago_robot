@@ -2,8 +2,8 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.10 (2018-07-10)
+-------------------
 * Merge branch 'no_control' into 'erbium-devel'
   No control
   See merge request robots/tiago_robot!52
