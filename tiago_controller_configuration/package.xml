@@ -21,5 +21,6 @@
   <run_depend>force_torque_sensor_controller</run_depend>
   <run_depend>diff_drive_controller</run_depend>
   <run_depend>gravity_compensation_controller</run_depend>
+  <run_depend>simple_grasping_action</run_depend>
 
 </package>
