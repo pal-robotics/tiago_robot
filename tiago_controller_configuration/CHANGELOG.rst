@@ -2,6 +2,11 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add missing simple_grasping_action dependency for hey5 launch
+* Contributors: Victor Lopez
+
 1.0.10 (2018-07-10)
 -------------------
 * Merge branch 'no_control' into 'erbium-devel'
