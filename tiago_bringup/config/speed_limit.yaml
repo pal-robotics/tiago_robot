@@ -1,4 +1,5 @@
 speed_limit:
+  start_disabled: true
   reporters:
     pmb2_web:
       type: reem_topic
