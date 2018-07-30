@@ -4,7 +4,7 @@
 
   <!-- Robot description -->
   <param name="robot_description"
-    command="$(find xacro)/xacro.py --inorder
+    command="$(find xacro)/xacro --inorder
              '$(find tiago_description)/robots/tiago_$(arg robot).urdf.xacro' $(arg multi)" />
 
 </launch>
