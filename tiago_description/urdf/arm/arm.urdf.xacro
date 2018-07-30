@@ -58,10 +58,6 @@
         </geometry>
       </collision>
     </link>
-    <gazebo reference="${name}_1_link">
-      <material>Gazebo/Orange</material>
-    </gazebo>
-
 
     <joint name="${name}_1_joint" type="revolute">
       <parent link="${parent}" />
