@@ -1,4 +1,4 @@
-<launch deprecated="Please use 'upload.lauch' instead.">
+<launch deprecated="Please use 'upload.launch' instead.">
   <arg name="robot" default="titanium"/>
   <arg name="multi" default=""/>
 
