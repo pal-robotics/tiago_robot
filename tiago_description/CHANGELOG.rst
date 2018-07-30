@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.12 (2018-07-30)
+-------------------
 * Merge branch 'fix-simulation-warnings' into 'erbium-devel'
   Fix simulation warnings
   See merge request robots/tiago_robot!54
