@@ -2,6 +2,16 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'fix-simulation-warnings' into 'erbium-devel'
+  Fix simulation warnings
+  See merge request robots/tiago_robot!54
+* remove gazebo property overwrite
+* fix typo in comment
+* call xacro rather than xacro.py
+* Contributors: Jordi Pages, Victor Lopez
+
 1.0.11 (2018-07-13)
 -------------------
 
