@@ -2,6 +2,14 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'add-end-effector-camera' into 'erbium-devel'
+  add end-effector camera add-on required files
+  See merge request robots/tiago_robot!55
+* add end-effector camera add-on required files
+* Contributors: Jordi Pages, Victor Lopez
+
 1.0.12 (2018-07-30)
 -------------------
 
