@@ -2,6 +2,11 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Fix libuvc dependency name
+* Contributors: Victor Lopez
+
 1.0.13 (2018-08-01)
 -------------------
 * Merge branch 'add-end-effector-camera' into 'erbium-devel'
