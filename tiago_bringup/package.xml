@@ -21,5 +21,5 @@
   <run_depend>speed_limit</run_depend>
   <run_depend>sensor_to_cloud</run_depend>
   <run_depend>camera_calibration_files</run_depend>
-  <run_depend>libuvc-camera</run_depend>
+  <run_depend>libuvc_camera</run_depend>
 </package>
