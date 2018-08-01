@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.14 (2018-08-01)
+-------------------
 * Fix libuvc dependency name
 * Contributors: Victor Lopez
 
