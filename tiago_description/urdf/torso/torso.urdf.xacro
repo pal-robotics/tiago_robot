@@ -111,7 +111,21 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0" />
        <geometry>
-        <mesh filename="package://tiago_description/meshes/torso/torso_lift_collision.dae" scale="1 1 1"/>
+        <mesh filename="package://tiago_description/meshes/torso/torso_lift_collision_core.dae" scale="1 1 1"/>
+      </geometry>
+      <material name="LightGrey"/>
+    </collision>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+       <geometry>
+        <mesh filename="package://tiago_description/meshes/torso/torso_lift_collision_shoulder.dae" scale="1 1 1"/>
+      </geometry>
+      <material name="LightGrey"/>
+    </collision>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+       <geometry>
+        <mesh filename="package://tiago_description/meshes/torso/torso_lift_collision_neck.dae" scale="1 1 1"/>
       </geometry>
       <material name="LightGrey"/>
     </collision>
