@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.15 (2018-08-06)
+-------------------
 * Merge branch 'add-collision-parameters' into 'erbium-devel'
   Add collision_parameters.yaml
   See merge request robots/tiago_robot!57
