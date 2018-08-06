@@ -2,6 +2,14 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'multiple-link-collisions' into 'erbium-devel'
+  Split torso collision into multiple elements for better convex hulls
+  See merge request robots/tiago_robot!56
+* Split torso collision into multiple elements for better convex hulls
+* Contributors: Hilario Tome, Victor Lopez
+
 1.0.15 (2018-08-06)
 -------------------
 * Merge branch 'add-collision-parameters' into 'erbium-devel'
