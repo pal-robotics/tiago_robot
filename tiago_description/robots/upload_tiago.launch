@@ -3,6 +3,6 @@
   <arg name="multi" default=""/>
 
   <!-- Robot description -->
-  <param name="robot_description" command="$(find xacro)/xacro.py '$(find tiago_description)/robots/tiago_$(arg robot).urdf.xacro' $(arg multi)" />
+  <param name="robot_description" command="$(find xacro)/xacro '$(find tiago_description)/robots/tiago_$(arg robot).urdf.xacro' $(arg multi)" />
 
 </launch>
