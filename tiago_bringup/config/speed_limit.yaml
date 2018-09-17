@@ -1,4 +1,5 @@
 speed_limit:
+  start_disabled: true
   reporters:
     pmb2_web:
       type: reem_topic
@@ -12,35 +13,13 @@ speed_limit:
       speed_factor: 0.5
       fixed: true
 
-#   base_sonars:
-#      type: range
-#      topic: sonar_base
-#      disabled: false
-#      obstacle_max_dist: 0.5
-#      stop_dist: 0.05
-#      speed_factor: 0.3
-#      blacklist: []
-#      whitelist: []
-#      fixed: true
-
-#    base_irs:
-#      type: range
-#      topic: ir_base
-#      disabled: true
-#      obstacle_max_dist: 1.0
-#      stop_dist: 0.2
-#      speed_factor: 0.5
-#      blacklist: []
-#      whitelist: []
-#      fixed: true
-
-#    base_bumpers:
-#      type: bumper
-#      topic: bumper_base
-#      disabled: true
-#      obstacle_max_dist: 1.0
-#      stop_dist: 1.0
-#      speed_factor: 1.0
-#      blacklist: []
-#      whitelist: []
-#      fixed: true
+    base_sonars:
+      type: range
+      topic: sonar_base
+      disabled: false
+      obstacle_max_dist: 0.5
+      stop_dist: 0.05
+      speed_factor: 0.3
+      blacklist: []
+      whitelist: []
+      fixed: true
