@@ -2,6 +2,15 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'disable-speed-limit' into 'erbium-devel'
+  Disable speed limit
+  See merge request robots/tiago_robot!53
+* removed commented limiters except sonar, discommented sonar limiter
+* speed limit starts disabled
+* Contributors: Procópio Stein, Victor Lopez
+
 1.0.16 (2018-08-06)
 -------------------
 

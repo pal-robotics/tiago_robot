@@ -2,6 +2,9 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 1.0.16 (2018-08-06)
 -------------------
 * Merge branch 'multiple-link-collisions' into 'erbium-devel'
