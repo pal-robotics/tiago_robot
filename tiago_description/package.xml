@@ -2,7 +2,7 @@
 <package>
 
   <name>tiago_description</name>
-  <version>1.0.16</version>
+  <version>1.0.17</version>
   <description>This package contains the description (mechanical, kinematic, visual,
       etc.) of the TIAGO robot.  The files in this package are parsed and used by
       a variety of other components.  Most users will not interact directly
