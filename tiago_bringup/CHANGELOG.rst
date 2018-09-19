@@ -2,6 +2,11 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Remove wbc from joint mode blacklist
+* Contributors: Victor Lopez
+
 1.0.17 (2018-09-17)
 -------------------
 * Merge branch 'disable-speed-limit' into 'erbium-devel'
