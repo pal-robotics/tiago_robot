@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.18 (2018-09-19)
+-------------------
 * Remove wbc from joint mode blacklist
 * Contributors: Victor Lopez
 
