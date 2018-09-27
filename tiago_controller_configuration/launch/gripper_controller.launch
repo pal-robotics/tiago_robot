@@ -1,0 +1,10 @@
+<launch>
+  <node name="gripper_controllers_spawner"
+        pkg="controller_manager" type="spawner" output="screen"
+        args="--timeout 120
+              gripper_controller" />
+  <include file="$(find pal_gripper_controller_configuration)/launch/current_limit_controllers.launch"/>
+  <!-- fake parallel gripper controller to expose only one joint to open and close -->
+  <include file="$(find pal_parallel_gripper_wrapper)/launch/parallel_gripper.launch" />
+  <node name="home_gripper" pkg="tiago_controller_configuration" type="home_gripper.py" output="screen"/>
+</launch>
