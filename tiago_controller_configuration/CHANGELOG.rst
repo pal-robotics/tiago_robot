@@ -2,6 +2,19 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add gripper controller
+* Merge branch 'cherry-pick-987f7c5b' into 'dubnium-devel'
+  Merge branch 'publish_cmd_true' into 'dubnium-devel'
+  See merge request robots/tiago_robot!39
+* Merge branch 'publish_cmd_true' into 'erbium-devel'
+  Publish_cmd to true, and deprecate publish_wheel_data
+  See merge request robots/tiago_robot!34
+  (cherry picked from commit 987f7c5bfec1d6e4c23cfa558f53b5bd85cc7cb9)
+  e8702a39 Publish_cmd to true, and deprecate publish_wheel_data
+* Contributors: Jeremie Deray, Victor Lopez
+
 0.0.47 (2018-03-06)
 -------------------
 
