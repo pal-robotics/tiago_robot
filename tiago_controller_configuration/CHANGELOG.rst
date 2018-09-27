@@ -2,8 +2,8 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.48 (2018-09-27)
+-------------------
 * Add gripper controller
 * Merge branch 'cherry-pick-987f7c5b' into 'dubnium-devel'
   Merge branch 'publish_cmd_true' into 'dubnium-devel'
