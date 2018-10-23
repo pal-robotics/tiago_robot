@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.19 (2018-10-23)
+-------------------
 * Merge branch 'fix-gripper-camera-fps' into 'erbium-devel'
   set gripper camera to 15 fps
   See merge request robots/tiago_robot!59
