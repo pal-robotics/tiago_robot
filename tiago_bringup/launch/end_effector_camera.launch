@@ -14,7 +14,7 @@
             <param name="height" value="480"/>
             <!-- choose whichever uncompressed format the camera supports: -->
             <param name="video_mode" value="yuyv"/> <!-- or yuyv/nv12/mjpeg -->
-            <param name="frame_rate" value="30"/>
+            <param name="frame_rate" value="15"/>
 
             <param name="timestamp_method" value="start"/> <!-- start of frame -->
             <param name="camera_info_url" value="file:///tmp/cam.yaml"/>
