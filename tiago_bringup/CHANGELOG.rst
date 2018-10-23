@@ -2,6 +2,14 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'fix-gripper-camera-fps' into 'erbium-devel'
+  set gripper camera to 15 fps
+  See merge request robots/tiago_robot!59
+* set gripper camera to 15 fps
+* Contributors: Jordi Pages, Victor Lopez
+
 1.0.18 (2018-09-19)
 -------------------
 * Remove wbc from joint mode blacklist
