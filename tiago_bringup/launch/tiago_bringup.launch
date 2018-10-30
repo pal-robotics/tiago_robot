@@ -13,6 +13,9 @@
     <param name="use_tf_static" type="bool" value="true"/>
   </node>
 
+  <!-- Robot pose publisher -->
+  <node pkg="robot_pose" type="robot_pose_node" name="robot_pose_publisher" output="screen"/>
+
   <!-- TF lookup -->
   <node pkg="tf_lookup" type="tf_lookup" name="tf_lookup" output="screen"/>
 
