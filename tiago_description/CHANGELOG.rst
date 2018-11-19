@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.20 (2018-11-19)
+-------------------
 * Merge branch 'add-grasping-motions' into 'erbium-devel'
   Add motions for pal grasping pipeline
   See merge request robots/tiago_robot!62
