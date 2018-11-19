@@ -6,5 +6,5 @@
   <param name="robot_description"
     command="$(find xacro)/xacro --inorder
              '$(find tiago_description)/robots/tiago_$(arg robot).urdf.xacro' $(arg multi)" />
-
+           <rosparam command="load" file="$(find tiago_description)/config/collision/collision_parameters.yaml" />
 </launch>

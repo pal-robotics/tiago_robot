@@ -67,6 +67,36 @@ play_motion:
         usage: demo
         description: 'Reach max'
 
+    prepare_grasp:
+      joints: ['torso_lift_joint', 'arm_1_joint', 'arm_2_joint', 'arm_3_joint', 'arm_4_joint', 'arm_5_joint', 'arm_6_joint', 'arm_7_joint']
+      points:
+      - positions: [0.34, 0.20, -1.34, -0.20, 1.94, -1.57, 1.37, 0.0]
+        time_from_start: 3.0
+      - positions: [0.34, -0.12, 0.47, -0.20, 1.56, -1.58, 0.25, 0.0]
+        time_from_start: 8.5
+      meta:
+        name: prepare_grasp
+        usage: demo
+        description: 'Prepare grasp position'
+
+    inspect_surroundings:
+      joints: ['head_1_joint', 'head_2_joint']
+      points:
+      - positions: [-1., -0.85]
+        time_from_start: 1.5
+      - positions: [-1., -0.85]
+        time_from_start: 2.0
+      - positions: [1., -0.85]
+        time_from_start: 4.5
+      - positions: [1., -0.85]
+        time_from_start: 5.0
+      - positions: [0., -0.85]
+        time_from_start: 7.0
+      meta:
+        name: inspect_surroundings
+        usage: demo
+        description: 'Inspect surroundings around the robot'
+
     #deprecated a use open
     open_hand:
       joints: [hand_thumb_joint, hand_index_joint, hand_mrl_joint]
