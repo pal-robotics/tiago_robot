@@ -11,7 +11,7 @@ collision_model_parameters:
         second: wrist_ft_link
       - first: arm_tool_link
         second: wrist_ft_link
-      - first: ground
+      - first: ground_plane
         second: base_link
       - first: ground_plane
         second: caster_back_left_1_link
