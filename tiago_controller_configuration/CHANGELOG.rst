@@ -2,6 +2,15 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'as_safety' into 'erbium-devel'
+  New joint safety parameters, add missing exec dependencies
+  See merge request robots/tiago_robot!63
+* Add dependency on pal_local_joint_control.
+* New joint safety parameters, add missing exec dependencies
+* Contributors: alexandersherikov
+
 1.0.20 (2018-11-19)
 -------------------
 
