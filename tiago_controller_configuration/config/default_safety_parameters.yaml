@@ -1,0 +1,6 @@
+enable_safety: true
+allow_recovery: true
+max_collision_impulse_estimate: 0.2
+anticipation_time: 0.05
+drift_velocity_bound: 0.05
+drift_duration_bound: 0.2
