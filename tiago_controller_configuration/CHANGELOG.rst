@@ -2,8 +2,8 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.22 (2018-12-04)
+-------------------
 * Merge branch 'as_disable_safety' into 'erbium-devel'
   Disable joint safety by default.
   See merge request robots/tiago_robot!64
