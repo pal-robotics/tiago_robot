@@ -22,4 +22,5 @@
   <run_depend>sensor_to_cloud</run_depend>
   <run_depend>camera_calibration_files</run_depend>
   <run_depend>libuvc_camera</run_depend>
+  <run_depend>robot_pose</run_depend>
 </package>
