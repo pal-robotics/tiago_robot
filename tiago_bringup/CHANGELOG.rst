@@ -2,6 +2,14 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'launch_robot_pose' into 'erbium-devel'
+  added robot_pose in tiago_bringup.launch
+  See merge request robots/tiago_robot!61
+* added robot_pose in tiago_bringup.launch
+* Contributors: Jordi Pages, Procópio Stein
+
 1.0.22 (2018-12-04)
 -------------------
 
