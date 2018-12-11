@@ -61,30 +61,31 @@ teleop:
     type: action
     action_name: /head_controller/increment
     action_goal:
-      increment_by: [-0.2, 0]
+      increment_by: [-0.1, 0]
     buttons: [2] # right pad, bottom button
 
   head_up:
     type: action
     action_name: /head_controller/increment
     action_goal:
-      increment_by: [0.2, 0]
+      increment_by: [0.1, 0]
     buttons: [0] # right pad, top button
 
   head_left:
     type: action
     action_name: /head_controller/increment
     action_goal:
-      increment_by: [0, 0.2]
+      increment_by: [0, 0.1]
     buttons: [3] # right pad, left button
 
   head_right:
     type: action
     action_name: /head_controller/increment
     action_goal:
-      increment_by: [0, -0.2]
+      increment_by: [0, -0.1]
     buttons: [1] # right pad, right button
 
+@[if end_effector == "pal-hey5"]@
   close_hand:
     type: action
     action_name: /play_motion
@@ -100,11 +101,36 @@ teleop:
       motion_name: 'open_hand'
       skip_planning: True
     buttons: [5]
+@[end if]@
 
-  # Disable speed_limit example
-  # @todo duration param is not taken
-  #speed_limit_disable:
-  #  type: action
-  #  action_name: speed_limit/disable
-  #  duration: 10.0
-  #  buttons: [4, 5, 6, 7]
+@[if end_effector == "pal-gripper"]@
+  close_gripper:
+    type: action
+    action_name: /gripper_controller/increment
+    action_goal:
+      increment_by: [-0.01, -0.01]
+    buttons: [7] # R2
+
+  open_gripper:
+    type: action
+    action_name: /gripper_controller/increment
+    action_goal:
+      increment_by: [0.01, 0.01]
+    buttons: [5] # R1
+@[end if]@
+
+@[if end_effector == "schunk-wsg"]@
+  close_gripper:
+    type: action
+    action_name: /gripper_controller/increment
+    action_goal:
+      increment_by: [-0.01]
+    buttons: [7] # R2
+
+  open_gripper:
+    type: action
+    action_name: /gripper_controller/increment
+    action_goal:
+      increment_by: [0.01]
+    buttons: [5] # R1
+@[end if]@
