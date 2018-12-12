@@ -1,8 +1,0 @@
-<launch>
-  <arg name="multi" default=""/>
-  <param name="robot_description" command="$(find xacro)/xacro.py '$(find tiago_description)/robots/tiago_steel.urdf.xacro' $(arg multi)" />
-
-  <include file="$(find urdf_test)/launch/test_urdf.launch">
-    <arg name="get_description" value="true"/>
-  </include>
-</launch>

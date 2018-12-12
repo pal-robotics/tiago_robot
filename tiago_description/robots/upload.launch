@@ -1,10 +1,18 @@
 <launch>
-  <arg name="robot" default="titanium"/>
   <arg name="multi" default=""/>
+  <arg name="arm"  default="True"/>
+  <arg name="end_effector"  default="pal-hey5"/>
+  <arg name="ft_sensor"  default="schunk-ft"/>
+  <arg name="laser_model"  default="sick-571"/>
 
   <!-- Robot description -->
   <param name="robot_description"
     command="$(find xacro)/xacro --inorder
-             '$(find tiago_description)/robots/tiago_$(arg robot).urdf.xacro' $(arg multi)" />
+    '$(find tiago_description)/robots/tiago.urdf.xacro'
+    has_arm:=$(arg arm)
+    end_effector:=$(arg end_effector)
+    ft_sensor:=$(arg ft_sensor)
+    laser_model:=$(arg laser_model)
+    multiple:=$(arg multi)" />
            <rosparam command="load" file="$(find tiago_description)/config/collision/collision_parameters.yaml" />
 </launch>

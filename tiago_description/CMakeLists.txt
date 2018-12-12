@@ -16,7 +16,15 @@ endforeach(dir)
 
 if(CATKIN_ENABLE_TESTING)
   find_package(rostest REQUIRED)
-  add_rostest(test/test_tiago_iron.test)
-  add_rostest(test/test_tiago_steel.test)
-  add_rostest(test/test_tiago_titanium.test)
+  foreach(arm true false)
+      foreach(end_effector false pal-gripper pal-hey5 schunk-wsg)
+          foreach(ft_sensor false schunk-ft)
+              foreach(laser_model false hokuyo sick-551 sick-561 sick-571)
+                  add_rostest(test/test_tiago.test ARGS arm:=${arm}
+                      end_effector:=${end_effector} ft_sensor:=${ft_sensor}
+                      laser_model:=${laser_model})
+              endforeach(laser_model)
+          endforeach(ft_sensor)
+      endforeach(end_effector)
+  endforeach(arm)
 endif()

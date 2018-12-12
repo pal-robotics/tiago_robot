@@ -3,6 +3,7 @@
   <arg name="arm"  default="True"/>
   <arg name="end_effector"  default="pal-hey5"/>
   <arg name="ft_sensor"  default="schunk-ft"/>
+  <arg name="laser_model"  default="sick-571"/>
 
   <!-- Diff drive controller multipliers -->
   <rosparam command="load" file="$(find tiago_controller_configuration)/config/mobile_base_controller_multipliers.yaml"/>
