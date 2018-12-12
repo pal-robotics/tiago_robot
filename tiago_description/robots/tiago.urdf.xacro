@@ -13,14 +13,29 @@
     <xacro:arg name="end_effector" default="pal-hey5"/> <!-- false, pal-gripper, pal-hey5, schunk-wsg-->
     <xacro:arg name="ft_sensor" default="schunk-ft"/> <!-- false, schunk-ft -->
     <xacro:arg name="laser_model" default="sick-571"/> <!-- false, hokuyo, sick-551, sick-561, sick-571-->
+    <xacro:arg name="camera_model" default="orbbec-astra"/> <!-- false, orbbec-astra, orbbec-astra-pro, asus-xtion -->
     <xacro:arg name="has_thermal_camera" default="false"/>
     <xacro:arg name="multiple" default="false"/>
     <xacro:arg name="namespace" default=""/>
     <xacro:property name="end_effector" value="$(arg end_effector)" />
     <xacro:property name="ft_sensor" value="$(arg ft_sensor)" />
+    <xacro:property name="laser_model" value="$(arg laser_model)" />
+    <xacro:property name="camera_model" value="$(arg camera_model)" />
     <xacro:property name="is_multiple" value="$(arg multiple)" />
     <xacro:property name="nsp" value="$(arg namespace)" />
 
+  <xacro:if value="${end_effector not in ['false', 'pal-gripper', 'pal-hey5', 'schunk-wsg']}">
+    <xacro:wrong_end_effector/>
+  </xacro:if>
+  <xacro:if value="${ft_sensor not in ['false', 'schunk-ft']}">
+    <xacro:wrong_ft_sensor/>
+  </xacro:if>
+  <xacro:if value="${laser_model not in ['false', 'sick-551', 'sick-561', 'sick-571', 'hokuyo']}">
+    <xacro:wrong_laser_model/>
+  </xacro:if>
+  <xacro:if value="${camera_model not in ['false', 'orbbec-astra', 'orbbec-astra-pro', 'asus-xtion']}">
+    <xacro:wrong_camera_model/>
+  </xacro:if>
         <!-- The properties below are modified using empy http://www.alcyone.com/software/empy/
              from the create_robot.py tool. Handle them with care -->
    <property name="has_arm"                 value="$(arg arm)"/>
@@ -77,7 +92,7 @@
   <!-- Now we can start using the macros included above to define the actual robot -->
   <xacro:base_sensors name="base" laser_model="$(arg laser_model)" sonars="true" microphone="true"/>
   <xacro:tiago_torso name="torso" parent="base_link"/>
-  <xacro:head name="head" parent="torso_lift_link"/>
+  <xacro:head name="head" parent="torso_lift_link" camera_model="$(arg camera_model)"/>
   <xacro:if value="${has_arm}">
 	  <xacro:tiago_arm name="arm" parent="torso_lift_link" wrist_6_range="${wrist_6_range}"/>
   </xacro:if>
