@@ -1,5 +1,5 @@
 play_motion:
-@[if end_effector == "hey5"]@
+@[if end_effector == "pal-hey5"]@
   controllers: [arm_controller, head_controller, torso_controller, hand_controller]
 @[end if]@
 @[if end_effector in ["pal-gripper", "schunk-wsg"]]@

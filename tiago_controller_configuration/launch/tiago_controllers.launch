@@ -15,10 +15,12 @@
     <include if="$(arg arm)" file="$(find tiago_controller_configuration)/launch/gravity_compensation_with_controller_wrist.launch"/>
 
     <group if="$(eval end_effector == 'pal-gripper')">
+        <rosparam command="load" file="$(find tiago_controller_configuration)/config/pal-gripper_joint_trajectory_controllers.yaml" />
         <include file="$(find pal_gripper_controller_configuration)/launch/gripper_controller.launch"/>
     </group>
 
     <group if="$(eval end_effector == 'schunk-wsg')">
+        <rosparam command="load" file="$(find tiago_controller_configuration)/config/schunk-wsg_joint_trajectory_controllers.yaml" />
         <include file="$(find pal_wsg_gripper_controller_configuration)/launch/gripper_controller.launch"/>
         <include file="$(find pal_wsg_gripper_controller_configuration)/launch/gripper_fingertip_sensor_controller.launch">
           <arg name="finger" value="left"/>
@@ -27,13 +29,17 @@
           <arg name="finger" value="right"/>
         </include>
     </group>
-
     <group if="$(eval end_effector == 'pal-hey5')">
+        <rosparam command="load" file="$(find tiago_controller_configuration)/config/pal-hey5_joint_trajectory_controllers.yaml" />
         <include file="$(find tiago_controller_configuration)/launch/hey5_controller.launch"/>
     </group>
 
     <!-- Motion planning -->
     <include file="$(find tiago_moveit_config)/launch/move_group.launch">
-        <arg name="robot" value="custom" />
+      <arg name="arm" value="$(arg arm)"/>
+      <arg name="end_effector" value="$(arg end_effector)"/>
+      <arg name="ft_sensor" value="$(arg ft_sensor)"/>
+      <arg name="laser_model" value="$(arg laser_model)"/>
+      <arg name="camera_model" value="$(arg camera_model)"/>
     </include>
 </launch>
