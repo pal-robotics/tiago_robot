@@ -10,9 +10,13 @@
     <include file="$(find tiago_controller_configuration)/launch/default_controllers.launch">
         <arg name="arm" value="$(arg arm)"/>
     </include>
-    <include file="$(find tiago_controller_configuration)/launch/force_torque_controller.launch"/>
+    <group if="$(eval ft_sensor == 'schunk-ft')">
+      <include file="$(find tiago_controller_configuration)/launch/force_torque_controller.launch"/>
+    </group>
     <!-- load gravity compensation controller with controllable wrist -->
-    <include if="$(arg arm)" file="$(find tiago_controller_configuration)/launch/gravity_compensation_with_controller_wrist.launch"/>
+    <include if="$(arg arm)" file="$(find tiago_controller_configuration)/launch/gravity_compensation_with_controller_wrist.launch">
+      <arg name="end_effector" value="$(arg end_effector)"/>
+    </include>
 
     <group if="$(eval end_effector == 'pal-gripper')">
         <rosparam command="load" file="$(find tiago_controller_configuration)/config/pal-gripper_joint_trajectory_controllers.yaml" />

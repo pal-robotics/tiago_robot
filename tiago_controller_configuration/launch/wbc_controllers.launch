@@ -3,13 +3,13 @@
     <arg name="ft_sensor"  default="schunk-ft"/>
 
     <!-- load wbc controller -->
-    <group if="$(eval ft_sensor == 'schunk-ft'])">
+    <group if="$(eval ft_sensor == 'schunk-ft')">
         <include file="$(find tiago_wbc)/launch/tiago_wbc.launch">
             <arg name="spawn" value="false"/>
             <arg name="stack" value="tiago_fixed_base_ft_wbc"/>
         </include>
     </group>
-    <group if="$(eval ft_sensor != 'schunk-ft'])">
+    <group if="$(eval ft_sensor != 'schunk-ft')">
         <include file="$(find tiago_wbc)/launch/tiago_wbc.launch">
             <arg name="spawn" value="false"/>
         </include>

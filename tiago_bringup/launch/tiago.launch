@@ -16,7 +16,8 @@
   <include file="$(find tiago_description)/robots/upload.launch" pass_all_args="True"/>
 
   <!-- tiago_hardware parameters -->
-  <rosparam command="load" file="$(find tiago_bringup)/config/tiago_hardware.yaml"/>
+  <arg name="file_suffix" value="$(eval ('no-arm' if not arm else end_effector+ ('' if not ft_sensor else '_'+ft_sensor)))"/>
+  <rosparam command="load" file="$(find tiago_bringup)/config/tiago_hardware/tiago_hardware_$(arg file_suffix).yaml"/>
 
   <!-- Node that forwards commands and feedback of dynamixel motors -->
   <include file="$(find tiago_bringup)/launch/dynamixel_node.launch"/>

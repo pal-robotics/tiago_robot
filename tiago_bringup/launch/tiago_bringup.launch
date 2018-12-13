@@ -4,9 +4,17 @@
   <arg name="end_effector"  default="pal-hey5"/>
   <arg name="ft_sensor"  default="schunk-ft"/>
   <arg name="tf_prefix" default=""/>
+  <arg name="laser_model"  default="sick-571"/>
+  <arg name="camera_model"  default="orbbec-astra"/>
 
   <!-- Load default controllers -->
-  <include file="$(find tiago_controller_configuration)/launch/tiago_controllers.launch"/>
+  <include file="$(find tiago_controller_configuration)/launch/tiago_controllers.launch">
+    <arg name="arm" value="$(arg arm)"/>
+    <arg name="end_effector" value="$(arg end_effector)"/>
+    <arg name="ft_sensor" value="$(arg ft_sensor)"/>
+    <arg name="laser_model" value="$(arg laser_model)"/>
+    <arg name="camera_model" value="$(arg camera_model)"/>
+  </include>
 
   <!-- Robot state publisher -->
   <node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher">
