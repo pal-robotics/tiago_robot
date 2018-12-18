@@ -13,7 +13,7 @@
   <rosparam command="load" file="$(find tiago_controller_configuration)/config/mobile_base_controller.yaml"/>
 
   <!-- Robot model -->
-  <include file="$(find tiago_description)/robots/upload.launch" pass_all_args="True"/>
+  <include file="$(find tiago_description)/robots/upload.launch" pass_all_args="true"/>
 
   <!-- tiago_hardware parameters -->
   <arg name="file_suffix" value="$(eval ('no-arm' if not arm else end_effector+ ('' if not ft_sensor else '_'+ft_sensor)))"/>
