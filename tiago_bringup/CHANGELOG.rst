@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.0 (2018-12-19)
+------------------
 * Merge branch 'specifics-refactor' into 'erbium-devel'
   Generate automatically play_motion and approach_planner configs
   See merge request robots/tiago_robot!65

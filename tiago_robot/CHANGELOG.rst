@@ -2,8 +2,8 @@
 Changelog for package tiago_robot
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.0 (2018-12-19)
+------------------
 * 1.0.23
 * changelog
 * Contributors: Procópio Stein
