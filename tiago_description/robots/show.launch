@@ -1,8 +1,6 @@
 <launch>
-  <arg name="robot" default="titanium" />
-  <include file="$(find tiago_description)/robots/upload.launch">
-    <arg name="robot" value="$(arg robot)"/>
-  </include>
+  <!-- Args are the ones that upload.launch requires-->
+  <include file="$(find tiago_description)/robots/upload.launch" pass_all_args="true"/>
 
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" args="_use_gui:=True" />

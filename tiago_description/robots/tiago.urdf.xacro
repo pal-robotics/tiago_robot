@@ -1,0 +1,193 @@
+<?xml version="1.0"?>
+<!--
+  Copyright (c) 2011, PAL Robotics, S.L.
+  All rights reserved.
+
+  This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
+  To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to
+  Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+-->
+<robot  xmlns:xacro="http://ros.org/wiki/xacro"
+        name="tiago" >
+    <xacro:arg name="arm" default="true"/> <!-- true, false -->
+    <xacro:arg name="end_effector" default="pal-hey5"/> <!-- false, pal-gripper, pal-hey5, schunk-wsg-->
+    <xacro:arg name="ft_sensor" default="schunk-ft"/> <!-- false, schunk-ft -->
+    <xacro:arg name="laser_model" default="sick-571"/> <!-- false, hokuyo, sick-551, sick-561, sick-571-->
+    <xacro:arg name="camera_model" default="orbbec-astra"/> <!-- false, orbbec-astra, orbbec-astra-pro, asus-xtion -->
+    <xacro:arg name="has_thermal_camera" default="false"/>
+    <xacro:arg name="multiple" default="false"/>
+    <xacro:arg name="namespace" default=""/>
+    <xacro:property name="end_effector" value="$(arg end_effector)" />
+    <xacro:property name="ft_sensor" value="$(arg ft_sensor)" />
+    <xacro:property name="laser_model" value="$(arg laser_model)" />
+    <xacro:property name="camera_model" value="$(arg camera_model)" />
+    <xacro:property name="is_multiple" value="$(arg multiple)" />
+    <xacro:property name="nsp" value="$(arg namespace)" />
+
+  <xacro:if value="${end_effector not in ['false', 'pal-gripper', 'pal-hey5', 'schunk-wsg']}">
+    <xacro:wrong_end_effector/>
+  </xacro:if>
+  <xacro:if value="${ft_sensor not in ['false', 'schunk-ft']}">
+    <xacro:wrong_ft_sensor/>
+  </xacro:if>
+  <xacro:if value="${laser_model not in ['false', 'sick-551', 'sick-561', 'sick-571', 'hokuyo']}">
+    <xacro:wrong_laser_model/>
+  </xacro:if>
+  <xacro:if value="${camera_model not in ['false', 'orbbec-astra', 'orbbec-astra-pro', 'asus-xtion']}">
+    <xacro:wrong_camera_model/>
+  </xacro:if>
+        <!-- The properties below are modified using empy http://www.alcyone.com/software/empy/
+             from the create_robot.py tool. Handle them with care -->
+   <property name="has_arm"                 value="$(arg arm)"/>
+   <property name="has_hey5"                value="${end_effector == 'pal-hey5'}"/>
+   <property name="has_gripper"             value="${end_effector == 'pal-gripper'}"/>
+   <property name="has_schunk_wsg"          value="${end_effector == 'schunk-wsg'}"/>
+   <property name="has_schunk_ft"           value="${ft_sensor == 'schunk-ft'}"/>
+   <property name="has_ft_sensor"           value="${has_schunk_ft}"/> <!-- This should be OR'ed with other FT sensors-->
+   <property name="end_effector_link"       value="${'wrist_ft_tool_link' if has_ft_sensor else 'arm_tool_link'}"/>
+   <property name="wrist_6_range"           value="${ 81 if has_ft_sensor else 90 }"/>
+   <property name="head_link_name"          value="head_2_link"/>
+
+  <!-- The following included files set up definitions of parts of the robot body -->
+  <!-- Base -->
+  <xacro:include filename="$(find pmb2_description)/urdf/base/base_sensors.urdf.xacro" />
+
+  <!-- Torso -->
+  <xacro:include filename="$(find tiago_description)/urdf/torso/torso.urdf.xacro" />
+
+  <xacro:if value="${has_arm}">
+    <!-- Arm -->
+    <xacro:include filename="$(find tiago_description)/urdf/arm/arm.urdf.xacro" />
+  </xacro:if>
+
+  <!-- Hand -->
+  <xacro:if value="${has_hey5}">
+    <xacro:include filename="$(find hey5_description)/urdf/hey5_hand.urdf.xacro" />
+  </xacro:if>
+
+  <!-- Gripper -->
+  <xacro:if value="${has_gripper}">
+   <xacro:include filename="$(find pal_gripper_description)/urdf/gripper.urdf.xacro" />
+  </xacro:if>
+
+  <!-- Schunk WSG -->
+  <xacro:if value="${has_schunk_wsg}">
+      <xacro:include filename="$(find pal_wsg_gripper_description)/urdf/gripper.urdf.xacro" />
+      <xacro:include filename="$(find pal_wsg_gripper_description)/urdf/fingertip_sensor.urdf.xacro" />
+  </xacro:if>
+
+  <!-- Force Torque sensor -->
+  <xacro:if value="${has_ft_sensor}">
+    <xacro:include filename="$(find tiago_description)/urdf/sensors/ftsensor.urdf.xacro" />
+  </xacro:if>
+
+  <!-- Head -->
+  <xacro:include filename="$(find tiago_description)/urdf/head/head.urdf.xacro" />
+
+  <!-- Generic simulator_gazebo plugins -->
+  <xacro:include filename="$(find tiago_description)/gazebo/gazebo.urdf.xacro" />
+  <!-- Materials for visualization -->
+  <xacro:include filename="$(find tiago_description)/urdf/materials.urdf.xacro" />
+
+  <!-- Now we can start using the macros included above to define the actual robot -->
+  <xacro:base_sensors name="base" laser_model="$(arg laser_model)" sonars="true" microphone="true"/>
+  <xacro:tiago_torso name="torso" parent="base_link"/>
+  <xacro:head name="head" parent="torso_lift_link" camera_model="$(arg camera_model)"/>
+  <xacro:if value="${has_arm}">
+	  <xacro:tiago_arm name="arm" parent="torso_lift_link" wrist_6_range="${wrist_6_range}"/>
+  </xacro:if>
+
+  <!-- Force Torque sensor -->
+  <xacro:if value="${has_ft_sensor}">
+      <xacro:ft_sensor name="wrist" parent="arm_tool_link" />
+  </xacro:if>
+
+  <!-- Gripper -->
+  <xacro:if value="${has_gripper}">
+      <xacro:pal_gripper parent="${end_effector_link}" name="gripper">
+        <origin xyz="0.01 0 0" rpy="${90*deg_to_rad} ${90*deg_to_rad} ${-90*deg_to_rad}"/>
+      </xacro:pal_gripper>
+  </xacro:if>
+
+  <!-- Schunk WSG -->
+  <xacro:if value="${has_schunk_wsg}">
+      <xacro:pal_wsg_gripper parent="${end_effector_link}" name="gripper">
+        <origin xyz="0.01 0 0" rpy="${90*deg_to_rad} ${90*deg_to_rad} ${-90*deg_to_rad}"/>
+      </xacro:pal_wsg_gripper>
+      <!-- Fingertip sensors -->
+      <xacro:fingertip_sensor name="gripper_left" parent="gripper_left_finger">
+        <origin xyz="0.035 0 -0.1465" rpy="0 ${-90*deg_to_rad} 0"/>
+      </xacro:fingertip_sensor>
+      <xacro:fingertip_sensor name="gripper_right" parent="gripper_right_finger">
+        <origin xyz="-0.035 0 -0.1465" rpy="0 ${90*deg_to_rad} 0"/>
+      </xacro:fingertip_sensor>
+  </xacro:if>
+  <!-- Hand -->
+  <xacro:if value="${has_hey5}">
+          <xacro:hey5_hand parent="${end_effector_link}" name="hand" reflect="1">
+		<origin xyz="0 0 0" rpy="0 0 0"/>
+	  </xacro:hey5_hand>
+
+	  <joint name="hand_safety_box_joint" type="fixed">
+		<parent link="${end_effector_link}"/>
+		<child link="hand_safety_box"/>
+		<origin xyz="0.1 0.02 0.02" rpy="0 0 0"/>
+	  </joint>
+
+	  <link name="hand_safety_box">
+		<inertial>
+		  <origin xyz="0 0 0" rpy="0 0 0"/>
+		  <mass value="0.0001" />
+		  <inertia ixx="0.0001"  ixy="0"  ixz="0" iyy="0.0001" iyz="0" izz="0.0001" />
+		</inertial>
+		<!--
+		<visual>
+		  <origin xyz="0 0 0" rpy="0 0 0" />
+		  <geometry>
+		    <box size="0.2 0.115 0.18" />
+		  </geometry>
+		</visual>
+		-->
+		<collision>
+		  <origin xyz="0 0 0" rpy="0 0 0" />
+		  <geometry>
+		    <box size="0.2 0.115 0.18" />
+		  </geometry>
+		</collision>
+	  </link>
+  </xacro:if>
+
+
+  <!-- Thermal camera -->
+  <xacro:if value="$(arg has_thermal_camera)">
+    <joint name="thermal_camera_joint" type="fixed">
+        <parent link="${head_link_name}"/>
+        <child link="thermal_camera"/>
+        <origin xyz="0.05 0.15 0" rpy="${0*deg_to_rad} ${-90*deg_to_rad} ${-180*deg_to_rad}" />
+    </joint>
+    <link name="thermal_camera">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <mass value="0.0001" />
+            <inertia ixx="0.0001"  ixy="0"  ixz="0" iyy="0.0001" iyz="0" izz="0.0001" />
+        </inertial>
+    </link>
+  </xacro:if>
+
+  <!-- RGBD Laser Link -->
+  <joint name="rgbd_laser_joint" type="fixed">
+      <parent link="base_footprint"/>
+      <child link="rgbd_laser_link"/>
+      <origin xyz="-0.9 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="rgbd_laser_link">
+      <inertial>
+          <origin xyz="0 0 0" rpy="0 0 0"/>
+          <mass value="0.0001" />
+          <inertia ixx="0.0001"  ixy="0"  ixz="0" iyy="0.0001" iyz="0" izz="0.0001" />
+      </inertial>
+  </link>
+
+</robot>
+
+

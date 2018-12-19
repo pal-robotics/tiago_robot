@@ -27,7 +27,7 @@
   <xacro:include filename="$(find tiago_description)/urdf/sensors/openni.gazebo.xacro" />
 
   <!-- Macro -->
-  <xacro:macro name="xtion_pro_live" params="name parent *origin *optical_origin">
+  <xacro:macro name="xtion_pro_live" params="name parent camera_model *origin *optical_origin">
 
     <!-- frames in the center of the camera -->
     <joint name="${name}_joint" type="fixed">
@@ -81,7 +81,15 @@
 
     <!-- frames of the depth sensor -->
     <joint name="${name}_depth_joint" type="fixed">
-      <origin xyz="0.0 0.049 0.0" rpy="0 0 0" />
+      <xacro:if value="${camera_model == 'orbbec-astra'}">
+        <origin xyz="0.0 0.047 0.0" rpy="0 0 0" />
+      </xacro:if>
+      <xacro:if value="${camera_model == 'orbbec-astra-pro'}">
+        <origin xyz="0.0 0.047 0.0" rpy="0 0 0" />
+      </xacro:if>
+      <xacro:if value="${camera_model == 'asus-xtion'}">
+        <origin xyz="0.0 0.049 0.0" rpy="0 0 0" />
+      </xacro:if>
       <parent link="${name}_link" />
       <child link="${name}_depth_frame"/>
     </joint>

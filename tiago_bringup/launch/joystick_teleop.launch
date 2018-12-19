@@ -1,7 +1,11 @@
 <launch>
+  <arg name="arm"  default="True"/>
+  <arg name="end_effector"  default="pal-hey5"/>
+  <arg name="ft_sensor"  default="schunk-ft"/>
 
   <arg name="cmd_vel" default="input_joy/cmd_vel" />
-  <arg name="teleop_config" default="$(find tiago_bringup)/config/joy_teleop.yaml" />
+  <arg name="file_suffix" value="$(eval ('no-arm' if not arm else end_effector+ ('' if not ft_sensor else '_'+ft_sensor)))"/>
+  <arg name="teleop_config" default="$(find tiago_bringup)/config/joy_teleop/joy_teleop_$(arg file_suffix).yaml" />
 
   <rosparam file="$(arg teleop_config)" command="load" />
   <node pkg="joy_teleop" type="joy_teleop.py" name="joy_teleop">
@@ -16,10 +20,13 @@
     <node pkg="joy_teleop" type="incrementer_server.py" name="incrementer">
       <remap from="command" to="safe_command"/>
     </node>
-  </group> 
+  </group>
 
   <group ns="head_controller">
     <node pkg="joy_teleop" type="incrementer_server.py" name="incrementer"/>
-  </group> 
+  </group>
 
+  <group ns="gripper_controller" if="$(eval end_effector in ['pal-gripper', 'schunk-wsg'])">
+    <node pkg="joy_teleop" type="incrementer_server.py" name="incrementer"/>
+  </group>
 </launch>

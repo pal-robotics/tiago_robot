@@ -1,5 +1,5 @@
 <launch>
-  <arg name="has_arm" default="true"/>
+  <arg name="arm" default="true"/>
 
   <rosparam command="load" file="$(find tiago_controller_configuration)/config/joint_trajectory_controllers.yaml" />
   <rosparam command="load" file="$(find tiago_controller_configuration)/config/current_limit_controllers.yaml"/>
@@ -7,14 +7,14 @@
   <rosparam command="load" file="$(find tiago_controller_configuration)/config/joint_state_controller_extra_joints.yaml" ns="joint_torque_sensor_state_controller"/>
 
   <!-- Set up controllers depending of arm existance -->
-  <arg name="controller_list" if="$(arg has_arm)"
+  <arg name="controller_list" if="$(arg arm)"
        value="torso_controller
               head_controller
               arm_controller
               arm_current_limit_controller
               mobile_base_controller
               wheels_current_limit_controller"/>
-  <arg name="controller_list" unless="$(arg has_arm)"
+  <arg name="controller_list" unless="$(arg arm)"
        value="torso_controller
               head_controller
               mobile_base_controller
