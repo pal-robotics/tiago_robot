@@ -2,6 +2,20 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'specifics-refactor' into 'erbium-devel'
+  Generate automatically play_motion and approach_planner configs
+  See merge request robots/tiago_robot!65
+* Add default params to upload.launch
+* Fix arguments for upload
+* Add head and migrate controller launch
+* Parametrize urdf
+* remove deprecated launch file
+* 1.0.23
+* changelog
+* Contributors: Procópio Stein, Victor Lopez
+
 1.0.23 (2018-12-05)
 -------------------
 

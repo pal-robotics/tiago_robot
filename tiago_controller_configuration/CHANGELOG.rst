@@ -2,6 +2,20 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'specifics-refactor' into 'erbium-devel'
+  Generate automatically play_motion and approach_planner configs
+  See merge request robots/tiago_robot!65
+* Remove deprecated files
+* fixes
+* Create configurations of gravity_compensation_with_controller_wrist
+* More refactor
+* Add head and migrate controller launch
+* 1.0.23
+* changelog
+* Contributors: Procópio Stein, Victor Lopez
+
 1.0.23 (2018-12-05)
 -------------------
 

@@ -2,6 +2,26 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'specifics-refactor' into 'erbium-devel'
+  Generate automatically play_motion and approach_planner configs
+  See merge request robots/tiago_robot!65
+* Remove deprecated files
+* Remove default parameters to avoid errors
+* fixes
+* Forward joystick arguments
+* More refactor
+* Add head and migrate controller launch
+* Parametrize urdf
+* Split tiago_hardware
+* Change joy_teleop handling
+* Change dynamic_footprint handling
+* Generate automatically play_motion and approach_planner configs
+* 1.0.23
+* changelog
+* Contributors: Procópio Stein, Victor Lopez
+
 1.0.23 (2018-12-05)
 -------------------
 * Merge branch 'launch_robot_pose' into 'erbium-devel'
