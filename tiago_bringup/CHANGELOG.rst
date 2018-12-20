@@ -2,6 +2,11 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Modify prepare_grasp motion
+* Contributors: Victor Lopez
+
 2.0.0 (2018-12-19)
 ------------------
 * Merge branch 'specifics-refactor' into 'erbium-devel'
