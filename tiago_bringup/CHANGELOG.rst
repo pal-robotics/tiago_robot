@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.1 (2018-12-20)
+------------------
 * Modify prepare_grasp motion
 * Contributors: Victor Lopez
 
