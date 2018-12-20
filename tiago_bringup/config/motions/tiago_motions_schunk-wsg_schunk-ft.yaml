@@ -74,6 +74,8 @@ play_motion:
         time_from_start: 3.0
       - positions: [0.34, -0.12, 0.47, -0.20, 1.56, -1.58, 0.25, 0.0]
         time_from_start: 8.5
+      - positions: [0.34, -0.12, 0.47, -0.20, 1.56, 1.60, 0.25, 1.19]
+        time_from_start: 10.5
       meta:
         name: prepare_grasp
         usage: demo
