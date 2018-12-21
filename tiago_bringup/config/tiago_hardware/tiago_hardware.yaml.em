@@ -22,7 +22,6 @@ force_torque:
     raw_data:
       force_port: force_wrist
       torque_port: torque_wrist
-@[end if]@
 @[if end_effector == "schunk-wsg"]@
   left_fingertip:
     frame: gripper_left_fingertip_link
@@ -40,6 +39,7 @@ force_torque:
     raw_data:
       force_port: force_finger_right
       torque_port: torque_finger_right
+@[end if]@
 @[end if]@
 
 e_stop:
