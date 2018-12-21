@@ -2,6 +2,11 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Fix wrong generation of wsg without ft
+* Contributors: Victor Lopez
+
 2.0.1 (2018-12-20)
 ------------------
 * Modify prepare_grasp motion
