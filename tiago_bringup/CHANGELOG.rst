@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.2 (2018-12-21)
+------------------
 * Fix wrong generation of wsg without ft
 * Contributors: Victor Lopez
 
