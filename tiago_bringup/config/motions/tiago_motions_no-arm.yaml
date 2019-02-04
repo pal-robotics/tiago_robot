@@ -24,7 +24,7 @@ play_motion:
       - positions: [0, 0]
         time_from_start: 21.0
       meta:
-        name: head_tour
+        name: Head Tour
         usage: demo
         description: 'head_tour'
 
