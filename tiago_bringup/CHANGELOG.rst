@@ -2,6 +2,15 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'fix-motion-names' into 'erbium-devel'
+  Fix motion names
+  See merge request robots/tiago_robot!66
+* Fix motion names
+* Remove usages of pass_all_args, not supported in kinetic yet
+* Contributors: Victor Lopez
+
 2.0.2 (2018-12-21)
 ------------------
 * Fix wrong generation of wsg without ft
