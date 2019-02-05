@@ -47,7 +47,7 @@ play_motion:
       - positions: [0.30, 0.21, -0.2, -2.2, 1.15, -1.57, 0.2, 0.0]
         time_from_start: 6.0
       meta:
-        name: unfold_arm
+        name: Unfold arm
         usage: demo
         description: 'unfold_arm'
 
@@ -93,7 +93,7 @@ play_motion:
       - positions: [0.34, -0.12, 0.47, -0.20, 1.56, 1.60, 0.25, 1.19]
         time_from_start: 10.5
       meta:
-        name: prepare_grasp
+        name: Prepare Grasp
         usage: demo
         description: 'Prepare grasp position'
 
@@ -111,7 +111,7 @@ play_motion:
       - positions: [0., -0.85]
         time_from_start: 7.0
       meta:
-        name: inspect_surroundings
+        name: Inspect Surroundings
         usage: demo
         description: 'Inspect surroundings around the robot'
 
@@ -326,7 +326,7 @@ play_motion:
       - positions: [0.0, 0.0, 9.2]
         time_from_start: 1.5
       meta:
-        name: gun_hand
+        name: Gun Hand
         usage: demo
         description: 'gun_hand'
 
@@ -338,7 +338,7 @@ play_motion:
       - positions: [0.0, 6.8, 9.2]
         time_from_start: 1.5
       meta:
-        name: thumb_up_hand
+        name: Thumb Up Hand
         usage: demo
         description: 'thumb_up_hand'
 
@@ -350,7 +350,7 @@ play_motion:
       - positions: [3.37, 4.0, 0.0]
         time_from_start: 1.5
       meta:
-        name: pinch_hand
+        name: Pinch Hand
         usage: demo
         description: 'pinch_hand'
 @[end if]@
@@ -382,7 +382,7 @@ play_motion:
       - positions: [0.10, 1.6, -1.18, -3.16, 2.0, -1.57, -0.07, 0.0]
         time_from_start: 1.0
       meta:
-        name: pregrasp_weight
+        name: Pregrasp Weight
         usage: demo
         description: 'Pregrasp weight'
 
@@ -406,7 +406,7 @@ play_motion:
       - positions: [1.6, -1.18, -3.16, 2.0, -1.57, -0.07, 0.0]
         time_from_start: 12.0
       meta:
-        name: do_weights
+        name: Do Weights
         usage: demo
         description: 'Do weights'
 
@@ -446,7 +446,7 @@ play_motion:
       - positions: [0.0, 0.0, 0.0, 0.296, 1.61, -0.93, -3.14, 1.83, -1.577, -0.53, -1.577]
         time_from_start: 11.0
       meta:
-        name: shake_hands
+        name: Shake hands
         usage: demo
         description: 'shake_hands'
 
@@ -463,7 +463,7 @@ play_motion:
       - positions: [0.158, 0.21, -1.153, -1.538, 2.306, 1.965, 0.394, -0.082, 6.2, 6.77, 8.8]
         time_from_start: 9.0
       meta:
-        name: pick_from_floor
+        name: Pick from floor
         usage: demo
         description: 'Pick a shirt-like object from floor in front of the robot'
 @[else]@
@@ -479,7 +479,7 @@ play_motion:
       - positions: [0.158, 0.21, -1.153, -1.538, 2.306, 1.965, 0.394, -0.082, 6.2, 6.77, 8.8]
         time_from_start: 9.0
       meta:
-        name: pick_from_floor
+        name: Pick from floor
         usage: demo
         description: 'Pick a shirt-like object from floor in front of the robot'
 @[end if]@
@@ -522,7 +522,7 @@ play_motion:
       - positions: [0.044, 0.044, 0.296, 1.61, -0.93, -3.14, 1.83, -1.577, -0.53, -1.577]
         time_from_start: 11.0
       meta:
-        name: shake_hands
+        name: Shake Hands
         usage: demo
         description: 'shake_hands'
 
@@ -538,7 +538,7 @@ play_motion:
       - positions: [0.27, 0.21, -1.153, -1.538, 2.306, 1.965, 0.394, -0.082, 0.0, 0.0]
         time_from_start: 9.0
       meta:
-        name: pick_from_floor
+        name: Pick from floor
         usage: demo
         description: 'Pick a shirt-like object from floor in front of the robot'
 @[end if]@
@@ -579,7 +579,7 @@ play_motion:
       - positions: [0.031, 0.296, 1.61, -0.93, -3.14, 1.83, -1.577, -0.53, -1.577]
         time_from_start: 11.0
       meta:
-        name: shake_hands
+        name: Shake Hands
         usage: demo
         description: 'shake_hands'
 
@@ -595,7 +595,7 @@ play_motion:
       - positions: [0.27, 0.21, -1.153, -1.538, 2.306, 1.965, 0.394, -0.082, 0.0]
         time_from_start: 9.0
       meta:
-        name: pick_from_floor
+        name: Pick from floor
         usage: demo
         description: 'Pick a shirt-like object from floor in front of the robot'
 
@@ -624,7 +624,7 @@ play_motion:
       - positions: [0, 0]
         time_from_start: 21.0
       meta:
-        name: head_tour
+        name: Head Tour
         usage: demo
         description: 'head_tour'
 
