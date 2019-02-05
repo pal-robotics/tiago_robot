@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.3 (2019-02-05)
+------------------
 * Remove usages of pass_all_args, not supported in kinetic yet
 * Contributors: Victor Lopez
 

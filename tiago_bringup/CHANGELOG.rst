@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.3 (2019-02-05)
+------------------
 * Merge branch 'fix-motion-names' into 'erbium-devel'
   Fix motion names
   See merge request robots/tiago_robot!66
