@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.4 (2019-02-08)
+------------------
 * Merge branch 'camera_calib' into 'erbium-devel'
   added extrinsic camera calibration file modifications
   See merge request robots/tiago_robot!68
