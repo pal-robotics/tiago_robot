@@ -2,6 +2,14 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'camera_calib' into 'erbium-devel'
+  added extrinsic camera calibration file modifications
+  See merge request robots/tiago_robot!68
+* added extrinsic camera calibration file changes
+* Contributors: Jordi Pages, Sai Kishor Kothakota
+
 2.0.3 (2019-02-05)
 ------------------
 * Remove usages of pass_all_args, not supported in kinetic yet
