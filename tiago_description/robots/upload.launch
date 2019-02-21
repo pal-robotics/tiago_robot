@@ -15,6 +15,6 @@
     ft_sensor:=$(arg ft_sensor)
     laser_model:=$(arg laser_model)
     camera_model:=$(arg camera_model)
-    multiple:=$(arg multi)" />
+    $(arg multi)" />
            <rosparam command="load" file="$(find tiago_description)/config/collision/collision_parameters.yaml" />
 </launch>
