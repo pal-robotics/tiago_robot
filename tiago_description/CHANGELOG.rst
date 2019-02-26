@@ -2,6 +2,14 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'multi_simulation' into 'erbium-devel'
+  Fix multitiago simulation
+  See merge request robots/tiago_robot!69
+* Fix multitiago simulation
+* Contributors: Victor Lopez, davidfernandez
+
 2.0.4 (2019-02-08)
 ------------------
 * Merge branch 'camera_calib' into 'erbium-devel'
