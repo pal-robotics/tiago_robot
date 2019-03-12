@@ -4,7 +4,6 @@ reduction_ratio: 100.0
 actuator_names:
   - arm_3_motor
 check_mode: false
-
 # This parametres are random, they have not been identified
 motor_inertia: 1.e-05
 static_friction: 0.05
