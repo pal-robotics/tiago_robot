@@ -2,6 +2,11 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add padding and extend blacklist
+* Contributors: Victor Lopez
+
 2.0.5 (2019-02-26)
 ------------------
 * Merge branch 'multi_simulation' into 'erbium-devel'
