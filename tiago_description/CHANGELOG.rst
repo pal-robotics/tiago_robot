@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.6 (2019-03-12)
+------------------
 * Add padding and extend blacklist
 * Contributors: Victor Lopez
 
