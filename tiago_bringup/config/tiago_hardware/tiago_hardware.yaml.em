@@ -12,8 +12,10 @@ actuators:
 
 joint_mode_black_list: ['head_controller', 'torso_controller']
 
-@[if ft_sensor == "schunk-ft"]@
+@[if ft_sensor == "schunk-ft" or end_effector == "schunk-wsg"]@
 force_torque:
+@[end if]@
+@[if ft_sensor == "schunk-ft"]@
   wrist_ft:
     frame: wrist_ft_link
     transformation:
@@ -22,6 +24,7 @@ force_torque:
     raw_data:
       force_port: force_wrist
       torque_port: torque_wrist
+@[end if]@
 @[if end_effector == "schunk-wsg"]@
   left_fingertip:
     frame: gripper_left_fingertip_link
@@ -39,7 +42,6 @@ force_torque:
     raw_data:
       force_port: force_finger_right
       torque_port: torque_finger_right
-@[end if]@
 @[end if]@
 
 e_stop:
