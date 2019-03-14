@@ -2,6 +2,16 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'actuator_simulation' into 'erbium-devel'
+  added more paramater to actuators
+  See merge request robots/tiago_robot!71
+* removed empty spaces
+* fixed reduction ratio
+* added more paramater to actuators
+* Contributors: Hilario Tome
+
 2.0.6 (2019-03-12)
 ------------------
 
