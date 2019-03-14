@@ -1,10 +1,13 @@
 <launch>
   <arg name="arm" default="True"/>
+  <arg name="end_effector" default="pal-gripper"/>
+  <arg name="remap_footprint_to" default=""/>
 
   <rosparam command="load" ns="dynamic_footprint_publisher" file="$(find pmb2_description)/urdf/base/footprint.yaml" />
 
   <node name="dynamic_footprint_publisher" pkg="dynamic_footprint" type="dynamic_footprint_publisher.py">
-    <rosparam command="load" file="$(find tiago_bringup)/config/dynamic_footprint_arm.yaml" if="$(arg arm)"/>
+    <rosparam command="load" file="$(find tiago_bringup)/config/dynamic_footprint_arm_$(arg end_effector).yaml" if="$(arg arm)"/>
     <rosparam command="load" file="$(find tiago_bringup)/config/dynamic_footprint_no-arm.yaml" unless="$(arg arm)"/>
+    <remap if="$(eval remap_footprint_to != '')" from="/dynamic_footprint_publisher/footprint" to="$(arg remap_footprint_to)"/>
   </node>
 </launch>
