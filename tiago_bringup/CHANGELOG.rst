@@ -2,6 +2,18 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'teb_planner' into 'erbium-devel'
+  Add base and end-effector to dynamic footprint
+  See merge request robots/tiago_robot!74
+* Add base and end-effector to dynamic footprint
+* Merge branch 'minor-fixes' into 'erbium-devel'
+  Minor fixes
+  See merge request robots/tiago_robot!72
+* Fix missing ft data when using wsg gripper without ft sensor
+* Contributors: Victor Lopez, davidfernandez
+
 2.0.7 (2019-03-14)
 ------------------
 

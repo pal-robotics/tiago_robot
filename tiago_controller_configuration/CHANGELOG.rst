@@ -2,6 +2,14 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'minor-fixes' into 'erbium-devel'
+  Minor fixes
+  See merge request robots/tiago_robot!72
+* Remove unuesd home_gripper script
+* Contributors: Victor Lopez
+
 2.0.7 (2019-03-14)
 ------------------
 * Merge branch 'actuator_simulation' into 'erbium-devel'
