@@ -2,8 +2,8 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.8 (2019-03-15)
+------------------
 * Merge branch 'minor-fixes' into 'erbium-devel'
   Minor fixes
   See merge request robots/tiago_robot!72

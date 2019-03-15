@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.8 (2019-03-15)
+------------------
 * Merge branch 'teb_planner' into 'erbium-devel'
   Add base and end-effector to dynamic footprint
   See merge request robots/tiago_robot!74
