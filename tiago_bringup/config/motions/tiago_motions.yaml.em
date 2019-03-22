@@ -601,8 +601,18 @@ play_motion:
 
 @[end if]@
 
-
+@[else]@
+    home:
+      joints: [torso_lift_joint]
+      points:
+      - positions: [0.15]
+        time_from_start: 3.0
+      meta:
+        name: Home
+        usage: demo
+        description: 'Go home'
 @[end if]@
+
 
     head_tour:
       joints: [head_1_joint, head_2_joint]
