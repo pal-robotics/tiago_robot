@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.9 (2019-03-22)
+------------------
 * Merge branch 'iron_home_motion' into 'erbium-devel'
   added home motion for TIAGo Iron
   See merge request robots/tiago_robot!77
