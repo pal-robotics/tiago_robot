@@ -2,6 +2,15 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'iron_home_motion' into 'erbium-devel'
+  added home motion for TIAGo Iron
+  See merge request robots/tiago_robot!77
+* Regenerate motion and fix missing endline
+* added home motion for TIAGo Iron
+* Contributors: Sai Kishor Kothakota, Victor Lopez
+
 2.0.8 (2019-03-15)
 ------------------
 * Merge branch 'teb_planner' into 'erbium-devel'

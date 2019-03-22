@@ -2,6 +2,14 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'fix_xacro_warning2' into 'erbium-devel'
+  Fix xacro warning2
+  See merge request robots/tiago_robot!45
+* fix xacro deprecation warning
+* Contributors: Jeremie Deray, Procópio Stein
+
 2.0.8 (2019-03-15)
 ------------------
 
