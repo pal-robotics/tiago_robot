@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.12 (2019-03-26)
+-------------------
 * Merge branch 'fix-missing-param' into 'erbium-devel'
   Forward correct arguments, and require them for dynamic_footprint
   See merge request robots/tiago_robot!78
