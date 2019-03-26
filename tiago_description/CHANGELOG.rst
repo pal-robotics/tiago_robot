@@ -2,6 +2,16 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'move-end-effector-xacro' into 'erbium-devel'
+  Move end_effector xacro code for reusing
+  See merge request robots/tiago_robot!75
+* Fix xacro warnings
+* Parametrize arm origin
+* Move end_effector xacro code for reusing
+* Contributors: Victor Lopez
+
 2.0.9 (2019-03-22)
 ------------------
 * Merge branch 'fix_xacro_warning2' into 'erbium-devel'
