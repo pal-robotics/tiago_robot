@@ -1,6 +1,6 @@
 <launch>
-  <arg name="arm" default="True"/>
-  <arg name="end_effector" default="pal-gripper"/>
+  <arg name="arm"/>
+  <arg name="end_effector"/>
   <arg name="remap_footprint_to" default=""/>
 
   <rosparam command="load" ns="dynamic_footprint_publisher" file="$(find pmb2_description)/urdf/base/footprint.yaml" />
