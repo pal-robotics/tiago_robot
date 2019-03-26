@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.11 (2019-03-26)
+-------------------
 * Fix wrong include, could be duplicated
 * Contributors: Victor Lopez
 
