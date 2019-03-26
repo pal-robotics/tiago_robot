@@ -2,6 +2,11 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Fix wrong include, could be duplicated
+* Contributors: Victor Lopez
+
 2.0.10 (2019-03-26)
 -------------------
 * Merge branch 'move-end-effector-xacro' into 'erbium-devel'
