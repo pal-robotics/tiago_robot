@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.10 (2019-03-26)
+-------------------
 * Merge branch 'move-end-effector-xacro' into 'erbium-devel'
   Move end_effector xacro code for reusing
   See merge request robots/tiago_robot!75
