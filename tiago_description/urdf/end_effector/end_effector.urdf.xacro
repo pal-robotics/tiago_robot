@@ -12,6 +12,7 @@
 
   <!--File includes-->
   <xacro:include filename="$(find tiago_description)/urdf/deg_to_rad.xacro" />
+  <xacro:include filename="$(find hey5_description)/urdf/hey5_hand.urdf.xacro" />
 
   <!--
     Utiliy to create a tiago end effector (right or left).
@@ -49,7 +50,6 @@
 
   <!-- Hand -->
   <xacro:if value="${type == 'pal-hey5'}">
-    <xacro:include filename="$(find hey5_description)/urdf/hey5_hand.urdf.xacro" />
     <xacro:hey5_hand parent="${parent}" name="${name}" reflect="${reflect}">
       <origin xyz="0 0 0" rpy="0 0 0"/>
     </xacro:hey5_hand>
