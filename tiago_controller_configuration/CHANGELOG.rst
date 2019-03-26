@@ -2,6 +2,14 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'incorrect_arm_constraints' into 'erbium-devel'
+  Fix wrong constraints on arm joint traj controllers
+  See merge request robots/tiago_robot!73
+* Fix wrong constraints on arm joint traj controllers
+* Contributors: Victor Lopez
+
 2.0.11 (2019-03-26)
 -------------------
 
