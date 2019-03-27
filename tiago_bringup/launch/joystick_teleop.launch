@@ -17,16 +17,16 @@
   </node>
 
   <group ns="torso_controller">
-    <node pkg="joy_teleop" type="incrementer_server.py" name="incrementer">
+    <node pkg="joy_teleop" type="incrementer_server" name="incrementer">
       <remap from="command" to="safe_command"/>
     </node>
   </group>
 
   <group ns="head_controller">
-    <node pkg="joy_teleop" type="incrementer_server.py" name="incrementer"/>
+    <node pkg="joy_teleop" type="incrementer_server" name="incrementer"/>
   </group>
 
   <group ns="gripper_controller" if="$(eval end_effector in ['pal-gripper', 'schunk-wsg'])">
-    <node pkg="joy_teleop" type="incrementer_server.py" name="incrementer"/>
+    <node pkg="joy_teleop" type="incrementer_server" name="incrementer"/>
   </group>
 </launch>
