@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.13 (2019-03-28)
+-------------------
 * Merge branch 'incrementer' into 'erbium-devel'
   Add new incrementer in the bringup
   See merge request robots/tiago_robot!79
