@@ -56,7 +56,7 @@
     <joint name="${name}_5_joint" type="revolute">
       <parent link="${parent}" />
       <child link="${name}_5_link" />
-      <origin xyz="-0.162 0.02 0.027" rpy="${0.0 * deg_to_rad} ${-90.0 * deg_to_rad} ${0.0 * deg_to_rad}" />
+      <origin xyz="-0.162 0.02 0.027" rpy="${90.0 * deg_to_rad} ${reflect * -90.0 * deg_to_rad} ${-90.0 * deg_to_rad}" />
       <axis xyz="0 0 1" />
       <limit lower="${-120.0 * deg_to_rad}" upper="${120.0 * deg_to_rad}" effort="${wrist_1_max_effort}" velocity="${wrist_1_max_vel}" />
       <dynamics friction="${wrist_friction}" damping="${wrist_damping}"/>
