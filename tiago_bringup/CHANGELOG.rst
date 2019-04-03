@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.14 (2019-04-03)
+-------------------
 * Remove gripper usb cam, will be moved package
 * Contributors: Victor Lopez
 
