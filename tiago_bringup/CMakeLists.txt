@@ -9,9 +9,14 @@ foreach(dir config launch)
 endforeach(dir)
 
 #install udev rule for end-effector usb camera
-install(
+
+OPTION(BUILD_FOR_TIAGO "Build for the real robot" ON)
+
+IF (BUILD_FOR_TIAGO)
+  install(
     DIRECTORY
-        system/
+       system/
     DESTINATION /
     USE_SOURCE_PERMISSIONS
-)
+    )
+ENDIF(BUILD_FOR_TIAGO)
