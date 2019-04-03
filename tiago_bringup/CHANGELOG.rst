@@ -2,6 +2,11 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Remove gripper usb cam, will be moved package
+* Contributors: Victor Lopez
+
 2.0.13 (2019-03-28)
 -------------------
 * Merge branch 'incrementer' into 'erbium-devel'
