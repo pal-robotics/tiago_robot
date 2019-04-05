@@ -6,6 +6,7 @@
   <arg name="tf_prefix" default=""/>
   <arg name="laser_model"  default="sick-571"/>
   <arg name="camera_model"  default="orbbec-astra"/>
+  <arg name="wrist_model"  default="wrist-2010"/>
 
   <!-- Load default controllers -->
   <include file="$(find tiago_controller_configuration)/launch/tiago_controllers.launch">
@@ -14,6 +15,7 @@
     <arg name="ft_sensor" value="$(arg ft_sensor)"/>
     <arg name="laser_model" value="$(arg laser_model)"/>
     <arg name="camera_model" value="$(arg camera_model)"/>
+    <arg name="wrist_model" value="$(arg wrist_model)"/>
   </include>
 
   <!-- Robot state publisher -->

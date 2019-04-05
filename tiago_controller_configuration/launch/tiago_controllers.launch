@@ -5,6 +5,7 @@
     <arg name="ft_sensor"  default="schunk-ft"/>
     <arg name="laser_model"  default="sick-571"/>
     <arg name="camera_model"  default="orbbec-astra"/>
+    <arg name="wrist_model"  default="wrist-2010"/>
 
     <include file="$(find tiago_controller_configuration)/launch/joint_state_controller.launch"/>
     <include file="$(find tiago_controller_configuration)/launch/default_controllers.launch">
@@ -14,8 +15,9 @@
       <include file="$(find tiago_controller_configuration)/launch/force_torque_controller.launch"/>
     </group>
     <!-- load gravity compensation controller with controllable wrist -->
-    <include if="$(arg arm)" file="$(find tiago_controller_configuration)/launch/gravity_compensation_with_controller_wrist.launch">
+    <include if="$(arg arm)" file="$(find tiago_controller_configuration)/launch/gravity_compensation.launch">
       <arg name="end_effector" value="$(arg end_effector)"/>
+      <arg name="wrist_model"  value="$(arg wrist_model)"/>
     </include>
 
     <group if="$(eval end_effector == 'pal-gripper')">
