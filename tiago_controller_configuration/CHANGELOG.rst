@@ -2,8 +2,8 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.15 (2019-04-05)
+-------------------
 * Merge branch 'wrist_current_control' into 'erbium-devel'
   Add missing effort config files
   See merge request robots/tiago_robot!70
