@@ -41,14 +41,14 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/arm/arm_5.stl" scale="1 1 ${reflect}"/>
+          <mesh filename="package://tiago_description/meshes/arm/arm_5.stl" scale="${reflect} ${reflect} ${reflect}"/>
         </geometry>
         <material name="LightGrey" />
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/arm/arm_5_collision.dae" scale="1 1 ${reflect}"/>
+          <mesh filename="package://tiago_description/meshes/arm/arm_5_collision.dae" scale="${reflect} ${reflect} ${reflect}"/>
         </geometry>
       </collision>
     </link>
@@ -56,7 +56,7 @@
     <joint name="${name}_5_joint" type="revolute">
       <parent link="${parent}" />
       <child link="${name}_5_link" />
-      <origin xyz="-0.162 0.02 0.027" rpy="${90.0 * deg_to_rad} ${-90.0 * deg_to_rad} ${reflect * -90.0 * deg_to_rad}" />
+      <origin xyz="${reflect * -0.162} ${reflect*0.02} ${reflect * 0.027}" rpy="${90.0 * deg_to_rad} ${-90.0 * deg_to_rad} ${-90.0 * deg_to_rad}" />
       <axis xyz="0 0 1" />
       <limit lower="${-120.0 * deg_to_rad}" upper="${120.0 * deg_to_rad}" effort="${wrist_1_max_effort}" velocity="${wrist_1_max_vel}" />
       <dynamics friction="${wrist_friction}" damping="${wrist_damping}"/>
@@ -78,14 +78,14 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/arm/arm_6.stl" scale="1 1 1"/>
+          <mesh filename="package://tiago_description/meshes/arm/arm_6.stl" scale="${reflect} 1 1"/>
         </geometry>
         <material name="LightGrey" />
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/arm/arm_6_collision.dae" scale="1 1 1"/>
+          <mesh filename="package://tiago_description/meshes/arm/arm_6_collision.dae" scale="${reflect} 1 1"/>
         </geometry>
       </collision>
     </link>
@@ -93,7 +93,7 @@
     <joint name="${name}_6_joint" type="revolute">
       <parent link="${name}_5_link" />
       <child link="${name}_6_link" />
-      <origin xyz="0 0 ${reflect * 0.15}" rpy="${0.0 * deg_to_rad} ${reflect * -90.0 * deg_to_rad} ${-90.0 * deg_to_rad}" />
+      <origin xyz="0 0 ${reflect * 0.15}" rpy="${0.0 * deg_to_rad} ${-90.0 * deg_to_rad} ${-90.0 * deg_to_rad}" />
       <axis xyz="0 0 1" />
       <limit lower="${-wrist_6_range * deg_to_rad}" upper="${wrist_6_range * deg_to_rad}" effort="${wrist_2_max_effort}" velocity="${wrist_2_max_vel}" />
       <dynamics friction="${wrist_friction}" damping="${wrist_damping}"/>

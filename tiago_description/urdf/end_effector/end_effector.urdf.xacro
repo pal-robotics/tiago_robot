@@ -57,7 +57,7 @@
     <joint name="${name}_safety_box_joint" type="fixed">
       <parent link="${parent}"/>
       <child link="${name}_safety_box"/>
-      <origin xyz="0.1 0.02 0.02" rpy="0 0 0"/>
+      <origin xyz="0.1 0.02 ${reflect * 0.02}" rpy="0 0 0"/>
     </joint>
 
     <link name="${name}_safety_box">
