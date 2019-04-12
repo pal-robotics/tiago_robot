@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.17 (2019-04-12)
+-------------------
 * Merge branch 'tiago-dual' into 'erbium-devel'
   Fixes for tiago dual
   See merge request robots/tiago_robot!80
