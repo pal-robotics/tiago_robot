@@ -32,23 +32,23 @@
     <!--************************-->
     <link name="${name}_5_link">
       <inertial>
-        <origin xyz="0.00003 -0.00028 0.07831" rpy="0.00000 0.00000 0.00000"/>
-        <mass value="1.07424"/>
-        <inertia ixx="0.00168000000" ixy="0.00000100000" ixz="-0.00001500000"
-                 iyy="0.00160300000" iyz="-0.00001900000"
-                 izz="0.00040400000"/>
+        <origin xyz="0.001078 -0.000151 ${reflect * -0.077173}" rpy="0.00000 0.00000 0.00000"/>
+        <mass value="1.655819"/>
+        <inertia ixx="0.00613800000" ixy="-0.00000400000" ixz="0.00015600000"
+                 iyy="0.00564000000" iyz="0.00002200000"
+                 izz="0.00179700000"/>
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/arm/arm_5.stl" scale="1 1 1"/>
+          <mesh filename="package://tiago_description/meshes/arm/arm_5.stl" scale="${reflect} ${reflect} ${reflect}"/>
         </geometry>
         <material name="LightGrey" />
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/arm/arm_5_collision.dae" scale="1 1 1"/>
+          <mesh filename="package://tiago_description/meshes/arm/arm_5_collision.dae" scale="${reflect} ${reflect} ${reflect}"/>
         </geometry>
       </collision>
     </link>
@@ -56,7 +56,7 @@
     <joint name="${name}_5_joint" type="revolute">
       <parent link="${parent}" />
       <child link="${name}_5_link" />
-      <origin xyz="-0.162 0.02 0.027" rpy="${0.0 * deg_to_rad} ${-90.0 * deg_to_rad} ${0.0 * deg_to_rad}" />
+      <origin xyz="${reflect * -0.162} ${reflect*0.02} ${reflect * 0.027}" rpy="${90.0 * deg_to_rad} ${-90.0 * deg_to_rad} ${-90.0 * deg_to_rad}" />
       <axis xyz="0 0 1" />
       <limit lower="${-120.0 * deg_to_rad}" upper="${120.0 * deg_to_rad}" effort="${wrist_1_max_effort}" velocity="${wrist_1_max_vel}" />
       <dynamics friction="${wrist_friction}" damping="${wrist_damping}"/>
@@ -69,23 +69,23 @@
 
     <link name="${name}_6_link">
       <inertial>
-        <origin xyz="0.00531 0.00021 0.00002" rpy="0.00000 0.00000 0.00000"/>
-        <mass value="0.28722"/>
-        <inertia ixx="0.00005900000" ixy="-0.00000000000" ixz="-0.00000000000"
-                 iyy="0.00010600000" iyz="0.00000000000"
-                 izz="0.00012600000"/>
+        <origin xyz="-0.000153 -0.003122 0.000183" rpy="0.00000 0.00000 0.00000"/>
+        <mass value="0.370063"/>
+        <inertia ixx="0.00021500000" ixy="0.00000000000" ixz="0.00000000000"
+                 iyy="0.00017000000" iyz="0.00000200000"
+                 izz="0.00017400000"/>
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/arm/arm_6.stl" scale="1 1 1"/>
+          <mesh filename="package://tiago_description/meshes/arm/arm_6.stl" scale="${reflect} 1 1"/>
         </geometry>
         <material name="LightGrey" />
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/arm/arm_6_collision.dae" scale="1 1 1"/>
+          <mesh filename="package://tiago_description/meshes/arm/arm_6_collision.dae" scale="${reflect} 1 1"/>
         </geometry>
       </collision>
     </link>
@@ -93,7 +93,7 @@
     <joint name="${name}_6_joint" type="revolute">
       <parent link="${name}_5_link" />
       <child link="${name}_6_link" />
-      <origin xyz="0 0 0.15" rpy="${0.0 * deg_to_rad} ${-90.0 * deg_to_rad} ${-90.0 * deg_to_rad}" />
+      <origin xyz="0 0 ${reflect * 0.15}" rpy="${0.0 * deg_to_rad} ${-90.0 * deg_to_rad} ${-90.0 * deg_to_rad}" />
       <axis xyz="0 0 1" />
       <limit lower="${-wrist_6_range * deg_to_rad}" upper="${wrist_6_range * deg_to_rad}" effort="${wrist_2_max_effort}" velocity="${wrist_2_max_vel}" />
       <dynamics friction="${wrist_friction}" damping="${wrist_damping}"/>
@@ -106,11 +106,11 @@
 
     <link name="${name}_7_link">
       <inertial>
-        <origin xyz="0.00011 -0.00034 0.02405" rpy="0.00000 0.00000 0.00000"/>
-        <mass value="0.05935"/>
-        <inertia ixx="0.00001400000" ixy="-0.00000000000" ixz="-0.00000000000"
-                 iyy="0.00001400000" iyz="0.00000000000"
-                 izz="0.00000400000"/>
+        <origin xyz="0.000010 -0.000003 -0.007774" rpy="0.00000 0.00000 0.00000"/>
+        <mass value="0.234252"/>
+        <inertia ixx="0.00014200000" ixy="0.00000000000" ixz="0.00000000000"
+                 iyy="0.00011300000" iyz="0.00000000000"
+                 izz="0.00005200000"/>
       </inertial>
     </link>
 

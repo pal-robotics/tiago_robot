@@ -19,42 +19,44 @@
   <!--Constant parameters-->
   <xacro:property name="arm_friction"       value="1.0" />
   <xacro:property name="arm_damping"        value="1.0" />
-  <xacro:property name="arm_1_max_vel"      value="2.7" />
-  <xacro:property name="arm_2_max_vel"      value="3.66" />
-  <xacro:property name="arm_3_max_vel"      value="4.58" />
-  <xacro:property name="arm_4_max_vel"      value="4.58" />
-  <xacro:property name="arm_1_max_effort"   value="39.0" />
-  <xacro:property name="arm_2_max_effort"   value="39.0" />
-  <xacro:property name="arm_3_max_effort"   value="17.86" />
-  <xacro:property name="arm_4_max_effort"   value="17.86" />
+  <xacro:property name="arm_1_max_vel"      value="1.95" />
+  <xacro:property name="arm_2_max_vel"      value="1.95" />
+  <xacro:property name="arm_3_max_vel"      value="2.35" />
+  <xacro:property name="arm_4_max_vel"      value="2.35" />
+  <xacro:property name="arm_1_max_effort"   value="43.0" />
+  <xacro:property name="arm_2_max_effort"   value="43.0" />
+  <xacro:property name="arm_3_max_effort"   value="26" />
+  <xacro:property name="arm_4_max_effort"   value="26" />
   <xacro:property name="arm_eps"            value="0.07" />
 
 
-  <xacro:macro name="tiago_arm" params="name parent wrist_6_range *origin">
+  <!-- reflect: Set to 1 for a right arm, or to -1 for a left arm-->
+  <xacro:macro name="tiago_arm" params="name parent wrist_6_range reflect *origin">
 
     <!--************************-->
     <!--        SHOULDER        -->
     <!--************************-->
     <link name="${name}_1_link">
       <inertial>
-        <origin xyz="0.063989 0.022546 -0.014608" rpy="0.00000 0.00000 0.00000"/>
-        <mass value="2.083078"/>
-        <inertia ixx="0.003003" ixy="0.002396" ixz="0.001531"
-                 iyy="0.008613" iyz="0.000588"
-                 izz="0.009348"/>
+        <!--<origin xyz="0.061191 ${reflect * -0.022397} -0.012835" rpy="0.00000 0.00000 0.00000"/>-->
+        <origin xyz="0.061191 -0.022397 ${reflect * -0.012835}" rpy="0.00000 0.00000 0.00000"/>
+        <mass value="1.563428"/>
+        <inertia ixx="0.002471" ixy="${reflect * -0.001809}" ixz="-0.001202"
+                 iyy="0.006132" iyz="${reflect * 0.000494}"
+                 izz="0.006704"/>
       </inertial>
       <!-- M90 module -->
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/arm/arm_1.stl" scale="1 1 1"/>
+          <mesh filename="package://tiago_description/meshes/arm/arm_1.stl" scale="1 1 ${reflect}"/>
         </geometry>
         <material name="White"/>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/arm/arm_1_collision.dae" scale="1 1 1"/>
+          <mesh filename="package://tiago_description/meshes/arm/arm_1_collision.dae" scale="1 1 ${reflect}"/>
         </geometry>
       </collision>
     </link>
@@ -75,17 +77,17 @@
 
    <link name="${name}_2_link">
       <inertial>
-        <origin xyz="0.035264 0.000327 0.008489" rpy="0.00000 0.00000 0.00000"/>
-        <mass value="1.792499"/>
-        <inertia ixx="0.001683" ixy="-0.000010" ixz="-0.000387"
-                 iyy="0.004708" iyz="-0.000028"
-                 izz="0.004780"/>
+        <origin xyz="0.030432 0.000229 ${reflect * -0.005942}" rpy="0.00000 0.00000 0.00000"/>
+        <mass value="1.800397"/>
+        <inertia ixx="0.001809" ixy="${reflect * 0.000015}" ixz="${reflect * 0.000254}"
+                 iyy="0.004333" iyz="${reflect * 0.000014}"
+                 izz="0.004341"/>
       </inertial>
       <visual>
         <!-- <origin xyz="0 0 0" rpy="${180 * deg_to_rad} ${0 * deg_to_rad} ${-90 * deg_to_rad}" /> -->
         <origin xyz="0 0 0" rpy="${0 * deg_to_rad} ${0 * deg_to_rad} ${0 * deg_to_rad}" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/arm/arm_2.stl" scale="1 1 1"/>
+          <mesh filename="package://tiago_description/meshes/arm/arm_2.stl" scale="1 1 ${reflect}"/>
         </geometry>
         <material name="DarkGrey" />
       </visual>
@@ -93,7 +95,7 @@
         <!-- <origin xyz="0 0 0" rpy="${180 * deg_to_rad} ${0 * deg_to_rad} ${-90 * deg_to_rad}" /> -->
         <origin xyz="0 0 0" rpy="${0 * deg_to_rad} ${0 * deg_to_rad} ${0 * deg_to_rad}" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/arm/arm_2_collision.dae" scale="1 1 1"/>
+          <mesh filename="package://tiago_description/meshes/arm/arm_2_collision.dae" scale="1 1 ${reflect}"/>
         </geometry>
       </collision>
     </link>
@@ -101,8 +103,8 @@
     <joint name="${name}_2_joint" type="revolute">
       <parent link="${name}_1_link" />
       <child link="${name}_2_link" />
-      <origin xyz="0.125 0.0165 -0.031"
-              rpy="${90.0 * deg_to_rad} 0.0 0.0"/>
+      <origin xyz="0.125 0.0195 ${reflect * -0.031}"
+              rpy="${reflect * 90.0 * deg_to_rad} 0.0 0.0"/>
       <axis xyz="0 0 1" />
       <limit lower="${-90.0 * deg_to_rad}" upper="${62.5 * deg_to_rad}" effort="${arm_2_max_effort}" velocity="${arm_2_max_vel}" />
       <dynamics friction="${arm_friction}" damping="${arm_damping}"/>
@@ -115,23 +117,23 @@
 
     <link name="${name}_3_link">
       <inertial>
-        <origin xyz="-0.007956 0.005368 -0.136320" rpy="0.00000 0.00000 0.00000"/>
-        <mass value="2.275860"/>
-        <inertia ixx="0.018178" ixy="-0.000143" ixz="0.001379"
-                 iyy="0.018552" iyz="-0.000888"
-                 izz="0.002774"/>
+        <origin xyz="0.007418 -0.004361 ${reflect * -0.134194}" rpy="0.00000 0.00000 0.00000"/>
+        <mass value="2.343502"/>
+        <inertia ixx="0.019541" ixy="${1 * -0.000105}" ixz="-0.001717"
+          iyy="0.019936" iyz="${reflect * 0.000852}"
+                 izz="0.002864"/>
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/arm/arm_3.stl" scale="1 1 1"/>
+          <mesh filename="package://tiago_description/meshes/arm/arm_3.stl" scale="1 1 ${reflect}"/>
         </geometry>
         <material name="DarkGrey" />
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/arm/arm_3_collision.dae" scale="1 1 1"/>
+          <mesh filename="package://tiago_description/meshes/arm/arm_3_collision.dae" scale="1 1 ${reflect}"/>
         </geometry>
       </collision>
     </link>
@@ -139,8 +141,8 @@
     <joint name="${name}_3_joint" type="revolute">
       <parent link="${name}_2_link" />
       <child link="${name}_3_link" />
-      <origin xyz="0.0895 0.0 0.0015"
-              rpy="${-90.0 * deg_to_rad} ${0.0 * deg_to_rad} ${90.0 * deg_to_rad}"/>
+      <origin xyz="0.0895 0.0 -0.0015"
+              rpy="${-90.0 * deg_to_rad} ${(90.0 - reflect * 90.0) * deg_to_rad} ${reflect * 90.0 * deg_to_rad}"/>
       <axis xyz="0 0 1" />
       <limit lower="${-202.5 * deg_to_rad}" upper="${90.0 * deg_to_rad}" effort="${arm_3_max_effort}" velocity="${arm_3_max_vel}" />
       <dynamics friction="${arm_friction}" damping="${arm_damping}"/>
@@ -156,23 +158,23 @@
     <!--************************-->
     <link name="${name}_4_link">
       <inertial>
-        <origin xyz="-0.095658 0.014666 0.018133" rpy="0.00000 0.00000 0.00000"/>
-        <mass value="1.892788"/>
-        <inertia ixx="0.002542" ixy="-0.000956" ixz="-0.001457"
-                 iyy="0.011789" iyz="0.000229"
-                 izz="0.012058"/>
+        <origin xyz="${reflect * -0.095658} ${reflect * 0.014666} 0.018133" rpy="0.00000 0.00000 0.00000"/>
+        <mass value="1.432697"/>
+        <inertia ixx="0.002040" ixy="${reflect * 0.000725}" ixz="${-reflect * 0.001150}"
+                 iyy="0.008424" iyz="-0.000204"
+                 izz="0.008686"/>
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/arm/arm_4.stl" scale="1 1 1"/>
+          <mesh filename="package://tiago_description/meshes/arm/arm_4.stl" scale="${reflect} ${reflect} ${reflect}"/>
         </geometry>
         <material name="DarkGrey" />
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/arm/arm_4_collision.dae" scale="1 1 1"/>
+          <mesh filename="package://tiago_description/meshes/arm/arm_4_collision.dae" scale="${reflect} ${reflect} ${reflect}"/>
         </geometry>
       </collision>
     </link>
@@ -180,8 +182,8 @@
     <joint name="${name}_4_joint" type="revolute">
       <parent link="${name}_3_link" />
       <child link="${name}_4_link" />
-      <origin xyz="-0.02 -0.027 -0.222"
-              rpy="${-90.0 * deg_to_rad} ${-90.0 * deg_to_rad} ${0.0 * deg_to_rad}"/>
+      <origin xyz="-0.02 -0.027 ${reflect * -0.222}"
+              rpy="${reflect * -90.0 * deg_to_rad} ${-90.0 * deg_to_rad} ${0.0 * deg_to_rad}"/>
       <axis xyz="0 0 1" />
       <limit lower="${-22.5 * deg_to_rad}" upper="${135 * deg_to_rad}" effort="${arm_4_max_effort}" velocity="${arm_4_max_vel}" />
       <dynamics friction="${arm_friction}" damping="${arm_damping}"/>
@@ -230,7 +232,7 @@
     <!--************************-->
     <!--        WRIST           -->
     <!--************************-->
-   <xacro:wrist name="${name}" parent="${name}_4_link" reflect="1" wrist_6_range="${wrist_6_range}"/>
+   <xacro:wrist name="${name}" parent="${name}_4_link" reflect="${reflect}" wrist_6_range="${wrist_6_range}"/>
 
     <!--***********************-->
     <!--        TOOL           -->
@@ -258,7 +260,7 @@
     <joint name="${name}_tool_joint" type="fixed">
       <parent link="${name}_7_link" />
       <child link="${name}_tool_link" />
-      <origin xyz="0 0 0.046" rpy="${90.0 * deg_to_rad} ${-90.0 * deg_to_rad} ${180 * deg_to_rad}" />
+      <origin xyz="0 0 ${reflect*0.046}" rpy="${90.0 * deg_to_rad} ${reflect * -90.0 * deg_to_rad} ${180 * deg_to_rad}" />
     </joint>
 
 
