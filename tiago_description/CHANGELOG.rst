@@ -2,6 +2,22 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'tiago-dual' into 'erbium-devel'
+  Fixes for tiago dual
+  See merge request robots/tiago_robot!80
+* Corrected com positions and some inertias
+* Merge remote-tracking branch 'origin/urdf_arm_review' into tiago-dual
+* Fix changed orientation of original tiago arm
+* Finish dual arm urdf
+* Almost finished dual arms
+* Fixes for tiago dual
+* fix max vel and adjust max efforts
+* Fixed torque and speed limits for arm
+* review link 4-5-6-7
+* Contributors: Jordi Pages, Luca, Victor Lopez
+
 2.0.16 (2019-04-12)
 -------------------
 
