@@ -1,5 +1,5 @@
 collision_model_parameters:
-  padding: 0.025
+  padding: 0.01
   links_with_padding: [arm_4_link,
   arm_5_link, arm_6_link, arm_7_link, gripper_link, gripper_right_finger_link,
   gripper_left_finger_link]
