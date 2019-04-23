@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.18 (2019-04-23)
+-------------------
 * Merge branch 'reduce-padding' into 'erbium-devel'
   Reduce padding for tiago arm
   See merge request robots/tiago_robot!82
