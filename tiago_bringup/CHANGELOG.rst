@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.19 (2019-05-02)
+-------------------
 * Merge branch 'add_footprint_wsg' into 'erbium-devel'
   Add Dynamic footprint dor WSG config
   See merge request robots/tiago_robot!83
