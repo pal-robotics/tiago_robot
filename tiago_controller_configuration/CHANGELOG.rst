@@ -2,8 +2,8 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.20 (2019-05-09)
+-------------------
 * Merge branch 'no_wrist_gravity' into 'erbium-devel'
   Add gravity no wrist for new wrist model
   See merge request robots/tiago_robot!81
