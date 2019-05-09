@@ -2,6 +2,14 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'no_wrist_gravity' into 'erbium-devel'
+  Add gravity no wrist for new wrist model
+  See merge request robots/tiago_robot!81
+* Add gravity no wrist for new wrist model
+* Contributors: Adria Roig, Victor Lopez
+
 2.0.19 (2019-05-02)
 -------------------
 * Merge branch 'add_footprint_wsg' into 'erbium-devel'
