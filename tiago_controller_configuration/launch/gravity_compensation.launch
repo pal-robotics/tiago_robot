@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+  <arg name="end_effector"/>
+  <arg name="local_joint_control" default="direct_effort_control"/>
+  <arg name="controller_pkg_name" default="tiago_controller_configuration"/>
+  <arg name="ns" default="gravity_compensation"/>
+  <arg name="wrist_model" default="wrist-2010"/>
+
+  <rosparam command="load" file="$(find tiago_controller_configuration)/config/$(arg end_effector)_gravity_compensation_with_controller_wrist_controller.yaml" />
+
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+    <arg name="ns" value="$(arg ns)"/>
+    <arg name="joint_name" value="arm_1_joint"/>
+  </include>
+
+ <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+    <arg name="ns" value="$(arg ns)"/>
+    <arg name="joint_name" value="arm_2_joint"/>
+  </include>
+
+ <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+    <arg name="ns" value="$(arg ns)"/>
+    <arg name="joint_name" value="arm_3_joint"/>
+  </include>
+
+ <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+    <arg name="ns" value="$(arg ns)"/>
+    <arg name="joint_name" value="arm_4_joint"/>
+  </include>
+
+ <group if="$(eval wrist_model == 'wrist-2010')">
+ 	<include file="$(find pal_local_joint_control)/launch/no_control.launch" >
+ 		<arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+	    <arg name="ns" value="$(arg ns)"/>
+	    <arg name="joint_name" value="arm_5_joint"/>
+	</include>
+
+	<include file="$(find pal_local_joint_control)/launch/no_control.launch" >
+	    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+	    <arg name="ns" value="$(arg ns)"/>
+	    <arg name="joint_name" value="arm_6_joint"/>
+	</include>
+
+	<include file="$(find pal_local_joint_control)/launch/no_control.launch" >
+		<arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+		<arg name="ns" value="$(arg ns)"/>
+		<arg name="joint_name" value="arm_7_joint"/>
+	</include>
+ </group>
+
+ <group if="$(eval wrist_model == 'wrist-2017')">
+ 	<include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+ 		<arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+	    <arg name="ns" value="$(arg ns)"/>
+	    <arg name="joint_name" value="arm_5_joint"/>
+	</include>
+
+	<include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+	    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+	    <arg name="ns" value="$(arg ns)"/>
+	    <arg name="joint_name" value="arm_6_joint"/>
+	</include>
+
+	<include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+		<arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+		<arg name="ns" value="$(arg ns)"/>
+		<arg name="joint_name" value="arm_7_joint"/>
+	</include>
+ </group>
+
+ <include file="$(find pal_local_joint_control)/launch/no_control.launch" >
+ 	<arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
+ 	<arg name="ns" value="$(arg ns)"/>
+ 	<arg name="joint_name" value="torso_lift_joint"/>
+ </include>
+
+</launch>

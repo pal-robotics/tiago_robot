@@ -5,6 +5,7 @@
   <arg name="ft_sensor"  default="schunk-ft"/>
   <arg name="laser_model"  default="sick-571"/>
   <arg name="camera_model"  default="orbbec-astra"/>
+  <arg name="wrist_model"  default="wrist-2010"/>
 
   <!-- Diff drive controller multipliers -->
   <rosparam command="load" file="$(find tiago_controller_configuration)/config/mobile_base_controller_multipliers.yaml"/>
@@ -35,5 +36,6 @@
     <arg name="ft_sensor"  value="$(arg ft_sensor)"/>
     <arg name="laser_model"  value="$(arg laser_model)"/>
     <arg name="camera_model"  value="$(arg camera_model)"/>
+    <arg name="wrist_model"  value="$(arg wrist_model)"/>
   </include>
 </launch>
