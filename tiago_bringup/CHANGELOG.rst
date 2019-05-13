@@ -2,6 +2,14 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'endoscope_cam_fix' into 'erbium-devel'
+  changed the frame rate to fix libuvc invalid mode error
+  See merge request robots/tiago_robot!84
+* changed the frame rate to fix libuvc invalid mode error
+* Contributors: Sai Kishor Kothakota, Victor Lopez
+
 2.0.20 (2019-05-09)
 -------------------
 * Merge branch 'no_wrist_gravity' into 'erbium-devel'
