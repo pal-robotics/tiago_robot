@@ -31,7 +31,8 @@
 
 
   <!-- reflect: Set to 1 for a right arm, or to -1 for a left arm-->
-  <xacro:macro name="tiago_arm" params="name parent wrist_6_range reflect *origin">
+  <!-- tiago_dual: Set to 1 for tiago dual, -1 for original tiago, changes joints 1 and 2 -->
+  <xacro:macro name="tiago_arm" params="name parent wrist_6_range reflect tiago_dual *origin">
 
     <!--************************-->
     <!--        SHOULDER        -->
@@ -49,14 +50,14 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/arm/arm_1.stl" scale="1 1 ${reflect}"/>
+          <mesh filename="package://tiago_description/meshes/arm/arm_1.stl" scale="1 ${-1 * tiago_dual} ${reflect}"/>
         </geometry>
         <material name="White"/>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/arm/arm_1_collision.dae" scale="1 1 ${reflect}"/>
+          <mesh filename="package://tiago_description/meshes/arm/arm_1_collision.dae" scale="1 ${-1 * tiago_dual} ${reflect}"/>
         </geometry>
       </collision>
     </link>
@@ -66,13 +67,15 @@
       <child link="${name}_1_link" />
       <xacro:insert_block name="origin"/>
       <axis xyz="0 0 1" />
-      <limit lower="${0.0 * deg_to_rad}" upper="${157.5 * deg_to_rad}" effort="${arm_1_max_effort}" velocity="${arm_1_max_vel}" />
+      <xacro:property name="arm_1_upper_limit"       value="${180.0 if tiago_dual == 1 else 157.5}"/>
+      <xacro:property name="arm_1_lower_limit"       value="${22.5 if tiago_dual == 1 else 0.0}"/>
+      <limit lower="${arm_1_lower_limit * deg_to_rad}" upper="${arm_1_upper_limit * deg_to_rad}" effort="${arm_1_max_effort}" velocity="${arm_1_max_vel}" />
       <dynamics friction="${arm_friction}" damping="${arm_damping}"/>
 
       <safety_controller k_position="20"
                          k_velocity="20"
-                         soft_lower_limit="${0.0 * deg_to_rad + arm_eps}"
-                         soft_upper_limit="${157.5 * deg_to_rad - arm_eps}" />
+                         soft_lower_limit="${arm_1_lower_limit * deg_to_rad + arm_eps}"
+                         soft_upper_limit="${arm_1_upper_limit * deg_to_rad - arm_eps}" />
     </joint>
 
    <link name="${name}_2_link">
@@ -103,16 +106,17 @@
     <joint name="${name}_2_joint" type="revolute">
       <parent link="${name}_1_link" />
       <child link="${name}_2_link" />
-      <origin xyz="0.125 0.0195 ${reflect * -0.031}"
-              rpy="${reflect * 90.0 * deg_to_rad} 0.0 0.0"/>
+      <origin xyz="0.125 ${tiago_dual * -0.0195} ${reflect * -0.031}"
+              rpy="${reflect * tiago_dual * -90.0 * deg_to_rad} 0.0 0.0"/>
       <axis xyz="0 0 1" />
-      <limit lower="${-90.0 * deg_to_rad}" upper="${62.5 * deg_to_rad}" effort="${arm_2_max_effort}" velocity="${arm_2_max_vel}" />
+      <xacro:property name="arm_2_upper_limit"       value="${90.0 if tiago_dual == 1 else 62.5}"/>
+      <limit lower="${-90.0 * deg_to_rad}" upper="${arm_2_upper_limit * deg_to_rad}" effort="${arm_2_max_effort}" velocity="${arm_2_max_vel}" />
       <dynamics friction="${arm_friction}" damping="${arm_damping}"/>
 
       <safety_controller k_position="20"
                          k_velocity="20"
                          soft_lower_limit="${-90.0 * deg_to_rad  + arm_eps}"
-                         soft_upper_limit="${ 62.5 * deg_to_rad - arm_eps}" />
+                         soft_upper_limit="${ arm_2_upper_limit * deg_to_rad - arm_eps}" />
     </joint>
 
     <link name="${name}_3_link">
@@ -144,13 +148,15 @@
       <origin xyz="0.0895 0.0 -0.0015"
               rpy="${-90.0 * deg_to_rad} ${(90.0 - reflect * 90.0) * deg_to_rad} ${reflect * 90.0 * deg_to_rad}"/>
       <axis xyz="0 0 1" />
-      <limit lower="${-202.5 * deg_to_rad}" upper="${90.0 * deg_to_rad}" effort="${arm_3_max_effort}" velocity="${arm_3_max_vel}" />
+      <xacro:property name="arm_3_lower_limit"       value="${-45. if tiago_dual == 1 else -202.5}"/>
+      <xacro:property name="arm_3_upper_limit"       value="${225 if tiago_dual == 1 else 90.0}"/>
+      <limit lower="${arm_3_lower_limit * deg_to_rad}" upper="${arm_3_upper_limit * deg_to_rad}" effort="${arm_3_max_effort}" velocity="${arm_3_max_vel}" />
       <dynamics friction="${arm_friction}" damping="${arm_damping}"/>
 
       <safety_controller k_position="20"
                          k_velocity="20"
-                         soft_lower_limit="${-202.5 * deg_to_rad + arm_eps}"
-                         soft_upper_limit="${ 90.0 * deg_to_rad - arm_eps}" />
+                         soft_lower_limit="${arm_3_lower_limit * deg_to_rad + arm_eps}"
+                         soft_upper_limit="${ arm_3_upper_limit * deg_to_rad - arm_eps}" />
     </joint>
 
     <!--************************-->
