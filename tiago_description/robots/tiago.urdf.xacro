@@ -24,16 +24,16 @@
     <xacro:property name="is_multiple" value="$(arg multiple)" />
     <xacro:property name="nsp" value="$(arg namespace)" />
 
-  <xacro:if value="${end_effector not in ['false', 'pal-gripper', 'pal-hey5', 'schunk-wsg']}">
+  <xacro:if value="${end_effector not in ['false', False, 'pal-gripper', 'pal-hey5', 'schunk-wsg']}">
     <xacro:wrong_end_effector/>
   </xacro:if>
-  <xacro:if value="${ft_sensor not in ['false', 'schunk-ft']}">
+  <xacro:if value="${ft_sensor not in ['false', False, 'schunk-ft']}">
     <xacro:wrong_ft_sensor/>
   </xacro:if>
-  <xacro:if value="${laser_model not in ['false', 'sick-551', 'sick-561', 'sick-571', 'hokuyo']}">
+  <xacro:if value="${laser_model not in ['false', False, 'sick-551', 'sick-561', 'sick-571', 'hokuyo']}">
     <xacro:wrong_laser_model/>
   </xacro:if>
-  <xacro:if value="${camera_model not in ['false', 'orbbec-astra', 'orbbec-astra-pro', 'asus-xtion']}">
+  <xacro:if value="${camera_model not in ['false', False, 'orbbec-astra', 'orbbec-astra-pro', 'asus-xtion']}">
     <xacro:wrong_camera_model/>
   </xacro:if>
         <!-- The properties below are modified using empy http://www.alcyone.com/software/empy/
