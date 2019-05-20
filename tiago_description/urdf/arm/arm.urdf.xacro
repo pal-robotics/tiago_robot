@@ -67,8 +67,8 @@
       <child link="${name}_1_link" />
       <xacro:insert_block name="origin"/>
       <axis xyz="0 0 1" />
-      <xacro:property name="arm_1_upper_limit"       value="${180.0 if tiago_dual == 1 else 157.5}"/>
-      <xacro:property name="arm_1_lower_limit"       value="${22.5 if tiago_dual == 1 else 0.0}"/>
+      <xacro:property name="arm_1_upper_limit"       value="${90.0 if tiago_dual == 1 else 157.5}"/>
+      <xacro:property name="arm_1_lower_limit"       value="${-67.5 if tiago_dual == 1 else 0.0}"/>
       <limit lower="${arm_1_lower_limit * deg_to_rad}" upper="${arm_1_upper_limit * deg_to_rad}" effort="${arm_1_max_effort}" velocity="${arm_1_max_vel}" />
       <dynamics friction="${arm_friction}" damping="${arm_damping}"/>
 
