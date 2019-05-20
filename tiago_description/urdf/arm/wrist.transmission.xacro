@@ -30,7 +30,7 @@ i
 
   <xacro:macro name="wrist_differential_transmission"
                params="name number_1 number_2 act_reduction_1 act_reduction_2 jnt_reduction_1 jnt_reduction_2" >
-    <transmission name="wrist_trans">
+  <transmission name="${name}_wrist_trans">
       <type>transmission_interface/DifferentialTransmission</type>
       <actuator name="${name}_${number_1}_motor">
         <role>actuator1</role>
