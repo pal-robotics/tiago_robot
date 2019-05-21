@@ -77,7 +77,7 @@
   <xacro:tiago_torso name="torso" parent="base_link"/>
   <xacro:head name="head" parent="torso_lift_link" camera_model="$(arg camera_model)"/>
   <xacro:if value="${has_arm}">
-	  <xacro:tiago_arm name="arm" parent="torso_lift_link" wrist_6_range="${wrist_6_range}" reflect="1">
+	  <xacro:tiago_arm name="arm" parent="torso_lift_link" wrist_6_range="${wrist_6_range}" reflect="1" tiago_dual="-1">
         <origin xyz="0.15505 0.014 -0.151" rpy="0 0 ${-90 * deg_to_rad}" />
       </xacro:tiago_arm>
       <xacro:tiago_end_effector name="${end_effector_name}" parent="${end_effector_link}" type="${end_effector}" reflect="1"/>
