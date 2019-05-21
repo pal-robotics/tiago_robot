@@ -2,6 +2,21 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'tiago-dual-arm-1-2' into 'erbium-devel'
+  Tiago dual arm 1 2
+  See merge request robots/tiago_robot!85
+* Fix joint limits for tiago 2 arm
+* Fix transmission duplicated name for tiago 2 arm
+* Modify arm 1, 2 and 3 for TIAGo Dual
+* Merge branch 'melodic_fixes' into 'erbium-devel'
+  added boolean false to the variation lists
+  See merge request robots/tiago_robot!86
+* added boolean false to the variation lists
+* Add default parameters to show.launch for easier testing
+* Contributors: Sai Kishor Kothakota, Victor Lopez
+
 2.0.21 (2019-05-13)
 -------------------
 

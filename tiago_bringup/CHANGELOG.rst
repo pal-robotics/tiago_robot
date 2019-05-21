@@ -2,6 +2,9 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 2.0.21 (2019-05-13)
 -------------------
 * Merge branch 'endoscope_cam_fix' into 'erbium-devel'
