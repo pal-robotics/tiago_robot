@@ -110,12 +110,13 @@
               rpy="${reflect * tiago_dual * -90.0 * deg_to_rad} 0.0 0.0"/>
       <axis xyz="0 0 1" />
       <xacro:property name="arm_2_upper_limit"       value="${90.0 if tiago_dual == 1 else 62.5}"/>
-      <limit lower="${-90.0 * deg_to_rad}" upper="${arm_2_upper_limit * deg_to_rad}" effort="${arm_2_max_effort}" velocity="${arm_2_max_vel}" />
+      <xacro:property name="arm_2_lower_limit"       value="${-67.5 if tiago_dual == 1 else -90.0}"/>
+      <limit lower="${arm_2_lower_limit * deg_to_rad}" upper="${arm_2_upper_limit * deg_to_rad}" effort="${arm_2_max_effort}" velocity="${arm_2_max_vel}" />
       <dynamics friction="${arm_friction}" damping="${arm_damping}"/>
 
       <safety_controller k_position="20"
                          k_velocity="20"
-                         soft_lower_limit="${-90.0 * deg_to_rad  + arm_eps}"
+                         soft_lower_limit="${arm_2_lower_limit * deg_to_rad  + arm_eps}"
                          soft_upper_limit="${ arm_2_upper_limit * deg_to_rad - arm_eps}" />
     </joint>
 
