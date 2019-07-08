@@ -2,6 +2,14 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'new-dual-arm-2-limit' into 'erbium-devel'
+  Fix dual arm 2 lower limit
+  See merge request robots/tiago_robot!88
+* Fix dual arm 2 lower limit
+* Contributors: Victor Lopez
+
 2.0.23 (2019-06-07)
 -------------------
 
