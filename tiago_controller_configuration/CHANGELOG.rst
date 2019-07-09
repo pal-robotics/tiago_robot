@@ -2,8 +2,8 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.25 (2019-07-09)
+-------------------
 * Merge branch 'add-wsg-controller-dependency' into 'erbium-devel'
   Add missing wsg controller config
   See merge request robots/tiago_robot!89
