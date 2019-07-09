@@ -2,6 +2,9 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 2.0.24 (2019-07-08)
 -------------------
 * Merge branch 'new-dual-arm-2-limit' into 'erbium-devel'
