@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <arg name="camera_model" default="orbbec-astra"/>
+    <arg name="is_xtion" default="$(eval {'orbbec-astra-pro': 'false'}.get(arg('camera_model'), 'true'))"/>
+
+    <group if="$(arg is_xtion)">
+        <include file="$(find tiago_bringup)/launch/head_xtion.launch"/>
+    </group>
+    <group unless="$(arg is_xtion)">
+        <include file="$(find pal_orbbec_pro)/launch/pal_orbbec_pro.launch">
+            <arg name="camera" value="xtion"/>
+        </include>
+    </group>
+</launch>
