@@ -2,6 +2,14 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'tiago_camera' into 'erbium-devel'
+  added tiago_camera launch file
+  See merge request robots/tiago_robot!90
+* added tiago_camera launch file
+* Contributors: Sai Kishor Kothakota, Victor Lopez
+
 2.0.25 (2019-07-09)
 -------------------
 
