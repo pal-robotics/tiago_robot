@@ -2,6 +2,9 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 2.0.26 (2019-07-18)
 -------------------
 * Merge branch 'tiago_camera' into 'erbium-devel'

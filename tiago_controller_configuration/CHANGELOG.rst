@@ -2,6 +2,11 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* added missing effort control parameters for arm joint 4
+* Contributors: Hilario Tome
+
 2.0.26 (2019-07-18)
 -------------------
 
