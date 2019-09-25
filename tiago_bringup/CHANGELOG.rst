@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.28 (2019-09-25)
+-------------------
 * Merge branch 'remove-speed-limit' into 'erbium-devel'
   removed speed limit launch
   See merge request robots/tiago_robot!92
