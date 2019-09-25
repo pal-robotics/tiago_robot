@@ -40,12 +40,6 @@
     <arg name="end_effector" value="$(arg end_effector)"/>
   </include>
 
-  <!-- Speed limit -->
-  <include file="$(find speed_limit)/launch/speed_limit.launch">
-    <arg name="config"    value="$(find tiago_bringup)/config/speed_limit.yaml"/>
-    <arg name="footprint" value="$(find pmb2_description)/urdf/base/footprint.yaml"/>
-  </include>
-
   <!-- Joystick controller -->
   <include file="$(find tiago_bringup)/launch/joystick_teleop.launch">
     <arg name="arm" value="$(arg arm)"/>
