@@ -2,6 +2,11 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* changed speed limit dep
+* Contributors: Procópio Stein
+
 2.0.28 (2019-09-25)
 -------------------
 * Merge branch 'remove-speed-limit' into 'erbium-devel'
