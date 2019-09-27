@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.29 (2019-09-27)
+-------------------
 * changed speed limit dep
 * Contributors: Procópio Stein
 
