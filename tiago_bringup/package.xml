@@ -18,7 +18,7 @@
   <run_depend>tiago_moveit_config</run_depend>
   <run_depend>dynamixel_cpp</run_depend>
   <run_depend>openni2_launch</run_depend>
-  <run_depend>speed_limit</run_depend>
+  <run_depend>speed_limit_node</run_depend>
   <run_depend>sensor_to_cloud</run_depend>
   <run_depend>camera_calibration_files</run_depend>
   <run_depend>libuvc_camera</run_depend>
