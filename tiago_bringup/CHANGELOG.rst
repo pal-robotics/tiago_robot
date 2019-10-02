@@ -2,6 +2,14 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'fix-forced-value' into 'erbium-devel'
+  Fix hard coded value, should be default
+  See merge request robots/tiago_robot!93
+* Fix hard coded value, should be default
+* Contributors: Procópio Stein, Victor Lopez
+
 2.0.29 (2019-09-27)
 -------------------
 * changed speed limit dep
