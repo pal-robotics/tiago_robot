@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.30 (2019-10-02)
+-------------------
 * Merge branch 'fix-forced-value' into 'erbium-devel'
   Fix hard coded value, should be default
   See merge request robots/tiago_robot!93
