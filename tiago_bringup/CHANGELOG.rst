@@ -2,6 +2,15 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'remove-sonar-cloud' into 'erbium-devel'
+  remove sonar cloud
+  See merge request robots/tiago_robot!94
+* removed sonar cloud
+* remove sonar cloud
+* Contributors: Procópio Stein
+
 2.0.30 (2019-10-02)
 -------------------
 * Merge branch 'fix-forced-value' into 'erbium-devel'
