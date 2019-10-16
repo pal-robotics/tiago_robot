@@ -2,6 +2,14 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'fix-gazebo-pose-frame' into 'erbium-devel'
+  fixed frame used in ground truth pose
+  See merge request robots/tiago_robot!95
+* fixed frame used in ground truth pose
+* Contributors: Procópio Stein
+
 2.0.31 (2019-10-10)
 -------------------
 

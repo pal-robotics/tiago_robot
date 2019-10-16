@@ -2,6 +2,9 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 2.0.31 (2019-10-10)
 -------------------
 * Merge branch 'remove-sonar-cloud' into 'erbium-devel'
