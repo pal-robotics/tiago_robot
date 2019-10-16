@@ -24,7 +24,7 @@
     </plugin>
 
     <plugin filename="libgazebo_ros_p3d.so" name="gazebo_ros_p3d">
-      <bodyName>base_link</bodyName>
+      <bodyName>base_footprint</bodyName>
       <topicName>ground_truth_odom</topicName>
       <alwaysOn>true</alwaysOn>
       <updateRate>100.0</updateRate>
