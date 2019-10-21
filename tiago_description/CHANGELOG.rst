@@ -2,6 +2,9 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 2.0.32 (2019-10-16)
 -------------------
 * Merge branch 'fix-gazebo-pose-frame' into 'erbium-devel'

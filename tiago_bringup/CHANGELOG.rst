@@ -2,6 +2,14 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'fix-tf-prefix' into 'erbium-devel'
+  removed slash from twist mux out topic
+  See merge request robots/tiago_robot!97
+* removed slash from twist mux out topic
+* Contributors: Procópio Stein
+
 2.0.32 (2019-10-16)
 -------------------
 
