@@ -20,7 +20,7 @@ i
         <mechanicalReduction>${reduction}</mechanicalReduction>
       </actuator>
       <joint name="${name}_${number}_joint">
-        <offset>${arm_5_joint_offset}</offset>
+        <offset>$${${name}_${number}_joint_offset}</offset>
         <hardwareInterface>hardware_interface/JointStateInterface</hardwareInterface>
         <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
         <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
@@ -42,7 +42,7 @@ i
       </actuator>
       <joint name="${name}_${number_1}_joint">
         <role>joint1</role>
-        <offset>${arm_6_joint_offset}</offset>
+        <offset>$${${name}_${number_1}_joint_offset}</offset>
         <mechanicalReduction>${jnt_reduction_1}</mechanicalReduction>
         <hardwareInterface>hardware_interface/JointStateInterface</hardwareInterface>
         <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
@@ -51,7 +51,7 @@ i
       </joint>
       <joint name="${name}_${number_2}_joint">
         <role>joint2</role>
-        <offset>${arm_7_joint_offset}</offset>
+        <offset>$${${name}_${number_2}_joint_offset}</offset>
         <mechanicalReduction>${jnt_reduction_2}</mechanicalReduction>
         <hardwareInterface>hardware_interface/JointStateInterface</hardwareInterface>
         <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
