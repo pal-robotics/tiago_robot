@@ -2,6 +2,14 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'ivo_robot' into 'erbium-devel'
+  parameterize the parsed offsets w.r.t to the name
+  See merge request robots/tiago_robot!96
+* parameterize the parsed offsets w.r.t to the name
+* Contributors: Jordan Palacios, Sai Kishor Kothakota
+
 2.0.33 (2019-10-21)
 -------------------
 
