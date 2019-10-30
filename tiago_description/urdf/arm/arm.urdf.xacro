@@ -272,10 +272,10 @@
 
 
     <!-- extensions -->
-    <xacro:arm_simple_transmission name="${name}" number="1" reduction="1.0" offset_value="${arm_1_joint_offset}"/>
-    <xacro:arm_simple_transmission name="${name}" number="2" reduction="1.0" offset_value="${arm_2_joint_offset}"/>
-    <xacro:arm_simple_transmission name="${name}" number="3" reduction="1.0" offset_value="${arm_3_joint_offset}"/>
-    <xacro:arm_simple_transmission name="${name}" number="4" reduction="1.0" offset_value="${arm_4_joint_offset}"/>
+    <xacro:arm_simple_transmission name="${name}" number="1" reduction="1.0" offset_value="$${${name}_1_joint_offset}"/>
+    <xacro:arm_simple_transmission name="${name}" number="2" reduction="1.0" offset_value="$${${name}_2_joint_offset}"/>
+    <xacro:arm_simple_transmission name="${name}" number="3" reduction="1.0" offset_value="$${${name}_3_joint_offset}"/>
+    <xacro:arm_simple_transmission name="${name}" number="4" reduction="1.0" offset_value="$${${name}_4_joint_offset}"/>
   </xacro:macro>
 
 </robot>
