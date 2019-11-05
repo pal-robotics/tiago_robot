@@ -79,7 +79,7 @@
 
 
     <!-- extensions -->
-    <xacro:head_transmission name="${name}" reduction="1" offset_value="$${${name}_joint_offset}"/>
+    <xacro:head_transmission name="${name}" reduction="1" offset_value="${head_1_joint_offset}"/>
 
   </xacro:macro>
 
@@ -124,7 +124,7 @@
                          soft_upper_limit="${head_2_upper_limit * deg_to_rad}" />
     </joint>
 
-    <xacro:head_transmission name="${name}" reduction="1" offset_value="$${${name}_joint_offset}"/>
+    <xacro:head_transmission name="${name}" reduction="1" offset_value="${head_2_joint_offset}"/>
 
   </xacro:macro>
 

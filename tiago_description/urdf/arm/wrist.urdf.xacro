@@ -25,7 +25,7 @@
   <xacro:property name="wrist_3_max_effort"   value="6.6" />
   <xacro:property name="wrist_eps"          value="0.02" />
 
-  <xacro:macro name="wrist" params="name parent reflect wrist_6_range">
+  <xacro:macro name="wrist" params="name parent reflect wrist_6_range arm_5_offset arm_6_offset arm_7_offset">
 
     <!--************************-->
     <!--        WRIST           -->
@@ -153,10 +153,11 @@
     </gazebo>
 
     <!-- extensions -->
-    <xacro:wrist_simple_transmission name="${name}" number="5" reduction="1.0" />
+    <xacro:wrist_simple_transmission name="${name}" number="5" reduction="1.0" offset="${arm_5_offset}"/>
     <xacro:wrist_differential_transmission name="${name}" number_1="6" number_2="7"
                                                 act_reduction_1="-1.0" act_reduction_2="1.0"
-                                                jnt_reduction_1="1.0" jnt_reduction_2="${-reflect}" />
+                                                jnt_reduction_1="1.0" jnt_reduction_2="${-reflect}" 
+                                                number_1_offset="${arm_6_offset}" number_2_offset="${arm_7_offset}"/>
 
   </xacro:macro>
 

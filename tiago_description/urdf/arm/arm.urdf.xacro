@@ -14,7 +14,6 @@
   <xacro:include filename="$(find tiago_description)/urdf/deg_to_rad.xacro" />
   <xacro:include filename="$(find tiago_description)/urdf/arm/wrist.urdf.xacro" />
   <xacro:include filename="$(find tiago_description)/urdf/arm/arm.transmission.xacro" />
-  <xacro:include filename="$(find tiago_description_calibration)/urdf/calibration/calibration_constants.urdf.xacro" />
 
   <!--Constant parameters-->
   <xacro:property name="arm_friction"       value="1.0" />
@@ -32,7 +31,7 @@
 
   <!-- reflect: Set to 1 for a right arm, or to -1 for a left arm-->
   <!-- tiago_dual: Set to 1 for tiago dual, -1 for original tiago, changes joints 1 and 2 -->
-  <xacro:macro name="tiago_arm" params="name parent wrist_6_range reflect tiago_dual *origin">
+  <xacro:macro name="tiago_arm" params="name parent wrist_6_range reflect tiago_dual *origin arm_1_offset arm_2_offset arm_3_offset arm_4_offset arm_5_offset arm_6_offset arm_7_offset">
 
     <!--************************-->
     <!--        SHOULDER        -->
@@ -239,7 +238,7 @@
     <!--************************-->
     <!--        WRIST           -->
     <!--************************-->
-   <xacro:wrist name="${name}" parent="${name}_4_link" reflect="${reflect}" wrist_6_range="${wrist_6_range}"/>
+   <xacro:wrist name="${name}" parent="${name}_4_link" reflect="${reflect}" wrist_6_range="${wrist_6_range}" arm_5_offset="${arm_5_offset}" arm_6_offset="${arm_6_offset}" arm_7_offset="${arm_7_offset}"/>
 
     <!--***********************-->
     <!--        TOOL           -->
@@ -272,10 +271,10 @@
 
 
     <!-- extensions -->
-    <xacro:arm_simple_transmission name="${name}" number="1" reduction="1.0" offset_value="$${${name}_1_joint_offset}"/>
-    <xacro:arm_simple_transmission name="${name}" number="2" reduction="1.0" offset_value="$${${name}_2_joint_offset}"/>
-    <xacro:arm_simple_transmission name="${name}" number="3" reduction="1.0" offset_value="$${${name}_3_joint_offset}"/>
-    <xacro:arm_simple_transmission name="${name}" number="4" reduction="1.0" offset_value="$${${name}_4_joint_offset}"/>
+    <xacro:arm_simple_transmission name="${name}" number="1" reduction="1.0" offset_value="${arm_1_offset}"/>
+    <xacro:arm_simple_transmission name="${name}" number="2" reduction="1.0" offset_value="${arm_2_offset}"/>
+    <xacro:arm_simple_transmission name="${name}" number="3" reduction="1.0" offset_value="${arm_3_offset}"/>
+    <xacro:arm_simple_transmission name="${name}" number="4" reduction="1.0" offset_value="${arm_4_offset}"/>
   </xacro:macro>
 
 </robot>
