@@ -57,6 +57,7 @@
     <!-- Arm -->
     <xacro:include filename="$(find tiago_description)/urdf/arm/arm.urdf.xacro" />
     <xacro:include filename="$(find tiago_description)/urdf/end_effector/end_effector.urdf.xacro" />
+    <xacro:include filename="$(find tiago_description_calibration)/urdf/calibration/calibration_constants.urdf.xacro" />
   </xacro:if>
 
   <!-- Force Torque sensor -->
@@ -77,7 +78,7 @@
   <xacro:tiago_torso name="torso" parent="base_link"/>
   <xacro:head name="head" parent="torso_lift_link" camera_model="$(arg camera_model)"/>
   <xacro:if value="${has_arm}">
-	  <xacro:tiago_arm name="arm" parent="torso_lift_link" wrist_6_range="${wrist_6_range}" reflect="1" tiago_dual="-1">
+	  <xacro:tiago_arm name="arm" parent="torso_lift_link" wrist_6_range="${wrist_6_range}" reflect="1" tiago_dual="-1" arm_1_offset="${arm_1_joint_offset}" arm_2_offset="${arm_2_joint_offset}" arm_3_offset="${arm_3_joint_offset}" arm_4_offset="${arm_4_joint_offset}" arm_5_offset="${arm_5_joint_offset}" arm_6_offset="${arm_6_joint_offset}" arm_7_offset="${arm_7_joint_offset}">
         <origin xyz="0.15505 0.014 -0.151" rpy="0 0 ${-90 * deg_to_rad}" />
       </xacro:tiago_arm>
       <xacro:tiago_end_effector name="${end_effector_name}" parent="${end_effector_link}" type="${end_effector}" reflect="1"/>
