@@ -2,6 +2,14 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'arm_offset_fix' into 'erbium-devel'
+  parse arm joint offsets through the macro
+  See merge request robots/tiago_robot!98
+* parse arm joint offsets through the macro
+* Contributors: Sai Kishor Kothakota, Victor Lopez
+
 2.0.34 (2019-10-30)
 -------------------
 * Merge branch 'ivo_robot' into 'erbium-devel'
