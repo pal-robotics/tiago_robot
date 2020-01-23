@@ -1,0 +1,5 @@
+## Follow the following format to set the robot specific parameters to each joint
+
+# arm_1_joint:
+#   actuator_params:
+#     torque_sensor_offset: 0.0
