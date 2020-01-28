@@ -2,6 +2,14 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'specifics_file' into 'erbium-devel'
+  added missing actuator specifics file
+  See merge request robots/tiago_robot!100
+* added missing actuator specifics file
+* Contributors: Sai Kishor Kothakota, Victor Lopez
+
 2.0.35 (2019-11-06)
 -------------------
 
