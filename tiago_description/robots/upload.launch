@@ -1,6 +1,7 @@
 <launch>
   <arg name="multi" default=""/>
   <arg name="arm"  default="True"/>
+  <arg name="wrist_model"  default="wrist-2010"/>
   <arg name="end_effector"  default="pal-hey5"/>
   <arg name="ft_sensor"  default="schunk-ft"/>
   <arg name="laser_model"  default="sick-571"/>
@@ -11,6 +12,7 @@
     command="rosrun xacro xacro --inorder
     '$(find tiago_description)/robots/tiago.urdf.xacro'
     arm:=$(arg arm)
+    wrist_model:=$(arg wrist_model)
     end_effector:=$(arg end_effector)
     ft_sensor:=$(arg ft_sensor)
     laser_model:=$(arg laser_model)
