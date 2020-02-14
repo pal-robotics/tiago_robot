@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.37 (2020-02-14)
+-------------------
 * Merge branch 'wrist_model' into 'erbium-devel'
   add wrist_model arg
   See merge request robots/tiago_robot!101
