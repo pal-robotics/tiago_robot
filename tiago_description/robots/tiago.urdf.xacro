@@ -10,6 +10,7 @@
 <robot  xmlns:xacro="http://ros.org/wiki/xacro"
         name="tiago" >
     <xacro:arg name="arm" default="true"/> <!-- true, false -->
+    <xacro:arg name="wrist_model" default="wrist-2010"/>
     <xacro:arg name="end_effector" default="pal-hey5"/> <!-- false, pal-gripper, pal-hey5, schunk-wsg-->
     <xacro:arg name="ft_sensor" default="schunk-ft"/> <!-- false, schunk-ft -->
     <xacro:arg name="laser_model" default="sick-571"/> <!-- false, hokuyo, sick-551, sick-561, sick-571-->
@@ -17,6 +18,7 @@
     <xacro:arg name="has_thermal_camera" default="false"/>
     <xacro:arg name="multiple" default="false"/>
     <xacro:arg name="namespace" default=""/>
+    <xacro:property name="wrist_model" value="$(arg wrist_model)" />
     <xacro:property name="end_effector" value="$(arg end_effector)" />
     <xacro:property name="ft_sensor" value="$(arg ft_sensor)" />
     <xacro:property name="laser_model" value="$(arg laser_model)" />
@@ -24,6 +26,9 @@
     <xacro:property name="is_multiple" value="$(arg multiple)" />
     <xacro:property name="nsp" value="$(arg namespace)" />
 
+  <xacro:if value="${wrist_model not in ['wrist-2010', 'wrist-2017']}">
+    <xacro:wrong_wrist_model/>
+  </xacro:if>
   <xacro:if value="${end_effector not in ['false', False, 'pal-gripper', 'pal-hey5', 'schunk-wsg']}">
     <xacro:wrong_end_effector/>
   </xacro:if>
@@ -43,7 +48,12 @@
    <xacro:property name="has_ft_sensor"           value="${has_schunk_ft}"/> <!-- This should be OR'ed with other FT sensors-->
    <xacro:property name="end_effector_link"       value="${'wrist_ft_tool_link' if has_ft_sensor else 'arm_tool_link'}"/>
    <xacro:property name="end_effector_name"       value="${'hand' if end_effector == 'pal-hey5' else 'gripper'}"/>
-   <xacro:property name="wrist_6_range"           value="${ 81 if has_ft_sensor else 90 }"/>
+   <xacro:if value="${wrist_model == 'wrist-2010'}">
+     <xacro:property name="wrist_6_range"           value="${ 81 if has_ft_sensor else 90 }"/>
+   </xacro:if>
+   <xacro:if value="${wrist_model == 'wrist-2017'}">
+     <xacro:property name="wrist_6_range"           value="81"/>
+   </xacro:if>
    <xacro:property name="head_link_name"          value="head_2_link"/>
 
   <!-- The following included files set up definitions of parts of the robot body -->
