@@ -2,6 +2,9 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 2.0.37 (2020-02-14)
 -------------------
 * Merge branch 'wrist_model' into 'erbium-devel'
