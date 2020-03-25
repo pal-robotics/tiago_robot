@@ -24,6 +24,7 @@
   -->
   <xacro:macro name="tiago_end_effector" params="name parent type reflect">
 
+  <!-- PAL Gripper -->
   <xacro:if value="${type == 'pal-gripper'}">
     <xacro:include filename="$(find pal_gripper_description)/urdf/gripper.urdf.xacro" />
     <xacro:pal_gripper parent="${parent}" name="${name}">
@@ -81,6 +82,14 @@
         </geometry>
       </collision>
     </link>
+  </xacro:if>
+
+  <!-- Custom -->
+  <xacro:if value="${type == 'custom'}">
+    <xacro:include filename="$(find custom_ee_description)/urdf/end-effector.urdf.xacro" />
+    <xacro:end_effector parent="${parent}">
+      <origin xyz="0.01 0 0" rpy="${90*deg_to_rad} ${90*deg_to_rad} ${-90*deg_to_rad}"/>
+    </xacro:end_effector>
   </xacro:if>
 
   </xacro:macro>

@@ -22,4 +22,5 @@
   <run_depend>camera_calibration_files</run_depend>
   <run_depend>libuvc_camera</run_depend>
   <run_depend>robot_pose</run_depend>
+  <run_depend>custom_ee_configuration</run_depend>
 </package>

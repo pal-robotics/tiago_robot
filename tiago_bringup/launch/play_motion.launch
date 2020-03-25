@@ -5,9 +5,11 @@
   <arg name="ft_sensor"/>
   <arg name="file_suffix" value="$(eval ('no-arm' if not arm else end_effector+ ('' if not ft_sensor else '_'+ft_sensor)))"/>
   <!-- execute pre-recorded motions -->
-  <rosparam file="$(find tiago_bringup)/config/motions/tiago_motions_$(arg file_suffix).yaml" command="load" />
+  <rosparam if="$(eval end_effector != 'custom')" file="$(find tiago_bringup)/config/motions/tiago_motions_$(arg file_suffix).yaml" command="load" />
+  <rosparam if="$(eval end_effector == 'custom')" file="$(find custom_ee_configuration)/config/motions/tiago_motions.yaml" command="load" />
   <node pkg="play_motion" type="play_motion" name="play_motion">
-    <rosparam file="$(find tiago_bringup)/config/approach_planner/approach_planner_$(arg file_suffix).yaml" command="load" />
+    <rosparam if="$(eval end_effector != 'custom')" file="$(find tiago_bringup)/config/approach_planner/approach_planner_$(arg file_suffix).yaml" command="load" />
+    <rosparam if="$(eval end_effector == 'custom')" file="$(find custom_ee_configuration)/config/approach_planner/approach_planner.yaml" command="load" />
   </node>
   <node pkg="play_motion" type="is_already_there.py" name="is_already_there" />
 </launch>
