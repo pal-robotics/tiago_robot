@@ -2,6 +2,16 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'custom-ee' into 'erbium-devel'
+  Allow using custom end-effector
+  See merge request robots/tiago_robot!102
+* Add parameter files for custom EE
+* Add hardware for custom
+* Allow using custom end-effector
+* Contributors: davidfernandez, victor
+
 2.0.38 (2020-02-27)
 -------------------
 
