@@ -2,8 +2,8 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.39 (2020-04-21)
+-------------------
 * Merge branch 'custom-ee' into 'erbium-devel'
   Allow using custom end-effector
   See merge request robots/tiago_robot!102
