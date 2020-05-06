@@ -1,7 +1,7 @@
 <launch>
   <arg name="multi" default=""/>
   <arg name="arm"  default="True"/>
-  <arg name="wrist_model"  default="wrist-2010"/>
+  <arg name="wrist_model"  default="wrist-2017"/>
   <arg name="end_effector"  default="pal-hey5"/>
   <arg name="ft_sensor"  default="schunk-ft"/>
   <arg name="laser_model"  default="sick-571"/>
