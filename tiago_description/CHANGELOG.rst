@@ -2,6 +2,14 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'fix-tiago-wrist-offset' into 'erbium-devel'
+  Change wrist tool link position with wrist 2017
+  See merge request robots/tiago_robot!106
+* Change wrist tool link position with wrist 2017
+* Contributors: Victor Lopez, victor
+
 2.0.39 (2020-04-21)
 -------------------
 * Merge branch 'custom-ee' into 'erbium-devel'

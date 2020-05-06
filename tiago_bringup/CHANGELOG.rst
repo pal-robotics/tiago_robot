@@ -2,6 +2,9 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 2.0.39 (2020-04-21)
 -------------------
 * Merge branch 'custom-ee' into 'erbium-devel'
