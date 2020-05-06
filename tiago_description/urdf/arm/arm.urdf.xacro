@@ -31,7 +31,7 @@
 
   <!-- reflect: Set to 1 for a right arm, or to -1 for a left arm-->
   <!-- tiago_dual: Set to 1 for tiago dual, -1 for original tiago, changes joints 1 and 2 -->
-  <xacro:macro name="tiago_arm" params="name parent wrist_6_range reflect tiago_dual *origin arm_1_offset arm_2_offset arm_3_offset arm_4_offset arm_5_offset arm_6_offset arm_7_offset">
+  <xacro:macro name="tiago_arm" params="name parent wrist_model has_ft_sensor reflect tiago_dual *origin arm_1_offset arm_2_offset arm_3_offset arm_4_offset arm_5_offset arm_6_offset arm_7_offset">
 
     <!--************************-->
     <!--        SHOULDER        -->
@@ -238,6 +238,14 @@
     <!--************************-->
     <!--        WRIST           -->
     <!--************************-->
+
+   <xacro:if value="${wrist_model == 'wrist-2010'}">
+     <xacro:property name="wrist_6_range"           value="${ 81 if has_ft_sensor else 90 }"/>
+   </xacro:if>
+   <xacro:if value="${wrist_model == 'wrist-2017'}">
+     <xacro:property name="wrist_6_range"           value="81"/>
+   </xacro:if>
+
    <xacro:wrist name="${name}" parent="${name}_4_link" reflect="${reflect}" wrist_6_range="${wrist_6_range}" arm_5_offset="${arm_5_offset}" arm_6_offset="${arm_6_offset}" arm_7_offset="${arm_7_offset}"/>
 
     <!--***********************-->
@@ -263,10 +271,16 @@
       </collision>
     </link>
 
+    <xacro:if value="${wrist_model == 'wrist-2010'}">
+      <xacro:property name="tool_link_z_offset"           value="0.046"/>
+    </xacro:if>
+    <xacro:if value="${wrist_model == 'wrist-2017'}">
+     <xacro:property name="tool_link_z_offset"           value="${ 0.046 if has_ft_sensor else 0.06825 }"/>
+    </xacro:if>
     <joint name="${name}_tool_joint" type="fixed">
       <parent link="${name}_7_link" />
       <child link="${name}_tool_link" />
-      <origin xyz="0 0 ${reflect*0.046}" rpy="${90.0 * deg_to_rad} ${reflect * -90.0 * deg_to_rad} ${180 * deg_to_rad}" />
+        <origin xyz="0 0 ${reflect * tool_link_z_offset}" rpy="${90.0 * deg_to_rad} ${reflect * -90.0 * deg_to_rad} ${180 * deg_to_rad}" />
     </joint>
 
 
