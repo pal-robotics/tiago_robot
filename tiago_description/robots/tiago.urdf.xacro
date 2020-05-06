@@ -26,8 +26,10 @@
     <xacro:property name="is_multiple" value="$(arg multiple)" />
     <xacro:property name="nsp" value="$(arg namespace)" />
 
-  <xacro:if value="${wrist_model not in ['wrist-2010', 'wrist-2017']}">
-    <xacro:wrong_wrist_model/>
+  <xacro:if value="$(arg arm)">
+    <xacro:if value="${wrist_model not in ['wrist-2010', 'wrist-2017']}">
+      <xacro:wrong_wrist_model/>
+    </xacro:if>
   </xacro:if>
   <xacro:if value="${end_effector not in ['false', False, 'pal-gripper', 'pal-hey5', 'schunk-wsg', 'custom']}">
     <xacro:wrong_end_effector/>
