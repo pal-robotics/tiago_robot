@@ -2,6 +2,11 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Use different meshes for wrist 2017
+* Contributors: Victor Lopez
+
 2.0.41 (2020-05-07)
 -------------------
 * Adjust end_effector-wrist distance without FT sensor
