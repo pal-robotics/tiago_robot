@@ -275,7 +275,7 @@
       <xacro:property name="tool_link_z_offset"           value="0.046"/>
     </xacro:if>
     <xacro:if value="${wrist_model == 'wrist-2017'}">
-     <xacro:property name="tool_link_z_offset"           value="${ 0.046 if has_ft_sensor else 0.06825 }"/>
+     <xacro:property name="tool_link_z_offset"           value="${ 0.046 if has_ft_sensor else 0.0573 }"/>
     </xacro:if>
     <joint name="${name}_tool_joint" type="fixed">
       <parent link="${name}_7_link" />
