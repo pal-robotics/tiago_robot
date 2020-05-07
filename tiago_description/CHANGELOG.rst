@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.42 (2020-05-07)
+-------------------
 * Use different meshes for wrist 2017
 * Contributors: Victor Lopez
 
