@@ -246,7 +246,7 @@
      <xacro:property name="wrist_6_range"           value="81"/>
    </xacro:if>
 
-   <xacro:wrist name="${name}" parent="${name}_4_link" reflect="${reflect}" wrist_6_range="${wrist_6_range}" arm_5_offset="${arm_5_offset}" arm_6_offset="${arm_6_offset}" arm_7_offset="${arm_7_offset}"/>
+   <xacro:wrist name="${name}" parent="${name}_4_link" reflect="${reflect}" wrist_model="${wrist_model}" has_ft_sensor="${has_ft_sensor}" arm_5_offset="${arm_5_offset}" arm_6_offset="${arm_6_offset}" arm_7_offset="${arm_7_offset}"/>
 
     <!--***********************-->
     <!--        TOOL           -->

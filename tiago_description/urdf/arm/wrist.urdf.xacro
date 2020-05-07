@@ -25,7 +25,7 @@
   <xacro:property name="wrist_3_max_effort"   value="6.6" />
   <xacro:property name="wrist_eps"          value="0.02" />
 
-  <xacro:macro name="wrist" params="name parent reflect wrist_6_range arm_5_offset arm_6_offset arm_7_offset">
+  <xacro:macro name="wrist" params="name parent reflect wrist_model has_ft_sensor arm_5_offset arm_6_offset arm_7_offset">
 
     <!--************************-->
     <!--        WRIST           -->
@@ -41,14 +41,14 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/arm/arm_5.stl" scale="${reflect} ${reflect} ${reflect}"/>
+          <mesh filename="package://tiago_description/meshes/arm/arm_5-${wrist_model}.stl" scale="${reflect} ${reflect} ${reflect}"/>
         </geometry>
         <material name="LightGrey" />
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/arm/arm_5_collision.dae" scale="${reflect} ${reflect} ${reflect}"/>
+          <mesh filename="package://tiago_description/meshes/arm/arm_5_collision-${wrist_model}.dae" scale="${reflect} ${reflect} ${reflect}"/>
         </geometry>
       </collision>
     </link>
@@ -78,17 +78,24 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/arm/arm_6.stl" scale="${reflect} 1 1"/>
+          <mesh filename="package://tiago_description/meshes/arm/arm_6-${wrist_model}.stl" scale="${reflect} 1 1"/>
         </geometry>
         <material name="LightGrey" />
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/arm/arm_6_collision.dae" scale="${reflect} 1 1"/>
+          <mesh filename="package://tiago_description/meshes/arm/arm_6_collision-${wrist_model}.dae" scale="${reflect} 1 1"/>
         </geometry>
       </collision>
     </link>
+
+    <xacro:if value="${wrist_model == 'wrist-2010'}">
+      <xacro:property name="wrist_6_range"           value="${ 81 if has_ft_sensor else 90 }"/>
+    </xacro:if>
+    <xacro:if value="${wrist_model == 'wrist-2017'}">
+      <xacro:property name="wrist_6_range"           value="81"/>
+    </xacro:if>
 
     <joint name="${name}_6_joint" type="revolute">
       <parent link="${name}_5_link" />
