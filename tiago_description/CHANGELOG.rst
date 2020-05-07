@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.41 (2020-05-07)
+-------------------
 * Adjust end_effector-wrist distance without FT sensor
 * Contributors: Victor Lopez
 
