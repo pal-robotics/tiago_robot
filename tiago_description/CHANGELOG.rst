@@ -2,6 +2,11 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Adjust end_effector-wrist distance without FT sensor
+* Contributors: Victor Lopez
+
 2.0.40 (2020-05-06)
 -------------------
 * Merge branch 'fix-tiago-wrist-offset' into 'erbium-devel'
