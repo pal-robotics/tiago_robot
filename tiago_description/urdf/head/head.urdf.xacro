@@ -14,6 +14,7 @@
   <xacro:include filename="$(find tiago_description)/urdf/deg_to_rad.xacro" />
   <xacro:include filename="$(find tiago_description)/urdf/head/head.transmission.xacro" />
   <xacro:include filename="$(find tiago_description)/urdf/sensors/xtion_pro_live.urdf.xacro" />
+  <xacro:include filename="$(find tiago_description)/urdf/sensors/orbbec_astra.urdf.xacro" />
   <xacro:include filename="$(find tiago_description_calibration)/urdf/calibration/calibration_constants.urdf.xacro" />
 
   <!--Constant parameters-->
@@ -131,11 +132,20 @@
   <xacro:macro name="head" params="name parent camera_model">
     <xacro:head_1 name="${name}_1" parent="${parent}" />
     <xacro:head_2 name="${name}_2" parent="${name}_1_link"/>
-    <xacro:xtion_pro_live name="xtion" parent="${name}_2" camera_model="${camera_model}">
-      <origin xyz="${camera_position_x} ${camera_position_y} ${camera_position_z}" rpy="${camera_orientation_r} ${camera_orientation_p} ${camera_orientation_y}" />
-      <!-- optical origin -->
-      <origin xyz="0 0 0" rpy="${-90 * deg_to_rad} ${0 * deg_to_rad} ${-90 * deg_to_rad}" />
-    </xacro:xtion_pro_live>
+    <xacro:if value="${camera_model == 'asus-xtion'}">
+      <xacro:xtion_pro_live name="xtion" parent="${name}_2" camera_model="${camera_model}">
+        <origin xyz="${camera_position_x} ${camera_position_y} ${camera_position_z}" rpy="${camera_orientation_r} ${camera_orientation_p} ${camera_orientation_y}" />
+        <!-- optical origin -->
+        <origin xyz="0 0 0" rpy="${-90 * deg_to_rad} ${0 * deg_to_rad} ${-90 * deg_to_rad}" />
+      </xacro:xtion_pro_live>
+    </xacro:if>
+    <xacro:if value="${camera_model in ['orbbec-astra', 'orbbec-astra-pro']}">
+      <xacro:orbbec_astra name="xtion" parent="${name}_2" camera_model="${camera_model}">
+        <origin xyz="${camera_position_x} ${camera_position_y} ${camera_position_z}" rpy="${camera_orientation_r} ${camera_orientation_p} ${camera_orientation_y}" />
+        <!-- optical origin -->
+        <origin xyz="0 0 0" rpy="${-90 * deg_to_rad} ${0 * deg_to_rad} ${-90 * deg_to_rad}" />
+      </xacro:orbbec_astra>
+    </xacro:if>
   </xacro:macro>
 
 </robot>

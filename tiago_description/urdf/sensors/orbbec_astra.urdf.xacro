@@ -1,0 +1,177 @@
+<?xml version="1.0"?>
+<!--
+
+  Copyright (c) 2013, PAL Robotics, S.L.
+  All rights reserved.
+
+  This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
+  To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to
+  Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+
+  ASUS Xtion Pro Live
+    - visual model, without base
+    - collision geometry
+    - TF frames
+    - loads Gazebo plugin
+
+    Note: There is a bug that Gazebo in ROS Fuerte ignores the roll/pitch/yaw in the visual tag,
+          therefore it needs to be in a separate link, with the orientation specified at the joint.
+
+    ToDo: Fix visual mesh, re-scale it, & the origin is not centered along the frontal axis.
+          Can simplify collision mesh.
+          Rotate origin in mesh, to match the orientation of the base link and bypass the bug.
+
+-->
+
+
+<!--  Orbbec Astra based off ASUS Xtion Pro Live-->
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find tiago_description)/urdf/sensors/openni.gazebo.xacro" />
+  <xacro:include filename="$(find tiago_description_calibration)/urdf/calibration/extrinsic_camera_calibration_constants.urdf.xacro" />
+
+  <!-- Macro -->
+  <xacro:macro name="orbbec_astra" params="name parent camera_model *origin *optical_origin">
+
+    <!-- frames in the center of the camera -->
+    <joint name="${name}_joint" type="fixed">
+      <xacro:insert_block name="origin"/>
+      <parent link="${parent}_link"/>
+      <child link="${name}_link"/>
+    </joint>
+
+    <link name="${name}_link">
+      <inertial>
+        <origin xyz="-0.00936000000 -0.00003000000 -0.00273000000" rpy="0 0 0"/>
+        <mass value="0.21970000000"/>
+        <inertia ixx="0.00000429247" ixy="0.00000000000" ixz="0.00000002565"
+                 iyy="0.00000008027" iyz="0.00000000000"
+                 izz="0.00000427339"/>
+      </inertial>
+      <!--
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://tiago_description/meshes/sensors/xtion_pro_live/xtion_pro_live.dae" />
+        </geometry>
+        <material name="Grey">
+          <color rgba="0.5 0.5 0.5 1"/>
+        </material>
+      </visual>
+      <collision>
+        <origin xyz="-0.01 0.0025 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.04 0.185 0.03"/>
+        </geometry>
+      </collision>
+      -->
+    </link>
+
+    <joint name="${name}_optical_joint" type="fixed">
+      <xacro:insert_block name="optical_origin" />
+      <parent link="${name}_link"/>
+      <child link="${name}_optical_frame"/>
+    </joint>
+
+    <link name="${name}_optical_frame">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.001"/>
+        <inertia ixx="0.00001" ixy="0" ixz="0"
+                 iyy="0.00001" iyz="0"
+                 izz="0.00001"/>
+      </inertial>
+    </link>
+
+    <!-- frame of camera origin provided by Orbbec, need this intermediate frame for backwards compatibility with xtion_pro_live
+         to reuse same camera origin -->
+    <joint name="${name}_orbbec_aux_joint" type="fixed">
+      <!-- This is the real origin as in the robot solidworks, it must match: 0.1015 0.095 0.008 -->
+      <!-- Assuming we have 0.0908 0.08 0.0 from default camera_position, and rotated -90 deg on x.-->
+      <origin xyz="0.0107 0.008 0.015" rpy="0 0 0" />
+      <parent link="${name}_link" />
+      <child link="${name}_orbbec_aux_joint_frame"/>
+    </joint>
+
+    <link name="${name}_orbbec_aux_joint_frame">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.001"/>
+        <inertia ixx="0.00001" ixy="0" ixz="0"
+                 iyy="0.00001" iyz="0"
+                 izz="0.00001"/>
+      </inertial>
+    </link>
+
+    <!-- frames of the depth sensor -->
+    <joint name="${name}_depth_joint" type="fixed">
+      <xacro:camera_baseline_constants camera_model="${camera_model}" />
+      <parent link="${name}_rgb_frame" />
+      <child link="${name}_depth_frame"/>
+    </joint>
+
+    <link name="${name}_depth_frame">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.001"/>
+        <inertia ixx="0.00001" ixy="0" ixz="0"
+                 iyy="0.00001" iyz="0"
+                 izz="0.00001"/>
+      </inertial>
+    </link>
+
+    <joint name="${name}_depth_optical_joint" type="fixed">
+      <origin xyz="0 0 0" rpy="${-90.0 * deg_to_rad} 0.0 ${-90.0 * deg_to_rad}" />
+      <parent link="${name}_depth_frame" />
+      <child link="${name}_depth_optical_frame"/>
+    </joint>
+
+    <link name="${name}_depth_optical_frame">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.001"/>
+        <inertia ixx="0.00001" ixy="0" ixz="0"
+                 iyy="0.00001" iyz="0"
+                 izz="0.00001"/>
+      </inertial>
+    </link>
+
+    <!-- frames of the rgb sensor -->
+    <joint name="${name}_rgb_joint" type="fixed">
+      <origin xyz="-0.0006 0.0125 -0.015" rpy="0 0 0" />
+      <parent link="${name}_orbbec_aux_joint_frame" />
+      <child link="${name}_rgb_frame"/>
+    </joint>
+
+    <link name="${name}_rgb_frame">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.001"/>
+        <inertia ixx="0.00001" ixy="0" ixz="0"
+                 iyy="0.00001" iyz="0"
+                 izz="0.00001"/>
+      </inertial>
+    </link>
+
+    <joint name="${name}_rgb_optical_joint" type="fixed">
+      <origin xyz="0 0 0" rpy="${-90.0 * deg_to_rad} 0.0 ${-90.0 * deg_to_rad}" />
+      <parent link="${name}_rgb_frame" />
+      <child link="${name}_rgb_optical_frame"/>
+    </joint>
+
+    <link name="${name}_rgb_optical_frame">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.001"/>
+        <inertia ixx="0.00001" ixy="0" ixz="0"
+                 iyy="0.00001" iyz="0"
+                 izz="0.00001"/>
+      </inertial>
+    </link>
+
+    <!-- extensions -->
+    <xacro:openni_camera_gazebo_v0 name="${name}" />
+
+  </xacro:macro>
+
+</robot>
