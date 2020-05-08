@@ -2,6 +2,18 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Fix mesh orientation
+* Merge branch 'fix-orbbec-astra' into 'erbium-devel'
+  Fix frames for orbbec astra
+  See merge request robots/tiago_robot!108
+* depth frame for orbbec is referenced on the rgb frame
+* Fix y orientation error
+* Fix frames for orbbec astra
+* Remove unused properties
+* Contributors: Victor Lopez, victor
+
 2.0.42 (2020-05-07)
 -------------------
 * Use different meshes for wrist 2017
