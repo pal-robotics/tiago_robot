@@ -106,7 +106,7 @@
     <!-- frames of the depth sensor -->
     <joint name="${name}_depth_joint" type="fixed">
       <xacro:camera_baseline_constants camera_model="${camera_model}" />
-      <parent link="${name}_orbbec_aux_joint_frame" />
+      <parent link="${name}_rgb_frame" />
       <child link="${name}_depth_frame"/>
     </joint>
 
