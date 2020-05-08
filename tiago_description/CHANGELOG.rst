@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.43 (2020-05-08)
+-------------------
 * Fix mesh orientation
 * Merge branch 'fix-orbbec-astra' into 'erbium-devel'
   Fix frames for orbbec astra
