@@ -128,19 +128,23 @@
 
   </xacro:macro>
 
-  <xacro:macro name="head" params="name parent camera_model *camera_origin">
+  <xacro:macro name="head" params="name parent camera_model description_calibration_package:=tiago_description_calibration">
+
+    <!-- includes -->
+    <xacro:include filename="$(find ${description_calibration_package})/urdf/calibration/calibration_constants.urdf.xacro" />
+
     <xacro:head_1 name="${name}_1" parent="${parent}" />
     <xacro:head_2 name="${name}_2" parent="${name}_1_link"/>
     <xacro:if value="${camera_model == 'asus-xtion'}">
-      <xacro:xtion_pro_live name="xtion" parent="${name}_2" camera_model="${camera_model}">
-        <xacro:insert_block name="camera_origin"/>
+      <xacro:xtion_pro_live name="xtion" parent="${name}_2" camera_model="${camera_model}" extrinsic_package="${description_calibration_package}">
+        <origin xyz="${camera_position_x} ${camera_position_y} ${camera_position_z}" rpy="${camera_orientation_r} ${camera_orientation_p} ${camera_orientation_y}" />
         <!-- optical origin -->
         <origin xyz="0 0 0" rpy="${-90 * deg_to_rad} ${0 * deg_to_rad} ${-90 * deg_to_rad}" />
       </xacro:xtion_pro_live>
     </xacro:if>
     <xacro:if value="${camera_model in ['orbbec-astra', 'orbbec-astra-pro']}">
-      <xacro:orbbec_astra name="xtion" parent="${name}_2" camera_model="${camera_model}">
-        <xacro:insert_block name="camera_origin"/>
+      <xacro:orbbec_astra name="xtion" parent="${name}_2" camera_model="${camera_model}" extrinsic_package="${description_calibration_package}">
+        <origin xyz="${camera_position_x} ${camera_position_y} ${camera_position_z}" rpy="${camera_orientation_r} ${camera_orientation_p} ${camera_orientation_y}" />
         <!-- optical origin -->
         <origin xyz="0 0 0" rpy="${-90 * deg_to_rad} ${0 * deg_to_rad} ${-90 * deg_to_rad}" />
       </xacro:orbbec_astra>

@@ -28,10 +28,12 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
   <xacro:include filename="$(find tiago_description)/urdf/sensors/openni.gazebo.xacro" />
-  <xacro:include filename="$(find tiago_description_calibration)/urdf/calibration/extrinsic_camera_calibration_constants.urdf.xacro" />
 
   <!-- Macro -->
-  <xacro:macro name="orbbec_astra" params="name parent camera_model *origin *optical_origin">
+  <xacro:macro name="orbbec_astra" params="name parent camera_model *origin *optical_origin extrinsic_package:=tiago_description_calibration">
+
+    <!-- includes -->
+    <xacro:include filename="$(find ${extrinsic_package})/urdf/calibration/extrinsic_camera_calibration_constants.urdf.xacro" />
 
     <!-- frames in the center of the camera -->
     <joint name="${name}_joint" type="fixed">
