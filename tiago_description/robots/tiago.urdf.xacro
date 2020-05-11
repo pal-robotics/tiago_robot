@@ -80,7 +80,10 @@
   <!-- Now we can start using the macros included above to define the actual robot -->
   <xacro:base_sensors name="base" laser_model="$(arg laser_model)" sonars="true" microphone="true"/>
   <xacro:tiago_torso name="torso" parent="base_link"/>
-  <xacro:head name="head" parent="torso_lift_link" camera_model="$(arg camera_model)"/>
+  <xacro:head name="head" parent="torso_lift_link" camera_model="$(arg camera_model)">
+    <!-- Camera origin Post Eye-Hand Calibration -->
+    <origin xyz="${camera_position_x} ${camera_position_y} ${camera_position_z}" rpy="${camera_orientation_r} ${camera_orientation_p} ${camera_orientation_y}" />
+  </xacro:head>
   <xacro:if value="${has_arm}">
 	  <xacro:tiago_arm name="arm" parent="torso_lift_link" wrist_model="${wrist_model}" has_ft_sensor="${has_ft_sensor}" reflect="1" tiago_dual="-1" arm_1_offset="${arm_1_joint_offset}" arm_2_offset="${arm_2_joint_offset}" arm_3_offset="${arm_3_joint_offset}" arm_4_offset="${arm_4_joint_offset}" arm_5_offset="${arm_5_joint_offset}" arm_6_offset="${arm_6_joint_offset}" arm_7_offset="${arm_7_joint_offset}">
         <origin xyz="0.15505 0.014 -0.151" rpy="0 0 ${-90 * deg_to_rad}" />
