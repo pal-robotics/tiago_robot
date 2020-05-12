@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.44 (2020-05-12)
+-------------------
 * Merge branch 'description-calibration-fixes' into 'erbium-devel'
   Description calibration fixes
   See merge request robots/tiago_robot!109
