@@ -90,7 +90,9 @@
     <joint name="${name}_orbbec_aux_joint" type="fixed">
       <!-- This is the real origin as in the robot solidworks, it must match: 0.1015 0.095 0.008 -->
       <!-- Assuming we have 0.0908 0.08 0.0 from default camera_position, and rotated -90 deg on x.-->
-      <origin xyz="0.0107 0.008 0.015" rpy="0 0 0" />
+      <!-- Pending confirmation from Orbbec about the position of the frames, going with old defaults-->
+      <!-- <origin xyz="0.0107 0.008 0.015" rpy="0 0 0" />-->
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <parent link="${name}_link" />
       <child link="${name}_orbbec_aux_joint_frame"/>
     </joint>
@@ -140,7 +142,7 @@
 
     <!-- frames of the rgb sensor -->
     <joint name="${name}_rgb_joint" type="fixed">
-      <origin xyz="-0.0006 0.0125 -0.015" rpy="0 0 0" />
+      <origin xyz="0.0 0.022 0.0" rpy="0 0 0" />
       <parent link="${name}_orbbec_aux_joint_frame" />
       <child link="${name}_rgb_frame"/>
     </joint>

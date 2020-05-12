@@ -2,6 +2,18 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'remove_default_parsed_package' into 'erbium-devel'
+  remove default description_calibration_package argument in head
+  See merge request robots/tiago_robot!110
+* Merge branch 'no_arm' into 'erbium-devel'
+  fix wrong_wrist_model condition
+  See merge request robots/tiago_robot!107
+* fix wrong_wrist_model condition
+* remove default description_calibration_package argument in head
+* Contributors: saikishor, victor, yueerro
+
 2.0.44 (2020-05-12)
 -------------------
 * Merge branch 'description-calibration-fixes' into 'erbium-devel'
