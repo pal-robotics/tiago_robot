@@ -2,6 +2,15 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'description-calibration-fixes' into 'erbium-devel'
+  Description calibration fixes
+  See merge request robots/tiago_robot!109
+* parse package name instead of individual elements and load files respective to package
+* pass the camera origin as an argument to head
+* Contributors: Sai Kishor Kothakota, victor
+
 2.0.43 (2020-05-08)
 -------------------
 * Fix mesh orientation
