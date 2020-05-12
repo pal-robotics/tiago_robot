@@ -128,7 +128,7 @@
 
   </xacro:macro>
 
-  <xacro:macro name="head" params="name parent camera_model description_calibration_package:=tiago_description_calibration">
+  <xacro:macro name="head" params="name parent camera_model description_calibration_package">
 
     <!-- includes -->
     <xacro:include filename="$(find ${description_calibration_package})/urdf/calibration/calibration_constants.urdf.xacro" />
