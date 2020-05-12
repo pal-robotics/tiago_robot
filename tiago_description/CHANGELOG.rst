@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.45 (2020-05-12)
+-------------------
 * Merge branch 'remove_default_parsed_package' into 'erbium-devel'
   remove default description_calibration_package argument in head
   See merge request robots/tiago_robot!110
