@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>tiago_robot</name>
-  <version>2.0.45</version>
+  <version>2.0.46</version>
   <description>Description and controller configuration of TIAGo</description>
   <maintainer email="hilario.tome@pal-robotics.com">Hilario Tome</maintainer>
   <maintainer email="jordi.pages@pal-robotics.com">Jordi Pages</maintainer>

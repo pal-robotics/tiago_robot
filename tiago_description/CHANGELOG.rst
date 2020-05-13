@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.46 (2020-05-13)
+-------------------
 * Merge branch 'wrist-2019' into 'erbium-devel'
   Use mass and inertia values based on the wrist type
   See merge request robots/tiago_robot!111
