@@ -33,10 +33,18 @@
     <link name="${name}_5_link">
       <inertial>
         <origin xyz="0.001078 -0.000151 ${reflect * -0.077173}" rpy="0.00000 0.00000 0.00000"/>
-        <mass value="1.655819"/>
-        <inertia ixx="0.00613800000" ixy="-0.00000400000" ixz="0.00015600000"
-                 iyy="0.00564000000" iyz="0.00002200000"
-                 izz="0.00179700000"/>
+        <xacro:if value="${wrist_model == 'wrist-2010'}">
+          <mass value="1.655819"/>
+          <inertia ixx="0.00613800000" ixy="-0.00000400000" ixz="0.00015600000"
+                   iyy="0.00564000000" iyz="0.00002200000"
+                   izz="0.00179700000"/>
+        </xacro:if>
+        <xacro:if value="${wrist_model == 'wrist-2017'}">
+          <mass value="0.720914368904945" />
+          <inertia ixx="0.001036187977" ixy="1.0622321E-07" ixz="1.9920336E-06"
+                   iyy="0.000794527176366096" iyz="-2.56396106998404E-07"
+                   izz="0.000439831229979178" />
+        </xacro:if>
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
@@ -70,10 +78,18 @@
     <link name="${name}_6_link">
       <inertial>
         <origin xyz="-0.000153 -0.003122 0.000183" rpy="0.00000 0.00000 0.00000"/>
-        <mass value="0.370063"/>
-        <inertia ixx="0.00021500000" ixy="0.00000000000" ixz="0.00000000000"
-                 iyy="0.00017000000" iyz="0.00000200000"
-                 izz="0.00017400000"/>
+        <xacro:if value="${wrist_model == 'wrist-2010'}">
+          <mass value="0.370063"/>
+          <inertia ixx="0.00021500000" ixy="0.00000000000" ixz="0.00000000000"
+                   iyy="0.00017000000" iyz="0.00000200000"
+                   izz="0.00017400000"/>
+        </xacro:if>
+        <xacro:if value="${wrist_model == 'wrist-2017'}">
+          <mass value="0.277757672229328" />
+          <inertia ixx="3.29233557E-05" ixy="6.31537395E-08" ixz="-4.567124912E-11"
+                   iyy="3.85334410118923E-05" iyz="-2.01613082836742E-07"
+                   izz="3.33282849168039E-05" />
+        </xacro:if>
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
@@ -114,10 +130,18 @@
     <link name="${name}_7_link">
       <inertial>
         <origin xyz="0.000010 -0.000003 -0.007774" rpy="0.00000 0.00000 0.00000"/>
-        <mass value="0.234252"/>
-        <inertia ixx="0.00014200000" ixy="0.00000000000" ixz="0.00000000000"
-                 iyy="0.00011300000" iyz="0.00000000000"
-                 izz="0.00005200000"/>
+        <xacro:if value="${wrist_model == 'wrist-2010'}">
+          <mass value="0.234252"/>
+          <inertia ixx="0.00014200000" ixy="0.00000000000" ixz="0.00000000000"
+                   iyy="0.00011300000" iyz="0.00000000000"
+                   izz="0.00005200000"/>
+        </xacro:if>
+        <xacro:if value="${wrist_model == 'wrist-2017'}">
+          <mass value="0.0956403119566663" />
+          <inertia ixx="1.14959795E-05" ixy="-1.390727219E-07" ixz="5.930207406E-09"
+                   iyy="1.13594084240734E-05" iyz="-1.78396260812528E-08"
+                   izz="2.01898984804048E-05" />
+        </xacro:if>
       </inertial>
     </link>
 
