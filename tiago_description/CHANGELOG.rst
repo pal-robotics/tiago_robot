@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.47 (2020-05-15)
+-------------------
 * Merge branch 'wrist-2017' into 'erbium-devel'
   adjust mass of wrist-2017
   See merge request robots/tiago_robot!112
