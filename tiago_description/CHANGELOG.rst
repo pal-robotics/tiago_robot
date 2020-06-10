@@ -2,6 +2,14 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'gravity-compensation' into 'erbium-devel'
+  change values to have a better gravity compensation. Not optimum result for all tiagos found
+  See merge request robots/tiago_robot!113
+* change values to have a better gravity compensation. Not optimum result for all tiagos found
+* Contributors: daniellopez, victor
+
 2.0.47 (2020-05-15)
 -------------------
 * Merge branch 'wrist-2017' into 'erbium-devel'
