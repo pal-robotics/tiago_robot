@@ -7,7 +7,7 @@
   <arg name="laser_model"  default="sick-571"/>
   <arg name="camera_model"  default="orbbec-astra"/>
   <arg name="description_calibration_dir" value="$(optenv pal_eye_hand_calibration_tiago_calibration_path)"/>
-  <arg name="extrinsic_calibration_dir" value="$(optenv pal_camera_calibration_calibration_path)"/>
+  <arg name="extrinsic_calibration_dir" value="$(optenv pal_camera_calibration_extrinsics_calibration_path)"/>
   <!-- Robot description -->
   <param name="robot_description"
     command="rosrun xacro xacro --inorder
