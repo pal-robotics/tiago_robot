@@ -8,7 +8,9 @@
   <arg name="wrist_model"  default="wrist-2010"/>
 
   <!-- Diff drive controller multipliers -->
-  <rosparam command="load" file="$(find tiago_controller_configuration)/config/mobile_base_controller_multipliers.yaml"/>
+  <arg name="calibrated_multipliers_dir"  value="$(optenv pal_wheel_calibration_calibration_path)"/>
+  <arg name="multipliers_dir"  value="$(eval calibrated_multipliers_dir if (calibrated_multipliers_dir != '') else find('tiago_controller_configuration') + '/config')"/>
+  <rosparam command="load" file="$(arg multipliers_dir)/mobile_base_controller_multipliers.yaml"/>
 
   <!-- Diff drive controller parameters -->
   <rosparam command="load" file="$(find tiago_controller_configuration)/config/mobile_base_controller.yaml"/>
