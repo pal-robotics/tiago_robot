@@ -30,10 +30,10 @@
   <xacro:include filename="$(find tiago_description)/urdf/sensors/openni.gazebo.xacro" />
 
   <!-- Macro -->
-  <xacro:macro name="orbbec_astra" params="name parent camera_model *origin *optical_origin extrinsic_package:=tiago_description_calibration">
+  <xacro:macro name="orbbec_astra" params="name parent camera_model *origin *optical_origin extrinsic_calibration_dir">
 
     <!-- includes -->
-    <xacro:include filename="$(find ${extrinsic_package})/urdf/calibration/extrinsic_camera_calibration_constants.urdf.xacro" />
+    <xacro:include filename="${extrinsic_calibration_dir}/extrinsic_camera_calibration_constants.urdf.xacro" />
 
     <!-- frames in the center of the camera -->
     <joint name="${name}_joint" type="fixed">

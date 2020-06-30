@@ -6,7 +6,8 @@
   <arg name="ft_sensor"  default="schunk-ft"/>
   <arg name="laser_model"  default="sick-571"/>
   <arg name="camera_model"  default="orbbec-astra"/>
-
+  <arg name="description_calibration_dir" value="$(optenv pal_eye_hand_calibration_tiago_calibration_path)"/>
+  <arg name="extrinsic_calibration_dir" value="$(optenv pal_camera_calibration_extrinsics_calibration_path)"/>
   <!-- Robot description -->
   <param name="robot_description"
     command="rosrun xacro xacro --inorder
@@ -17,6 +18,8 @@
     ft_sensor:=$(arg ft_sensor)
     laser_model:=$(arg laser_model)
     camera_model:=$(arg camera_model)
+    description_calibration_dir:=$(arg description_calibration_dir)
+    extrinsic_calibration_dir:=$(arg extrinsic_calibration_dir)
     $(arg multi)" />
            <rosparam command="load" file="$(find tiago_description)/config/collision/collision_parameters.yaml" />
 </launch>
