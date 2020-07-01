@@ -2,6 +2,15 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'add-master-calibration' into 'erbium-devel'
+  Add master calibration compatibility for eye hand and extrinsic
+  See merge request robots/tiago_robot!114
+* Proper pal_camera_calibration_extrinsics path
+* Add master calibration compatibility for eye hand and extrinsic
+* Contributors: Victor Lopez, victor
+
 2.0.48 (2020-06-10)
 -------------------
 * Merge branch 'gravity-compensation' into 'erbium-devel'
