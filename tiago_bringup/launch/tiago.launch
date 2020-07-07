@@ -6,6 +6,8 @@
   <arg name="laser_model"  default="sick-571"/>
   <arg name="camera_model"  default="orbbec-astra"/>
   <arg name="wrist_model"  default="wrist-2010"/>
+  <arg name="wrist_model"  default="wrist-2010"/>
+  <arg name="no_safety_eps" default="False"/>
 
   <!-- Diff drive controller multipliers -->
   <arg name="calibrated_multipliers_dir"  value="$(optenv pal_wheel_calibration_calibration_path)"/>
@@ -23,6 +25,7 @@
     <arg name="laser_model"  value="$(arg laser_model)"/>
     <arg name="camera_model"  value="$(arg camera_model)"/>
     <arg name="wrist_model"  value="$(arg wrist_model)"/>
+    <arg name="no_safety_eps"  value="$(arg no_safety_eps)"/>
   </include>
 
   <!-- tiago_hardware parameters -->

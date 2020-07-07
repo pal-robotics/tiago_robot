@@ -6,6 +6,7 @@
   <arg name="ft_sensor"  default="schunk-ft"/>
   <arg name="laser_model"  default="sick-571"/>
   <arg name="camera_model"  default="orbbec-astra"/>
+  <arg name="no_safety_eps" default="False"/>
   <arg name="description_calibration_dir" value="$(optenv pal_eye_hand_calibration_tiago_calibration_path)"/>
   <arg name="extrinsic_calibration_dir" value="$(optenv pal_camera_calibration_extrinsics_calibration_path)"/>
   <!-- Robot description -->
@@ -18,6 +19,7 @@
     ft_sensor:=$(arg ft_sensor)
     laser_model:=$(arg laser_model)
     camera_model:=$(arg camera_model)
+    no_safety_eps:=$(arg no_safety_eps)
     description_calibration_dir:=$(arg description_calibration_dir)
     extrinsic_calibration_dir:=$(arg extrinsic_calibration_dir)
     $(arg multi)" />
