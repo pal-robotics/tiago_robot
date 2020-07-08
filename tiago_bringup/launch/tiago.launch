@@ -6,7 +6,6 @@
   <arg name="laser_model"  default="sick-571"/>
   <arg name="camera_model"  default="orbbec-astra"/>
   <arg name="wrist_model"  default="wrist-2010"/>
-  <arg name="wrist_model"  default="wrist-2010"/>
   <arg name="no_safety_eps" default="False"/>
 
   <!-- Diff drive controller multipliers -->
