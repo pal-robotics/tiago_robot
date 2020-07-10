@@ -26,12 +26,12 @@
   <xacro:property name="arm_2_max_effort"   value="43.0" />
   <xacro:property name="arm_3_max_effort"   value="26" />
   <xacro:property name="arm_4_max_effort"   value="26" />
-  <xacro:property name="arm_eps"            value="0.07" />
 
 
   <!-- reflect: Set to 1 for a right arm, or to -1 for a left arm-->
   <!-- tiago_dual: Set to 1 for tiago dual, -1 for original tiago, changes joints 1 and 2 -->
-  <xacro:macro name="tiago_arm" params="name parent wrist_model has_ft_sensor reflect tiago_dual *origin arm_1_offset arm_2_offset arm_3_offset arm_4_offset arm_5_offset arm_6_offset arm_7_offset">
+  <xacro:macro name="tiago_arm" params="name parent wrist_model has_ft_sensor reflect tiago_dual *origin arm_1_offset arm_2_offset arm_3_offset arm_4_offset arm_5_offset arm_6_offset arm_7_offset no_safety_eps:=False">
+   <xacro:property name="arm_eps"       value="${0.00 if no_safety_eps else 0.07}"/>
 
     <!--************************-->
     <!--        SHOULDER        -->
@@ -239,7 +239,7 @@
     <!--        WRIST           -->
     <!--************************-->
 
-   <xacro:wrist name="${name}" parent="${name}_4_link" reflect="${reflect}" wrist_model="${wrist_model}" has_ft_sensor="${has_ft_sensor}" arm_5_offset="${arm_5_offset}" arm_6_offset="${arm_6_offset}" arm_7_offset="${arm_7_offset}"/>
+   <xacro:wrist name="${name}" parent="${name}_4_link" reflect="${reflect}" wrist_model="${wrist_model}" has_ft_sensor="${has_ft_sensor}" arm_5_offset="${arm_5_offset}" arm_6_offset="${arm_6_offset}" arm_7_offset="${arm_7_offset}"  no_safety_eps="${no_safety_eps}"/>
 
     <!--***********************-->
     <!--        TOOL           -->

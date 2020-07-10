@@ -20,6 +20,7 @@
     <xacro:arg name="description_calibration_dir" default="$(find tiago_description_calibration)/urdf/calibration"/>
     <xacro:arg name="extrinsic_calibration_dir" default="$(find tiago_description_calibration)/urdf/calibration"/>
     <xacro:arg name="namespace" default=""/>
+    <xacro:arg name="no_safety_eps" default="false"/>
     <xacro:property name="wrist_model" value="$(arg wrist_model)" />
     <xacro:property name="end_effector" value="$(arg end_effector)" />
     <xacro:property name="ft_sensor" value="$(arg ft_sensor)" />
@@ -27,6 +28,7 @@
     <xacro:property name="camera_model" value="$(arg camera_model)" />
     <xacro:property name="is_multiple" value="$(arg multiple)" />
     <xacro:property name="nsp" value="$(arg namespace)" />
+    <xacro:property name="no_safety_eps" value="$(arg no_safety_eps)" />
 
   <xacro:if value="$(arg arm)">
     <xacro:if value="${wrist_model not in ['wrist-2010', 'wrist-2017']}">
@@ -89,7 +91,7 @@
 	  description_calibration_dir="$(arg description_calibration_dir)" 
 	  extrinsic_calibration_dir="$(arg extrinsic_calibration_dir)"/>
   <xacro:if value="${has_arm}">
-	  <xacro:tiago_arm name="arm" parent="torso_lift_link" wrist_model="${wrist_model}" has_ft_sensor="${has_ft_sensor}" reflect="1" tiago_dual="-1" arm_1_offset="${arm_1_joint_offset}" arm_2_offset="${arm_2_joint_offset}" arm_3_offset="${arm_3_joint_offset}" arm_4_offset="${arm_4_joint_offset}" arm_5_offset="${arm_5_joint_offset}" arm_6_offset="${arm_6_joint_offset}" arm_7_offset="${arm_7_joint_offset}">
+	  <xacro:tiago_arm name="arm" parent="torso_lift_link" wrist_model="${wrist_model}" has_ft_sensor="${has_ft_sensor}" reflect="1" tiago_dual="-1" arm_1_offset="${arm_1_joint_offset}" arm_2_offset="${arm_2_joint_offset}" arm_3_offset="${arm_3_joint_offset}" arm_4_offset="${arm_4_joint_offset}" arm_5_offset="${arm_5_joint_offset}" arm_6_offset="${arm_6_joint_offset}" arm_7_offset="${arm_7_joint_offset}" no_safety_eps="${no_safety_eps}">
         <origin xyz="0.15505 0.014 -0.151" rpy="0 0 ${-90 * deg_to_rad}" />
       </xacro:tiago_arm>
       <xacro:tiago_end_effector name="${end_effector_name}" parent="${end_effector_link}" type="${end_effector}" reflect="1"/>

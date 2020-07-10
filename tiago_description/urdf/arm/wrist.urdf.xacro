@@ -23,9 +23,9 @@
   <xacro:property name="wrist_1_max_effort"   value="3" />
   <xacro:property name="wrist_2_max_effort"   value="6.6" />
   <xacro:property name="wrist_3_max_effort"   value="6.6" />
-  <xacro:property name="wrist_eps"          value="0.02" />
 
-  <xacro:macro name="wrist" params="name parent reflect wrist_model has_ft_sensor arm_5_offset arm_6_offset arm_7_offset">
+  <xacro:macro name="wrist" params="name parent reflect wrist_model has_ft_sensor arm_5_offset arm_6_offset arm_7_offset no_safety_eps:=False">
+   <xacro:property name="wrist_eps"       value="${0.00 if no_safety_eps else 0.02}"/>
 
     <!--************************-->
     <!--        WRIST           -->
