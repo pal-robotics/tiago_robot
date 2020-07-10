@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.50 (2020-07-10)
+-------------------
 * Merge branch 'add-no-safety-eps' into 'erbium-devel'
   Add the option of disabling arm_safety_eps via launch file
   See merge request robots/tiago_robot!115
