@@ -2,6 +2,15 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'add-no-safety-eps' into 'erbium-devel'
+  Add the option of disabling arm_safety_eps via launch file
+  See merge request robots/tiago_robot!115
+* Fix default no_safety_eps value
+* Add the option of disabling arm_safety_eps via launch file
+* Contributors: Victor Lopez, victor
+
 2.0.49 (2020-07-01)
 -------------------
 * Merge branch 'add-master-calibration' into 'erbium-devel'
