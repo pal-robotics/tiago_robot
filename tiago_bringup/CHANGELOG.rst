@@ -2,6 +2,9 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 2.0.50 (2020-07-10)
 -------------------
 * Merge branch 'add-no-safety-eps' into 'erbium-devel'

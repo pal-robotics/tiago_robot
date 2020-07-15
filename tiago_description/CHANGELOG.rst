@@ -2,6 +2,14 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'fix-head-calibration' into 'erbium-devel'
+  add eps to head_motor_2 head.urdf.xacro
+  See merge request robots/tiago_robot!116
+* add eps to head_motor_2 head.urdf.xacro
+* Contributors: daniellopez, victor
+
 2.0.50 (2020-07-10)
 -------------------
 * Merge branch 'add-no-safety-eps' into 'erbium-devel'
