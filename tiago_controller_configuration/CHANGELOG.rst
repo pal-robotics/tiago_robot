@@ -2,6 +2,14 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'safety_parameters' into 'erbium-devel'
+  Update default_safety_parameters.yaml with new changes in the safety of local joint control
+  See merge request robots/tiago_robot!117
+* Update default_safety_parameters.yaml with new changes in the safety of local joint control
+* Contributors: saikishor, victor
+
 2.0.51 (2020-07-15)
 -------------------
 
