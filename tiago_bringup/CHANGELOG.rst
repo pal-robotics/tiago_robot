@@ -2,6 +2,14 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'rename_tf_prefix' into 'erbium-devel'
+  Rename tf_prefix to robot_namespace
+  See merge request robots/tiago_robot!104
+* Rename tf_prefix to robot_namespace
+* Contributors: davidfernandez, victor
+
 2.0.52 (2020-07-27)
 -------------------
 
