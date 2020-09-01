@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch>
-    <group ns="end_effector/camera">
-        <node pkg="libuvc_camera" type="camera_node" name="end_effector_camera">
+    <!-- default args original endoscopic camera -->
+    <arg name="vendor" default="1908"/>
+    <arg name="product" default="2311"/>
+    <arg name="frame_rate" default="14"/>
+    <!-- if 2 cameras needed args -->
+    <arg name="camera" default="camera"/> <!-- camera or left_camera -->
+    <arg name="serial" default=""/>
+    
+    <group ns="end_effector/$(arg camera)">
+        <node pkg="libuvc_camera" type="camera_node" name="end_effector_$(arg camera)">
             <!-- Parameters used to find the camera -->
-            <param name="vendor" value="0x1908"/>
-            <param name="product" value="0x2311"/>
-            <param name="serial" value=""/>
+            <param name="vendor" value="0x$(arg vendor)"/>
+            <param name="product" value="0x$(arg product)"/>
+            <param name="serial" value="$(arg serial)"/>
             <!-- If the above parameters aren't unique, choose the first match: -->
             <param name="index" value="0"/>
 
@@ -14,7 +22,7 @@
             <param name="height" value="480"/>
             <!-- choose whichever uncompressed format the camera supports: -->
             <param name="video_mode" value="yuyv"/> <!-- or yuyv/nv12/mjpeg -->
-            <param name="frame_rate" value="14"/>
+            <param name="frame_rate" value="$(arg frame_rate)"/>
 
             <param name="timestamp_method" value="start"/> <!-- start of frame -->
             <param name="camera_info_url" value="file:///tmp/cam.yaml"/>
