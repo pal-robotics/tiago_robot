@@ -5,10 +5,10 @@
     <arg name="product" default="2311"/>
     <arg name="frame_rate" default="14"/>
     <!-- if 2 cameras needed args -->
-    <arg name="camera" default="camera"/> <!-- camera or left_camera -->
+    <arg name="camera" default="camera"/> <!-- right_camera or left_camera -->
     <arg name="index" default="0"/>
     
-    <group ns="end_effector/$(arg camera)">
+    <group ns="end_effector_$(arg camera)">
         <node pkg="libuvc_camera" type="camera_node" name="end_effector_$(arg camera)">
             <!-- Parameters used to find the camera -->
             <param name="vendor" value="0x$(arg vendor)"/>
