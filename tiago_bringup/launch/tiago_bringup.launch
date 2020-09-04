@@ -3,7 +3,7 @@
   <arg name="arm" default="True"/>
   <arg name="end_effector"  default="pal-hey5"/>
   <arg name="ft_sensor"  default="schunk-ft"/>
-  <arg name="tf_prefix" default=""/>
+  <arg name="robot_namespace" default=""/>
   <arg name="laser_model"  default="sick-571"/>
   <arg name="camera_model"  default="orbbec-astra"/>
   <arg name="wrist_model"  default="wrist-2010"/>
@@ -21,7 +21,7 @@
   <!-- Robot state publisher -->
   <node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher">
     <param name="publish_frequency" type="double" value="50.0"/>
-    <param name="tf_prefix" type="string" value="$(arg tf_prefix)"/>
+    <param name="tf_prefix" type="string" value="$(arg robot_namespace)"/>
     <param name="use_tf_static" type="bool" value="true"/>
   </node>
 

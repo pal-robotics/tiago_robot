@@ -2,6 +2,9 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.0.53 (2020-07-30)
+-------------------
+
 2.0.52 (2020-07-27)
 -------------------
 * Merge branch 'safety_parameters' into 'erbium-devel'
