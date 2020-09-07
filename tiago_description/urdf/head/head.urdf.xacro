@@ -28,8 +28,7 @@
   <!--************************-->
   <!--     HEAD_1 (PAN)       -->
   <!--************************-->
-  <xacro:macro name="head_1" params="name parent no_safety_eps:=False">
-    <xacro:property name="head_eps"      value="${0.00 if no_safety_eps else 0.07}" />
+  <xacro:macro name="head_1" params="name parent">
     <link name="${name}_link">
       <inertial>
         <origin xyz="-0.00508 0.00237 0.07229" rpy="0.00000 0.00000 0.00000"/>
@@ -128,7 +127,8 @@
 
   </xacro:macro>
 
-  <xacro:macro name="head" params="name parent camera_model description_calibration_dir extrinsic_calibration_dir">
+  <xacro:macro name="head" params="name parent camera_model description_calibration_dir extrinsic_calibration_dir no_safety_eps:=False">
+    <xacro:property name="head_eps"      value="${0.00 if no_safety_eps else 0.07}" />
 
     <!-- includes -->
     <xacro:include filename="$(arg description_calibration_dir)/calibration_constants.urdf.xacro" />
