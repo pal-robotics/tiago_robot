@@ -20,7 +20,6 @@
   <xacro:property name="head_friction" value="1.0" />
   <xacro:property name="head_damping"  value="0.5" />
   <xacro:property name="head_max_vel"  value="3.0" />
-  <xacro:property name="head_eps"      value="0.07" />
   <xacro:property name="head_1_lower_limit" value="-75"/>
   <xacro:property name="head_1_upper_limit" value="75"/>
   <xacro:property name="head_2_lower_limit" value="-60"/>
@@ -29,7 +28,8 @@
   <!--************************-->
   <!--     HEAD_1 (PAN)       -->
   <!--************************-->
-  <xacro:macro name="head_1" params="name parent">
+  <xacro:macro name="head_1" params="name parent no_safety_eps:=False">
+    <xacro:property name="head_eps"      value="${0.00 if no_safety_eps else 0.07}" />
     <link name="${name}_link">
       <inertial>
         <origin xyz="-0.00508 0.00237 0.07229" rpy="0.00000 0.00000 0.00000"/>
