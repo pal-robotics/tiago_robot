@@ -4,18 +4,6 @@
 # This script by default sets and runs end_effector_camera.launch depending on the vendor:product pair.
 # If you want to use two cameras at the same time you have to open a second terminal and do rosrun tiago_bringup end_effector_camera.sh left_camera
 
-confirmation()
-{
-        while true; do
-            read -p "$*" yn
-            case $yn in
-                [Yy]* ) break;;
-                [Nn]* ) echo "ABORTED"; exit;;
-                * ) echo "Please answer Yy/Nn.";;
-            esac
-        done
-}
-
 # each column is one camera and its configuration
 list_vendor=("1908" "0bda")
 list_product=("2311" "5806")
@@ -45,11 +33,9 @@ case $1 in
         cameras_run "camera" 0
     ;;
     "right_camera")
-        confirmation "Have you plugged ONLY right endoscopic camera? [y/n]"
         cameras_run $1 0
     ;;
     "left_camera")
-        confirmation "Have you plugged left usb endoscopic camera WITHOUT unplugging the right one? [y/n]"
         cameras_run $1 1
     ;;
     # unccoment the following to add the posibility to add an extra camera
