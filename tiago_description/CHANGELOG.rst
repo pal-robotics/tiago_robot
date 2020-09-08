@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.54 (2020-09-08)
+-------------------
 * Merge branch 'no_safety_eps_head' into 'erbium-devel'
   added no safety eps to head
   See merge request robots/tiago_robot!119
