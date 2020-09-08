@@ -2,6 +2,27 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'new-endoscopic-dual' into 'erbium-devel'
+  New endoscopic dual
+  See merge request robots/tiago_robot!118
+* make it executable
+* remove confirmation prompts
+* change logit to run script in different terminals and ony one fucntion
+* Merge branch 'new-endoscopic-dual' of gitlab:robots/tiago_robot into new-endoscopic-dual
+* enable automatic two cameras simultaneously using script
+* modify args using index to run dual
+* choose camera by serial (not working as serials are equal
+* automate runing endoscopic depending on vendor/product
+* adapt end_effector_camera.lauch to accpet arguments and 2 cameras
+* enable automatic two cameras simultaneously using script
+* modify args using index to run dual
+* choose camera by serial (not working as serials are equal
+* automate runing endoscopic depending on vendor/product
+* adapt end_effector_camera.lauch to accpet arguments and 2 cameras
+* Contributors: daniellopez, saikishor
+
 2.0.53 (2020-07-30)
 -------------------
 * Merge branch 'rename_tf_prefix' into 'erbium-devel'

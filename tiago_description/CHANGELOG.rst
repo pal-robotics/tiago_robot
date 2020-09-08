@@ -2,6 +2,16 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'no_safety_eps_head' into 'erbium-devel'
+  added no safety eps to head
+  See merge request robots/tiago_robot!119
+* fix the no_safety_epc head macro issue
+* added no safety eps to head
+* Merge branch 'new-endoscopic-dual' of gitlab:robots/tiago_robot into new-endoscopic-dual
+* Contributors: Sai Kishor Kothakota, daniellopez, victor
+
 2.0.53 (2020-07-30)
 -------------------
 
