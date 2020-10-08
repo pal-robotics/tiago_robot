@@ -122,7 +122,7 @@
     <link name="${name}_3_link">
       <inertial>
         <origin xyz="0.007418 -0.004361 ${reflect * -0.134194}" rpy="0.00000 0.00000 0.00000"/>
-        <mass value="2.343502"/>
+        <mass value="1.8"/>
         <inertia ixx="0.019541" ixy="${1 * -0.000105}" ixz="-0.001717"
           iyy="0.019936" iyz="${reflect * 0.000852}"
                  izz="0.002864"/>
