@@ -4,7 +4,7 @@ This package contains the description, controllers and bringup for all possible 
 
 To make maintenance easier, the `tiago.urdf.xacro` takes arguments that specify whether the robot has an arm or not, the end effector type, force torque sensor, laser model and many other parameters.
 
-The other configuration files that  differ between between robot configurations are generated from template files.
+The other configuration files that  differ between robot configurations are generated from template files.
 
 The templates are written using [empy](https://pypi.org/project/empy/) and have the extension `.em`. 
 
