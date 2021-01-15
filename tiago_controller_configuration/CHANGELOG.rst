@@ -2,6 +2,14 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'gravity_compensation_fix' into 'erbium-devel'
+  Update arm_3_link weight for gravity compensation
+  See merge request robots/tiago_robot!120
+* Update motor torque constant arm_5_joint for gravity_compensation
+* Contributors: Adria Roig, victor
+
 2.0.54 (2020-09-08)
 -------------------
 * Merge branch 'new-endoscopic-dual' of gitlab:robots/tiago_robot into new-endoscopic-dual

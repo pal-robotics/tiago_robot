@@ -2,6 +2,9 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 2.0.54 (2020-09-08)
 -------------------
 * Merge branch 'new-endoscopic-dual' into 'erbium-devel'

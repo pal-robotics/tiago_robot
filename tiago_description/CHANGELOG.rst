@@ -2,6 +2,14 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'gravity_compensation_fix' into 'erbium-devel'
+  Update arm_3_link weight for gravity compensation
+  See merge request robots/tiago_robot!120
+* Update arm_3_link weight for gravity compensation
+* Contributors: Adria Roig, victor
+
 2.0.54 (2020-09-08)
 -------------------
 * Merge branch 'no_safety_eps_head' into 'erbium-devel'
