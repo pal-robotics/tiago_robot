@@ -88,7 +88,6 @@
     <!-- frame of camera origin provided by Orbbec, need this intermediate frame for backwards compatibility with xtion_pro_live
          to reuse same camera origin -->
     <joint name="${name}_orbbec_aux_joint" type="fixed">
-      <!-- This is the real origin as in the robot solidworks, it must match: 0.1015 0.095 0.008 -->
       <!-- Assuming we have 0.0908 0.08 0.0 from default camera_position, and rotated -90 deg on x.-->
       <!-- Pending confirmation from Orbbec about the position of the frames, going with old defaults-->
       <!-- <origin xyz="0.0107 0.008 0.015" rpy="0 0 0" />-->
