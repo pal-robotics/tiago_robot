@@ -11,25 +11,24 @@
 
 <robot name="tiago" xmlns:xacro="http://ros.org/wiki/xacro">
   <gazebo>
-    <plugin filename="libgazebo_ros_control.so" name="gazebo_ros_control">
-      <ns></ns>
-      <robotSimType>pal_hardware_gazebo/PalHardwareGazebo</robotSimType>
+    <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
+      <!-- in the future move this param file somewhere else -->
+      <parameters>$(find tiago_controller_configuration)/config/gazebo_controller_manager_cfg.yaml</parameters>
       <xacro:if value="${is_multiple}">
-          <robotNamespace>/${nsp}</robotNamespace>
+        <!-- Do something about multirobot -->
       </xacro:if>
       <xacro:unless value="${is_multiple}">
-          <robotNamespace></robotNamespace>
+        <!-- Do something about multirobot -->
       </xacro:unless>
-      <controlPeriod>0.001</controlPeriod>
     </plugin>
 
     <plugin filename="libgazebo_ros_p3d.so" name="gazebo_ros_p3d">
-      <bodyName>base_footprint</bodyName>
-      <topicName>ground_truth_odom</topicName>
-      <alwaysOn>true</alwaysOn>
-      <updateRate>100.0</updateRate>
+      <body_name>base_footprint</body_name>
+      <topic_name>ground_truth_odom</topic_name>
+      <always_on>true</always_on>
+      <update_rate>100.0</update_rate>
       <xacro:if value="${is_multiple}">
-          <robotNamespace>/${nsp}</robotNamespace>
+	    <!--<robotNamespace>/${nsp}</robotNamespace>-->
       </xacro:if>
     </plugin>
   </gazebo>
