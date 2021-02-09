@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!--
+  Copyright (c) 2011-2021, PAL Robotics, S.L.
+  All rights reserved.
+
+  This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
+  To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to
+  Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+-->
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+  <!-- Torso Joint -->
+  <xacro:macro name="torso_ros2_control" params="name reduction" >
+    <ros2_control name="${name}" type="system">
+      <hardware>
+        <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+      </hardware>
+
+      <joint name="${name}_joint">
+        <command_interface name="position" />
+
+        <state_interface name="position" />
+        <state_interface name="velocity" />
+      </joint>
+
+      <!-- @TODO transmissions for ros2 system -->
+      <!--
+      <transmission name="${name}_trans">
+        <type>transmission_interface/SimpleTransmission</type>
+        <actuator name="${name}_motor" >
+          <mechanicalReduction>${reduction}</mechanicalReduction>
+        </actuator>
+        <joint name="${name}_joint">
+          <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+          <hardwareInterface>hardware_interface/JointStateInterface</hardwareInterface>
+        </joint>
+      </transmission>
+      -->
+    </ros2_control>
+  </xacro:macro>
+</robot>
