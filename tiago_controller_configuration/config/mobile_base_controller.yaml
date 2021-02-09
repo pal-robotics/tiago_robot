@@ -1,38 +1,60 @@
 mobile_base_controller:
-  type        : "diff_drive_controller/DiffDriveController"
-  left_wheel  : 'wheel_left_joint'
-  right_wheel : 'wheel_right_joint'
-  publish_rate: 50.0
-  pose_covariance_diagonal : [0.001, 0.001, 1000000.0, 1000000.0, 1000000.0, 1000.0]
-  twist_covariance_diagonal: [0.001, 0.001, 1000000.0, 1000000.0, 1000000.0, 1000.0]
+  ros__parameters:
+    type: diff_drive_controller/DiffDriveController
+    left_wheel_names  : ['wheel_left_joint']
+    right_wheel_names : ['wheel_right_joint']
+    #wheels_per_side: 1
 
-  # Velocity commands timeout [s]
-  cmd_vel_timeout: 0.25
+    # In ROS1 these physical properties were parsed from the URDF
+    wheel_radius: 0.0985
+    wheel_separation: 0.4044
 
-  # Base frame_id
-  base_frame_id: base_footprint
+    wheel_separation_multiplier: 1.0
+    left_wheel_radius_multiplier: 1.0
+    right_wheel_radius_multiplier: 1.0
 
-  # Preserve turning radius when limiting speed/acceleration/jerk
-  preserve_turning_radius: true
+    # The params below were used in ROS1 but not yet in ROS2
+    
+    publish_rate: 50.0
+    pose_covariance_diagonal : [0.001, 0.001, 0.001, 0.001, 0.001, 0.01]
+    twist_covariance_diagonal: [0.001, 0.001, 0.001, 0.001, 0.001, 0.01]
 
-  # Publish actual velocity cmd
-  publish_cmd: true
+    enable_pose_covariance_update: true
+    error_constant_left : 0.001
+    error_constant_right: 0.001
 
-  # Publish tf odom?
-  enable_odom_tf: true
+    # Velocity commands timeout [s]
+    cmd_vel_timeout: 0.25
 
-  # Velocity and acceleration limits
-  # Whenever a min_* is unspecified, default to -max_*
-  linear:
-    x:
-      has_velocity_limits    : true
-      max_velocity           :  1.0 # m/s
-      min_velocity           : -0.2 # m/s
-      has_acceleration_limits: true
-      max_acceleration       :  1.0 # m/s^2
-  angular:
-    z:
-      has_velocity_limits    : true
-      max_velocity           : !degrees 120.0
-      has_acceleration_limits: true
-      max_acceleration       : !degrees 120.0
+    # Base frame_id
+    base_frame_id: base_footprint
+
+    # Preserve turning radius when limiting speed/acceleration/jerk
+    preserve_turning_radius: true
+
+    # Publish limited velocity
+    publish_cmd: true
+
+    # Publish wheel data
+    publish_wheel_data: true
+
+    # Velocity and acceleration limits
+    # Whenever a min_* is unspecified, default to -max_*
+    linear:
+      x:
+        has_velocity_limits    : true
+        max_velocity           :  1.0 # m/s
+        min_velocity           : -0.2 # m/s
+        has_acceleration_limits: true
+        max_acceleration       :  1.0 # m/s^2
+        has_jerk_limits        : false
+        max_jerk               :  5.0 # m/s^3
+    angular:
+      z:
+        has_velocity_limits    : true
+        max_velocity           : 2.09 # 120.0º
+        has_acceleration_limits: true
+        max_acceleration       : 2.09 # 120.0º
+        has_jerk_limits        : false
+        max_jerk               : 10.47 # 600.0º
+
