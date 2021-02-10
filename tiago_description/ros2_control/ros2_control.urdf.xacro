@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!--
+  Copyright (c) 2011-2021, PAL Robotics, S.L.
+  All rights reserved.
+
+  This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
+  To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to
+  Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+-->
+<robot xmlns:xacro="http://ros.org/wiki/xacro"
+       name="tiago" >
+
+  <xacro:include filename="$(find pmb2_description)/urdf/wheels/wheel.ros2_control.xacro"/>
+  <xacro:include filename="$(find tiago_description)/urdf/torso/torso.ros2_control.xacro"/>
+
+  <ros2_control name="ros2_control_tiago_system" type="system">
+    <hardware>
+      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+    </hardware>
+
+    <!-- wheels -->
+    <xacro:ros2_control_wheel side="right" />
+    <xacro:ros2_control_wheel side="left" />
+
+    <!-- torso -->
+    <xacro:ros2_control_torso name="torso_lift" reduction="1.0" />
+
+  </ros2_control>
+</robot>

@@ -8,33 +8,27 @@
   Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
 -->
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
-  <!-- Torso Joint -->
-  <xacro:macro name="torso_ros2_control" params="name reduction" >
-    <ros2_control name="${name}" type="system">
-      <hardware>
-        <plugin>gazebo_ros2_control/GazeboSystem</plugin>
-      </hardware>
+  <xacro:macro name="ros2_control_torso" params="name reduction" >
+    <joint name="${name}_joint">
+      <command_interface name="position" />
 
+      <state_interface name="position" />
+      <state_interface name="velocity" />
+      <state_interface name="effort" />
+    </joint>
+
+    <!-- @TODO transmissions for ros2 system -->
+    <!--
+    <transmission name="${name}_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <actuator name="${name}_motor" >
+        <mechanicalReduction>${reduction}</mechanicalReduction>
+      </actuator>
       <joint name="${name}_joint">
-        <command_interface name="position" />
-
-        <state_interface name="position" />
-        <state_interface name="velocity" />
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/JointStateInterface</hardwareInterface>
       </joint>
-
-      <!-- @TODO transmissions for ros2 system -->
-      <!--
-      <transmission name="${name}_trans">
-        <type>transmission_interface/SimpleTransmission</type>
-        <actuator name="${name}_motor" >
-          <mechanicalReduction>${reduction}</mechanicalReduction>
-        </actuator>
-        <joint name="${name}_joint">
-          <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
-          <hardwareInterface>hardware_interface/JointStateInterface</hardwareInterface>
-        </joint>
-      </transmission>
-      -->
-    </ros2_control>
+    </transmission>
+    -->
   </xacro:macro>
 </robot>

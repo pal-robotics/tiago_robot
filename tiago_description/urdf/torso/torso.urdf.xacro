@@ -13,7 +13,6 @@
   <!--File includes-->
   <xacro:include filename="$(find tiago_description)/urdf/deg_to_rad.xacro" />
   <xacro:include filename="$(find tiago_description)/urdf/torso/torso.transmission.xacro" />
-  <xacro:include filename="$(find tiago_description)/urdf/torso/torso.ros2_control.xacro" />
 
   <!--Constant parameters-->
   <xacro:property name="torso_max_vel"  value="0.07" />
@@ -147,9 +146,6 @@
                          soft_upper_limit="0.35" />
 
   </joint>
-
-  <!-- ROS Control -->
-  <xacro:torso_ros2_control name="torso_lift" reduction="1.0"/>
 
  </xacro:macro>
 
