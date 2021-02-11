@@ -8,7 +8,7 @@
   Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
 -->
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
-  <xacro:macro name="ros2_control_head" params="name reduction offset_value" >
+  <xacro:macro name="ros2_control_head" params="name reduction offset" >
     <joint name="${name}_joint">
       <command_interface name="position" />
 

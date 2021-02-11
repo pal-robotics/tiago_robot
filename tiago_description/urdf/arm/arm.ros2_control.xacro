@@ -8,7 +8,7 @@
   Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
 -->
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
-  <xacro:macro name="ros2_control_arm" params="name reduction offset_value" >
+  <xacro:macro name="ros2_control_arm" params="name reduction offset" >
     <joint name="${name}_joint">
       <command_interface name="position" />
 
@@ -25,7 +25,7 @@
         <mechanicalReduction>${reduction}</mechanicalReduction>
       </actuator>
       <joint name="${name}_${number}_joint">
-        <offset>${offset_value}</offset>
+        <offset>${offset}</offset>
         <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
         <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
         <hardwareInterface>hardware_interface/JointStateInterface</hardwareInterface>

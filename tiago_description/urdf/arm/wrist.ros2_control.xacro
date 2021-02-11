@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<!--
+  Copyright (c) 2011-2021, PAL Robotics, S.L.
+  All rights reserved.
+
+  This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
+  To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to
+  Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+-->
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:macro name="ros2_control_wrist_rotational" params="name reduction offset" >
+    <joint name="${name}_joint">
+      <command_interface name="position" />
+
+      <state_interface name="position" />
+      <state_interface name="velocity" />
+      <state_interface name="effort" />
+    </joint>
+
+    <!-- @TODO transmissions for ros2 system -->
+    <!--
+    <transmission name="${name}_${number}_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <actuator name="${name}_${number}_motor" >
+        <mechanicalReduction>${reduction}</mechanicalReduction>
+      </actuator>
+      <joint name="${name}_${number}_joint">
+        <offset>${offset}</offset>
+        <hardwareInterface>hardware_interface/JointStateInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      </joint>
+    </transmission>
+    -->
+  </xacro:macro>
+
+  <xacro:macro name="ros2_control_wrist_differential"
+               params="name_1 name_2 act_reduction_1 act_reduction_2 jnt_reduction_1 jnt_reduction_2 number_1_offset number_2_offset" >
+    <joint name="${name_1}_joint">
+      <command_interface name="position" />
+
+      <state_interface name="position" />
+      <state_interface name="velocity" />
+      <state_interface name="effort" />
+    </joint>
+
+    <joint name="${name_2}_joint">
+      <command_interface name="position" />
+
+      <state_interface name="position" />
+      <state_interface name="velocity" />
+      <state_interface name="effort" />
+    </joint>
+
+    <!-- @TODO transmissions for ros2 system -->
+    <!--
+    <transmission name="${name1}_${name2}_wrist_trans">
+      <type>transmission_interface/DifferentialTransmission</type>
+      <actuator name="${name_1}_motor">
+        <role>actuator1</role>
+        <mechanicalReduction>${act_reduction_1}</mechanicalReduction>
+      </actuator>
+      <actuator name="${name_2}_motor">
+        <role>actuator2</role>
+        <mechanicalReduction>${act_reduction_2}</mechanicalReduction>
+      </actuator>
+      <joint name="${name_1}_joint">
+        <role>joint1</role>
+        <offset>${number_1_offset}</offset>
+        <mechanicalReduction>${jnt_reduction_1}</mechanicalReduction>
+        <hardwareInterface>hardware_interface/JointStateInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        <ignoreTransmissionAbsoluteEncoder>1</ignoreTransmissionAbsoluteEncoder>
+      </joint>
+      <joint name="${name_2}_joint">
+        <role>joint2</role>
+        <offset>${number_2_offset}</offset>
+        <mechanicalReduction>${jnt_reduction_2}</mechanicalReduction>
+        <hardwareInterface>hardware_interface/JointStateInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        <ignoreTransmissionAbsoluteEncoder>1</ignoreTransmissionAbsoluteEncoder>
+      </joint>
+    </transmission>
+    -->
+  </xacro:macro>
+</robot>

@@ -6,6 +6,9 @@ arm_controller:
       - arm_2_joint
       - arm_3_joint
       - arm_4_joint
+      - arm_5_joint
+      - arm_6_joint
+      - arm_7_joint
 
     constraints:
       goal_time: 0.6
