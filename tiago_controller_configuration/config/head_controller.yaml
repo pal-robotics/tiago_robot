@@ -1,0 +1,14 @@
+head_controller:
+  ros__parameters:
+    type: joint_trajectory_controller/JointTrajectoryController
+    joints:
+      - head_1_joint
+      - head_2_joint
+
+    constraints:
+      goal_time: 2.0
+      stopped_velocity_tolerance: 5.0
+      head_1_joint:
+        goal: 0.5
+      head_2_joint:
+        goal: 0.5

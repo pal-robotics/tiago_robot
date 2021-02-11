@@ -12,6 +12,7 @@
 
   <xacro:include filename="$(find pmb2_description)/urdf/wheels/wheel.ros2_control.xacro"/>
   <xacro:include filename="$(find tiago_description)/urdf/torso/torso.ros2_control.xacro"/>
+  <xacro:include filename="$(find tiago_description)/urdf/head/head.ros2_control.xacro"/>
 
   <ros2_control name="ros2_control_tiago_system" type="system">
     <hardware>
@@ -24,6 +25,10 @@
 
     <!-- torso -->
     <xacro:ros2_control_torso name="torso_lift" reduction="1.0" />
+
+    <!-- head -->
+    <xacro:ros2_control_head name="head_1" reduction="1.0" offset_value="0.0"/>
+    <xacro:ros2_control_head name="head_2" reduction="1.0" offset_value="0.0"/>
 
   </ros2_control>
 </robot>
