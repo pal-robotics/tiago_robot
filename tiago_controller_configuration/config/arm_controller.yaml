@@ -1,0 +1,26 @@
+arm_controller:
+  ros__parameters:
+    type: joint_trajectory_controller/JointTrajectoryController
+    joints:
+      - arm_1_joint
+      - arm_2_joint
+      - arm_3_joint
+      - arm_4_joint
+
+    constraints:
+      goal_time: 0.6
+      stopped_velocity_tolerance: 5.0
+      arm_1_joint:
+        goal: 0.02
+      arm_2_joint:
+        goal: 0.02
+      arm_3_joint:
+        goal: 0.02
+      arm_4_joint:
+        goal: 0.02
+      arm_5_joint:
+        goal: 0.02
+      arm_6_joint:
+        goal: 0.02
+      arm_7_joint:
+        goal: 0.02

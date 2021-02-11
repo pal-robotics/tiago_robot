@@ -10,9 +10,17 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro"
        name="tiago" >
 
+  <xacro:arg name="description_calibration_dir" default="$(find tiago_description_calibration)/urdf/calibration"/>
+
+  <!-- TODO has_arm param -->
+
   <xacro:include filename="$(find pmb2_description)/urdf/wheels/wheel.ros2_control.xacro"/>
   <xacro:include filename="$(find tiago_description)/urdf/torso/torso.ros2_control.xacro"/>
   <xacro:include filename="$(find tiago_description)/urdf/head/head.ros2_control.xacro"/>
+  <xacro:include filename="$(find tiago_description)/urdf/arm/arm.ros2_control.xacro"/>
+
+  <!-- calibration offsets -->
+  <xacro:include filename="$(arg description_calibration_dir)/calibration_constants.urdf.xacro" />
 
   <ros2_control name="ros2_control_tiago_system" type="system">
     <hardware>
@@ -27,8 +35,14 @@
     <xacro:ros2_control_torso name="torso_lift" reduction="1.0" />
 
     <!-- head -->
-    <xacro:ros2_control_head name="head_1" reduction="1.0" offset_value="0.0"/>
-    <xacro:ros2_control_head name="head_2" reduction="1.0" offset_value="0.0"/>
+    <xacro:ros2_control_head name="head_1" reduction="1.0" offset_value="${head_1_joint_offset}"/>
+    <xacro:ros2_control_head name="head_2" reduction="1.0" offset_value="${head_2_joint_offset}"/>
+
+    <!-- arm -->
+    <xacro:ros2_control_arm name="arm_1" reduction="1.0" offset_value="${arm_1_joint_offset}"/>
+    <xacro:ros2_control_arm name="arm_2" reduction="1.0" offset_value="${arm_2_joint_offset}"/>
+    <xacro:ros2_control_arm name="arm_3" reduction="1.0" offset_value="${arm_3_joint_offset}"/>
+    <xacro:ros2_control_arm name="arm_4" reduction="1.0" offset_value="${arm_4_joint_offset}"/>
 
   </ros2_control>
 </robot>
