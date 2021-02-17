@@ -24,43 +24,29 @@
 #  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 #  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-import os
-
-from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import IncludeLaunchDescription
-from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch_pal.include_utils import include_launch_py_description
 
 def generate_launch_description():
 
     return LaunchDescription([
-        IncludeLaunchDescription(
-            PythonLaunchDescriptionSource([os.path.join(
-                get_package_share_directory(
-                    'tiago_controller_configuration'), 'launch',
-                'mobile_base_controller.launch.py')]),
-        ),
-        IncludeLaunchDescription(
-            PythonLaunchDescriptionSource([os.path.join(
-                get_package_share_directory(
-                    'tiago_controller_configuration'), 'launch',
-                'joint_state_controller.launch.py')]),
-        ),
-        IncludeLaunchDescription(
-            PythonLaunchDescriptionSource([os.path.join(
-                get_package_share_directory(
-                    'tiago_controller_configuration'), 'launch',
-                'torso_controller.launch.py')]),
-        ),
-        IncludeLaunchDescription(
-            PythonLaunchDescriptionSource([os.path.join(
-                get_package_share_directory(
-                    'tiago_controller_configuration'), 'launch',
-                'head_controller.launch.py')]),
-        ),
-        IncludeLaunchDescription(
-            PythonLaunchDescriptionSource([os.path.join(
-                get_package_share_directory(
-                    'tiago_controller_configuration'), 'launch',
-                'arm_controller.launch.py')]),
-        )])
+        include_launch_py_description(
+            'tiago_controller_configuration',
+            ['launch', 'mobile_base_controller.launch.py']),
+
+        include_launch_py_description(
+            'tiago_controller_configuration',
+            ['launch', 'joint_state_controller.launch.py']),
+
+        include_launch_py_description(
+            'tiago_controller_configuration',
+            ['launch', 'torso_controller.launch.py']),
+
+        include_launch_py_description(
+            'tiago_controller_configuration',
+            ['launch', 'head_controller.launch.py']),
+
+        include_launch_py_description(
+            'tiago_controller_configuration',
+            ['launch', 'arm_controller.launch.py'])
+    ])
