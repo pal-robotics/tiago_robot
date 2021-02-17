@@ -7,7 +7,7 @@ from launch import Substitution, SomeSubstitutionsType, LaunchContext
 from typing import Text
 
 from pmb2_description.launch_utils import read_launch_argument
-from pmb2_description.pmb2_launch_utils import get_tiago_base_hw_arguments
+from pmb2_description.pmb2_launch_utils import get_tiago_hw_arguments
 
 
 class TiagoXacroConfigSubstitution(Substitution):
@@ -40,8 +40,14 @@ class TiagoXacroConfigSubstitution(Substitution):
 
         laser_model = read_launch_argument("laser_model", context)
         rgbd_sensors = read_launch_argument("rgbd_sensors", context)
+
+        arm = read_launch_argument("arm", context)
+        ft_sensor = read_launch_argument("ft_sensor", context)
+
         return " laser_model:=" + laser_model + \
-            " rgbd_sensors:=" + rgbd_sensors
+            " rgbd_sensors:=" + rgbd_sensors + \
+            " arm:=" + arm + \
+            " ft_sensor:=" + ft_sensor
 
 
 def generate_launch_description():
@@ -61,10 +67,12 @@ def generate_launch_description():
                output='both',
                parameters=[parameters])
 
-    return LaunchDescription([
-        *get_tiago_base_hw_arguments(laser_model=True,
-                                     rgbd_sensors=True,
-                                     default_laser_model="sick-571",
-                                     default_rgbd_sensors="False"),
-        rsp
-    ])
+    tiago_args = get_tiago_hw_arguments(
+        laser_model=True,
+        rgbd_sensors=True,
+        arm=True,
+        ft_sensor=True,
+        default_laser_model="sick-571",
+        default_rgbd_sensors="False")
+
+    return LaunchDescription([*tiago_args, rsp])

@@ -10,15 +10,19 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro"
        name="tiago" >
 
-  <xacro:arg name="description_calibration_dir" default="$(find tiago_description_calibration)/urdf/calibration"/>
+  <xacro:arg name="arm" default="true" />
+  <xacro:arg name="description_calibration_dir" default="$(find tiago_description_calibration)/urdf/calibration" />
 
-  <!-- TODO has_arm param -->
+  <xacro:property name="has_arm" value="$(arg arm)" />
 
   <xacro:include filename="$(find pmb2_description)/urdf/wheels/wheel.ros2_control.xacro" />
   <xacro:include filename="$(find tiago_description)/urdf/torso/torso.ros2_control.xacro" />
   <xacro:include filename="$(find tiago_description)/urdf/head/head.ros2_control.xacro" />
-  <xacro:include filename="$(find tiago_description)/urdf/arm/arm.ros2_control.xacro" />
-  <xacro:include filename="$(find tiago_description)/urdf/arm/wrist.ros2_control.xacro" />
+
+  <xacro:if value="${has_arm}">
+    <xacro:include filename="$(find tiago_description)/urdf/arm/arm.ros2_control.xacro" />
+    <xacro:include filename="$(find tiago_description)/urdf/arm/wrist.ros2_control.xacro" />
+  </xacro:if>
 
   <!-- calibration offsets -->
   <xacro:include filename="$(arg description_calibration_dir)/calibration_constants.urdf.xacro" />
@@ -39,18 +43,20 @@
     <xacro:ros2_control_head name="head_1" reduction="1.0" offset="${head_1_joint_offset}" />
     <xacro:ros2_control_head name="head_2" reduction="1.0" offset="${head_2_joint_offset}" />
 
-    <!-- arm -->
-    <xacro:ros2_control_arm name="arm_1" reduction="1.0" offset="${arm_1_joint_offset}" />
-    <xacro:ros2_control_arm name="arm_2" reduction="1.0" offset="${arm_2_joint_offset}" />
-    <xacro:ros2_control_arm name="arm_3" reduction="1.0" offset="${arm_3_joint_offset}" />
-    <xacro:ros2_control_arm name="arm_4" reduction="1.0" offset="${arm_4_joint_offset}" />
+    <xacro:if value="${has_arm}">
+      <!-- arm -->
+      <xacro:ros2_control_arm name="arm_1" reduction="1.0" offset="${arm_1_joint_offset}" />
+      <xacro:ros2_control_arm name="arm_2" reduction="1.0" offset="${arm_2_joint_offset}" />
+      <xacro:ros2_control_arm name="arm_3" reduction="1.0" offset="${arm_3_joint_offset}" />
+      <xacro:ros2_control_arm name="arm_4" reduction="1.0" offset="${arm_4_joint_offset}" />
 
-    <!-- wrist -->
-    <xacro:ros2_control_wrist_rotational name="arm_5" reduction="1.0" offset="${arm_5_joint_offset}" />
-    <xacro:ros2_control_wrist_differential name_1="arm_6" name_2="arm_7"
-                                           act_reduction_1="-1.0" act_reduction_2="1.0"
-                                           jnt_reduction_1="1.0" jnt_reduction_2="1.0"
-                                           number_1_offset="${arm_6_joint_offset}" number_2_offset="${arm_7_joint_offset}" />
+      <!-- wrist -->
+      <xacro:ros2_control_wrist_rotational name="arm_5" reduction="1.0" offset="${arm_5_joint_offset}" />
+      <xacro:ros2_control_wrist_differential name_1="arm_6" name_2="arm_7"
+                                             act_reduction_1="-1.0" act_reduction_2="1.0"
+                                             jnt_reduction_1="1.0" jnt_reduction_2="1.0"
+                                             number_1_offset="${arm_6_joint_offset}" number_2_offset="${arm_7_joint_offset}" />
+    </xacro:if>
 
   </ros2_control>
 </robot>
