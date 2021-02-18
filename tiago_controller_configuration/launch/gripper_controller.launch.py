@@ -24,33 +24,46 @@
 #  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 #  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-from launch import LaunchDescription
-from launch_pal.include_utils import include_launch_py_description
+import os
 
-def generate_launch_description():
+from ament_index_python.packages import get_package_share_directory
+
+from launch import LaunchDescription
+from launch.actions import DeclareLaunchArgument
+from launch.substitutions import LaunchConfiguration
+
+from launch_ros.actions import Node
+
+
+# @todo put this somewhere reusable
+# @see https://github.com/ros-controls/ros2_control/issues/320
+def generate_load_controller_launch_description(
+        controller_name, controller_type, pkg_name, controller_params_file):
+
+    pkg_path = get_package_share_directory(pkg_name)
+    param_file_path = os.path.join(pkg_path, controller_params_file)
+
+    spawner = Node(package='controller_manager', executable='spawner.py',
+                   arguments=[controller_name,
+                              '--controller-type', controller_type,
+                              '--controller-manager', LaunchConfiguration(
+                                  'controller_manager_name'),
+                              '--param-file', param_file_path],
+                   output='screen')
 
     return LaunchDescription([
-        include_launch_py_description(
-            'tiago_controller_configuration',
-            ['launch', 'mobile_base_controller.launch.py']),
-
-        include_launch_py_description(
-            'tiago_controller_configuration',
-            ['launch', 'joint_state_controller.launch.py']),
-
-        include_launch_py_description(
-            'tiago_controller_configuration',
-            ['launch', 'torso_controller.launch.py']),
-
-        include_launch_py_description(
-            'tiago_controller_configuration',
-            ['launch', 'head_controller.launch.py']),
-
-        include_launch_py_description(
-            'tiago_controller_configuration',
-            ['launch', 'arm_controller.launch.py']),
-
-        include_launch_py_description(
-            'pal_gripper_controller_configuration',
-            ['launch', 'gripper_controller.launch.py'])
+        DeclareLaunchArgument(
+            'controller_manager_name', default_value='controller_manager',
+            description='Controller manager node name'
+        ),
+        spawner,
     ])
+
+
+def generate_launch_description():
+    return generate_load_controller_launch_description(
+        controller_name='gripper_controller',
+        controller_type='joint_trajectory_controller/JointTrajectoryController',
+        pkg_name='tiago_controller_configuration',
+        controller_params_file=os.path.join(
+            'config', 'gripper_controller.yaml'))

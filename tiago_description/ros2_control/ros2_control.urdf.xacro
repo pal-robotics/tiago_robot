@@ -11,9 +11,11 @@
        name="tiago" >
 
   <xacro:arg name="arm" default="true" />
+  <xacro:arg name="end_effector" default="pal-hey5"/>
   <xacro:arg name="description_calibration_dir" default="$(find tiago_description_calibration)/urdf/calibration" />
 
   <xacro:property name="has_arm" value="$(arg arm)" />
+  <xacro:property name="end_effector" value="$(arg end_effector)" />
 
   <xacro:include filename="$(find pmb2_description)/urdf/wheels/wheel.ros2_control.xacro" />
   <xacro:include filename="$(find tiago_description)/urdf/torso/torso.ros2_control.xacro" />
@@ -22,6 +24,10 @@
   <xacro:if value="${has_arm}">
     <xacro:include filename="$(find tiago_description)/urdf/arm/arm.ros2_control.xacro" />
     <xacro:include filename="$(find tiago_description)/urdf/arm/wrist.ros2_control.xacro" />
+
+    <xacro:if value="${end_effector == 'pal-gripper'}">
+      <xacro:include filename="$(find pal_gripper_description)/urdf/gripper.ros2_control.xacro" />
+    </xacro:if>
   </xacro:if>
 
   <!-- calibration offsets -->
@@ -56,6 +62,12 @@
                                              act_reduction_1="-1.0" act_reduction_2="1.0"
                                              jnt_reduction_1="1.0" jnt_reduction_2="1.0"
                                              number_1_offset="${arm_6_joint_offset}" number_2_offset="${arm_7_joint_offset}" />
+
+      <xacro:if value="${end_effector == 'pal-gripper'}">
+        <!-- pal-gripper -->
+        <xacro:ros2_control_gripper name="gripper_left_finger" reduction="1.0" />
+        <xacro:ros2_control_gripper name="gripper_right_finger" reduction="1.0" />
+      </xacro:if>
     </xacro:if>
 
   </ros2_control>

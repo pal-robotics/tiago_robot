@@ -42,11 +42,13 @@ class TiagoXacroConfigSubstitution(Substitution):
         rgbd_sensors = read_launch_argument("rgbd_sensors", context)
 
         arm = read_launch_argument("arm", context)
+        end_effector = read_launch_argument("end_effector", context)
         ft_sensor = read_launch_argument("ft_sensor", context)
 
         return " laser_model:=" + laser_model + \
             " rgbd_sensors:=" + rgbd_sensors + \
             " arm:=" + arm + \
+            " end_effector:=" + end_effector + \
             " ft_sensor:=" + ft_sensor
 
 
@@ -71,6 +73,7 @@ def generate_launch_description():
         laser_model=True,
         rgbd_sensors=True,
         arm=True,
+        end_effector=True,
         ft_sensor=True,
         default_laser_model="sick-571",
         default_rgbd_sensors="False")
