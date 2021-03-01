@@ -2,6 +2,9 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 2.0.55 (2021-01-15)
 -------------------
 * Merge branch 'gravity_compensation_fix' into 'erbium-devel'

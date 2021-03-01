@@ -2,6 +2,14 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'fix_left_arm_tiago_dual_com' into 'erbium-devel'
+  Add reflect for 4th link CoM
+  See merge request robots/tiago_robot!122
+* Add reflect for 4th link CoM
+* Contributors: Luca Marchionni, victor
+
 2.0.55 (2021-01-15)
 -------------------
 * Merge branch 'gravity_compensation_fix' into 'erbium-devel'
