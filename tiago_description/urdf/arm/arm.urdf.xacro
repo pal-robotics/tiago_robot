@@ -164,7 +164,7 @@
     <!--************************-->
     <link name="${name}_4_link">
       <inertial>
-        <origin xyz="${reflect * -0.095658} ${reflect * 0.014666} 0.018133" rpy="0.00000 0.00000 0.00000"/>
+        <origin xyz="${reflect * -0.095658} ${reflect * 0.014666} ${reflect * 0.018133}" rpy="0.00000 0.00000 0.00000"/>
         <mass value="1.432697"/>
         <inertia ixx="0.002040" ixy="${reflect * 0.000725}" ixz="${-reflect * 0.001150}"
                  iyy="0.008424" iyz="-0.000204"
