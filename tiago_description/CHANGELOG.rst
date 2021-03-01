@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.56 (2021-03-01)
+-------------------
 * Merge branch 'fix_left_arm_tiago_dual_com' into 'erbium-devel'
   Add reflect for 4th link CoM
   See merge request robots/tiago_robot!122
