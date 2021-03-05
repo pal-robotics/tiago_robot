@@ -1,26 +1,35 @@
 <?xml version="1.0"?>
-<package>
+<package format="3">
   <name>tiago_bringup</name>
   <version>2.0.55</version>
   <description>Launch files to upload the robot description and start the controllers</description>
   <maintainer email="jordi.pages@pal-robotics.com">Jordi Pages</maintainer>
   <author email="bence.magyar@pal-robotics.com">Bence Magyar</author>
   <license>BSD</license>
-  <buildtool_depend>catkin</buildtool_depend>
-  <run_depend>pmb2_bringup</run_depend>
-  <run_depend>tf_lookup</run_depend>
-  <run_depend>robot_state_publisher</run_depend>
-  <run_depend>tiago_controller_configuration</run_depend>
-  <run_depend>joy</run_depend>
-  <run_depend>joy_teleop</run_depend>
-  <run_depend>dynamic_footprint</run_depend>
-  <run_depend>head_action</run_depend>
-  <run_depend>tiago_moveit_config</run_depend>
-  <run_depend>dynamixel_cpp</run_depend>
-  <run_depend>openni2_launch</run_depend>
-  <run_depend>speed_limit_node</run_depend>
-  <run_depend>camera_calibration_files</run_depend>
-  <run_depend>libuvc_camera</run_depend>
-  <run_depend>robot_pose</run_depend>
-  <run_depend>custom_ee_configuration</run_depend>
+
+  <buildtool_depend>ament_cmake_auto</buildtool_depend>
+
+  <exec_depend>camera_calibration_files</exec_depend>
+  <exec_depend>custom_ee_configuration</exec_depend>
+  <exec_depend>dynamic_footprint</exec_depend>
+  <exec_depend>dynamixel_cpp</exec_depend>
+  <exec_depend>head_action</exec_depend>
+  <exec_depend>joy</exec_depend>
+  <exec_depend>joy_teleop</exec_depend>
+  <exec_depend>libuvc_camera</exec_depend>
+  <exec_depend>openni2_launch</exec_depend>
+  <exec_depend>pmb2_bringup</exec_depend>
+  <exec_depend>robot_pose</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>speed_limit_node</exec_depend>
+  <exec_depend>tf_lookup</exec_depend>
+  <exec_depend>tiago_controller_configuration</exec_depend>
+  <exec_depend>tiago_moveit_config</exec_depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
 </package>
