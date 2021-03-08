@@ -24,13 +24,16 @@ def generate_launch_description():
     twist_mux = include_launch_py_description(
         'tiago_bringup', ['launch', 'twist_mux.launch.py'])
 
+    joystick_teleop = include_launch_py_description(
+        'tiago_bringup', ['launch', 'joystick_teleop.launch.py'])
+
     # @TODO: robot state publisher? move it here from tiago_spawn?
     # @TODO: robot pose publisher
     # @TODO: tf lookup
     # @TODO: dynamic footprint
-    # @TODO: joystick teleop
 
     return LaunchDescription([
         default_controllers,
-        twist_mux
+        twist_mux,
+        joystick_teleop
     ])
