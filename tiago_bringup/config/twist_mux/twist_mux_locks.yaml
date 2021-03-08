@@ -8,21 +8,20 @@
 # - priority: priority in the range [0, 255], so all the topics with priority lower than it
 #             will be stopped/disabled
 
-locks:
--
-  name    : pause
-  topic   : pause_navigation
-  timeout : 0.0
-  # Same priority as joystick control, so it'll not block it.
-  priority: 100
--
-  name    : loop_closure
-  topic   : stop_closing_loop
-  timeout : 0.0
-  priority: 200
--
-  name    : joystick
-  topic   : joy_priority
-  timeout : 0.0
-  priority: 100
+/**:
+  ros__parameters:
+    locks:
+      pause:
+        topic   : pause_navigation
+        timeout : 0.0
+        # Same priority as joystick control, so it'll not block it.
+        priority: 100
+      loop_closure:
+        topic   : stop_closing_loop
+        timeout : 0.0
+        priority: 200
+      joystick: 
+        topic   : joy_priority
+        timeout : 0.0
+        priority: 100
 

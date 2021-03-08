@@ -12,25 +12,28 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
 from launch_pal.include_utils import include_launch_py_description
+import os
 
 
 def generate_launch_description():
-    default_controllers = include_launch_py_description(
-        'tiago_controller_configuration',
-        ['launch', 'default_controllers.launch.py'])
+    pkg = get_package_share_directory('tiago_bringup')
+
+    config_locks_file = os.path.join(
+        pkg, 'config', 'twist_mux', 'twist_mux_locks.yaml')
+    config_topics_file = os.path.join(
+        pkg, 'config', 'twist_mux', 'twist_mux_topics.yaml')
+    joystick_file = os.path.join(pkg, 'config', 'twist_mux', 'joystick.yaml')
 
     twist_mux = include_launch_py_description(
-        'tiago_bringup', ['launch', 'twist_mux.launch.py'])
+        'twist_mux', ['launch', 'twist_mux_launch.py'],
+        launch_arguments={
+            'cmd_vel_out': 'mobile_base_controller/cmd_vel_unstamped',
+            'config_locks': config_locks_file,
+            'config_topics': config_topics_file,
+            'joystick': joystick_file,
+        }.items())
 
-    # @TODO: robot state publisher? move it here from tiago_spawn?
-    # @TODO: robot pose publisher
-    # @TODO: tf lookup
-    # @TODO: dynamic footprint
-    # @TODO: joystick teleop
-
-    return LaunchDescription([
-        default_controllers,
-        twist_mux
-    ])
+    return LaunchDescription([twist_mux])
