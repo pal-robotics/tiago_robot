@@ -27,13 +27,13 @@ def generate_launch_description():
     joystick_teleop = include_launch_py_description(
         'tiago_bringup', ['launch', 'joystick_teleop.launch.py'])
 
-    # @TODO: robot state publisher? move it here from tiago_spawn?
+    # @TODO: robot state publisher? already launched in tiago_spawn!
     # @TODO: robot pose publisher
     # @TODO: tf lookup
     # @TODO: dynamic footprint
 
     return LaunchDescription([
-        default_controllers,
+        # default_controllers,
         twist_mux,
         joystick_teleop
     ])
