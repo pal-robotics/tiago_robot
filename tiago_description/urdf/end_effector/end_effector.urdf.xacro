@@ -85,7 +85,7 @@
   </xacro:if>
 
   <!-- Custom -->
-  <xacro:if value="${type == 'custom' and not is_dual}">
+  <xacro:if value="${type == 'custom' and is_dual == 'false'}">
     <xacro:include filename="$(find custom_ee_description)/urdf/end-effector.urdf.xacro" />
     <xacro:end_effector parent="${parent}">
       <origin xyz="0.01 0 0" rpy="${90*deg_to_rad} ${90*deg_to_rad} ${-90*deg_to_rad}"/>
@@ -93,7 +93,7 @@
   </xacro:if>
 
   <!-- Custom dual-->
-  <xacro:if value="${type == 'custom' and is_dual}">
+  <xacro:if value="${type == 'custom' and is_dual == 'true'}">
     <xacro:if value="${reflect == 1}"> <!-- If right -->
     <xacro:include filename="$(find custom_dual_ee_description)/urdf/end-effector-right.urdf.xacro" />
     <xacro:end_effector_right parent="${parent}">
