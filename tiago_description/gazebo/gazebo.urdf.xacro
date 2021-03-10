@@ -45,11 +45,9 @@
 
 
   <gazebo reference="base_imu_link">
-    <!-- this is expected to be reparented to pelvis with appropriate offset
-         when imu_link is reduced by fixed joint reduction -->
     <sensor name="imu_sensor" type="imu">
       <always_on>1</always_on>
-      <update_rate>1000.0</update_rate>
+      <update_rate>10.0</update_rate>
       <imu>
         <noise>
           <type>gaussian</type>
@@ -67,6 +65,12 @@
           </accel>
         </noise>
       </imu>
+      <plugin name="base_imu" filename="libgazebo_ros_imu_sensor.so">
+        <ros>
+          <!-- publish to /imu/data -->
+          <remapping>~/out:=base_imu</remapping>
+        </ros>
+      </plugin>
     </sensor>
   </gazebo>
 
