@@ -7,23 +7,19 @@
   To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to
   Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
 -->
-
-<robot name="reemc" xmlns:xacro="http://ros.org/wiki/xacro">
-
-<xacro:macro name="reemc_force_torque_sensor" params="name update_rate">
-  <gazebo reference="${name}">
-    <sensor name="${name}_contact_sensor" type="contact">
-      <pose>0.105 0.071 0 0 0 0</pose>
-      <always_on>1</always_on>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:macro name="force_torque_sensor_gazebo" params="joint_name update_rate">
+  <gazebo reference="${joint_name}">
+    <preserveFixedJoint>true</preserveFixedJoint> <!-- in case this is in a fixed joint -->
+    <sensor name="${joint_name}_force_torque" type="force_torque">
       <update_rate>${update_rate}</update_rate>
-      <contact>
-        <collision>${name}_collision</collision>
-      </contact>
+      <visualize>true</visualize>
+      <force_torque>
+        <frame>child</frame>
+        <measure_direction>child_to_parent</measure_direction>
+      </force_torque>
     </sensor>
-  </gazebo>
-  <gazebo reference="${name}">
-    <provideFeedback>1</provideFeedback>
-  </gazebo>
+</gazebo>
 
 </xacro:macro>
 </robot>

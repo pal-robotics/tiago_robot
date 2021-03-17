@@ -29,6 +29,8 @@
       <xacro:include filename="$(find pal_gripper_description)/urdf/gripper.ros2_control.xacro" />
     </xacro:if>
   </xacro:if>
+  <xacro:include filename="$(find pmb2_description)/urdf/sensors/sensors.ros2_control.xacro"/>
+
 
   <!-- calibration offsets -->
   <xacro:include filename="$(arg description_calibration_dir)/calibration_constants.urdf.xacro" />
@@ -41,6 +43,9 @@
     <!-- wheels -->
     <xacro:ros2_control_wheel side="right" />
     <xacro:ros2_control_wheel side="left" />
+
+    <!-- IMU -->
+    <xacro:ros2_control_imu name="base_imu_sensor"/>
 
     <!-- torso -->
     <xacro:ros2_control_torso name="torso_lift" reduction="1.0" />
@@ -68,6 +73,12 @@
         <xacro:ros2_control_gripper name="gripper_left_finger" reduction="1.0" />
         <xacro:ros2_control_gripper name="gripper_right_finger" reduction="1.0" />
       </xacro:if>
+    </xacro:if>
+
+    <!-- Force Torque sensor -->
+    <xacro:if value="${has_ft_sensor}">
+      <xacro:include filename="$(find tiago_description)/urdf/sensors/sensors.ros2_control.xacro"/>
+      <xacro:ros2_control_force_torque_sensor name="wrist_ft_joint_force_torque"/>
     </xacro:if>
 
   </ros2_control>
