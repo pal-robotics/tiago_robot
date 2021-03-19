@@ -33,24 +33,27 @@
             <near>0.3</near>
             <far>8.0</far>
           </clip>
+	  <distortion>
+            <k1>0.00000001</k1>
+            <k2>0.00000001</k2>
+            <k3>0.00000001</k3>
+            <p1>0.00000001</p1>
+            <p2>0.00000001</p2>
+          </distortion>
         </camera>
-        <plugin name="${name}_frame_controller" filename="libgazebo_ros_openni_kinect.so">
-          <alwaysOn>true</alwaysOn>
-          <updateRate>30.0</updateRate>
-          <cameraName>${name}</cameraName>
-          <imageTopicName>rgb/image_raw</imageTopicName>
-          <cameraInfoTopicName>rgb/camera_info</cameraInfoTopicName>
-          <depthImageTopicName>depth_registered/image_raw</depthImageTopicName>
-          <depthImageCameraInfoTopicName>depth_registered/camera_info</depthImageCameraInfoTopicName>
-          <pointCloudTopicName>depth_registered/points</pointCloudTopicName>
-          <frameName>${name}_rgb_optical_frame</frameName>
-          <pointCloudCutoff>0.5</pointCloudCutoff>
-          <pointCloudCutoffMax>8.0</pointCloudCutoffMax>
-          <distortionK1>0.00000001</distortionK1>
-          <distortionK2>0.00000001</distortionK2>
-          <distortionK3>0.00000001</distortionK3>
-          <distortionT1>0.00000001</distortionT1>
-          <distortionT2>0.00000001</distortionT2>
+        <plugin name="${name}_frame_controller" filename="libgazebo_ros_camera.so">
+          <camera_name>${name}</camera_name>
+          <ros>
+			  <!-- <namespace>${name}</namespace>-->
+	    <argument>${name}/image_raw:=${name}/rgb/image_raw</argument>
+	    <argument>${name}/camera_info:=${name}/rgb/camera_info</argument>
+	    <argument>${name}/depth/image_raw:=${name}/depth_registered/image_raw</argument>
+	    <argument>${name}/depth/camera_info:=${name}/depth_registered/camera_info</argument>
+	    <argument>${name}/points:=${name}/depth_registered/points</argument>
+          </ros>
+          <frame_name>${name}_rgb_optical_frame</frame_name>
+          <min_depth>0.3</min_depth>
+          <max_depth>8.0</max_depth>
         </plugin>
       </sensor>
     </gazebo>
