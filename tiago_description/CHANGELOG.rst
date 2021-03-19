@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.57 (2021-03-19)
+-------------------
 * Merge branch 'custom-end-effector-dual' into 'erbium-devel'
   Custom end effector dual
   See merge request robots/tiago_robot!123
