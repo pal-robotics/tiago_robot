@@ -34,15 +34,17 @@
   </gazebo>
 
   <gazebo>
-    <plugin filename="libgazebo_world_odometry.so" name="gazebo_ros_odometry">
-      <frameName>base_footprint</frameName>
-      <topicName>floating_base_pose_simulated</topicName>
+    <!--- backwards compatibility, used to be gazebo_world_odometry pal plugin-->
+    <plugin filename="libgazebo_ros_p3d.so" name="gazebo_ros_p3d">
+      <body_name>base_footprint</body_name>
+      <topic_name>floating_base_pose_simulated</topic_name>
+      <always_on>true</always_on>
+      <update_rate>1000.0</update_rate>
       <xacro:if value="${is_multiple}">
-          <robotNamespace>/${nsp}</robotNamespace>
+	    <!--<robotNamespace>/${nsp}</robotNamespace>-->
       </xacro:if>
     </plugin>
   </gazebo>
-
 
   <gazebo reference="base_imu_link">
     <sensor name="imu_sensor" type="imu">
