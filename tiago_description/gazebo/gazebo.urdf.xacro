@@ -24,9 +24,11 @@
 
     <plugin filename="libgazebo_ros_p3d.so" name="gazebo_ros_p3d">
       <body_name>base_footprint</body_name>
-      <topic_name>ground_truth_odom</topic_name>
       <always_on>true</always_on>
       <update_rate>100.0</update_rate>
+      <ros>
+        <argument>odom:=ground_truth_odom</argument>
+      </ros>
       <xacro:if value="${is_multiple}">
 	    <!--<robotNamespace>/${nsp}</robotNamespace>-->
       </xacro:if>
@@ -35,11 +37,13 @@
 
   <gazebo>
     <!--- backwards compatibility, used to be gazebo_world_odometry pal plugin-->
-    <plugin filename="libgazebo_ros_p3d.so" name="gazebo_ros_p3d">
+    <plugin filename="libgazebo_ros_p3d.so" name="gazebo_ros_odometry">
       <body_name>base_footprint</body_name>
-      <topic_name>floating_base_pose_simulated</topic_name>
       <always_on>true</always_on>
       <update_rate>1000.0</update_rate>
+      <ros>
+        <argument>odom:=floating_base_pose_simulated</argument>
+      </ros>
       <xacro:if value="${is_multiple}">
 	    <!--<robotNamespace>/${nsp}</robotNamespace>-->
       </xacro:if>
