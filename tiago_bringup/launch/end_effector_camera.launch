@@ -7,7 +7,11 @@
     <!-- if 2 cameras needed args -->
     <arg name="camera" default="camera"/> <!-- right_camera or left_camera -->
     <arg name="index" default="0"/>
-    
+    <arg name="rotation" default="0"/>
+    <arg name="side" value="right_" if="$(eval camera == 'right_camera')"/>
+    <arg name="side" value="left_" if="$(eval camera == 'left_camera')"/>
+    <arg name="side" value="" if="$(eval camera == 'camera')"/>
+
     <group ns="end_effector_$(arg camera)">
         <node pkg="libuvc_camera" type="camera_node" name="end_effector_$(arg camera)">
             <!-- Parameters used to find the camera -->
@@ -30,6 +34,10 @@
             <param name="auto_exposure" value="3"/> <!-- use aperture_priority auto exposure -->
             <param name="auto_white_balance" value="false"/>
         </node>
+        <node pkg="tf" type="static_transform_publisher" name="gripper_$(arg side)endoscopic_link"
+            args="0 -0.03745 -0.123 -1.5708 1.5708 $(arg rotation) gripper_$(arg side)link gripper_$(arg side)endoscopic_frame 100" />
+        <node pkg="tf" type="static_transform_publisher" name="gripper_$(arg side)endoscopic_optical_link"
+            args="0 0 0 -1.5708 0 -1.5708 gripper_$(arg side)endoscopic_frame gripper_$(arg side)endoscopic_optical_frame 100" />
     </group>
 </launch>
 
