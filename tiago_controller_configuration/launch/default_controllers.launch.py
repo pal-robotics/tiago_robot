@@ -36,7 +36,7 @@ def generate_launch_description():
 
         include_launch_py_description(
             'tiago_controller_configuration',
-            ['launch', 'joint_state_controller.launch.py']),
+            ['launch', 'joint_state_broadcaster.launch.py']),
 
         include_launch_py_description(
             'tiago_controller_configuration',
