@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.58 (2021-04-09)
+-------------------
 * Merge branch 'add-endoscopic' into 'erbium-devel'
   add static_transform_publisher for endoscopic and its optical frame
   See merge request robots/tiago_robot!124
