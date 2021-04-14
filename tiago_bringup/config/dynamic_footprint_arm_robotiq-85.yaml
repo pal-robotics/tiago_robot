@@ -1,0 +1,16 @@
+link_list: ['arm_1_link',
+            'arm_2_link',
+            'arm_3_link',
+            'arm_4_link',
+            'arm_5_link',
+            'arm_6_link',
+            'arm_7_link',
+            'base_sonar_01_link',
+            'base_sonar_02_link',
+            'base_sonar_03_link',
+            'wheel_right_link',
+            'wheel_left_link',
+            'base_laser_link',
+            'gripper_left_inner_finger_pad',
+            'gripper_right_inner_finger_pad']
+padding: 0.05

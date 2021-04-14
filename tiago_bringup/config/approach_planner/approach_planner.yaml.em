@@ -19,7 +19,7 @@ approach_planner:
     - gripper_left_finger_joint
     - gripper_right_finger_joint
 @[end if]@
-@[if end_effector == "schunk-wsg"]@
+@[if end_effector == "schunk-wsg" or end_effector == "robotiq-85" or end_effector == "robotiq-140" ]@
     - gripper_finger_joint
 @[end if]@
   joint_tolerance: 0.01

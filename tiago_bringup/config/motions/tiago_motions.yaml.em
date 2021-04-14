@@ -600,6 +600,17 @@ play_motion:
         description: 'Pick a shirt-like object from floor in front of the robot'
 
 @[end if]@
+@[if end_effector == "robotiq-85"]@
+    offer:
+          joints: ['torso_lift_joint', 'arm_1_joint', 'arm_2_joint', 'arm_3_joint', 'arm_4_joint', 'arm_5_joint', 'arm_6_joint', 'arm_7_joint']
+          points:
+          - positions: [0.296, 1.61, -0.93, -3.14, 1.83, -1.577, -0.62, -1.577]
+            time_from_start: 0.0
+          meta:
+            name: Offer Gripper
+            usage: demo
+            description: 'Offer Gripper'
+@[end if]@
 
 @[else]@
     home:
