@@ -85,7 +85,7 @@
   </xacro:if>
 
   <!-- Robotiq 2F-85 Gripper -->
-  <xacro:if value="${type == 'robotiq-85'}">
+  <xacro:if value="${type == 'robotiq-2f-85'}">
     <xacro:include filename="$(find pal_robotiq_85_description)/urdf/robotiq_85_gripper.urdf.xacro" />
     <xacro:robotiq_85_gripper prefix="${name}_" parent="${parent}" >
       <origin xyz="0.01 0 0" rpy="${90*deg_to_rad} ${0*deg_to_rad} ${90*deg_to_rad}"/>
@@ -93,7 +93,7 @@
   </xacro:if>
 
   <!-- Robotiq 2F-140 Gripper -->
-  <xacro:if value="${type == 'robotiq-140'}">
+  <xacro:if value="${type == 'robotiq-2f-140'}">
     <xacro:include filename="$(find pal_robotiq_140_description)/urdf/robotiq_140_gripper.urdf.xacro" />
     <xacro:robotiq_140_gripper prefix="${name}_" parent="${parent}" >
       <origin xyz="0.01 0 0" rpy="${90*deg_to_rad} ${0*deg_to_rad} ${90*deg_to_rad}"/>

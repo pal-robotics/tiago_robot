@@ -12,7 +12,7 @@ extension = os.path.splitext(no_em_extension_path)[1]
 
 for arm in [True, False]:
     if arm:
-        end_effectors = ["pal-hey5", "pal-gripper", "schunk-wsg", "robotiq-85", "robotiq-140", "custom"]
+        end_effectors = ["pal-hey5", "pal-gripper", "schunk-wsg", "robotiq-2f-85", "robotiq-2f-140", "custom"]
         ft_sensors = ["schunk-ft", None]
     else:
         end_effectors = [None]

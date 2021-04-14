@@ -600,7 +600,7 @@ play_motion:
         description: 'Pick a shirt-like object from floor in front of the robot'
 
 @[end if]@
-@[if end_effector == "robotiq-85"]@
+@[if end_effector == "robotiq-2f-85"]@
     offer:
           joints: ['torso_lift_joint', 'arm_1_joint', 'arm_2_joint', 'arm_3_joint', 'arm_4_joint', 'arm_5_joint', 'arm_6_joint', 'arm_7_joint']
           points:
