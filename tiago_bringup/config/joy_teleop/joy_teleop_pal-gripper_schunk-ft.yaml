@@ -86,7 +86,6 @@ teleop:
       increment_by: [0, -0.1]
     buttons: [1] # right pad, right button
 
-
   close_gripper:
     type: action
     action_name: /gripper_controller/increment
@@ -100,4 +99,3 @@ teleop:
     action_goal:
       increment_by: [0.01, 0.01]
     buttons: [5] # R1
-
