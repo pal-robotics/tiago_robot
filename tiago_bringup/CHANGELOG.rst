@@ -2,6 +2,20 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'robotiq_gripper' into 'erbium-devel'
+  Robotiq gripper
+  See merge request robots/tiago_robot!125
+* address MR review comments
+* run incremental action server for robotiq grippers
+* Update the motions of the robotiq grippers
+* generated tiago hardware configurations for the robotiq grippers
+* generate joy_teleop configurations
+* update the robotiq end effector naming
+* generate some config files for robotiq 85 and 140
+* Contributors: Sai Kishor Kothakota, saikishor
+
 2.0.58 (2021-04-09)
 -------------------
 * Merge branch 'add-endoscopic' into 'erbium-devel'

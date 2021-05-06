@@ -2,6 +2,16 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'robotiq_gripper' into 'erbium-devel'
+  Robotiq gripper
+  See merge request robots/tiago_robot!125
+* add robotiq dependencies and robotiq grippers to the tests
+* update the robotiq end effector naming
+* integrate the new robotiq-85 and robotiq-140 grippers
+* Contributors: Sai Kishor Kothakota, saikishor
+
 2.0.58 (2021-04-09)
 -------------------
 

@@ -2,6 +2,16 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'robotiq_gripper' into 'erbium-devel'
+  Robotiq gripper
+  See merge request robots/tiago_robot!125
+* add robotiq dependencies and robotiq grippers to the tests
+* added the gravity compensation configurations for robotiq grippers
+* Update the joint trajectory controller config yamls
+* Contributors: Sai Kishor Kothakota, saikishor
+
 2.0.58 (2021-04-09)
 -------------------
 
