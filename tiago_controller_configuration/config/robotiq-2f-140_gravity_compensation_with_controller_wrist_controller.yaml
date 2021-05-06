@@ -1,0 +1,4 @@
+gravity_compensation:
+  type: "force_control/GravityCompensation"
+  robot_model_chains: ["gripper_base_link"]
+  dt: 0.01

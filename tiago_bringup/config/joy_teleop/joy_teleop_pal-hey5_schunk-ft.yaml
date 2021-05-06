@@ -101,5 +101,3 @@ teleop:
       motion_name: 'open_hand'
       skip_planning: True
     buttons: [5]
-
-
