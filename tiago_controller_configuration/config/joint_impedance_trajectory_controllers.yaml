@@ -15,7 +15,7 @@ arm_impedance_controller:
     arm_3_joint: {kp: -6.0, kd: -0.8}
     arm_4_joint: {kp: -6.0, kd: -0.8}
     arm_5_joint: {kp: -0.02, kd: -0.02}
-    arm_6_joint: {kp: 0.3, kd: 0.02}
+    arm_6_joint: {kp: 0.2, kd: 0.02}
     arm_7_joint: {kp: 0.2, kd: 0.2}
   motor_params:
     arm_1_joint: {motor_torque_constant: 0.0, reduction_ratio: 100.0}
