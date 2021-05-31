@@ -2,7 +2,7 @@ motor_torque_constant: 0.0
 torque_sensor_offset: 0.0
 reduction_ratio: 100.0
 actuator_names:
-  - torso_lift_motor
+  - arm_1_motor
 check_mode: false
 
 # This parametres are random, they have not been identified
