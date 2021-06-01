@@ -2,6 +2,16 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'impedance_controllers' into 'erbium-devel'
+  added impedance controller configuration
+  See merge request robots/tiago_robot!126
+* Fix the actuator name in arm_1_joint
+* fix: endless loop in joint 6
+* added impedance controller configuration
+* Contributors: Sai Kishor Kothakota, daniellopez, saikishor, victor
+
 2.1.0 (2021-05-06)
 ------------------
 * Merge branch 'robotiq_gripper' into 'erbium-devel'

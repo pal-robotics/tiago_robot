@@ -2,6 +2,14 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'parametrize-robot-description' into 'erbium-devel'
+  Parametrize robot_description param name
+  See merge request robots/tiago_robot!127
+* Parametrize robot_description param name
+* Contributors: Victor Lopez, victor
+
 2.1.0 (2021-05-06)
 ------------------
 * Merge branch 'robotiq_gripper' into 'erbium-devel'
