@@ -1,0 +1,44 @@
+arm_impedance_controller:
+  type: "impedance_controllers/JointTrajectoryController"
+  joints:
+    - arm_1_joint
+    - arm_2_joint
+    - arm_3_joint
+    - arm_4_joint
+    - arm_5_joint
+    - arm_6_joint
+    - arm_7_joint
+  robot_model_chains: ["gripper_link"]
+  impedance_gains:
+    arm_1_joint: {kp: 6.0, kd: 1.0}
+    arm_2_joint: {kp: 6.0, kd: 0.8}
+    arm_3_joint: {kp: -6.0, kd: -0.8}
+    arm_4_joint: {kp: -6.0, kd: -0.8}
+    arm_5_joint: {kp: -0.02, kd: -0.02}
+    arm_6_joint: {kp: 0.2, kd: 0.02}
+    arm_7_joint: {kp: 0.2, kd: 0.2}
+  motor_params:
+    arm_1_joint: {motor_torque_constant: 0.0, reduction_ratio: 100.0}
+    arm_2_joint: {motor_torque_constant: 0.136, reduction_ratio: 100.0}
+    arm_3_joint: {motor_torque_constant: -0.087, reduction_ratio: 100.0}
+    arm_4_joint: {motor_torque_constant: -0.087, reduction_ratio: 100.0}
+    arm_5_joint: {motor_torque_constant: 0.0, reduction_ratio: 336.0}
+    arm_6_joint: {motor_torque_constant: 0.0, reduction_ratio: 336.0}
+    arm_7_joint: {motor_torque_constant: 0.0, reduction_ratio: 336.0}
+  constraints:
+    goal_time: 0.6
+    stopped_velocity_tolerance: 5.0
+    arm_1_joint:
+      goal: 0.02
+    arm_2_joint:
+      goal: 0.02
+    arm_3_joint:
+      goal: 0.02
+    arm_4_joint:
+      goal: 0.02
+    arm_5_joint:
+      goal: 0.02
+    arm_6_joint:
+      goal: 0.02
+    arm_7_joint:
+      goal: 0.02
