@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.1.1 (2021-06-01)
+------------------
 * Merge branch 'parametrize-robot-description' into 'erbium-devel'
   Parametrize robot_description param name
   See merge request robots/tiago_robot!127

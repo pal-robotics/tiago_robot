@@ -2,8 +2,8 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.1.1 (2021-06-01)
+------------------
 * Merge branch 'impedance_controllers' into 'erbium-devel'
   added impedance controller configuration
   See merge request robots/tiago_robot!126
