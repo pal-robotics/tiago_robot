@@ -4,6 +4,10 @@
     joints:
       - head_1_joint
       - head_2_joint
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
 
     constraints:
       goal_time: 2.0

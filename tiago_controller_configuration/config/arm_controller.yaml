@@ -9,6 +9,10 @@
       - arm_5_joint
       - arm_6_joint
       - arm_7_joint
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
 
     constraints:
       goal_time: 0.6

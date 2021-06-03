@@ -33,7 +33,7 @@ def generate_launch_description():
     # @TODO: dynamic footprint
 
     return LaunchDescription([
-        # default_controllers,
+        default_controllers,
         twist_mux,
         joystick_teleop
     ])

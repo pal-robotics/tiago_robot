@@ -3,6 +3,10 @@
     type: joint_trajectory_controller/JointTrajectoryController
     joints:
       - torso_lift_joint
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
 
     constraints:
       goal_time: 0.6
