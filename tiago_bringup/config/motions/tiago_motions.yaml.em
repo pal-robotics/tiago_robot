@@ -1,41 +1,36 @@
-play_motion:
+/play_motion:
+  ros__parameters:
 @[if end_effector == "pal-hey5"]@
-  controllers: [arm_controller, head_controller, torso_controller, hand_controller]
+    controllers: [arm_controller, head_controller, torso_controller, hand_controller]
 @[end if]@
 @[if end_effector in ["pal-gripper", "schunk-wsg"]]@
-  controllers: [arm_controller, head_controller, torso_controller, gripper_controller]
+    controllers: [arm_controller, head_controller, torso_controller, gripper_controller]
 @[end if]@
 @[if not has_arm]@
-  controllers: [head_controller, torso_controller]
+    controllers: [head_controller, torso_controller]
 @[end if]
-  motions:
+    motions:
 @[if has_arm]@
-    home:
-      joints: [torso_lift_joint, arm_1_joint,
-      arm_2_joint, arm_3_joint, arm_4_joint, arm_5_joint,
-      arm_6_joint, arm_7_joint]
-      points:
+      home:
+        joints: [torso_lift_joint, arm_1_joint,
+        arm_2_joint, arm_3_joint, arm_4_joint, arm_5_joint,
+        arm_6_joint, arm_7_joint]
 @[if end_effector == "schunk-wsg"]@
-      - positions: [0.25, 0.20, 0.35, -0.20, 1.94, -1.57, 1.37, -1.39]
-        time_from_start: 0.5
-      - positions: [0.18, 0.20, -1.34, -0.20, 1.94, -1.57, 1.37, -1.39]
-        time_from_start: 4.0
-      - positions: [0.15, 0.20, -1.34, -0.20, 1.94, -1.57, 1.37, -1.39]
-        time_from_start: 7.0
-      - positions: [0.15, 0.20, -1.34, -0.20, 1.94, -1.57, 1.37, 0.0]
-        time_from_start: 9.0
+        positions: [0.25, 0.20, 0.35, -0.20, 1.94, -1.57, 1.37, -1.39,
+                    0.18, 0.20, -1.34, -0.20, 1.94, -1.57, 1.37, -1.39,
+                    0.15, 0.20, -1.34, -0.20, 1.94, -1.57, 1.37, -1.39,
+                    0.15, 0.20, -1.34, -0.20, 1.94, -1.57, 1.37, 0.0]
+        times_from_start: [0.5, 4.0, 7.0, 9.0]
 @[else]@
-      - positions: [0.25, 0.20, 0.35, -0.20, 1.94, -1.57, 1.37, 0.0]
-        time_from_start: 0.5
-      - positions: [0.18, 0.20, -1.34, -0.20, 1.94, -1.57, 1.37, 0.0]
-        time_from_start: 4.0
-      - positions: [0.15, 0.20, -1.34, -0.20, 1.94, -1.57, 1.37, 0.0]
-        time_from_start: 7.0
+        positions: [0.25, 0.20, 0.35, -0.20, 1.94, -1.57, 1.37, 0.0,
+                    0.18, 0.20, -1.34, -0.20, 1.94, -1.57, 1.37, 0.0,
+                    0.15, 0.20, -1.34, -0.20, 1.94, -1.57, 1.37, 0.0]
+        times_from_start: [0.5, 4.0, 7.0]
 @[end if]@
-      meta:
-        name: Home
-        usage: demo
-        description: 'Go home'
+        meta:
+          name: Home
+          usage: demo
+          description: 'Go home'
 
     unfold_arm:
       joints: [torso_lift_joint, arm_1_joint,
@@ -60,7 +55,7 @@ play_motion:
         time_from_start: 1.0
       - positions: [0.19, 1.6, -0.55, -1.35, 1.40, -1.57, -0.07, 0.0]
         time_from_start: 3.0
-      - positions: [0.16, 1.6, -0.55, 0, 1.03, -1.57, -0.07, 0.0]
+      - positions: [0.16, 1.6, -0.55, 0.0, 1.03, -1.57, -0.07, 0.0]
         time_from_start: 7.0
       meta:
         name: Reach Floor
@@ -617,9 +612,9 @@ play_motion:
     head_tour:
       joints: [head_1_joint, head_2_joint]
       points:
-      - positions: [0, 0]
+      - positions: [0.0, 0.0]
         time_from_start: 0.1
-      - positions: [0.7, 0]
+      - positions: [0.7, 0.0]
         time_from_start: 3.0
       - positions: [0.7, 0.3]
         time_from_start: 6.0
@@ -631,7 +626,7 @@ play_motion:
         time_from_start: 15.0
       - positions: [-0.7, -0.3]
         time_from_start: 18.0
-      - positions: [0, 0]
+      - positions: [0.0, 0.0]
         time_from_start: 21.0
       meta:
         name: Head Tour
