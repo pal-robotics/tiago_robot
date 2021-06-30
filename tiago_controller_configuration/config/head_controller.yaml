@@ -1,6 +1,7 @@
 /head_controller:
   ros__parameters:
     type: joint_trajectory_controller/JointTrajectoryController
+    use_sim_time: True
     joints:
       - head_1_joint
       - head_2_joint
