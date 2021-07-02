@@ -1,5 +1,7 @@
 /play_motion:
   ros__parameters:
+    disable_motion_planning: true
+
 @[if end_effector == "pal-hey5"]@
     controllers: [arm_controller, head_controller, torso_controller, hand_controller]
 @[end if]@
