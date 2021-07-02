@@ -8,8 +8,8 @@ from launch.substitutions import Command, PathJoinSubstitution
 from launch import Substitution, SomeSubstitutionsType, LaunchContext
 from typing import List
 from typing import Text
-from pmb2_description.launch_utils import read_launch_argument
-from pmb2_description.pmb2_launch_utils import get_tiago_hw_arguments
+from launch_pal.arg_utils import read_launch_argument
+from tiago_description.tiago_launch_utils import get_tiago_hw_arguments
 
 
 class TiagoXacroConfigSubstitution(Substitution):
@@ -41,14 +41,12 @@ class TiagoXacroConfigSubstitution(Substitution):
         """
 
         laser_model = read_launch_argument("laser_model", context)
-        rgbd_sensors = read_launch_argument("rgbd_sensors", context)
 
         arm = read_launch_argument("arm", context)
         end_effector = read_launch_argument("end_effector", context)
         ft_sensor = read_launch_argument("ft_sensor", context)
 
         return " laser_model:=" + laser_model + \
-            " rgbd_sensors:=" + rgbd_sensors + \
             " arm:=" + arm + \
             " end_effector:=" + end_effector + \
             " ft_sensor:=" + ft_sensor
@@ -87,11 +85,9 @@ def generate_launch_description():
 
     tiago_args = get_tiago_hw_arguments(
         laser_model=True,
-        rgbd_sensors=True,
         arm=True,
         end_effector=True,
         ft_sensor=True,
-        default_laser_model="sick-571",
-        default_rgbd_sensors="False")
+        default_laser_model="sick-571")
 
     return LaunchDescription([*tiago_args, play_motion])
