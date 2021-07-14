@@ -20,6 +20,7 @@
   <exec_depend>pal_wsg_gripper_description</exec_depend>
   <exec_depend>tiago_description_calibration</exec_depend>
   <exec_depend>custom_ee_description</exec_depend>
+  <exec_depend>tiago_controller_configuration</exec_depend>
 
   <test_depend>rostest</test_depend>
   <test_depend>urdf_test</test_depend>
