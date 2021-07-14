@@ -120,6 +120,12 @@ class TiagoXacroConfigSubstitution(Substitution):
 
 
 def generate_robot_description_action():
+    """
+       Return a launch Action that reads launch args and generates the robot description
+
+       In order to use this, your launch file must have all launch configurations used in the
+       robot description, to do so use the get_tiago_base_hw_arguments with all options to True
+    """
     return Command(
         [
             ExecutableInPackage(package='xacro', executable="xacro"),
