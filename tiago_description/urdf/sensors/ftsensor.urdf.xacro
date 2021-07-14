@@ -22,7 +22,7 @@
     <link name="${name}_ft_link">
       <inertial>
         <mass value="0.1" />
-        <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0" />
+        <inertia ixx="1.6E-05" ixy="-2.0E-06" ixz="0.0" iyy="1.6E-05" iyz="0.0" izz="2.7E-05" />
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
@@ -51,7 +51,7 @@
     <link name="${name}_ft_tool_link">
       <inertial>
         <mass value="0.1" />
-        <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0" />
+        <inertia ixx="1.64E-05" ixy="0.0" ixz="0.0" iyy="1.64E-05" iyz="0.0" izz="3.125E-05" />
       </inertial>
       <visual>
         <origin xyz="0.0 0 0" rpy="0 ${90.0 * deg_to_rad} 0" />
