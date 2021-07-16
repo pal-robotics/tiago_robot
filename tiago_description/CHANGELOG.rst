@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.1.2 (2021-07-16)
+------------------
 * Merge branch 'fix_inertia_matrices' into 'erbium-devel'
   fix the inertia matrices of arm_tool_link and of force torque sensor
   See merge request robots/tiago_robot!129
