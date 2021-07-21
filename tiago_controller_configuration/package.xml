@@ -29,6 +29,9 @@
   <exec_depend>current_limit_controller</exec_depend>
   <exec_depend>pal_local_joint_control</exec_depend>
 
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
   <export>
     <build_type>ament_cmake</build_type>
   </export>
