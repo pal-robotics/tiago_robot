@@ -9,18 +9,23 @@
 -->
 <robot  xmlns:xacro="http://ros.org/wiki/xacro"
         name="tiago" >
-    <xacro:arg name="arm" default="true"/> <!-- true, false -->
+    <xacro:arg name="arm" default="right-arm"/> <!-- right-arm, left-arm, no-arm -->
     <xacro:arg name="wrist_model" default="wrist-2010"/>
-    <xacro:arg name="end_effector" default="pal-hey5"/> <!-- false, pal-gripper, pal-hey5, schunk-wsg-->
-    <xacro:arg name="ft_sensor" default="schunk-ft"/> <!-- false, schunk-ft -->
-    <xacro:arg name="laser_model" default="sick-571"/> <!-- false, hokuyo, sick-551, sick-561, sick-571-->
-    <xacro:arg name="camera_model" default="orbbec-astra"/> <!-- false, orbbec-astra, orbbec-astra-pro, asus-xtion -->
+    <xacro:arg name="end_effector" default="pal-hey5"/> <!-- no-end-effector, pal-gripper, pal-hey5, schunk-wsg-->
+    <xacro:arg name="ft_sensor" default="schunk-ft"/> <!-- no-ft-sensor, schunk-ft -->
+    <xacro:arg name="laser_model" default="sick-571"/> <!-- no-laser, hokuyo, sick-551, sick-561, sick-571-->
+    <xacro:arg name="camera_model" default="orbbec-astra"/> <!-- no-camera, orbbec-astra, orbbec-astra-pro, asus-xtion -->
     <xacro:arg name="has_thermal_camera" default="false"/>
     <xacro:arg name="multiple" default="false"/>
     <xacro:arg name="description_calibration_dir" default="$(find tiago_description_calibration)/urdf/calibration"/>
     <xacro:arg name="extrinsic_calibration_dir" default="$(find tiago_description_calibration)/urdf/calibration"/>
     <xacro:arg name="namespace" default=""/>
     <xacro:arg name="no_safety_eps" default="false"/>
+    <xacro:property name="arm" value="$(arg arm)" />
+    <xacro:if value="${arm not in ['right-arm', 'left-arm', 'no-arm']}">
+      <xacro:wrong_arm/>
+    </xacro:if>
+
     <xacro:property name="wrist_model" value="$(arg wrist_model)" />
     <xacro:property name="end_effector" value="$(arg end_effector)" />
     <xacro:property name="ft_sensor" value="$(arg ft_sensor)" />
@@ -30,28 +35,28 @@
     <xacro:property name="nsp" value="$(arg namespace)" />
     <xacro:property name="no_safety_eps" value="$(arg no_safety_eps)" />
 
-  <xacro:if value="$(arg arm)">
+    <xacro:property name="has_arm" value="${arm != 'no-arm'}"/>
+  <xacro:if value="${has_arm}">
     <xacro:if value="${wrist_model not in ['wrist-2010', 'wrist-2017']}">
       <xacro:wrong_wrist_model/>
     </xacro:if>
   </xacro:if>
-  <xacro:if value="${end_effector not in ['false', False, 'pal-gripper', 'pal-hey5', 'schunk-wsg', 'custom']}">
+  <xacro:if value="${end_effector not in ['no-end-effector', 'pal-gripper', 'pal-hey5', 'schunk-wsg', 'custom']}">
     <xacro:wrong_end_effector/>
   </xacro:if>
-  <xacro:if value="${ft_sensor not in ['false', False, 'schunk-ft']}">
+  <xacro:if value="${ft_sensor not in ['no-ft-sensor', 'schunk-ft']}">
     <xacro:wrong_ft_sensor/>
   </xacro:if>
-  <xacro:if value="${laser_model not in ['false', False, 'sick-551', 'sick-561', 'sick-571', 'hokuyo']}">
+  <xacro:if value="${laser_model not in ['no-laser', 'sick-551', 'sick-561', 'sick-571', 'hokuyo']}">
     <xacro:wrong_laser_model/>
   </xacro:if>
-  <xacro:if value="${camera_model not in ['false', False, 'orbbec-astra', 'orbbec-astra-pro', 'asus-xtion']}">
+  <xacro:if value="${camera_model not in ['no-camera', 'orbbec-astra', 'orbbec-astra-pro', 'asus-xtion']}">
     <xacro:wrong_camera_model/>
   </xacro:if>
         <!-- The properties below are modified using empy http://www.alcyone.com/software/empy/
              from the create_robot.py tool. Handle them with care -->
-   <xacro:property name="has_arm"                 value="$(arg arm)"/>
    <xacro:property name="has_schunk_ft"           value="${ft_sensor == 'schunk-ft'}"/>
-   <xacro:property name="has_ft_sensor"           value="${has_schunk_ft}"/> <!-- This should be OR'ed with other FT sensors-->
+   <xacro:property name="has_ft_sensor"           value="${has_arm and has_schunk_ft}"/> <!-- This should be OR'ed with other FT sensors-->
    <xacro:property name="end_effector_link"       value="${'wrist_ft_tool_link' if has_ft_sensor else 'arm_tool_link'}"/>
    <xacro:property name="end_effector_name"       value="${'hand' if end_effector == 'pal-hey5' else 'gripper'}"/>
    <xacro:property name="head_link_name"          value="head_2_link"/>
@@ -68,7 +73,7 @@
     <!-- Arm -->
     <xacro:include filename="$(find tiago_description)/urdf/arm/arm.urdf.xacro" />
     <xacro:include filename="$(find tiago_description)/urdf/end_effector/end_effector.urdf.xacro" />
-  <xacro:include filename="$(arg description_calibration_dir)/calibration_constants.urdf.xacro" />
+    <xacro:include filename="$(arg description_calibration_dir)/calibration_constants.urdf.xacro" />
   </xacro:if>
 
   <!-- Force Torque sensor -->

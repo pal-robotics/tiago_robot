@@ -18,6 +18,7 @@ def generate_launch_description():
         arm=True,
         end_effector=True,
         ft_sensor=True,
+        camera_model=True,
         default_laser_model="sick-571")
 
     return LaunchDescription([*tiago_args, rsp])

@@ -22,8 +22,11 @@
   <exec_depend>custom_ee_description</exec_depend>
   <exec_depend>tiago_controller_configuration</exec_depend>
 
-  <test_depend>rostest</test_depend>
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+  <test_depend>launch_testing_ament_cmake</test_depend>
   <test_depend>urdf_test</test_depend>
+
 
   <export>
     <build_type>ament_cmake</build_type>

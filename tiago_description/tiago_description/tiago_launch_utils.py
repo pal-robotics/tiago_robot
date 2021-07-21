@@ -16,7 +16,7 @@ from launch.actions import DeclareLaunchArgument
 from pmb2_description.pmb2_launch_utils import get_tiago_base_hw_arguments
 from launch_pal.arg_utils import read_launch_argument
 from launch_ros.substitutions import FindPackageShare, ExecutableInPackage
-from launch.substitutions import Command, PathJoinSubstitution
+from launch.substitutions import Command, PathJoinSubstitution, PythonExpression, LaunchConfiguration
 from launch import LaunchContext, Substitution
 from typing import List, Text
 
@@ -26,19 +26,21 @@ def get_tiago_hw_arguments(
         wrist_model=False,
         end_effector=False,
         ft_sensor=False,
-        default_arm="True",
+        camera_model=False,
+        default_arm="right-arm",
         default_wrist_model="wrist-2010",
         default_end_effector="pal-hey5",
         default_ft_sensor="schunk-ft",
+        default_camera_model="orbbec-astra",
         **kwargs):
     """
-    Return TIAGo Hardware arguments.
+    Return TIAGo Hardware launch arguments.
 
     Returns a list of the requested hardware LaunchArguments for tiago
-    The default value can be configured passing an argument called default
-    NAME_OF_ARGUMENT
+    The default value can be configured passing an argument called
+    default_NAME_OF_ARGUMENT
 
-    Check get_tiago_hw_arguments for more options
+    Check get_tiago_base_hw_arguments for more options
 
     example:
         LaunchDescription([*get_tiago_hw_arguments(
@@ -52,8 +54,8 @@ def get_tiago_hw_arguments(
             DeclareLaunchArgument(
                 'arm',
                 default_value=default_arm,
-                description='Whether TIAGo has arm or not. ',
-                choices=["True", "False"]))
+                description='Which type of arm TIAGo has. ',
+                choices=["no-arm", "left-arm", "right-arm"]))
     if wrist_model:
         args.append(
             DeclareLaunchArgument(
@@ -68,15 +70,61 @@ def get_tiago_hw_arguments(
                 default_value=default_end_effector,
                 description='End effector model.',
                 choices=["pal-gripper", "pal-hey5", "schunk-wsg",
-                         "custom", "False"]))
+                         "custom", "no-end-effector"]))
     if ft_sensor:
         args.append(
             DeclareLaunchArgument(
                 'ft_sensor',
                 default_value=default_ft_sensor,
                 description='FT sensor model. ',
-                choices=["schunk-ft", "False"]))
+                choices=["schunk-ft", "no-ft-sensor"]))
+
+    if camera_model:
+        args.append(
+            DeclareLaunchArgument(
+                'camera_model',
+                default_value=default_camera_model,
+                description='Head camera model. ',
+                choices=["no-camera", "orbbec-astra", "orbbec-astra-pro", "asus-xtion"]))
     return args
+
+
+def get_tiago_hw_suffix(
+        arm=False,
+        wrist_model=False,
+        end_effector=False,
+        ft_sensor=False,
+        camera_model=False,
+        **kwargs):
+    """
+    Generate a substitution that creates a text suffix combining the specified tiago arguments
+
+    The arguments are read as LaunchConfigurations
+
+    For instance, the suffix for: arm=right-arm, wrist_model=wrist-2017, end_effector="pal-gripper"
+    would be "right-arm_wrist-2017_pal-gripper"
+    """
+
+    suffix_elements = ["'"]
+    if arm:
+        suffix_elements.append(LaunchConfiguration("arm"))
+        suffix_elements.append("_")
+    if wrist_model:
+        suffix_elements.append(LaunchConfiguration("wrist_model"))
+        suffix_elements.append("_")
+    if end_effector:
+        suffix_elements.append(LaunchConfiguration("end_effector"))
+        suffix_elements.append("_")
+    if ft_sensor:
+        suffix_elements.append(LaunchConfiguration("ft_sensor"))
+        suffix_elements.append("_")
+    if camera_model:
+        suffix_elements.append(LaunchConfiguration("camera_model"))
+        suffix_elements.append("_")
+    suffix_elements = suffix_elements[:-1]  # remove last _
+    suffix_elements.append("'")
+    print(suffix_elements)
+    return PythonExpression(suffix_elements)
 
 
 class TiagoXacroConfigSubstitution(Substitution):
@@ -112,11 +160,13 @@ class TiagoXacroConfigSubstitution(Substitution):
         arm = read_launch_argument("arm", context)
         end_effector = read_launch_argument("end_effector", context)
         ft_sensor = read_launch_argument("ft_sensor", context)
+        camera_model = read_launch_argument("camera_model", context)
 
         return " laser_model:=" + laser_model + \
             " arm:=" + arm + \
             " end_effector:=" + end_effector + \
-            " ft_sensor:=" + ft_sensor
+            " ft_sensor:=" + ft_sensor + \
+            " camera_model:=" + camera_model
 
 
 def generate_robot_description_action():
@@ -135,3 +185,4 @@ def generate_robot_description_action():
                  'robots', 'tiago.urdf.xacro']),
             TiagoXacroConfigSubstitution()
         ])
+
