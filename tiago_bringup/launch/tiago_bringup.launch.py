@@ -37,7 +37,7 @@ def generate_launch_description():
 
     return LaunchDescription([
         default_controllers,
-        play_motion,
+        # play_motion,
         twist_mux,
         joystick_teleop
     ])
