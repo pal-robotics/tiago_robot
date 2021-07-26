@@ -14,30 +14,27 @@ from tiago_description.tiago_launch_utils import get_tiago_hw_arguments, get_tia
 
 
 def generate_launch_description():
+    tiago_hw_suffix = get_tiago_hw_suffix(
+        arm=True, wrist_model=False, end_effector=True, ft_sensor=True)
+
     robot_description = {
         "robot_description": generate_robot_description_action()
     }
 
     robot_description_semantic_config = LoadFile(
-        [get_package_share_directory("tiago_moveit_config"), "/config/srdf/tiago_",
-         get_tiago_hw_suffix(arm=True, wrist_model=False,
-                             end_effector=True, ft_sensor=True), ".srdf"]
+        [get_package_share_directory("tiago_moveit_config"),
+         "/config/srdf/tiago_", tiago_hw_suffix, ".srdf"]
     )
     robot_description_semantic = {
         "robot_description_semantic": robot_description_semantic_config
     }
 
-    # @TODO use the tiago args to correctly load the proper file
-    approach_planner = os.path.join(
-        get_package_share_directory('tiago_bringup'),
-        'config/approach_planner', 'approach_planner_pal-gripper.yaml'
-    )
+    approach_planner = [get_package_share_directory('tiago_bringup'),
+                        '/config/approach_planner/approach_planner_',
+                        tiago_hw_suffix, '.yaml']
 
-    # @TODO use the tiago args to correctly load the proper file
-    motions = os.path.join(
-        get_package_share_directory('tiago_bringup'),
-        'config/motions', 'tiago_motions_pal-gripper.yaml'
-    )
+    motions = [get_package_share_directory('tiago_bringup'),
+               '/config/motions/tiago_motions_', tiago_hw_suffix, '.yaml']
 
     play_motion = Node(package='play_motion',
                        executable='play_motion',
