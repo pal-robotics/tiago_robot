@@ -10,61 +10,12 @@ from typing import List
 from typing import Text
 from launch_pal.arg_utils import read_launch_argument
 from launch_pal.substitutions import LoadFile
-from tiago_description.tiago_launch_utils import get_tiago_hw_arguments, get_tiago_hw_suffix
-
-
-class TiagoXacroConfigSubstitution(Substitution):
-    """
-    Substitution extracts the tiago hardware args and passes them
-    as xacro variables. Used in launch system
-    """
-
-    def __init__(self) -> None:
-        super().__init__()
-        """
-        Construct the substitution
-        :param: source_file the original YAML file t
-        """
-
-    @property
-    def name(self) -> List[Substitution]:
-        """Getter for name."""
-        return "TIAGo Xacro Config"
-
-    def describe(self) -> Text:
-        """Return a description of this substitution as a string."""
-        return 'Parses tiago hardware launch arguments into xacro \
-        arguments potat describe'
-
-    def perform(self, context: LaunchContext) -> Text:
-        """
-           Generate the robot description and return it as a string
-        """
-
-        laser_model = read_launch_argument("laser_model", context)
-
-        arm = read_launch_argument("arm", context)
-        end_effector = read_launch_argument("end_effector", context)
-        ft_sensor = read_launch_argument("ft_sensor", context)
-
-        return " laser_model:=" + laser_model + \
-            " arm:=" + arm + \
-            " end_effector:=" + end_effector + \
-            " ft_sensor:=" + ft_sensor
+from tiago_description.tiago_launch_utils import get_tiago_hw_arguments, get_tiago_hw_suffix, generate_robot_description_action
 
 
 def generate_launch_description():
-    # @TODO maybe read the description inside the node from the
-    # topic instead? It can use it to set the parameter afterwards
-    robot_description = {'robot_description': Command(
-        [
-            ExecutableInPackage(package='xacro', executable="xacro"),
-            ' ',
-            PathJoinSubstitution(
-                [FindPackageShare('tiago_description'),
-                 'robots', 'tiago.urdf.xacro']),
-            TiagoXacroConfigSubstitution()
-        ])
+    robot_description = {
+        "robot_description": generate_robot_description_action()
     }
 
     robot_description_semantic_config = LoadFile(
@@ -98,11 +49,12 @@ def generate_launch_description():
                            motions,
                        ])
 
+    # TIAGo description arguments
     tiago_args = get_tiago_hw_arguments(
         laser_model=True,
         arm=True,
         end_effector=True,
         ft_sensor=True,
-        default_laser_model="sick-571")
+        camera_model=True)
 
     return LaunchDescription([*tiago_args, play_motion])
