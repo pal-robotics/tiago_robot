@@ -24,43 +24,17 @@
 #  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 #  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-from launch import LaunchDescription
-from launch_pal.include_utils import include_launch_py_description
-from launch.substitutions import LaunchConfiguration
+from ament_index_python.packages import get_package_share_directory
+
+from controller_manager.launch_utils import generate_load_controller_launch_description
+
+import os
+
 
 def generate_launch_description():
-
-    end_effector = LaunchConfiguration('end_effector', default='pal-hey5')
-    end_effector_pkg = 'tiago_controller_configuration'
-    end_effector_launch = 'hey5_controller.launch.py'
-
-    if end_effector == 'pal-gripper':
-        end_effector_pkg = 'pal_gripper_controller_configuration'
-        end_effector_launch = 'gripper_controller.launch.py'
-
-
-    return LaunchDescription([
-        include_launch_py_description(
-            'tiago_controller_configuration',
-            ['launch', 'mobile_base_controller.launch.py']),
-
-        include_launch_py_description(
-            'tiago_controller_configuration',
-            ['launch', 'joint_state_broadcaster.launch.py']),
-
-        include_launch_py_description(
-            'tiago_controller_configuration',
-            ['launch', 'torso_controller.launch.py']),
-
-        include_launch_py_description(
-            'tiago_controller_configuration',
-            ['launch', 'head_controller.launch.py']),
-
-        include_launch_py_description(
-            'tiago_controller_configuration',
-            ['launch', 'arm_controller.launch.py']),
-
-        include_launch_py_description(
-            end_effector_pkg,
-            ['launch', end_effector_launch])
-    ])
+    return generate_load_controller_launch_description(
+        controller_name='hand_controller',
+        controller_type='joint_trajectory_controller/JointTrajectoryController',
+        controller_params_file=os.path.join(
+            get_package_share_directory('tiago_controller_configuration'),
+            'config', 'pal-hey5_joint_trajectory_controllers.yaml'))
