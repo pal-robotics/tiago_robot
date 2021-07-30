@@ -27,19 +27,21 @@
 from launch import LaunchDescription
 from launch_pal.include_utils import include_launch_py_description
 from launch.substitutions import LaunchConfiguration
+from launch.actions import DeclareLaunchArgument
 
 def generate_launch_description():
 
-    end_effector = LaunchConfiguration('end_effector', default='pal-hey5')
-    end_effector_pkg = 'tiago_controller_configuration'
-    end_effector_launch = 'hey5_controller.launch.py'
-
-    if end_effector == 'pal-gripper':
-        end_effector_pkg = 'pal_gripper_controller_configuration'
-        end_effector_launch = 'gripper_controller.launch.py'
-
-
     return LaunchDescription([
+        DeclareLaunchArgument(
+            'end_effector',
+            default_value='pal-hey5',
+            description='end effector'),
+
+        DeclareLaunchArgument(
+            'end_effector_controller_launch',
+            default_value=[LaunchConfiguration('end_effector'), '_controller.launch.py'],
+            description='end effector controller launch file'),
+
         include_launch_py_description(
             'tiago_controller_configuration',
             ['launch', 'mobile_base_controller.launch.py']),
@@ -61,6 +63,6 @@ def generate_launch_description():
             ['launch', 'arm_controller.launch.py']),
 
         include_launch_py_description(
-            end_effector_pkg,
-            ['launch', end_effector_launch])
+            'tiago_controller_configuration',
+            ['launch', LaunchConfiguration('end_effector_controller_launch')])
     ])
