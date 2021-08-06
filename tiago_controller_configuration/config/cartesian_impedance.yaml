@@ -1,0 +1,5 @@
+cartesian_impedance:
+  type: "impedance_control/CartesianImpedance"
+  robot_model_chains:
+    - gripper_link
+  dt: 0.01
