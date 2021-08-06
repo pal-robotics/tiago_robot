@@ -2,6 +2,14 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'robotiq-impedance-issues' into 'erbium-devel'
+  fix: missing chain definition for robotiq gripper
+  See merge request robots/tiago_robot!131
+* fix: hey5 colliding with floor
+* Contributors: daniellopez, saikishor
+
 2.1.2 (2021-07-16)
 ------------------
 

@@ -2,6 +2,9 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 2.1.2 (2021-07-16)
 ------------------
 * Merge branch 'fix_inertia_matrices' into 'erbium-devel'
