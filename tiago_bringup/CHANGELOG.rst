@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.1.3 (2021-08-06)
+------------------
 * Merge branch 'robotiq-impedance-issues' into 'erbium-devel'
   fix: missing chain definition for robotiq gripper
   See merge request robots/tiago_robot!131
