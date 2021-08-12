@@ -28,14 +28,12 @@ from launch import LaunchDescription
 from launch_pal.include_utils import include_launch_py_description
 from launch.substitutions import LaunchConfiguration
 from launch.actions import DeclareLaunchArgument
+from tiago_description.tiago_launch_utils import get_tiago_hw_arguments
 
 def generate_launch_description():
 
     return LaunchDescription([
-        DeclareLaunchArgument(
-            'end_effector',
-            default_value='pal-hey5',
-            description='end effector'),
+        *get_tiago_hw_arguments(end_effector=True),
 
         DeclareLaunchArgument(
             'end_effector_controller_launch',
