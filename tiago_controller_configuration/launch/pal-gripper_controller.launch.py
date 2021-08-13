@@ -24,43 +24,17 @@
 #  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 #  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-from launch import LaunchDescription
-from launch_pal.include_utils import include_launch_py_description
-from launch.substitutions import LaunchConfiguration
-from launch.actions import DeclareLaunchArgument
-from tiago_description.tiago_launch_utils import get_tiago_hw_arguments
+from ament_index_python.packages import get_package_share_directory
+
+from controller_manager.launch_utils import generate_load_controller_launch_description
+
+import os
+
 
 def generate_launch_description():
-
-    return LaunchDescription([
-        *get_tiago_hw_arguments(end_effector=True),
-
-        DeclareLaunchArgument(
-            'end_effector_controller_launch',
-            default_value=[LaunchConfiguration('end_effector'), '_controller.launch.py'],
-            description='end effector controller launch file'),
-
-        include_launch_py_description(
-            'tiago_controller_configuration',
-            ['launch', 'mobile_base_controller.launch.py']),
-
-        include_launch_py_description(
-            'tiago_controller_configuration',
-            ['launch', 'joint_state_broadcaster.launch.py']),
-
-        include_launch_py_description(
-            'tiago_controller_configuration',
-            ['launch', 'torso_controller.launch.py']),
-
-        include_launch_py_description(
-            'tiago_controller_configuration',
-            ['launch', 'head_controller.launch.py']),
-
-        include_launch_py_description(
-            'tiago_controller_configuration',
-            ['launch', 'arm_controller.launch.py']),
-
-        include_launch_py_description(
-            'tiago_controller_configuration',
-            ['launch', LaunchConfiguration('end_effector_controller_launch')])
-    ])
+    return generate_load_controller_launch_description(
+        controller_name='gripper_controller',
+        controller_type='joint_trajectory_controller/JointTrajectoryController',
+        controller_params_file=os.path.join(
+            get_package_share_directory('pal_gripper_controller_configuration'),
+            'config', 'gripper_controller.yaml'))

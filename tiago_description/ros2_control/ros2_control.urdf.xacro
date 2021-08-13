@@ -28,6 +28,9 @@
     <xacro:if value="${end_effector == 'pal-gripper'}">
       <xacro:include filename="$(find pal_gripper_description)/urdf/gripper.ros2_control.xacro" />
     </xacro:if>
+    <xacro:if value="${end_effector == 'pal-hey5'}">
+      <xacro:include filename="$(find tiago_description)/urdf/end_effector/pal-hey5.ros2_control.xacro" />
+    </xacro:if>
   </xacro:if>
   <xacro:include filename="$(find pmb2_description)/urdf/sensors/sensors.ros2_control.xacro"/>
 
@@ -72,6 +75,10 @@
         <!-- pal-gripper -->
         <xacro:ros2_control_gripper name="gripper_left_finger" reduction="1.0" />
         <xacro:ros2_control_gripper name="gripper_right_finger" reduction="1.0" />
+      </xacro:if>
+      <xacro:if value="${end_effector == 'pal-hey5'}">
+        <!-- pal-hey5 -->
+        <xacro:ros2_control_hey5 name="hand"/>
       </xacro:if>
     </xacro:if>
 
