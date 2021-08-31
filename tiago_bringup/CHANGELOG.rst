@@ -2,6 +2,9 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 2.1.3 (2021-08-06)
 ------------------
 * Merge branch 'robotiq-impedance-issues' into 'erbium-devel'
