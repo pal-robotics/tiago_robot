@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.1.5 (2021-09-22)
+------------------
 * Merge branch 'offer-motion' into 'erbium-devel'
   Open robotiq-2f-85 in offer motion
   See merge request robots/tiago_robot!135
