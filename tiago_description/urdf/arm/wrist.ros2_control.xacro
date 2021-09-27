@@ -20,8 +20,8 @@
     <!-- @TODO transmissions for ros2 system -->
     <!--
     <transmission name="${name}_${number}_trans">
-      <type>transmission_interface/SimpleTransmission</type>
-      <actuator name="${name}_${number}_motor" >
+      <plugin>transmission_interface/SimpleTransmission</plugin>
+      <actuator name="${name}_${number}_motor" role="actuator1">
         <mechanicalReduction>${reduction}</mechanicalReduction>
       </actuator>
       <joint name="${name}_${number}_joint">
@@ -55,17 +55,14 @@
     <!-- @TODO transmissions for ros2 system -->
     <!--
     <transmission name="${name1}_${name2}_wrist_trans">
-      <type>transmission_interface/DifferentialTransmission</type>
-      <actuator name="${name_1}_motor">
-        <role>actuator1</role>
+      <plugin>transmission_interface/DifferentialTransmission</plugin>
+      <actuator name="${name_1}_motor" role="actuator1">
         <mechanicalReduction>${act_reduction_1}</mechanicalReduction>
       </actuator>
-      <actuator name="${name_2}_motor">
-        <role>actuator2</role>
+      <actuator name="${name_2}_motor" role="actuator2">
         <mechanicalReduction>${act_reduction_2}</mechanicalReduction>
       </actuator>
-      <joint name="${name_1}_joint">
-        <role>joint1</role>
+      <joint name="${name_1}_joint" role="joint1">
         <offset>${number_1_offset}</offset>
         <mechanicalReduction>${jnt_reduction_1}</mechanicalReduction>
         <hardwareInterface>hardware_interface/JointStateInterface</hardwareInterface>
@@ -73,8 +70,7 @@
         <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
         <ignoreTransmissionAbsoluteEncoder>1</ignoreTransmissionAbsoluteEncoder>
       </joint>
-      <joint name="${name_2}_joint">
-        <role>joint2</role>
+      <joint name="${name_2}_joint" role="joint2">
         <offset>${number_2_offset}</offset>
         <mechanicalReduction>${jnt_reduction_2}</mechanicalReduction>
         <hardwareInterface>hardware_interface/JointStateInterface</hardwareInterface>

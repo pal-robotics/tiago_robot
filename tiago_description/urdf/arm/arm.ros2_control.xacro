@@ -20,8 +20,8 @@
     <!-- @TODO transmissions for ros2 system -->
     <!--
     <transmission name="${name}_${number}_trans">
-      <type>transmission_interface/SimpleTransmission</type>
-      <actuator name="${name}_${number}_motor" >
+      <plugin>transmission_interface/SimpleTransmission</plugin>
+      <actuator name="${name}_${number}_motor" role="actuator1">
         <mechanicalReduction>${reduction}</mechanicalReduction>
       </actuator>
       <joint name="${name}_${number}_joint">

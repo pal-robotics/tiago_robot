@@ -12,11 +12,11 @@
 
   <xacro:macro name="torso_simple_transmission" params="name reduction" >
     <transmission name="${name}_trans">
-      <type>transmission_interface/SimpleTransmission</type>
-      <actuator name="${name}_motor" >
+      <plugin>transmission_interface/SimpleTransmission</plugin>
+      <actuator name="${name}_motor" role="actuator1">
         <mechanicalReduction>${reduction}</mechanicalReduction>
       </actuator>
-      <joint name="${name}_joint">
+      <joint name="${name}_joint" role="joint1">
         <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
         <hardwareInterface>hardware_interface/JointStateInterface</hardwareInterface>
       </joint>
