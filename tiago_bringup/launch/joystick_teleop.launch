@@ -2,12 +2,15 @@
   <arg name="arm"  default="True"/>
   <arg name="end_effector"  default="pal-hey5"/>
   <arg name="ft_sensor"  default="schunk-ft"/>
+  <arg name="base_type_suffix" default=""/>
 
   <arg name="cmd_vel" default="input_joy/cmd_vel" />
   <arg name="file_suffix" value="$(eval ('no-arm' if not arm else end_effector+ ('' if not ft_sensor else '_'+ft_sensor)))"/>
   <arg name="teleop_config" default="$(find tiago_bringup)/config/joy_teleop/joy_teleop_$(arg file_suffix).yaml" />
+  <arg name="teleop_config_move" default="$(find tiago_dual_bringup)/config/joy_teleop/joy_teleop_move$(arg base_type_suffix).yaml" />
 
   <rosparam file="$(arg teleop_config)" command="load" />
+  <rosparam file="$(arg teleop_config_move)" command="load" />
   <node pkg="joy_teleop" type="joy_teleop.py" name="joy_teleop">
     <remap from="cmd_vel" to="$(arg cmd_vel)" />
   </node>
