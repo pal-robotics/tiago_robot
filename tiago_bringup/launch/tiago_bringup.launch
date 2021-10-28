@@ -34,7 +34,9 @@
   <node pkg="tf_lookup" type="tf_lookup" name="tf_lookup" output="screen"/>
 
   <!-- Twist mux -->
-  <include file="$(find tiago_bringup)/launch/twist_mux.launch"/>
+  <include file="$(find tiago_bringup)/launch/twist_mux.launch">
+    <arg name="base_type_suffix"  value="$(arg base_type_suffix)"/>
+  </include>
 
   <!-- Dynamic footprint -->
   <include file="$(find tiago_bringup)/launch/dynamic_footprint.launch">

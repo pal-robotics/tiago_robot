@@ -1,0 +1,12 @@
+priority: false
+
+turbo:
+  linear_forward_min  : 0.10
+  linear_forward_max  : 1.00
+  linear_backward_min : 0.10
+  linear_backward_max : 1.00
+  linear_lateral_min  : 0.10
+  linear_lateral_max  : 1.00
+  angular_min : !degrees 10.0
+  angular_max : !degrees 120.0
+  steps       : 8
