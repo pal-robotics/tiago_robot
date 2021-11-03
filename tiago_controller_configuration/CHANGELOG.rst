@@ -2,8 +2,8 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.2.0 (2021-11-03)
+------------------
 * Merge branch 'omni_base_robot' into 'erbium-devel'
   Omni base robot
   See merge request robots/tiago_robot!137
