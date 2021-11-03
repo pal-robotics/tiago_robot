@@ -2,6 +2,15 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'omni_base_robot' into 'erbium-devel'
+  Omni base robot
+  See merge request robots/tiago_robot!137
+* preparing configuration for a tiago with omni base
+* Creating tiago with omni_base robot
+* Contributors: antoniobrandi, saikishor
+
 2.1.5 (2021-09-22)
 ------------------
 

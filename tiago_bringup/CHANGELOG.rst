@@ -2,6 +2,18 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'omni_base_robot' into 'erbium-devel'
+  Omni base robot
+  See merge request robots/tiago_robot!137
+* modified the .em file in order to generate the joy config files
+* Fixed copy paste error
+* Added speed limits to the joystick commands for the lateral mouvements
+* added dynamic footprint configuration for tiago with omni_base
+* preparing configuration for a tiago with omni base
+* Contributors: antoniobrandi, saikishor
+
 2.1.5 (2021-09-22)
 ------------------
 * Merge branch 'offer-motion' into 'erbium-devel'
