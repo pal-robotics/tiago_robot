@@ -7,14 +7,17 @@
   <arg name="camera_model"  default="orbbec-astra"/>
   <arg name="wrist_model"  default="wrist-2010"/>
   <arg name="no_safety_eps" default="False"/>
+  <arg name="base_type" default="pmb2"/>
+  <arg name="base_type_suffix" value="" unless="$(eval arg('base_type') == 'omni_base')"/>
+  <arg name="base_type_suffix" value="_omni" if="$(eval arg('base_type') == 'omni_base')"/>
 
   <!-- Diff drive controller multipliers -->
   <arg name="calibrated_multipliers_dir"  value="$(optenv pal_wheel_calibration_calibration_path)"/>
   <arg name="multipliers_dir"  value="$(eval calibrated_multipliers_dir if (calibrated_multipliers_dir != '') else find('tiago_controller_configuration') + '/config')"/>
-  <rosparam command="load" file="$(arg multipliers_dir)/mobile_base_controller_multipliers.yaml"/>
+  <rosparam command="load" file="$(arg multipliers_dir)/mobile_base_controller_multipliers$(arg base_type_suffix).yaml"/>
 
   <!-- Diff drive controller parameters -->
-  <rosparam command="load" file="$(find tiago_controller_configuration)/config/mobile_base_controller.yaml"/>
+  <rosparam command="load" file="$(find tiago_controller_configuration)/config/mobile_base_controller$(arg base_type_suffix).yaml"/>
 
   <!-- Robot model -->
   <include file="$(find tiago_description)/robots/upload.launch">
@@ -25,6 +28,7 @@
     <arg name="camera_model"  value="$(arg camera_model)"/>
     <arg name="wrist_model"  value="$(arg wrist_model)"/>
     <arg name="no_safety_eps"  value="$(arg no_safety_eps)"/>
+    <arg name="base_type"  value="$(arg base_type)"/>
   </include>
 
   <!-- tiago_hardware parameters -->
@@ -42,5 +46,6 @@
     <arg name="laser_model"  value="$(arg laser_model)"/>
     <arg name="camera_model"  value="$(arg camera_model)"/>
     <arg name="wrist_model"  value="$(arg wrist_model)"/>
+    <arg name="base_type_suffix"  value="$(arg base_type_suffix)"/>
   </include>
 </launch>

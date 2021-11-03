@@ -1,18 +1,4 @@
 teleop:
-  move:
-    type: topic
-    message_type: geometry_msgs/Twist
-    topic_name: cmd_vel
-    axis_mappings:
-      -
-        axis: 1
-        target: linear.x
-        scale: 1.0
-      -
-        axis: 2
-        target: angular.z
-        scale: 1.0
-
   joy_priority:
     type: action
     action_name: joy_priority_action

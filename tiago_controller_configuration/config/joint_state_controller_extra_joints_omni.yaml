@@ -1,0 +1,5 @@
+extra_joints:
+    - name: 'suspension_front_left_joint'
+    - name: 'suspension_front_right_joint'
+    - name: 'suspension_rear_left_joint'
+    - name: 'suspension_rear_right_joint'

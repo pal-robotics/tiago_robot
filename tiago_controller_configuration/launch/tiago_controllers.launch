@@ -6,10 +6,12 @@
     <arg name="laser_model"  default="sick-571"/>
     <arg name="camera_model"  default="orbbec-astra"/>
     <arg name="wrist_model"  default="wrist-2010"/>
+    <arg name="base_type_suffix" default=""/>
 
     <include file="$(find tiago_controller_configuration)/launch/joint_state_controller.launch"/>
     <include file="$(find tiago_controller_configuration)/launch/default_controllers.launch">
         <arg name="arm" value="$(arg arm)"/>
+        <arg name="base_type_suffix"  value="$(arg base_type_suffix)"/>
     </include>
     <group if="$(eval ft_sensor == 'schunk-ft')">
       <include file="$(find tiago_controller_configuration)/launch/force_torque_controller.launch"/>
