@@ -38,8 +38,9 @@ for arm in [True, False]:
                     os.path.basename(em_file_path))
                 if extension == ".yaml":
                     f.write("#" + msg + "\n")
-                elif extension in [".xacro", ".xml", ".srdf"]:
-                    f.write("<!-- " + msg + "-->\n")
+                # If we add a comment at the begining of an xml the format is not correct.
+                #elif extension in [".xacro", ".xml", ".srdf"]:
+                #    f.write("<!-- " + msg + "-->\n")
 
                 f.write(expanded_contents)
             print("Generated " + expanded_file_name)
