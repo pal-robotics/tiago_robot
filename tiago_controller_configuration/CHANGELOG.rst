@@ -2,8 +2,8 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.2.2 (2021-11-09)
+------------------
 * Merge branch 'cartesian_impedance' into 'erbium-devel'
   Added the cartesian impedance config and launch file
   See merge request robots/tiago_robot!132
