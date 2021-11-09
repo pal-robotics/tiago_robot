@@ -2,6 +2,9 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 2.2.1 (2021-11-09)
 ------------------
 * Merge branch 'fix_xml_generation_error' into 'erbium-devel'
