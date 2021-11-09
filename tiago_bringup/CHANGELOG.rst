@@ -2,6 +2,14 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'fix_xml_generation_error' into 'erbium-devel'
+  Fis xml generation error removing initial message
+  See merge request robots/tiago_robot!138
+* Fis xml generation error removing initial message
+* Contributors: Jordan Palacios, cescfolch
+
 2.2.0 (2021-11-03)
 ------------------
 * Merge branch 'omni_base_robot' into 'erbium-devel'
