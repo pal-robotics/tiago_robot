@@ -1,0 +1,7 @@
+cartesian_impedance:
+  type: "impedance_control/CartesianImpedance"
+  robot_model_chains:
+    - gripper_link
+  stiffness_gain: 90.0
+  damping_gain: 0.1
+  dt: 0.01
