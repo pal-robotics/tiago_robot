@@ -2,8 +2,8 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.2.4 (2021-11-10)
+------------------
 * added cartesian_impedance_controller controller as dependency
 * Contributors: Sai Kishor Kothakota
 
