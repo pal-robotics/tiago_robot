@@ -2,6 +2,14 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'omni_base_fix' into 'erbium-devel'
+  Reducing speed limit in order to avoid a wheel blocking
+  See merge request robots/tiago_robot!139
+* Reducing speed limit in order to avoid a wheel blocking
+* Contributors: antoniobrandi, saikishor
+
 2.2.2 (2021-11-09)
 ------------------
 * Merge branch 'cartesian_impedance' into 'erbium-devel'
