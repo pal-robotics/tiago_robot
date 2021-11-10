@@ -2,6 +2,11 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* added cartesian_impedance_controller controller as dependency
+* Contributors: Sai Kishor Kothakota
+
 2.2.3 (2021-11-10)
 ------------------
 * Merge branch 'omni_base_fix' into 'erbium-devel'
