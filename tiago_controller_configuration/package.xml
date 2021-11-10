@@ -28,5 +28,6 @@
   <run_depend>pal_robotiq_controller_configuration</run_depend>
   <run_depend>current_limit_controller</run_depend>
   <run_depend>pal_local_joint_control</run_depend>
+  <run_depend>cartesian_impedance_controller</run_depend>
 
 </package>
