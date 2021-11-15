@@ -20,7 +20,7 @@
   <exec_depend>joint_trajectory_controller</exec_depend>
   <exec_depend>force_torque_sensor_controller</exec_depend>
   <exec_depend>diff_drive_controller</exec_depend>
-  <exec_depend>omni_drive_controller</exec_depend>
+  <exec_depend condition="$PAL_DISTRO > 0">omni_drive_controller</exec_depend>
   <exec_depend>gravity_compensation_controller</exec_depend>
   <exec_depend>simple_grasping_action</exec_depend>
   <exec_depend>pal_gripper_controller_configuration</exec_depend>
@@ -28,6 +28,6 @@
   <exec_depend>pal_robotiq_controller_configuration</exec_depend>
   <exec_depend>current_limit_controller</exec_depend>
   <exec_depend>pal_local_joint_control</exec_depend>
-  <exec_depend>cartesian_impedance_controller</exec_depend>
+  <exec_depend condition="$PAL_DISTRO > 0">cartesian_impedance_controller</exec_depend>
 
 </package>

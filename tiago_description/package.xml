@@ -15,7 +15,7 @@
 
   <exec_depend>xacro</exec_depend>
   <exec_depend>pmb2_description</exec_depend>
-  <exec_depend>omni_base_description</exec_depend>
+  <exec_depend condition="$PAL_DISTRO > 0">omni_base_description</exec_depend>
   <exec_depend>hey5_description</exec_depend>
   <exec_depend>pal_gripper_description</exec_depend>
   <exec_depend>pal_wsg_gripper_description</exec_depend>
