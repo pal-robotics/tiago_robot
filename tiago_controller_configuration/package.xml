@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<package>
+<package format="3">
   <name>tiago_controller_configuration</name>
   <version>2.2.4</version>
   <description>Configuration and launch files of TIAGo's controllers</description>
@@ -7,27 +7,27 @@
   <author email="bence.magyar@pal-robotics.com">Bence Magyar</author>
   <license>BSD</license>
   <buildtool_depend>catkin</buildtool_depend>
-  <run_depend>rospy</run_depend>
-  <run_depend>control_msgs</run_depend>
-  <run_depend>trajectory_msgs</run_depend>
-  <run_depend>sensor_msgs</run_depend>
-  <run_depend>actionlib</run_depend>
-  <run_depend>play_motion</run_depend>
-  <run_depend>current_limit_controller</run_depend>
-  <run_depend>pal_parallel_gripper_wrapper</run_depend>
-  <run_depend>joint_state_controller</run_depend>
-  <run_depend>imu_sensor_controller</run_depend>
-  <run_depend>joint_trajectory_controller</run_depend>
-  <run_depend>force_torque_sensor_controller</run_depend>
-  <run_depend>diff_drive_controller</run_depend>
-  <run_depend>omni_drive_controller</run_depend>
-  <run_depend>gravity_compensation_controller</run_depend>
-  <run_depend>simple_grasping_action</run_depend>
-  <run_depend>pal_gripper_controller_configuration</run_depend>
-  <run_depend>pal_wsg_gripper_controller_configuration</run_depend>
-  <run_depend>pal_robotiq_controller_configuration</run_depend>
-  <run_depend>current_limit_controller</run_depend>
-  <run_depend>pal_local_joint_control</run_depend>
-  <run_depend>cartesian_impedance_controller</run_depend>
+  <exec_depend>rospy</exec_depend>
+  <exec_depend>control_msgs</exec_depend>
+  <exec_depend>trajectory_msgs</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>actionlib</exec_depend>
+  <exec_depend>play_motion</exec_depend>
+  <exec_depend>current_limit_controller</exec_depend>
+  <exec_depend>pal_parallel_gripper_wrapper</exec_depend>
+  <exec_depend>joint_state_controller</exec_depend>
+  <exec_depend>imu_sensor_controller</exec_depend>
+  <exec_depend>joint_trajectory_controller</exec_depend>
+  <exec_depend>force_torque_sensor_controller</exec_depend>
+  <exec_depend>diff_drive_controller</exec_depend>
+  <exec_depend condition="$PAL_DISTRO > 0">omni_drive_controller</exec_depend>
+  <exec_depend>gravity_compensation_controller</exec_depend>
+  <exec_depend>simple_grasping_action</exec_depend>
+  <exec_depend>pal_gripper_controller_configuration</exec_depend>
+  <exec_depend>pal_wsg_gripper_controller_configuration</exec_depend>
+  <exec_depend>pal_robotiq_controller_configuration</exec_depend>
+  <exec_depend>current_limit_controller</exec_depend>
+  <exec_depend>pal_local_joint_control</exec_depend>
+  <exec_depend condition="$PAL_DISTRO > 0">cartesian_impedance_controller</exec_depend>
 
 </package>
