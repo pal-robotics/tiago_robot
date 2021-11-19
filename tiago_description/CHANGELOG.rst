@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.2.5 (2021-11-19)
+------------------
 * Merge branch 'fix_arm_1_collision_mesh' into 'erbium-devel'
   fix the arm_1_link collision mesh which is causing troubles in capsule_decomposition generation
   See merge request robots/tiago_robot!141
