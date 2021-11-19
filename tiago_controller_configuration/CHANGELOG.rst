@@ -2,6 +2,15 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'conditional_dependencies' into 'erbium-devel'
+  Conditional dependencies
+  See merge request robots/tiago_robot!140
+* added PAL_DISTRO conditioning for PAL dependencies
+* change to package version 3
+* Contributors: Sai Kishor Kothakota, victor
+
 2.2.4 (2021-11-10)
 ------------------
 * added cartesian_impedance_controller controller as dependency

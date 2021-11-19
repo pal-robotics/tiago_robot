@@ -2,6 +2,19 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'fix_arm_1_collision_mesh' into 'erbium-devel'
+  fix the arm_1_link collision mesh which is causing troubles in capsule_decomposition generation
+  See merge request robots/tiago_robot!141
+* fix the arm_1_link collision mesh which is causing troubles in capsule_decomposition generation
+* Merge branch 'conditional_dependencies' into 'erbium-devel'
+  Conditional dependencies
+  See merge request robots/tiago_robot!140
+* added PAL_DISTRO conditioning for PAL dependencies
+* change to package version 3
+* Contributors: Sai Kishor Kothakota, victor
+
 2.2.4 (2021-11-10)
 ------------------
 

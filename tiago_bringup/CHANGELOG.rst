@@ -2,6 +2,14 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'conditional_dependencies' into 'erbium-devel'
+  Conditional dependencies
+  See merge request robots/tiago_robot!140
+* change to package version 3
+* Contributors: Sai Kishor Kothakota, victor
+
 2.2.4 (2021-11-10)
 ------------------
 
