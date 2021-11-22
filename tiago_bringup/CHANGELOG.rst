@@ -2,6 +2,9 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 2.2.5 (2021-11-19)
 ------------------
 * Merge branch 'conditional_dependencies' into 'erbium-devel'

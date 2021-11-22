@@ -2,6 +2,14 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'fix-omnibase' into 'erbium-devel'
+  Configuration of the speed filters for the combined mouvements of the omni base
+  See merge request robots/tiago_robot!142
+* Configuration of the speed filters for the combined mouvements of the omni base
+* Contributors: antoniobrandi, saikishor
+
 2.2.5 (2021-11-19)
 ------------------
 * Merge branch 'conditional_dependencies' into 'erbium-devel'
