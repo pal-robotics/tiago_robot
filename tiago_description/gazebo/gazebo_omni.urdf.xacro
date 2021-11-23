@@ -15,16 +15,6 @@
 
 <robot name="tiago" xmlns:xacro="http://ros.org/wiki/xacro">
   <gazebo>
-    <plugin filename="libgazebo_ros_planar_move.so" name="gazebo_planar_move" >
-      <commandTopic>mobile_base_controller/cmd_vel</commandTopic>
-      <odometryTopic>mobile_base_controller/odom</odometryTopic>
-      <odometryFrame>odom</odometryFrame>
-      <odometryRate>50.0</odometryRate>
-      <robotBaseFrame>base_footprint</robotBaseFrame>
-      <publishTF>true</publishTF>
-      <enableYAxis>false</enableYAxis>
-    </plugin>
-    
     <plugin filename="libgazebo_ros_control.so" name="gazebo_ros_control">
       <ns></ns>
       <robotSimType>pal_hardware_gazebo/PalHardwareGazebo</robotSimType>
@@ -35,6 +25,15 @@
           <robotNamespace></robotNamespace>
       </xacro:unless>
       <controlPeriod>0.001</controlPeriod>
+    </plugin>
+
+    <plugin filename="libgazebo_ros_force_based_move.so" name="gazebo_force_based_move" >
+      <commandTopic>mobile_base_controller/cmd_vel</commandTopic>
+      <odometryTopic>mobile_base_controller/odom</odometryTopic>
+      <odometryFrame>odom</odometryFrame>
+      <odometryRate>50.0</odometryRate>
+      <robotBaseFrame>base_footprint</robotBaseFrame>
+      <publishOdometryTf>true</publishOdometryTf>
     </plugin>
 
     <plugin filename="libgazebo_ros_p3d.so" name="gazebo_ros_p3d">
