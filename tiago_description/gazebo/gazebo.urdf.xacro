@@ -27,6 +27,17 @@
       <controlPeriod>0.001</controlPeriod>
     </plugin>
 
+    <xacro:if value="${base_type == 'omni_base'}">
+      <plugin filename="libgazebo_ros_force_based_move.so" name="gazebo_force_based_move" >
+        <commandTopic>mobile_base_controller/cmd_vel</commandTopic>
+        <odometryTopic>mobile_base_controller/odom</odometryTopic>
+        <odometryFrame>odom</odometryFrame>
+        <odometryRate>50.0</odometryRate>
+        <robotBaseFrame>base_footprint</robotBaseFrame>
+        <publishOdometryTf>true</publishOdometryTf>
+      </plugin>
+    </xacro:if>
+
     <plugin filename="libgazebo_ros_p3d.so" name="gazebo_ros_p3d">
       <bodyName>base_footprint</bodyName>
       <topicName>ground_truth_odom</topicName>
