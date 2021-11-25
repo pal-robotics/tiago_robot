@@ -2,6 +2,19 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'omnibase-gravity-fix' into 'erbium-devel'
+  changing ros_planar_move gazebo plugin with ros_force_based_move in order to preserve gravity
+  See merge request robots/tiago_robot!143
+* Moved force_based_move AFTER ros_control
+* Changed the order of the plugin in order to make the wheel rotating correctly
+* Add dependency to the hector gazebo plugin for the omni base simulation
+* Removing the needs for a duplicated gazebo.urdf file
+* Removed dependencies
+* changing ros_planar_move gazebo plugin with ros_force_based_move in order to preserve gravity
+* Contributors: antoniobrandi, saikishor
+
 2.2.6 (2021-11-22)
 ------------------
 
