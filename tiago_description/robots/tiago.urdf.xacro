@@ -93,15 +93,14 @@
   <!-- Materials for visualization -->
   <xacro:include filename="$(find tiago_description)/urdf/materials.urdf.xacro" />
 
+  <!-- Generic simulator_gazebo plugins -->
+  <xacro:include filename="$(find tiago_description)/gazebo/gazebo.urdf.xacro" />
+
   <!-- Now we can start using the macros included above to define the actual robot -->
   <xacro:if value="${base_type == 'pmb2'}">
-    <!-- Generic simulator_gazebo plugins -->
-    <xacro:include filename="$(find tiago_description)/gazebo/gazebo.urdf.xacro" />
     <xacro:base_sensors name="base" laser_model="$(arg laser_model)" sonars="true" microphone="true"/>
   </xacro:if>
   <xacro:if value="${base_type == 'omni_base'}">
-    <!-- Generic simulator_gazebo plugins -->
-    <xacro:include filename="$(find tiago_description)/gazebo/gazebo_omni.urdf.xacro" />
     <xacro:base_sensors name="base" front_laser_model="$(arg laser_model)" rear_laser_model="$(arg laser_model)"/>
   </xacro:if>
   <xacro:tiago_torso name="torso" parent="base_link"/>
