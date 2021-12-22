@@ -2,6 +2,9 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 2.2.7 (2021-11-25)
 ------------------
 * Merge branch 'omnibase-gravity-fix' into 'erbium-devel'

@@ -2,6 +2,14 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'reduced_wbc' into 'erbium-devel'
+  Add argument to set torso to no control
+  See merge request robots/tiago_robot!144
+* Add argument to set torso to no control
+* Contributors: Adria Roig, narcismiguel
+
 2.2.7 (2021-11-25)
 ------------------
 
