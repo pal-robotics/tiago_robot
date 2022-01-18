@@ -108,7 +108,7 @@
   <!-- Robotiq Epick Gripper -->
   <xacro:if value="${type == 'robotiq-epick'}">
     <xacro:include filename="$(find pal_robotiq_epick_description)/urdf/robotiq_epick_model_macro.xacro" />
-    <xacro:epick_hand hand_link_name="epick" robot_name="robotiq" parent="${parent}">
+    <xacro:epick_hand  hand_link_name="epick" robot_name="robotiq" prefix="${name}_" parent="${parent}">
     </xacro:epick_hand>
   </xacro:if>
 
