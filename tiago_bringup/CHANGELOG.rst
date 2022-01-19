@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.2.9 (2022-01-19)
+------------------
 * Merge branch 'use_rsp' into 'erbium-devel'
   Use robot_state_publisher instead of deprecated state_publisher
   See merge request robots/tiago_robot!147
