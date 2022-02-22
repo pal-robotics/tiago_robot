@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.2.10 (2022-02-22)
+-------------------
 * Merge branch 'fix-offer-motion' into 'erbium-devel'
   Fix offer motion for robotiq gripper
   See merge request robots/tiago_robot!146
