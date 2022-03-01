@@ -29,7 +29,7 @@
     <node pkg="joy_teleop" type="incrementer_server" name="incrementer"/>
   </group>
 
-  <group ns="gripper_controller" if="$(eval end_effector in ['pal-gripper', 'schunk-wsg', 'robotiq-2f-85', 'robotiq-2f-140'])">
+  <group ns="gripper_controller" if="$(eval end_effector in ['pal-gripper', 'schunk-wsg', 'robotiq-2f-85', 'robotiq-2f-140', 'robotiq-epick'])">
     <node pkg="joy_teleop" type="incrementer_server" name="incrementer"/>
   </group>
 </launch>

@@ -41,6 +41,14 @@
         </include>
     </group>
 
+    <group if="$(eval end_effector == 'robotiq-epick')">
+        <rosparam command="load" file="$(find tiago_controller_configuration)/config/robotiq-epick_joint_trajectory_controllers.yaml" />
+        <include file="$(find pal_robotiq_controller_configuration)/launch/gripper_controller.launch">
+          <arg name="model" value="$(arg end_effector)" />
+        </include>
+    </group>
+
+
     <group if="$(eval end_effector == 'schunk-wsg')">
         <rosparam command="load" file="$(find tiago_controller_configuration)/config/schunk-wsg_joint_trajectory_controllers.yaml" />
         <include file="$(find pal_wsg_gripper_controller_configuration)/launch/gripper_controller.launch"/>

@@ -118,7 +118,7 @@ teleop:
       increment_by: [0.01]
     buttons: [5] # R1
 @[end if]@
-@[if end_effector in ["robotiq-2f-85", "robotiq-2f-140"]]@
+@[if end_effector in ["robotiq-2f-85", "robotiq-2f-140", "robotiq-epick"]]@
   close_gripper:
     type: action
     action_name: /gripper_controller/increment
