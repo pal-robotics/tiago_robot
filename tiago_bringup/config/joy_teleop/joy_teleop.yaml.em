@@ -118,7 +118,7 @@ teleop:
       increment_by: [0.01]
     buttons: [5] # R1
 @[end if]@
-@[if end_effector in ["robotiq-2f-85", "robotiq-2f-140", "robotiq-epick"]]@
+@[if end_effector in ["robotiq-2f-85", "robotiq-2f-140"]]@
   close_gripper:
     type: action
     action_name: /gripper_controller/increment
@@ -132,4 +132,25 @@ teleop:
     action_goal:
       increment_by: [-0.1]
     buttons: [5] # R1
+@[end if]@
+@[if end_effector == "robotiq-epick"]@
+  close_gripper:
+    type: topic
+    message_type: std_msgs/Float64
+    topic_name: /gripper_controller/command
+    message_value:
+      -
+        target: data
+        value: 1.0
+    deadman_buttons: [7] # R2
+
+  open_gripper:
+    type: topic
+    message_type: std_msgs/Float64
+    topic_name: /gripper_controller/command
+    message_value:
+      -
+        target: data
+        value: 0.0
+    deadman_buttons: [5] # R1
 @[end if]@

@@ -42,7 +42,7 @@
     </group>
 
     <group if="$(eval end_effector == 'robotiq-epick')">
-        <rosparam command="load" file="$(find tiago_controller_configuration)/config/robotiq-epick_joint_trajectory_controllers.yaml" />
+        <rosparam command="load" file="$(find tiago_controller_configuration)/config/robotiq-epick_joint_effort_controller.yaml" />
         <include file="$(find pal_robotiq_controller_configuration)/launch/gripper_controller.launch">
           <arg name="model" value="$(arg end_effector)" />
         </include>
