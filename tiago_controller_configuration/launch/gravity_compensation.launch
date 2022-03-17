@@ -7,7 +7,10 @@
   <arg name="ns" default="gravity_compensation"/>
   <arg name="wrist_model" default="wrist-2010"/>
 
-  <rosparam command="load" file="$(find tiago_controller_configuration)/config/$(arg end_effector)_gravity_compensation_with_controller_wrist_controller.yaml" />
+    <!-- end effector suffix -->
+  <arg name="ee_suffix" value="$(eval (end_effector if end_effector else 'no-ee'))"/>
+
+  <rosparam command="load" file="$(find tiago_controller_configuration)/config/$(arg ee_suffix)_gravity_compensation_with_controller_wrist_controller.yaml" />
 
   <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
     <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
