@@ -79,7 +79,7 @@ play_motion:
         time_from_start: 1.0
       - positions: [0.35, 0.9, 0.68, -3.16, 1.10, 2.05, 1.0, 0.0]
         time_from_start: 4.0
-      - positions: [0.35, 0.9, 1.0, -3.45, 0.45, 2.05, 1.0, 0.0]
+      - positions: [0.35, 0.9, 1.05, -3.45, 0.45, 2.05, 1.0, 0.0]
         time_from_start: 7.0
       meta:
         name: Reach Max
@@ -89,11 +89,11 @@ play_motion:
     prepare_grasp:
       joints: ['torso_lift_joint', 'arm_1_joint', 'arm_2_joint', 'arm_3_joint', 'arm_4_joint', 'arm_5_joint', 'arm_6_joint', 'arm_7_joint']
       points:
-      - positions: [0.34, 0.20, -1.34, -0.20, 1.94, -1.57, 1.37, @[if end_effector in ["schunk-wsg", "robotiq-2f-85", "robotiq-2f-140"]]-1.58@[else]0.0@[end if]]
+      - positions: [0.34, 0.20, -1.34, -0.20, 1.94, -1.57, 1.37, 0.0]
         time_from_start: 3.0
-      - positions: [0.34, 0.10, 0.47, -0.20, 1.56, -1.58, 0.25, 0.0]
+      - positions: [0.34, -0.12, 0.47, -0.20, 1.56, -1.58, 0.25, 0.0]
         time_from_start: 8.5
-      - positions: [0.34, 0.10, 0.47, -0.20, 1.56, 1.60, 0.25, 1.19]
+      - positions: [0.34, -0.12, 0.47, -0.20, 1.56, 1.60, 0.25, 1.19]
         time_from_start: 10.5
       meta:
         name: Prepare Grasp
@@ -503,15 +503,15 @@ play_motion:
       points:
       - positions: [1.6, -1.18, -3.16, 2.0, -1.57, -0.07, 0.0]
         time_from_start: 1.0
-      - positions: [1.6, -1.48, -3.16, 1.62, -1.57, -0.2, 0.0]
+      - positions: [1.6, -1.57, -3.16, 1.62, -1.57, -0.2, 0.0]
         time_from_start: 2.0
       - positions: [1.6, -0.90, -3.16, 2.0, -1.57, 0.35, 0.0]
         time_from_start: 4.0
-      - positions: [1.6, -1.48, -3.16, 1.62, -1.57, -0.2, 0.0]
+      - positions: [1.6, -1.57, -3.16, 1.62, -1.57, -0.2, 0.0]
         time_from_start: 6.0
       - positions: [1.6, -0.90, -3.16, 2.0, -1.57, 0.35, 0.0]
         time_from_start: 8.0
-      - positions: [1.6, -1.48, -3.16, 1.62, -1.57, -0.2, 0.0]
+      - positions: [1.6, -1.57, -3.16, 1.62, -1.57, -0.2, 0.0]
         time_from_start: 10.0
       - positions: [1.6, -1.18, -3.16, 2.0, -1.57, -0.07, 0.0]
         time_from_start: 12.0
@@ -570,7 +570,7 @@ play_motion:
         time_from_start: 4.0
       - positions: [0.08, 0.809, -1.197, -1.119, 0.345, 1.96, -0.849, 0.041, 6.2, 6.77, 8.8]
         time_from_start: 6.0
-      - positions: [0.158, 0.21, -1.153, -1.538, 2.26, 1.965, 0.394, -0.082, 6.2, 6.77, 8.8]
+      - positions: [0.158, 0.21, -1.153, -1.538, 2.306, 1.965, 0.394, -0.082, 6.2, 6.77, 8.8]
         time_from_start: 9.0
       meta:
         name: Pick from floor
@@ -586,7 +586,7 @@ play_motion:
         time_from_start: 4.0
       - positions: [0.06, 0.809, -1.197, -1.119, 0.345, 1.96, -0.849, 0.041, 6.2, 6.77, 8.8]
         time_from_start: 6.0
-      - positions: [0.158, 0.21, -1.153, -1.538, 2.26, 1.965, 0.394, -0.082, 6.2, 6.77, 8.8]
+      - positions: [0.158, 0.21, -1.153, -1.538, 2.306, 1.965, 0.394, -0.082, 6.2, 6.77, 8.8]
         time_from_start: 9.0
       meta:
         name: Pick from floor
@@ -645,7 +645,7 @@ play_motion:
         time_from_start: 4.0
       - positions: [0.12, 0.809, -1.197, -1.119, 0.345, 1.96, -0.849, 0.041, 0.0, 0.0]
         time_from_start: 6.0
-      - positions: [0.27, 0.21, -1.153, -1.538, 2.26, 1.965, 0.394, -0.082, 0.0, 0.0]
+      - positions: [0.27, 0.21, -1.153, -1.538, 2.306, 1.965, 0.394, -0.082, 0.0, 0.0]
         time_from_start: 9.0
       meta:
         name: Pick from floor
@@ -702,7 +702,7 @@ play_motion:
         time_from_start: 4.0
       - positions: [0.12, 0.809, -1.197, -1.119, 0.345, 1.96, -0.849, 0.041, 0.0]
         time_from_start: 6.0
-      - positions: [0.27, 0.21, -1.153, -1.538, 2.26, 1.965, 0.394, -0.082, 0.0]
+      - positions: [0.27, 0.21, -1.153, -1.538, 2.306, 1.965, 0.394, -0.082, 0.0]
         time_from_start: 9.0
       meta:
         name: Pick from floor
@@ -760,52 +760,12 @@ play_motion:
         time_from_start: 4.0
       - positions: [0.12, 0.809, -1.197, -1.119, 0.345, 1.96, -0.849, 0.041, @[if end_effector == "robotiq-2f-85"]0.75@[else]0.65@[end if]]
         time_from_start: 6.0
-      - positions: [0.27, 0.21, -1.153, -1.538, 2.26, 1.965, 0.394, -0.082, @[if end_effector == "robotiq-2f-85"]0.75@[else]0.65@[end if]]
+      - positions: [0.27, 0.21, -1.153, -1.538, 2.306, 1.965, 0.394, -0.082, @[if end_effector == "robotiq-2f-85"]0.75@[else]0.65@[end if]]
         time_from_start: 9.0
       meta:
         name: Pick from floor
         usage: demo
         description: 'Pick a shirt-like object from floor in front of the robot'
-@[end if]@
-@[if end_effector == "robotiq-epick"]@
-    #deprecated, use offer
-    offer_gripper:
-      joints: ['torso_lift_joint', 'arm_1_joint', 'arm_2_joint', 'arm_3_joint', 'arm_4_joint', 'arm_5_joint', 'arm_6_joint', 'arm_7_joint']
-      points:
-      - positions: [0.296, 1.61, -0.93, -3.14, 1.83, -1.577, -0.62, -1.577]
-        time_from_start: 0.0
-
-    offer:
-      joints: ['torso_lift_joint', 'arm_1_joint', 'arm_2_joint', 'arm_3_joint', 'arm_4_joint', 'arm_5_joint', 'arm_6_joint', 'arm_7_joint']
-      points:
-      - positions: [0.296, 1.61, -0.93, -3.14, 1.83, -1.577, -0.62, -1.577]
-        time_from_start: 0.0
-      meta:
-        name: Offer Gripper
-        usage: demo
-        description: 'Offer Gripper'
-
-    shake_hands:
-      joints: ['torso_lift_joint', 'arm_1_joint', 'arm_2_joint', 'arm_3_joint', 'arm_4_joint', 'arm_5_joint', 'arm_6_joint', 'arm_7_joint']
-      points:
-      - positions: [0.296, 1.61, -0.93, -3.14, 1.83, -1.577, -0.53, -1.577]
-        time_from_start: 0.0
-      - positions: [0.296, 1.61, -0.93, -3.14, 1.83, -1.577, -0.53, -1.577]
-        time_from_start: 5.0
-      - positions: [0.296, 1.61, -0.93, -3.14, 1.40, -1.577, -0.2, -1.577]
-        time_from_start: 6.0
-      - positions: [0.296, 1.61, -0.93, -3.14, 1.83, -1.577, -0.53, -1.577]
-        time_from_start: 7.0
-      - positions: [0.296, 1.61, -0.93, -3.14, 1.40, -1.577, -0.2, -1.577]
-        time_from_start: 8.0
-      - positions: [0.296, 1.61, -0.93, -3.14, 1.83, -1.577, -0.53, -1.577]
-        time_from_start: 9.0
-      - positions: [0.296, 1.61, -0.93, -3.14, 1.83, -1.577, -0.53, -1.577]
-        time_from_start: 11.0
-      meta:
-        name: Shake Hands
-        usage: demo
-        description: 'shake_hands'
 @[end if]@
 
 @[else]@
