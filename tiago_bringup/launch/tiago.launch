@@ -19,6 +19,9 @@
   <!-- Diff drive controller parameters -->
   <rosparam command="load" file="$(find tiago_controller_configuration)/config/mobile_base_controller$(arg base_type_suffix).yaml"/>
 
+
+
+
   <!-- Robot model -->
   <include file="$(find tiago_description)/robots/upload.launch">
     <arg name="arm"  value="$(arg arm)"/>
@@ -32,10 +35,12 @@
   </include>
 
   <!-- tiago_hardware parameters -->
-  <arg name="file_suffix" value="$(eval ('no-arm' if not arm 
-                          else end_effector + ('_' +  ft_sensor if ft_sensor else '') if end_effector else 'no-ee' + ('_' +  ft_sensor if ft_sensor else '')))"
-                          />
 
+  <arg name="file_suffix" 
+       value="$(eval (('no-arm' if not arm else
+        (end_effector if end_effector else 'no-ee') + 
+        ('_' +  ft_sensor if ft_sensor else ''))))"
+        />  
 
   <rosparam command="load" file="$(find tiago_bringup)/config/tiago_hardware/tiago_hardware_$(arg file_suffix).yaml"/>
 
