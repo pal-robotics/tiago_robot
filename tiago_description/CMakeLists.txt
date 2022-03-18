@@ -18,7 +18,7 @@ if(CATKIN_ENABLE_TESTING)
   find_package(rostest REQUIRED)
   foreach(arm true false)
       # Separated to speed up tests, otherwise it's over 13min
-      foreach(end_effector false pal-gripper pal-hey5 schunk-wsg robotiq-2f-85 robotiq-2f-140 custom)
+      foreach(end_effector false pal-gripper pal-hey5 schunk-wsg robotiq-2f-85 robotiq-2f-140 robotiq-epick custom)
           foreach(ft_sensor false schunk-ft)
                       add_rostest(test/test_tiago.test ARGS arm:=${arm}
                           end_effector:=${end_effector} ft_sensor:=${ft_sensor})
