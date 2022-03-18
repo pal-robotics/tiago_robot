@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.2.12 (2022-03-18)
+-------------------
 * Added the robotiq epick to the rostests
 * Contributors: Sai Kishor Kothakota
 
