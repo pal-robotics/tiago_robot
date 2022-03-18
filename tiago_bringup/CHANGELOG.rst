@@ -2,6 +2,17 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'add_robotiq_epick_gripper' into 'erbium-devel'
+  Add link to epick urdf
+  See merge request robots/tiago_robot!145
+* regenerate the motions after rebasing
+* Change config files to match new name and new controller + add joystick control
+* Change the name from vacuum to finger and add config file for controller
+* Add config files for robotiq-epick gripper
+* Contributors: Sai Kishor Kothakota, saikishor, thomaspeyrucain
+
 2.2.10 (2022-02-22)
 -------------------
 * Merge branch 'fix-offer-motion' into 'erbium-devel'

@@ -2,6 +2,16 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'add_robotiq_epick_gripper' into 'erbium-devel'
+  Add link to epick urdf
+  See merge request robots/tiago_robot!145
+* Match the code with the other robotiq gripper
+* add prefix parameter
+* Add link to epick urdf
+* Contributors: saikishor, thomaspeyrucain
+
 2.2.10 (2022-02-22)
 -------------------
 
