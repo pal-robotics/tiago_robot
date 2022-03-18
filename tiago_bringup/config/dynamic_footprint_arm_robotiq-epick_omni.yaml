@@ -1,0 +1,14 @@
+link_list: ['arm_1_link',
+            'arm_2_link',
+            'arm_3_link',
+            'arm_4_link',
+            'arm_5_link',
+            'arm_6_link',
+            'arm_7_link',
+            'wheel_front_right_link',
+            'wheel_rear_right_link',
+            'wheel_front_left_link',
+            'wheel_rear_left_link',
+            'virtual_base_laser_link',
+            'gripper_end_effector']
+padding: 0.05

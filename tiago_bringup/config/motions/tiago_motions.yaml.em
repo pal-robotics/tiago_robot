@@ -5,6 +5,9 @@ play_motion:
 @[if end_effector in ["pal-gripper", "schunk-wsg", "robotiq-2f-85", "robotiq-2f-140"]]@
   controllers: [arm_controller, head_controller, torso_controller, gripper_controller]
 @[end if]@
+@[if end_effector == "robotiq-epick"]@
+  controllers: [arm_controller, head_controller, torso_controller]
+@[end if]@
 @[if not has_arm]@
   controllers: [head_controller, torso_controller]
 @[end if]
@@ -718,6 +721,46 @@ play_motion:
         name: Pick from floor
         usage: demo
         description: 'Pick a shirt-like object from floor in front of the robot'
+@[end if]@
+@[if end_effector == "robotiq-epick"]@
+    #deprecated, use offer
+    offer_gripper:
+      joints: ['torso_lift_joint', 'arm_1_joint', 'arm_2_joint', 'arm_3_joint', 'arm_4_joint', 'arm_5_joint', 'arm_6_joint', 'arm_7_joint']
+      points:
+      - positions: [0.296, 1.61, -0.93, -3.14, 1.83, -1.577, -0.62, -1.577]
+        time_from_start: 0.0
+
+    offer:
+      joints: ['torso_lift_joint', 'arm_1_joint', 'arm_2_joint', 'arm_3_joint', 'arm_4_joint', 'arm_5_joint', 'arm_6_joint', 'arm_7_joint']
+      points:
+      - positions: [0.296, 1.61, -0.93, -3.14, 1.83, -1.577, -0.62, -1.577]
+        time_from_start: 0.0
+      meta:
+        name: Offer Gripper
+        usage: demo
+        description: 'Offer Gripper'
+
+    shake_hands:
+      joints: ['torso_lift_joint', 'arm_1_joint', 'arm_2_joint', 'arm_3_joint', 'arm_4_joint', 'arm_5_joint', 'arm_6_joint', 'arm_7_joint']
+      points:
+      - positions: [0.296, 1.61, -0.93, -3.14, 1.83, -1.577, -0.53, -1.577]
+        time_from_start: 0.0
+      - positions: [0.296, 1.61, -0.93, -3.14, 1.83, -1.577, -0.53, -1.577]
+        time_from_start: 5.0
+      - positions: [0.296, 1.61, -0.93, -3.14, 1.40, -1.577, -0.2, -1.577]
+        time_from_start: 6.0
+      - positions: [0.296, 1.61, -0.93, -3.14, 1.83, -1.577, -0.53, -1.577]
+        time_from_start: 7.0
+      - positions: [0.296, 1.61, -0.93, -3.14, 1.40, -1.577, -0.2, -1.577]
+        time_from_start: 8.0
+      - positions: [0.296, 1.61, -0.93, -3.14, 1.83, -1.577, -0.53, -1.577]
+        time_from_start: 9.0
+      - positions: [0.296, 1.61, -0.93, -3.14, 1.83, -1.577, -0.53, -1.577]
+        time_from_start: 11.0
+      meta:
+        name: Shake Hands
+        usage: demo
+        description: 'shake_hands'
 @[end if]@
 
 @[else]@

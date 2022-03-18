@@ -10,7 +10,7 @@
     <arg name="model_chains" value="['gripper_link']" if="$(eval end_effector == 'pal-gripper')"/>
     <arg name="model_chains" value="['hand_palm_link']" if="$(eval end_effector == 'pal-hey5')"/>
     <arg name="model_chains" value="['gripper_link']" if="$(eval end_effector == 'schunk-wsg')"/>
-    <arg name="model_chains" value="['gripper_base_link']" if="$(eval end_effector in ['robotiq-2f-85','robotiq-2f-140'])"/>
+    <arg name="model_chains" value="['gripper_base_link']" if="$(eval end_effector in ['robotiq-2f-85','robotiq-2f-140', 'robotiq-epick'])"/>
 
     <rosparam param="/arm_impedance_controller/robot_model_chains" subst_value="True">$(arg model_chains)</rosparam>
 
