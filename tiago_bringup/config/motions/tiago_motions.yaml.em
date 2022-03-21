@@ -120,10 +120,19 @@ play_motion:
 
 
 @[if end_effector == "no-ee"]@
+<<<<<<< HEAD
     close:
       joints: []
       points:
       - positions: []
+=======
+
+
+    close:
+      joints: [arm_tool_joint]
+      points:
+      - positions: [0.0]
+>>>>>>> update motions config file
         time_from_start: 0.5
       meta:
         name: Close Gripper
@@ -133,9 +142,15 @@ play_motion:
 
 
     close_half:
+<<<<<<< HEAD
       joints: []
       points:
       - positions: []
+=======
+      joints: [arm_tool_joint]
+      points:
+      - positions: [0.0]
+>>>>>>> update motions config file
         time_from_start: 0.5
       meta:
         name: Close Gripper Half
@@ -144,9 +159,15 @@ play_motion:
 
 
     open:
+<<<<<<< HEAD
       joints: []
       points:
       - positions: []
+=======
+      joints: [arm_tool_joint]
+      points:
+      - positions: [0.0]
+>>>>>>> update motions config file
         time_from_start: 0.5
       meta:
         name: Open Gripper
@@ -154,14 +175,24 @@ play_motion:
         description: 'Open Gripper'
 
     point:
+<<<<<<< HEAD
       joints: []
       points:
       - positions: []
+=======
+      joints: [arm_tool_joint]
+      points:
+      - positions: [0.0]
+>>>>>>> update motions config file
         time_from_start: 0.5
       meta:
         name: Point Gripper Pose
         usage: demo
         description: 'Close Gripper to point to something'
+<<<<<<< HEAD
+=======
+
+>>>>>>> update motions config file
 @[end if]@
 
 @[if end_effector == "pal-gripper"]@
