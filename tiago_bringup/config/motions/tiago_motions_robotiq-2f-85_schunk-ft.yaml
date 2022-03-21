@@ -104,6 +104,7 @@ play_motion:
 
 
 
+
     #deprecated, use close
     close_gripper:
       joints: [gripper_finger_joint]

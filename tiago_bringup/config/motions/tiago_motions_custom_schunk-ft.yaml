@@ -102,6 +102,7 @@ play_motion:
 
 
 
+
     wave:
       joints: [arm_1_joint,
       arm_2_joint, arm_3_joint, arm_4_joint,
