@@ -101,6 +101,7 @@ play_motion:
 
 
 
+
     #deprecated a use open
     open_hand:
       joints: [hand_thumb_joint, hand_index_joint, hand_mrl_joint]

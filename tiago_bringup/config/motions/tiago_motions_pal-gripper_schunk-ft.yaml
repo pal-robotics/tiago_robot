@@ -98,6 +98,7 @@ play_motion:
         description: 'Inspect surroundings around the robot'
 
 
+
     #deprecated use close
     close_gripper:
       joints: [gripper_left_finger_joint, gripper_right_finger_joint]
