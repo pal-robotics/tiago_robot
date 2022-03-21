@@ -30,6 +30,7 @@
   <xacro:macro name="tiago_end_effector" params="name parent type has_end_effector reflect is_dual:=false">
 
   <!-- No end-effector -->
+  <!-- For now the custom end-effector is used in the case of no end-effector -->
   <xacro:unless value="${has_end_effector}">
     <xacro:include filename="$(find custom_ee_description)/urdf/end-effector.urdf.xacro" />
     <xacro:end_effector parent="${parent}">
