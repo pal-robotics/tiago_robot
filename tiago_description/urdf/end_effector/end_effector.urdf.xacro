@@ -29,31 +29,38 @@
   -->
   <xacro:macro name="tiago_end_effector" params="name parent type has_end_effector reflect is_dual:=false">
 
-  <!-- No end-effector -->
   <!-- For now the custom end-effector is used in the case of no end-effector -->
-  <xacro:unless value="${has_end_effector}">
-    <xacro:include filename="$(find custom_ee_description)/urdf/end-effector.urdf.xacro" />
-    <xacro:end_effector parent="${parent}">
-      <origin xyz="0.01 0 0" rpy="${90*deg_to_rad} ${90*deg_to_rad} ${-90*deg_to_rad}"/>
-    </xacro:end_effector>
-  </xacro:unless>
+  <xacro:if value="${not has_end_effector}">
+
+    <!-- No end-effector single-->
+
+    <xacro:if values="${not is_dual}">
+      <xacro:include filename="$(find custom_ee_description)/urdf/end-effector.urdf.xacro" />
+      <xacro:end_effector parent="${parent}">
+        <origin xyz="0.01 0 0" rpy="${90*deg_to_rad} ${90*deg_to_rad} ${-90*deg_to_rad}"/>
+      </xacro:end_effector>
+    </xacro:if>
+  <!-- No end-effector dual -->
+
+    <xacro:if value="${is_dual}">
+      <xacro:if value="${reflect == 1}"> <!-- If right --> 
+        <xacro:include filename="$(find custom_dual_ee_description)/urdf/end-effector-right.urdf.xacro" />
+        <xacro:end_effector_right parent="${parent}">
+          <origin xyz="0.01 0 0" rpy="${90*deg_to_rad} ${90*deg_to_rad} ${-90*deg_to_rad}"/>
+        </xacro:end_effector_right>
+      </xacro:if>
+      <xacro:if value="${reflect == -1}"> <!-- If left -->
+        <xacro:include filename="$(find custom_dual_ee_description)/urdf/end-effector-left.urdf.xacro" />
+        <xacro:end_effector_left parent="${parent}">
+          <origin xyz="0.01 0 0" rpy="${90*deg_to_rad} ${90*deg_to_rad} ${-90*deg_to_rad}"/>
+        </xacro:end_effector_left>
+      </xacro:if>
+    </xacro:if>
+
+  </xacro:if>
 
 
-    <!-- No end-effector dual-->
-  <xacro:unless value="${has_end_effector and is_dual}">
-    <xacro:if value="${reflect == 1}"> <!-- If right -->
-    <xacro:include filename="$(find custom_dual_ee_description)/urdf/end-effector-right.urdf.xacro" />
-    <xacro:end_effector_right parent="${parent}">
-      <origin xyz="0.01 0 0" rpy="${90*deg_to_rad} ${90*deg_to_rad} ${-90*deg_to_rad}"/>
-    </xacro:end_effector_right>
-    </xacro:if>
-    <xacro:if value="${reflect == -1}"> <!-- If left -->
-    <xacro:include filename="$(find custom_dual_ee_description)/urdf/end-effector-left.urdf.xacro" />
-    <xacro:end_effector_left parent="${parent}">
-      <origin xyz="0.01 0 0" rpy="${90*deg_to_rad} ${90*deg_to_rad} ${-90*deg_to_rad}"/>
-    </xacro:end_effector_left>
-    </xacro:if>
-  </xacro:unless>
+
 
 
   <!-- PAL Gripper -->
