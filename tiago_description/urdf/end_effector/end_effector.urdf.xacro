@@ -38,6 +38,8 @@
 
 
 
+
+
   <!-- PAL Gripper -->
   <xacro:if value="${type == 'pal-gripper'}">
     <xacro:include filename="$(find pal_gripper_description)/urdf/gripper.urdf.xacro" />
