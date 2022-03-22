@@ -100,6 +100,7 @@ play_motion:
 
 
 
+<<<<<<< HEAD
     close:
       joints: [arm_tool_joint]
       points:
@@ -146,6 +147,8 @@ play_motion:
 
 
 
+=======
+>>>>>>> edit motions config
 
     wave:
       joints: [arm_1_joint,
