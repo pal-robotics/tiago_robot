@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.2.13 (2022-03-23)
+-------------------
 * Merge branch 'fix_home_robotiq_2f_140' into 'erbium-devel'
   Fix home position for robotiq-2f-140 + fix Reach max out of range motion + add effort_controller
   See merge request robots/tiago_robot!148
