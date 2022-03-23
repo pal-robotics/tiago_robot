@@ -2,6 +2,14 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'fix_home_robotiq_2f_140' into 'erbium-devel'
+  Fix home position for robotiq-2f-140 + fix Reach max out of range motion + add effort_controller
+  See merge request robots/tiago_robot!148
+* Add pal_robotiq_epick_description dependency on tiago_description package
+* Contributors: saikishor, thomaspeyrucain
+
 2.2.12 (2022-03-18)
 -------------------
 * Added the robotiq epick to the rostests
