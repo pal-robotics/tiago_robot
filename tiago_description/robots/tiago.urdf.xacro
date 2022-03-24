@@ -43,7 +43,7 @@
       <xacro:wrong_wrist_model/>
     </xacro:if>
   </xacro:if>
-  <xacro:if value="${end_effector not in ['false', False, 'pal-gripper', 'pal-hey5', 'schunk-wsg', 'robotiq-2f-85', 'robotiq-2f-140', 'custom']}">
+  <xacro:if value="${end_effector not in ['false', False, 'pal-gripper', 'pal-hey5', 'schunk-wsg', 'robotiq-2f-85', 'robotiq-2f-140', 'custom', 'no-ee']}">
     <xacro:wrong_end_effector/>
   </xacro:if>
   <xacro:if value="${ft_sensor not in ['false', False, 'schunk-ft']}">
