@@ -97,61 +97,6 @@ play_motion:
         usage: demo
         description: 'Inspect surroundings around the robot'
 
-
-
-
-<<<<<<< HEAD
-    close:
-      joints: [arm_tool_joint]
-      points:
-      - positions: [0.0]
-        time_from_start: 0.5
-      meta:
-        name: Close Gripper
-        usage: demo
-        description: 'Close Gripper'
-
-
-
-    close_half:
-      joints: [arm_tool_joint]
-      points:
-      - positions: [0.0]
-        time_from_start: 0.5
-      meta:
-        name: Close Gripper Half
-        usage: demo
-        description: 'Close Gripper Halfway'
-
-
-    open:
-      joints: [arm_tool_joint]
-      points:
-      - positions: [0.0]
-        time_from_start: 0.5
-      meta:
-        name: Open Gripper
-        usage: demo
-        description: 'Open Gripper'
-
-    point:
-      joints: [arm_tool_joint]
-      points:
-      - positions: [0.0]
-        time_from_start: 0.5
-      meta:
-        name: Point Gripper Pose
-        usage: demo
-        description: 'Close Gripper to point to something'
-
-
-
-
-=======
->>>>>>> edit motions config
-
-
-
     wave:
       joints: [arm_1_joint,
       arm_2_joint, arm_3_joint, arm_4_joint,

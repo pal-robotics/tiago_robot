@@ -550,7 +550,6 @@ play_motion:
 @[end if]@
 @[end if]@
 
-
 @[if end_effector == "pal-gripper"]@
     #deprecated, use offer
     offer_gripper:
