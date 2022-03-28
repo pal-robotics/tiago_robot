@@ -119,8 +119,6 @@ play_motion:
         description: 'Inspect surroundings around the robot'
 
 
-
-
 @[if end_effector == "pal-gripper"]@
     #deprecated use close
     close_gripper:
