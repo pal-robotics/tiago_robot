@@ -119,51 +119,6 @@ play_motion:
         description: 'Inspect surroundings around the robot'
 
 
-@[if end_effector == "no-ee"]@
-    close:
-      joints: []
-      points:
-      - positions: []
-        time_from_start: 0.5
-      meta:
-        name: Close Gripper
-        usage: demo
-        description: 'Close Gripper'
-
-
-
-    close_half:
-      joints: []
-      points:
-      - positions: []
-        time_from_start: 0.5
-      meta:
-        name: Close Gripper Half
-        usage: demo
-        description: 'Close Gripper Halfway'
-
-
-    open:
-      joints: []
-      points:
-      - positions: []
-        time_from_start: 0.5
-      meta:
-        name: Open Gripper
-        usage: demo
-        description: 'Open Gripper'
-
-    point:
-      joints: []
-      points:
-      - positions: []
-        time_from_start: 0.5
-      meta:
-        name: Point Gripper Pose
-        usage: demo
-        description: 'Close Gripper to point to something'
-@[end if]@
-
 @[if end_effector == "pal-gripper"]@
     #deprecated use close
     close_gripper:
@@ -594,7 +549,6 @@ play_motion:
         description: 'Pick a shirt-like object from floor in front of the robot'
 @[end if]@
 @[end if]@
-
 
 @[if end_effector == "pal-gripper"]@
     #deprecated, use offer
