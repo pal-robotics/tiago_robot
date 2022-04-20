@@ -2,6 +2,11 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Fix materials
+* Contributors: Giang Nguyen
+
 2.2.13 (2022-03-23)
 -------------------
 * Merge branch 'fix_home_robotiq_2f_140' into 'erbium-devel'
