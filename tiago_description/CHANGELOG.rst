@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.2.14 (2022-04-20)
+-------------------
 * Fix materials
 * Contributors: Giang Nguyen
 
