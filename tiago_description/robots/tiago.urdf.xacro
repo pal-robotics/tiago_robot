@@ -114,11 +114,12 @@
         <origin xyz="0.15505 0.014 -0.151" rpy="0 0 ${-90 * deg_to_rad}" />
       </xacro:tiago_arm>
       <xacro:tiago_end_effector name="${end_effector_name}" parent="${end_effector_link}" type="${end_effector}" has_end_effector="${has_end_effector}" reflect="1"/>
-  </xacro:if>
 
   <!-- Force Torque sensor -->
   <xacro:if value="${has_ft_sensor}">
       <xacro:ft_sensor name="wrist" parent="arm_tool_link" />
+  </xacro:if>
+  
   </xacro:if>
 
   <!-- Thermal camera -->

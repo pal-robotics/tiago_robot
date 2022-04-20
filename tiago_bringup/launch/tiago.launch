@@ -37,8 +37,8 @@
   <!-- tiago_hardware parameters -->
 
   <arg name="file_suffix" 
-       value="$(eval (('no-arm' if not arm else
-        (end_effector if end_effector else 'no-ee') + 
+       value="$(eval ('no-arm' if not arm else
+        ((end_effector if end_effector else 'no-ee') + 
         ('_' +  ft_sensor if ft_sensor else ''))))"
         />  
 
