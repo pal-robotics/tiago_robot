@@ -63,7 +63,7 @@
    <xacro:property name="has_arm"                 value="$(arg arm)"/>
    <xacro:property name="has_schunk_ft"           value="${ft_sensor == 'schunk-ft'}"/>
    <xacro:property name="has_ft_sensor"           value="${has_schunk_ft}"/> <!-- This should be OR'ed with other FT sensors-->
-   <xacro:property name="has_end_effector"        value="${end_effector != 'false'}"/>
+   <xacro:property name="has_end_effector"        value="${end_effector not in ['false', False, 'no-ee']}"/>
    <xacro:property name="end_effector_link"       value="${'wrist_ft_tool_link' if has_ft_sensor else 'arm_tool_link'}"/>
    <xacro:property name="end_effector_name"       value="${'hand' if end_effector == 'pal-hey5' else 'gripper'}"/>
    <xacro:property name="head_link_name"          value="head_2_link"/>

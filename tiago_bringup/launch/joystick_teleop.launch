@@ -5,12 +5,7 @@
   <arg name="base_type_suffix" default=""/>
 
   <arg name="cmd_vel" default="input_joy/cmd_vel" />
-  <arg name="file_suffix" 
-       value="$(eval (('no-arm' if not arm else
-        (end_effector if end_effector else 'no-ee') + 
-        ('_' +  ft_sensor if ft_sensor else ''))))"
-        />  
-
+  <arg name="file_suffix" value="$(eval (('no-arm' if not arm else (end_effector if end_effector else 'no-ee') + ('_' +  ft_sensor if ft_sensor else ''))))"/>  
   
   <arg name="teleop_config" default="$(find tiago_bringup)/config/joy_teleop/joy_teleop_$(arg file_suffix).yaml" />
   <arg name="teleop_config_move" default="$(find tiago_bringup)/config/joy_teleop/joy_teleop_move$(arg base_type_suffix).yaml" />
