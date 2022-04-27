@@ -97,12 +97,6 @@ play_motion:
         usage: demo
         description: 'Inspect surroundings around the robot'
 
-
-
-
-
-
-
     wave:
       joints: [arm_1_joint,
       arm_2_joint, arm_3_joint, arm_4_joint,

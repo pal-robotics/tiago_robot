@@ -2,6 +2,9 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.2.14 (2022-04-20)
+-------------------
+
 2.2.13 (2022-03-23)
 -------------------
 * Merge branch 'fix_home_robotiq_2f_140' into 'erbium-devel'
