@@ -5,11 +5,7 @@
   <arg name="ft_sensor"/>
 
 
-  <arg name="file_suffix" 
-       value="$(eval (('no-arm' if not arm else
-        (end_effector if end_effector else 'no-ee') + 
-        ('_' +  ft_sensor if ft_sensor else ''))))"
-        />  
+  <arg name="file_suffix" value="$(eval (('no-arm' if not arm else (end_effector if end_effector else 'no-ee') + ('_' +  ft_sensor if ft_sensor else ''))))"/>  
   <!-- execute pre-recorded motions -->
   <rosparam if="$(eval end_effector != 'custom')" file="$(find tiago_bringup)/config/motions/tiago_motions_$(arg file_suffix).yaml" command="load" />
   <rosparam if="$(eval end_effector == 'custom')" file="$(find custom_ee_configuration)/config/motions/tiago_motions.yaml" command="load" />
