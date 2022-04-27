@@ -124,7 +124,6 @@
     </xacro:epick_hand>
   </xacro:if>
 
-
   <!-- Custom -->
   <xacro:if value="${type == 'custom' and not is_dual}">
     <xacro:include filename="$(find custom_ee_description)/urdf/end-effector.urdf.xacro" />
