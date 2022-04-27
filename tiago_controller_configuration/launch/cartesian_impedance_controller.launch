@@ -6,7 +6,7 @@
   <arg name="controller_pkg_name" default="tiago_controller_configuration"/>
   <arg name="ns" default="cartesian_impedance"/>
   <arg name="wrist_model" default="wrist-2010"/>
-  
+
   <arg name="ee_suffix" value="$(eval (end_effector if end_effector else 'no-ee'))"/>
   <rosparam command="load" file="$(find tiago_controller_configuration)/config/cartesian_impedance.yaml" />
 

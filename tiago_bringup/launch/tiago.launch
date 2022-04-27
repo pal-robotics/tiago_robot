@@ -19,9 +19,6 @@
   <!-- Diff drive controller parameters -->
   <rosparam command="load" file="$(find tiago_controller_configuration)/config/mobile_base_controller$(arg base_type_suffix).yaml"/>
 
-
-
-
   <!-- Robot model -->
   <include file="$(find tiago_description)/robots/upload.launch">
     <arg name="arm"  value="$(arg arm)"/>
