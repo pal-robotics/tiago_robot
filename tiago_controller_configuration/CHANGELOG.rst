@@ -2,6 +2,9 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 2.2.15 (2022-05-03)
 -------------------
 * Merge branch 'no-end-effector-bugfix' into 'erbium-devel'

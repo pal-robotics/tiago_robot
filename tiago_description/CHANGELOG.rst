@@ -2,6 +2,9 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 2.2.15 (2022-05-03)
 -------------------
 * Merge branch 'no-end-effector-bugfix' into 'erbium-devel'
