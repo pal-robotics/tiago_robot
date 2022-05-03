@@ -2,6 +2,64 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'no-end-effector-bugfix' into 'erbium-devel'
+  No end effector bugfix
+  See merge request robots/tiago_robot!149
+* file_suffix consistency
+* Merge branch 'no-end-effector-bugfix' of gitlab:robots/tiago_robot into no-end-effector-bugfix
+* Apply 5 suggestion(s) to 4 file(s)
+* remove redundant spaces
+* remove redundant spaces
+* end effector back to hey-5
+* prevent ft sensor to load when no arm is attached
+* update motions
+* update epck gripper
+* edit motions config
+* update motions config file
+* Update eval function, generate scripts
+* delete wrongly named hardware yaml file
+* rewrite eval function for name of config files
+* edit motions config
+* update motions config file
+* made some changes
+* Update eval function, generate scripts
+* delete wrongly named hardware yaml file
+* rewrite eval function for name of config files
+* prevent ft sensor to load when no arm is attached
+* Merge branch 'no-end-effector-bugfix' of gitlab:robots/tiago_robot into no-end-effector-bugfix
+* update motions
+* remove.orig file|
+* rebase
+* rebase
+* update epck gripper
+* edit motions config
+* update motions config file
+* Update eval function, generate scripts
+* delete wrongly named hardware yaml file
+* rewrite eval function for name of config files
+* edit motions config
+* update motions config file
+* made some changes
+* Update eval function, generate scripts
+* delete wrongly named hardware yaml file
+* rewrite eval function for name of config files
+* update epck gripper
+* edit motions config
+* update motions config file
+* made some changes
+* Update eval function, generate scripts
+* delete wrongly named hardware yaml file
+* rewrite eval function for name of config files
+* edit motions config
+* update motions config file
+* made some changes
+* Update eval function, generate scripts
+* delete wrongly named hardware yaml file
+* rewrite eval function for name of config files
+* Contributors: David ter Kuile, saikishor
+
 2.2.14 (2022-04-20)
 -------------------
 

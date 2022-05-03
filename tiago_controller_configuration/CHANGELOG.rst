@@ -2,6 +2,30 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'no-end-effector-bugfix' into 'erbium-devel'
+  No end effector bugfix
+  See merge request robots/tiago_robot!149
+* remove redundant spaces
+* remove redundant spaces
+* Added no end-effector to cartesian impedance controller.launch
+* made some changes
+* Update eval function, generate scripts
+* rebase
+* rebase
+* Added no end-effector to cartesian impedance controller.launch
+* made some changes
+* Update eval function, generate scripts
+* rebaed
+* Added no end-effector to cartesian impedance controller.launch
+* made some changes
+* Update eval function, generate scripts
+* Added no end-effector to cartesian impedance controller.launch
+* made some changes
+* Update eval function, generate scripts
+* Contributors: David ter Kuile, saikishor
+
 2.2.14 (2022-04-20)
 -------------------
 

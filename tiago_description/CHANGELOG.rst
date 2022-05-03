@@ -2,6 +2,55 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'no-end-effector-bugfix' into 'erbium-devel'
+  No end effector bugfix
+  See merge request robots/tiago_robot!149
+* Merge branch 'no-end-effector-bugfix' of gitlab:robots/tiago_robot into no-end-effector-bugfix
+* Apply 5 suggestion(s) to 4 file(s)
+* remove redundant spaces
+* remove redundant spaces
+* end effector back to hey-5
+* prevent ft sensor to load when no arm is attached
+* add epick end-effector
+* add no-ee to urdf
+* update motions config file
+* fix faulty if statement in urdf
+* Update eval function, generate scripts
+* add no-ee to urdf
+* edit motions config
+* update motions config file
+* fix faulty if statement in urdf
+* made some changes
+* Update eval function, generate scripts
+* prevent ft sensor to load when no arm is attached
+* add epick end-effector
+* add no-ee to urdf
+* update motions config file
+* fix faulty if statement in urdf
+* Update eval function, generate scripts
+* add no-ee to urdf
+* edit motions config
+* update motions config file
+* fix faulty if statement in urdf
+* made some changes
+* Update eval function, generate scripts
+* add epick end-effector
+* add no-ee to urdf
+* edit motions config
+* update motions config file
+* fix faulty if statement in urdf
+* made some changes
+* Update eval function, generate scripts
+* add no-ee to urdf
+* edit motions config
+* update motions config file
+* fix faulty if statement in urdf
+* made some changes
+* Update eval function, generate scripts
+* Contributors: David ter Kuile, saikishor
+
 2.2.14 (2022-04-20)
 -------------------
 * Fix materials

@@ -2,6 +2,12 @@
 Changelog for package tiago_robot
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* remove redundant spaces
+* remove redundant spaces
+* Contributors: David ter Kuile
+
 2.2.14 (2022-04-20)
 -------------------
 
