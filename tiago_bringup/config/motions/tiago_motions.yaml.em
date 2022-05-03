@@ -5,7 +5,7 @@ play_motion:
 @[if end_effector in ["pal-gripper", "schunk-wsg", "robotiq-2f-85", "robotiq-2f-140"]]@
   controllers: [arm_controller, head_controller, torso_controller, gripper_controller]
 @[end if]@
-@[if end_effector == "robotiq-epick"]@
+@[if end_effector in ["robotiq-epick", "no-ee"]]@
   controllers: [arm_controller, head_controller, torso_controller]
 @[end if]@
 @[if not has_arm]@

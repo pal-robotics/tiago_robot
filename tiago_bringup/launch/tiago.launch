@@ -32,7 +32,7 @@
   </include>
 
   <!-- tiago_hardware parameters -->
-  <arg name="file_suffix" value="$(eval ('no-arm' if not arm else end_effector+ ('' if not ft_sensor else '_'+ft_sensor)))"/>
+  <arg name="file_suffix" value="$(eval ('no-arm' if not arm else ((end_effector if end_effector else 'no-ee') + ('_' +  ft_sensor if ft_sensor else ''))))"/>  
   <rosparam command="load" file="$(find tiago_bringup)/config/tiago_hardware/tiago_hardware_$(arg file_suffix).yaml"/>
 
   <!-- Node that forwards commands and feedback of dynamixel motors -->

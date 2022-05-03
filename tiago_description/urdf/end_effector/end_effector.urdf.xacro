@@ -27,7 +27,14 @@
     - parent: Parent link
     - reflect: Set to 1 for a right end effector, or to -1 for a left end effector
   -->
-  <xacro:macro name="tiago_end_effector" params="name parent type reflect is_dual:=false">
+  <xacro:macro name="tiago_end_effector" params="name parent type has_end_effector reflect is_dual:=false">
+
+  <!-- No end-effector -->
+  <xacro:if value="${not has_end_effector}">
+
+    <!-- Add nothing -->
+
+  </xacro:if>
 
   <!-- PAL Gripper -->
   <xacro:if value="${type == 'pal-gripper'}">

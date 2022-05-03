@@ -7,12 +7,14 @@
   <arg name="ns" default="cartesian_impedance"/>
   <arg name="wrist_model" default="wrist-2010"/>
 
+  <arg name="ee_suffix" value="$(eval (end_effector if end_effector else 'no-ee'))"/>
   <rosparam command="load" file="$(find tiago_controller_configuration)/config/cartesian_impedance.yaml" />
 
   <!-- check what should be the model chains in the respective cartesian impedance control -->
-  <arg name="model_chains" value="['gripper_link']" if="$(eval end_effector == 'pal-gripper')"/>
-  <arg name="model_chains" value="['hand_palm_link']" if="$(eval end_effector == 'pal-hey5')"/>
-  <arg name="model_chains" value="['gripper_base_link']" if="$(eval end_effector in ['robotiq-2f-85', 'robotiq-2f-140', 'robotiq-epick'])"/>
+  <arg name="model_chains" value="['gripper_link']" if="$(eval ee_suffix == 'pal-gripper')"/>
+  <arg name="model_chains" value="['hand_palm_link']" if="$(eval ee_suffix == 'pal-hey5')"/>
+  <arg name="model_chains" value="['gripper_base_link']" if="$(eval ee_suffix in ['robotiq-2f-85', 'robotiq-2f-140','robotiq-epick'])"/>
+  <arg name="model_chains" value="['arm_tool_link']" if="$(eval ee_suffix == 'no-ee')"/>
 
   <rosparam param="/$(arg ns)/robot_model_chains" subst_value="True">$(arg model_chains)</rosparam>
 
