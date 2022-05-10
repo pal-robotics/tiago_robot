@@ -21,6 +21,7 @@
     <xacro:arg name="extrinsic_calibration_dir" default="$(find tiago_description_calibration)/urdf/calibration"/>
     <xacro:arg name="namespace" default=""/>
     <xacro:arg name="no_safety_eps" default="false"/>
+    <xacro:arg name="use_sim" default="true"/>
     <xacro:property name="arm" value="$(arg arm)" />
     <xacro:if value="${arm not in ['right-arm', 'left-arm', 'no-arm']}">
       <xacro:wrong_arm/>
@@ -90,6 +91,8 @@
 
   <!-- ros2_control -->
   <xacro:include filename="$(find tiago_description)/ros2_control/ros2_control.urdf.xacro" />
+  <xacro:tiago_ros2_control
+    use_sim="$(arg use_sim)" />
 
   <!-- Materials for visualization -->
   <xacro:include filename="$(find tiago_description)/urdf/materials.urdf.xacro" />
