@@ -5,9 +5,9 @@
 # If you want to use two cameras at the same time you have to open a second terminal and do rosrun tiago_bringup end_effector_camera.sh left_camera
 
 # each column is one camera and its configuration
-list_vendor=("1908" "0bda")
-list_product=("2311" "5806")
-list_frame_rate=(14 30) #frame rate depending on vendor:product
+list_vendor=("1908" "0bda" "1902")
+list_product=("2311" "5806" "8301")
+list_frame_rate=(14 30 30) #frame rate depending on vendor:product
 
 cameras_run() {
 camera=${1:-"camera"}
