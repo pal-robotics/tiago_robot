@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.3.1 (2022-05-16)
+------------------
 * Merge branch 'new_endoscopic_camera_support' into 'erbium-devel'
   added support for new endoscopic camera vendor
   See merge request robots/tiago_robot!151
