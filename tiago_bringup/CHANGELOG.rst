@@ -2,6 +2,11 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* added support for the new product ID from same vendor for endoscopic camera
+* Contributors: Sai Kishor Kothakota
+
 2.3.1 (2022-05-16)
 ------------------
 * Merge branch 'new_endoscopic_camera_support' into 'erbium-devel'
