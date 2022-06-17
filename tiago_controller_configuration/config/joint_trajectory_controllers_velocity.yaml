@@ -1,0 +1,46 @@
+arm_velocity_trajectory_controller:
+  type: "velocity_controllers/JointTrajectoryController"
+  joints:
+    - arm_1_joint
+    - arm_2_joint
+    - arm_3_joint
+    - arm_4_joint
+    - arm_5_joint
+    - arm_6_joint
+    - arm_7_joint
+
+  gains:
+    arm_1_joint: {p: 5, d: 0.1, i: 0.01, i_clamp: 2}
+    arm_2_joint: {p: 5, d: 0.1, i: 0.01, i_clamp: 2}
+    arm_3_joint: {p: 10, d: 0.1, i: 0.01, i_clamp: 2}
+    arm_4_joint: {p: 10, d: 0.1, i: 0.01, i_clamp: 2}
+    arm_5_joint: {p: 10, d: 0.1, i: 0.01, i_clamp: 1}
+    arm_6_joint: {p: 10, d: 0.1, i: 0.01, i_clamp: 1}
+    arm_7_joint: {p: 10, d: 0.1, i: 0.01, i_clamp: 1}
+
+  velocity_ff:
+    arm_1_joint: 1.0 
+    arm_2_joint: 1.0 
+    arm_3_joint: 1.0 
+    arm_4_joint: 1.0 
+    arm_5_joint: 1.0 
+    arm_6_joint: 1.0 
+    arm_7_joint: 1.0 
+
+  constraints:
+    goal_time: 0.6
+    stopped_velocity_tolerance: 5.0
+    arm_1_joint:
+      goal: 0.02
+    arm_2_joint:
+      goal: 0.02
+    arm_3_joint:
+      goal: 0.02
+    arm_4_joint:
+      goal: 0.02
+    arm_5_joint:
+      goal: 0.02
+    arm_6_joint:
+      goal: 0.02
+    arm_7_joint:
+      goal: 0.02
