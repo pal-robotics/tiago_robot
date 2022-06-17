@@ -7,7 +7,9 @@
   <arg name="laser_model"  default="sick-571"/>
   <arg name="camera_model"  default="orbbec-astra"/>
   <arg name="wrist_model"  default="wrist-2010"/>
+  <arg name="base_type" default="pmb2"/>
   <arg name="base_type_suffix" default=""/>
+
 
   <!-- Load default controllers -->
   <include file="$(find tiago_controller_configuration)/launch/tiago_controllers.launch">
@@ -18,6 +20,7 @@
     <arg name="camera_model" value="$(arg camera_model)"/>
     <arg name="wrist_model" value="$(arg wrist_model)"/>
     <arg name="base_type_suffix"  value="$(arg base_type_suffix)"/>
+    <arg name="base_type" value="$(arg base_type)"/>
   </include>
 
   <!-- Robot state publisher -->
