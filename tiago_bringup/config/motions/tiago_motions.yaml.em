@@ -515,6 +515,23 @@ play_motion:
         usage: demo
         description: 'shake_hands'
 
+@[if base_type == "omni_base"]@
+    pick_from_floor:
+      joints: ['torso_lift_joint', 'arm_1_joint', 'arm_2_joint', 'arm_3_joint', 'arm_4_joint', 'arm_5_joint', 'arm_6_joint', 'arm_7_joint', 'hand_thumb_joint', 'hand_index_joint', 'hand_mrl_joint']
+      points:
+      - positions: [0.226, 1.60, -0.87, 0.81, 0.38, -1.57, 0.17, 1.58, 0.0, -0.001, -0.0]
+        time_from_start: 0.0
+      - positions: [0.158, 1.60, -0.87, 0.81, 0.38, -1.57, 0.17, 1.58, 0.0, -0.001, -0.0]
+        time_from_start: 4.0
+      - positions: [0.158, 1.60, -0.87, -1.18, 0.38, -1.57, 0.17, 1.58, 6.2, 6.77, 8.8]
+        time_from_start: 6.0
+      - positions: [0.226, 0.21, -1.153, -1.538, 2.26, 1.965, 0.394, -0.082, 6.2, 6.77, 8.8]
+        time_from_start: 9.0
+      meta:
+        name: Pick from floor
+        usage: demo
+        description: 'Pick a shirt-like object from floor in front of the robot'
+@[else]@
 @[if ft_sensor == "schunk-ft"]@
     pick_from_floor:
       joints: ['torso_lift_joint', 'arm_1_joint', 'arm_2_joint', 'arm_3_joint', 'arm_4_joint', 'arm_5_joint', 'arm_6_joint', 'arm_7_joint', 'hand_thumb_joint', 'hand_index_joint', 'hand_mrl_joint']
@@ -547,6 +564,7 @@ play_motion:
         name: Pick from floor
         usage: demo
         description: 'Pick a shirt-like object from floor in front of the robot'
+@[end if]@
 @[end if]@
 @[end if]@
 
@@ -591,6 +609,23 @@ play_motion:
         usage: demo
         description: 'shake_hands'
 
+@[if base_type == "omni_base"]@
+    pick_from_floor:
+      joints: ['torso_lift_joint', 'arm_1_joint', 'arm_2_joint', 'arm_3_joint', 'arm_4_joint', 'arm_5_joint', 'arm_6_joint', 'arm_7_joint', 'gripper_left_finger_joint', 'gripper_right_finger_joint']
+      points:
+      - positions: [0.26, 0.90, -0.19, -0.19, 1.29, -2.03, 0.17, 1.58, 0.044, 0.044]
+        time_from_start: 0.0
+      - positions: [0.18, 1.60, -0.87, 0.81, 0.38, -1.57, 0.17, 1.58, 0.044, 0.044]
+        time_from_start: 4.0
+      - positions: [0.18, 1.60, -0.87, -1.18, 0.38, -1.57, 0.17, 1.58, 0.0, 0.0]
+        time_from_start: 6.0
+      - positions: [0.26, 0.21, -1.153, -1.538, 2.26, 1.965, 0.394, -0.082, 0.0, 0.0]
+        time_from_start: 9.0
+      meta:
+        name: Pick from floor
+        usage: demo
+        description: 'Pick a shirt-like object from floor in front of the robot'
+@[else]@
     pick_from_floor:
       joints: ['torso_lift_joint', 'arm_1_joint', 'arm_2_joint', 'arm_3_joint', 'arm_4_joint', 'arm_5_joint', 'arm_6_joint', 'arm_7_joint', 'gripper_left_finger_joint', 'gripper_right_finger_joint']
       points:
@@ -606,6 +641,7 @@ play_motion:
         name: Pick from floor
         usage: demo
         description: 'Pick a shirt-like object from floor in front of the robot'
+@[end if]@
 @[end if]@
 
 @[if end_effector == "schunk-wsg"]@
@@ -648,6 +684,23 @@ play_motion:
         usage: demo
         description: 'shake_hands'
 
+@[if base_type == "omni_base"]@
+    pick_from_floor:
+      joints: ['torso_lift_joint', 'arm_1_joint', 'arm_2_joint', 'arm_3_joint', 'arm_4_joint', 'arm_5_joint', 'arm_6_joint', 'arm_7_joint', 'gripper_finger_joint']
+      points:
+      - positions: [0.26, 0.90, -0.19, -0.19, 1.29, -2.03, 0.17, 1.58, 0.031]
+        time_from_start: 0.0
+      - positions: [0.158, 1.60, -0.87, 0.81, 0.38, -1.57, 0.17, 1.58, 0.031]
+        time_from_start: 4.0
+      - positions: [0.158, 1.60, -0.87, -1.18, 0.38, -1.57, 0.17, 1.58, 0.0]
+        time_from_start: 6.0
+      - positions: [0.26, 0.21, -1.153, -1.538, 2.26, 1.965, 0.394, -0.082, 0.0]
+        time_from_start: 9.0
+      meta:
+        name: Pick from floor
+        usage: demo
+        description: 'Pick a shirt-like object from floor in front of the robot'
+@[else]@
     pick_from_floor:
       joints: ['torso_lift_joint', 'arm_1_joint', 'arm_2_joint', 'arm_3_joint', 'arm_4_joint', 'arm_5_joint', 'arm_6_joint', 'arm_7_joint', 'gripper_finger_joint']
       points:
@@ -663,6 +716,7 @@ play_motion:
         name: Pick from floor
         usage: demo
         description: 'Pick a shirt-like object from floor in front of the robot'
+@[end if]@
 
 @[end if]@
 
@@ -706,6 +760,23 @@ play_motion:
         usage: demo
         description: 'shake_hands'
 
+@[if base_type == "omni_base"]@
+    pick_from_floor:
+      joints: ['torso_lift_joint', 'arm_1_joint', 'arm_2_joint', 'arm_3_joint', 'arm_4_joint', 'arm_5_joint', 'arm_6_joint', 'arm_7_joint', 'gripper_finger_joint']
+      points:
+      - positions: [0.26, 0.90, -0.19, -0.19, 1.29, -2.03, 0.17, 1.58, 0.0]
+        time_from_start: 0.0
+      - positions: [@[if end_effector == "robotiq-2f-85"]0.158@[else]0.24@[end if], 1.60, -0.87, 0.81, 0.38, -1.57, 0.17, 1.58, 0.0]
+        time_from_start: 4.0
+      - positions: [@[if end_effector == "robotiq-2f-85"]0.158@[else]0.24@[end if], 1.60, -0.87, -1.18, 0.38, -1.57, 0.17, 1.58, @[if end_effector == "robotiq-2f-85"]0.75@[else]0.65@[end if]]
+        time_from_start: 6.0
+      - positions: [0.26, 0.21, -1.153, -1.538, 2.26, 1.965, 0.394, -0.082, @[if end_effector == "robotiq-2f-85"]0.75@[else]0.65@[end if]]
+        time_from_start: 9.0
+      meta:
+        name: Pick from floor
+        usage: demo
+        description: 'Pick a shirt-like object from floor in front of the robot'
+@[else]@
     pick_from_floor:
       joints: ['torso_lift_joint', 'arm_1_joint', 'arm_2_joint', 'arm_3_joint', 'arm_4_joint', 'arm_5_joint', 'arm_6_joint', 'arm_7_joint', 'gripper_finger_joint']
       points:
@@ -721,6 +792,7 @@ play_motion:
         name: Pick from floor
         usage: demo
         description: 'Pick a shirt-like object from floor in front of the robot'
+@[end if]@
 @[end if]@
 @[if end_effector == "robotiq-epick"]@
     #deprecated, use offer
