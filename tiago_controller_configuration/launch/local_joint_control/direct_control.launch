@@ -26,6 +26,5 @@
       <arg name="ns" value="whole_body_kinematic_controller"/>
       <arg name="control_torso" value="$(arg control_torso)"/>
   </include>
-  torso control-->
 
 </launch>
