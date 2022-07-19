@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <arg name="base_type" default="pmb2"/>
+
+  <include file="$(find sb04_bridge)/launch/mm11.launch">
+    <arg name="flags"  value="'-a'" if="$(eval arg('base_type') == 'pmb2')"/>
+    <arg name="flags"  value="'-y -l -i -g -p'" if="$(eval arg('base_type') == 'omni_base')"/>
+  </include>
+
+</launch>
