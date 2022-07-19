@@ -2,6 +2,11 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Removed extra space in the filename
+* Contributors: antoniobrandi
+
 2.3.2 (2022-05-17)
 ------------------
 
