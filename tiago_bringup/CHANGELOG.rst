@@ -2,6 +2,17 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'add_omni_tiago' into 'erbium-devel'
+  Add base_type to the missing launch files
+  See merge request robots/tiago_robot!153
+* address comment + adding mm11.launch to take into account the base_type
+* Merge the 2 .em files and create a script only for the motions
+* Add specific motions for the TIAGo omni
+* =Add base_type to the missing launch files
+* Contributors: saikishor, thomaspeyrucain, validation_1
+
 2.3.3 (2022-07-19)
 ------------------
 
