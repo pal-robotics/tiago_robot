@@ -47,5 +47,6 @@
     <arg name="camera_model"  value="$(arg camera_model)"/>
     <arg name="wrist_model"  value="$(arg wrist_model)"/>
     <arg name="base_type_suffix"  value="$(arg base_type_suffix)"/>
+    <arg name="base_type" value="$(arg base_type)"/>
   </include>
 </launch>
