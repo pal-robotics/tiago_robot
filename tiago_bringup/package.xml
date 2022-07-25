@@ -21,6 +21,7 @@
   <exec_depend>speed_limit_node</exec_depend>
   <exec_depend>camera_calibration_files</exec_depend>
   <exec_depend>libuvc_camera</exec_depend>
+  <exec_depend>usb_cam</exec_depend>
   <exec_depend>robot_pose</exec_depend>
   <exec_depend>custom_ee_configuration</exec_depend>
 </package>
