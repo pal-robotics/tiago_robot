@@ -2,6 +2,9 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 2.3.4 (2022-07-21)
 ------------------
 * Merge branch 'add_omni_tiago' into 'erbium-devel'
