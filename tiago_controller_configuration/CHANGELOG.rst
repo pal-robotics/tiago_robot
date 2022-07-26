@@ -2,8 +2,8 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.3.5 (2022-07-26)
+------------------
 * Merge branch 'omnibase_wbc' into 'erbium-devel'
   propagate base_type to wbc
   See merge request robots/tiago_robot!155
