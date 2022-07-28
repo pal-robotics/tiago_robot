@@ -44,13 +44,13 @@
     <collision>
       <origin rpy="0 0 0" xyz="0.085 0.0 0.02" />
       <geometry>
-        <box size="0.4 0.25 0.04"/>
+        <box size="0.4 0.265 0.05"/>
       </geometry>
     </collision>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0.05" />
       <geometry>
-        <box size="0.25 0.25 0.1"/>
+        <box size="0.255 0.255 0.117"/>
       </geometry>
     </collision>
   </link>
@@ -81,7 +81,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0.275" />
       <geometry>
-        <box size="0.23 0.23 0.55"/>
+        <box size="0.23 0.253 0.45"/>
       </geometry>
       <material name="DarkGrey"/>
     </collision>
