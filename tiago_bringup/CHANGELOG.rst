@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.3.6 (2022-08-04)
+------------------
 * Merge branch 'use_usb_camera' into 'erbium-devel'
   Update launch file and script to be able to use usb_camera instead of libuvc_camera
   See merge request robots/tiago_robot!154
