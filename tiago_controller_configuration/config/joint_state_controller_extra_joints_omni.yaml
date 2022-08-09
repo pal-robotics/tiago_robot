@@ -1,5 +1,1 @@
-extra_joints:
-    - name: 'suspension_front_left_joint'
-    - name: 'suspension_front_right_joint'
-    - name: 'suspension_rear_left_joint'
-    - name: 'suspension_rear_right_joint'
+# Empty because the extra joints were changed to fixed. Will be fixed by changing how the config files are loaded
