@@ -2,6 +2,9 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 2.3.6 (2022-08-04)
 ------------------
 * Merge branch 'use_usb_camera' into 'erbium-devel'

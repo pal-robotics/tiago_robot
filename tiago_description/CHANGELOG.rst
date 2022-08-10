@@ -2,6 +2,14 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'fix_torso_collision' into 'erbium-devel'
+  Fix collision boxes for the torso
+  See merge request robots/tiago_robot!156
+* Fix collision boxes for the torso
+* Contributors: saikishor, thomaspeyrucain
+
 2.3.6 (2022-08-04)
 ------------------
 

@@ -2,6 +2,15 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'fix_torso_collision' into 'erbium-devel'
+  Fix collision boxes for the torso
+  See merge request robots/tiago_robot!156
+* Reorder param order for making it easier to spot
+* Remove extra joints because were changed to fixed
+* Contributors: saikishor, thomaspeyrucain
+
 2.3.6 (2022-08-04)
 ------------------
 
