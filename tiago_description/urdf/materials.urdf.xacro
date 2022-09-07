@@ -41,4 +41,16 @@
   <material name="Yellow">
     <color rgba="0.96 0.88 0.14 1.0"/>
   </material>
+
+  <material name="Orange">
+    <color rgba="1.0 0.69 0.0 1.0"/>
+  </material>
+
+  <material name="Black">
+    <color rgba="0.0 0.0 0.0 1.0"/>
+  </material>
+
+  <material name="FlatBlack">
+    <color rgba="0.09 0.09 0.09 1.0"/>
+  </material>
 </robot>
