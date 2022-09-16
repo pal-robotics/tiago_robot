@@ -73,7 +73,7 @@ def generate_launch_description():
 
     # Declare arguments
     # we use OpaqueFunction so the callbacks have access to the context
-    ld.add_action(get_robot_name())
+    ld.add_action(get_robot_name('tiago'))
     ld.add_action(OpaqueFunction(function=declare_args))
 
     # Execute robot_state_publisher node
