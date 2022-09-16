@@ -1,4 +1,4 @@
-# Copyright (c) 2021 PAL Robotics S.L.
+# Copyright (c) 2022 PAL Robotics S.L.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -21,8 +21,8 @@ def generate_launch_description():
         'tiago_controller_configuration',
         ['launch', 'default_controllers.launch.py'])
 
-    play_motion = include_launch_py_description(
-        'tiago_bringup', ['launch', 'play_motion.launch.py'])
+    # play_motion = include_launch_py_description(
+    #     'tiago_bringup', ['launch', 'play_motion.launch.py'])
 
     twist_mux = include_launch_py_description(
         'tiago_bringup', ['launch', 'twist_mux.launch.py'])

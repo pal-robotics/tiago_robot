@@ -1,16 +1,23 @@
-import os
+# Copyright (c) 2022 PAL Robotics S.L.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 
 from ament_index_python.packages import get_package_share_directory
-from launch import LaunchDescription, Substitution
-from launch_ros.actions import Node
-from launch_ros.substitutions import FindPackageShare, ExecutableInPackage
-from launch.substitutions import Command, PathJoinSubstitution
-from launch import Substitution, SomeSubstitutionsType, LaunchContext
-from typing import List
-from typing import Text
-from launch_pal.arg_utils import read_launch_argument
+from launch import LaunchDescription
 from launch_pal.substitutions import LoadFile
-from tiago_description.tiago_launch_utils import get_tiago_hw_arguments, get_tiago_hw_suffix, generate_robot_description_action
+from launch_ros.actions import Node
+from tiago_description.tiago_launch_utils import (generate_robot_description_action,
+                                                  get_tiago_hw_arguments, get_tiago_hw_suffix)
 
 
 def generate_launch_description():
@@ -18,15 +25,15 @@ def generate_launch_description():
         arm=True, wrist_model=False, end_effector=True, ft_sensor=True)
 
     robot_description = {
-        "robot_description": generate_robot_description_action()
+        'robot_description': generate_robot_description_action()
     }
 
     robot_description_semantic_config = LoadFile(
-        [get_package_share_directory("tiago_moveit_config"),
-         "/config/srdf/tiago_", tiago_hw_suffix, ".srdf"]
+        [get_package_share_directory('tiago_moveit_config'),
+         '/config/srdf/tiago_', tiago_hw_suffix, '.srdf']
     )
     robot_description_semantic = {
-        "robot_description_semantic": robot_description_semantic_config
+        'robot_description_semantic': robot_description_semantic_config
     }
 
     approach_planner = [get_package_share_directory('tiago_bringup'),

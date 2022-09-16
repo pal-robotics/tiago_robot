@@ -13,9 +13,8 @@
 # limitations under the License.
 
 from launch import LaunchDescription
-from launch_ros.actions import Node
-
 from launch_pal.include_utils import include_launch_py_description
+from launch_ros.actions import Node
 
 
 def generate_launch_description():
