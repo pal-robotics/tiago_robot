@@ -7,7 +7,8 @@
       a variety of other components.  Most users will not interact directly
       with this package.</description>
   <maintainer email="jordi.pages@pal-robotics.com">Jordi Pages</maintainer>
-  <maintainer email="hilario.tome@pal-robotics.com">Hilario Tome</maintainer>
+  <maintainer email="jordan.palacios@pal-robotics.com">Jordan Palacios</maintainer>
+  <maintainer email="noel.jimenez@pal-robotics.com">Noel Jimenez</maintainer>
   <license>Creative Commons BY-NC-ND 3.0</license>
 
   <buildtool_depend>ament_cmake_auto</buildtool_depend>
