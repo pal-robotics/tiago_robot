@@ -4,7 +4,7 @@
       type: topic
       interface_type: geometry_msgs/msg/Twist
       topic_name: cmd_vel
-      deadman_buttons: []
+      deadman_buttons: [0]
       axis_mappings:
         linear-x:
           axis: 1

@@ -16,8 +16,8 @@
   <xacro:include filename="$(find tiago_description)/urdf/arm/arm.transmission.xacro" />
 
   <!--Constant parameters-->
-  <xacro:property name="arm_friction"       value="1.0" />
-  <xacro:property name="arm_damping"        value="1.0" />
+  <xacro:property name="arm_friction"       value="4.0" />
+  <xacro:property name="arm_damping"        value="60.0" />
   <xacro:property name="arm_1_max_vel"      value="1.95" />
   <xacro:property name="arm_2_max_vel"      value="1.95" />
   <xacro:property name="arm_3_max_vel"      value="2.35" />
