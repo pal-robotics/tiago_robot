@@ -23,7 +23,6 @@ from launch_pal.robot_utils import get_end_effector, get_robot_name
 def declare_end_effector(context, *args, **kwargs):
 
     robot_name = read_launch_argument('robot_name', context)
-    print(robot_name)
     return [get_end_effector(robot_name)]
 
 
