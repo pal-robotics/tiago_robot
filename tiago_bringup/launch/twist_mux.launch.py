@@ -37,4 +37,6 @@ def generate_launch_description():
             'joystick': joystick_file,
         }.items())
 
-    return LaunchDescription([twist_mux])
+    ld = LaunchDescription()
+    ld.add_action(twist_mux)
+    return ld

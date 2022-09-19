@@ -47,8 +47,10 @@ def generate_launch_description():
 
     # @TODO: joy_node in ROS2
 
-    return LaunchDescription([
-        cmd_vel,
-        teleop_config,
-        joy_teleop_node,
-    ])
+    ld = LaunchDescription()
+
+    ld.add_action(cmd_vel)
+    ld.add_action(teleop_config)
+    ld.add_action(joy_teleop_node)
+
+    return ld
