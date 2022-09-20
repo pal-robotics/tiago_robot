@@ -35,9 +35,11 @@ def generate_launch_description():
     # @TODO: tf lookup
     # @TODO: dynamic footprint
 
-    return LaunchDescription([
-        default_controllers,
-        # play_motion,
-        twist_mux,
-        joystick_teleop
-    ])
+    ld = LaunchDescription()
+
+    ld.add_action(default_controllers)
+    # ld.add_action(play_motion)
+    ld.add_action(twist_mux)
+    ld.add_action(joystick_teleop)
+
+    return ld

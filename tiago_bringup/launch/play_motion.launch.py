@@ -61,4 +61,9 @@ def generate_launch_description():
         ft_sensor=True,
         camera_model=True)
 
-    return LaunchDescription([*tiago_args, play_motion])
+    ld = LaunchDescription()
+
+    ld.add_action(*tiago_args)
+    ld.add_action(play_motion)
+
+    return ld

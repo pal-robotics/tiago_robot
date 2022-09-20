@@ -35,8 +35,10 @@ def generate_launch_description():
         #       arguments=['-d', rviz_config_file],
         output='screen')
 
-    return LaunchDescription([
-        robot_state_publisher,
-        start_joint_pub_gui,
-        start_rviz_cmd
-    ])
+    ld = LaunchDescription()
+
+    ld.add_action(robot_state_publisher)
+    ld.add_action(start_joint_pub_gui)
+    ld.add_action(start_rviz_cmd)
+
+    return ld
