@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from launch.substitutions import PythonExpression, LaunchConfiguration
+from launch.substitutions import LaunchConfiguration, PythonExpression
 
 
 def get_tiago_hw_suffix(
@@ -23,30 +23,29 @@ def get_tiago_hw_suffix(
         camera_model=False,
         **kwargs):
     """
-    Generate a substitution that creates a text suffix combining the specified tiago arguments
+    Generate a substitution that creates a text suffix combining the specified tiago arguments.
 
     The arguments are read as LaunchConfigurations
 
-    For instance, the suffix for: arm=right-arm, wrist_model=wrist-2017, end_effector="pal-gripper"
-    would be "right-arm_wrist-2017_pal-gripper"
+    For instance, the suffix for: arm=right-arm, wrist_model=wrist-2017, end_effector='pal-gripper'
+    would be 'right-arm_wrist-2017_pal-gripper'
     """
-
     suffix_elements = ["'"]
     if arm:
-        suffix_elements.append(LaunchConfiguration("arm"))
-        suffix_elements.append("_")
+        suffix_elements.append(LaunchConfiguration('arm'))
+        suffix_elements.append('_')
     if wrist_model:
-        suffix_elements.append(LaunchConfiguration("wrist_model"))
-        suffix_elements.append("_")
+        suffix_elements.append(LaunchConfiguration('wrist_model'))
+        suffix_elements.append('_')
     if end_effector:
-        suffix_elements.append(LaunchConfiguration("end_effector"))
-        suffix_elements.append("_")
+        suffix_elements.append(LaunchConfiguration('end_effector'))
+        suffix_elements.append('_')
     if ft_sensor:
-        suffix_elements.append(LaunchConfiguration("ft_sensor"))
-        suffix_elements.append("_")
+        suffix_elements.append(LaunchConfiguration('ft_sensor'))
+        suffix_elements.append('_')
     if camera_model:
-        suffix_elements.append(LaunchConfiguration("camera_model"))
-        suffix_elements.append("_")
+        suffix_elements.append(LaunchConfiguration('camera_model'))
+        suffix_elements.append('_')
     suffix_elements = suffix_elements[:-1]  # remove last _
     suffix_elements.append("'")
     print(suffix_elements)

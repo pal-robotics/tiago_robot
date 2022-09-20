@@ -12,9 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+from launch_pal.include_utils import include_launch_py_description
 from urdf_test.description_test import (generate_urdf_test_description,
                                         TestDescriptionPublished, TestSuccessfulExit)
-from launch_pal.include_utils import include_launch_py_description
 
 # Ignore unused import warnings for the Test Classes
 __all__ = ('TestDescriptionPublished', 'TestSuccessfulExit')
@@ -24,5 +24,4 @@ def generate_test_description():
     return generate_urdf_test_description(
         include_launch_py_description(
             'tiago_description', ['launch', 'robot_state_publisher.launch.py']),
-
     )
