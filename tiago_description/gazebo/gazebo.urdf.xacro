@@ -27,7 +27,7 @@
       <always_on>true</always_on>
       <update_rate>100.0</update_rate>
       <ros>
-        <argument>odom:=ground_truth_odom</argument>
+        <remapping>odom:=ground_truth_odom</remapping>
       </ros>
       <xacro:if value="${is_multiple}">
 	    <!--<robotNamespace>/${nsp}</robotNamespace>-->
@@ -42,7 +42,7 @@
       <always_on>true</always_on>
       <update_rate>1000.0</update_rate>
       <ros>
-        <argument>odom:=floating_base_pose_simulated</argument>
+        <remapping>odom:=floating_base_pose_simulated</remapping>
       </ros>
       <xacro:if value="${is_multiple}">
 	    <!--<robotNamespace>/${nsp}</robotNamespace>-->
