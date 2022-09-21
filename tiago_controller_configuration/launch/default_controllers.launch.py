@@ -26,6 +26,16 @@ def declare_end_effector(context, *args, **kwargs):
     return [get_end_effector(robot_name)]
 
 
+def launch_end_effector_controller(context, *args, **kwargs):
+
+    end_effector_launcher = read_launch_argument('end_effector_controller_launch', context)
+    end_effector_controller_launch = include_launch_py_description(
+        'tiago_controller_configuration',
+        ['launch', end_effector_launcher])
+
+    return [end_effector_controller_launch]
+
+
 def generate_launch_description():
 
     end_effector_controller = DeclareLaunchArgument(
@@ -53,10 +63,6 @@ def generate_launch_description():
         'tiago_controller_configuration',
         ['launch', 'arm_controller.launch.py'])
 
-    end_effector_controller_launch = include_launch_py_description(
-        'tiago_controller_configuration',
-        ['launch', LaunchConfiguration('end_effector_controller_launch')])
-
     ld = LaunchDescription()
 
     ld.add_action(get_robot_name('tiago'))
@@ -68,6 +74,6 @@ def generate_launch_description():
     ld.add_action(torso_controller_launch)
     ld.add_action(head_controller_launch)
     ld.add_action(arm_controller_launch)
-    ld.add_action(end_effector_controller_launch)
+    ld.add_action(OpaqueFunction(function=launch_end_effector_controller))
 
     return ld
