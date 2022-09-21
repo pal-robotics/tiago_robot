@@ -59,7 +59,7 @@ def generate_launch_description():
 
     ld = LaunchDescription()
 
-    ld.add_action(get_robot_name())
+    ld.add_action(get_robot_name('tiago'))
     ld.add_action(OpaqueFunction(function=declare_end_effector))
     ld.add_action(end_effector_controller)
 
