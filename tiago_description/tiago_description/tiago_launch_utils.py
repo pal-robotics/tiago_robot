@@ -12,41 +12,38 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from launch.substitutions import LaunchConfiguration, PythonExpression
-
 
 def get_tiago_hw_suffix(
-        arm=False,
-        wrist_model=False,
-        end_effector=False,
-        ft_sensor=False,
-        camera_model=False,
-        **kwargs):
+        arm=None,
+        wrist_model=None,
+        end_effector=None,
+        ft_sensor=None,
+        camera_model=None):
     """
     Generate a substitution that creates a text suffix combining the specified tiago arguments.
 
-    The arguments are read as LaunchConfigurations
+    The arguments are read as string
 
     For instance, the suffix for: arm=right-arm, wrist_model=wrist-2017, end_effector='pal-gripper'
     would be 'right-arm_wrist-2017_pal-gripper'
     """
-    suffix_elements = ["'"]
-    if arm:
-        suffix_elements.append(LaunchConfiguration('arm'))
-        suffix_elements.append('_')
-    if wrist_model:
-        suffix_elements.append(LaunchConfiguration('wrist_model'))
-        suffix_elements.append('_')
-    if end_effector:
-        suffix_elements.append(LaunchConfiguration('end_effector'))
-        suffix_elements.append('_')
-    if ft_sensor:
-        suffix_elements.append(LaunchConfiguration('ft_sensor'))
-        suffix_elements.append('_')
-    if camera_model:
-        suffix_elements.append(LaunchConfiguration('camera_model'))
-        suffix_elements.append('_')
-    suffix_elements = suffix_elements[:-1]  # remove last _
-    suffix_elements.append("'")
-    print(suffix_elements)
-    return PythonExpression(suffix_elements)
+
+    suffix = ''
+
+    if arm is not None:
+        suffix += arm
+        suffix += '_'
+    if wrist_model is not None:
+        suffix += wrist_model
+        suffix += '_'
+    if end_effector is not None:
+        suffix += end_effector
+        suffix += '_'
+    if ft_sensor is not None:
+        suffix += ft_sensor
+        suffix += '_'
+    if camera_model is not None:
+        suffix += camera_model
+        suffix += '_'
+    suffix = suffix[:-1]  # remove last _
+    return suffix
