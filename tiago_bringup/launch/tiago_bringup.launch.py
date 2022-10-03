@@ -21,6 +21,9 @@ def generate_launch_description():
         'tiago_controller_configuration',
         ['launch', 'default_controllers.launch.py'])
 
+    move_group = include_launch_py_description(
+        'tiago_moveit_config', ['launch', 'move_group.launch.py'])
+
     # play_motion = include_launch_py_description(
     #     'tiago_bringup', ['launch', 'play_motion.launch.py'])
 
@@ -38,6 +41,7 @@ def generate_launch_description():
     ld = LaunchDescription()
 
     ld.add_action(default_controllers)
+    ld.add_action(move_group)
     # ld.add_action(play_motion)
     ld.add_action(twist_mux)
     ld.add_action(joystick_teleop)
