@@ -27,7 +27,6 @@ def get_tiago_hw_suffix(
     For instance, the suffix for: arm=right-arm, wrist_model=wrist-2017, end_effector='pal-gripper'
     would be 'right-arm_wrist-2017_pal-gripper'
     """
-
     suffix = ''
 
     if arm is not None:
