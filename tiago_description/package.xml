@@ -14,14 +14,19 @@
   <buildtool_depend>ament_cmake_auto</buildtool_depend>
   <buildtool_depend>ament_cmake_python</buildtool_depend>
 
+  <!-- <exec_depend>custom_ee_description</exec_depend> -->
+  <!-- <exec_depend>pal_wsg_gripper_description</exec_depend> -->
+
   <exec_depend>xacro</exec_depend>
   <exec_depend>pmb2_description</exec_depend>
   <exec_depend>hey5_description</exec_depend>
   <exec_depend>pal_gripper_description</exec_depend>
-  <exec_depend>pal_wsg_gripper_description</exec_depend>
   <exec_depend>tiago_description_calibration</exec_depend>
-  <exec_depend>custom_ee_description</exec_depend>
   <exec_depend>tiago_controller_configuration</exec_depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>launch_pal</exec_depend>
+  <exec_depend>launch_param_builder</exec_depend>
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
