@@ -24,6 +24,9 @@ mobile_base_controller:
   # Preserve turning radius when limiting speed/acceleration/jerk
   preserve_turning_radius: true
 
+  # odom tf will be published by direct laser odometry
+  enable_odom_tf: false
+
   # Publish limited velocity
   publish_cmd: false
 

@@ -18,8 +18,8 @@ mobile_base_controller:
   # Publish actual velocity cmd
   publish_cmd: true
 
-  # Publish tf odom?
-  enable_odom_tf: true
+  # odom tf will be published by direct laser odometry
+  enable_odom_tf: false
 
   # Velocity and acceleration limits
   # Whenever a min_* is unspecified, default to -max_*
