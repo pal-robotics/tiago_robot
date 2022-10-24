@@ -2,6 +2,14 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'feat/robust-odometry-integration' into 'erbium-devel'
+  disabled odom tf publication
+  See merge request robots/tiago_robot!175
+* disabled odom tf publication
+* Contributors: josegarcia
+
 2.3.7 (2022-08-10)
 ------------------
 * Merge branch 'fix_torso_collision' into 'erbium-devel'
