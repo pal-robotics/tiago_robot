@@ -21,7 +21,6 @@
   <exec_depend>pmb2_description</exec_depend>
   <exec_depend>hey5_description</exec_depend>
   <exec_depend>pal_gripper_description</exec_depend>
-  <exec_depend>tiago_description_calibration</exec_depend>
   <exec_depend>tiago_controller_configuration</exec_depend>
   <exec_depend>launch</exec_depend>
   <exec_depend>launch_ros</exec_depend>
