@@ -21,7 +21,7 @@
 
     <xacro:arg name="arm" default="true" />
     <xacro:arg name="end_effector" default="pal-hey5"/>
-    <xacro:arg name="description_calibration_dir" default="$(find tiago_description_calibration)/urdf/calibration" />
+    <xacro:arg name="description_calibration_dir" default="$(find tiago_description)/urdf/calibration" />
 
     <xacro:property name="has_arm" value="${arm != 'no-arm'}" />
     <xacro:property name="end_effector" value="$(arg end_effector)" />
