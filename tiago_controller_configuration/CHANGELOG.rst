@@ -2,6 +2,77 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'cleanup' into 'humble-devel'
+  Cleanup package.xml files and rm duplicated launcher
+  See merge request robots/tiago_robot!174
+* rm duplicated launcher
+* update package.xml deps
+* Merge branch 'fix_substitution' into 'humble-devel'
+  fix end effector substitution
+  See merge request robots/tiago_robot!169
+* fix end effector substitution
+* Merge branch 'default_robot_name' into 'humble-devel'
+  Add missing default robot name
+  See merge request robots/tiago_robot!168
+* add missing default robot name
+* Merge branch 'update_copyright' into 'humble-devel'
+  update copyright and license
+  See merge request robots/tiago_robot!167
+* update copyright and license
+* Merge branch 'cleanup' into 'humble-devel'
+  Cleanup
+  See merge request robots/tiago_robot!165
+* rm ros1 launchers
+* Merge branch 'update_maintainers' into 'humble-devel'
+  Update maintainers
+  See merge request robots/tiago_robot!163
+* update maintainers
+* Merge branch 'linters' into 'humble-devel'
+  Linters
+  See merge request robots/tiago_robot!159
+* rm print
+* linters
+* Merge branch 'launch_refactor' into 'humble-devel'
+  launch files refactor
+  See merge request robots/tiago_robot!158
+* launch files refactor
+* Merge branch 'tiago_launcher' into 'galactic-devel'
+  Tiago launcher
+  See merge request robots/tiago_robot!150
+* add todo
+* Merge branch 'pal-hey5-ros2' into 'foxy-devel'
+  pal-hey5 launch files and config
+  See merge request robots/tiago_robot!130
+* use tiago_launch_utils
+* add pal-gripper launch
+* update default controllers launch file
+* pal-hey5 launch files and config
+* Add basic tests to tiago_controller_configuration
+* Add extra joints
+* Add use_sim_time to controllers as a workaround for https://github.com/ros-controls/ros2_control/issues/325
+* Added new parameters required for joint trajectory controllers
+  Also, enabled default controllers
+* Lower controller manager to 100hz
+* Using joint_state_broadcaster instead of controller
+* Increased controller manager update rate to match gazebo's
+* Added twist_mux to the tiago bringup
+  mobile_base_controller now uses the twist unstamped topic instead
+* Use correct namespacing for parameters
+* Using controller_manager launch_utils
+* Support for pal-gripper end effector
+* Now uses launch_pal utils
+* Added wrist to arm_controller
+* Added arm_controller, no wrists
+* Added head_controller
+* Added torso_controller
+* Added default_controllers with mobile_base and joint_state controllers
+* Added gazebo_controller_manager_cfg.yaml
+* tiago_controller_configuration readded and migrated to ros2
+* Ignoring tiago_bringup and tiago_controller_configuration for now
+* Contributors: Jordan Palacios, Noel Jimenez, Noel Jimenez Garcia, Victor Lopez, cescfolch, victor
+
 2.0.55 (2021-01-15)
 -------------------
 * Merge branch 'gravity_compensation_fix' into 'erbium-devel'

@@ -2,6 +2,15 @@
 Changelog for package tiago_robot
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'update_maintainers' into 'humble-devel'
+  Update maintainers
+  See merge request robots/tiago_robot!163
+* update maintainers
+* Migrated package.xml and CMakeLists.txt to ros2 format
+* Contributors: Jordan Palacios, Noel Jimenez
+
 2.0.55 (2021-01-15)
 -------------------
 

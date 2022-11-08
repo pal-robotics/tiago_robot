@@ -2,6 +2,108 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'mv_calibration_files' into 'humble-devel'
+  Move tiago_description_calibration xacro files to tiago_description
+  See merge request robots/tiago_robot!178
+* move tiago_description_calibration xacro files to tiago_description
+* Merge branch 'cleanup' into 'humble-devel'
+  Cleanup package.xml files and rm duplicated launcher
+  See merge request robots/tiago_robot!174
+* update package.xml deps
+* Merge branch 'linters' into 'humble-devel'
+  linter fix
+  See merge request robots/tiago_robot!173
+* linter fix
+* Merge branch 'refactor_hw_suffix_method' into 'humble-devel'
+  refactor get_tiago_hw_suffix to avoid using launch substitutions
+  See merge request robots/tiago_robot!171
+* refactor get_tiago_hw_suffix to avoid using launch substitutions
+* Merge branch 'adjust_friction_dumping' into 'humble-devel'
+  Adjust arm friction and dumping
+  See merge request robots/tiago_robot!170
+* adjust arm friction and dumping
+* Merge branch 'update_copyright' into 'humble-devel'
+  update copyright and license
+  See merge request robots/tiago_robot!167
+* update copyright and license
+* Merge branch 'fix_warns' into 'humble-devel'
+  fix remmaping warns
+  See merge request robots/tiago_robot!166
+* fix remmaping warns
+* Merge branch 'cleanup' into 'humble-devel'
+  Cleanup
+  See merge request robots/tiago_robot!165
+* rm ros1 launchers
+* Merge branch 'refactor_ld' into 'humble-devel'
+  Refactor ld
+  See merge request robots/tiago_robot!164
+* refactor LaunchDescription population
+* Merge branch 'update_maintainers' into 'humble-devel'
+  Update maintainers
+  See merge request robots/tiago_robot!163
+* update maintainers
+* Merge branch 'fix_tests' into 'humble-devel'
+  Comment end-effectors not migrated yet for urdf tests success
+  See merge request robots/tiago_robot!161
+* comment end-effectors not migrated yet to avoid tests errors
+* Merge branch 'robot_name' into 'humble-devel'
+  Robot name
+  See merge request robots/tiago_robot!160
+* change default robot_name value
+* Merge branch 'linters' into 'humble-devel'
+  Linters
+  See merge request robots/tiago_robot!159
+* linters
+* Merge branch 'launch_refactor' into 'humble-devel'
+  launch files refactor
+  See merge request robots/tiago_robot!158
+* update arm friction and damping
+* launch files refactor
+* Merge branch 'humble_fixes' into 'humble-devel'
+  add missing materials
+  See merge request robots/tiago_robot!157
+* add missing materials
+* Merge branch 'tiago_launcher' into 'galactic-devel'
+  Tiago launcher
+  See merge request robots/tiago_robot!150
+* add use_sim arg
+* Merge branch 'add_role_to_ros2_control' into 'foxy-devel'
+  Change <type> to <plugin> and add role
+  See merge request robots/tiago_robot!136
+* Add role param to plugin urdf
+* Merge branch 'pal-hey5-ros2' into 'foxy-devel'
+  pal-hey5 launch files and config
+  See merge request robots/tiago_robot!130
+* pal-hey5 launch files and config
+* Rename some tiago hw options, add camera_model and add tests
+* Add description
+* Add missing dependency
+* Make robot_description easy to reuse
+* Move tiago_launch_utils from pmb2_description
+* Remove rgbd_sensors from tiago, as is only for courier
+* Rename xtion camera to head_front_camera
+* Migrate camera to ROS2
+* Fixes to name and topic remaps for p3d plugin
+* Use p3d gazebo plugin instead of ros_world_odometry
+* Add IMU and FT ROS2 Control sensors
+* Add IMU gazebo plugin
+* Support for pal-gripper end effector
+* Added support for arm and ft_sensor args
+* Launch file for showing the description in rviz2
+* Formatting
+* Added wrist to arm_controller
+* Added arm_controller, no wrists
+* Added head_controller
+* All joints now form part of a single ros2_control system
+* ros2_control gazebo system for torso
+* Using gazebo_ros2_control plugin
+* Remove comments to workaround https://github.com/ros2/launch_ros/issues/214
+* First version of the robot_state_publisher.launch.py
+* Migrated package.xml and CMakeLists.txt to ros2 format
+* Contributors: Jordan Palacios, Noel Jimenez, Noel Jimenez Garcia, Victor Lopez, cescfolch, victor
+
 2.0.55 (2021-01-15)
 -------------------
 * Merge branch 'gravity_compensation_fix' into 'erbium-devel'

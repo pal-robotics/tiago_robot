@@ -2,6 +2,79 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'refactor_simulation_launchers' into 'humble-devel'
+  Remove launching manipulation in tiago_bringup
+  See merge request robots/tiago_robot!177
+* rm launching manipulation
+* Merge branch 'rm_launcher' into 'humble-devel'
+  Remove tiago.launch.py and dependencies
+  See merge request robots/tiago_robot!176
+* rm tiago.launch.py and dependencies
+* Merge branch 'cleanup' into 'humble-devel'
+  Cleanup package.xml files and rm duplicated launcher
+  See merge request robots/tiago_robot!174
+* update package.xml deps
+* Merge branch 'launch_move_group' into 'humble-devel'
+  Launch move group
+  See merge request robots/tiago_robot!172
+* launch moveit2
+* Merge branch 'update_copyright' into 'humble-devel'
+  update copyright and license
+  See merge request robots/tiago_robot!167
+* update copyright and license
+* Merge branch 'cleanup' into 'humble-devel'
+  Cleanup
+  See merge request robots/tiago_robot!165
+* rm ros1 launchers
+* Merge branch 'refactor_ld' into 'humble-devel'
+  Refactor ld
+  See merge request robots/tiago_robot!164
+* refactor LaunchDescription population
+* Merge branch 'update_maintainers' into 'humble-devel'
+  Update maintainers
+  See merge request robots/tiago_robot!163
+* update maintainers
+* Merge branch 'linters' into 'humble-devel'
+  Linters
+  See merge request robots/tiago_robot!159
+* linters
+* Merge branch 'launch_refactor' into 'humble-devel'
+  launch files refactor
+  See merge request robots/tiago_robot!158
+* temporal fix deadman_buttons error when empty
+* Merge branch 'tiago_launcher' into 'galactic-devel'
+  Tiago launcher
+  See merge request robots/tiago_robot!150
+* tiago launcher
+* Updating format of all motions
+* Renegerating approach_planner config files
+* Renegerating motions config files
+* Removed disable_motion_planning
+  Already set in approach plannaer config
+* Not starting play_motion automatically since now requires moveit
+* Using tiago hw suffix to load the proper config files
+* Get robot_description using tiago_launch_utils
+* Load robot_description_semantic into play_motion
+* Rename some tiago hw options, add camera_model and add tests
+* Added play_motion to tiago_bringup
+* UNDO: Disabling motion planning for now
+* Removed rgdb and use launch_pal arg_utils and tiago lauch utils
+* play_motion launch.py
+* Regenerate motions (incomplete) and approach_planner config for ROS2
+* Added new parameters required for joint trajectory controllers
+  Also, enabled default controllers
+* Added some ToDo's
+* Added joy_teleop to the tiago_bringup
+  Also updated joy_teleop.yaml.em and regenerated config files
+* Added twist_mux to the tiago bringup
+  mobile_base_controller now uses the twist unstamped topic instead
+* First version of the tiago_bringup.launch.py
+* tiago_bringup is now a ROS2 package
+* Ignoring tiago_bringup and tiago_controller_configuration for now
+* Contributors: Jordan Palacios, Noel Jimenez, Noel Jimenez Garcia, Victor Lopez
+
 2.0.55 (2021-01-15)
 -------------------
 
