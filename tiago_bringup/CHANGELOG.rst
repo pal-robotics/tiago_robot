@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.0.0 (2022-11-08)
+------------------
 * Merge branch 'refactor_simulation_launchers' into 'humble-devel'
   Remove launching manipulation in tiago_bringup
   See merge request robots/tiago_robot!177

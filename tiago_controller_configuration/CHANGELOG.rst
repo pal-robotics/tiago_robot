@@ -2,8 +2,8 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.0.0 (2022-11-08)
+------------------
 * Merge branch 'cleanup' into 'humble-devel'
   Cleanup package.xml files and rm duplicated launcher
   See merge request robots/tiago_robot!174

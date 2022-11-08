@@ -2,8 +2,8 @@
 Changelog for package tiago_robot
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.0.0 (2022-11-08)
+------------------
 * Merge branch 'update_maintainers' into 'humble-devel'
   Update maintainers
   See merge request robots/tiago_robot!163

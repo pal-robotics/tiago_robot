@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.0.0 (2022-11-08)
+------------------
 * Merge branch 'mv_calibration_files' into 'humble-devel'
   Move tiago_description_calibration xacro files to tiago_description
   See merge request robots/tiago_robot!178
