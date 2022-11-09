@@ -9,7 +9,7 @@
   <author email="bence.magyar@pal-robotics.com">Bence Magyar</author>
   <license>BSD</license>
 
-  <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>ament_cmake_auto</buildtool_depend>
 
   <!-- <exec_depend>play_motion</exec_depend> -->
   <!-- <exec_depend>current_limit_controller</exec_depend> -->
