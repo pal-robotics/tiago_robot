@@ -2,6 +2,9 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 4.0.0 (2022-11-08)
 ------------------
 * Merge branch 'mv_calibration_files' into 'humble-devel'

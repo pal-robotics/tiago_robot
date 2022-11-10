@@ -2,6 +2,18 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'update_license' into 'humble-devel'
+  Update license
+  See merge request robots/tiago_robot!180
+* update license
+* Merge branch 'fix_dependency' into 'humble-devel'
+  fix buildtool dependency
+  See merge request robots/tiago_robot!179
+* fix buildtool dependency
+* Contributors: Jordan Palacios, Noel Jimenez
+
 4.0.0 (2022-11-08)
 ------------------
 * Merge branch 'cleanup' into 'humble-devel'

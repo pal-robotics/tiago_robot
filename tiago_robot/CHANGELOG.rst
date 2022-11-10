@@ -2,6 +2,14 @@
 Changelog for package tiago_robot
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'update_license' into 'humble-devel'
+  Update license
+  See merge request robots/tiago_robot!180
+* update license
+* Contributors: Jordan Palacios, Noel Jimenez
+
 4.0.0 (2022-11-08)
 ------------------
 * Merge branch 'update_maintainers' into 'humble-devel'
