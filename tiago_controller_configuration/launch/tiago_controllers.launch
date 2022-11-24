@@ -5,6 +5,7 @@
     <arg name="ft_sensor"  default="schunk-ft"/>
     <arg name="laser_model"  default="sick-571"/>
     <arg name="camera_model"  default="orbbec-astra"/>
+    <arg name="use_moveit_camera"  default="false"/>
     <arg name="wrist_model"  default="wrist-2010"/>
     <arg name="base_type_suffix" default=""/>
     <arg name="base_type" default="pmb2"/>
@@ -78,6 +79,7 @@
       <arg name="ft_sensor" value="$(arg ft_sensor)"/>
       <arg name="laser_model" value="$(arg laser_model)"/>
       <arg name="camera_model" value="$(arg camera_model)"/>
+      <arg name="camera" value="$(arg use_moveit_camera)"/>
       <arg name="base_type" value="$(arg base_type)"/>
       <arg name="capabilities" value="move_group/CapabilityLoader"/>
     </include>
