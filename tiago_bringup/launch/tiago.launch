@@ -12,7 +12,6 @@
   <arg name="base_type" default="pmb2"/>
   <arg name="base_type_suffix" value="" unless="$(eval arg('base_type') == 'omni_base')"/>
   <arg name="base_type_suffix" value="_omni" if="$(eval arg('base_type') == 'omni_base')"/>
-  <arg name="enable_moveit_camera" value="true" if="$(eval arg('use_moveit_camera') or arg('advanced_grasping'))"/>
 
   <!-- Diff drive controller multipliers -->
   <arg name="calibrated_multipliers_dir"  value="$(optenv pal_wheel_calibration_calibration_path)"/>
@@ -48,7 +47,7 @@
     <arg name="ft_sensor"  value="$(arg ft_sensor)"/>
     <arg name="laser_model"  value="$(arg laser_model)"/>
     <arg name="camera_model"  value="$(arg camera_model)"/>
-    <arg name="use_moveit_camera"  value="$(arg enable_moveit_camera)"/>
+    <arg name="use_moveit_camera"  value="$(arg use_moveit_camera)"/>
     <arg name="wrist_model"  value="$(arg wrist_model)"/>
     <arg name="base_type_suffix"  value="$(arg base_type_suffix)"/>
     <arg name="base_type" value="$(arg base_type)"/>
