@@ -11,7 +11,6 @@
     <arg name="base_type" default="pmb2"/>
     <arg name="advanced_grasping" default="false"/> <!-- Requires extra software from PAL Robotics-->
 
-
     <include file="$(find tiago_controller_configuration)/launch/joint_state_controller.launch"/>
     <include file="$(find tiago_controller_configuration)/launch/default_controllers.launch">
         <arg name="arm" value="$(arg arm)"/>
@@ -81,7 +80,7 @@
       <arg name="ft_sensor" value="$(arg ft_sensor)"/>
       <arg name="laser_model" value="$(arg laser_model)"/>
       <arg name="camera_model" value="$(arg camera_model)"/>
-      <arg name="camera" value="$(arg use_moveit_camera)"/>
+      <arg name="camera" value="$(eval (use_moveit_camera if not advanced_grasping else true))"/>
       <arg name="base_type" value="$(arg base_type)"/>
       <arg name="capabilities" value="move_group/CapabilityLoader"/>
       <arg name="moveit_sensor_manager" value="advanced_grasping" if="$(arg advanced_grasping)"/>
