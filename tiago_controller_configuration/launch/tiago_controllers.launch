@@ -9,6 +9,8 @@
     <arg name="wrist_model"  default="wrist-2010"/>
     <arg name="base_type_suffix" default=""/>
     <arg name="base_type" default="pmb2"/>
+    <arg name="advanced_grasping" default="false"/> <!-- Requires extra software from PAL Robotics-->
+
 
     <include file="$(find tiago_controller_configuration)/launch/joint_state_controller.launch"/>
     <include file="$(find tiago_controller_configuration)/launch/default_controllers.launch">
@@ -82,5 +84,6 @@
       <arg name="camera" value="$(arg use_moveit_camera)"/>
       <arg name="base_type" value="$(arg base_type)"/>
       <arg name="capabilities" value="move_group/CapabilityLoader"/>
+      <arg name="moveit_sensor_manager" value="advanced_grasping" if="$(arg advanced_grasping)"/>
     </include>
 </launch>
