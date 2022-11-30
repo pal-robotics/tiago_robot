@@ -5,7 +5,7 @@
   <arg name="ft_sensor"  default="schunk-ft"/>
   <arg name="laser_model"  default="sick-571"/>
   <arg name="camera_model"  default="orbbec-astra"/>
-  <arg name="use_moveit_camera"  default="true"/>
+  <arg name="use_moveit_camera"  default="false"/>
   <arg name="wrist_model"  default="wrist-2010"/>
   <arg name="no_safety_eps" default="False"/>
   <arg name="base_type" default="pmb2"/>
