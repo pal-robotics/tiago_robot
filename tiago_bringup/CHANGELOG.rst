@@ -2,6 +2,19 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'add-moveit-capability-loader' into 'erbium-devel'
+  Add argument for launching move_group
+  See merge request robots/tiago_robot!181
+* Set enable_moveit_camera arg in tiago_controllers.launch
+* Update use_moveit_camera set to true if advanced_grasping is true
+* Ensure moveit camera is always on when advanced grasping is loaded
+* Add advanced_grasping launch arguments
+* set default moveit_camera arg back to false
+* Enable moveit-camera propagation in launch files
+* Contributors: David ter Kuile, saikishor
+
 2.3.8 (2022-10-24)
 ------------------
 

@@ -2,6 +2,20 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'add-moveit-capability-loader' into 'erbium-devel'
+  Add argument for launching move_group
+  See merge request robots/tiago_robot!181
+* Ensure enable_camera argument is set correctly
+* Set enable_moveit_camera arg in tiago_controllers.launch
+* set use_moveit_camera arg in tiago_controllers correct
+* Ensure moveit camera is always on when advanced grasping is loaded
+* Add advanced_grasping launch arguments
+* Enable moveit-camera propagation in launch files
+* Add argument for launching move_group
+* Contributors: David ter Kuile, saikishor
+
 2.3.8 (2022-10-24)
 ------------------
 * Merge branch 'feat/robust-odometry-integration' into 'erbium-devel'
