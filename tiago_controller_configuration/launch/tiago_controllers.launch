@@ -5,9 +5,12 @@
     <arg name="ft_sensor"  default="schunk-ft"/>
     <arg name="laser_model"  default="sick-571"/>
     <arg name="camera_model"  default="orbbec-astra"/>
+    <arg name="use_moveit_camera"  default="false"/>
     <arg name="wrist_model"  default="wrist-2010"/>
     <arg name="base_type_suffix" default=""/>
     <arg name="base_type" default="pmb2"/>
+    <arg name="advanced_grasping" default="false"/> <!-- Requires extra software from PAL Robotics-->
+    <arg name="enable_moveit_camera" value="$(eval arg('use_moveit_camera') or arg('advanced_grasping'))" />
 
     <include file="$(find tiago_controller_configuration)/launch/joint_state_controller.launch"/>
     <include file="$(find tiago_controller_configuration)/launch/default_controllers.launch">
@@ -78,6 +81,9 @@
       <arg name="ft_sensor" value="$(arg ft_sensor)"/>
       <arg name="laser_model" value="$(arg laser_model)"/>
       <arg name="camera_model" value="$(arg camera_model)"/>
+      <arg name="camera" value="$(arg enable_moveit_camera)"/>
       <arg name="base_type" value="$(arg base_type)"/>
+      <arg name="capabilities" value="move_group/CapabilityLoader"/>
+      <arg name="moveit_sensor_manager" value="advanced_grasping" if="$(arg advanced_grasping)"/>
     </include>
 </launch>

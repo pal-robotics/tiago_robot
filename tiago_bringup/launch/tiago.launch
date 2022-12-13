@@ -5,8 +5,10 @@
   <arg name="ft_sensor"  default="schunk-ft"/>
   <arg name="laser_model"  default="sick-571"/>
   <arg name="camera_model"  default="orbbec-astra"/>
+  <arg name="use_moveit_camera"  default="false"/>
   <arg name="wrist_model"  default="wrist-2010"/>
   <arg name="no_safety_eps" default="False"/>
+  <arg name="advanced_grasping" default="false"/> <!-- Requires extra software from PAL Robotics-->
   <arg name="base_type" default="pmb2"/>
   <arg name="base_type_suffix" value="" unless="$(eval arg('base_type') == 'omni_base')"/>
   <arg name="base_type_suffix" value="_omni" if="$(eval arg('base_type') == 'omni_base')"/>
@@ -45,8 +47,10 @@
     <arg name="ft_sensor"  value="$(arg ft_sensor)"/>
     <arg name="laser_model"  value="$(arg laser_model)"/>
     <arg name="camera_model"  value="$(arg camera_model)"/>
+    <arg name="use_moveit_camera"  value="$(arg use_moveit_camera)"/>
     <arg name="wrist_model"  value="$(arg wrist_model)"/>
     <arg name="base_type_suffix"  value="$(arg base_type_suffix)"/>
     <arg name="base_type" value="$(arg base_type)"/>
+    <arg name="advanced_grasping" value="$(arg advanced_grasping)"/>
   </include>
 </launch>
