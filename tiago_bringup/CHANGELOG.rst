@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.3.9 (2022-12-13)
+------------------
 * Merge branch 'add-moveit-capability-loader' into 'erbium-devel'
   Add argument for launching move_group
   See merge request robots/tiago_robot!181
