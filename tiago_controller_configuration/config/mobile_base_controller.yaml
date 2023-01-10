@@ -1,7 +1,5 @@
 mobile_base_controller:
   ros__parameters:
-    # TODO use_sim_time as argument
-    use_sim_time: True  # comment when working with the robot
     type: diff_drive_controller/DiffDriveController
     use_stamped_vel: False
     left_wheel_names  : ['wheel_left_joint']

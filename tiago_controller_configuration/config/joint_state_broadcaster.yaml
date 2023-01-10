@@ -1,8 +1,6 @@
 joint_state_broadcaster:
   ros__parameters:
     type: joint_state_broadcaster/JointStateBroadcaster
-    # TODO use_sim_time as argument
-    use_sim_time: True  # comment when working with the robot
     publish_rate: 50.0
     extra_joints: 
       - 'caster_back_left_1_joint'
