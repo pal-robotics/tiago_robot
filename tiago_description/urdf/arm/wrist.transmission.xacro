@@ -16,13 +16,13 @@
  -->
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:macro name="wrist_simple_transmission" params="name number reduction offset" >
-    <transmission name="${name}_${number}_trans">
+  <xacro:macro name="wrist_simple_transmission" params="name reduction offset" >
+    <transmission name="${name}_trans">
       <plugin>transmission_interface/SimpleTransmission</plugin>
-      <actuator name="${name}_${number}_motor"  role="actuator1">
+      <actuator name="${name}_motor"  role="actuator1">
         <mechanicalReduction>${reduction}</mechanicalReduction>
       </actuator>
-      <joint name="${name}_${number}_joint" role="joint1">
+      <joint name="${name}_joint" role="joint1">
         <offset>${offset}</offset>
         <hardwareInterface>hardware_interface/JointStateInterface</hardwareInterface>
         <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
@@ -33,7 +33,7 @@
 
   <xacro:macro name="wrist_differential_transmission"
                params="name number_1 number_2 act_reduction_1 act_reduction_2 jnt_reduction_1 jnt_reduction_2 number_1_offset number_2_offset" >
-  <transmission name="${name}_wrist_trans">
+  <transmission name="${name}_${number_1}_${name}_${number_2}_wrist_trans">
       <plugin>transmission_interface/DifferentialTransmission</plugin>
       <actuator name="${name}_${number_1}_motor" role="actuator1">
         <mechanicalReduction>${act_reduction_1}</mechanicalReduction>

@@ -24,20 +24,7 @@
       <state_interface name="effort" />
     </joint>
 
-    <!-- @TODO transmissions for ros2 system -->
-    <!--
-    <transmission name="${name}_${number}_trans">
-      <plugin>transmission_interface/SimpleTransmission</plugin>
-      <actuator name="${name}_${number}_motor" role="actuator1">
-        <mechanicalReduction>${reduction}</mechanicalReduction>
-      </actuator>
-      <joint name="${name}_${number}_joint">
-        <offset>${offset}</offset>
-        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
-        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        <hardwareInterface>hardware_interface/JointStateInterface</hardwareInterface>
-      </joint>
-    </transmission>
-    -->
+    <xacro:arm_simple_transmission name="${name}" reduction="${reduction}" offset_value="${offset}"/>
+
   </xacro:macro>
 </robot>

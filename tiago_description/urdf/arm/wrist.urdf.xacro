@@ -189,13 +189,6 @@
         <provideFeedback>1</provideFeedback>
     </gazebo>
 
-    <!-- extensions -->
-    <xacro:wrist_simple_transmission name="${name}" number="5" reduction="1.0" offset="${arm_5_offset}"/>
-    <xacro:wrist_differential_transmission name="${name}" number_1="6" number_2="7"
-                                                act_reduction_1="-1.0" act_reduction_2="1.0"
-                                                jnt_reduction_1="1.0" jnt_reduction_2="${-reflect}" 
-                                                number_1_offset="${arm_6_offset}" number_2_offset="${arm_7_offset}"/>
-
   </xacro:macro>
 
 </robot>
