@@ -77,6 +77,9 @@
       <arg name="arm_motor_model"  value="$(arg arm_motor_model)"/>
     </include>
 
+    <!-- Only loads the velocity controller -->
+    <include file="$(find tiago_controller_configuration)/launch/joint_trajectory_controllers_velocity.launch"/>
+
     <!-- Motion planning -->
     <include file="$(find tiago_moveit_config)/launch/move_group.launch">
       <arg name="arm" value="$(arg arm)"/>
