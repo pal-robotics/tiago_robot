@@ -16,46 +16,34 @@
  -->
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:macro name="wrist_simple_transmission" params="name number reduction offset" >
-    <transmission name="${name}_${number}_trans">
+  <xacro:macro name="wrist_simple_transmission" params="name reduction offset" >
+    <transmission name="${name}_trans">
       <plugin>transmission_interface/SimpleTransmission</plugin>
-      <actuator name="${name}_${number}_motor"  role="actuator1">
-        <mechanicalReduction>${reduction}</mechanicalReduction>
-      </actuator>
-      <joint name="${name}_${number}_joint" role="joint1">
+      <actuator name="${name}_motor"  role="actuator1"/>
+      <joint name="${name}_joint" role="joint1">
+        <mechanical_reduction>${reduction}</mechanical_reduction>
         <offset>${offset}</offset>
-        <hardwareInterface>hardware_interface/JointStateInterface</hardwareInterface>
-        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
-        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       </joint>
     </transmission>
   </xacro:macro>
 
   <xacro:macro name="wrist_differential_transmission"
                params="name number_1 number_2 act_reduction_1 act_reduction_2 jnt_reduction_1 jnt_reduction_2 number_1_offset number_2_offset" >
-  <transmission name="${name}_wrist_trans">
+  <transmission name="${name}_${number_1}_${name}_${number_2}_wrist_trans">
       <plugin>transmission_interface/DifferentialTransmission</plugin>
       <actuator name="${name}_${number_1}_motor" role="actuator1">
-        <mechanicalReduction>${act_reduction_1}</mechanicalReduction>
+      <mechanical_reduction>${act_reduction_1}</mechanical_reduction>
       </actuator>
       <actuator name="${name}_${number_2}_motor" role="actuator2">
-        <mechanicalReduction>${act_reduction_2}</mechanicalReduction>
+        <mechanical_reduction>${act_reduction_2}</mechanical_reduction>
       </actuator>
       <joint name="${name}_${number_1}_joint" role="joint1">
+        <mechanical_reduction>${jnt_reduction_1}</mechanical_reduction>
         <offset>${number_1_offset}</offset>
-        <mechanicalReduction>${jnt_reduction_1}</mechanicalReduction>
-        <hardwareInterface>hardware_interface/JointStateInterface</hardwareInterface>
-        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
-        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        <ignoreTransmissionAbsoluteEncoder>1</ignoreTransmissionAbsoluteEncoder>       
       </joint>
       <joint name="${name}_${number_2}_joint" role="joint2">
+        <mechanical_reduction>${jnt_reduction_2}</mechanical_reduction>
         <offset>${number_2_offset}</offset>
-        <mechanicalReduction>${jnt_reduction_2}</mechanicalReduction>
-        <hardwareInterface>hardware_interface/JointStateInterface</hardwareInterface>
-        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
-        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        <ignoreTransmissionAbsoluteEncoder>1</ignoreTransmissionAbsoluteEncoder>       
       </joint>
     </transmission>
   </xacro:macro>

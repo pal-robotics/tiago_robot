@@ -24,18 +24,8 @@
       <state_interface name="effort" />
     </joint>
 
-    <!-- @TODO transmissions for ros2 system -->
-    <!--
-    <transmission name="${name}_trans">
-      <plugin>transmission_interface/SimpleTransmission</plugin>
-      <actuator name="${name}_motor" role="actuator1">
-        <mechanicalReduction>${reduction}</mechanicalReduction>
-      </actuator>
-      <joint name="${name}_joint">
-        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
-        <hardwareInterface>hardware_interface/JointStateInterface</hardwareInterface>
-      </joint>
-    </transmission>
-    -->
+    <xacro:include filename="$(find tiago_description)/urdf/torso/torso.transmission.xacro" />
+    <xacro:torso_simple_transmission name="${name}" reduction="${reduction}" />
+
   </xacro:macro>
 </robot>

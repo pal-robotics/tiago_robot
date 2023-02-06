@@ -20,14 +20,10 @@
     <transmission name="${name}_trans">
       <plugin>transmission_interface/SimpleTransmission</plugin>
       
-      <actuator name="${name}_motor"  role="actuator1">
-        <mechanicalReduction>${reduction}</mechanicalReduction>
-      </actuator>
-      
+      <actuator name="${name}_motor"  role="actuator1"/>
       <joint name="${name}_joint"  role="joint1">
         <offset>${offset_value}</offset>
-        <hardwareInterface>hardware_interface/JointStateInterface</hardwareInterface>
-        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <mechanical_reduction>${reduction}</mechanical_reduction>
       </joint>
     </transmission>
   </xacro:macro>

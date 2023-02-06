@@ -83,7 +83,7 @@
 
         <!-- wrist -->
         <xacro:ros2_control_wrist_rotational name="arm_5" reduction="1.0" offset="${arm_5_joint_offset}" />
-        <xacro:ros2_control_wrist_differential name_1="arm_6" name_2="arm_7"
+        <xacro:ros2_control_wrist_differential name="arm" number_1="6" number_2="7"
                                                act_reduction_1="-1.0" act_reduction_2="1.0"
                                                jnt_reduction_1="1.0" jnt_reduction_2="1.0"
                                                number_1_offset="${arm_6_joint_offset}" number_2_offset="${arm_7_joint_offset}" />

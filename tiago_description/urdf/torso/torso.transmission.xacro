@@ -19,12 +19,9 @@
   <xacro:macro name="torso_simple_transmission" params="name reduction" >
     <transmission name="${name}_trans">
       <plugin>transmission_interface/SimpleTransmission</plugin>
-      <actuator name="${name}_motor" role="actuator1">
-        <mechanicalReduction>${reduction}</mechanicalReduction>
-      </actuator>
+      <actuator name="${name}_motor" role="actuator1"/>
       <joint name="${name}_joint" role="joint1">
-        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
-        <hardwareInterface>hardware_interface/JointStateInterface</hardwareInterface>
+        <mechanical_reduction>${reduction}</mechanical_reduction>
       </joint>
     </transmission>
   </xacro:macro>
