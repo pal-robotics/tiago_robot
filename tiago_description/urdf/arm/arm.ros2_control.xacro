@@ -24,6 +24,7 @@
       <state_interface name="effort" />
     </joint>
 
+    <xacro:include filename="$(find tiago_description)/urdf/arm/arm.transmission.xacro" />
     <xacro:arm_simple_transmission name="${name}" reduction="${reduction}" offset_value="${offset}"/>
 
   </xacro:macro>
