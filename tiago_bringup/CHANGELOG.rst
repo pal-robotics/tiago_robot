@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.0.2 (2023-02-08)
+------------------
 * Merge branch 'robot_state_publisher' into 'humble-devel'
   Launch robot_state_publisher from tiago_bringup
   See merge request robots/tiago_robot!185

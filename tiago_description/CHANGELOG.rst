@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.0.2 (2023-02-08)
+------------------
 * Merge branch 'transmissions' into 'humble-devel'
   Set transmissions inside the ros2_control tag
   See merge request robots/tiago_robot!186
