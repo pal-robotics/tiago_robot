@@ -2,6 +2,16 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'transmissions' into 'humble-devel'
+  Set transmissions inside the ros2_control tag
+  See merge request robots/tiago_robot!186
+* update transmissions for arm, head and torso
+* update transmission tags for ros2
+* set transmissions inside the ros2_control tag
+* Contributors: Jordan Palacios, Noel Jimenez
+
 4.0.1 (2022-11-10)
 ------------------
 
