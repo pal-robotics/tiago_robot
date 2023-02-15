@@ -12,21 +12,55 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import os
+from pathlib import Path
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
 from launch_pal.substitutions import LoadFile
 from launch_ros.actions import Node
-from tiago_description.tiago_launch_utils import (generate_robot_description_action,
-                                                  get_tiago_hw_arguments, get_tiago_hw_suffix)
+from launch.actions import OpaqueFunction
+from tiago_description.tiago_launch_utils import get_tiago_hw_suffix
+
+from launch_pal.arg_utils import read_launch_argument
+from launch_pal.robot_utils import (get_arm, get_camera_model, get_end_effector, get_ft_sensor, get_laser_model, get_robot_name, get_wrist_model)
+from launch_param_builder import load_xacro
+
+def declare_args(context, *args, **kwargs):
+
+    robot_name = read_launch_argument('robot_name', context)
+
+    return [get_arm(robot_name),
+            get_camera_model(robot_name),
+            get_end_effector(robot_name),
+            get_ft_sensor(robot_name),
+            get_laser_model(robot_name),
+            get_wrist_model(robot_name)]
 
 
-def generate_launch_description():
+def launch_setup(context, *args, **kwargs):
+
+    arm = read_launch_argument('arm', context)
+    camera_model = read_launch_argument('camera_model', context)
+    end_effector = read_launch_argument('end_effector', context)
+    ft_sensor = read_launch_argument('ft_sensor', context)
+    laser_model = read_launch_argument('laser_model', context)
+    wrist_model = read_launch_argument('wrist_model', context)
+
     tiago_hw_suffix = get_tiago_hw_suffix(
-        arm=True, wrist_model=False, end_effector=True, ft_sensor=True)
+        arm=arm, wrist_model=None, end_effector=end_effector, ft_sensor=ft_sensor)
 
-    robot_description = {
-        'robot_description': generate_robot_description_action()
-    }
+    robot_description = load_xacro(
+        Path(os.path.join(
+            get_package_share_directory('tiago_description'), 'robots', 'tiago.urdf.xacro')),
+        {
+            'arm': read_launch_argument('arm', context),
+            'camera_model': read_launch_argument('camera_model', context),
+            'end_effector': read_launch_argument('end_effector', context),
+            'ft_sensor': read_launch_argument('ft_sensor', context),
+            'laser_model': read_launch_argument('laser_model', context),
+            'wrist_model': read_launch_argument('wrist_model', context),
+        },
+    )
 
     robot_description_semantic_config = LoadFile(
         [get_package_share_directory('tiago_moveit_config'),
@@ -53,17 +87,14 @@ def generate_launch_description():
                            motions,
                        ])
 
-    # TIAGo description arguments
-    tiago_args = get_tiago_hw_arguments(
-        laser_model=True,
-        arm=True,
-        end_effector=True,
-        ft_sensor=True,
-        camera_model=True)
+    return [play_motion]
+
+def generate_launch_description():
 
     ld = LaunchDescription()
 
-    ld.add_action(*tiago_args)
-    ld.add_action(play_motion)
+    ld.add_action(get_robot_name('tiago'))
+    ld.add_action(OpaqueFunction(function=declare_args))
+    ld.add_action(OpaqueFunction(function=launch_setup))
 
     return ld
