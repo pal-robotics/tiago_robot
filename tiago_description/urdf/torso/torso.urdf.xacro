@@ -18,7 +18,6 @@
 
   <!--File includes-->
   <xacro:include filename="$(find tiago_description)/urdf/deg_to_rad.xacro" />
-  <xacro:include filename="$(find tiago_description)/urdf/torso/torso.transmission.xacro" />
 
   <!--Constant parameters-->
   <xacro:property name="torso_max_vel"  value="0.07" />
