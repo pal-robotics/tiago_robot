@@ -24,8 +24,8 @@
       <state_interface name="effort" />
     </joint>
 
-    <xacro:include filename="$(find tiago_description)/urdf/head/head.transmission.xacro" />
-    <xacro:head_transmission name="${name}" reduction="${reduction}" offset_value="${offset}"/>
+    <xacro:include filename="$(find tiago_description)/ros2_control/transmissions.urdf.xacro" />
+    <xacro:tiago_simple_transmission name="${name}" reduction="${reduction}" offset_value="${offset}" />
 
   </xacro:macro>
 </robot>

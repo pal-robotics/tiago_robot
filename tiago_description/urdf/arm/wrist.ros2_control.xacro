@@ -24,8 +24,8 @@
       <state_interface name="effort" />
     </joint>
 
-    <xacro:include filename="$(find tiago_description)/urdf/arm/wrist.transmission.xacro" />
-    <xacro:wrist_simple_transmission name="${name}" reduction="${reduction}" offset="${offset}"/>
+    <xacro:include filename="$(find tiago_description)/ros2_control/transmissions.urdf.xacro" />
+    <xacro:tiago_simple_transmission name="${name}" reduction="${reduction}" offset_value="${offset}" />
   </xacro:macro>
 
   <xacro:macro name="ros2_control_wrist_differential"
@@ -46,8 +46,8 @@
       <state_interface name="effort" />
     </joint>
 
-    <xacro:include filename="$(find tiago_description)/urdf/arm/wrist.transmission.xacro" />
-    <xacro:wrist_differential_transmission
+    <xacro:include filename="$(find tiago_description)/ros2_control/transmissions.urdf.xacro" />
+    <xacro:tiago_differential_transmission
       name="${name}" number_1="${number_1}" number_2="${number_2}"
       act_reduction_1="${act_reduction_1}" act_reduction_2="${act_reduction_2}"
       jnt_reduction_1="${jnt_reduction_1}" jnt_reduction_2="${jnt_reduction_2}"
