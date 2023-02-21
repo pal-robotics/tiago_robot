@@ -12,11 +12,12 @@
   <buildtool_depend>ament_cmake_auto</buildtool_depend>
 
   <exec_depend>joy_teleop</exec_depend>
-  <exec_depend>twist_mux</exec_depend>
-  <exec_depend>robot_state_publisher</exec_depend>
   <exec_depend>launch_pal</exec_depend>
+  <exec_depend>play_motion2</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
   <exec_depend>tiago_controller_configuration</exec_depend>
   <exec_depend>tiago_description</exec_depend>
+  <exec_depend>twist_mux</exec_depend>
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
