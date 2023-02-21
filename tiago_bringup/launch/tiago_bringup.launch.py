@@ -21,6 +21,9 @@ def generate_launch_description():
         'tiago_controller_configuration',
         ['launch', 'default_controllers.launch.py'])
 
+    play_motion2 = include_launch_py_description(
+        'tiago_bringup', ['launch', 'play_motion2.launch.py'])
+
     twist_mux = include_launch_py_description(
         'tiago_bringup', ['launch', 'twist_mux.launch.py'])
 
@@ -38,6 +41,7 @@ def generate_launch_description():
     ld = LaunchDescription()
 
     ld.add_action(default_controllers)
+    ld.add_action(play_motion2)
     ld.add_action(twist_mux)
     ld.add_action(joystick_teleop)
     ld.add_action(tiago_state_publisher)
