@@ -2,6 +2,18 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'play_motion2' into 'humble-devel'
+  Launch PlayMotion2 and update motions files
+  See merge request robots/tiago_robot!189
+* rename play_motion2 launcher
+* add exec dependency play_motion2
+* launch play_motion2
+* regenerate motions files for play_motion2
+* enable regen_em_file.py
+* Contributors: Jordan Palacios, Noel Jimenez
+
 4.0.2 (2023-02-08)
 ------------------
 * Merge branch 'robot_state_publisher' into 'humble-devel'
