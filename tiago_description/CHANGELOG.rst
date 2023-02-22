@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.0.3 (2023-02-22)
+------------------
 * Merge branch 'join_transmissions' into 'humble-devel'
   Join transmissions in a single file
   See merge request robots/tiago_robot!187
