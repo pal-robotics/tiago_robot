@@ -18,7 +18,6 @@
 
   <!--File includes-->
   <xacro:include filename="$(find tiago_description)/urdf/deg_to_rad.xacro" />
-  <xacro:include filename="$(find tiago_description)/urdf/head/head.transmission.xacro" />
   <xacro:include filename="$(find tiago_description)/urdf/sensors/xtion_pro_live.urdf.xacro" />
   <xacro:include filename="$(find tiago_description)/urdf/sensors/orbbec_astra.urdf.xacro" />
 
@@ -82,10 +81,6 @@
        <implicitSpringDamper>1</implicitSpringDamper>
     </gazebo>
 
-
-    <!-- extensions -->
-    <xacro:head_transmission name="${name}" reduction="1" offset_value="${head_1_joint_offset}"/>
-
   </xacro:macro>
 
   <!--************************-->
@@ -128,8 +123,6 @@
                          soft_lower_limit="${head_2_lower_limit * deg_to_rad + head_eps}"
                          soft_upper_limit="${head_2_upper_limit * deg_to_rad - head_eps}" />
     </joint>
-
-    <xacro:head_transmission name="${name}" reduction="1" offset_value="${head_2_joint_offset}"/>
 
   </xacro:macro>
 

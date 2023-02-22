@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<!-- 
-  Copyright (c) 2022 PAL Robotics S.L. All rights reserved.
+<!--
+  Copyright (c) 2023 PAL Robotics S.L. All rights reserved.
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -16,18 +16,19 @@
  -->
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:macro name="wrist_simple_transmission" params="name reduction offset" >
+  <xacro:macro name="tiago_simple_transmission" params="name reduction:=1.0 offset_value:=0.0" >
     <transmission name="${name}_trans">
       <plugin>transmission_interface/SimpleTransmission</plugin>
       <actuator name="${name}_motor"  role="actuator1"/>
       <joint name="${name}_joint" role="joint1">
         <mechanical_reduction>${reduction}</mechanical_reduction>
-        <offset>${offset}</offset>
-      </joint>
+        <offset>${offset_value}</offset>
+     </joint>
     </transmission>
   </xacro:macro>
 
-  <xacro:macro name="wrist_differential_transmission"
+
+  <xacro:macro name="tiago_differential_transmission"
                params="name number_1 number_2 act_reduction_1 act_reduction_2 jnt_reduction_1 jnt_reduction_2 number_1_offset number_2_offset" >
   <transmission name="${name}_${number_1}_${name}_${number_2}_wrist_trans">
       <plugin>transmission_interface/DifferentialTransmission</plugin>
