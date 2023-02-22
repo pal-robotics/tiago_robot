@@ -13,6 +13,10 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
+install(PROGRAMS scripts/regen_em_file.py
+  DESTINATION lib/${PROJECT_NAME}
+)
+
 # @TODO
 # install(PROGRAMS scripts/end_effector_camera.sh
 #   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
