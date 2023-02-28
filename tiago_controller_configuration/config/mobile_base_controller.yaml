@@ -1,4 +1,4 @@
-/mobile_base_controller:
+mobile_base_controller:
   ros__parameters:
     # TODO use_sim_time as argument
     use_sim_time: True  # comment when working with the robot
