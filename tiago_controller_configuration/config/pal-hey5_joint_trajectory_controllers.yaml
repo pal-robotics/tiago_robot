@@ -1,4 +1,4 @@
-/hand_controller:
+hand_controller:
   ros__parameters:
     type: joint_trajectory_controller/JointTrajectoryController
     # TODO use_sim_time as argument
