@@ -2,8 +2,8 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.0.4 (2023-03-02)
+------------------
 * Merge branch 'fix_controllers_config' into 'humble-devel'
   remove initial / from controllers config
   See merge request robots/tiago_robot!190
