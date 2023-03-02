@@ -2,6 +2,9 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 4.0.3 (2023-02-22)
 ------------------
 * Merge branch 'play_motion2' into 'humble-devel'
