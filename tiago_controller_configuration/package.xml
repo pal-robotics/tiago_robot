@@ -24,6 +24,7 @@
   <exec_depend>joint_trajectory_controller</exec_depend>
   <exec_depend>joint_state_broadcaster</exec_depend>
   <exec_depend>diff_drive_controller</exec_depend>
+  <exec_depend>ros2_gravity_compensation_controller</exec_depend>
   <exec_depend>pal_gripper_controller_configuration</exec_depend>
   <exec_depend>controller_manager</exec_depend>
 

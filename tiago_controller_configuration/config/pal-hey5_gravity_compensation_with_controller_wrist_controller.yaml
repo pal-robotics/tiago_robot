@@ -1,6 +1,0 @@
-gravity_compensation:
-  type: "force_control/GravityCompensation"
-  robot_model_chains: ["hand_palm_link"]
-  dt: 0.01
-
-
