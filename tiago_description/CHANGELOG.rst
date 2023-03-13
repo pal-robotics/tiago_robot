@@ -2,6 +2,18 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'feat/ydlidar' into 'erbium-devel'
+  added support to ydlidar
+  See merge request robots/tiago_robot!183
+* added support to ydlidar
+* Merge branch 'grasping-frames' into 'erbium-devel'
+  Grasping frames macro
+  See merge request robots/tiago_robot!188
+* Macro to create the grasping frames of the grippers
+* Contributors: antoniobrandi, narcismiguel, sergiacosta
+
 2.3.9 (2022-12-13)
 ------------------
 
