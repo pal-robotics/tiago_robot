@@ -78,7 +78,7 @@ def generate_launch_description():
     ld.add_action(torso_controller_launch)
     ld.add_action(head_controller_launch)
     ld.add_action(arm_controller_launch)
-    # ld.add_action(gravity_compensation_controller_launch)
+    ld.add_action(gravity_compensation_controller_launch)
     ld.add_action(OpaqueFunction(function=launch_end_effector_controller))
 
     return ld
