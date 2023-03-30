@@ -10,13 +10,13 @@ arm_velocity_trajectory_controller:
     - arm_7_joint
 
   gains:
-    arm_1_joint: {p: 5, d: 0.1, i: 0.01, i_clamp: 2}
-    arm_2_joint: {p: 5, d: 0.1, i: 0.01, i_clamp: 2}
-    arm_3_joint: {p: 10, d: 0.1, i: 0.01, i_clamp: 2}
-    arm_4_joint: {p: 10, d: 0.1, i: 0.01, i_clamp: 2}
-    arm_5_joint: {p: 10, d: 0.1, i: 0.01, i_clamp: 1}
-    arm_6_joint: {p: 10, d: 0.1, i: 0.01, i_clamp: 1}
-    arm_7_joint: {p: 10, d: 0.1, i: 0.01, i_clamp: 1}
+    arm_1_joint: {p: 15, d: 0.1, i: 0.01, i_clamp: 2}
+    arm_2_joint: {p: 17, d: 0.2, i: 0.01, i_clamp: 2}
+    arm_3_joint: {p: 17, d: 0.2, i: 0.01, i_clamp: 2}
+    arm_4_joint: {p: 17, d: 0.2, i: 0.01, i_clamp: 2}
+    arm_5_joint: {p: 17, d: 0.1, i: 0.01, i_clamp: 1}
+    arm_6_joint: {p: 14, d: 0.2, i: 0.01, i_clamp: 1}
+    arm_7_joint: {p: 12, d: 0.1, i: 0.01, i_clamp: 1}
 
   velocity_ff:
     arm_1_joint: 1.0 
