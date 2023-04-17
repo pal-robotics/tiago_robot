@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.0.6 (2023-04-17)
+------------------
 * rename motors to actuators
 * Contributors: Noel Jimenez
 
