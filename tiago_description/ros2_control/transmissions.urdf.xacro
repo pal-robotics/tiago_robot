@@ -19,7 +19,7 @@
   <xacro:macro name="tiago_simple_transmission" params="name reduction:=1.0 offset_value:=0.0" >
     <transmission name="${name}_trans">
       <plugin>transmission_interface/SimpleTransmission</plugin>
-      <actuator name="${name}_motor"  role="actuator1"/>
+      <actuator name="${name}_actuator"  role="actuator1"/>
       <joint name="${name}_joint" role="joint1">
         <mechanical_reduction>${reduction}</mechanical_reduction>
         <offset>${offset_value}</offset>
@@ -32,10 +32,10 @@
                params="name number_1 number_2 act_reduction_1 act_reduction_2 jnt_reduction_1 jnt_reduction_2 number_1_offset number_2_offset" >
   <transmission name="${name}_${number_1}_${name}_${number_2}_wrist_trans">
       <plugin>transmission_interface/DifferentialTransmission</plugin>
-      <actuator name="${name}_${number_1}_motor" role="actuator1">
+      <actuator name="${name}_${number_1}_actuator" role="actuator1">
       <mechanical_reduction>${act_reduction_1}</mechanical_reduction>
       </actuator>
-      <actuator name="${name}_${number_2}_motor" role="actuator2">
+      <actuator name="${name}_${number_2}_actuator" role="actuator2">
         <mechanical_reduction>${act_reduction_2}</mechanical_reduction>
       </actuator>
       <joint name="${name}_${number_1}_joint" role="joint1">
