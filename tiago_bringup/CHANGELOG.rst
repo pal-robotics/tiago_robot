@@ -2,6 +2,14 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'update-joystick' into 'erbium-devel'
+  Update joystick device name
+  See merge request robots/tiago_robot!194
+* Update joystick device name
+* Contributors: David ter Kuile, Sai Kishor Kothakota
+
 2.3.10 (2023-03-13)
 -------------------
 

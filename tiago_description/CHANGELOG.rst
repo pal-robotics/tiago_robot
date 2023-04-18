@@ -2,6 +2,9 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 2.3.10 (2023-03-13)
 -------------------
 * Merge branch 'feat/ydlidar' into 'erbium-devel'
