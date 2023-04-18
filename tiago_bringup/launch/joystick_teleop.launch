@@ -4,6 +4,7 @@
   <arg name="ft_sensor"  default="schunk-ft"/>
   <arg name="base_type_suffix" default=""/>
 
+  <arg name="input_device" default="/dev/joystick"/>
   <arg name="cmd_vel" default="input_joy/cmd_vel" />
   <arg name="file_suffix" value="$(eval (('no-arm' if not arm else (end_effector if end_effector else 'no-ee') + ('_' +  ft_sensor if ft_sensor else ''))))"/>  
   
@@ -18,6 +19,7 @@
 
   <node pkg="joy" type="joy_node" name="joystick">
     <param name="autorepeat_rate" value="10" />
+    <param name="dev" value="$(arg input_device)" />
   </node>
 
   <group ns="torso_controller">
