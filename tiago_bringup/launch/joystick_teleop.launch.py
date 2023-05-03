@@ -26,31 +26,36 @@ def generate_launch_description():
     pkg_dir = get_package_share_directory('tiago_bringup')
 
     # @TODO load the proper joy_telop config file according to tiago params
-    joy_teleop_file = os.path.join(
+    joy_teleop_path = os.path.join(
         pkg_dir, 'config', 'joy_teleop',
-        'joy_teleop_pal-gripper_schunk-ft.yaml')
+        'joy_teleop_pal-gripper.yaml')
 
-    cmd_vel = DeclareLaunchArgument(
-        'cmd_vel',
-        default_value='input_joy/cmd_vel',
+    declare_cmd_vel = DeclareLaunchArgument(
+        'cmd_vel', default_value='input_joy/cmd_vel',
         description='Joystick cmd_vel topic')
 
-    teleop_config = DeclareLaunchArgument(
-        'teleop_config',
-        default_value=joy_teleop_file,
+    declare_teleop_config = DeclareLaunchArgument(
+        'teleop_config', default_value=joy_teleop_path,
         description='Joystick teleop configuration file')
 
     joy_teleop_node = Node(
-        package='joy_teleop', executable='joy_teleop',
+        package='joy_teleop',
+        executable='joy_teleop',
         parameters=[LaunchConfiguration('teleop_config')],
         remappings=[('cmd_vel', LaunchConfiguration('cmd_vel'))])
 
-    # @TODO: joy_node in ROS2
+    joy_node = Node(
+        package='joy',
+        executable='joy_node',
+        name='joystick',
+        parameters=[os.path.join(pkg_dir, 'config', 'joy_teleop', 'joy_config.yaml')])
 
     ld = LaunchDescription()
 
-    ld.add_action(cmd_vel)
-    ld.add_action(teleop_config)
+    ld.add_action(declare_cmd_vel)
+    ld.add_action(declare_teleop_config)
+
     ld.add_action(joy_teleop_node)
+    ld.add_action(joy_node)
 
     return ld
