@@ -50,6 +50,24 @@ def generate_launch_description():
         name='joystick',
         parameters=[os.path.join(pkg_dir, 'config', 'joy_teleop', 'joy_config.yaml')])
 
+    torso_incrementer_server = Node(
+        package='joy_teleop',
+        executable='incrementer_server',
+        name='incrementer',
+        namespace='torso_controller')
+
+    head_incrementer_server = Node(
+        package='joy_teleop',
+        executable='incrementer_server',
+        name='incrementer',
+        namespace='head_controller')
+
+    gripper_incrementer_server = Node(
+        package='joy_teleop',
+        executable='incrementer_server',
+        name='incrementer',
+        namespace='gripper_controller')
+
     ld = LaunchDescription()
 
     ld.add_action(declare_cmd_vel)
@@ -57,5 +75,9 @@ def generate_launch_description():
 
     ld.add_action(joy_teleop_node)
     ld.add_action(joy_node)
+
+    ld.add_action(torso_incrementer_server)
+    ld.add_action(head_incrementer_server)
+    ld.add_action(gripper_incrementer_server)
 
     return ld
