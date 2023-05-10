@@ -136,21 +136,3 @@ joy_teleop:
         increment_by: [0.01, 0.01]
       buttons: [5] # R1
 @[end if]@
-
-@[if end_effector == "schunk-wsg"]@
-    close_gripper:
-      type: action
-      interface_type: teleop_tools_msgs/action/Increment
-      action_name: /gripper_controller/increment
-      action_goal:
-        increment_by: [-0.01]
-      buttons: [7] # R2
-
-    open_gripper:
-      type: action
-      interface_type: teleop_tools_msgs/action/Increment
-      action_name: /gripper_controller/increment
-      action_goal:
-        increment_by: [0.01]
-      buttons: [5] # R1
-@[end if]@
