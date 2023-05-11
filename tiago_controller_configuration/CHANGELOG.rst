@@ -2,6 +2,17 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* remove ros1 commented dependencies
+* comment controller dependency
+* flake8 fixes
+* add conditional dependency and do not launch gravity compensation controller as default
+* Spawn gravity compensation controller inactive
+* Set gravity compensation controller parameters
+* Add gravity compensation controller
+* Contributors: Adria Roig, Noel Jimenez
+
 4.0.8 (2023-05-11)
 ------------------
 

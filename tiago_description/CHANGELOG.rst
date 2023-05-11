@@ -2,6 +2,11 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add effort and veloctiy command interfaces
+* Contributors: Adria Roig
+
 4.0.8 (2023-05-11)
 ------------------
 
