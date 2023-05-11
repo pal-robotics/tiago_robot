@@ -18,6 +18,8 @@
   <xacro:macro name="ros2_control_wrist_rotational" params="name reduction offset" >
     <joint name="${name}_joint">
       <command_interface name="position" />
+      <command_interface name="velocity" />
+      <command_interface name="effort" />
 
       <state_interface name="position" />
       <state_interface name="velocity" />
@@ -32,6 +34,8 @@
                params="name number_1 number_2 act_reduction_1 act_reduction_2 jnt_reduction_1 jnt_reduction_2 number_1_offset number_2_offset" >
     <joint name="${name}_${number_1}_joint">
       <command_interface name="position" />
+      <command_interface name="velocity" />
+      <command_interface name="effort" />
 
       <state_interface name="position" />
       <state_interface name="velocity" />
@@ -40,6 +44,8 @@
 
     <joint name="${name}_${number_2}_joint">
       <command_interface name="position" />
+      <command_interface name="velocity" />
+      <command_interface name="effort" />
 
       <state_interface name="position" />
       <state_interface name="velocity" />

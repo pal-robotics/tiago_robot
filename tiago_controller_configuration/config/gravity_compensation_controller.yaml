@@ -1,0 +1,24 @@
+gravity_compensation_controller:
+  ros__parameters:
+    type: "pal_controllers/GravityCompensationController"
+
+    dt: 0.01
+
+    command_joints: ['arm_1_joint', 'arm_2_joint', 'arm_3_joint', 'arm_4_joint', 'arm_5_joint', 'arm_6_joint', 'arm_7_joint']
+
+    control_type: ['ZERO_TORQUE', 'COMMAND', 'COMMAND', 'COMMAND', 'ZERO_TORQUE', 'ZERO_TORQUE', 'ZERO_TORQUE']
+
+    motor_torque_constants: [0.0, 0.136, -0.087, -0.087, -1.0, 0.0, 0.0]
+
+    reduction_ratios: [100.0, 100.0, 100.0, 100.0, 336.0, 336.0, 336.0]
+
+    static_frictions: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+
+    viscous_frictions: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+
+    velocity_tolerances: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+
+    torque_gain: 1.0
+
+
+
