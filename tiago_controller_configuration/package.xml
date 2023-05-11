@@ -11,16 +11,6 @@
 
   <buildtool_depend>ament_cmake_auto</buildtool_depend>
 
-  <!-- <exec_depend>play_motion</exec_depend> -->
-  <!-- <exec_depend>current_limit_controller</exec_depend> -->
-  <!-- <exec_depend>pal_parallel_gripper_wrapper</exec_depend> -->
-  <!-- <exec_depend>imu_sensor_controller</exec_depend> -->
-  <!-- <exec_depend>force_torque_sensor_controller</exec_depend> -->
-  <!-- <exec_depend>gravity_compensation_controller</exec_depend> -->
-  <!-- <exec_depend>simple_grasping_action</exec_depend> -->
-  <!-- <exec_depend>pal_wsg_gripper_controller_configuration</exec_depend> -->
-  <!-- <exec_depend>pal_local_joint_control</exec_depend> -->
-
   <exec_depend>joint_trajectory_controller</exec_depend>
   <exec_depend>joint_state_broadcaster</exec_depend>
   <exec_depend>diff_drive_controller</exec_depend>
