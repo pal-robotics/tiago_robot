@@ -34,7 +34,7 @@ def generate_launch_description():
             'cmd_vel_out': 'mobile_base_controller/cmd_vel_unstamped',
             'config_locks': config_locks_file,
             'config_topics': config_topics_file,
-            'joystick': joystick_file,
+            'config_joy': joystick_file,
         }.items())
 
     ld = LaunchDescription()

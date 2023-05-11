@@ -1,12 +1,11 @@
-/**:
+joystick_relay:
   ros__parameters:
-    priority: false
-
+    priority: False
     turbo:
       linear_forward_min  : 0.10
       linear_forward_max  : 0.50
       linear_backward_min : 0.10
       linear_backward_max : 0.30
-      angular_min : !degrees 15.0
-      angular_max : !degrees 80.0
+      angular_min : 0.2618  # !degrees 15.0 (not supported)
+      angular_max : 1.3963  # !degrees 80.0 (not supported)
       steps       : 6
