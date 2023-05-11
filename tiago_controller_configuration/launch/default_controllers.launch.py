@@ -63,10 +63,6 @@ def generate_launch_description():
         'tiago_controller_configuration',
         ['launch', 'arm_controller.launch.py'])
 
-    gravity_compensation_controller_launch = include_launch_py_description(
-            'tiago_controller_configuration',
-            ['launch', 'gravity_compensation_controller.launch.py'])
-
     ld = LaunchDescription()
 
     ld.add_action(get_robot_name('tiago'))
@@ -78,7 +74,6 @@ def generate_launch_description():
     ld.add_action(torso_controller_launch)
     ld.add_action(head_controller_launch)
     ld.add_action(arm_controller_launch)
-    ld.add_action(gravity_compensation_controller_launch)
     ld.add_action(OpaqueFunction(function=launch_end_effector_controller))
 
     return ld
