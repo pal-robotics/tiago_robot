@@ -18,18 +18,19 @@ from launch import LaunchDescription
 from launch_ros.actions import Node
 from ament_index_python.packages import get_package_share_directory
 
+
 def generate_launch_description():
 
     gravity_spawner_node = Node(
         package='controller_manager',
         executable='spawner',
-        arguments=["gravity_compensation_controller",
-        "--param-file", os.path.join(get_package_share_directory('tiago_controller_configuration'), 'config', 'gravity_compensation_controller.yaml'),
-        "--controller-type", "pal_controllers/GravityCompensationController",
-        "--inactive"],
-)
+        arguments=[
+            "gravity_compensation_controller", "--param-file", os.path.join(
+                get_package_share_directory('tiago_controller_configuration'),
+                'config', 'gravity_compensation_controller.yaml'),
+            "--controller-type", "pal_controllers/GravityCompensationController", "--inactive"],
+    )
+
     ld = LaunchDescription()
-
     ld.add_action(gravity_spawner_node)
-
     return ld
