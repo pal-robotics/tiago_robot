@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.0.8 (2023-05-11)
+------------------
 * remove dependency comment
 * disable joystick launch on bringup
 * regenerate joy_teleop cfg
