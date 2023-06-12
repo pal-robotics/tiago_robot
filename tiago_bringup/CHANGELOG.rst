@@ -2,6 +2,9 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 2.3.11 (2023-04-18)
 -------------------
 * Merge branch 'update-joystick' into 'erbium-devel'

@@ -2,6 +2,14 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'control-period-reduced' into 'erbium-devel'
+  Gazebo control period reduced from 0.001 to 0.01
+  See merge request robots/tiago_robot!200
+* control period reduced from 0.001 to 0.01
+* Contributors: Sai Kishor Kothakota, ileniaperrella
+
 2.3.11 (2023-04-18)
 -------------------
 
