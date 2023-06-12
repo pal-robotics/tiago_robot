@@ -24,7 +24,7 @@
       <xacro:unless value="${is_multiple}">
           <robotNamespace></robotNamespace>
       </xacro:unless>
-      <controlPeriod>0.001</controlPeriod>
+      <controlPeriod>0.01</controlPeriod>
     </plugin>
 
     <xacro:if value="${base_type == 'omni_base'}">
