@@ -44,15 +44,9 @@ def launch_setup(context, *args, **kwargs):
     end_effector = read_launch_argument('end_effector', context)
     ft_sensor = read_launch_argument('ft_sensor', context)
 
-    if (arm == 'no-arm'):
-        end_effector = 'no-end-effector'
-        ft_sensor = 'no-ft-sensor'
-
-    motions_file = 'tiago_motions_' + get_tiago_hw_suffix(arm=arm,
-                                                          wrist_model=None,
-                                                          end_effector=end_effector,
-                                                          ft_sensor=ft_sensor,
-                                                          camera_model=None) + '.yaml'
+    motions_file = 'tiago_motions' + get_tiago_hw_suffix(arm=arm,
+                                                         end_effector=end_effector,
+                                                         ft_sensor=ft_sensor) + '.yaml'
 
     play_motion2_config = os.path.join(
         get_package_share_directory('tiago_bringup'), 'config', 'motions', motions_file)
