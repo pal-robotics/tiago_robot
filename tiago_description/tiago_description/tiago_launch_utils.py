@@ -15,34 +15,26 @@
 
 def get_tiago_hw_suffix(
         arm=None,
-        wrist_model=None,
         end_effector=None,
-        ft_sensor=None,
-        camera_model=None):
+        ft_sensor=None):
     """
     Generate a substitution that creates a text suffix combining the specified tiago arguments.
 
     The arguments are read as string
 
-    For instance, the suffix for: arm=right-arm, wrist_model=wrist-2017, end_effector='pal-gripper'
-    would be 'right-arm_wrist-2017_pal-gripper'
+    For instance, the suffix for: arm=right-arm, end_effector='pal-gripper', ft_sensor='schunk-ft'
+    would be 'pal-gripper_schunk-ft'
     """
-    suffix = ''
+    suffix = '_'
 
-    if arm is not None:
-        suffix += arm
-        suffix += '_'
-    if wrist_model is not None:
-        suffix += wrist_model
+    if arm is None or arm == 'no-arm':
+        suffix += 'no-arm'
         suffix += '_'
     if end_effector is not None:
         suffix += end_effector
         suffix += '_'
     if ft_sensor is not None:
         suffix += ft_sensor
-        suffix += '_'
-    if camera_model is not None:
-        suffix += camera_model
         suffix += '_'
     suffix = suffix[:-1]  # remove last _
     return suffix
