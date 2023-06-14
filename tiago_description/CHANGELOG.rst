@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.0.10 (2023-06-14)
+-------------------
 * unify file generator and get_tiago_hw_suffix method
 * Contributors: Noel Jimenez
 

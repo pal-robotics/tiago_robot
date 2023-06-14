@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.0.10 (2023-06-14)
+-------------------
 * load the proper joy_telop config file
 * config files regeneration
 * unify file generator and get_tiago_hw_suffix method
