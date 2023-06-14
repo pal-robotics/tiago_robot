@@ -2,6 +2,11 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* unify file generator and get_tiago_hw_suffix method
+* Contributors: Noel Jimenez
+
 4.0.9 (2023-05-11)
 ------------------
 * Add effort and veloctiy command interfaces
