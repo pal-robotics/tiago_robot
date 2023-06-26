@@ -5,7 +5,7 @@
   <arg name="ft_sensor"/>
   <arg name="base_type"/>
 
-  <node pkg="tiago_bringup" type="load_available_motions.py" name="load_motions"/>
+  <node pkg="pal_motion_loader" type="load_available_motions.py" name="load_motions"/>
 
   <arg name="file_suffix" value="$(eval (('no-arm' if not arm else (end_effector if end_effector else 'no-ee') + ('_' +  ft_sensor if ft_sensor else ''))))"/>  
   <!-- execute pre-recorded motions -->

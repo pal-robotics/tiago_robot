@@ -6,7 +6,6 @@ catkin_package()
 
 install(PROGRAMS
     scripts/end_effector_camera.sh
-    scripts/load_available_motions.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
