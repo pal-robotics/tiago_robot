@@ -2,6 +2,11 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* run gripper_incrementer only when using pal-gripper
+* Contributors: Noel Jimenez
+
 4.0.10 (2023-06-14)
 -------------------
 * load the proper joy_telop config file
