@@ -28,6 +28,9 @@ def declare_end_effector(context, *args, **kwargs):
 
 def launch_end_effector_controller(context, *args, **kwargs):
 
+    if (read_launch_argument('end_effector', context) == 'no-end-effector'):
+        return []
+
     end_effector_launcher = read_launch_argument('end_effector_controller_launch', context)
     end_effector_controller_launch = include_launch_py_description(
         'tiago_controller_configuration',
