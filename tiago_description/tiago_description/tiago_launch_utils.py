@@ -30,11 +30,12 @@ def get_tiago_hw_suffix(
     if arm is None or arm == 'no-arm':
         suffix += 'no-arm'
         suffix += '_'
-    if end_effector is not None:
-        suffix += end_effector
-        suffix += '_'
-    if ft_sensor is not None:
-        suffix += ft_sensor
-        suffix += '_'
+    else:
+        if end_effector is not None:
+            suffix += end_effector
+            suffix += '_'
+        if ft_sensor is not None and ft_sensor != 'no-ft-sensor':
+            suffix += ft_sensor
+            suffix += '_'
     suffix = suffix[:-1]  # remove last _
     return suffix
