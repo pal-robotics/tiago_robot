@@ -18,6 +18,7 @@ from ament_index_python.packages import get_package_share_directory
 
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, OpaqueFunction
+from launch.conditions import LaunchConfigurationEquals
 from launch.substitutions import LaunchConfiguration
 
 from launch_pal.arg_utils import read_launch_argument
@@ -93,7 +94,8 @@ def generate_launch_description():
         package='joy_teleop',
         executable='incrementer_server',
         name='incrementer',
-        namespace='gripper_controller')
+        namespace='gripper_controller',
+        condition=LaunchConfigurationEquals('end_effector', 'pal-gripper'))
 
     ld = LaunchDescription()
 
