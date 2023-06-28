@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.0.11 (2023-06-28)
+-------------------
 * fix get_tiago_hw_suffix method to match yaml files
 * move pal-hey5 ros2_control xacro to hey5_description
 * Contributors: Noel Jimenez

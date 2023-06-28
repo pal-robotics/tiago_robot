@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.0.11 (2023-06-28)
+-------------------
 * run gripper_incrementer only when using pal-gripper
 * Contributors: Noel Jimenez
 

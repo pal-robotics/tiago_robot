@@ -2,8 +2,8 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.0.11 (2023-06-28)
+-------------------
 * fix controllers launcher when there is no end_effector
 * Contributors: Noel Jimenez
 
