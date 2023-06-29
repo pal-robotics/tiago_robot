@@ -102,19 +102,19 @@ joy_teleop:
 @[if end_effector == "pal-hey5"]@
     close_hand:
       type: action
-      interface_type: play_motion_msgs/action/PlayMotion
-      action_name: /play_motion
+      interface_type: play_motion2_msgs/action/PlayMotion2
+      action_name: /play_motion2
       action_goal:
-        motion_name: 'close_hand'
+        motion_name: 'close'
         skip_planning: True
       buttons: [7]
 
     open_hand:
       type: action
-      interface_type: play_motion_msgs/action/PlayMotion
-      action_name: /play_motion
+      interface_type: play_motion2_msgs/action/PlayMotion2
+      action_name: /play_motion2
       action_goal:
-        motion_name: 'open_hand'
+        motion_name: 'open'
         skip_planning: True
       buttons: [5]
 @[end if]@
