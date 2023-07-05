@@ -2,6 +2,14 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Regenerate config for no-arm option
+* Fix config files generator
+* Remove pal flags dependency
+* update hey5 joystick config
+* Contributors: Noel Jimenez
+
 4.0.11 (2023-06-28)
 -------------------
 * run gripper_incrementer only when using pal-gripper
