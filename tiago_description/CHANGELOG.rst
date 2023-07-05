@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.0.12 (2023-07-05)
+-------------------
 * Remove pal flags dependency
 * Contributors: Noel Jimenez
 

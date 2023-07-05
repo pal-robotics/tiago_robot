@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.0.12 (2023-07-05)
+-------------------
 * Regenerate config for no-arm option
 * Fix config files generator
 * Remove pal flags dependency
