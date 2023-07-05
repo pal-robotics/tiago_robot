@@ -2,10 +2,6 @@ cmake_minimum_required(VERSION 3.5)
 project(tiago_bringup)
 
 find_package(ament_cmake_auto REQUIRED)
-
-# PAL Robotics stricter build flags, other developers should not worry about this
-find_package(ament_cmake_pal QUIET)
-
 ament_auto_find_build_dependencies()
 
 if(BUILD_TESTING)
