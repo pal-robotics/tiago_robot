@@ -37,7 +37,7 @@ for arm in ['right-arm', None]:
     for end_effector in end_effectors:
         for ft_sensor in ft_sensors:
             cfg = {
-                'has_arm': arm != 'no-arm',
+                'has_arm': arm is not None,
                 'end_effector': end_effector,
                 'ft_sensor': ft_sensor,
             }
