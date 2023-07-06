@@ -14,16 +14,19 @@
 
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, OpaqueFunction
+from launch.conditions import LaunchConfigurationNotEquals
 from launch.substitutions import LaunchConfiguration
 from launch_pal.arg_utils import read_launch_argument
 from launch_pal.include_utils import include_launch_py_description
-from launch_pal.robot_utils import get_end_effector, get_robot_name
+from launch_pal.robot_utils import get_arm, get_end_effector, get_robot_name
 
 
-def declare_end_effector(context, *args, **kwargs):
+def declare_robot_args(context, *args, **kwargs):
 
     robot_name = read_launch_argument('robot_name', context)
-    return [get_end_effector(robot_name)]
+
+    return [get_arm(robot_name),
+            get_end_effector(robot_name)]
 
 
 def launch_end_effector_controller(context, *args, **kwargs):
@@ -34,7 +37,8 @@ def launch_end_effector_controller(context, *args, **kwargs):
     end_effector_launcher = read_launch_argument('end_effector_controller_launch', context)
     end_effector_controller_launch = include_launch_py_description(
         'tiago_controller_configuration',
-        ['launch', end_effector_launcher])
+        ['launch', end_effector_launcher],
+        condition=LaunchConfigurationNotEquals('arm', 'no-arm'))
 
     return [end_effector_controller_launch]
 
@@ -64,12 +68,13 @@ def generate_launch_description():
 
     arm_controller_launch = include_launch_py_description(
         'tiago_controller_configuration',
-        ['launch', 'arm_controller.launch.py'])
+        ['launch', 'arm_controller.launch.py'],
+        condition=LaunchConfigurationNotEquals('arm', 'no-arm'))
 
     ld = LaunchDescription()
 
     ld.add_action(get_robot_name('tiago'))
-    ld.add_action(OpaqueFunction(function=declare_end_effector))
+    ld.add_action(OpaqueFunction(function=declare_robot_args))
     ld.add_action(end_effector_controller)
 
     ld.add_action(mobile_base_controller_launch)
