@@ -14,7 +14,7 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 
   #  find_package(rostest REQUIRED)
-    foreach(arm right-arm no-arm) #  left-arm to be implemented
+    foreach(arm right-arm no-arm)
         # Separated to speed up tests, otherwise it's over 13min
         foreach(end_effector no-end-effector pal-gripper pal-hey5 schunk-wsg custom)
             foreach(ft_sensor no-ft-sensor schunk-ft)
