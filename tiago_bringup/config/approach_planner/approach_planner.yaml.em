@@ -21,9 +21,6 @@
         - gripper_left_finger_joint
         - gripper_right_finger_joint
 @[end if]@
-@[if end_effector == "schunk-wsg"]@
-        - gripper_finger_joint
-@[end if]@
       joint_tolerance: 0.01
       skip_planning_approach_vel: 0.5
       skip_planning_approach_min_dur: 0.5

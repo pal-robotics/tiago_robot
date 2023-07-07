@@ -38,23 +38,6 @@
     </xacro:pal_gripper>
   </xacro:if>
 
-  <!-- Schunk WSG -->
-  <!-- <xacro:if value="${type == 'schunk-wsg'}">
-    <xacro:include filename="$(find pal_wsg_gripper_description)/urdf/gripper.urdf.xacro" />
-    <xacro:include filename="$(find pal_wsg_gripper_description)/urdf/fingertip_sensor.urdf.xacro" />
-
-    <xacro:pal_wsg_gripper parent="${parent}" name="${name}">
-      <origin xyz="0.01 0 0" rpy="${90*deg_to_rad} ${90*deg_to_rad} ${-90*deg_to_rad}"/>
-    </xacro:pal_wsg_gripper> -->
-    <!-- Fingertip sensors -->
-    <!-- <xacro:fingertip_sensor name="${name}_left" parent="${name}_left_finger">
-      <origin xyz="0.035 0 -0.1465" rpy="0 ${-90*deg_to_rad} 0"/>
-    </xacro:fingertip_sensor>
-    <xacro:fingertip_sensor name="${name}_right" parent="${name}_right_finger">
-      <origin xyz="-0.035 0 -0.1465" rpy="0 ${90*deg_to_rad} 0"/>
-    </xacro:fingertip_sensor>
-  </xacro:if> -->
-
   <!-- Hand -->
   <xacro:if value="${type == 'pal-hey5'}">
     <xacro:hey5_hand parent="${parent}" name="${name}" reflect="${reflect}">

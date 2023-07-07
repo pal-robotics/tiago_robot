@@ -18,7 +18,7 @@
         name="tiago" >
     <xacro:arg name="arm" default="right-arm"/> <!-- right-arm, no-arm -->
     <xacro:arg name="wrist_model" default="wrist-2010"/>
-    <xacro:arg name="end_effector" default="pal-hey5"/> <!-- no-end-effector, pal-gripper, pal-hey5, schunk-wsg-->
+    <xacro:arg name="end_effector" default="pal-hey5"/> <!-- no-end-effector, pal-gripper, pal-hey5-->
     <xacro:arg name="ft_sensor" default="schunk-ft"/> <!-- no-ft-sensor, schunk-ft -->
     <xacro:arg name="laser_model" default="sick-571"/> <!-- no-laser, hokuyo, sick-551, sick-561, sick-571-->
     <xacro:arg name="camera_model" default="orbbec-astra"/> <!-- no-camera, orbbec-astra, orbbec-astra-pro, asus-xtion -->
@@ -49,7 +49,7 @@
       <xacro:wrong_wrist_model/>
     </xacro:if>
   </xacro:if>
-  <xacro:if value="${end_effector not in ['no-end-effector', 'pal-gripper', 'pal-hey5', 'schunk-wsg', 'custom']}">
+  <xacro:if value="${end_effector not in ['no-end-effector', 'pal-gripper', 'pal-hey5', 'custom']}">
     <xacro:wrong_end_effector/>
   </xacro:if>
   <xacro:if value="${ft_sensor not in ['no-ft-sensor', 'schunk-ft']}">
