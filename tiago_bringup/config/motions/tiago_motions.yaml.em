@@ -3,7 +3,7 @@
 @[if end_effector == "pal-hey5"]@
     controllers: [arm_controller, head_controller, torso_controller, hand_controller]
 @[end if]@
-@[if end_effector in ["pal-gripper", "schunk-wsg"]]@
+@[if end_effector in ["pal-gripper"]@
     controllers: [arm_controller, head_controller, torso_controller, gripper_controller]
 @[end if]@
 @[if not has_arm]@
@@ -15,18 +15,10 @@
         joints: [torso_lift_joint, arm_1_joint,
         arm_2_joint, arm_3_joint, arm_4_joint, arm_5_joint,
         arm_6_joint, arm_7_joint]
-@[if end_effector == "schunk-wsg"]@
-        positions: [0.25, 0.20, 0.35, -0.20, 1.94, -1.57, 1.37, -1.39,
-                    0.18, 0.20, -1.34, -0.20, 1.94, -1.57, 1.37, -1.39,
-                    0.15, 0.20, -1.34, -0.20, 1.94, -1.57, 1.37, -1.39,
-                    0.15, 0.20, -1.34, -0.20, 1.94, -1.57, 1.37, 0.0]
-        times_from_start: [0.5, 4.0, 7.0, 9.0]
-@[else]@
         positions: [0.25, 0.20, 0.35, -0.20, 1.94, -1.57, 1.37, 0.0,
                     0.18, 0.20, -1.34, -0.20, 1.94, -1.57, 1.37, 0.0,
                     0.15, 0.20, -1.34, -0.20, 1.94, -1.57, 1.37, 0.0]
         times_from_start: [0.5, 4.0, 7.0]
-@[end if]@
         meta:
           name: Home
           usage: demo
@@ -130,44 +122,6 @@
           name: Point Gripper Pose
           usage: demo
           description: 'Close Gripper to point to something'
-@[end if]@
-
-@[if end_effector == "schunk-wsg"]@
-      close:
-        joints: [gripper_finger_joint]
-        positions: [0.0]
-        times_from_start: [0.5]
-        meta:
-          name: Close Gripper
-          usage: demo
-          description: 'Closes gripper'
-
-      close_half:
-        joints: [gripper_finger_joint]
-        positions: [0.015]
-        times_from_start: [0.5]
-        meta:
-          name: Close Gripper Half
-          usage: demo
-          description: 'Closes gripper halfway'
-
-      open:
-        joints: [gripper_finger_joint]
-        positions: [0.031]
-        times_from_start: [0.5]
-        meta:
-          name: Open Gripper
-          usage: demo
-          description: 'Open gripper'
-
-      point:
-        joints: [gripper_finger_joint]
-        positions: [0.0]
-        times_from_start: [0.5]
-        meta:
-          name: Point
-          usage: demo
-          description: 'Closes gripper to point to something'
 @[end if]@
 
 @[if end_effector == "pal-hey5"]@
@@ -374,44 +328,6 @@
           description: 'Pick a shirt-like object from floor in front of the robot'
 @[end if]@
 
-@[if end_effector == "schunk-wsg"]@
-      offer:
-        joints: ['torso_lift_joint', 'arm_1_joint', 'arm_2_joint', 'arm_3_joint', 'arm_4_joint', 'arm_5_joint', 'arm_6_joint', 'arm_7_joint', 'gripper_finger_joint']
-        positions: [0.296, 1.61, -0.93, -3.14, 1.83, -1.577, -0.62, -1.577, 0.031]
-        times_from_start: [0.0]
-        meta:
-          name: Offer Gripper
-          usage: demo
-          description: 'Offer Gripper'
-
-      shake_hands:
-        joints: ['gripper_finger_joint', 'torso_lift_joint', 'arm_1_joint', 'arm_2_joint', 'arm_3_joint', 'arm_4_joint', 'arm_5_joint', 'arm_6_joint', 'arm_7_joint']
-        positions: [0.031, 0.296, 1.61, -0.93, -3.14, 1.83, -1.577, -0.53, -1.577,
-                    0.025, 0.296, 1.61, -0.93, -3.14, 1.83, -1.577, -0.53, -1.577,
-                    0.025, 0.296, 1.61, -0.93, -3.14, 1.40, -1.577, -0.2, -1.577,
-                    0.025, 0.296, 1.61, -0.93, -3.14, 1.83, -1.577, -0.53, -1.577,
-                    0.025, 0.296, 1.61, -0.93, -3.14, 1.40, -1.577, -0.2, -1.577,
-                    0.025, 0.296, 1.61, -0.93, -3.14, 1.83, -1.577, -0.53, -1.577,
-                    0.031, 0.296, 1.61, -0.93, -3.14, 1.83, -1.577, -0.53, -1.577]
-        times_from_start: [0.0, 5.0, 6.0, 7.0, 8.0, 9.0, 11.0]
-        meta:
-          name: Shake Hands
-          usage: demo
-          description: 'shake_hands'
-
-      pick_from_floor:
-        joints: ['torso_lift_joint', 'arm_1_joint', 'arm_2_joint', 'arm_3_joint', 'arm_4_joint', 'arm_5_joint', 'arm_6_joint', 'arm_7_joint', 'gripper_finger_joint']
-        positions: [0.226, 0.308, -0.695, -0.968, 1.582,  1.965, 0.273, -1.101, 0.031,
-                    0.12, 0.809, -1.197, -1.119, 0.322, 1.96, -0.849, 0.041, 0.031,
-                    0.12, 0.809, -1.197, -1.119, 0.345, 1.96, -0.849, 0.041, 0.0,
-                    0.27, 0.21, -1.153, -1.538, 2.306, 1.965, 0.394, -0.082, 0.0]
-        times_from_start: [0.0, 4.0, 6.0, 9.0]
-        meta:
-          name: Pick from floor
-          usage: demo
-          description: 'Pick a shirt-like object from floor in front of the robot'
-@[end if]@
-
 @[else]@
       home:
         joints: [torso_lift_joint]
@@ -422,7 +338,6 @@
           usage: demo
           description: 'Go home'
 @[end if]@
-
       head_tour:
         joints: [head_1_joint, head_2_joint]
         positions: [0.0, 0.0,
