@@ -2,8 +2,8 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.0.13 (2023-07-11)
+-------------------
 * Remove schunk wsg option
 * Launch controllers depending on robot arguments
 * Contributors: Noel Jimenez
