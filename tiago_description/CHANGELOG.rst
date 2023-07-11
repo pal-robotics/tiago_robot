@@ -2,6 +2,12 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Remove schunk wsg option
+* Remove left arm option
+* Contributors: Noel Jimenez
+
 4.0.12 (2023-07-05)
 -------------------
 * Remove pal flags dependency

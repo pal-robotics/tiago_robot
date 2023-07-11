@@ -2,6 +2,12 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Remove schunk wsg option
+* Launch controllers depending on robot arguments
+* Contributors: Noel Jimenez
+
 4.0.12 (2023-07-05)
 -------------------
 * Remove pal flags dependency
