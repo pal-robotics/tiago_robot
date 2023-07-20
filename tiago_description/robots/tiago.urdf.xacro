@@ -121,7 +121,7 @@
   <!-- Force Torque sensor -->
   <xacro:if value="${has_ft_sensor}">
       <xacro:ft_sensor name="wrist" parent="arm_tool_link" />
-      <xacro:force_torque_sensor_gazebo joint_name="wrist_ft_joint" update_rate="100"/>
+      <xacro:force_torque_sensor_gazebo name="wrist_ft" update_rate="100"/>
   </xacro:if>
 
   <!-- Thermal camera -->

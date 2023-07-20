@@ -15,10 +15,10 @@
   limitations under the License.
  -->
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
-  <xacro:macro name="force_torque_sensor_gazebo" params="joint_name update_rate">
-  <gazebo reference="${joint_name}">
+  <xacro:macro name="force_torque_sensor_gazebo" params="name update_rate">
+  <gazebo reference="${name}_joint">
     <preserveFixedJoint>true</preserveFixedJoint> <!-- in case this is in a fixed joint -->
-    <sensor name="${joint_name}_force_torque" type="force_torque">
+    <sensor name="${name}_sensor" type="force_torque">
       <update_rate>${update_rate}</update_rate>
       <visualize>true</visualize>
       <force_torque>
