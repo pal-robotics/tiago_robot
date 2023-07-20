@@ -102,9 +102,7 @@
       <!-- Force Torque sensor -->
       <xacro:if value="${has_ft_sensor}">
         <xacro:include filename="$(find tiago_description)/urdf/sensors/sensors.ros2_control.xacro"/>
-        <xacro:if value="$(arg use_sim)">
-          <xacro:ros2_control_force_torque_sensor name="wrist_ft_joint_force_torque"/>
-        </xacro:if>
+        <xacro:ros2_control_force_torque_sensor name="wrist_ft_joint_force_torque"/>
       </xacro:if>
 
     </ros2_control>

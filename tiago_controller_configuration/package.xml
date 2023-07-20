@@ -11,12 +11,13 @@
 
   <buildtool_depend>ament_cmake_auto</buildtool_depend>
 
-  <exec_depend>joint_trajectory_controller</exec_depend>
-  <exec_depend>joint_state_broadcaster</exec_depend>
+  <exec_depend>controller_manager</exec_depend>
   <exec_depend>diff_drive_controller</exec_depend>
+  <exec_depend>joint_state_broadcaster</exec_depend>
+  <exec_depend>joint_trajectory_controller</exec_depend>
+  <exec_depend>force_torque_sensor_broadcaster</exec_depend>
 <!--  <exec_depend condition="$PAL_DISTRO > 0">ros2_gravity_compensation_controller</exec_depend>-->
   <exec_depend>pal_gripper_controller_configuration</exec_depend>
-  <exec_depend>controller_manager</exec_depend>
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
