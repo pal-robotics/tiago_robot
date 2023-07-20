@@ -2,6 +2,13 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Rename FT Sensor
+* Use same condition to call ft_sensor macros
+* Add controller for the FT sensor
+* Contributors: Noel Jimenez
+
 4.0.13 (2023-07-11)
 -------------------
 * Remove schunk wsg option

@@ -2,6 +2,13 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Rename FT Sensor
+* Fix ft_sensor_controller frame_id parameter
+* Add controller for the FT sensor
+* Contributors: Noel Jimenez
+
 4.0.13 (2023-07-11)
 -------------------
 * Remove schunk wsg option
