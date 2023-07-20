@@ -14,11 +14,11 @@
 
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, OpaqueFunction
-from launch.conditions import LaunchConfigurationNotEquals
-from launch.substitutions import LaunchConfiguration
+from launch.conditions import IfCondition, LaunchConfigurationNotEquals
+from launch.substitutions import LaunchConfiguration, PythonExpression
 from launch_pal.arg_utils import read_launch_argument
 from launch_pal.include_utils import include_launch_py_description
-from launch_pal.robot_utils import get_arm, get_end_effector, get_robot_name
+from launch_pal.robot_utils import get_arm, get_end_effector, get_ft_sensor, get_robot_name
 
 
 def declare_robot_args(context, *args, **kwargs):
@@ -26,7 +26,8 @@ def declare_robot_args(context, *args, **kwargs):
     robot_name = read_launch_argument('robot_name', context)
 
     return [get_arm(robot_name),
-            get_end_effector(robot_name)]
+            get_end_effector(robot_name),
+            get_ft_sensor(robot_name)]
 
 
 def launch_end_effector_controller(context, *args, **kwargs):
@@ -71,6 +72,16 @@ def generate_launch_description():
         ['launch', 'arm_controller.launch.py'],
         condition=LaunchConfigurationNotEquals('arm', 'no-arm'))
 
+    ft_sensor_controller_launch = include_launch_py_description(
+        'tiago_controller_configuration',
+        ['launch', 'ft_sensor_controller.launch.py'],
+        condition=IfCondition(
+            PythonExpression(
+                ["'", LaunchConfiguration('arm'), "' != 'no-arm' and '",
+                 LaunchConfiguration('ft_sensor'), "' != 'no-ft-sensor'"]
+            )
+        ))
+
     ld = LaunchDescription()
 
     ld.add_action(get_robot_name('tiago'))
@@ -82,6 +93,7 @@ def generate_launch_description():
     ld.add_action(torso_controller_launch)
     ld.add_action(head_controller_launch)
     ld.add_action(arm_controller_launch)
+    ld.add_action(ft_sensor_controller_launch)
     ld.add_action(OpaqueFunction(function=launch_end_effector_controller))
 
     return ld
