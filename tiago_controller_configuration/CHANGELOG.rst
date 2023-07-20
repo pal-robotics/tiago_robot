@@ -2,8 +2,8 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.0.14 (2023-07-20)
+-------------------
 * Rename FT Sensor
 * Fix ft_sensor_controller frame_id parameter
 * Add controller for the FT sensor

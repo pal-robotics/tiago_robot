@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.0.14 (2023-07-20)
+-------------------
 * Rename FT Sensor
 * Use same condition to call ft_sensor macros
 * Add controller for the FT sensor
