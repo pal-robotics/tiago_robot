@@ -2,6 +2,9 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 2.3.12 (2023-06-12)
 -------------------
 * Merge branch 'control-period-reduced' into 'erbium-devel'

@@ -2,6 +2,14 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'fix_dynamic' into 'erbium-devel'
+  Add missing argument
+  See merge request robots/tiago_robot!220
+* Add missing argument
+* Contributors: Sai Kishor Kothakota, thomaspeyrucain
+
 2.3.12 (2023-06-12)
 -------------------
 
