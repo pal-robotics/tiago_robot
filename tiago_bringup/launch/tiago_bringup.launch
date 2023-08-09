@@ -49,6 +49,7 @@
   <include file="$(find tiago_bringup)/launch/dynamic_footprint.launch">
     <arg name="arm" value="$(arg arm)"/>
     <arg name="end_effector" value="$(arg end_effector)"/>
+    <arg name="base_type_suffix"  value="$(arg base_type_suffix)"/>
   </include>
 
   <!-- Joystick controller -->
