@@ -136,6 +136,19 @@
     </collision>
   </link>
 
+  <xacro:if value="$(arg fixed_torso)">
+
+
+  <joint name="${name}_lift_joint" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.597" />
+    <parent link="${name}_fixed_link" />
+    <child link="${name}_lift_link" />
+  </joint>
+
+</xacro:if>
+<xacro:unless value="$(arg fixed_torso)">
+
+
   <joint name="${name}_lift_joint" type="prismatic">
     <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.597" />
     <parent link="${name}_fixed_link" />
@@ -146,13 +159,16 @@
     <dynamics damping="1000" />
 
     <safety_controller k_position="20"
-                         k_velocity="20"
-                         soft_lower_limit="0.0"
-                         soft_upper_limit="0.35" />
+      k_velocity="20"
+      soft_lower_limit="0.0"
+      soft_upper_limit="0.35" />
 
   </joint>
 
-  <xacro:torso_simple_transmission name="torso_lift" reduction="1.0"/>
+  <xacro:torso_simple_transmission name="torso_lift" reduction="1.0" />
+
+
+</xacro:unless>
 
  </xacro:macro>
 
