@@ -2,6 +2,11 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add use_sim_time argument to use it in the robot description
+* Contributors: Noel Jimenez
+
 4.0.14 (2023-07-20)
 -------------------
 * Rename FT Sensor
