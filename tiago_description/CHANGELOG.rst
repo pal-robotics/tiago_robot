@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.0.15 (2023-09-04)
+-------------------
 * Add use_sim_time argument to use it in the robot description
 * Contributors: Noel Jimenez
 
