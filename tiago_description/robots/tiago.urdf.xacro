@@ -28,6 +28,7 @@
     <xacro:arg name="namespace" default=""/>
     <xacro:arg name="no_safety_eps" default="false"/>
     <xacro:arg name="base_type" default="pmb2"/> <!-- pmb2, omni_base -->
+    <xacro:arg name="fixed_torso" default="false" />
     <xacro:property name="wrist_model" value="$(arg wrist_model)" />
     <xacro:property name="end_effector" value="$(arg end_effector)" />
     <xacro:property name="ft_sensor" value="$(arg ft_sensor)" />
@@ -37,7 +38,8 @@
     <xacro:property name="nsp" value="$(arg namespace)" />
     <xacro:property name="base_type" value="$(arg base_type)" />
     <xacro:property name="no_safety_eps" value="$(arg no_safety_eps)" />
-
+    <xacro:property name="fixed_torso" value="$(arg fixed_torso)" />
+    
   <xacro:if value="$(arg arm)">
     <xacro:if value="${wrist_model not in ['wrist-2010', 'wrist-2017']}">
       <xacro:wrong_wrist_model/>
