@@ -1,0 +1,2 @@
+circular_buffer_capacity: 20
+buffer_allowed_tol_: 0.2
