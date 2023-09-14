@@ -4,7 +4,10 @@ project(tiago_bringup)
 find_package(ament_cmake_auto REQUIRED)
 ament_auto_find_build_dependencies()
 
-pal_register_modules(module/joystick.yaml)
+pal_register_modules(
+  module/bringup.yaml
+  module/joystick.yaml
+)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)

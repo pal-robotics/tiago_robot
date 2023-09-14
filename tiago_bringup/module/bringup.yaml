@@ -1,0 +1,2 @@
+bringup:
+  launch: "tiago_bringup tiago_bringup.launch.py end_effector:=no-end-effector use_sim_time:=false"
