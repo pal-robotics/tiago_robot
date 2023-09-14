@@ -1,0 +1,2 @@
+joystick:
+  launch: "tiago_bringup joystick_teleop.launch.py end_effector:=pal-hey5"
