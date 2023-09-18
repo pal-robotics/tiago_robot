@@ -2,6 +2,16 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'add_modules' into 'humble-devel'
+  Add pal system modules
+  See merge request robots/tiago_robot!227
+* Condition on pal only dependency
+* Adding bringup module
+* Adding joystick module
+* Contributors: Jordan Palacios
+
 4.0.15 (2023-09-04)
 -------------------
 
