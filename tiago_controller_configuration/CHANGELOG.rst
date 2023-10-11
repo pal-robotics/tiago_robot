@@ -2,8 +2,8 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.3.14 (2023-10-11)
+-------------------
 * add the catkin buildtool_depend
 * Merge branch 'change_license_to_apache' into 'erbium-devel'
   change public license to Apache License 2.0
