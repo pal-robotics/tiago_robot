@@ -2,6 +2,25 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'change_license_to_apache' into 'erbium-devel'
+  change public license to Apache License 2.0
+  See merge request robots/tiago_robot!229
+* change public license to Apache License 2.0
+* Merge branch 'fixed_torso_argument' into 'erbium-devel'
+  Fixed torso argument
+  See merge request robots/tiago_robot!225
+* updated the torso to be at half it's range when fixed
+* Manual formating
+* Added if condition in torso xacro related to fixed_torso parameter
+* Added fixed_torso parameter to main xacro
+* Merge branch 'davidterkuile-erbium-devel-patch-41052' into 'erbium-devel'
+  Update deprecated joint state publisher
+  See merge request robots/tiago_robot!224
+* Update deprecated joint state publisher
+* Contributors: Jordan Palacios, Sai Kishor Kothakota, Victor Lutz, davidterkuile
+
 2.3.13 (2023-08-09)
 -------------------
 

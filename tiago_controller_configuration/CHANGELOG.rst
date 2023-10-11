@@ -2,6 +2,15 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* add the catkin buildtool_depend
+* Merge branch 'change_license_to_apache' into 'erbium-devel'
+  change public license to Apache License 2.0
+  See merge request robots/tiago_robot!229
+* change public license to Apache License 2.0
+* Contributors: Jordan Palacios, Sai Kishor Kothakota
+
 2.3.13 (2023-08-09)
 -------------------
 
