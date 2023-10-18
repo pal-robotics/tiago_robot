@@ -25,6 +25,7 @@
   <exec_depend>pal_robotiq_140_description</exec_depend>
   <exec_depend>pal_robotiq_epick_description</exec_depend>
   <exec_depend>hector_gazebo_plugins</exec_depend>
+  <exec_depend>pal_urdf_utils</exec_depend>
 
   <test_depend>rostest</test_depend>
   <test_depend>urdf_test</test_depend>

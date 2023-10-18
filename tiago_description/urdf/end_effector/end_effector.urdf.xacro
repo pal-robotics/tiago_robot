@@ -16,7 +16,6 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
   <!--File includes-->
-  <xacro:include filename="$(find tiago_description)/urdf/deg_to_rad.xacro" />
   <xacro:include filename="$(find hey5_description)/urdf/hey5_hand.urdf.xacro" />
 
   <!--
