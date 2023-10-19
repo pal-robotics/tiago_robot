@@ -2,6 +2,9 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 4.0.16 (2023-09-18)
 -------------------
 * Merge branch 'add_modules' into 'humble-devel'

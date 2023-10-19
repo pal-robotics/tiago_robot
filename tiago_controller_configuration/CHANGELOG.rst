@@ -2,6 +2,11 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Use wheels calibration if exists
+* Contributors: Noel Jimenez
+
 4.0.16 (2023-09-18)
 -------------------
 
