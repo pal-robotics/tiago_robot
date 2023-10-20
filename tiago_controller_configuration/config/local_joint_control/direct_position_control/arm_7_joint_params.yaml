@@ -1,2 +1,2 @@
+limiter_max_rate: 1
 circular_buffer_capacity: 20
-buffer_allowed_tol_: 0.2
