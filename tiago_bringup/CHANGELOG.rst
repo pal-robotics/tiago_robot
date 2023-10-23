@@ -2,6 +2,9 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 2.3.14 (2023-10-11)
 -------------------
 * Merge branch 'change_license_to_apache' into 'erbium-devel'

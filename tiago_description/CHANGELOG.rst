@@ -2,6 +2,14 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'feat/use_urdf_utils' into 'erbium-devel'
+  Use urdf_utils
+  See merge request robots/tiago_robot!230
+* Use urdf_utils
+* Contributors: Jordan Palacios, thomaspeyrucain
+
 2.3.14 (2023-10-11)
 -------------------
 * Merge branch 'change_license_to_apache' into 'erbium-devel'
