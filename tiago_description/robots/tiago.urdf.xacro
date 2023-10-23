@@ -72,6 +72,9 @@
    <xacro:property name="description_calibration_dir"       value="${arg description_calibration_dir}"/>
 
   <!-- The following included files set up definitions of parts of the robot body -->
+  <!--File includes-->
+  <xacro:include filename="$(find pal_urdf_utils)/urdf/deg_to_rad.xacro" />
+
   <!-- Base -->
   <xacro:include filename="$(find ${base_type}_description)/urdf/base/base_sensors.urdf.xacro" />
 
@@ -94,7 +97,7 @@
   <xacro:include filename="$(find tiago_description)/urdf/head/head.urdf.xacro" />
 
   <!-- Materials for visualization -->
-  <xacro:include filename="$(find tiago_description)/urdf/materials.urdf.xacro" />
+  <xacro:include filename="$(find pal_urdf_utils)/urdf/materials.urdf.xacro" />
 
   <!-- Generic simulator_gazebo plugins -->
   <xacro:include filename="$(find tiago_description)/gazebo/gazebo.urdf.xacro" />
