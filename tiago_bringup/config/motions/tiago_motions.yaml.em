@@ -1,9 +1,9 @@
-/play_motion2:
+play_motion2:
   ros__parameters:
 @[if end_effector == "pal-hey5"]@
     controllers: [arm_controller, head_controller, torso_controller, hand_controller]
 @[end if]@
-@[if end_effector in ["pal-gripper"]@
+@[if end_effector == "pal-gripper"]@
     controllers: [arm_controller, head_controller, torso_controller, gripper_controller]
 @[end if]@
 @[if not has_arm]@
