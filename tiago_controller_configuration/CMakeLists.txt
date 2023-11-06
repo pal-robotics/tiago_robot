@@ -4,6 +4,12 @@ project(tiago_controller_configuration)
 find_package(ament_cmake_auto REQUIRED)
 ament_auto_find_build_dependencies()
 
+if(pal_module_cmake_FOUND)
+  pal_register_modules(
+    module/default_controllers.yaml
+  )
+endif()
+
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   ament_lint_auto_find_test_dependencies()

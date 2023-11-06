@@ -11,6 +11,8 @@
 
   <buildtool_depend>ament_cmake_auto</buildtool_depend>
 
+  <build_depend condition="$PAL_DISTRO >= alum">pal_module_cmake</build_depend>
+
   <exec_depend>controller_manager</exec_depend>
   <exec_depend>diff_drive_controller</exec_depend>
   <exec_depend>force_torque_sensor_broadcaster</exec_depend>

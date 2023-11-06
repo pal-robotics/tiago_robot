@@ -1,5 +1,5 @@
-bringup:
-  launch: "tiago_bringup tiago_bringup.launch.py
+robot_state_publisher:
+  launch: "tiago_description robot_state_publisher.launch.py
            robot_name:=@robot_type@
            arm:=@arm@
            camera_model:=@camera_model@
