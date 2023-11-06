@@ -1,0 +1,6 @@
+default_controllers:
+  launch: "tiago_controller_configuration default_controllers.launch.py
+           robot_name:=@robot_type@
+           arm:=@arm@
+           end_effector:=@end_effector@
+           ft_sensor:=@ft_sensor@"

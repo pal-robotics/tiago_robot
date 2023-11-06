@@ -14,6 +14,8 @@
   <buildtool_depend>ament_cmake_auto</buildtool_depend>
   <buildtool_depend>ament_cmake_python</buildtool_depend>
 
+  <build_depend condition="$PAL_DISTRO >= alum">pal_module_cmake</build_depend>
+
   <!-- <exec_depend>custom_ee_description</exec_depend> -->
   <!-- <exec_depend>pal_wsg_gripper_description</exec_depend> -->
 
