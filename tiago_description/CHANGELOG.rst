@@ -2,6 +2,11 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Split bringup module
+* Contributors: Noel Jimenez
+
 4.0.17 (2023-10-19)
 -------------------
 

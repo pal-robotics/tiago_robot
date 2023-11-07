@@ -2,6 +2,14 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Split bringup module
+* Use corresponding arguments for modules
+* Fix malformed .em and regenerate motions cfg
+* Remove unused sonar_to_cloud config
+* Contributors: Noel Jimenez
+
 4.0.17 (2023-10-19)
 -------------------
 
