@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.0.18 (2023-11-07)
+-------------------
 * Split bringup module
 * Use corresponding arguments for modules
 * Fix malformed .em and regenerate motions cfg
