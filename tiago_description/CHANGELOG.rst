@@ -2,6 +2,9 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 2.3.15 (2023-10-23)
 -------------------
 * Merge branch 'feat/use_urdf_utils' into 'erbium-devel'

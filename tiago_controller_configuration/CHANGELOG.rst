@@ -2,6 +2,16 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'smooth_position_control' into 'erbium-devel'
+  Add parameters for direct_position_control
+  See merge request robots/tiago_robot!226
+* Modify parameters for direct_position_control
+* Modify parameters for direct_position_control
+* Add parameters for direct_position_control
+* Contributors: Adria Roig, Adrià Roig, Sai Kishor Kothakota
+
 2.3.15 (2023-10-23)
 -------------------
 
