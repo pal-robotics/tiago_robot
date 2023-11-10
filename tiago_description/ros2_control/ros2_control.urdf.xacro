@@ -17,7 +17,7 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro"
        name="tiago" >
 
-  <xacro:macro name="tiago_ros2_control" params="use_sim:=^|true">
+  <xacro:macro name="tiago_ros2_control" params="use_sim:=^|false">
 
     <xacro:arg name="arm" default="true" />
     <xacro:arg name="end_effector" default="pal-hey5"/>
