@@ -2,6 +2,11 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Set use_sim_time false as default
+* Contributors: Noel Jimenez
+
 4.0.18 (2023-11-07)
 -------------------
 * Split bringup module
