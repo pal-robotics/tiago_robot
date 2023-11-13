@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.0.19 (2023-11-13)
+-------------------
 * Set use_sim_time false as default
 * Contributors: Noel Jimenez
 
