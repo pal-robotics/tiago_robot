@@ -2,8 +2,8 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.0.20 (2023-11-14)
+-------------------
 * Add website tag
 * Rename description and controller modules
 * Contributors: Noel Jimenez
