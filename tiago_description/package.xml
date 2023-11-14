@@ -11,6 +11,8 @@
   <maintainer email="noel.jimenez@pal-robotics.com">Noel Jimenez</maintainer>
   <license>Apache License 2.0</license>
 
+  <url type="website">https://github.com/pal-robotics/tiago_simulation</url>
+
   <buildtool_depend>ament_cmake_auto</buildtool_depend>
   <buildtool_depend>ament_cmake_python</buildtool_depend>
 
