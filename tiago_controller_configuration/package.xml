@@ -9,6 +9,8 @@
   <author email="bence.magyar@pal-robotics.com">Bence Magyar</author>
   <license>Apache License 2.0</license>
 
+  <url type="website">https://github.com/pal-robotics/tiago_simulation</url>
+
   <buildtool_depend>ament_cmake_auto</buildtool_depend>
 
   <build_depend condition="$PAL_DISTRO >= alum">pal_module_cmake</build_depend>
