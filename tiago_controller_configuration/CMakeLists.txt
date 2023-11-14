@@ -6,7 +6,7 @@ ament_auto_find_build_dependencies()
 
 if(pal_module_cmake_FOUND)
   pal_register_modules(
-    module/default_controllers.yaml
+    module/10_default_controllers.yaml
   )
 endif()
 
