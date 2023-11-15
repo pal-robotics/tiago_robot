@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.0.21 (2023-11-15)
+-------------------
 * Comment end-effector joystick control
 * Contributors: Noel Jimenez
 
