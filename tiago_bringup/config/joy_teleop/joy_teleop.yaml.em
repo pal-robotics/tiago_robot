@@ -100,39 +100,39 @@ joy_teleop:
       buttons: [1] # right pad, right button
 
 @[if end_effector == "pal-hey5"]@
-    close_hand:
-      type: action
-      interface_type: play_motion2_msgs/action/PlayMotion2
-      action_name: /play_motion2
-      action_goal:
-        motion_name: 'close'
-        skip_planning: True
-      buttons: [7]
-
-    open_hand:
-      type: action
-      interface_type: play_motion2_msgs/action/PlayMotion2
-      action_name: /play_motion2
-      action_goal:
-        motion_name: 'open'
-        skip_planning: True
-      buttons: [5]
+#    close_hand:
+#      type: action
+#      interface_type: play_motion2_msgs/action/PlayMotion2
+#      action_name: /play_motion2
+#      action_goal:
+#        motion_name: 'close'
+#        skip_planning: True
+#      buttons: [7]
+#
+#    open_hand:
+#      type: action
+#      interface_type: play_motion2_msgs/action/PlayMotion2
+#      action_name: /play_motion2
+#      action_goal:
+#        motion_name: 'open'
+#        skip_planning: True
+#      buttons: [5]
 @[end if]@
 
 @[if end_effector == "pal-gripper"]@
-    close_gripper:
-      type: action
-      interface_type: teleop_tools_msgs/action/Increment
-      action_name: /gripper_controller/increment
-      action_goal:
-        increment_by: [-0.01, -0.01]
-      buttons: [7] # R2
-
-    open_gripper:
-      type: action
-      interface_type: teleop_tools_msgs/action/Increment
-      action_name: /gripper_controller/increment
-      action_goal:
-        increment_by: [0.01, 0.01]
-      buttons: [5] # R1
+#    close_gripper:
+#      type: action
+#      interface_type: teleop_tools_msgs/action/Increment
+#      action_name: /gripper_controller/increment
+#      action_goal:
+#        increment_by: [-0.01, -0.01]
+#      buttons: [7] # R2
+#
+#    open_gripper:
+#      type: action
+#      interface_type: teleop_tools_msgs/action/Increment
+#      action_name: /gripper_controller/increment
+#      action_goal:
+#        increment_by: [0.01, 0.01]
+#      buttons: [5] # R1
 @[end if]@

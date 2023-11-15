@@ -100,21 +100,21 @@ joy_teleop:
         increment_by: [0.0, -0.1]
       buttons: [1] # right pad, right button
 
-    close_hand:
-      type: action
-      interface_type: play_motion2_msgs/action/PlayMotion2
-      action_name: /play_motion2
-      action_goal:
-        motion_name: 'close'
-        skip_planning: True
-      buttons: [7]
-
-    open_hand:
-      type: action
-      interface_type: play_motion2_msgs/action/PlayMotion2
-      action_name: /play_motion2
-      action_goal:
-        motion_name: 'open'
-        skip_planning: True
-      buttons: [5]
+#    close_hand:
+#      type: action
+#      interface_type: play_motion2_msgs/action/PlayMotion2
+#      action_name: /play_motion2
+#      action_goal:
+#        motion_name: 'close'
+#        skip_planning: True
+#      buttons: [7]
+#
+#    open_hand:
+#      type: action
+#      interface_type: play_motion2_msgs/action/PlayMotion2
+#      action_name: /play_motion2
+#      action_goal:
+#        motion_name: 'open'
+#        skip_planning: True
+#      buttons: [5]
 
