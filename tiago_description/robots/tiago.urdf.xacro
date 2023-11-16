@@ -16,7 +16,7 @@
  -->
 <robot  xmlns:xacro="http://ros.org/wiki/xacro"
         name="tiago" >
-    <xacro:arg name="arm" default="right-arm"/> <!-- right-arm, no-arm -->
+    <xacro:arg name="arm" default="tiago-arm"/> <!-- tiago-arm, no-arm -->
     <xacro:arg name="wrist_model" default="wrist-2010"/>
     <xacro:arg name="end_effector" default="pal-hey5"/> <!-- no-end-effector, pal-gripper, pal-hey5-->
     <xacro:arg name="ft_sensor" default="schunk-ft"/> <!-- no-ft-sensor, schunk-ft -->
@@ -30,7 +30,7 @@
     <xacro:arg name="no_safety_eps" default="false"/>
     <xacro:arg name="use_sim" default="false"/>
     <xacro:property name="arm" value="$(arg arm)" />
-    <xacro:if value="${arm not in ['right-arm', 'no-arm']}">
+    <xacro:if value="${arm not in ['right-arm', 'tiago-arm', 'no-arm']}">
       <xacro:wrong_arm/>
     </xacro:if>
 
