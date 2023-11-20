@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.3.17 (2023-11-20)
+-------------------
 * Merge branch 'load-motions' into 'erbium-devel'
   Load motions according to end effector
   See merge request robots/tiago_robot!206
