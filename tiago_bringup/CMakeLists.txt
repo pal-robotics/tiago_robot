@@ -4,7 +4,8 @@ find_package(catkin REQUIRED)
 catkin_package()
 
 
-install(PROGRAMS scripts/end_effector_camera.sh
+install(PROGRAMS
+    scripts/end_effector_camera.sh
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

@@ -24,4 +24,5 @@
   <exec_depend>usb_cam</exec_depend>
   <exec_depend>robot_pose</exec_depend>
   <exec_depend>custom_ee_configuration</exec_depend>
+  <exec_depend>pal_motion_loader</exec_depend>
 </package>
