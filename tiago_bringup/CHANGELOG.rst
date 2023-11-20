@@ -2,6 +2,16 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'load-motions' into 'erbium-devel'
+  Load motions according to end effector
+  See merge request robots/tiago_robot!206
+* Fix dependencies
+* Move load motions script to pal_motion_loader, modify bringup
+* Add script to load motions according to end effector
+* Contributors: Josef Svec, Sai Kishor Kothakota, davidfernandez
+
 2.3.16 (2023-11-08)
 -------------------
 
