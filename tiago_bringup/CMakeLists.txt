@@ -21,10 +21,4 @@ install(PROGRAMS scripts/regen_em_file.py
   DESTINATION lib/${PROJECT_NAME}
 )
 
-# @TODO
-# install(PROGRAMS scripts/end_effector_camera.sh
-#   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-# )
-
 ament_auto_package(INSTALL_TO_SHARE config launch)
-
