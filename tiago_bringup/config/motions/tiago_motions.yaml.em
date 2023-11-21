@@ -54,6 +54,18 @@ play_motion:
         usage: demo
         description: 'unfold_arm'
 
+    home_with_object:
+      joints: [torso_lift_joint, arm_1_joint,
+      arm_2_joint, arm_3_joint, arm_4_joint, arm_5_joint,
+      arm_6_joint, arm_7_joint]
+      points:
+      - positions: [0.18, 0.20, -1.34, -0.20, 1.94, -1.57, 1.37, 1.23]
+        time_from_start: 4.0
+      meta:
+        name: Go to home position while holding object
+        usage: demo
+        description: 'unfold_arm'
+
     reach_floor:
       joints: [torso_lift_joint, arm_1_joint,
       arm_2_joint, arm_3_joint, arm_4_joint, arm_5_joint,
