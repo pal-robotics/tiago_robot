@@ -4,3 +4,4 @@ default_controllers:
            arm:=@arm@
            end_effector:=@end_effector@
            ft_sensor:=@ft_sensor@"
+  finishes: True
