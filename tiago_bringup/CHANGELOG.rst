@@ -2,6 +2,12 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Update cmake_minimum_required version to 3.8
+* Cleanup repository
+* Contributors: Noel Jimenez
+
 4.0.21 (2023-11-15)
 -------------------
 * Comment end-effector joystick control

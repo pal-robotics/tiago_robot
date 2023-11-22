@@ -2,6 +2,11 @@
 Changelog for package tiago_robot
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Update cmake_minimum_required version to 3.8
+* Contributors: Noel Jimenez
+
 4.0.21 (2023-11-15)
 -------------------
 
