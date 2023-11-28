@@ -32,7 +32,7 @@
       <rosparam>
         pan_link:  head_1_link
         tilt_link: head_2_link
-        success_angle_threshold: 0.01
+        success_angle_threshold: 0.05
       </rosparam>
     </node>
   </group>
