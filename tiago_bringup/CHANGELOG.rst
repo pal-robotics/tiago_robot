@@ -2,6 +2,11 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Fix wrong placed closing bracket
+* Contributors: Noel Jimenez
+
 4.0.22 (2023-11-22)
 -------------------
 * Update cmake_minimum_required version to 3.8
