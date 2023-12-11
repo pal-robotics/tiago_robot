@@ -50,7 +50,7 @@ def launch_setup(context, *args, **kwargs):
         get_package_share_directory('tiago_bringup'), 'config', 'joy_teleop',
         'joy_teleop' + get_tiago_hw_suffix(arm=arm,
                                            end_effector=end_effector,
-                                           ft_sensor=ft_sensor + '.yaml'))
+                                           ft_sensor=ft_sensor) + '.yaml')
 
     declare_teleop_config = DeclareLaunchArgument(
        'teleop_config', default_value=joy_teleop_path,
