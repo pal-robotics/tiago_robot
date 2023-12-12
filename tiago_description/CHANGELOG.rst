@@ -2,6 +2,11 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Bump module names
+* Contributors: Noel Jimenez
+
 4.0.23 (2023-12-11)
 -------------------
 
