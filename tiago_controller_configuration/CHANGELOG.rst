@@ -2,6 +2,11 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Launch gripper from its controller_configuration package
+* Contributors: Aina Irisarri
+
 4.0.24 (2023-12-12)
 -------------------
 * Bump module names
