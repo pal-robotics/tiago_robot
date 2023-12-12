@@ -2,8 +2,8 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.0.24 (2023-12-12)
+-------------------
 * Bump module names
 * Contributors: Noel Jimenez
 
