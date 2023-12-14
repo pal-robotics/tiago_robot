@@ -58,7 +58,7 @@ def launch_setup(context, *args, **kwargs):
 
     play_motion2 = include_launch_py_description(
         'play_motion2', ['launch', 'play_motion2.launch.py'],
-        launch_arguments={'play_motion2_config': motions_file_path,
+        launch_arguments={'motions_file': motions_file_path,
                           'approach_planner_config': approach_planner_config}.items())
 
     return [play_motion2]
