@@ -36,21 +36,12 @@ def launch_end_effector_controller(context, *args, **kwargs):
     if (end_effector_param == 'no-end-effector'):
         return []
 
-    # Temporal fix. This will be removed.
-    if (end_effector_param == 'pal-hey5'):
-        hey_5_controller_launch = include_launch_py_description(
-            'tiago_controller_configuration',
-            ['launch', end_effector_param + '_controller.launch.py'],
-            condition=LaunchConfigurationNotEquals('arm', 'no-arm'))
-        return [hey_5_controller_launch]
-
     end_effector = end_effector_param.replace('-', '_')
 
     end_effector_controller_launch = include_launch_py_description(
         end_effector + '_controller_configuration',
         ['launch', end_effector + '_controller.launch.py'],
         condition=LaunchConfigurationNotEquals('arm', 'no-arm'))
-
     return [end_effector_controller_launch]
 
 
