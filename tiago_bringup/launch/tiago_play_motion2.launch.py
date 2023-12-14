@@ -44,16 +44,22 @@ def launch_setup(context, *args, **kwargs):
     end_effector = read_launch_argument('end_effector', context)
     ft_sensor = read_launch_argument('ft_sensor', context)
 
-    motions_file = 'tiago_motions' + get_tiago_hw_suffix(arm=arm,
-                                                         end_effector=end_effector,
-                                                         ft_sensor=ft_sensor) + '.yaml'
+    hw_suffix = get_tiago_hw_suffix(arm=arm, end_effector=end_effector, ft_sensor=ft_sensor)
 
-    play_motion2_config = os.path.join(
-        get_package_share_directory('tiago_bringup'), 'config', 'motions', motions_file)
+    motions_file = f"tiago_motions{hw_suffix}.yaml"
+    motions_file_path = os.path.join(
+        get_package_share_directory('tiago_bringup'),
+        'config', 'motions', motions_file)
+
+    approach_planner_file = f"approach_planner{hw_suffix}.yaml"
+    approach_planner_config = os.path.join(
+        get_package_share_directory('tiago_bringup'),
+        'config', 'approach_planner', approach_planner_file)
 
     play_motion2 = include_launch_py_description(
         'play_motion2', ['launch', 'play_motion2.launch.py'],
-        launch_arguments={'play_motion2_config': play_motion2_config}.items())
+        launch_arguments={'play_motion2_config': motions_file_path,
+                          'approach_planner_config': approach_planner_config}.items())
 
     return [play_motion2]
 
