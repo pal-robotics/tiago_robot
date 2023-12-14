@@ -38,7 +38,7 @@
         <xacro:include filename="$(find pal_gripper_description)/urdf/gripper.ros2_control.xacro" />
       </xacro:if>
       <xacro:if value="${end_effector == 'pal-hey5'}">
-        <xacro:include filename="$(find hey5_description)/urdf/hey5.ros2_control.xacro" />
+        <xacro:include filename="$(find pal_hey5_description)/urdf/pal_hey5.ros2_control.xacro" />
       </xacro:if>
     </xacro:if>
     <xacro:include filename="$(find pmb2_description)/urdf/sensors/sensors.ros2_control.xacro"/>
