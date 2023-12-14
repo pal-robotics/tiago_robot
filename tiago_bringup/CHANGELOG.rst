@@ -2,6 +2,13 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Update motions file argument name for play_motion2
+* Update approach_planner configurations
+* Use play_motion2 approach_planner config
+* Contributors: Noel Jimenez
+
 4.0.25 (2023-12-12)
 -------------------
 
