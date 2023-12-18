@@ -2,6 +2,11 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Use pal_urdf_utils materials and deg_to_rad
+* Contributors: Noel Jimenez
+
 4.0.26 (2023-12-14)
 -------------------
 
