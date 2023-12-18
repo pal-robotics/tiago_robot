@@ -17,7 +17,7 @@ limitations under the License.
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
   <!--File includes-->
-  <xacro:include filename="$(find tiago_description)/urdf/deg_to_rad.xacro" />
+  <xacro:include filename="$(find pal_urdf_utils)/urdf/deg_to_rad.urdf.xacro" />
 
 <xacro:macro name="camera_baseline_constants" params="camera_model" >
   <xacro:if value="${camera_model == 'orbbec-astra'}">
