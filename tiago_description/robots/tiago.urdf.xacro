@@ -102,7 +102,7 @@
     use_sim="$(arg use_sim)" />
 
   <!-- Materials for visualization -->
-  <xacro:include filename="$(find tiago_description)/urdf/materials.urdf.xacro" />
+  <xacro:include filename="$(find pal_urdf_utils)/urdf/materials.urdf.xacro" />
 
   <!-- Now we can start using the macros included above to define the actual robot -->
   <xacro:base_sensors name="base" laser_model="$(arg laser_model)" sonars="true" microphone="true"/>
