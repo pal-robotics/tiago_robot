@@ -4,7 +4,6 @@ mobile_base_controller:
     use_stamped_vel: False
     left_wheel_names  : ['wheel_left_joint']
     right_wheel_names : ['wheel_right_joint']
-    #wheels_per_side: 1
 
     # In ROS1 these physical properties were parsed from the URDF
     wheel_radius: 0.0985
