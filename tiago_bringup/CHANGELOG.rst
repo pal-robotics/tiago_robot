@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.3.18 (2023-12-22)
+-------------------
 * Merge branch 'malaga-demo' into 'erbium-devel'
   Malaga demo
   See merge request robots/tiago_robot!251
