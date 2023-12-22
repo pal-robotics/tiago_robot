@@ -2,6 +2,15 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'malaga-demo' into 'erbium-devel'
+  Malaga demo
+  See merge request robots/tiago_robot!251
+* Change motion home_with_object to hold_object_home
+* Add home_with_object motion to that allows holding an object without collision
+* Contributors: David ter Kuile, davidterkuile
+
 2.3.17 (2023-11-20)
 -------------------
 * Merge branch 'load-motions' into 'erbium-devel'

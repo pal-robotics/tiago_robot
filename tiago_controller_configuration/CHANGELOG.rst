@@ -2,6 +2,11 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Increase success_angle_threshold of point_head_action to avoid infinite loop
+* Contributors: David ter Kuile
+
 2.3.17 (2023-11-20)
 -------------------
 
