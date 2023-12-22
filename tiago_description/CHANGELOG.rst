@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.0.28 (2023-12-22)
+-------------------
 * renaming hey5 package and the xacro files into pal_hey5
 * Contributors: Aina Irisarri
 
