@@ -2,6 +2,11 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* renaming hey5 package and the xacro files into pal_hey5
+* Contributors: Aina Irisarri
+
 4.0.27 (2023-12-18)
 -------------------
 * Use pal_urdf_utils materials and deg_to_rad

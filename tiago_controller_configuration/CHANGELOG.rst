@@ -2,6 +2,13 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* adding pal_hey5 as dependency
+* removing temporal exception for hey5 gripper
+* relocate the pal-hey5 configuration and launch files
+* Contributors: Aina Irisarri
+
 4.0.27 (2023-12-18)
 -------------------
 
