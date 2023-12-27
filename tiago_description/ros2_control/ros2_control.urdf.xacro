@@ -40,6 +40,12 @@
       <xacro:if value="${end_effector == 'pal-hey5'}">
         <xacro:include filename="$(find pal_hey5_description)/urdf/pal_hey5.ros2_control.xacro" />
       </xacro:if>
+      <xacro:if value="${end_effector == 'pal-robtiq-2f-85'}">
+        <xacro:include filename="$(find pal_robotiq_description)/urdf/pal_robotiq.ros2_control.xacro" />
+      </xacro:if>
+      <xacro:if value="${end_effector == 'pal-robtiq-2f-140'}">
+        <xacro:include filename="$(find pal_robotiq_description)/urdf/pal_robotiq.ros2_control.xacro" />
+      </xacro:if>
     </xacro:if>
     <xacro:include filename="$(find pmb2_description)/urdf/sensors/sensors.ros2_control.xacro"/>
 
