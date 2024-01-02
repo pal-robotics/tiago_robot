@@ -29,7 +29,8 @@ extension = os.path.splitext(no_em_extension_path)[1]
 
 for arm in ['right-arm', None]:
     if arm is not None:
-        end_effectors = ['pal-hey5', 'pal-gripper', 'no-end-effector']
+        end_effectors = ['pal-hey5', 'pal-gripper', 'no-end-effector', 'robotiq-2f-85',
+                         'robotiq-2f-140']
         ft_sensors = ['schunk-ft', None]
     else:
         end_effectors = [None]

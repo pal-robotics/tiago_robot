@@ -3,7 +3,7 @@ play_motion2:
 @[if end_effector == "pal-hey5"]@
     controllers: [arm_controller, head_controller, torso_controller, hand_controller]
 @[end if]@
-@[if end_effector == "pal-gripper"]@
+@[if end_effector in ["pal-gripper", "robotiq-2f-85", "robotiq-2f-140"]]@
     controllers: [arm_controller, head_controller, torso_controller, gripper_controller]
 @[end if]@
 @[if not has_arm]@
@@ -15,10 +15,18 @@ play_motion2:
         joints: [torso_lift_joint, arm_1_joint,
         arm_2_joint, arm_3_joint, arm_4_joint, arm_5_joint,
         arm_6_joint, arm_7_joint]
+@[if end_effector in ["robotiq-2f-85", "robotiq-2f-140"]]@
+        positions: [0.25, 0.20, 0.35, -0.20, 1.94, -1.57, 1.37, -1.58,
+                    0.18, @[if end_effector == "robotiq-2f-140"]0.50@[else]0.20@[end if], -1.34, @[if end_effector == "robotiq-2f-140"]-0.48@[else]-0.20@[end if], 1.94, @[if end_effector == "robotiq-2f-140"]-1.49@[else]-1.57@[end if], 1.37, -1.58,
+                    0.15, @[if end_effector == "robotiq-2f-140"]0.50@[else]0.20@[end if], -1.34, @[if end_effector == "robotiq-2f-140"]-0.48@[else]-0.20@[end if], 1.94, @[if end_effector == "robotiq-2f-140"]-1.49@[else]-1.57@[end if], 1.37, -1.58,
+                    0.15, @[if end_effector == "robotiq-2f-140"]0.50@[else]0.20@[end if], -1.34, @[if end_effector == "robotiq-2f-140"]-0.48@[else]-0.20@[end if], 1.94, @[if end_effector == "robotiq-2f-140"]-1.49@[else]-1.57@[end if], 1.37, 0.0]
+        times_from_start: [0.5, 4.0, 7.0, 9.0]
+@[else]@
         positions: [0.25, 0.20, 0.35, -0.20, 1.94, -1.57, 1.37, 0.0,
                     0.18, 0.20, -1.34, -0.20, 1.94, -1.57, 1.37, 0.0,
                     0.15, 0.20, -1.34, -0.20, 1.94, -1.57, 1.37, 0.0]
         times_from_start: [0.5, 4.0, 7.0]
+@[end if]@
         meta:
           name: Home
           usage: demo
@@ -64,7 +72,7 @@ play_motion2:
 
       prepare_grasp:
         joints: ['torso_lift_joint', 'arm_1_joint', 'arm_2_joint', 'arm_3_joint', 'arm_4_joint', 'arm_5_joint', 'arm_6_joint', 'arm_7_joint']
-        positions: [0.34, 0.20, -1.34, -0.20, 1.94, -1.57, 1.37, 0.0,
+        positions: [0.34, 0.20, -1.34, -0.20, 1.94, -1.57, 1.37, @[if end_effector in ["robotiq-2f-85", "robotiq-2f-140"]]-1.58@[else]0.0@[end if],
                     0.34, 0.10, 0.47, -0.20, 1.56, -1.58, 0.25, 0.0,
                     0.34, 0.10, 0.47, -0.20, 1.56, 1.60, 0.25, 1.19]
         times_from_start: [3.0, 8.5, 10.5]
@@ -195,6 +203,43 @@ play_motion2:
           description: 'pinch_hand'
 @[end if]@
 
+@[if end_effector in ["robotiq-2f-85", "robotiq-2f-140"]]@
+      close:
+        joints: [gripper_finger_joint]
+        positions: [@[if end_effector == "robotiq-2f-85"]0.8@[else]0.7@[end if]]
+        times_from_start: [0.5]
+        meta:
+          name: Close Gripper
+          usage: demo
+          description: 'Closes gripper'
+
+      close_half:
+        joints: [gripper_finger_joint]
+        positions: [@[if end_effector == "robotiq-2f-85"]0.4@[else]0.35@[end if]]
+        times_from_start: [0.5]
+        meta:
+          name: Close Gripper Half
+          usage: demo
+          description: 'Closes gripper halfway'
+
+      open:
+        joints: [gripper_finger_joint]
+        positions: [0.0]
+        times_from_start: [0.5]
+        meta:
+          name: Open Gripper
+          usage: demo
+          description: 'Open gripper'
+
+      point:
+        joints: [gripper_finger_joint]
+        positions: [@[if end_effector == "robotiq-2f-85"]0.8@[else]0.7@[end if]]
+        times_from_start: [0.5]
+        meta:
+          name: Point
+          usage: demo
+          description: 'Closes gripper to point to something'
+@[end if]@
       wave:
         joints: [arm_1_joint,
         arm_2_joint, arm_3_joint, arm_4_joint,
@@ -328,6 +373,43 @@ play_motion2:
           description: 'Pick a shirt-like object from floor in front of the robot'
 @[end if]@
 
+@[if end_effector in ["robotiq-2f-85", "robotiq-2f-140"]]@
+      offer:
+        joints: ['torso_lift_joint', 'arm_1_joint', 'arm_2_joint', 'arm_3_joint', 'arm_4_joint', 'arm_5_joint', 'arm_6_joint', 'arm_7_joint', 'gripper_finger_joint']
+        positions: [0.296, 1.61, -0.93, -3.14, 1.83, -1.577, -0.62, -1.577, 0.0]
+        times_from_start: [0.0]
+        meta:
+          name: Offer Gripper
+          usage: demo
+          description: 'Offer Gripper'
+
+      shake_hands:
+        joints: ['gripper_finger_joint', 'torso_lift_joint', 'arm_1_joint', 'arm_2_joint', 'arm_3_joint', 'arm_4_joint', 'arm_5_joint', 'arm_6_joint', 'arm_7_joint']
+        positions: [0.0, 0.296, 1.61, -0.93, -3.14, 1.83, -1.577, -0.53, -1.577,
+                    0.3, 0.296, 1.61, -0.93, -3.14, 1.83, -1.577, -0.53, -1.577,
+                    0.3, 0.296, 1.61, -0.93, -3.14, 1.40, -1.577, -0.2, -1.577,
+                    0.3, 0.296, 1.61, -0.93, -3.14, 1.83, -1.577, -0.53, -1.577,
+                    0.3, 0.296, 1.61, -0.93, -3.14, 1.40, -1.577, -0.2, -1.577,
+                    0.3, 0.296, 1.61, -0.93, -3.14, 1.83, -1.577, -0.53, -1.577,
+                    0.3, 0.296, 1.61, -0.93, -3.14, 1.83, -1.577, -0.53, -1.577]
+        times_from_start: [0.0, 5.0, 6.0, 7.0, 8.0, 9.0, 11.0]
+        meta:
+          name: Shake Hands
+          usage: demo
+          description: 'shake_hands'
+
+      pick_from_floor:
+        joints: ['torso_lift_joint', 'arm_1_joint', 'arm_2_joint', 'arm_3_joint', 'arm_4_joint', 'arm_5_joint', 'arm_6_joint', 'arm_7_joint', 'gripper_finger_joint']
+        positions: [0.226, 0.308, -0.695, -0.968, 1.582,  1.965, 0.273, -1.101, 0.0,
+                    0.12, 0.809, -1.197, -1.119, 0.322, 1.96, -0.849, 0.041, 0.0,
+                    0.12, 0.809, -1.197, -1.119, 0.345, 1.96, -0.849, 0.041, @[if end_effector == "robotiq-2f-85"]0.75@[else]0.65@[end if],
+                    0.27, 0.21, -1.153, -1.538, 2.26, 1.965, 0.394, -0.082, @[if end_effector == "robotiq-2f-85"]0.75@[else]0.65@[end if]                    ]
+        times_from_start: [0.0, 4.0, 6.0, 9.0]
+        meta:
+          name: Pick from floor
+          usage: demo
+          description: 'Pick a shirt-like object from floor in front of the robot'
+@[end if]@
 @[else]@
       home:
         joints: [torso_lift_joint]
