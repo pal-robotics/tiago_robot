@@ -40,10 +40,7 @@
       <xacro:if value="${end_effector == 'pal-hey5'}">
         <xacro:include filename="$(find pal_hey5_description)/urdf/pal_hey5.ros2_control.xacro" />
       </xacro:if>
-      <xacro:if value="${end_effector == 'robotiq-2f-85'}">
-        <xacro:include filename="$(find pal_robotiq_description)/urdf/robotiq.ros2_control.xacro" />
-      </xacro:if>
-      <xacro:if value="${end_effector == 'robotiq-2f-140'}">
+      <xacro:if value="${end_effector in ['robotiq-2f-85', 'robotiq-2f-140']}">
         <xacro:include filename="$(find pal_robotiq_description)/urdf/robotiq.ros2_control.xacro" />
       </xacro:if>
     </xacro:if>
@@ -105,11 +102,11 @@
         </xacro:if>
         <xacro:if value="${end_effector == 'robotiq-2f-85'}">
           <!-- robotiq-2f-85 -->
-          <xacro:ros2_control_robotiq_gripper name="gripper_finger" reduction="1.0" />
+          <xacro:ros2_control_robotiq_85_gripper name="gripper" reduction="1.0" />
         </xacro:if>
         <xacro:if value="${end_effector == 'robotiq-2f-140'}">
           <!-- robotiq-2f-140 -->
-          <xacro:ros2_control_robotiq_gripper name="gripper_finger" reduction="1.0" />
+          <xacro:ros2_control_robotiq_140_gripper name="gripper" reduction="1.0" />
         </xacro:if>
       </xacro:if>
 
