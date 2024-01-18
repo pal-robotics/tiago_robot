@@ -2,6 +2,14 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'ros2-tiago-dual' into 'humble-devel'
+  Ros2 tiago dual
+  See merge request robots/tiago_robot!240
+* Remove unused param
+* Contributors: David ter Kuile, davidterkuile
+
 4.0.28 (2023-12-22)
 -------------------
 * adding pal_hey5 as dependency

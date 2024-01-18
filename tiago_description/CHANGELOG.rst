@@ -2,6 +2,18 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'ros2-tiago-dual' into 'humble-devel'
+  Ros2 tiago dual
+  See merge request robots/tiago_robot!240
+* Change test arg to tiago-arm in CMakelists
+* Rename end-effector xacro arg
+* Change arm type to tiago-arm instead of arm right
+* Add is_dual arg to arm.urdf.xacro
+* Update inertia of arm link 4 urdf
+* Contributors: David ter Kuile, davidterkuile
+
 4.0.28 (2023-12-22)
 -------------------
 * renaming hey5 package and the xacro files into pal_hey5
