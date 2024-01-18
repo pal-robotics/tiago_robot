@@ -65,8 +65,8 @@ play_motion2:
       prepare_grasp:
         joints: ['torso_lift_joint', 'arm_1_joint', 'arm_2_joint', 'arm_3_joint', 'arm_4_joint', 'arm_5_joint', 'arm_6_joint', 'arm_7_joint']
         positions: [0.34, 0.20, -1.34, -0.20, 1.94, -1.57, 1.37, 0.0,
-                    0.34, -0.12, 0.47, -0.20, 1.56, -1.58, 0.25, 0.0,
-                    0.34, -0.12, 0.47, -0.20, 1.56, 1.60, 0.25, 1.19]
+                    0.34, 0.10, 0.47, -0.20, 1.56, -1.58, 0.25, 0.0,
+                    0.34, 0.10, 0.47, -0.20, 1.56, 1.60, 0.25, 1.19]
         times_from_start: [3.0, 8.5, 10.5]
         meta:
           name: Prepare Grasp
