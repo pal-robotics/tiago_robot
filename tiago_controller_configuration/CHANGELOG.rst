@@ -2,8 +2,8 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.1.0 (2024-01-18)
+------------------
 * Merge branch 'ros2-tiago-dual' into 'humble-devel'
   Ros2 tiago dual
   See merge request robots/tiago_robot!240
