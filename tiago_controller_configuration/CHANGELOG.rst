@@ -2,8 +2,8 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.1.1 (2024-01-19)
+------------------
 * adding the config files needed for robotiq
 * modifying where to find the urdfs for robotiq
 * updating the necessary dependencies for robotiq

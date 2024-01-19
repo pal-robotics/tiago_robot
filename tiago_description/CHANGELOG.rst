@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.1.1 (2024-01-19)
+------------------
 * epick end effector commented
 * differentiating macros for robotiq-85 & robotiq-140
 * removing epick as posible end_effector for now
