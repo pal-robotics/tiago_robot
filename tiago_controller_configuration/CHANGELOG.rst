@@ -2,6 +2,13 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* adding the config files needed for robotiq
+* modifying where to find the urdfs for robotiq
+* updating the necessary dependencies for robotiq
+* Contributors: Aina Irisarri
+
 4.1.0 (2024-01-18)
 ------------------
 * Merge branch 'ros2-tiago-dual' into 'humble-devel'

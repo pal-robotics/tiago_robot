@@ -2,6 +2,16 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* epick end effector commented
+* differentiating macros for robotiq-85 & robotiq-140
+* removing epick as posible end_effector for now
+* modifying where to find the urdfs for robotiq
+* updating the necessary dependencies for robotiq
+* adding robotiq_grippers as possibles end_effectors
+* Contributors: Aina Irisarri
+
 4.1.0 (2024-01-18)
 ------------------
 * Merge branch 'ros2-tiago-dual' into 'humble-devel'
