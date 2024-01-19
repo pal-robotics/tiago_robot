@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.1.2 (2024-01-19)
+------------------
 * update robotiq motion files
 * Contributors: Aina Irisarri
 
