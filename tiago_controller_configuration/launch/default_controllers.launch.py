@@ -31,10 +31,17 @@ def declare_robot_args(context, *args, **kwargs):
 
 
 def launch_end_effector_controller(context, *args, **kwargs):
-
+    end_effector_robotiq_list = ['robotiq-2f-85', 'robotiq-2f-140']
     end_effector_param = read_launch_argument('end_effector', context)
     if (end_effector_param == 'no-end-effector'):
         return []
+
+    if (end_effector_param in end_effector_robotiq_list):
+        end_effector_controller_launch = include_launch_py_description(
+            'pal_robotiq_controller_configuration',
+            ['launch', 'robotiq_gripper_controller.launch.py'],
+            condition=LaunchConfigurationNotEquals('arm', 'no-arm'))
+        return [end_effector_controller_launch]
 
     end_effector = end_effector_param.replace('-', '_')
 

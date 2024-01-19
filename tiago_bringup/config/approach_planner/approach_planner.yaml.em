@@ -20,6 +20,9 @@ simple_approach_planner:
       - gripper_left_finger_joint
       - gripper_right_finger_joint
 @[end if]@
+@[if end_effector in ["robotiq-2f-85", "robotiq-2f-140"]]@
+      - gripper_finger_joint
+@[end if]@
     joint_tolerance: 0.01
     approach_velocity: 0.5
     approach_min_duration: 0.5
