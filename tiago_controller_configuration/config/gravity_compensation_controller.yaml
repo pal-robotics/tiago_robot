@@ -1,7 +1,5 @@
 gravity_compensation_controller:
   ros__parameters:
-    type: "pal_controllers/GravityCompensationController"
-
     dt: 0.01
 
     command_joints: ['arm_1_joint', 'arm_2_joint', 'arm_3_joint', 'arm_4_joint', 'arm_5_joint', 'arm_6_joint', 'arm_7_joint']
