@@ -26,21 +26,17 @@ em_file_path = sys.argv[1]
 no_em_extension_path = os.path.splitext(em_file_path)[0]
 no_extension_path = os.path.splitext(no_em_extension_path)[0]
 extension = os.path.splitext(no_em_extension_path)[1]
+end_effectors = ['pal-hey5', 'pal-gripper', 'no-ee', 'robotiq-2f-85',
+                 'robotiq-2f-140']
+ft_sensors = ['schunk-ft', 'no-ft-sensor']
 
-for arm in ['right-arm', None]:
-    if arm is not None:
-        end_effectors = ['pal-hey5', 'pal-gripper', 'no-end-effector', 'robotiq-2f-85',
-                         'robotiq-2f-140']
-        ft_sensors = ['schunk-ft', None]
-    else:
-        end_effectors = [None]
-        ft_sensors = [None]
+for arm in ['right-arm', 'no-arm']:
     for end_effector in end_effectors:
         for ft_sensor in ft_sensors:
             cfg = {
-                'has_arm': arm is not None,
-                'end_effector': end_effector,
-                'ft_sensor': ft_sensor,
+                'has_arm': arm not in ['no-arm'],
+                'end_effector': end_effector not in ['no-ee'],
+                'ft_sensor': ft_sensor not in ['no-ft-sensor'],
             }
             with open(em_file_path, 'r') as f:
                 expanded_contents = em.expand(f.read(), cfg)

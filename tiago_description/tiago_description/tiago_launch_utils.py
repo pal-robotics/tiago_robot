@@ -14,28 +14,28 @@
 
 
 def get_tiago_hw_suffix(
-        arm=None,
-        end_effector=None,
-        ft_sensor=None):
+        arm: str = 'no-arm',
+        end_effector: str = 'no-ee',
+        ft_sensor: str = 'no-ft-sensor'):
     """
     Generate a substitution that creates a text suffix combining the specified tiago arguments.
 
     The arguments are read as string
 
-    For instance, the suffix for: arm=right-arm, end_effector='pal-gripper', ft_sensor='schunk-ft'
-    would be 'pal-gripper_schunk-ft'
+    For instance, the suffix for: arm=tiago-arm, end_effector='pal-gripper', ft_sensor='schunk-ft'
+    would be '_pal-gripper_schunk-ft'
     """
-    suffix = '_'
-
-    if arm is None or arm == 'no-arm':
-        suffix += 'no-arm'
-        suffix += '_'
+    if arm in ['no-arm']:
+        suffix = arm
+        return '_' + suffix
+    components = []
+    if end_effector != 'no-ee':
+        components.append('no-ee')
     else:
-        if end_effector is not None:
-            suffix += end_effector
-            suffix += '_'
-        if ft_sensor is not None and ft_sensor != 'no-ft-sensor':
-            suffix += ft_sensor
-            suffix += '_'
-    suffix = suffix[:-1]  # remove last _
+        components.append(end_effector)
+
+    if ft_sensor != 'no-ft-sensor':
+        components.append(ft_sensor)
+
+    suffix = '_' + '_'.join(components)
     return suffix
