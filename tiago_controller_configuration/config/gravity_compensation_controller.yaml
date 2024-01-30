@@ -1,22 +1,46 @@
 gravity_compensation_controller:
   ros__parameters:
-    dt: 0.01
-
     command_joints: ['arm_1_joint', 'arm_2_joint', 'arm_3_joint', 'arm_4_joint', 'arm_5_joint', 'arm_6_joint', 'arm_7_joint']
 
-    control_type: ['ZERO_TORQUE', 'COMMAND', 'COMMAND', 'COMMAND', 'ZERO_TORQUE', 'ZERO_TORQUE', 'ZERO_TORQUE']
+    root_link: "base_link"
 
-    motor_torque_constants: [0.0, 0.136, -0.087, -0.087, -1.0, 0.0, 0.0]
-
-    reduction_ratios: [100.0, 100.0, 100.0, 100.0, 336.0, 336.0, 336.0]
-
-    static_frictions: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-
-    viscous_frictions: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-
-    velocity_tolerances: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    tip_links: ["gripper_link"]
 
     torque_gain: 1.0
 
-
-
+    parameters:
+      arm_1_joint:
+        motor_torque_constant: 0.0
+        reduction_ratio: 100.0
+        kp: 6.0
+        kd: 1.0
+      arm_2_joint:
+        motor_torque_constant: 0.136
+        reduction_ratio: 100.0
+        kp: 6.0
+        kd: 0.8
+      arm_3_joint:
+        motor_torque_constant: -0.087
+        reduction_ratio: 100.0
+        kp: -6.0
+        kd: -0.8
+      arm_4_joint:
+        motor_torque_constant: -0.087
+        reduction_ratio: 100.0
+        kp: -6.0
+        kd: -0.8
+      arm_5_joint:
+        motor_torque_constant: -1.0
+        reduction_ratio: 336.0
+        kp: -0.02
+        kd: -0.02
+      arm_6_joint:
+        motor_torque_constant: 0.0
+        reduction_ratio: 336.0
+        kp: 0.2
+        kd: 0.02
+      arm_7_joint:
+        motor_torque_constant: 0.0
+        reduction_ratio: 336.0
+        kp: 0.2
+        kd: 0.02
