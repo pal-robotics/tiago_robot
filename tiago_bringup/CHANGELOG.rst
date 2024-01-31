@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.2.1 (2024-01-31)
+------------------
 * fix condition for no-arm
 * Contributors: Aina Irisarri
 

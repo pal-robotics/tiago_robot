@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.2.1 (2024-01-31)
+------------------
 * fix condition for end_effector suffix in the config file names
 * Contributors: Aina Irisarri
 

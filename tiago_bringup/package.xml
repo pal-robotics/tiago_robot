@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package format="3">
   <name>tiago_bringup</name>
-  <version>4.2.0</version>
+  <version>4.2.1</version>
   <description>Launch files to upload the robot description and start the controllers</description>
   <maintainer email="jordi.pages@pal-robotics.com">Jordi Pages</maintainer>
   <maintainer email="jordan.palacios@pal-robotics.com">Jordan Palacios</maintainer>
