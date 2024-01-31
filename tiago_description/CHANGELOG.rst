@@ -2,6 +2,12 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Remove right-arm option and use tiago-arm
+* use the same functionality to create the suffix for the config files & match it with tiago_dual
+* Contributors: Aina Irisarri, Noel Jimenez
+
 4.1.2 (2024-01-19)
 ------------------
 

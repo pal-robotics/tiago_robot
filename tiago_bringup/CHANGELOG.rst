@@ -2,6 +2,14 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Remove right-arm option and use tiago-arm
+* use the same functionality to create the suffix for the config files & match it with tiago_dual
+* change sufix no-end-effector to no-ee
+* update motions from last update in ROS
+* Contributors: Aina Irisarri, Noel Jimenez
+
 4.1.2 (2024-01-19)
 ------------------
 * update robotiq motion files
