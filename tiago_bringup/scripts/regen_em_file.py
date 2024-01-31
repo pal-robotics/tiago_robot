@@ -30,7 +30,7 @@ end_effectors = ['pal-hey5', 'pal-gripper', 'no-ee', 'robotiq-2f-85',
                  'robotiq-2f-140']
 ft_sensors = ['schunk-ft', 'no-ft-sensor']
 
-for arm in ['right-arm', 'no-arm']:
+for arm in ['tiago-arm', 'no-arm']:
     for end_effector in end_effectors:
         for ft_sensor in ft_sensors:
             cfg = {
