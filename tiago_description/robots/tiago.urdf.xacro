@@ -30,7 +30,7 @@
     <xacro:arg name="no_safety_eps" default="false"/>
     <xacro:arg name="use_sim" default="false"/>
     <xacro:property name="arm" value="$(arg arm)" />
-    <xacro:if value="${arm not in ['right-arm', 'tiago-arm', 'no-arm']}">
+    <xacro:if value="${arm not in ['tiago-arm', 'no-arm']}">
       <xacro:wrong_arm/>
     </xacro:if>
 
