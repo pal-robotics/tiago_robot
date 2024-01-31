@@ -28,11 +28,9 @@ def get_tiago_hw_suffix(
     if arm in ['no-arm']:
         suffix = arm
         return '_' + suffix
+
     components = []
-    if end_effector != 'no-ee':
-        components.append('no-ee')
-    else:
-        components.append(end_effector)
+    components.append(end_effector)
 
     if ft_sensor != 'no-ft-sensor':
         components.append(ft_sensor)
