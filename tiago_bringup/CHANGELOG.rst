@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.2.0 (2024-01-31)
+------------------
 * Remove right-arm option and use tiago-arm
 * use the same functionality to create the suffix for the config files & match it with tiago_dual
 * change sufix no-end-effector to no-ee
