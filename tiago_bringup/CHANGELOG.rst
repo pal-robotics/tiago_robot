@@ -2,6 +2,11 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* fix condition for no-arm
+* Contributors: Aina Irisarri
+
 4.2.0 (2024-01-31)
 ------------------
 * Remove right-arm option and use tiago-arm
