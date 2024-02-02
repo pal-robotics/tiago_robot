@@ -9,7 +9,7 @@ twist_mux:
   ros__parameters:
     topics:
       navigation:
-        topic   : nav_vel
+        topic   : cmd_vel
         timeout : 0.5
         priority: 10
       joystick:
