@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.2.2 (2024-02-02)
+------------------
 * Merge branch 'feat/register-components' into 'humble-devel'
   remove need for remapping cmd_vel topic
   See merge request robots/tiago_robot!262
