@@ -2,6 +2,14 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'feat/register-components' into 'humble-devel'
+  remove need for remapping cmd_vel topic
+  See merge request robots/tiago_robot!262
+* remove need for remapping cmd_vel topic
+* Contributors: antoniobrandi
+
 4.2.1 (2024-01-31)
 ------------------
 * fix condition for no-arm
