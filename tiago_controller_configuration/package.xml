@@ -30,5 +30,6 @@
   <exec_depend>pal_local_joint_control</exec_depend>
   <exec_depend condition="$PAL_DISTRO > 0">cartesian_impedance_controller</exec_depend>
   <exec_depend>effort_controllers</exec_depend>
+  <exec_depend>velocity_controllers</exec_depend>
 
 </package>
