@@ -29,6 +29,8 @@ def get_tiago_hw_suffix(
         suffix = arm
         return '_' + suffix
 
+    end_effector = 'no-ee' if end_effector == 'no-end-effector' else end_effector
+
     components = []
     components.append(end_effector)
 
