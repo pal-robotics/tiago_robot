@@ -51,15 +51,15 @@ def launch_setup(context, *args, **kwargs):
         get_package_share_directory('tiago_bringup'),
         'config', 'motions', motions_file)
 
-    approach_planner_file = f"approach_planner{hw_suffix}.yaml"
-    approach_planner_config = os.path.join(
+    motion_planner_file = f"motion_planner{hw_suffix}.yaml"
+    motion_planner_config = os.path.join(
         get_package_share_directory('tiago_bringup'),
-        'config', 'approach_planner', approach_planner_file)
+        'config', 'motion_planner', motion_planner_file)
 
     play_motion2 = include_launch_py_description(
         'play_motion2', ['launch', 'play_motion2.launch.py'],
         launch_arguments={'motions_file': motions_file_path,
-                          'approach_planner_config': approach_planner_config}.items())
+                          'motion_planner_config': motion_planner_config}.items())
 
     return [play_motion2]
 
