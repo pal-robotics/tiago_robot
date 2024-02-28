@@ -2,6 +2,15 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'fix/increase-torso-collision-model' into 'erbium-devel'
+  Slightly increase the torso fix link collisoin model to avoid self collision
+  See merge request robots/tiago_robot!261
+* Slightly reduce the torso collision link size
+* Slightly increase the torso fix link collisoin model to avoid self collision
+* Contributors: David ter Kuile, davidterkuile
+
 2.3.18 (2023-12-22)
 -------------------
 
