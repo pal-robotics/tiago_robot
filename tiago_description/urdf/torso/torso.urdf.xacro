@@ -41,9 +41,9 @@
       <material name="LightGrey"/>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="0.085 0.0 0.02" />
+      <origin rpy="0 0 0" xyz="0.09 0.0 0.02" />
       <geometry>
-        <box size="0.4 0.265 0.05"/>
+        <box size="0.4 0.28 0.075"/>
       </geometry>
     </collision>
     <collision>
