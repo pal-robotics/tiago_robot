@@ -2,6 +2,12 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Rename approach_planner config to motion_planner
+* Update approach_planner configuration
+* Contributors: Noel Jimenez
+
 4.2.2 (2024-02-02)
 ------------------
 * Merge branch 'feat/register-components' into 'humble-devel'
