@@ -12,6 +12,7 @@
   <arg name="base_type" default="pmb2"/>
   <arg name="base_type_suffix" value="" unless="$(eval arg('base_type') == 'omni_base')"/>
   <arg name="base_type_suffix" value="_omni" if="$(eval arg('base_type') == 'omni_base')"/>
+  <arg name="arm_motor_model" default="parker"/>
 
   <!-- Diff drive controller multipliers -->
   <arg name="calibrated_multipliers_dir"  value="$(optenv pal_wheel_calibration_calibration_path)"/>
@@ -31,6 +32,7 @@
     <arg name="wrist_model"  value="$(arg wrist_model)"/>
     <arg name="no_safety_eps"  value="$(arg no_safety_eps)"/>
     <arg name="base_type"  value="$(arg base_type)"/>
+
   </include>
 
   <!-- tiago_hardware parameters -->
@@ -52,5 +54,6 @@
     <arg name="base_type_suffix"  value="$(arg base_type_suffix)"/>
     <arg name="base_type" value="$(arg base_type)"/>
     <arg name="advanced_grasping" value="$(arg advanced_grasping)"/>
+    <arg name="arm_motor_model" value="$(arg arm_motor_model)"/>
   </include>
 </launch>
