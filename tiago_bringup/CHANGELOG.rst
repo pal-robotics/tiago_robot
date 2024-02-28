@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.2.3 (2024-02-28)
+------------------
 * Rename approach_planner config to motion_planner
 * Update approach_planner configuration
 * Contributors: Noel Jimenez

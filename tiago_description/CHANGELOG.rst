@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.2.3 (2024-02-28)
+------------------
 * Fix no-ee suffix for no-end-effector value
 * Contributors: Noel Jimenez
 
