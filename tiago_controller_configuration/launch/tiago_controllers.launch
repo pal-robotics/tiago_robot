@@ -75,7 +75,6 @@
       <arg name="end_effector" value="$(arg end_effector)"/>
       <arg name="wrist_model"  value="$(arg wrist_model)"/>
       <arg name="arm_motor_model"  value="$(arg arm_motor_model)"/>
-
     </include>
 
     <!-- Motion planning -->

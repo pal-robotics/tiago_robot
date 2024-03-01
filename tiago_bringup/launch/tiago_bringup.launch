@@ -26,7 +26,6 @@
     <arg name="base_type" value="$(arg base_type)"/>
     <arg name="advanced_grasping" value="$(arg advanced_grasping)"/>
     <arg name="arm_motor_model" value="$(arg arm_motor_model)"/>
-
   </include>
 
   <!-- Robot state publisher -->
