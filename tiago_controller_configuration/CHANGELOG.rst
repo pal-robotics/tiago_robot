@@ -2,6 +2,18 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'fix/ILM-motors' into 'erbium-devel'
+  Fix ilm motors
+  See merge request robots/tiago_robot!266
+* delete unnecesary spaces
+* renome arm_motor_suffix
+* change arm folder name to directly the param value
+* add arm_motor_model argument to differetiate between motors
+* modify paths for arm config files
+* Contributors: Aina Irisarri, davidterkuile
+
 2.3.19 (2024-02-28)
 -------------------
 

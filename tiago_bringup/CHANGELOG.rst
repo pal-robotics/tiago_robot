@@ -2,6 +2,15 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'fix/ILM-motors' into 'erbium-devel'
+  Fix ilm motors
+  See merge request robots/tiago_robot!266
+* delete unnecesary spaces
+* add arm_motor_model argument to differetiate between motors
+* Contributors: Aina Irisarri, davidterkuile
+
 2.3.19 (2024-02-28)
 -------------------
 

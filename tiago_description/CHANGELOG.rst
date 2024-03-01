@@ -2,6 +2,9 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 2.3.19 (2024-02-28)
 -------------------
 * Merge branch 'fix/increase-torso-collision-model' into 'erbium-devel'
