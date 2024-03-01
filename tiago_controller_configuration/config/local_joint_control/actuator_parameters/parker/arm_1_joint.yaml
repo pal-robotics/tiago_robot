@@ -1,0 +1,17 @@
+ball_screw_efficiency: 0.0
+ball_screw_lead: 0.0
+motor_torque_constant: 0.0
+torque_sensor_offset: 0.0
+reduction_ratio: 100.0
+actuator_names:
+  - arm_1_motor
+check_mode: false
+
+# This parametres are random, they have not been identified
+motor_inertia: 1.e-05
+static_friction: 0.05
+viscous_friction: 0.05
+joint_elasticity: 10000.0
+joint_elasticity_damping: -20.
+
+

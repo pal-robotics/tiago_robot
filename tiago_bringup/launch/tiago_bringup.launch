@@ -11,7 +11,7 @@
   <arg name="base_type" default="pmb2"/>
   <arg name="base_type_suffix" default=""/>
   <arg name="advanced_grasping" default="false"/> <!-- Requires extra software from PAL Robotics-->
-
+  <arg name="arm_motor_model" default="parker"/>
 
   <!-- Load default controllers -->
   <include file="$(find tiago_controller_configuration)/launch/tiago_controllers.launch">
@@ -25,6 +25,7 @@
     <arg name="base_type_suffix"  value="$(arg base_type_suffix)"/>
     <arg name="base_type" value="$(arg base_type)"/>
     <arg name="advanced_grasping" value="$(arg advanced_grasping)"/>
+    <arg name="arm_motor_model" value="$(arg arm_motor_model)"/>
   </include>
 
   <!-- Robot state publisher -->
