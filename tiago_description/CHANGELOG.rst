@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.2.4 (2024-03-06)
+------------------
 * Fix jnt_reduction_2 for wrist transmission
 * Contributors: Noel Jimenez
 
