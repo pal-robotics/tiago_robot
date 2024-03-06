@@ -2,6 +2,11 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Fix jnt_reduction_2 for wrist transmission
+* Contributors: Noel Jimenez
+
 4.2.3 (2024-02-28)
 ------------------
 * Fix no-ee suffix for no-end-effector value
