@@ -22,6 +22,7 @@
   <xacro:property name="wrist_friction"       value="1.0" />
   <xacro:property name="wrist_damping"        value="1.0" />
   <xacro:property name="wrist_1_max_vel"      value="1.95" />
+  <!-- The velocity is reduced as the hardware allowed maximum is around 0.75 rad/s  -->
   <xacro:property name="wrist_2_max_vel"      value="0.75" />
   <xacro:property name="wrist_3_max_vel"      value="1.76" />
   <xacro:property name="wrist_1_max_effort"   value="3" />
