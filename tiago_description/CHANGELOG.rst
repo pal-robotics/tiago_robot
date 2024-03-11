@@ -2,6 +2,16 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'velocity_interface' into 'erbium-devel'
+  Velocity interface
+  See merge request robots/tiago_robot!152
+* added note for future reference
+* velocity limit for the joint 6 reduced to improve the play_motion
+* Add VelocityJointInterface in arm
+* Contributors: Narcis Miguel, Sai Kishor Kothakota, ileniaperrella
+
 2.3.21 (2024-03-06)
 -------------------
 

@@ -2,6 +2,20 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'velocity_interface' into 'erbium-devel'
+  Velocity interface
+  See merge request robots/tiago_robot!152
+* add also the forward velocity controller
+* missing dependency
+* PID tuned for joint trajectory velocity controller
+* loaded joint trajectory velocity controllers as stopped
+* Remove typo
+* Add new launchfiles to separate local joint control of the arm from torso and head
+* tested forward and trajectory control with velocity interface
+* Contributors: Luca Marchionni, Narcis Miguel, Sai Kishor Kothakota, ileniaperrella
+
 2.3.21 (2024-03-06)
 -------------------
 
