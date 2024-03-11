@@ -2,8 +2,8 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.3.22 (2024-03-11)
+-------------------
 * Merge branch 'velocity_interface' into 'erbium-devel'
   Velocity interface
   See merge request robots/tiago_robot!152
