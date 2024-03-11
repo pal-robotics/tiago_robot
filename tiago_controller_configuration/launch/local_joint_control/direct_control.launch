@@ -7,75 +7,24 @@
   <arg name="controller_pkg_name" default="tiago_controller_configuration"/>
   <arg name="control_torso" default="true"/>
 
-  <!-- Load controlled joint list configuration-->
-  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
-    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
-    <arg name="ns" value="$(arg ns)"/>
-    <arg name="joint_name" value="arm_1_joint"/>
-  </include> 
-
-  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
-    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
-    <arg name="ns" value="$(arg ns)"/>
-    <arg name="joint_name" value="arm_2_joint"/>
-  </include> 
-
-  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
-    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
-    <arg name="ns" value="$(arg ns)"/>
-    <arg name="joint_name" value="arm_3_joint"/>
-  </include> 
-
-  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
-    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
-    <arg name="ns" value="$(arg ns)"/>
-    <arg name="joint_name" value="arm_4_joint"/>
-  </include> 
-
-  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
-    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
-    <arg name="ns" value="$(arg ns)"/>
-    <arg name="joint_name" value="arm_5_joint"/>
-  </include> 
-
-  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
-    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
-    <arg name="ns" value="$(arg ns)"/>
-    <arg name="joint_name" value="arm_6_joint"/>
-  </include> 
-
-  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
-    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
-    <arg name="ns" value="$(arg ns)"/>
-    <arg name="joint_name" value="arm_7_joint"/>
-  </include> 
-
-  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
-    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
-    <arg name="ns" value="$(arg ns)"/>
-    <arg name="joint_name" value="head_1_joint"/>
-  </include> 
-
-  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
-    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
-    <arg name="ns" value="$(arg ns)"/>
-    <arg name="joint_name" value="head_2_joint"/>
+  <!-- arm control-->
+  <include file="$(find tiago_controller_configuration)/launch/local_joint_control/arm_control.launch" >
+      <arg name="local_joint_control" value="$(arg local_joint_control)"/>
+      <arg name="local_joint_control_type" value="$(arg local_joint_control_type)"/>
+      <arg name="ns" value="whole_body_kinematic_controller"/>
   </include>
 
-  <group if="$(arg control_torso)">
-    <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
-      <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
-      <arg name="ns" value="$(arg ns)"/>
-      <arg name="joint_name" value="torso_lift_joint"/>
-    </include>
-  </group>
+  <!-- head control -->
+  <include file="$(find tiago_controller_configuration)/launch/local_joint_control/head_control.launch" >
+      <arg name="local_joint_control_type" value="$(arg local_joint_control_type)"/>
+      <arg name="ns" value="whole_body_kinematic_controller"/>
+  </include>
 
-  <group unless="$(arg control_torso)">
-    <include file="$(find pal_local_joint_control)/launch/no_control.launch" >
-      <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
-      <arg name="ns" value="$(arg ns)"/>
-      <arg name="joint_name" value="torso_lift_joint"/>
-    </include>
-  </group> 
+  <!-- torso control -->
+  <include file="$(find tiago_controller_configuration)/launch/local_joint_control/torso_control.launch" >
+      <arg name="local_joint_control_type" value="$(arg local_joint_control_type)"/>
+      <arg name="ns" value="whole_body_kinematic_controller"/>
+      <arg name="control_torso" value="$(arg control_torso)"/>
+  </include>
 
 </launch>

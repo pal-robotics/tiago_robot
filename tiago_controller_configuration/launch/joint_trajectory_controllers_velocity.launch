@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <arg name="arm" default="true"/>
+  <rosparam command="load" file="$(find tiago_controller_configuration)/config/joint_trajectory_controllers_velocity.yaml" />
+ 
+  <!-- Set up controllers depending of arm existance -->
+  <arg name="controller_list" if="$(arg arm)"
+       value="arm_velocity_trajectory_controller"/>
+
+  <!-- Controllers that come up started -->
+  <node name="joint_trajectory_controllers_velocity_controllers_spawner"
+        pkg="controller_manager" type="spawner" output="screen"
+        args="--timeout 120 --stopped $(arg controller_list)" />
+</launch>
