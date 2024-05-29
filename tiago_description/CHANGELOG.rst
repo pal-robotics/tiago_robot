@@ -2,6 +2,9 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 2.3.22 (2024-03-11)
 -------------------
 * Merge branch 'velocity_interface' into 'erbium-devel'
