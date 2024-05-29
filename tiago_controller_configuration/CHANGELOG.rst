@@ -2,8 +2,8 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.3.23 (2024-05-29)
+-------------------
 * Merge branch 'motor-model-arg' into 'erbium-devel'
   add arm_motor_model in the arm_control pal_local_joint
   See merge request robots/tiago_robot!293
