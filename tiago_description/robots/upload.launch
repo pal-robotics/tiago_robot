@@ -11,6 +11,8 @@
   <arg name="base_type"  default="pmb2"/>
   <arg name="description_calibration_dir" value="$(optenv pal_eye_hand_calibration_tiago_calibration_path)"/>
   <arg name="extrinsic_calibration_dir" value="$(optenv pal_camera_calibration_extrinsics_calibration_path)"/>
+  <arg name="gazebo_control_period" default="0.001"/> <!-- 1000Hz or 100Hz-->
+
   <!-- Robot description -->
   <param name="$(arg robot_description)"
     command="rosrun xacro xacro --inorder
@@ -25,6 +27,7 @@
     base_type:=$(arg base_type)
     description_calibration_dir:=$(arg description_calibration_dir)
     extrinsic_calibration_dir:=$(arg extrinsic_calibration_dir)
+    gazebo_control_period:=$(arg gazebo_control_period)
     $(arg multi)" />
            <rosparam command="load" file="$(find tiago_description)/config/collision/collision_parameters.yaml" />
 </launch>
