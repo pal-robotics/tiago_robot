@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.3.24 (2024-06-04)
+-------------------
 * Merge branch 'ipe/gazebo-control-period' into 'erbium-devel'
   Ipe/gazebo control period
   See merge request robots/tiago_robot!294
