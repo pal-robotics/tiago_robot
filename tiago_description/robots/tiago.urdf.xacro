@@ -30,6 +30,7 @@
     <xacro:arg name="base_type" default="pmb2"/> <!-- pmb2, omni_base -->
     <xacro:arg name="fixed_torso" default="false" />
     <xacro:arg name="gazebo_control_period" default="0.001"/> <!-- 1000Hz or 100 Hz-->
+    <xacro:arg name="has_screen" default="false"/> <!-- True, False -->
     <xacro:property name="wrist_model" value="$(arg wrist_model)" />
     <xacro:property name="end_effector" value="$(arg end_effector)" />
     <xacro:property name="ft_sensor" value="$(arg ft_sensor)" />
@@ -41,6 +42,7 @@
     <xacro:property name="no_safety_eps" value="$(arg no_safety_eps)" />
     <xacro:property name="fixed_torso" value="$(arg fixed_torso)" />
     <xacro:property name="gazebo_control_period" value="$(arg gazebo_control_period)" />
+    <xacro:property name="has_screen" value="$(arg has_screen)" />
 
   <xacro:if value="$(arg arm)">
     <xacro:if value="${wrist_model not in ['wrist-2010', 'wrist-2017']}">
@@ -111,7 +113,7 @@
   <xacro:if value="${base_type == 'omni_base'}">
     <xacro:base_sensors name="base" front_laser_model="$(arg laser_model)" rear_laser_model="$(arg laser_model)"/>
   </xacro:if>
-  <xacro:tiago_torso name="torso" parent="base_link"/>
+  <xacro:tiago_torso name="torso" parent="base_link" has_screen="$(arg has_screen)"/>
   <xacro:head name="head" parent="torso_lift_link" camera_model="$(arg camera_model)" 
 	  description_calibration_dir="$(arg description_calibration_dir)" 
 	  extrinsic_calibration_dir="$(arg extrinsic_calibration_dir)"
@@ -158,5 +160,4 @@
           <inertia ixx="0.0001"  ixy="0"  ixz="0" iyy="0.0001" iyz="0" izz="0.0001" />
       </inertial>
   </link>
-
 </robot>
