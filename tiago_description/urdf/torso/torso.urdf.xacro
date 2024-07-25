@@ -133,6 +133,22 @@
       </geometry>
       <material name="LightGrey"/>
     </collision>
+    <xacro:if value="$(arg has_screen)">
+      <visual>
+        <origin rpy="0 0 -1.57" xyz="-0.01 0.125 -0.27" />
+        <geometry>
+          <mesh filename="package://tiago_description/meshes/torso/tiago_screen.STL" scale="1 1 1"/>
+        </geometry>
+        <material name="White"/>
+      </visual>
+      <collision>
+        <origin rpy="0 0 -1.57" xyz="-0.01 0.125 -0.27" />
+        <geometry>
+          <mesh filename="package://tiago_description/meshes/torso/screen_collision.stl" scale="1 1 1"/>
+        </geometry>
+        <material name="LightGrey"/>
+      </collision>
+    </xacro:if>
   </link>
 
   <xacro:if value="$(arg fixed_torso)">
@@ -159,37 +175,6 @@
     </joint>
     <xacro:torso_simple_transmission name="torso_lift" reduction="1.0" />
   </xacro:unless>
-
-  <xacro:if value="$(arg has_screen)">
-    <link name="${name}_screen_link">
-      <inertial>
-        <origin xyz="0.00004923 0.000001  -0.00000308" rpy="0.00000 0.00000 0.00000"/>
-        <mass value="0.96841"/>
-        <inertia ixx="0.0" ixy="1.0" ixz="0.0"
-                iyy="0.24926900000" iyz="0.00828100000"
-                izz="0.09039500000"/>
-      </inertial>
-      <visual>
-        <origin rpy="3.14159 0 0" xyz="-0.0425 0.1275 0.065" />
-        <geometry>
-          <mesh filename="package://tiago_description/meshes/torso/tiago_screen.STL" scale="0.001 0.001 0.001"/>
-        </geometry>
-        <material name="White"/>
-      </visual>
-      <collision>
-        <origin rpy="3.14159 0 0" xyz="-0.040 0.1275 0.065" />
-        <geometry>
-          <mesh filename="package://tiago_description/meshes/torso/tiago_screen.STL" scale="0.001 0.001 0.001"/>
-        </geometry>
-        <material name="LightGrey"/>
-      </collision>
-    </link>
-    <joint name="${name}_screen_joint" type="fixed">
-      <origin rpy="0.0 0.0 1.57" xyz="-0.02 0.125 -0.27" />
-      <parent link="${name}_lift_link" />
-      <child link="${name}_screen_link" />
-    </joint>
-  </xacro:if>
  </xacro:macro>
 
 </robot>
