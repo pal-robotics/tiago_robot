@@ -13,6 +13,7 @@
   <arg name="base_type_suffix" value="" unless="$(eval arg('base_type') == 'omni_base')"/>
   <arg name="base_type_suffix" value="_omni" if="$(eval arg('base_type') == 'omni_base')"/>
   <arg name="arm_motor_model" default="parker"/>
+  <arg name="has_screen"  default="False"/>
 
   <!-- Diff drive controller multipliers -->
   <arg name="calibrated_multipliers_dir"  value="$(optenv pal_wheel_calibration_calibration_path)"/>
@@ -32,6 +33,7 @@
     <arg name="wrist_model"  value="$(arg wrist_model)"/>
     <arg name="no_safety_eps"  value="$(arg no_safety_eps)"/>
     <arg name="base_type"  value="$(arg base_type)"/>
+    <arg name="has_screen"  value="$(arg has_screen)"/>
   </include>
 
   <!-- tiago_hardware parameters -->

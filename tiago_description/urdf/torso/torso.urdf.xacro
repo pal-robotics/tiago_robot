@@ -22,7 +22,7 @@
   <xacro:property name="torso_max_vel"  value="0.07" />
   <xacro:property name="torso_eps"      value="0.02" />
 
-  <xacro:macro name="tiago_torso" params="name parent">
+  <xacro:macro name="tiago_torso" params="name parent has_screen">
 
   <!-- Bottom fixed part of column -->
   <link name="${name}_fixed_link">
@@ -133,6 +133,22 @@
       </geometry>
       <material name="LightGrey"/>
     </collision>
+    <xacro:if value="$(arg has_screen)">
+      <visual>
+        <origin rpy="0 0 -1.57" xyz="-0.01 0.125 -0.27" />
+        <geometry>
+          <mesh filename="package://tiago_description/meshes/torso/tiago_screen.STL" scale="1 1 1"/>
+        </geometry>
+        <material name="White"/>
+      </visual>
+      <collision>
+        <origin rpy="0 0 -1.57" xyz="-0.01 0.125 -0.27" />
+        <geometry>
+          <mesh filename="package://tiago_description/meshes/torso/screen_collision.stl" scale="1 1 1"/>
+        </geometry>
+        <material name="LightGrey"/>
+      </collision>
+    </xacro:if>
   </link>
 
   <xacro:if value="$(arg fixed_torso)">
@@ -159,7 +175,6 @@
     </joint>
     <xacro:torso_simple_transmission name="torso_lift" reduction="1.0" />
   </xacro:unless>
-
  </xacro:macro>
 
 </robot>
