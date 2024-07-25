@@ -2,6 +2,14 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'feat/add_screen' into 'erbium-devel'
+  Add screen
+  See merge request robots/tiago_robot!305
+* Add screen parameter and screen stl file in the urdf
+* Contributors: Aina, davidterkuile
+
 2.3.24 (2024-06-04)
 -------------------
 

@@ -2,6 +2,16 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'feat/add_screen' into 'erbium-devel'
+  Add screen
+  See merge request robots/tiago_robot!305
+* add screen link in torso lift link
+* add screen collision and stl file
+* Add screen parameter and screen stl file in the urdf
+* Contributors: Aina, davidterkuile
+
 2.3.24 (2024-06-04)
 -------------------
 * Merge branch 'ipe/gazebo-control-period' into 'erbium-devel'
