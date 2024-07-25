@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.3.25 (2024-07-25)
+-------------------
 * Merge branch 'feat/add_screen' into 'erbium-devel'
   Add screen
   See merge request robots/tiago_robot!305
