@@ -58,18 +58,21 @@ def generate_launch_description():
 def declare_actions(
     launch_description: LaunchDescription, launch_args: LaunchArguments
 ):
-    launch_description.add_action(OpaqueFunction(function=create_joy_teleop_filename))
+    launch_description.add_action(OpaqueFunction(function=create_joy_teleop_filename_base_type))
+    launch_description.add_action(OpaqueFunction(function=create_joy_teleop_filename_gripper))
+
+    pkg_dir = get_package_share_directory("tiago_bringup")
 
     joy_teleop_node = Node(
         package="joy_teleop",
         executable="joy_teleop",
-        parameters=[LaunchConfiguration("teleop_config")],
+        parameters=[LaunchConfiguration("teleop_config_base_type"),
+                    LaunchConfiguration("teleop_config_gripper"),
+                    os.path.join(pkg_dir, "config", "joy_teleop", "joy_teleop_common.yaml")],
         remappings=[("cmd_vel", LaunchConfiguration("cmd_vel"))],
     )
 
     launch_description.add_action(joy_teleop_node)
-
-    pkg_dir = get_package_share_directory("tiago_bringup")
 
     joy_node = Node(
         package="joy_linux",
@@ -160,7 +163,24 @@ def declare_actions(
     return
 
 
-def create_joy_teleop_filename(context):
+def create_joy_teleop_filename_gripper(context):
+
+    end_effector = read_launch_argument("end_effector", context)
+    pkg_dir = get_package_share_directory("tiago_bringup")
+
+    joy_teleop_file = f"joy_teleop_{end_effector}.yaml"
+
+    joy_teleop_path = os.path.join(
+        pkg_dir,
+        "config",
+        "joy_teleop",
+        joy_teleop_file,
+    )
+
+    return [SetLaunchConfiguration("teleop_config_gripper", joy_teleop_path)]
+
+
+def create_joy_teleop_filename_base_type(context):
 
     base_type = read_launch_argument("base_type", context)
     pkg_dir = get_package_share_directory("tiago_bringup")
@@ -174,4 +194,4 @@ def create_joy_teleop_filename(context):
         joy_teleop_file,
     )
 
-    return [SetLaunchConfiguration("teleop_config", joy_teleop_path)]
+    return [SetLaunchConfiguration("teleop_config_base_type", joy_teleop_path)]

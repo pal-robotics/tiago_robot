@@ -1,0 +1,18 @@
+joy_teleop:
+  ros__parameters:
+
+    close_gripper:
+      type: action
+      interface_type: teleop_tools_msgs/action/Increment
+      action_name: /gripper_controller/increment
+      action_goal:
+        increment_by: [0.1]
+      buttons: [2, 6]
+
+    open_gripper:
+      type: action
+      interface_type: teleop_tools_msgs/action/Increment
+      action_name: /gripper_controller/increment
+      action_goal:
+        increment_by: [-0.1]
+      buttons: [2, 4]
