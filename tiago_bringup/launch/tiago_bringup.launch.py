@@ -92,6 +92,7 @@ def declare_actions(
         paths=["launch", "twist_mux.launch.py"],
         launch_arguments={
             "base_type": launch_args.base_type,
+            "use_sim_time": launch_args.use_sim_time,
         }
     )
 
