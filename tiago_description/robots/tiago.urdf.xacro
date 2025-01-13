@@ -60,8 +60,8 @@
   <xacro:arg name="no_safety_eps" default="false"/>
 
   <!-- Calibration -->
-  <xacro:arg name="description_calibration_dir" default="$(find tiago_description)/urdf/calibration"/>
-  <xacro:arg name="extrinsic_calibration_dir" default="$(find tiago_description)/urdf/calibration"/>
+  <xacro:arg name="eye_hand_calibration_dir" default="$(find tiago_description)/urdf/calibration"/>
+  <xacro:arg name="camera_extrinsic_calibration_dir" default="$(find tiago_description)/urdf/calibration"/>
 
   <!-- Execution env config -->
   <xacro:arg name="use_sim_time" default="false"/>
@@ -120,8 +120,8 @@
   <xacro:property name="arm_yaw" default="-90" />
 
   <!-- Calibration -->
-  <xacro:property name="description_calibration_dir" value="$(arg description_calibration_dir)"/>
-  <xacro:property name="extrinsic_calibration_dir" value="$(arg extrinsic_calibration_dir)"/>
+  <xacro:property name="eye_hand_calibration_dir" value="$(arg eye_hand_calibration_dir)"/>
+  <xacro:property name="camera_extrinsic_calibration_dir" value="$(arg camera_extrinsic_calibration_dir)"/>
 
   <!-- Execution env configuration -->
   <xacro:property name="use_sim_time" default="$(arg use_sim_time)"/>
