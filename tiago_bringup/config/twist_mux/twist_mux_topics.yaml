@@ -12,6 +12,10 @@
         topic   : cmd_vel
         timeout : 0.5
         priority: 10
+      docking:
+        topic   : docking_vel
+        timeout : 0.5
+        priority: 210
       joystick:
         topic   : joy_vel
         timeout : 0.5
