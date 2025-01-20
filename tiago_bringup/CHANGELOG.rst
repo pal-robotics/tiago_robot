@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.12.0 (2025-01-20)
+-------------------
 * Remove unused robot_name argument
 * Contributors: Noel Jimenez
 

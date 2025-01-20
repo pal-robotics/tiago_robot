@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.12.0 (2025-01-20)
+-------------------
 * Update use of master calibration in urdf
 * Contributors: David ter Kuile
 
