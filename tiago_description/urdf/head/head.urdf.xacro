@@ -32,7 +32,7 @@
   <xacro:include filename="$(find pal_urdf_utils)/urdf/deg_to_rad.urdf.xacro" />
   <xacro:include filename="$(find tiago_description)/urdf/sensors/xtion_pro_live.urdf.xacro" />
   <xacro:include filename="$(find tiago_description)/urdf/sensors/orbbec_astra.urdf.xacro" />
-  <xacro:include filename="$(arg description_calibration_dir)/calibration_constants.urdf.xacro" />
+  <xacro:include filename="$(arg eye_hand_calibration_dir)/eye_hand_calibration.urdf.xacro" />
 
   <!-- MACRO DEFINITION-->
 
@@ -128,7 +128,7 @@
 
     <!-- Asus Xtion-->
     <xacro:if value="${camera_model == 'asus-xtion'}">
-      <xacro:xtion_pro_live name="head_front_camera" parent="${name}_2_link" camera_model="${camera_model}" extrinsic_calibration_dir="${extrinsic_calibration_dir}">
+      <xacro:xtion_pro_live name="head_front_camera" parent="${name}_2_link" camera_model="${camera_model}" camera_extrinsic_calibration_dir="${camera_extrinsic_calibration_dir}">
         <origin xyz="${camera_position_x} ${camera_position_y} ${camera_position_z}" rpy="${camera_orientation_r} ${camera_orientation_p} ${camera_orientation_y}" />
         <!-- optical origin -->
         <origin xyz="0 0 0" rpy="${-90 * deg_to_rad} ${0 * deg_to_rad} ${-90 * deg_to_rad}" />
@@ -137,7 +137,7 @@
 
     <!-- Orbecc Astra-->
     <xacro:if value="${camera_model in ['orbbec-astra', 'orbbec-astra-pro']}">
-      <xacro:orbbec_astra name="head_front_camera" parent="${name}_2_link" camera_model="${camera_model}" extrinsic_calibration_dir="${extrinsic_calibration_dir}">
+      <xacro:orbbec_astra name="head_front_camera" parent="${name}_2_link" camera_model="${camera_model}" camera_extrinsic_calibration_dir="${camera_extrinsic_calibration_dir}">
         <origin xyz="${camera_position_x} ${camera_position_y} ${camera_position_z}" rpy="${camera_orientation_r} ${camera_orientation_p} ${camera_orientation_y}" />
         <!-- optical origin -->
         <origin xyz="0 0 0" rpy="${-90 * deg_to_rad} ${0 * deg_to_rad} ${-90 * deg_to_rad}" />
