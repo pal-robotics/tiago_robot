@@ -2,6 +2,11 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Remove unused robot_name argument
+* Contributors: Noel Jimenez
+
 4.11.1 (2025-01-10)
 -------------------
 * Merge branch 'fix/aca/twist-mux-use-sim-time' into 'humble-devel'
