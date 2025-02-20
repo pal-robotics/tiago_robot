@@ -11,16 +11,15 @@
 /twist_mux:
   ros__parameters:
     locks:
-      pause:
-        topic   : pause_navigation
+      joystick:
+        topic   : joy_priority
         timeout : 0.0
-        # Same priority as joystick control, so it'll not block it.
         priority: 100
+      assisted_teleop:
+        topic   : assisted_teleop_priority
+        timeout : 0.0
+        priority: 200
       charging:
         topic   : power/is_charging
         timeout : 0.0
-        priority: 200
-      joystick:
-        topic   : joy_priority
-        timeout : 0.0 
-        priority: 100
+        priority: 210
