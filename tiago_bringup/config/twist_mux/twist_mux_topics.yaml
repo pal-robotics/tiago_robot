@@ -12,35 +12,27 @@
         topic   : cmd_vel
         timeout : 0.5
         priority: 10
-      docking:
-        topic   : docking_vel
-        timeout : 0.5
-        priority: 210
-      joystick:
-        topic   : joy_vel
-        timeout : 0.5
-        priority: 100
       keyboard:
         topic   : key_vel
         timeout : 0.5
         priority: 90
-      tablet:
-        topic   : tab_vel
-        timeout : 0.5
-        priority: 100
       marker:
         topic   : marker_vel
         timeout : 0.5
         priority: 99
-      phone:
-        topic   : phone_vel
-        timeout : 0.5
-        priority: 98
-      rviz_joy:
+      rviz:
         topic   : rviz_joy_vel
         timeout : 0.5
-        priority: 95
-      servoing_cmd_vel:
-        topic   : servoing_cmd_vel
+        priority: 100
+      joystick:
+        topic   : joy_vel
         timeout : 0.5
-        priority: 20
+        priority: 100
+      assisted_teleop:
+        topic   : assisted_vel
+        timeout : 0.5
+        priority: 200
+      docking:
+        topic   : docking_vel
+        timeout : 0.5
+        priority: 210
