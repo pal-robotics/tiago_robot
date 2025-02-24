@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.14.0 (2025-02-24)
+-------------------
 * update topics
 * update locks and topics to integrate assisted_teleop
 * Contributors: andreacapodacqua
