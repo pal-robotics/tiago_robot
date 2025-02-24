@@ -26,6 +26,12 @@
       action_name: joy_priority_action
       buttons: [9]
 
+    assisted_teleop_priority:
+      type: action
+      interface_type: twist_mux_msgs/action/JoyPriority
+      action_name: assisted_teleop_priority_action
+      buttons: [5,8]
+
     joy_turbo_decrease:
       type: action
       interface_type: twist_mux_msgs/action/JoyTurbo
