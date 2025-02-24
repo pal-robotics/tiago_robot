@@ -2,6 +2,12 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* update topics
+* update locks and topics to integrate assisted_teleop
+* Contributors: andreacapodacqua
+
 4.13.0 (2025-01-22)
 -------------------
 * lock robot if charging
