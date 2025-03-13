@@ -1,0 +1,11 @@
+[0.000000] (-) TimerEvent: {}
+[0.000000] (-) JobUnselected: {'identifier': 'tiago_bringup'}
+[0.000000] (-) JobUnselected: {'identifier': 'tiago_controller_configuration'}
+[0.000000] (-) JobUnselected: {'identifier': 'tiago_robot'}
+[0.000000] (tiago_description) JobQueued: {'identifier': 'tiago_description', 'dependencies': OrderedDict()}
+[0.000000] (tiago_description) JobStarted: {'identifier': 'tiago_description'}
+[0.094000] (tiago_description) JobProgress: {'identifier': 'tiago_description', 'progress': 'cmake'}
+[0.094000] (-) TimerEvent: {}
+[0.094000] (tiago_description) StderrLine: {'line': b'Traceback (most recent call last):\n  File "C:\\Users\\Ram-R\\AppData\\Roaming\\Python\\Python312\\site-packages\\colcon_core\\executor\\__init__.py", line 91, in __call__\n    rc = await self.task(*args, **kwargs)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "C:\\Users\\Ram-R\\AppData\\Roaming\\Python\\Python312\\site-packages\\colcon_core\\task\\__init__.py", line 93, in __call__\n    return await task_method(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "C:\\Users\\Ram-R\\AppData\\Roaming\\Python\\Python312\\site-packages\\colcon_ros\\task\\ament_cmake\\build.py", line 59, in build\n    rc = await extension.build(\n         ^^^^^^^^^^^^^^^^^^^^^^\n  File "C:\\Users\\Ram-R\\AppData\\Roaming\\Python\\Python312\\site-packages\\colcon_cmake\\task\\cmake\\build.py", line 87, in build\n    rc = await self._reconfigure(args, env)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "C:\\Users\\Ram-R\\AppData\\Roaming\\Python\\Python312\\site-packages\\colcon_cmake\\task\\cmake\\build.py", line 151, in _reconfigure\n    raise RuntimeError(\nRuntimeError: VisualStudioVersion is not set, please run within a Visual Studio Command Prompt.\n'}
+[0.094000] (tiago_description) JobEnded: {'identifier': 'tiago_description', 'rc': 1}
+[0.109000] (-) EventReactorShutdown: {}
