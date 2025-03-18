@@ -2,8 +2,8 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.14.1 (2025-03-18)
+-------------------
 * Remove unused imu broadcaster
 * Contributors: Noel Jimenez
 
