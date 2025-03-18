@@ -2,6 +2,11 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Remove unused imu broadcaster
+* Contributors: Noel Jimenez
+
 4.14.0 (2025-02-24)
 -------------------
 
