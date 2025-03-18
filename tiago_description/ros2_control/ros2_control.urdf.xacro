@@ -70,9 +70,6 @@
       <hardware>
         <xacro:if value="${use_sim_time}">
           <plugin>gazebo_ros2_control/GazeboSystem</plugin>
-
-        <!-- IMU sensor (only in simulation)-->
-        <xacro:ros2_control_imu name="base_imu_sensor"/>
         </xacro:if>
         <xacro:unless value="${use_sim_time}">
           <plugin>robot_control/RobotControl</plugin>
@@ -89,11 +86,6 @@
         <xacro:ros2_control_wheel side="front_left" />
         <xacro:ros2_control_wheel side="rear_right" />
         <xacro:ros2_control_wheel side="rear_left" />
-      </xacro:if>
-
-      <!-- IMU -->
-      <xacro:if value="${use_sim_time}">
-        <xacro:ros2_control_imu name="base_imu_sensor"/>
       </xacro:if>
 
       <!-- Torso -->
