@@ -20,7 +20,6 @@
   <exec_depend condition="$PAL_DISTRO > 0">omni_drive_controller</exec_depend>
   <exec_depend>force_torque_sensor_broadcaster</exec_depend>
   <exec_depend>joint_state_broadcaster</exec_depend>
-  <exec_depend>imu_sensor_broadcaster</exec_depend>
   <exec_depend>joint_trajectory_controller</exec_depend>
   <exec_depend>launch</exec_depend>
   <exec_depend>launch_pal</exec_depend>
