@@ -64,7 +64,7 @@ play_motion2:
         joints: [head_1_joint, head_2_joint]
         times_from_start: [0.1, 0.8, 1.6]
         positions: [0.0,  0.0, 
-                    0.0, -0.3, 
+                    -0.4, 0.0, 
                     0.0,  0.0,]
         meta:
           name: Head Shake
