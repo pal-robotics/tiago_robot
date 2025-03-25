@@ -2,6 +2,12 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* removed marker_vel
+* added tab_vel to twist_mux
+* Contributors: andreacapodacqua
+
 4.14.1 (2025-03-18)
 -------------------
 
