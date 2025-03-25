@@ -16,10 +16,6 @@
         topic   : key_vel
         timeout : 0.5
         priority: 90
-      marker:
-        topic   : marker_vel
-        timeout : 0.5
-        priority: 99
       rviz:
         topic   : rviz_joy_vel
         timeout : 0.5
