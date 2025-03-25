@@ -2,8 +2,8 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.15.0 (2025-03-25)
+-------------------
 * Remove imu broadcaster dependency
 * Contributors: Noel Jimenez
 
