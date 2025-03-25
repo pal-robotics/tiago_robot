@@ -28,6 +28,10 @@
         topic   : joy_vel
         timeout : 0.5
         priority: 100
+      webgui_joystick:
+        topic   : tab_vel
+        timeout : 0.5
+        priority: 100
       assisted_teleop:
         topic   : assisted_vel
         timeout : 0.5
