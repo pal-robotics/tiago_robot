@@ -137,6 +137,14 @@
   <!-- Base -->
   <xacro:include filename="$(find ${base_type}_description)/urdf/base/base_sensors.urdf.xacro" />
 
+    <!-- Fixed joint to mount the sonar sensor (base_sonar_01_link) -->
+  <joint name="sonar_mount_joint" type="fixed">
+    <origin xyz="0.2 0.0 0.15" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="base_sonar_01_link"/>
+  </joint>
+
+
   <!-- Torso -->
   <xacro:include filename="$(find tiago_description)/urdf/torso/torso.urdf.xacro" />
 
