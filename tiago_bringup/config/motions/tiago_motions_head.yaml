@@ -22,7 +22,7 @@ play_motion2:
                    -0.7,-0.4,
                    -0.7, 0.4,
                     0.0, 0.0]
-        times_from_start: [0.1, 1.5, 3.5, 5.0, 6.5, 7.0]
+        times_from_start: [0.1, 3.0, 6.0, 9.0, 12.0, 15.0]
         meta:
           name: Head Tour
           usage: demo
