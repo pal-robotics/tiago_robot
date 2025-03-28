@@ -78,6 +78,10 @@ def create_play_motion_params(context):
 
     hw_suffix = get_tiago_hw_suffix(arm=arm, end_effector=end_effector)
 
+    head_motions = PathJoinSubstitution(
+        [pkg_share_dir, "config", "motions", "tiago_motions_head.yaml"]
+    )
+
     if arm != 'no-arm':
 
         general_yaml = PathJoinSubstitution(
@@ -90,7 +94,8 @@ def create_play_motion_params(context):
                 [pkg_share_dir, "config", "motions", f"tiago_motions{hw_suffix}.yaml"]
             )
             merged_yaml = merge_param_files([motions_yaml.perform(context),
-                                             general_yaml.perform(context)])
+                                             general_yaml.perform(context),
+                                             head_motions.perform(context)])
     else:
         merged_yaml = PathJoinSubstitution(
             [pkg_share_dir, "config", "motions", f"tiago_motions{hw_suffix}.yaml"]
