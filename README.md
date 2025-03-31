@@ -4,7 +4,7 @@ The `tiago_robot` repository contains essential resources for working with PAL R
 
 ## About TIAGo
 
-TIAGo (Take It and Go) is a mobile manipulator robot developed by PAL Robotics. It is widely used in research and industry for a variety of applications, including:
+[TIAGo (Take It and Go)](https://pal-robotics.com/robot/tiago/) is a mobile manipulator robot developed by PAL Robotics. It is widely used in research and industry for a variety of applications, including:
 
 - Mobile manipulation
     
@@ -195,9 +195,7 @@ If you encounter any issues, feel free to:
 
 - Open an issue on the GitHub repository.
     
-- Check the [PAL Robotics documentation](https://pal-robotics.com/).
-    
-- Join the PAL Robotics community for discussions.
+- Check the [PAL Robotics website](https://pal-robotics.com/).
     
 
 ## License
