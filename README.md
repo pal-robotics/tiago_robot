@@ -174,24 +174,6 @@ Contains configuration files for controlling the robot’s actuators.
 
 Contains high-level package metadata, including `package.xml` and `CMakeLists.txt`.
 
-## Running the Simulation
-
-To launch TIAGo in Gazebo:
-
-```bash
-ros2 launch tiago_gazebo tiago_gazebo.launch.py
-```
-
-To run the MoveIt motion planner:
-
-```bash
-ros2 launch tiago_moveit_config demo.launch.py
-```
-
-## Real Robot Usage
-
-For users operating a real TIAGo robot, ensure that all hardware connections are properly configured before launching control nodes. PAL Robotics provides specific guides for hardware usage.
-
 ## Contributing
 
 We welcome contributions to improve this repository! To contribute:
