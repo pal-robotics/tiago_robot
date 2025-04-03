@@ -23,7 +23,7 @@
   <!-- MACRO DEFINITION-->
   <xacro:macro name="openni_camera_gazebo_v0" params="name">
 
-    <gazebo reference="${name}_rgb_frame">
+    <gazebo reference="${name}_color_frame">
       <sensor type="depth" name="${name}_frame_sensor">
         <always_on>true</always_on>
         <update_rate>30.0</update_rate>
@@ -52,11 +52,11 @@
             <!-- <namespace>${name}</namespace>-->
             <remapping>${name}/image_raw:=${name}/rgb/image_raw</remapping>
             <remapping>${name}/camera_info:=${name}/rgb/camera_info</remapping>
-            <remapping>${name}/depth/image_raw:=${name}/depth_registered/image_raw</remapping>
-            <remapping>${name}/depth/camera_info:=${name}/depth_registered/camera_info</remapping>
-            <remapping>${name}/points:=${name}/depth_registered/points</remapping>
+            <remapping>${name}/depth/image_raw:=${name}/depth/image_raw</remapping>
+            <remapping>${name}/depth/camera_info:=${name}/depth/camera_info</remapping>
+            <remapping>${name}/points:=${name}/depth/points</remapping>
           </ros>
-          <frame_name>${name}_rgb_optical_frame</frame_name>
+          <frame_name>${name}_color_optical_frame</frame_name>
           <min_depth>0.3</min_depth>
           <max_depth>8.0</max_depth>
         </plugin>
