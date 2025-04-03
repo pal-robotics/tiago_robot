@@ -93,7 +93,7 @@
     <!-- frames of the depth sensor -->
     <joint name="${name}_depth_joint" type="fixed">
       <xacro:camera_baseline_constants camera_model="${camera_model}" />
-      <parent link="${name}_rgb_frame" />
+      <parent link="${name}_color_frame" />
       <child link="${name}_depth_frame"/>
     </joint>
 
@@ -120,13 +120,13 @@
     </link>
 
     <!-- frames of the rgb sensor -->
-    <joint name="${name}_rgb_joint" type="fixed">
+    <joint name="${name}_color_joint" type="fixed">
       <origin xyz="0.0 0.022 0.0" rpy="0 0 0" />
       <parent link="${name}_orbbec_aux_joint_frame" />
-      <child link="${name}_rgb_frame"/>
+      <child link="${name}_color_frame"/>
     </joint>
 
-    <link name="${name}_rgb_frame">
+    <link name="${name}_color_frame">
       <inertial>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <mass value="0.001"/>
@@ -134,13 +134,13 @@
       </inertial>
     </link>
 
-    <joint name="${name}_rgb_optical_joint" type="fixed">
+    <joint name="${name}_color_optical_joint" type="fixed">
       <origin xyz="0 0 0" rpy="${-90.0 * deg_to_rad} 0.0 ${-90.0 * deg_to_rad}" />
-      <parent link="${name}_rgb_frame" />
-      <child link="${name}_rgb_optical_frame"/>
+      <parent link="${name}_color_frame" />
+      <child link="${name}_color_optical_frame"/>
     </joint>
 
-    <link name="${name}_rgb_optical_frame">
+    <link name="${name}_color_optical_frame">
       <inertial>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <mass value="0.001"/>
