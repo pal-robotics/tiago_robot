@@ -2,6 +2,11 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* uniform topic names with real robot
+* Contributors: antoniobrandi
+
 4.15.1 (2025-03-28)
 -------------------
 

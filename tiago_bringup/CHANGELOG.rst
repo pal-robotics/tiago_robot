@@ -2,6 +2,9 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 4.15.1 (2025-03-28)
 -------------------
 * Merge branch 'mvi/update-motions' into 'humble-devel'
