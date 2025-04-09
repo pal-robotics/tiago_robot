@@ -25,58 +25,49 @@ from launch_pal.arg_utils import LaunchArgumentsBase
 from controller_manager.launch_utils import generate_load_controller_launch_description
 from launch_pal.param_utils import parse_parametric_yaml
 from tiago_description.launch_arguments import TiagoArgs
+from launch_pal.robot_arguments import CommonArgs
 
 
 @dataclass(frozen=True)
 class LaunchArguments(LaunchArgumentsBase):
-
     arm_motor_model: DeclareLaunchArgument = TiagoArgs.arm_motor_model
-    end_effector: DeclareLaunchArgument = TiagoArgs.end_effector
+    side: DeclareLaunchArgument = CommonArgs.side
 
 
 def declare_actions(launch_description: LaunchDescription, launch_args: LaunchArguments):
 
-    launch_description.add_action(OpaqueFunction(function=setup_gravity_controller_configuration))
+    launch_description.add_action(OpaqueFunction(function=setup_controller_configuration))
 
-    gravity_compensation_controller = GroupAction(
-        [
-            generate_load_controller_launch_description(
-                controller_name="gravity_compensation_controller",
-                controller_params_file=LaunchConfiguration("controller_config"),
-                extra_spawner_args=["--inactive"],
-            )
-        ],
-    )
+    gravity_compensation_controller = GroupAction([generate_load_controller_launch_description(
+        controller_name=LaunchConfiguration("controller_name"),
+        controller_params_file=LaunchConfiguration("controller_config"),
+        extra_spawner_args=["--inactive"])])
+
     launch_description.add_action(gravity_compensation_controller)
 
     return
 
 
-def setup_gravity_controller_configuration(context: LaunchContext):
+def setup_controller_configuration(context: LaunchContext):
 
     arm_motor_model = read_launch_argument('arm_motor_model', context)
-    end_effector = read_launch_argument('end_effector', context)
+    side = read_launch_argument('side', context)
 
-    # To be removed when the gravity compensation controller is updated
-    if (end_effector == "no-end-effector"):
-        ee_tip_link = "arm_tool_link"
-    elif (end_effector == "pal-gripper"):
-        ee_tip_link = "gripper_link"
-    elif (end_effector == "pal-hey5"):
-        ee_tip_link = "hand_palm_link"
-    elif (end_effector in ["robotiq-2f-85", "robotiq-2f-140"]):
-        ee_tip_link = "gripper_base_link"
-    else:
-        ee_tip_link = "arm_tool_link"
-    remappings = {"EE_TIP_LINK": ee_tip_link}
+    arm_prefix = "arm"
+    if side:
+        arm_prefix = f"arm_{side}"
 
-    param_file = os.path.join(get_package_share_directory(
-        'tiago_controller_configuration'), "config", "gravity_compensation_controller_" +
-        arm_motor_model + ".yaml")
+    controller_name = f"{arm_prefix}_gravity_compensation_controller"
+    remappings = {"ARM_SIDE_PREFIX": arm_prefix}
+
+    param_file = os.path.join(
+        get_package_share_directory('tiago_controller_configuration'),
+        "config", "gravity_compensation_controller_" + arm_motor_model + ".yaml")
 
     parsed_yaml = parse_parametric_yaml(source_files=[param_file], param_rewrites=remappings)
 
-    return [SetLaunchConfiguration('controller_config', parsed_yaml)]
+    return [SetLaunchConfiguration('controller_name', controller_name),
+            SetLaunchConfiguration('controller_config', parsed_yaml)]
 
 
 def generate_launch_description():
