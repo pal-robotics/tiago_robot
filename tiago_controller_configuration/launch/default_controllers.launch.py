@@ -126,8 +126,7 @@ def declare_actions(
     gravity_compensation_controller = include_scoped_launch_py_description(
         pkg_name="tiago_controller_configuration",
         paths=["launch", "gravity_compensation_controller.launch.py"],
-        launch_arguments={"arm_motor_model": launch_args.arm_motor_model,
-                          "end_effector": launch_args.end_effector},
+        launch_arguments={"arm_motor_model": launch_args.arm_motor_model},
         condition=UnlessCondition(PythonExpression(
                 [
                     "'",

@@ -1,46 +1,57 @@
-gravity_compensation_controller:
+${ARM_SIDE_PREFIX}_gravity_compensation_controller:
   ros__parameters:
     type: pal_controllers/GravityCompensationController
-    command_joints: ['arm_1_joint', 'arm_2_joint', 'arm_3_joint', 'arm_4_joint', 'arm_5_joint', 'arm_6_joint', 'arm_7_joint']
-
+    command_joints:
+      - ${ARM_SIDE_PREFIX}_1_joint
+      - ${ARM_SIDE_PREFIX}_2_joint
+      - ${ARM_SIDE_PREFIX}_3_joint
+      - ${ARM_SIDE_PREFIX}_4_joint
+      - ${ARM_SIDE_PREFIX}_5_joint
+      - ${ARM_SIDE_PREFIX}_6_joint
+      - ${ARM_SIDE_PREFIX}_7_joint
     root_link: "base_link"
-
-    tip_links: ["${EE_TIP_LINK}"]
-
+    tip_links: 
+      - ${ARM_SIDE_PREFIX}_tool_link
     torque_gain: 1.0
-
     parameters:
-      arm_1_joint:
+      ${ARM_SIDE_PREFIX}_1_joint:
+        command_interface: "${ARM_SIDE_PREFIX}_1_joint/effort"
         motor_torque_constant: 0.0
         reduction_ratio: 100.0
         kp: 6.0
         kd: 1.0
-      arm_2_joint:
+      ${ARM_SIDE_PREFIX}_2_joint:
+        command_interface: "${ARM_SIDE_PREFIX}_2_joint/effort"
         motor_torque_constant: 0.12
         reduction_ratio: 100.0
         kp: 6.0
         kd: 0.8
-      arm_3_joint:
+      ${ARM_SIDE_PREFIX}_3_joint:
+        command_interface: "${ARM_SIDE_PREFIX}_3_joint/effort"
         motor_torque_constant: -0.06
         reduction_ratio: 100.0
         kp: -6.0
         kd: -0.8
-      arm_4_joint:
+      ${ARM_SIDE_PREFIX}_4_joint:
+        command_interface: "${ARM_SIDE_PREFIX}_4_joint/effort"
         motor_torque_constant: -0.06
         reduction_ratio: 100.0
         kp: -6.0
         kd: -0.8
-      arm_5_joint:
+      ${ARM_SIDE_PREFIX}_5_joint:
+        command_interface: "${ARM_SIDE_PREFIX}_5_joint/effort"
         motor_torque_constant: -1.65
         reduction_ratio: 336.0
         kp: -0.02
         kd: -0.02
-      arm_6_joint:
+      ${ARM_SIDE_PREFIX}_6_joint:
+        command_interface: "${ARM_SIDE_PREFIX}_6_joint/effort"
         motor_torque_constant: 0.0
         reduction_ratio: 336.0
         kp: 0.2
         kd: 0.02
-      arm_7_joint:
+      ${ARM_SIDE_PREFIX}_7_joint:
+        command_interface: "${ARM_SIDE_PREFIX}_7_joint/effort"
         motor_torque_constant: 0.0
         reduction_ratio: 336.0
         kp: 0.2
