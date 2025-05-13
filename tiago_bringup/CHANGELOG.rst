@@ -2,6 +2,9 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 2.3.25 (2024-07-25)
 -------------------
 * Merge branch 'feat/add_screen' into 'erbium-devel'

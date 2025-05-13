@@ -2,6 +2,14 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'fix/packages_visualization' into 'erbium-devel'
+  Find installed tiago_description package
+  See merge request robots/tiago_robot!345
+* find installed tiago_description package
+* Contributors: Aina Irisarri, davidterkuile
+
 2.3.25 (2024-07-25)
 -------------------
 * Merge branch 'feat/add_screen' into 'erbium-devel'
