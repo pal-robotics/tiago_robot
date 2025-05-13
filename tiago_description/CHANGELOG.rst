@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.3.26 (2025-05-13)
+-------------------
 * Merge branch 'fix/packages_visualization' into 'erbium-devel'
   Find installed tiago_description package
   See merge request robots/tiago_robot!345
