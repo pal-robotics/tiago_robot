@@ -21,7 +21,6 @@
   <xacro:include filename="$(find tiago_description)/urdf/torso/torso.ros2_control.xacro" />
   <xacro:include filename="$(find tiago_description)/urdf/head/head.ros2_control.xacro" />
   <xacro:include filename="$(find ${base_type}_description)/urdf/wheels/wheel.ros2_control.xacro" />
-  <xacro:include filename="$(find ${base_type}_description)/urdf/sensors/sensors.ros2_control.xacro"/>
   <xacro:include filename="${eye_hand_calibration_dir}/eye_hand_calibration.urdf.xacro" />
 
   <!-- Arm, Wrist, FT, EE -->
