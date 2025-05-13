@@ -2,6 +2,11 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Remove usage of sensors.ros2_control.xacro
+* Contributors: Noel Jimenez
+
 4.17.0 (2025-04-09)
 -------------------
 
