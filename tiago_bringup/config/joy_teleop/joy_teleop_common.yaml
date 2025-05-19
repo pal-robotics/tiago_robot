@@ -5,37 +5,37 @@ joy_teleop:
       type: action
       interface_type: twist_mux_msgs/action/JoyPriority
       action_name: joy_priority_action
-      buttons: [9]
+      buttons: [10, 6]
 
     joy_turbo_decrease:
       type: action
       interface_type: twist_mux_msgs/action/JoyTurbo
       action_name: joy_turbo_decrease
-      buttons: [8, 1]
+      buttons: [10, 0]
 
     joy_turbo_increase:
       type: action
       interface_type: twist_mux_msgs/action/JoyTurbo
       action_name: joy_turbo_increase
-      buttons: [8, 3]
+      buttons: [10, 3]
 
     joy_turbo_angular_decrease:
       type: action
       interface_type: twist_mux_msgs/action/JoyTurbo
       action_name: joy_turbo_angular_decrease
-      buttons: [8, 2]
+      buttons: [10, 2]
 
     joy_turbo_angular_increase:
       type: action
       interface_type: twist_mux_msgs/action/JoyTurbo
       action_name: joy_turbo_angular_increase
-      buttons: [8, 0]
+      buttons: [10, 1]
 
     joy_turbo_reset:
       type: action
       interface_type: twist_mux_msgs/action/JoyTurbo
       action_name: joy_turbo_reset
-      buttons: [10, 11]
+      buttons: [10, 4]
 
     torso_up:
       type: action
@@ -43,7 +43,7 @@ joy_teleop:
       action_name: /torso_controller/increment
       action_goal:
         increment_by: [0.05]
-      buttons: [1,4]
+      buttons: [9, 3]
 
     torso_down:
       type: action
@@ -51,36 +51,66 @@ joy_teleop:
       action_name: /torso_controller/increment
       action_goal:
         increment_by: [-0.05]
-      buttons: [1, 6]
+      buttons: [9, 0]
+
+    disable_neck:
+      type: service
+      interface_type: std_srvs/srv/Empty
+      service_name: /gaze_manager/disable_neck
+      buttons: [9, 6]
+
+    enable_neck:
+      type: service
+      interface_type: std_srvs/srv/Empty
+      service_name: /gaze_manager/enable_neck
+      buttons: [9, 4]
 
     head_down:
       type: action
       interface_type: teleop_tools_msgs/action/Increment
       action_name: /head_controller/increment
       action_goal:
-        increment_by: [-0.1, 0.0]
-      buttons: [2, 7]
+        increment_by: [0.0, -0.1]
+      buttons: [9, 12]
 
     head_up:
       type: action
       interface_type: teleop_tools_msgs/action/Increment
       action_name: /head_controller/increment
       action_goal:
-        increment_by: [0.1, 0.0]
-      buttons: [0, 7]
+        increment_by: [0.0, 0.1]
+      buttons: [9, 11]
 
     head_left:
       type: action
       interface_type: teleop_tools_msgs/action/Increment
       action_name: /head_controller/increment
       action_goal:
-        increment_by: [0.0, 0.1]
-      buttons: [3, 7]
+        increment_by: [0.1, 0.0]
+      buttons: [9, 13]
 
     head_right:
       type: action
       interface_type: teleop_tools_msgs/action/Increment
       action_name: /head_controller/increment
       action_goal:
-        increment_by: [0.0, -0.1]
-      buttons: [1, 7]
+        increment_by: [-0.1, 0.0]
+      buttons: [9, 14]
+
+    default_controller:
+      type: action
+      interface_type: change_controllers_interfaces/action/Switch
+      action_name: /change_controllers
+      action_goal:
+        start_controllers: [arm_controller]
+      buttons: [2]
+      axes_negative: [5]
+
+    gravity_controller:
+      type: action
+      interface_type: change_controllers_interfaces/action/Switch
+      action_name: /change_controllers
+      action_goal:
+        start_controllers: [gravity_compensation_controller]
+      buttons: [3]
+      axes_negative: [5]

@@ -7,7 +7,8 @@ joy_teleop:
       action_name: /gripper_controller/increment
       action_goal:
         increment_by: [0.1]
-      buttons: [2, 6]
+      buttons: [1]
+      axes_negative: [5]
 
     open_gripper:
       type: action
@@ -15,4 +16,5 @@ joy_teleop:
       action_name: /gripper_controller/increment
       action_goal:
         increment_by: [-0.1]
-      buttons: [2, 4]
+      buttons: [0]
+      axes_negative: [5]
