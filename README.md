@@ -189,15 +189,6 @@ We welcome contributions to improve this repository! To contribute:
 5. Open a pull request on GitHub.
     
 
-## Issues & Support
-
-If you encounter any issues, feel free to:
-
-- Open an issue on the GitHub repository.
-    
-- Check the [PAL Robotics website](https://pal-robotics.com/).
-    
-
 ## License
 
 This project is licensed under the **Apache 2.0 License** – see the `LICENSE` file for details.
