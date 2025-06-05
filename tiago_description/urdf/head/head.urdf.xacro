@@ -30,8 +30,8 @@
 
   <!-- INCLUDES -->
   <xacro:include filename="$(find pal_urdf_utils)/urdf/deg_to_rad.urdf.xacro" />
-  <xacro:include filename="$(find tiago_description)/urdf/sensors/xtion_pro_live.urdf.xacro" />
-  <xacro:include filename="$(find tiago_description)/urdf/sensors/orbbec_astra.urdf.xacro" />
+  <xacro:include filename="$(find pal_urdf_utils)/urdf/camera/xtion_pro_live.urdf.xacro" />
+  <xacro:include filename="$(find pal_urdf_utils)/urdf/camera/orbbec_astra.urdf.xacro" />
   <xacro:include filename="$(arg eye_hand_calibration_dir)/eye_hand_calibration.urdf.xacro" />
 
   <!-- MACRO DEFINITION-->

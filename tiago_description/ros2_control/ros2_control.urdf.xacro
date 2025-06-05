@@ -34,7 +34,7 @@
 
     <!-- FT sensor -->
     <xacro:if value="${has_ft_sensor}">
-      <xacro:include filename="$(find tiago_description)/urdf/sensors/ftsensor.ros2_control.xacro"/>
+      <xacro:include filename="$(find pal_urdf_utils)/urdf/ft_sensors/ftsensor.ros2_control.xacro"/>
     </xacro:if>
 
     <!-- End effector -->
