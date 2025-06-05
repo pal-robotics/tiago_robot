@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.17.2 (2025-06-05)
+-------------------
 * Change sensors paths according to pal_urdf_utils
 * Remove meshes for sensors
 * Move ros2 ft senso file to global one
