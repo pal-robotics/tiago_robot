@@ -1,4 +1,4 @@
-/play_motion2:
+/**:
   ros__parameters:
     motion_planner:
       disable_motion_planning: false
