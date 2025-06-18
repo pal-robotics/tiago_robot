@@ -1,4 +1,4 @@
-play_motion2:
+/**:
   ros__parameters:
     motions:
       inspect_surroundings:
@@ -17,7 +17,7 @@ play_motion2:
       head_tour:
         joints: [head_1_joint, head_2_joint]
         positions: [0.0, 0.0,
-                    0.7, 0.4, 
+                    0.7, 0.4,
                     0.7,-0.4,
                    -0.7,-0.4,
                    -0.7, 0.4,
@@ -31,8 +31,8 @@ play_motion2:
       head_nod:
         joints: [head_1_joint, head_2_joint]
         times_from_start: [0.1, 0.8, 1.6]
-        positions: [0.0, 0.0, 
-                    0.0, -0.4, 
+        positions: [0.0, 0.0,
+                    0.0, -0.4,
                     0.0, 0.0]
         meta:
           name: Head Nod
@@ -42,7 +42,7 @@ play_motion2:
       head_down:
         joints: [head_1_joint, head_2_joint]
         times_from_start: [0.1, 0.8]
-        positions: [0.0, 0.0, 
+        positions: [0.0, 0.0,
                     0.0, -0.4]
         meta:
           name: Head Down
@@ -61,12 +61,12 @@ play_motion2:
       head_shake:
         joints: [head_1_joint, head_2_joint]
         times_from_start: [0.1, 0.8, 1.5, 2.2, 2.9, 3.6, 4.3]
-        positions: [0.0, 0.0, 
-                   -0.4, 0.0, 
+        positions: [0.0, 0.0,
+                   -0.4, 0.0,
                     0.0, 0.0,
-                    0.4, 0.0, 
-                    0.0, 0.0, 
-                   -0.4, 0.0, 
+                    0.4, 0.0,
+                    0.0, 0.0,
+                   -0.4, 0.0,
                     0.0, 0.0]
         meta:
           name: Head Shake

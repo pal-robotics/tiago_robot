@@ -1,6 +1,6 @@
-play_motion2:
+/**:
   ros__parameters:
-    motions:      
+    motions:
       unfold_arm:
         joints: [torso_lift_joint, arm_1_joint,
         arm_2_joint, arm_3_joint, arm_4_joint, arm_5_joint,
