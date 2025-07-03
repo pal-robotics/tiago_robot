@@ -7,6 +7,12 @@ joy_teleop:
       action_name: joy_priority_action
       buttons: [10, 6]
 
+    assisted_teleop_priority:
+      type: action
+      interface_type: twist_mux_msgs/action/JoyPriority
+      action_name: assisted_teleop_priority_action
+      buttons: [10, 4]
+
     joy_turbo_decrease:
       type: action
       interface_type: twist_mux_msgs/action/JoyTurbo
@@ -31,11 +37,17 @@ joy_teleop:
       action_name: joy_turbo_angular_increase
       buttons: [10, 1]
 
-    joy_turbo_reset:
+    joy_turbo_reset_left:
       type: action
       interface_type: twist_mux_msgs/action/JoyTurbo
       action_name: joy_turbo_reset
-      buttons: [10, 4]
+      buttons: [10, 7]
+
+    joy_turbo_reset_right:
+      type: action
+      interface_type: twist_mux_msgs/action/JoyTurbo
+      action_name: joy_turbo_reset
+      buttons: [10, 8]
 
     torso_up:
       type: action
@@ -61,7 +73,7 @@ joy_teleop:
 
     enable_neck:
       type: service
-      interface_type: std_srvs/srv/Empty
+      interface_type: std_srvs/srv/Trigger
       service_name: /gaze_manager/enable_neck
       buttons: [9, 4]
 
