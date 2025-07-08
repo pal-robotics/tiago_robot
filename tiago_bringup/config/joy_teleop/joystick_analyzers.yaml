@@ -1,0 +1,11 @@
+/joystick/add_analyzer_node:
+  ros__parameters:
+    path: Diagnostics
+    hardware:
+      type: 'diagnostic_aggregator/AnalyzerGroup'
+      path: Hardware
+      analyzers:
+        gamepad:
+          type: diagnostic_aggregator/GenericAnalyzer
+          path: "Gamepad"
+          find_and_remove_prefix: ["joystick: ", "gamepad: "]
