@@ -97,6 +97,7 @@ def declare_actions(
         package='collision_aware_joint_trajectory_wrapper',
         executable='safe_command_node',
         name='safe_command_node',
+        namespace='head_controller',
         output='screen',
         parameters=[{
             'controller_name': 'head_controller'
@@ -109,6 +110,7 @@ def declare_actions(
         package='collision_aware_joint_trajectory_wrapper',
         executable='safe_command_node',
         name='safe_command_node',
+        namespace='torso_controller',
         output='screen',
         parameters=[{
             'controller_name': 'torso_controller'
