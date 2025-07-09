@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.19.1 (2025-07-09)
+-------------------
 * fix use_sim_time
 * Contributors: andreacapodacqua
 
