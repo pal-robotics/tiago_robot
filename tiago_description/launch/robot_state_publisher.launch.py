@@ -77,6 +77,7 @@ def declare_actions(
         output="both",
         parameters=[
             {
+                'use_sim_time': LaunchConfiguration('use_sim_time'),
                 "robot_description": ParameterValue(
                     LaunchConfiguration("robot_description"), value_type=str
                 ),
