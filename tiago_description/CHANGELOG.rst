@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.3.27 (2025-07-09)
+-------------------
 * Merge branch 'fix/meshes_paths' into 'erbium-devel'
   Fix/meshes paths
   See merge request robots/tiago_robot!349
