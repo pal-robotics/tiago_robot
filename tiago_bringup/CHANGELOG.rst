@@ -2,6 +2,11 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add remappings for removing robot_description namespace
+* Contributors: Noel Jimenez
+
 4.19.2 (2025-07-09)
 -------------------
 * Add namespace to safe_command_node instances
