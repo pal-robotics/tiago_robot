@@ -2,6 +2,11 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add side screen to URDF
+* Contributors: thomas.peyrucain
+
 4.19.3 (2025-07-16)
 -------------------
 
