@@ -25,7 +25,7 @@
   <xacro:include filename="$(find pal_urdf_utils)/urdf/deg_to_rad.urdf.xacro" />
 
   <!-- MACRO DEFINITION-->
-  <xacro:macro name="tiago_torso" params="name parent *origin">
+  <xacro:macro name="tiago_torso" params="name parent *origin has_screen">
 
     <!-- Bottom fixed part of column -->
     <link name="${name}_fixed_link">
@@ -130,6 +130,23 @@
         </geometry>
         <material name="LightGrey"/>
       </collision>
+    <xacro:if value="$(arg has_screen)">
+      <visual>
+        <origin rpy="0 0 -1.57" xyz="-0.01 0.125 -0.27" />
+        <geometry>
+          <mesh filename="package://tiago_description/meshes/torso/tiago_screen.stl" scale="1 1 1"/>
+        </geometry>
+        <material name="White"/>
+      </visual>
+      <collision>
+        <origin rpy="0 0 -1.57" xyz="-0.01 0.125 -0.27" />
+        <geometry>
+          <mesh filename="package://tiago_description/meshes/torso/tiago_screen_collision.stl" scale="1 1 1"/>
+        </geometry>
+        <material name="LightGrey"/>
+      </collision>
+    </xacro:if>
+
     </link>
 
     <joint name="${name}_lift_joint" type="prismatic">

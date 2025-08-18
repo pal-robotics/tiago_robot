@@ -178,7 +178,7 @@
   </xacro:if>
 
   <!-- Torso -->
-  <xacro:tiago_torso name="torso" parent="base_link">
+  <xacro:tiago_torso name="torso" parent="base_link" has_screen="${has_screen}">
     <xacro:if value="${base_type == 'pmb2'}">
       <origin rpy="0 0 0" xyz="-0.062 0.0 0.193" />
     </xacro:if>
