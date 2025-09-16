@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.19.5 (2025-09-16)
+-------------------
 * Fix torso collision
 * Contributors: thomas.peyrucain
 
