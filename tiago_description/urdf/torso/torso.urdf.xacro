@@ -79,7 +79,7 @@
       <collision>
         <origin rpy="0 0 0" xyz="0 0 0.275" />
         <geometry>
-          <box size="0.23 0.23 0.55"/>
+          <box size="0.232 0.265 0.45"/>
         </geometry>
         <material name="DarkGrey"/>
       </collision>
