@@ -2,6 +2,11 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Fix torso collision
+* Contributors: thomas.peyrucain
+
 4.19.4 (2025-08-18)
 -------------------
 * Add side screen to URDF
