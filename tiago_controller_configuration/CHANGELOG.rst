@@ -2,8 +2,8 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.19.6 (2025-10-01)
+-------------------
 * Remove joint 5 in the gravity compensation due to motor issue
 * Contributors: thomas.peyrucain
 
