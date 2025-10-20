@@ -2,8 +2,8 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.20.0 (2025-10-20)
+-------------------
 * Force to current conversion is now handled at actuator level
   Set most motor constants and reducers to 1.0 so the effort to current
   conversion can be handled at actuator level
