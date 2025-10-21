@@ -22,6 +22,7 @@
   <exec_depend>joy_teleop</exec_depend>
   <exec_depend>launch_pal</exec_depend>
   <exec_depend>play_motion2</exec_depend>
+  <exec_depend>play_motion2_cli</exec_depend>
   <exec_depend>teleop_tools_msgs</exec_depend>
   <exec_depend>tiago_controller_configuration</exec_depend>
   <exec_depend>tiago_description</exec_depend>
