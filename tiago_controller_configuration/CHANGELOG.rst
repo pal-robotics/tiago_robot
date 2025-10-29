@@ -2,6 +2,14 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'tpe/add_open_loop' into 'humble-devel'
+  Add openloop to controllers
+  See merge request robots/tiago_robot!361
+* Add openloop to controllers + remove impedance controller
+* Contributors: thomas.peyrucain, thomaspeyrucain
+
 4.21.0 (2025-10-27)
 -------------------
 
