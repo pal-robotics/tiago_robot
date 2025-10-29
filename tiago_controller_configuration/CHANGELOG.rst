@@ -2,8 +2,8 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.22.0 (2025-10-29)
+-------------------
 * Merge branch 'tpe/add_open_loop' into 'humble-devel'
   Add openloop to controllers
   See merge request robots/tiago_robot!361
