@@ -8,6 +8,8 @@ torso_controller:
     state_interfaces:
       - position
 
+    open_loop_control: true
+
     constraints:
       goal_time: 0.6
       stopped_velocity_tolerance: 5.0 # FIXME: See #8429
