@@ -1,0 +1,16 @@
+[0.094s] Traceback (most recent call last):
+  File "C:\Users\Ram-R\AppData\Roaming\Python\Python312\site-packages\colcon_core\executor\__init__.py", line 91, in __call__
+    rc = await self.task(*args, **kwargs)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ram-R\AppData\Roaming\Python\Python312\site-packages\colcon_core\task\__init__.py", line 93, in __call__
+    return await task_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ram-R\AppData\Roaming\Python\Python312\site-packages\colcon_ros\task\ament_cmake\build.py", line 59, in build
+    rc = await extension.build(
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ram-R\AppData\Roaming\Python\Python312\site-packages\colcon_cmake\task\cmake\build.py", line 87, in build
+    rc = await self._reconfigure(args, env)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ram-R\AppData\Roaming\Python\Python312\site-packages\colcon_cmake\task\cmake\build.py", line 151, in _reconfigure
+    raise RuntimeError(
+RuntimeError: VisualStudioVersion is not set, please run within a Visual Studio Command Prompt.

@@ -1,0 +1,111 @@
+[1.177s] [34mcolcon[0m [1;30mDEBUG[0m [32mCommand line arguments: ['C:\\Users\\Ram-R\\AppData\\Roaming\\Python\\Python312\\Scripts\\colcon', 'build', '--packages-select', 'tiago_description'][0m
+[1.178s] [34mcolcon[0m [1;30mDEBUG[0m [32mParsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['tiago_description'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x000001FB2497C980>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x000001FB2491B290>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x000001FB2491B290>>)[0m
+[1.348s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(colcon_meta) check parameters
+[1.348s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) check parameters
+[1.348s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) check parameters
+[1.348s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) check parameters
+[1.348s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(colcon_meta) discover
+[1.349s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) discover
+[1.349s] [34mcolcon.colcon_core.package_discovery[0m [1;30mINFO[0m Crawling recursively for packages in 'A:\PROJECT\tiago_robot'
+[1.349s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.349s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ignore'
+[1.349s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ignore_ament_install'
+[1.350s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['colcon_pkg']
+[1.350s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'colcon_pkg'
+[1.350s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['colcon_meta']
+[1.350s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'colcon_meta'
+[1.350s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['ros']
+[1.350s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ros'
+[1.447s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['cmake', 'python']
+[1.447s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'cmake'
+[1.447s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'python'
+[1.447s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['python_setup_py']
+[1.447s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'python_setup_py'
+[1.448s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) by extensions ['ignore', 'ignore_ament_install']
+[1.448s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) by extension 'ignore'
+[1.448s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) ignored
+[1.449s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) by extensions ['ignore', 'ignore_ament_install']
+[1.449s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) by extension 'ignore'
+[1.449s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) ignored
+[1.449s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) by extensions ['ignore', 'ignore_ament_install']
+[1.449s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) by extension 'ignore'
+[1.449s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) ignored
+[1.450s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tiago_bringup) by extensions ['ignore', 'ignore_ament_install']
+[1.450s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tiago_bringup) by extension 'ignore'
+[1.450s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tiago_bringup) by extension 'ignore_ament_install'
+[1.450s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tiago_bringup) by extensions ['colcon_pkg']
+[1.450s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tiago_bringup) by extension 'colcon_pkg'
+[1.450s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tiago_bringup) by extensions ['colcon_meta']
+[1.451s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tiago_bringup) by extension 'colcon_meta'
+[1.451s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tiago_bringup) by extensions ['ros']
+[1.451s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tiago_bringup) by extension 'ros'
+[1.488s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'tiago_bringup' with type 'ros.ament_cmake' and name 'tiago_bringup'[0m
+[1.489s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tiago_controller_configuration) by extensions ['ignore', 'ignore_ament_install']
+[1.489s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tiago_controller_configuration) by extension 'ignore'
+[1.490s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tiago_controller_configuration) by extension 'ignore_ament_install'
+[1.490s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tiago_controller_configuration) by extensions ['colcon_pkg']
+[1.490s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tiago_controller_configuration) by extension 'colcon_pkg'
+[1.490s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tiago_controller_configuration) by extensions ['colcon_meta']
+[1.490s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tiago_controller_configuration) by extension 'colcon_meta'
+[1.490s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tiago_controller_configuration) by extensions ['ros']
+[1.490s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tiago_controller_configuration) by extension 'ros'
+[1.493s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'tiago_controller_configuration' with type 'ros.ament_cmake' and name 'tiago_controller_configuration'[0m
+[1.493s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tiago_description) by extensions ['ignore', 'ignore_ament_install']
+[1.493s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tiago_description) by extension 'ignore'
+[1.493s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tiago_description) by extension 'ignore_ament_install'
+[1.494s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tiago_description) by extensions ['colcon_pkg']
+[1.494s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tiago_description) by extension 'colcon_pkg'
+[1.494s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tiago_description) by extensions ['colcon_meta']
+[1.494s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tiago_description) by extension 'colcon_meta'
+[1.494s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tiago_description) by extensions ['ros']
+[1.494s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tiago_description) by extension 'ros'
+[1.496s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'tiago_description' with type 'ros.ament_cmake' and name 'tiago_description'[0m
+[1.496s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tiago_robot) by extensions ['ignore', 'ignore_ament_install']
+[1.496s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tiago_robot) by extension 'ignore'
+[1.497s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tiago_robot) by extension 'ignore_ament_install'
+[1.497s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tiago_robot) by extensions ['colcon_pkg']
+[1.497s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tiago_robot) by extension 'colcon_pkg'
+[1.497s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tiago_robot) by extensions ['colcon_meta']
+[1.497s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tiago_robot) by extension 'colcon_meta'
+[1.497s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tiago_robot) by extensions ['ros']
+[1.497s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tiago_robot) by extension 'ros'
+[1.498s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'tiago_robot' with type 'ros.ament_cmake' and name 'tiago_robot'[0m
+[1.498s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) using defaults
+[1.498s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) discover
+[1.498s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) using defaults
+[1.499s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) discover
+[1.499s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) using defaults
+[1.537s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'tiago_controller_configuration' in 'tiago_controller_configuration'
+[1.538s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'tiago_bringup' in 'tiago_bringup'
+[1.538s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'tiago_robot' in 'tiago_robot'
+[1.538s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'tiago_description' build argument 'cmake_args' from command line to 'None'
+[1.538s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'tiago_description' build argument 'cmake_target' from command line to 'None'
+[1.538s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'tiago_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.538s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'tiago_description' build argument 'cmake_clean_cache' from command line to 'False'
+[1.538s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'tiago_description' build argument 'cmake_clean_first' from command line to 'False'
+[1.538s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'tiago_description' build argument 'cmake_force_configure' from command line to 'False'
+[1.539s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'tiago_description' build argument 'ament_cmake_args' from command line to 'None'
+[1.539s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'tiago_description' build argument 'catkin_cmake_args' from command line to 'None'
+[1.539s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'tiago_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.539s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'tiago_description' with the following arguments: {'ament_cmake_args': None, 'build_base': 'A:\\PROJECT\\tiago_robot\\build\\tiago_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': 'A:\\PROJECT\\tiago_robot\\install\\tiago_description', 'merge_install': False, 'path': 'A:\\PROJECT\\tiago_robot\\tiago_description', 'symlink_install': False, 'test_result_base': None}[0m
+[1.539s] [34mcolcon.colcon_core.executor[0m [1;30mINFO[0m Executing jobs using 'parallel' executor
+[1.549s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mrun_until_complete[0m
+[1.550s] [34mcolcon.colcon_ros.task.ament_cmake.build[0m [1;30mINFO[0m Building ROS package in 'A:\PROJECT\tiago_robot\tiago_description' with build type 'ament_cmake'
+[1.550s] [34mcolcon.colcon_cmake.task.cmake.build[0m [1;30mINFO[0m Building CMake package in 'A:\PROJECT\tiago_robot\tiago_description'
+[1.554s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_core.shell.sh': Not used on Windows systems
+[1.554s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.659s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mclosing loop[0m
+[1.661s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mloop closed[0m
+[1.661s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mrun_until_complete finished with 'VisualStudioVersion is not set, please run within a Visual Studio Command Prompt.'[0m
+[1.661s] [34mcolcon.colcon_core.event_reactor[0m [1;30mDEBUG[0m [32mjoining thread[0m
+[1.668s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.notify2': 'notify2' not found
+[1.668s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.notify_send': Not used on non-Linux systems
+[1.668s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.668s] [34mcolcon.colcon_notification.desktop_notification[0m [1;30mINFO[0m Sending desktop notification using 'win32'
+[6.885s] [34mcolcon.colcon_core.event_reactor[0m [1;30mDEBUG[0m [32mjoined thread[0m
+[6.886s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script 'A:\PROJECT\tiago_robot\install\local_setup.ps1'
+[6.919s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix util module 'A:\PROJECT\tiago_robot\install\_local_setup_util_ps1.py'
+[6.946s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script 'A:\PROJECT\tiago_robot\install\setup.ps1'
+[6.977s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script 'A:\PROJECT\tiago_robot\install\local_setup.bat'
+[7.024s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix util module 'A:\PROJECT\tiago_robot\install\_local_setup_util_bat.py'
+[7.027s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script 'A:\PROJECT\tiago_robot\install\setup.bat'
