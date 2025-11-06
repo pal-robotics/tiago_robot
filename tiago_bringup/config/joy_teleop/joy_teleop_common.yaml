@@ -57,6 +57,15 @@ joy_teleop:
         increment_by: [0.05]
       buttons: [9, 3]
 
+    torso_up_axes:
+      type: action
+      interface_type: teleop_tools_msgs/action/Increment
+      action_name: /torso_controller/increment
+      action_goal:
+        increment_by: [0.05]
+      buttons: [9]
+      axes: [3]
+
     torso_down:
       type: action
       interface_type: teleop_tools_msgs/action/Increment
@@ -64,6 +73,15 @@ joy_teleop:
       action_goal:
         increment_by: [-0.05]
       buttons: [9, 0]
+
+    torso_down_axes:
+      type: action
+      interface_type: teleop_tools_msgs/action/Increment
+      action_name: /torso_controller/increment
+      action_goal:
+        increment_by: [-0.05]
+      buttons: [9]
+      axes_negative: [3]
 
     disable_neck:
       type: service
@@ -85,6 +103,15 @@ joy_teleop:
         increment_by: [0.0, -0.1]
       buttons: [9, 12]
 
+    head_down_axis:
+      type: action
+      interface_type: teleop_tools_msgs/action/Increment
+      action_name: /head_controller/increment
+      action_goal:
+        increment_by: [0.0, -0.1]
+      buttons: [9]
+      axes_negative: [1]
+
     head_up:
       type: action
       interface_type: teleop_tools_msgs/action/Increment
@@ -92,6 +119,15 @@ joy_teleop:
       action_goal:
         increment_by: [0.0, 0.1]
       buttons: [9, 11]
+
+    head_up_axis:
+      type: action
+      interface_type: teleop_tools_msgs/action/Increment
+      action_name: /head_controller/increment
+      action_goal:
+        increment_by: [0.0, 0.1]
+      buttons: [9]
+      axes: [1]
 
     head_left:
       type: action
@@ -101,6 +137,15 @@ joy_teleop:
         increment_by: [0.1, 0.0]
       buttons: [9, 13]
 
+    head_left_axis:
+      type: action
+      interface_type: teleop_tools_msgs/action/Increment
+      action_name: /head_controller/increment
+      action_goal:
+        increment_by: [0.1, 0.0]
+      buttons: [9]
+      axes: [0]
+
     head_right:
       type: action
       interface_type: teleop_tools_msgs/action/Increment
@@ -108,6 +153,15 @@ joy_teleop:
       action_goal:
         increment_by: [-0.1, 0.0]
       buttons: [9, 14]
+
+    head_right_axis:
+      type: action
+      interface_type: teleop_tools_msgs/action/Increment
+      action_name: /head_controller/increment
+      action_goal:
+        increment_by: [-0.1, 0.0]
+      buttons: [9]
+      axes_negative: [0]
 
     default_controller:
       type: action
@@ -123,6 +177,6 @@ joy_teleop:
       interface_type: change_controllers_interfaces/action/Switch
       action_name: /change_controllers
       action_goal:
-        start_controllers: [gravity_compensation_controller]
+        start_controllers: [arm_gravity_compensation_controller]
       buttons: [3]
       axes_negative: [5]

@@ -75,8 +75,8 @@ def declare_actions(
     launch_description.add_action(joy_teleop_node)
 
     joy_node = Node(
-        package="joy_linux",
-        executable="joy_linux_node",
+        package="pal_joy",
+        executable="game_controller_node",
         name="joystick",
         parameters=[os.path.join(pkg_dir, "config", "joy_teleop", "joy_config.yaml")],
     )
