@@ -2,8 +2,8 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.23.1 (2026-01-08)
+-------------------
 * Add "Hardware Components Activity" module dependency
 * Contributors: Noel Jimenez
 
