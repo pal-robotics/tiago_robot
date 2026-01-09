@@ -58,14 +58,14 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/arm/arm_5-${wrist_model}.stl" scale="${reflect} ${reflect} ${reflect}"/>
+          <mesh filename="file://$(find tiago_description)/meshes/arm/arm_5-${wrist_model}.stl" scale="${reflect} ${reflect} ${reflect}"/>
         </geometry>
         <material name="LightGrey" />
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/arm/arm_5_collision-${wrist_model}.dae" scale="${reflect} ${reflect} ${reflect}"/>
+          <mesh filename="file://$(find tiago_description)/meshes/arm/arm_5_collision-${wrist_model}.dae" scale="${reflect} ${reflect} ${reflect}"/>
         </geometry>
       </collision>
     </link>
@@ -96,14 +96,14 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/arm/arm_6-${wrist_model}.stl" scale="${reflect} 1 1"/>
+          <mesh filename="file://$(find tiago_description)/meshes/arm/arm_6-${wrist_model}.stl" scale="${reflect} 1 1"/>
         </geometry>
         <material name="LightGrey" />
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/arm/arm_6_collision-${wrist_model}.dae" scale="${reflect} 1 1"/>
+          <mesh filename="file://$(find tiago_description)/meshes/arm/arm_6_collision-${wrist_model}.dae" scale="${reflect} 1 1"/>
         </geometry>
       </collision>
     </link>
