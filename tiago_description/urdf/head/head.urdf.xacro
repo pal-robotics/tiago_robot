@@ -47,14 +47,14 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://tiago_description/meshes/head/head_1.stl" scale="1 1 1"/>
+          <mesh filename="file://$(find tiago_description)/meshes/head/head_1.stl" scale="1 1 1"/>
         </geometry>
         <material name="White" />
       </visual>
       <collision>
         <origin xyz="0.0 0 0" rpy="0 0 0.0" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/head/head_1_collision.dae" scale="1 1 1"/>
+          <mesh filename="file://$(find tiago_description)/meshes/head/head_1_collision.dae" scale="1 1 1"/>
         </geometry>
         <material name="White" />
       </collision>
@@ -92,14 +92,14 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/head/head_2.stl" scale="1 1 1"/>
+          <mesh filename="file://$(find tiago_description)/meshes/head/head_2.stl" scale="1 1 1"/>
         </geometry>
         <material name="White" />
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/head/head_2_collision.dae" scale="1 1 1"/>
+          <mesh filename="file://$(find tiago_description)/meshes/head/head_2_collision.dae" scale="1 1 1"/>
         </geometry>
       </collision>
     </link>

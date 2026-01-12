@@ -47,6 +47,7 @@ class LaunchArguments(LaunchArgumentsBase):
     use_sim_time: DeclareLaunchArgument = CommonArgs.use_sim_time
     is_public_sim: DeclareLaunchArgument = CommonArgs.is_public_sim
     namespace: DeclareLaunchArgument = CommonArgs.namespace
+    gazebo_version: DeclareLaunchArgument = CommonArgs.gazebo_version
 
 
 def generate_launch_description():
@@ -112,6 +113,7 @@ def create_robot_description_param(context, *args, **kwargs):
         "use_sim_time": read_launch_argument("use_sim_time", context),
         "is_public_sim": read_launch_argument("is_public_sim", context),
         "namespace": read_launch_argument("namespace", context),
+        'gazebo_version': read_launch_argument('gazebo_version', context),
     }
 
     calibration_dir = tempfile.TemporaryDirectory()

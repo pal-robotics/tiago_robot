@@ -38,6 +38,7 @@ class LaunchArguments(LaunchArgumentsBase):
     use_sim_time: DeclareLaunchArgument = CommonArgs.use_sim_time
     is_public_sim: DeclareLaunchArgument = CommonArgs.is_public_sim
     namespace: DeclareLaunchArgument = CommonArgs.namespace
+    gazebo_version: DeclareLaunchArgument = CommonArgs.gazebo_version
 
 
 def generate_launch_description():
@@ -113,6 +114,7 @@ def declare_actions(
             "namespace": launch_args.namespace,
             "use_sim_time": launch_args.use_sim_time,
             "is_public_sim": launch_args.is_public_sim,
+            'gazebo_version': launch_args.gazebo_version,
         },
     )
 

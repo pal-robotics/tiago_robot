@@ -37,7 +37,7 @@
       <visual>
         <origin rpy="0 0 0" xyz="0 0 0" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/torso/torso_fix.stl" scale="1 1 1"/>
+          <mesh filename="file://$(find tiago_description)/meshes/torso/torso_fix.stl" scale="1 1 1"/>
         </geometry>
         <material name="LightGrey"/>
       </visual>
@@ -105,28 +105,28 @@
       <visual>
         <origin rpy="0 0 0" xyz="0 0 0" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/torso/torso_lift_with_arm.stl" scale="1 1 1"/>
+          <mesh filename="file://$(find tiago_description)/meshes/torso/torso_lift_with_arm.stl" scale="1 1 1"/>
         </geometry>
         <material name="White"/>
       </visual>
       <collision>
         <origin rpy="0 0 0" xyz="0 0 0" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/torso/torso_lift_collision_core.dae" scale="1 1 1"/>
+          <mesh filename="file://$(find tiago_description)/meshes/torso/torso_lift_collision_core.dae" scale="1 1 1"/>
         </geometry>
         <material name="LightGrey"/>
       </collision>
       <collision>
         <origin rpy="0 0 0" xyz="0 0 0" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/torso/torso_lift_collision_shoulder.dae" scale="1 1 1"/>
+          <mesh filename="file://$(find tiago_description)/meshes/torso/torso_lift_collision_shoulder.dae" scale="1 1 1"/>
         </geometry>
         <material name="LightGrey"/>
       </collision>
       <collision>
         <origin rpy="0 0 0" xyz="0 0 0" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/torso/torso_lift_collision_neck.dae" scale="1 1 1"/>
+          <mesh filename="file://$(find tiago_description)/meshes/torso/torso_lift_collision_neck.dae" scale="1 1 1"/>
         </geometry>
         <material name="LightGrey"/>
       </collision>
@@ -134,14 +134,14 @@
       <visual>
         <origin rpy="0 0 -1.57" xyz="-0.01 0.125 -0.27" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/torso/tiago_screen.stl" scale="1 1 1"/>
+          <mesh filename="file://$(find tiago_description)/meshes/torso/tiago_screen.stl" scale="1 1 1"/>
         </geometry>
         <material name="White"/>
       </visual>
       <collision>
         <origin rpy="0 0 -1.57" xyz="-0.01 0.125 -0.27" />
         <geometry>
-          <mesh filename="package://tiago_description/meshes/torso/tiago_screen_collision.stl" scale="1 1 1"/>
+          <mesh filename="file://$(find tiago_description)/meshes/torso/tiago_screen_collision.stl" scale="1 1 1"/>
         </geometry>
         <material name="LightGrey"/>
       </collision>
@@ -149,12 +149,21 @@
 
     </link>
 
+    <!-- TODO: set lower limit back to 0 when moving to Gazebo Harmonic or ROS 2 Jazzy -->
+    <!-- See https://github.com/gazebosim/gz-sim/issues/1684 for more information -->
+    <xacro:if value="${gazebo_version == 'classic'}">
+      <xacro:property name="torso_lower_limit" value="0.0"/>
+    </xacro:if>
+    <xacro:if value="${gazebo_version == 'gazebo'}">
+      <xacro:property name="torso_lower_limit" value="-1e-3"/>
+    </xacro:if>
+
     <joint name="${name}_lift_joint" type="prismatic">
       <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.597" />
       <parent link="${name}_fixed_link" />
       <child link="${name}_lift_link" />
       <axis xyz="0 0 1" />
-      <limit effort="2000" lower="0" upper="0.35" velocity="${torso_max_vel}" />
+      <limit effort="2000" lower="${torso_lower_limit}" upper="0.35" velocity="${torso_max_vel}" />
       <calibration rising="0.0" />
       <dynamics damping="1000" />
       <safety_controller k_position="20" k_velocity="20" soft_lower_limit="0.0" soft_upper_limit="0.35" />

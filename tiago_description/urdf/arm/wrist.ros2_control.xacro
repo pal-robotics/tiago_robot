@@ -25,8 +25,14 @@
 
     <joint name="${name}_joint">
       <command_interface name="position" />
-      <command_interface name="velocity" />
-      <command_interface name="effort" />
+
+      <!-- TODO: Remove when moving to Gazebo Harmonic or ROS 2 Jazzy -->
+      <!-- Multiple command interfaces not working on Gazebo Fortress -->
+      <!-- https://github.com/ros-controls/gz_ros2_control/issues/182 -->
+      <xacro:if value="${gazebo_version == 'classic'}">
+        <command_interface name="velocity" />
+        <command_interface name="effort" />
+      </xacro:if>
 
       <state_interface name="position" />
       <state_interface name="velocity" />
@@ -41,8 +47,14 @@
 
     <joint name="${name}_${number_1}_joint">
       <command_interface name="position" />
-      <command_interface name="velocity" />
-      <command_interface name="effort" />
+
+      <!-- TODO: Remove when moving to Gazebo Harmonic or ROS 2 Jazzy -->
+      <!-- Multiple command interfaces not working on Gazebo Fortress -->
+      <!-- https://github.com/ros-controls/gz_ros2_control/issues/182 -->
+      <xacro:if value="${gazebo_version == 'classic'}">
+        <command_interface name="velocity" />
+        <command_interface name="effort" />
+      </xacro:if>
 
       <state_interface name="position" />
       <state_interface name="velocity" />
@@ -51,8 +63,14 @@
 
     <joint name="${name}_${number_2}_joint">
       <command_interface name="position" />
-      <command_interface name="velocity" />
-      <command_interface name="effort" />
+
+      <!-- TODO: Remove when moving to Gazebo Harmonic or ROS 2 Jazzy -->
+      <!-- Multiple command interfaces not working on Gazebo Fortress -->
+      <!-- https://github.com/ros-controls/gz_ros2_control/issues/182 -->
+      <xacro:if value="${gazebo_version == 'classic'}">
+        <command_interface name="velocity" />
+        <command_interface name="effort" />
+      </xacro:if>
 
       <state_interface name="position" />
       <state_interface name="velocity" />
