@@ -1,11 +1,50 @@
-# TIAGo robot
+# TIAGo Robot - Overview
 
-This package contains the description, controllers and bringup for all possible TIAGo configurations (end effectors, force torque sensors..).
+## Project Overview
+The **Tiago Robot** project provides a modular framework for operating the PAL Robotics Tiago robot.  
+It includes components for navigation, manipulation, perception, and integration with ROS.  
+The project aims to facilitate research, prototyping, and experimentation with robotics applications.
 
-To make maintenance easier, the `tiago.urdf.xacro` takes arguments that specify whether the robot has an arm or not, the end effector type, force torque sensor, laser model and many other parameters.
+**Core functionalities include:**
+- Mobile base navigation with obstacle avoidance
+- Manipulation using the robotic arm and gripper
+- Sensor integration for perception (RGB-D cameras, LIDAR)
+- ROS-based software architecture for modular development
 
-The other configuration files that differ between robot configurations are generated from template files.
+---
 
-The templates are written using [empy](https://pypi.org/project/empy/) and have the extension `.em`. 
+## Installation and Setup
 
-To regenerate a group of files, you must execute `ros2 run tiago_bringup regen_em_file.py EM_FILE_NAME` from the directory where the `.em` file is.
+### Prerequisites
+- Ubuntu 20.04 (or compatible)
+- ROS Noetic
+- Python 3.8+
+- Dependencies listed in `requirements.txt` and ROS packages
+
+### Step-by-Step Setup
+1. Clone your forked repository:
+    ```bash
+    git clone https://github.com/atharv-08svg/tiago_robot.git
+    cd tiago_robot
+    ```
+2. (Optional) Add the original repository as upstream:
+    ```bash
+    git remote add upstream https://github.com/pal-robotics/tiago_robot.git
+    ```
+3. Install ROS dependencies:
+    ```bash
+    rosdep install --from-paths src --ignore-src -r -y
+    ```
+4. Build the workspace:
+    ```bash
+    catkin_make
+    source devel/setup.bash
+    ```
+
+---
+
+## Usage Examples
+
+### Launch the Robot Simulation
+```bash
+roslaunch tiago_bringup tiago.launch
