@@ -143,7 +143,7 @@
     <joint name="${name}_3_joint" type="revolute">
       <parent link="${name}_2_link" />
       <child link="${name}_3_link" />
-      <origin xyz="0.0895 0.0 -0.0015" rpy="${-90.0 * deg_to_rad} ${(90.0 - reflect * 90.0) * deg_to_rad} ${reflect * 90.0 * deg_to_rad}"/>
+      <origin xyz="0.0895 0.0 ${reflect * 0.0015}" rpy="${-90.0 * deg_to_rad} ${(90.0 - reflect * 90.0) * deg_to_rad} ${reflect * 90.0 * deg_to_rad}"/>
       <axis xyz="0 0 1" />
       <xacro:property name="arm_3_lower_limit" value="${-45. if tiago_dual == 1 else -202.5}"/>
       <xacro:property name="arm_3_upper_limit" value="${225 if tiago_dual == 1 else 90.0}"/>
