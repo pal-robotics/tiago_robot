@@ -38,3 +38,4 @@ class TiagoArgs:
     laser_model: DLA = __arg_creator.get_argument('laser_model')
     camera_model: DLA = __arg_creator.get_argument('camera_model')
     has_screen: DLA = __arg_creator.get_argument('has_screen')
+    calibration_tool: DLA = __arg_creator.get_argument("calibration_tool")

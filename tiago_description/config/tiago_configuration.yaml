@@ -38,3 +38,7 @@ camera_model:
   description: 'Head camera model'
   choices: ['orbbec-astra', 'orbbec-astra-pro', 'asus-xtion', 'no-camera']
   default_value: 'orbbec-astra'
+calibration_tool:
+  description: 'Set to True to include the calibration tool on the gripper'
+  choices: ['False', 'True']
+  default_value: 'False'
