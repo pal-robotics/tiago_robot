@@ -57,14 +57,14 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="file://$(find tiago_description)/meshes/arm/arm_1.stl" scale="1 ${-1 * tiago_dual} ${reflect}"/>
+          <mesh filename="package://tiago_description/meshes/arm/arm_1.stl" scale="1 ${-1 * tiago_dual} ${reflect}"/>
         </geometry>
         <material name="White"/>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="file://$(find tiago_description)/meshes/arm/arm_1_collision.dae" scale="1 ${-1 * tiago_dual} ${reflect}"/>
+          <mesh filename="package://tiago_description/meshes/arm/arm_1_collision.dae" scale="1 ${-1 * tiago_dual} ${reflect}"/>
         </geometry>
       </collision>
     </link>
@@ -92,7 +92,7 @@
         <!-- <origin xyz="0 0 0" rpy="${180 * deg_to_rad} ${0 * deg_to_rad} ${-90 * deg_to_rad}" /> -->
         <origin xyz="0 0 0" rpy="${0 * deg_to_rad} ${0 * deg_to_rad} ${0 * deg_to_rad}" />
         <geometry>
-          <mesh filename="file://$(find tiago_description)/meshes/arm/arm_2.stl" scale="1 1 ${reflect}"/>
+          <mesh filename="package://tiago_description/meshes/arm/arm_2.stl" scale="1 1 ${reflect}"/>
         </geometry>
         <material name="DarkGrey" />
       </visual>
@@ -100,7 +100,7 @@
         <!-- <origin xyz="0 0 0" rpy="${180 * deg_to_rad} ${0 * deg_to_rad} ${-90 * deg_to_rad}" /> -->
         <origin xyz="0 0 0" rpy="${0 * deg_to_rad} ${0 * deg_to_rad} ${0 * deg_to_rad}" />
         <geometry>
-          <mesh filename="file://$(find tiago_description)/meshes/arm/arm_2_collision.dae" scale="1 1 ${reflect}"/>
+          <mesh filename="package://tiago_description/meshes/arm/arm_2_collision.dae" scale="1 1 ${reflect}"/>
         </geometry>
       </collision>
     </link>
@@ -127,14 +127,14 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="file://$(find tiago_description)/meshes/arm/arm_3.stl" scale="1 1 ${reflect}"/>
+          <mesh filename="package://tiago_description/meshes/arm/arm_3.stl" scale="1 1 ${reflect}"/>
         </geometry>
         <material name="DarkGrey" />
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="file://$(find tiago_description)/meshes/arm/arm_3_collision.dae" scale="1 1 ${reflect}"/>
+          <mesh filename="package://tiago_description/meshes/arm/arm_3_collision.dae" scale="1 1 ${reflect}"/>
         </geometry>
       </collision>
     </link>
@@ -162,14 +162,14 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="file://$(find tiago_description)/meshes/arm/arm_4.stl" scale="${reflect} ${reflect} ${reflect}"/>
+          <mesh filename="package://tiago_description/meshes/arm/arm_4.stl" scale="${reflect} ${reflect} ${reflect}"/>
         </geometry>
         <material name="DarkGrey" />
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="file://$(find tiago_description)/meshes/arm/arm_4_collision.dae" scale="${reflect} ${reflect} ${reflect}"/>
+          <mesh filename="package://tiago_description/meshes/arm/arm_4_collision.dae" scale="${reflect} ${reflect} ${reflect}"/>
         </geometry>
       </collision>
     </link>
