@@ -2,6 +2,13 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Use package instead of find for meshes lookup
+  This change avoids errors when visualizing the robot in rviz2 from a
+  remote host instead of directly inside the robot
+* Contributors: Noel Jimenez
+
 4.24.0 (2026-01-12)
 -------------------
 * Add support for new gazebo
