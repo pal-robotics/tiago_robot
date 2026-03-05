@@ -1,0 +1,138 @@
+/joy_teleop:
+
+  use_if:
+    robot_type: tiago
+
+  ros__parameters:
+
+    default_controller:
+      type: action
+      interface_type: change_controllers_interfaces/action/Switch
+      action_name: /change_controllers
+      action_goal:
+        start_controllers: [arm_controller]
+      buttons: [2]
+      axes_negative: [5]
+
+    gravity_controller:
+      type: action
+      interface_type: change_controllers_interfaces/action/Switch
+      action_name: /change_controllers
+      action_goal:
+        start_controllers: [arm_gravity_compensation_controller]
+      buttons: [3]
+      axes_negative: [5]
+
+    torso_up:
+      type: action
+      interface_type: teleop_tools_msgs/action/Increment
+      action_name: /torso_controller/increment
+      action_goal:
+        increment_by: [0.05]
+      buttons: [9, 3]
+
+    torso_up_axes:
+      type: action
+      interface_type: teleop_tools_msgs/action/Increment
+      action_name: /torso_controller/increment
+      action_goal:
+        increment_by: [0.05]
+      buttons: [9]
+      axes: [3]
+
+    torso_down:
+      type: action
+      interface_type: teleop_tools_msgs/action/Increment
+      action_name: /torso_controller/increment
+      action_goal:
+        increment_by: [-0.05]
+      buttons: [9, 0]
+
+    torso_down_axes:
+      type: action
+      interface_type: teleop_tools_msgs/action/Increment
+      action_name: /torso_controller/increment
+      action_goal:
+        increment_by: [-0.05]
+      buttons: [9]
+      axes_negative: [3]
+
+    disable_neck:
+      type: service
+      interface_type: std_srvs/srv/Empty
+      service_name: /gaze_manager/disable_neck
+      buttons: [9, 6]
+
+    enable_neck:
+      type: service
+      interface_type: std_srvs/srv/Trigger
+      service_name: /gaze_manager/enable_neck
+      buttons: [9, 4]
+
+    head_down:
+      type: action
+      interface_type: teleop_tools_msgs/action/Increment
+      action_name: /head_controller/increment
+      action_goal:
+        increment_by: [0.0, -0.1]
+      buttons: [9, 12]
+
+    head_down_axis:
+      type: action
+      interface_type: teleop_tools_msgs/action/Increment
+      action_name: /head_controller/increment
+      action_goal:
+        increment_by: [0.0, -0.1]
+      buttons: [9]
+      axes_negative: [1]
+
+    head_up:
+      type: action
+      interface_type: teleop_tools_msgs/action/Increment
+      action_name: /head_controller/increment
+      action_goal:
+        increment_by: [0.0, 0.1]
+      buttons: [9, 11]
+
+    head_up_axis:
+      type: action
+      interface_type: teleop_tools_msgs/action/Increment
+      action_name: /head_controller/increment
+      action_goal:
+        increment_by: [0.0, 0.1]
+      buttons: [9]
+      axes: [1]
+
+    head_left:
+      type: action
+      interface_type: teleop_tools_msgs/action/Increment
+      action_name: /head_controller/increment
+      action_goal:
+        increment_by: [0.1, 0.0]
+      buttons: [9, 13]
+
+    head_left_axis:
+      type: action
+      interface_type: teleop_tools_msgs/action/Increment
+      action_name: /head_controller/increment
+      action_goal:
+        increment_by: [0.1, 0.0]
+      buttons: [9]
+      axes: [0]
+
+    head_right:
+      type: action
+      interface_type: teleop_tools_msgs/action/Increment
+      action_name: /head_controller/increment
+      action_goal:
+        increment_by: [-0.1, 0.0]
+      buttons: [9, 14]
+
+    head_right_axis:
+      type: action
+      interface_type: teleop_tools_msgs/action/Increment
+      action_name: /head_controller/increment
+      action_goal:
+        increment_by: [-0.1, 0.0]
+      buttons: [9]
+      axes_negative: [0]

@@ -1,0 +1,4 @@
+/joy_teleop:
+  use_preset: "joy_teleop_hand_gripper.yaml"
+  use_if:
+    end_effector: pal-hey5
