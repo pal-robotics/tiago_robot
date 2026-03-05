@@ -16,12 +16,12 @@ import os
 from ament_index_python.packages import get_package_share_directory
 
 from launch import LaunchDescription
-from launch.substitutions import LaunchConfiguration
-from launch.actions import DeclareLaunchArgument, SetLaunchConfiguration, OpaqueFunction
+from launch.actions import DeclareLaunchArgument
 from launch_ros.actions import Node
 from launch.conditions import LaunchConfigurationNotEquals
-from launch_pal.arg_utils import LaunchArgumentsBase, read_launch_argument
+from launch_pal.arg_utils import LaunchArgumentsBase
 from tiago_description.launch_arguments import TiagoArgs
+
 
 from dataclasses import dataclass
 
@@ -33,12 +33,6 @@ class LaunchArguments(LaunchArgumentsBase):
     end_effector: DeclareLaunchArgument = TiagoArgs.end_effector
     ft_sensor: DeclareLaunchArgument = TiagoArgs.ft_sensor
     base_type: DeclareLaunchArgument = TiagoArgs.base_type
-
-    cmd_vel: DeclareLaunchArgument = DeclareLaunchArgument(
-        name="cmd_vel",
-        default_value="input_joy/cmd_vel",
-        description="Joystick cmd_vel topic",
-    )
 
 
 def generate_launch_description():
@@ -58,30 +52,37 @@ def generate_launch_description():
 def declare_actions(
     launch_description: LaunchDescription, launch_args: LaunchArguments
 ):
-    launch_description.add_action(OpaqueFunction(function=create_joy_teleop_filename_base_type))
-    launch_description.add_action(OpaqueFunction(function=create_joy_teleop_filename_gripper))
 
-    pkg_dir = get_package_share_directory("tiago_bringup")
+    from launch_pal import get_pal_configuration
+    # PAL helper function to fetch the configuration for this package,
+    # which might be installed also from other packages
+    joy_teleop_config = get_pal_configuration(
+        pkg="joy_teleop",
+        node="joy_teleop",
+        ld=launch_description)
 
     joy_teleop_node = Node(
-        package="joy_teleop",
-        executable="joy_teleop",
-        parameters=[LaunchConfiguration("teleop_config_base_type"),
-                    LaunchConfiguration("teleop_config_gripper"),
-                    os.path.join(pkg_dir, "config", "joy_teleop", "joy_teleop_common.yaml")],
-        remappings=[("cmd_vel", LaunchConfiguration("cmd_vel"))],
-    )
+        package='joy_teleop',
+        executable='joy_teleop',
+        parameters=joy_teleop_config['parameters'],
+        remappings=joy_teleop_config['remappings'],)
 
     launch_description.add_action(joy_teleop_node)
 
+    joy_config = get_pal_configuration(
+        pkg="joystick",
+        node="joystick",
+        ld=launch_description)
+
     joy_node = Node(
-        package="pal_joy",
-        executable="game_controller_node",
-        name="joystick",
-        parameters=[os.path.join(pkg_dir, "config", "joy_teleop", "joy_config.yaml")],
-    )
+        package='pal_joy',
+        executable='game_controller_node',
+        name='joystick',
+        parameters=joy_config['parameters'])
 
     launch_description.add_action(joy_node)
+
+    pkg_dir = get_package_share_directory("tiago_bringup")
 
     joystick_analyzer = Node(
         package='diagnostic_aggregator',
@@ -161,37 +162,3 @@ def declare_actions(
     launch_description.add_action(gripper_incrementer_server)
 
     return
-
-
-def create_joy_teleop_filename_gripper(context):
-
-    end_effector = read_launch_argument("end_effector", context)
-    pkg_dir = get_package_share_directory("tiago_bringup")
-
-    joy_teleop_file = f"joy_teleop_{end_effector}.yaml"
-
-    joy_teleop_path = os.path.join(
-        pkg_dir,
-        "config",
-        "joy_teleop",
-        joy_teleop_file,
-    )
-
-    return [SetLaunchConfiguration("teleop_config_gripper", joy_teleop_path)]
-
-
-def create_joy_teleop_filename_base_type(context):
-
-    base_type = read_launch_argument("base_type", context)
-    pkg_dir = get_package_share_directory("tiago_bringup")
-
-    joy_teleop_file = f"joy_teleop_{base_type}.yaml"
-
-    joy_teleop_path = os.path.join(
-        pkg_dir,
-        "config",
-        "joy_teleop",
-        joy_teleop_file,
-    )
-
-    return [SetLaunchConfiguration("teleop_config_base_type", joy_teleop_path)]

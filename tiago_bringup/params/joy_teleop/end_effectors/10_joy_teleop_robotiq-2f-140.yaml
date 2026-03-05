@@ -1,0 +1,14 @@
+/joy_teleop:
+  use_preset: "joy_teleop_parallel_gripper.yaml"
+  use_if:
+    end_effector: robotiq-2f-140
+
+  ros__parameters:
+
+    close_gripper:
+      action_goal:
+        increment_by: [0.1]
+    
+    open_gripper:
+      action_goal:
+        increment_by: [-0.1]

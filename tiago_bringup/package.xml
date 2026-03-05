@@ -14,6 +14,7 @@
   <buildtool_depend>ament_cmake_auto</buildtool_depend>
 
   <build_depend condition="$PAL_DISTRO >= alum">pal_module_cmake</build_depend>
+  <build_depend condition="$PAL_DISTRO >= alum">pal_configuration_cmake</build_depend>
 
   <exec_depend>ament_index_python</exec_depend>
   <exec_depend>diagnostic_aggregator</exec_depend>
@@ -29,6 +30,7 @@
   <exec_depend>twist_mux</exec_depend>
   <exec_depend>twist_mux_msgs</exec_depend>
   <exec_depend condition="$PAL_DISTRO > 0">collision_aware_joint_trajectory_wrapper</exec_depend>
+  <exec_depend condition="$PAL_DISTRO > 0">pal_joy_teleop_cfg</exec_depend>
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
