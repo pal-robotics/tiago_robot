@@ -2,6 +2,15 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add pal configuration
+* Switch to pal_joy + fix gravity name + Add axes actions
+* Add assisted teleop + fix turbo reset + enable neck
+* Update button combos
+* Update joystick layout
+* Contributors: thomas.peyrucain, thomaspeyrucain
+
 4.24.1 (2026-01-29)
 -------------------
 
