@@ -2,6 +2,12 @@
 Changelog for package tiago_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Fix indentation param file
+* Fixing open loop param
+* Contributors: vivianamorlando
+
 5.0.0 (2026-03-05)
 ------------------
 

@@ -2,6 +2,11 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add support for new gazebo
+* Contributors: thomaspeyrucain
+
 5.0.0 (2026-03-05)
 ------------------
 
