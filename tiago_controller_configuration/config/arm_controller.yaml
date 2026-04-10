@@ -14,7 +14,37 @@ arm_controller:
     state_interfaces:
       - position
 
-    open_loop_control: true
+    gains:
+      arm_1_joint:
+        p: 0.0
+        i: 0.0
+        d: 0.0
+      arm_2_joint:
+        p: 0.0
+        i: 0.0
+        d: 0.0
+      arm_3_joint:
+        p: 0.0
+        i: 0.0
+        d: 0.0
+      arm_4_joint:
+        p: 0.0
+        i: 0.0
+        d: 0.0
+      arm_5_joint:
+        p: 0.0
+        i: 0.0
+        d: 0.0
+      arm_6_joint:
+        p: 0.0
+        i: 0.0
+        d: 0.0
+      arm_7_joint:
+        p: 0.0
+        i: 0.0
+        d: 0.0
+
+      interpolate_from_desired_state: true
 
     constraints:
       goal_time: 0.6
