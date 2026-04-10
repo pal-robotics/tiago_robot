@@ -8,7 +8,19 @@ head_controller:
       - position
     state_interfaces:
       - position
-    open_loop_control: true
+
+    gains:
+      head_1_joint:
+        p: 0.0
+        i: 0.0
+        d: 0.0
+      head_2_joint:
+        p: 0.0
+        i: 0.0
+        d: 0.0
+
+    interpolate_from_desired_state: true
+
     constraints:
       goal_time: 2.0
       stopped_velocity_tolerance: 5.0
