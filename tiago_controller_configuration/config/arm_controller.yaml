@@ -44,7 +44,7 @@ arm_controller:
         i: 0.0
         d: 0.0
 
-      interpolate_from_desired_state: true
+    interpolate_from_desired_state: true
 
     constraints:
       goal_time: 0.6
