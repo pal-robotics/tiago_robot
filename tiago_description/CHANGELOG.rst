@@ -2,6 +2,11 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Fix link position
+* Contributors: thomaspeyrucain
+
 5.1.0 (2026-04-10)
 ------------------
 * Add support for new gazebo
