@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+5.1.1 (2026-04-13)
+------------------
 * Fix link position
 * Contributors: thomaspeyrucain
 
