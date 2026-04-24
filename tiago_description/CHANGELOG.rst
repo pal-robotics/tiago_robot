@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+5.1.2 (2026-04-24)
+------------------
 * add calibration_tool parameter
 * Contributors: susannamastromauro
 
