@@ -2,6 +2,11 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* revert not necessary comment on gazebo version
+* Contributors: ileniaperrella
+
 5.1.2 (2026-04-24)
 ------------------
 * add calibration_tool parameter

@@ -2,6 +2,12 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* revert sign on arm_6_joint wrt standards
+* revert not necessary comment on gazebo version
+* Contributors: ileniaperrella
+
 5.1.2 (2026-04-24)
 ------------------
 * add calibration_tool parameter
