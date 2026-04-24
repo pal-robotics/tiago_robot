@@ -2,8 +2,8 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+5.1.3 (2026-04-24)
+------------------
 * revert not necessary comment on gazebo version
 * Contributors: ileniaperrella
 

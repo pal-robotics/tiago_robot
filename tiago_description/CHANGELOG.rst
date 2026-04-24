@@ -2,8 +2,8 @@
 Changelog for package tiago_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+5.1.3 (2026-04-24)
+------------------
 * revert sign on arm_6_joint wrt standards
 * revert not necessary comment on gazebo version
 * Contributors: ileniaperrella
