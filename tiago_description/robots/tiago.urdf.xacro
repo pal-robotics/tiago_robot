@@ -59,6 +59,9 @@
   <!-- false, true -->
   <xacro:arg name="no_safety_eps" default="false"/>
 
+  <!-- False, True -->
+  <xacro:arg name="calibration_tool" default="False" />
+
   <!-- Calibration -->
   <xacro:arg name="eye_hand_calibration_dir" default="$(find tiago_description)/urdf/calibration"/>
   <xacro:arg name="camera_extrinsic_calibration_dir" default="$(find tiago_description)/urdf/calibration"/>
@@ -83,6 +86,7 @@
   <xacro:property name="has_thermal_camera" default="$(arg has_thermal_camera)"/>
   <xacro:property name="has_screen" value="$(arg has_screen)" />
   <xacro:property name="no_safety_eps" value="$(arg no_safety_eps)" />
+  <xacro:property name="calibration_tool" value="$(arg calibration_tool)"/>
 
   <!-- HW configuration check -->
   <xacro:if value="${base_type not in ['pmb2', 'omni_base']}">

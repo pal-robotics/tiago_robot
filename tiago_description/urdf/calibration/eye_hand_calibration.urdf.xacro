@@ -32,7 +32,7 @@ limitations under the License.
   <xacro:property name="arm_3_joint_offset" value="0.0" />
   <xacro:property name="arm_4_joint_offset" value="0.0" />
   <xacro:property name="arm_5_joint_offset" value="0.0" />
-  <xacro:property name="arm_6_joint_offset" value="0.0" />
+  <xacro:property name="arm_6_joint_offset" value="-0.0" />
   <xacro:property name="arm_7_joint_offset" value="0.0" />
   <xacro:property name="head_1_joint_offset" value="0.0" />
   <xacro:property name="head_2_joint_offset" value="0.0" />

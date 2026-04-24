@@ -40,6 +40,8 @@ class LaunchArguments(LaunchArgumentsBase):
     is_public_sim: DeclareLaunchArgument = CommonArgs.is_public_sim
     namespace: DeclareLaunchArgument = CommonArgs.namespace
 
+    calibration_tool: DeclareLaunchArgument = TiagoArgs.calibration_tool
+
 
 def generate_launch_description():
 
@@ -72,6 +74,7 @@ def declare_actions(
             "namespace": launch_args.namespace,
             "use_sim_time": launch_args.use_sim_time,
             "is_public_sim": launch_args.is_public_sim,
+            "calibration_tool": launch_args.calibration_tool,
         },
     )
 

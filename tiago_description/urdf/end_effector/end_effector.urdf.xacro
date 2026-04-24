@@ -37,7 +37,7 @@
 
     <!-- PAL Gripper -->
     <xacro:if value="${end_effector == 'pal-gripper'}">
-      <xacro:pal_gripper parent="${parent}" name="${name}">
+      <xacro:pal_gripper parent="${parent}" name="${name}" calibration_tool="${calibration_tool}">
         <origin xyz="0 0 0" rpy="${90*deg_to_rad} ${90*deg_to_rad} ${-90*deg_to_rad}"/>
       </xacro:pal_gripper>
     </xacro:if>
