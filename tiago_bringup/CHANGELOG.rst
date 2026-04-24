@@ -2,6 +2,11 @@
 Changelog for package tiago_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* add calibration_tool parameter
+* Contributors: susannamastromauro
+
 5.1.1 (2026-04-13)
 ------------------
 
